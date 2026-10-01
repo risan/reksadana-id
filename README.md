@@ -1,11 +1,12 @@
 # Bibit Reksadana
 
-Raw data for Indonesian mutual funds (reksa dana). It comes from three sources: the public API behind [Bibit](https://app.bibit.id/), the [Kontan pusatdata](https://pusatdata.kontan.co.id/reksadana) pages, and [Bareksa](https://www.bareksa.com/id/data/reksadana/daftar). The data lives in this repository, so you can read it without calling any of the sites.
+Raw data for Indonesian mutual funds (reksa dana). It comes from four sources: the public API behind [Bibit](https://app.bibit.id/), the [Kontan pusatdata](https://pusatdata.kontan.co.id/reksadana) pages, [Bareksa](https://www.bareksa.com/id/data/reksadana/daftar), and the public fund pages of [Makmur](https://www.makmur.id/). The data lives in this repository, so you can read it without calling any of the sites.
 
 | Source | Folder | Funds | What it adds | Updated |
 |---|---|---|---|---|
-| Bibit | `data/bibit/` | 3,044 (the master list; the site has a page for each) | Fees, returns, documents, daily NAV for buyable funds, AUM | Weekly |
+| Bibit | `data/bibit/` | 3,044 (the master list; the site has a page for each) | Fees, returns, documents, daily NAV for buyable funds, AUM | Daily |
 | Kontan | `data/kontan/` | 1,660 | Daily NAV for the last 12 months, growing every run | Weekly |
+| Makmur | `data/makmur/` | 141 | Latest price, returns, asset allocation, top holdings, and factsheet and prospectus links | Weekly |
 | Bareksa | `data/bareksa/` | 3,812 | Monthly AUM, units, and asset allocation, back to each fund's launch. Daily NAV from launch, loaded by hand | Monthly |
 
 ## Data
@@ -50,16 +51,38 @@ The matching rules are the same as for Kontan. Bareksa shows the manager on each
 
 Bareksa's list of all funds holds 3,812 funds. 3,656 of them have AUM data, and 1,719 are matched to a Bibit fund (1,603 of those are not buyable in the Bibit app). In a sample of 175 IDs outside the list, 39 still answered with AUM data, but they have no fund page, so there is no name to match or show. The scraper ignores them.
 
+### Makmur (`data/makmur/`)
+
+| Path | What it holds |
+|---|---|
+| `data/makmur/funds.csv` | One row per fund in Makmur's sitemap: `makmur_id`, name, manager, `category`, `route_category` (the folder in the fund's web address), `url` (the end of the address), currency, `last_price`, `as_of`, `last_aum`, `inception_date`, and `bibit_symbol`. `bibit_symbol` is the matching Bibit fund, or empty when there is no confident match. |
+| `data/makmur/funds/<makmur_id>.json` | The fund record from Makmur's page, as it is, plus `routeCategory`. |
+
+The scraper reads only Makmur's public website. The page of a fund holds the whole record as JSON in a `__NEXT_DATA__` script. The app API needs signed requests, so it is not used. A fund page is
+`https://www.makmur.id/id/reksadana/<route_category>/<url>`.
+
+**Makmur scales its numbers, and the data keeps them as they are.** Checked against the matching Bibit funds:
+
+| Field | Scale | Example |
+|---|---|---|
+| `return1d` ... `returnsi`, `drawdown*`, `cagr*`, `expenseRatio` | hundredths of a percent | `481` is 4.81% |
+| `assetAllocations[].weight` | hundredths of a percent (a fund adds up to 10000) | `5295` is 52.95% |
+| `lastPrice` | NAV times 100 | `160228` is 1,602.28; for a USD fund `156` is 1.56 |
+| `lastAum`, `minFirstBuy`, `minNextBuy` | the plain amount, in the fund's currency | `454585760000` |
+| `asof`, `portfolioAsof`, `inceptionDate` | a number like `20260930` | 2026-09-30 |
+
+In `funds.csv` the dates are ISO dates, and the other values are as in the JSON. `last_price` is a whole number, so it is rounded to 0.01 of the NAV. 86 of the 141 funds are matched to a Bibit fund. The matching rules are the same as for Kontan; most of the rest differ in name (for example a "Kelas A" suffix).
+
 ### NAV history: buyable vs. other funds
 
 The `tradeable` column is `1` for funds you can buy in the Bibit app.
 
 - **Buyable funds:** `data/nav/` has the full daily history from the launch date.
-- **Other funds:** Bibit does not give their NAV history, even to a logged-in user. The fund list still shows their latest NAV, so every scraper run adds that day's row. These rows have an empty `nav_adjusted`. History for these funds starts on the day this repository started collecting it (2026-10-01). When Kontan has a matching fund, its daily NAV for the last 12 months (and growing) is in `data/kontan/`, and the fund page charts it too. When Bareksa has a matching fund, the page also charts its daily NAV (once loaded, see below). If no source has a daily NAV for a fund, the page draws a monthly NAV that it computes as Bareksa's AUM divided by its units. That line is computed in the browser and is not stored.
+- **Other funds:** Bibit does not give their NAV history, even to a logged-in user. The fund list still shows their latest NAV, so every daily Bibit run adds that day's row. These rows have an empty `nav_adjusted`. History for these funds starts on the day this repository started collecting it (2026-10-01). When Kontan has a matching fund, its daily NAV for the last 12 months (and growing) is in `data/kontan/`, and the fund page charts it too. When Bareksa has a matching fund, the page also charts its daily NAV (once loaded, see below). Makmur has no NAV history, only the latest price. If no source has a daily NAV for a fund, the page draws a monthly NAV that it computes as Bareksa's AUM divided by its units. That line is computed in the browser and is not stored.
 
 ## Website
 
-An [Astro](https://astro.build/) site builds from `data/` into static files. It has a fund explorer, a page with charts for every fund, bulk downloads, and a read-only JSON API (see `/api/` on the site). It is served by Cloudflare Workers as static assets, so there is no server code. The fund page has one NAV chart with up to five lines: Bibit, Bibit adjusted, Kontan, Bareksa, and the computed monthly NAV. Click a name in the chart legend to hide or show a line.
+An [Astro](https://astro.build/) site builds from `data/` into static files. It has a fund explorer, a page with charts and a "Where to buy" block for every fund, bulk downloads, and a read-only JSON API (see `/api/` on the site). It is served by Cloudflare Workers as static assets, so there is no server code. The fund page has one NAV chart with up to five lines: Bibit, Bibit adjusted, Kontan, Bareksa, and the computed monthly NAV. Click a name in the chart legend to hide or show a line.
 
 You need Node.js 22.12 or newer. Cloudflare builds with Node 24 (see `.node-version`).
 
@@ -85,32 +108,41 @@ Cloudflare Workers Builds deploys the site from GitHub. In the Cloudflare dashbo
 
 The Worker name must match `name` in `wrangler.toml`. If you use another name, change the file, or the build fails with a name mismatch warning.
 
-The build image's default Node.js is already new enough. `.node-version` pins Node 24, so no build variables are needed. Every push to `main` then deploys, including the weekly data commit.
+The build image's default Node.js is already new enough. `.node-version` pins Node 24, so no build variables are needed. Every push to `main` then deploys, including the daily data commit.
 
 Cloudflare's own docs: [Workers Builds](https://developers.cloudflare.com/workers/ci-cd/builds/).
 
 The build fails if `dist/` has more than 19,000 files or a file over 24 MiB, because the free plan allows 20,000 files and 25 MiB per file. That is why the download page has one zip per source, and Bareksa's daily NAV is split into several zips by size (see `src/lib/archives.js`).
 
+## Referral codes
+
+The "Where to buy" block on a fund page links to the fund on Bibit (only when it is buyable there) and on Makmur (only when it is matched), and shows the owner's referral code with a copy button. Neither app has a working referral link, so the code is shown, not linked. The codes and the link builders are in `src/lib/referrals.js`. Change the codes there. The site footer says that some links include the owner's referral codes.
+
 ## Update the data
 
-The GitHub Actions workflow `.github/workflows/scrape.yml` has two schedules. It commits `data/` only when something changed. With Workers Builds connected, that commit deploys the new data.
+The GitHub Actions workflow `.github/workflows/scrape.yml` runs once a day at 23:00 UTC (06:00 in Jakarta). `scripts/decide-sources.sh` picks the sources from the UTC date, so one trigger never starts two runs on the same day. The workflow commits `data/` only when something changed. With Workers Builds connected, that commit deploys the new data.
 
-| Schedule | What it runs |
+| When (UTC) | What it runs |
 |---|---|
-| Every Saturday at 23:00 UTC (Sunday 06:00 in Jakarta) | Bibit and Kontan |
-| The 1st of every month at 23:00 UTC | Bareksa (without the daily NAV) |
+| Every day | Bibit |
+| Every Saturday (Sunday morning in Jakarta) | Kontan and Makmur |
+| The first Saturday of the month (day 1 to 7) | Kontan as a full rescan, instead of the normal Kontan run |
+| The 1st of every month | Bareksa (without the daily NAV) |
 
-You can also start it by hand from the Actions tab. The `sources` input picks `bibit-kontan` (the default), `bareksa`, or `all`.
+You can also start it by hand from the Actions tab. The `sources` input picks one of `bibit` (the default), `kontan`, `kontan-full`, `makmur`, `bareksa`, or `all` (everything except the Kontan full rescan).
 
 To run the scrapers yourself, you need Node.js 22 or newer. They have no dependencies to install.
 
 ```bash
-# Update Bibit and Kontan (Bibit first, because Kontan matching uses the Bibit fund names)
+# Update Bibit, Kontan, and Makmur (Bibit first, because the others match against the Bibit fund names).
+# It runs all three even if one fails, and exits non-zero if any failed.
 npm run scrape
 
 # Update one source (Bareksa matching uses the Bibit fund names too)
 npm run scrape:bibit
 npm run scrape:kontan
+npm run scrape:kontan:full   # scan every Kontan ID again (about 30 minutes)
+npm run scrape:makmur
 npm run scrape:bareksa
 
 # Check the Bareksa parsers
@@ -120,11 +152,13 @@ npm test
 node scrapers/bibit.js RD8807 RD216
 ```
 
-`scrapers/bibit.js`, `scrapers/kontan.js`, and `scrapers/bareksa.js` hold the source-specific code. `scrapers/lib.js` holds what they share (atomic file writes, CSV, retries, the worker pool, and the name matching against Bibit).
+`scrapers/bibit.js`, `scrapers/kontan.js`, `scrapers/makmur.js`, and `scrapers/bareksa.js` hold the source-specific code. `scrapers/lib.js` holds what they share (atomic file writes, CSV, retries, the worker pool, and the name matching against Bibit).
 
 **Bibit.** The first run downloads the full history and takes a few minutes. Later runs only download NAV and AUM rows that are newer than the last run, so they take less than a minute. The scraper decides what is new by comparing with `data/bibit/funds/<symbol>.json` from the last run. To download a fund's full history again, delete that file and its CSV files, then run the scraper.
 
 **Kontan.** See "How the Kontan scraper works" below. It sends at most 2 requests at a time, with a short pause after each one.
+
+**Makmur.** Reads the sitemap, then each of the 141 fund pages (about 1 minute, at most 2 requests at a time). Every run fetches every page and rewrites the files; a run without a change in the data gives identical files.
 
 **Bareksa.** See "How the Bareksa scraper works" below. The first full run made about 15,000 requests and took 100 minutes. A run after that asks only for rows newer than the stored ones, but it still asks once per fund, so it makes about 11,000 requests and takes about 40 minutes. The GitHub job has a 3 hour limit. It sends at most 2 requests at a time, with a short pause after each one.
 
@@ -160,9 +194,9 @@ The NAV files you commit are public, because this repository is public.
 ## How the Kontan scraper works
 
 - Kontan's category and manager list pages come back empty, so there is no fund list to read. The scraper finds funds by asking for each numeric fund ID.
-- `GET https://pusatdata.kontan.co.id/reksadana/get_chart_product/?produk_id=<id>&select=nab&periode=12&start_date=&end_date=` returns an HTML page. Its inline script has one `pausecontent.push('<date>')` line per date and one `data1.push('<value>')` line per NAV. An unknown ID gives the same page with no points. Longer periods do not work.
+- `GET https://pusatdata.kontan.co.id/reksadana/get_chart_product/?produk_id=<id>&select=nab&periode=12&start_date=&end_date=` returns an HTML page. Its inline script has one `pausecontent.push('<date>')` line per date and one `data1.push('<value>')` line per NAV. An unknown ID gives the same page with no pushes. The scraper requires both array declarations (`var pausecontent = new Array()` and `var data1 = new Array()`): a response without them is an error for that fund, not an empty chart. Longer periods do not work.
 - `GET /reksadana/produk/<id>` is the fund page. It is fetched once per fund, for the name, manager, and category.
-- Fund IDs run from 1 to about 17,200, but only IDs up to about 1,500 and from about 14,200 hold funds. The first run scans every ID up to 18,000 and takes a long time. Later runs refresh the known funds and only look at the 500 IDs after the highest known one. To scan every ID again, delete `data/kontan/funds.csv`. The stored NAV files are kept and merged.
+- Fund IDs run from 1 to about 17,200, but only IDs up to about 1,500 and from about 14,200 hold funds. The first run scans every ID up to 18,000 and takes a long time. Later runs refresh the known funds and only look at the 500 IDs after the highest known one. An ID that failed in an earlier scan, or a fund more than 500 IDs past the highest known one, is only found by a full rescan: `npm run scrape:kontan:full` (or `node scrapers/kontan.js --full`) asks for every ID again, skips the ones already known, and merges. The workflow does this on the first Saturday of every month. The stored NAV files are kept and merged.
 - Chart points with no price (`#N/A`, `0.00`) are skipped. A fund whose chart has two different NAVs on one date is skipped too, because it is not clear which one is right.
 - A fund with a changed or broken chart fails on its own. The run still saves the other funds and exits non-zero.
 

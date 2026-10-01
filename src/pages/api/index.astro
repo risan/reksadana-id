@@ -6,7 +6,7 @@ const ORIGIN = 'https://your-site.example';
 const endpoints = [
   {
     path: '/api/funds.json',
-    description: 'Index of every fund. The columns of funds.csv, with numbers and booleans typed, plus return_1y (a fraction, so 0.0106 is 1.06%).',
+    description: 'Index of every fund. The columns of funds.csv, with numbers and booleans typed, plus return_1y (a fraction, so 0.0106 is 1.06%) and makmur_url (the Makmur page of the fund, or null when there is no Makmur match).',
     example: `[
   {
     "symbol": "RD13",
@@ -30,7 +30,7 @@ const endpoints = [
   },
   {
     path: '/api/funds/RD8807.json',
-    description: 'Everything about one fund: the full Bibit record, plus documents, switchables, dividends, nav, aum, kontan, and bareksa. kontan and bareksa are the matching funds from Kontan and Bareksa, or null when there is no confident match. A missing part is null (documents, switchables, dividends, kontan, bareksa) or an empty list (nav, aum).',
+    description: 'Everything about one fund: the full Bibit record, plus documents, switchables, dividends, nav, aum, kontan, bareksa, and makmur. kontan, bareksa, and makmur are the matching funds from Kontan, Bareksa, and Makmur, or null when there is no confident match. A missing part is null (documents, switchables, dividends, kontan, bareksa, makmur) or an empty list (nav, aum).',
     example: `{
   "symbol": "RD8807",
   "name": "Grow Obligasi Optima Dinamis Kelas O",
@@ -49,6 +49,7 @@ const endpoints = [
   ],
   "kontan": null,
   "bareksa": null,
+  "makmur": null,
   "documents": { "factsheets": ["..."], "prospectus": ["..."] },
   "switchables": null,
   "dividends": null
@@ -102,6 +103,28 @@ const endpoints = [
 }`,
   },
   {
+    path: '/api/funds/RD142.json',
+    description: 'A fund with a Makmur match: makmur holds the Makmur fund id, its name, the address of its Makmur page (url), and data, the fund record from Makmur as it is. Makmur scales its numbers: returns, drawdown, CAGR, the expense ratio, and the asset allocation weights are in hundredths of a percent (2162 is 21.62%), and lastPrice is the NAV times 100 (156 is 1.56). lastAum and the minimum buy are plain amounts. Dates are numbers like 20260930.',
+    example: `{
+  "symbol": "RD142",
+  "name": "Bahana Liquid USD",
+  "...": "...",
+  "makmur": {
+    "id": "67f4d3dbc5988e812e4e9d59",
+    "name": "Bahana Liquid USD",
+    "url": "https://www.makmur.id/id/reksadana/pasar-uang/bahana-liquid-usd-b2dbfdcba9e3",
+    "data": {
+      "currency": "USD",
+      "lastPrice": 100,
+      "return1y": 266,
+      "assetAllocations": [{ "asset": "Obligasi", "weight": 2984 }, "..."],
+      "factsheet": "https://cache.makmur.id/...",
+      "...": "..."
+    }
+  }
+}`,
+  },
+  {
     path: '/api/types.json',
     description: 'Fund type codes and labels.',
     example: `{
@@ -134,7 +157,7 @@ RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,
   },
   {
     path: '/download/bibit.zip',
-    description: 'The Bibit data (data/bibit/) as one zip file. The other sources have their own zips: kontan.zip, bareksa.zip (without daily NAV), and bareksa-nav-1.zip and up (daily NAV, split by size). See the download page for the list.',
+    description: 'The Bibit data (data/bibit/) as one zip file. The other sources have their own zips: kontan.zip, makmur.zip, bareksa.zip (without daily NAV), and bareksa-nav-1.zip and up (daily NAV, split by size). See the download page for the list.',
     example: null,
   },
 ];
@@ -144,7 +167,7 @@ RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,
   <h1>API</h1>
   <p>
     A free, read-only API made of static files. No key is needed, and CORS is open
-    (<code>Access-Control-Allow-Origin: *</code>), so you can call it from a browser. The data is rebuilt every time it changes: Bibit and Kontan weekly, Bareksa monthly.
+    (<code>Access-Control-Allow-Origin: *</code>), so you can call it from a browser. The data is rebuilt every time it changes: Bibit daily, Kontan and Makmur weekly, Bareksa monthly.
   </p>
   <p>Replace the host below with the one you are visiting.</p>
 

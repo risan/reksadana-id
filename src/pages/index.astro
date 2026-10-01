@@ -13,6 +13,7 @@ import Base from '../layouts/Base.astro';
     <select id="type-filter" aria-label="Fund type"><option value="">All types</option></select>
     <select id="currency-filter" aria-label="Currency"><option value="">All currencies</option></select>
     <label><input id="tradeable-filter" type="checkbox" /> Buyable in Bibit app</label>
+    <label><input id="makmur-filter" type="checkbox" /> Buyable on Makmur</label>
     <label><input id="sharia-filter" type="checkbox" /> Sharia</label>
   </div>
 
@@ -28,6 +29,7 @@ import Base from '../layouts/Base.astro';
           <th><button class="button" data-sort="nav_date">NAV date</button></th>
           <th class="numeric"><button class="button" data-sort="aum">AUM (IDR)</button></th>
           <th class="numeric"><button class="button" data-sort="return_1y">1Y return</button></th>
+          <th>Buy on</th>
         </tr>
       </thead>
       <tbody id="rows"></tbody>
@@ -50,6 +52,7 @@ import Base from '../layouts/Base.astro';
   const typeFilter = document.getElementById('type-filter');
   const currencyFilter = document.getElementById('currency-filter');
   const tradeableFilter = document.getElementById('tradeable-filter');
+  const makmurFilter = document.getElementById('makmur-filter');
   const shariaFilter = document.getElementById('sharia-filter');
   const status = document.getElementById('status');
   const rows = document.getElementById('rows');
@@ -106,6 +109,7 @@ import Base from '../layouts/Base.astro';
       .filter((fund) => !typeFilter.value || fund.type === typeFilter.value)
       .filter((fund) => !currencyFilter.value || fund.currency === currencyFilter.value)
       .filter((fund) => !tradeableFilter.checked || fund.tradeable)
+      .filter((fund) => !makmurFilter.checked || fund.makmur_url)
       .filter((fund) => !shariaFilter.checked || fund.sharia)
       .sort(compareBySortKey);
 
@@ -121,6 +125,7 @@ import Base from '../layouts/Base.astro';
       <td>${escapeHtml(fund.nav_date ?? '-')}</td>
       <td class="numeric">${formatCompact(fund.aum)}</td>
       <td class="numeric ${signClass(fund.return_1y)}">${formatPercent(fund.return_1y)}</td>
+      <td>${fund.tradeable ? '<span class="badge">Bibit</span> ' : ''}${fund.makmur_url ? '<span class="badge">Makmur</span>' : ''}</td>
     </tr>`;
   }
 
@@ -166,7 +171,7 @@ import Base from '../layouts/Base.astro';
     render();
   });
 
-  for (const control of [searchInput, typeFilter, currencyFilter, tradeableFilter, shariaFilter]) {
+  for (const control of [searchInput, typeFilter, currencyFilter, tradeableFilter, makmurFilter, shariaFilter]) {
     control.addEventListener('input', applyFilters);
   }
 

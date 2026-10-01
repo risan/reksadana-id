@@ -1,11 +1,13 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import { makmurFundUrl } from './referrals.js';
 
 export const DATA_DIR = path.resolve('data');
 
 const BIBIT_DIR = path.join(DATA_DIR, 'bibit');
 const KONTAN_DIR = path.join(DATA_DIR, 'kontan');
 const BAREKSA_DIR = path.join(DATA_DIR, 'bareksa');
+const MAKMUR_DIR = path.join(DATA_DIR, 'makmur');
 
 const BOOLEAN_COLUMNS = ['sharia', 'etf', 'index', 'tradeable'];
 const NUMBER_COLUMNS = ['status', 'nav', 'aum', 'expense_ratio'];
@@ -121,6 +123,7 @@ export function loadFundIndex() {
     }
 
     record.return_1y = loadFund(record.symbol)?.simplereturn?.['1y'] ?? null;
+    record.makmur_url = loadMakmurFundsBySymbol().get(record.symbol)?.url ?? null;
 
     return record;
   });
@@ -235,4 +238,32 @@ export function loadBareksa(symbol) {
       lainnya: toNumberOrNull(row.lainnya),
     })),
   };
+}
+
+let makmurFundsBySymbol = null;
+
+function loadMakmurFundsBySymbol() {
+  if (makmurFundsBySymbol === null) {
+    const matchedRows = readCsvObjects(MAKMUR_DIR, 'funds.csv').filter((row) => row.bibit_symbol !== '');
+
+    makmurFundsBySymbol = new Map(matchedRows.map((row) => [row.bibit_symbol, {
+      id: row.makmur_id,
+      name: row.name,
+      url: makmurFundUrl(row.route_category, row.url),
+    }]));
+  }
+
+  return makmurFundsBySymbol;
+}
+
+// The Makmur fund matched to a Bibit symbol, with its raw Makmur record, or null when there is no match.
+// The record's numbers are scaled: see "Makmur" in the README.
+export function loadMakmur(symbol) {
+  const fund = loadMakmurFundsBySymbol().get(symbol);
+
+  if (!fund) {
+    return null;
+  }
+
+  return { ...fund, data: JSON.parse(readText(MAKMUR_DIR, 'funds', `${fund.id}.json`)) };
 }

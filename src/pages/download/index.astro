@@ -13,6 +13,8 @@ const files = [
   ['data/bibit/types.json', 'Fund type codes.'],
   ['data/kontan/funds.csv', 'One row per fund on Kontan: Kontan ID, name, manager, category, latest NAV and its date, and bibit_symbol, the matching Bibit fund (empty when there is no confident match).'],
   ['data/kontan/nav/<kontan_id>.csv', 'Daily NAV per unit from Kontan. Kontan serves the last 12 months, and every update adds the new days, so the history grows over time.'],
+  ['data/makmur/funds.csv', 'One row per fund on Makmur: makmur_id, name, manager, category, route_category (the folder in its web address), url, currency, last_price, as_of, last_aum, inception_date, and bibit_symbol, the matching Bibit fund (empty when there is no confident match). Dates are ISO dates; last_price is scaled (see the README).'],
+  ['data/makmur/funds/<makmur_id>.json', 'Everything Makmur\'s fund page holds, as it is: returns, drawdown, asset allocation, top holdings, fees, minimum buy, and links to the factsheet and prospectus. Numbers are scaled by 100 (see the README).'],
   ['data/bareksa/funds.csv', 'One row per fund on Bareksa: bareksa_id, name, slug, type, manager, launch_date, and bibit_symbol, the matching Bibit fund (empty when there is no confident match).'],
   ['data/bareksa/aum/<bareksa_id>.csv', 'Monthly assets under management in rupiah and US dollars (date, aum_idr, aum_usd).'],
   ['data/bareksa/units/<bareksa_id>.csv', 'Monthly number of units outstanding (date, units).'],
@@ -29,7 +31,8 @@ const archives = listArchives().map((archive) => ({ ...archive, megabytes: zipAr
     Pick one file, or take a whole source. <code>data/bibit/</code> comes from the public API behind
     <a href="https://app.bibit.id/">Bibit</a>. <code>data/kontan/</code> comes from
     <a href="https://pusatdata.kontan.co.id/reksadana">Kontan</a>. <code>data/bareksa/</code> comes from
-    <a href="https://www.bareksa.com/id/data/reksadana/daftar">Bareksa</a>.
+    <a href="https://www.bareksa.com/id/data/reksadana/daftar">Bareksa</a>. <code>data/makmur/</code> comes from the
+    fund pages of <a href="https://www.makmur.id/">Makmur</a>.
   </p>
 
   <div class="button-row">
@@ -99,11 +102,12 @@ const archives = listArchives().map((archive) => ({ ...archive, megabytes: zipAr
     <li><strong>Buyable funds:</strong> the NAV file has the full daily history from the launch date.</li>
     <li>
       <strong>Other funds:</strong> Bibit does not give their NAV history, even to a logged-in user. The fund list still
-      shows their latest NAV, so every weekly run adds that day's row. These rows have an empty
+      shows their latest NAV, so every daily run adds that day's row. These rows have an empty
       <code>nav_adjusted</code>. History for these funds starts on 2026-10-01.
       When Kontan has a matching fund, its daily NAV for the last 12 months (and growing) is in <code>data/kontan/</code>.
       When Bareksa has a matching fund, its monthly AUM, units, and asset allocation, and its daily NAV history once the
-      backfill has run, are in <code>data/bareksa/</code>.
+      backfill has run, are in <code>data/bareksa/</code>. When Makmur has a matching fund, its latest price and returns are in
+      <code>data/makmur/</code>.
     </li>
   </ul>
 </Base>

@@ -51,6 +51,7 @@ export function listArchives() {
   return [
     { name: 'bibit', description: 'Everything in data/bibit/', files: collectFiles(path.join(DATA_DIR, 'bibit')) },
     { name: 'kontan', description: 'Everything in data/kontan/', files: collectFiles(path.join(DATA_DIR, 'kontan')) },
+    { name: 'makmur', description: 'Everything in data/makmur/', files: collectFiles(path.join(DATA_DIR, 'makmur')) },
     { name: 'bareksa', description: 'data/bareksa/ without the daily NAV: fund list, AUM, units, and asset allocation', files: bareksaOtherFiles },
     ...splitBySize(bareksaNavFiles).map((files, index, groups) => ({
       name: `bareksa-nav-${index + 1}`,
