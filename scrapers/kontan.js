@@ -42,11 +42,17 @@ const fetchText = (url) => withRetries(async () => {
   }
 });
 
-// The chart endpoint answers with a page whose inline script pushes every point into two arrays.
-// An unknown fund ID gives the same page with no points.
-const parseChart = (html) => {
-  const dates = [...html.matchAll(/pausecontent\.push\('([^']*)'\)/g)].map((match) => match[1]);
-  const values = [...html.matchAll(/data1\.push\('([^']*)'\)/g)].map((match) => match[1]);
+// The chart endpoint answers with a page whose inline script declares two arrays and pushes every point
+// into them. An unknown fund ID gives the same page with no pushes. A page without the declarations is
+// something else (an error page, a changed template), so it fails instead of passing as an empty chart.
+export const parseChart = (html) => {
+  if (!/var\s+pausecontent\s*=\s*new Array\(\s*\)/.test(html) || !/var\s+data1\s*=\s*new Array\(\s*\)/.test(html)) {
+    throw new Error('Response is not a Kontan chart page');
+  }
+
+  const pushedValues = (arrayName) => [...html.matchAll(new RegExp(`${arrayName}\\.push\\(\\s*(['"])(.*?)\\1\\s*\\)`, 'g'))].map((match) => match[2]);
+  const dates = pushedValues('pausecontent');
+  const values = pushedValues('data1');
 
   if (dates.length !== values.length) {
     throw new Error(`Chart has ${dates.length} dates but ${values.length} values`);
@@ -117,7 +123,7 @@ const writeFundIndex = async (funds, bibitRows) => {
 const main = async () => {
   const startedAt = Date.now();
   const funds = await readStoredFunds();
-  const isFirstRun = funds.size === 0;
+  const isFullScan = funds.size === 0 || process.argv.includes('--full');
   const conflictingIds = [];
   const failures = [];
 
@@ -168,11 +174,11 @@ const main = async () => {
 
   await scrapeAll([...funds.keys()], 'Known funds scraped');
 
-  const scanEndId = () => Math.max(highestId() + LOOKAHEAD_IDS, isFirstRun ? FIRST_SCAN_END_ID : 0);
+  const scanEndId = () => Math.max(highestId() + LOOKAHEAD_IDS, isFullScan ? FIRST_SCAN_END_ID : 0);
 
-  for (let fromId = highestId() + 1; fromId <= scanEndId(); fromId += SCAN_CHUNK_SIZE) {
+  for (let fromId = isFullScan ? 1 : highestId() + 1; fromId <= scanEndId(); fromId += SCAN_CHUNK_SIZE) {
     const toId = Math.min(fromId + SCAN_CHUNK_SIZE - 1, scanEndId());
-    const ids = Array.from({ length: toId - fromId + 1 }, (_, index) => fromId + index);
+    const ids = Array.from({ length: toId - fromId + 1 }, (_, index) => fromId + index).filter((id) => !funds.has(id));
 
     await scrapeAll(ids, `New IDs ${fromId}-${toId} scanned`);
   }
@@ -194,4 +200,6 @@ const main = async () => {
   }
 };
 
-await main();
+if (process.argv[1] === import.meta.filename) {
+  await main();
+}
