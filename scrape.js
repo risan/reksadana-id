@@ -226,6 +226,16 @@ const updateChart = async ({ file, pathname, header, toRow, forceFull }) => {
 
 const fileExists = (file) => fs.access(file).then(() => true, () => false);
 
+// Older document links point straight at Bibit's S3 bucket, which now answers 403.
+// The same files are still served from Bibit's CDN host.
+const withWorkingUrl = (document) => {
+  if (!document.file) {
+    return document;
+  }
+
+  return { ...document, file: document.file.replace(/^https:\/\/bibit\.s3[.-][^/]*amazonaws\.com\//, 'https://assets.bibit.id/') };
+};
+
 // Bibit has no NAV chart for most funds you cannot buy in the app, but the fund
 // list still carries their latest NAV. Saving it on every run builds their history.
 const saveNavFromList = async (file, nav) => {
@@ -286,7 +296,10 @@ const scrapeFund = async (fund) => {
     const { data: factsheets } = await get(`/products/${symbol}/factsheets`);
     const { data: prospectus } = await get(`/products/${symbol}/prospectus`);
 
-    await writeJson(documentsFile, { factsheets, prospectus });
+    await writeJson(documentsFile, {
+      factsheets: factsheets.map(withWorkingUrl),
+      prospectus: prospectus.map(withWorkingUrl),
+    });
   }
 
   const switchablesFile = path.join(DATA_DIR, 'switchables', `${symbol}.json`);

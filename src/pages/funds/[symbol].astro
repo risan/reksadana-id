@@ -55,6 +55,8 @@ const launchDate = fund.released_date ?? fund.nav?.first_date ?? '-';
 const dividends = fund.dividends ?? [];
 const factsheets = fund.documents?.factsheets ?? [];
 const prospectus = fund.documents?.prospectus ?? [];
+// Bibit lists prospectus versions oldest first.
+const latestProspectus = prospectus.at(-1);
 const switchables = fund.switchables ?? [];
 const holdings = fund.holding ?? [];
 const assets = fund.asset ?? [];
@@ -109,6 +111,7 @@ const details = [
     <a class="button" href={`/api/funds/${symbol}.json`} download>Fund JSON</a>
     {hasNavCsv && <a class="button" href={`/csv/nav/${symbol}.csv`} download>NAV CSV</a>}
     {hasAumCsv && <a class="button" href={`/csv/aum/${symbol}.csv`} download>AUM CSV</a>}
+    {isWebUrl(latestProspectus?.file) && <a class="button" href={latestProspectus.file}>Latest prospectus</a>}
   </div>
 
   <h2>NAV</h2>
