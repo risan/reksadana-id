@@ -260,16 +260,18 @@ const scrapeFund = async (fund) => {
   }
 
   const navChanged = Boolean(fund.nav?.date) && (fund.nav.date !== previous?.nav?.date || !(await fileExists(navFile)));
+  const hasListRows = (await readCsvRows(navFile)).some((row) => row[2] === '');
   let navUpdated = false;
 
-  // A new dividend rescales every past adjusted NAV, so it needs the full history again.
+  // A new dividend rescales every past adjusted NAV, and rows saved from the fund list
+  // should give way to the full chart once Bibit has one, so both need the full history.
   if (dividendsChanged || navChanged) {
     navUpdated = await updateChart({
       file: navFile,
       pathname: `/products/${symbol}/chart`,
       header: NAV_HEADER,
       toRow: (point) => [point.formated_date, point.value, point.value_adjusted],
-      forceFull: dividendsChanged,
+      forceFull: dividendsChanged || hasListRows,
     });
   }
 
@@ -277,21 +279,26 @@ const scrapeFund = async (fund) => {
     await saveNavFromList(navFile, fund.nav);
   }
 
+  const aumChanged = fund.aum?.date !== previous?.aum?.date;
+
   // Factsheets come out monthly, like the AUM figure, so refresh documents on the same beat.
-  if (fund.aum?.date !== previous?.aum?.date || !(await fileExists(documentsFile))) {
+  if (aumChanged || !(await fileExists(documentsFile))) {
     const { data: factsheets } = await get(`/products/${symbol}/factsheets`);
     const { data: prospectus } = await get(`/products/${symbol}/prospectus`);
 
     await writeJson(documentsFile, { factsheets, prospectus });
-
-    if (fund.tradeable === 1) {
-      const { data: switchables } = await get(`/products/${symbol}/switchables`);
-
-      await writeJson(path.join(DATA_DIR, 'switchables', `${symbol}.json`), switchables);
-    }
   }
 
-  if (fund.aum?.date !== previous?.aum?.date) {
+  const switchablesFile = path.join(DATA_DIR, 'switchables', `${symbol}.json`);
+  const switchablesStale = aumChanged || previous?.tradeable !== 1 || !(await fileExists(switchablesFile));
+
+  if (fund.tradeable === 1 && switchablesStale) {
+    const { data: switchables } = await get(`/products/${symbol}/switchables`);
+
+    await writeJson(switchablesFile, switchables);
+  }
+
+  if (aumChanged) {
     await updateChart({
       file: path.join(DATA_DIR, 'aum', `${symbol}.csv`),
       pathname: `/products/${symbol}/chart/aum`,
