@@ -46,12 +46,12 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 71,Lautandhana Saham Syariah,lautandhana-saham-syariah,Saham,"Lautandhana Investment Management, PT",2013-01-09,RD819
 73,Mandiri Asa Sejahtera,mandiri-asa-sejahtera,Saham,"Mandiri Manajemen Investasi, PT",2013-02-08,
 74,Mandiri Dynamic Equity,mandiri-dynamic-equity,Saham,"Mandiri Manajemen Investasi, PT",2012-11-05,RD850
-75,Mandiri Investa Atraktif Kelas A,mandiri-investa-atraktif-kelas-a,Saham,"Mandiri Manajemen Investasi, PT",2005-08-30,
+75,Mandiri Investa Atraktif Kelas A,mandiri-investa-atraktif-kelas-a,Saham,"Mandiri Manajemen Investasi, PT",2005-08-30,RD852
 76,Mandiri Investa Atraktif Syariah,mandiri-investa-atraktif-syariah,Saham,"Mandiri Manajemen Investasi, PT",2008-01-25,RD853
 77,Mandiri Investa Ekuitas Dinamis,mandiri-investa-ekuitas-dinamis,Saham,"Mandiri Manajemen Investasi, PT",2011-03-21,RD863
 78,Mandiri Investa Equity Movement,mandiri-investa-equity-movement,Saham,"Mandiri Manajemen Investasi, PT",2012-10-03,RD867
-79,Mandiri Investa Cerdas Bangsa Kelas A,mandiri-investa-cerdas-bangsa-kelas-a,Saham,"Mandiri Manajemen Investasi, PT",2008-07-15,
-81,Mandiri Saham Atraktif Kelas A,mandiri-saham-atraktif-kelas-a,Saham,"Mandiri Manajemen Investasi, PT",2011-10-26,
+79,Mandiri Investa Cerdas Bangsa Kelas A,mandiri-investa-cerdas-bangsa-kelas-a,Saham,"Mandiri Manajemen Investasi, PT",2008-07-15,RD856
+81,Mandiri Saham Atraktif Kelas A,mandiri-saham-atraktif-kelas-a,Saham,"Mandiri Manajemen Investasi, PT",2011-10-26,RD891
 85,Manulife Dana Saham Kelas A,manulife-dana-saham-kelas-a,Saham,"Manulife Aset Manajemen Indonesia, PT",2003-08-01,RD985
 86,Manulife Greater Indonesia Fund,manulife-greater-indonesia-fund,Saham,"Manulife Aset Manajemen Indonesia, PT",2011-09-14,RD991
 87,Reksa Dana Manulife Institutional Equity Fund Kelas I,reksa-dana-manulife-institutional-equity-fund-kelas-i,Saham,"Manulife Aset Manajemen Indonesia, PT",2011-07-25,
@@ -87,7 +87,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 135,Simas Saham Unggulan,simas-saham-unggulan,Saham,"Sinarmas Asset Management, PT",2012-12-18,RD1628
 136,Reksa Dana Sucorinvest Equity Fund Kelas A,reksa-dana-sucorinvest-equity-fund-kelas-a,Saham,"Sucorinvest Asset Management, PT",2012-05-08,RD1653
 137,Syailendra Equity Alpha Fund,syailendra-equity-alpha-fund,Saham,"Syailendra Capital, PT",2012-10-31,
-138,Reksa Dana Syailendra Equity Opportunity Fund Kelas A,reksa-dana-syailendra-equity-opportunity-fund-kelas-a,Saham,"Syailendra Capital, PT",2007-06-07,
+138,Reksa Dana Syailendra Equity Opportunity Fund Kelas A,reksa-dana-syailendra-equity-opportunity-fund-kelas-a,Saham,"Syailendra Capital, PT",2007-06-07,RD1698
 139,TRAM ASA Equity,tram-asa-equity,Saham,"Trimegah Asset Management, PT",2013-07-19,
 140,TRAM Consumption Plus Kelas A,tram-consumption-plus-kelas-a,Saham,"Trimegah Asset Management, PT",2011-05-05,RD1755
 142,TRAM Infrastructure Plus,tram-infrastructure-plus,Saham,"Trimegah Asset Management, PT",2012-03-28,
@@ -144,7 +144,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 252,Manulife Dana Tumbuh Berimbang,manulife-dana-tumbuh-berimbang,Campuran,"Manulife Aset Manajemen Indonesia, PT",2007-11-01,RD990
 254,Mega Asset Strategic Total Return,mega-asset-strategic-total-return,Campuran,"Mega Asset Management, PT",2012-09-06,RD1047
 255,Mega Dana Balance,mega-dana-balance,Campuran,"Mega Capital Investama, PT",2012-04-09,RD1875
-257,Mega Dana Kombinasi,mega-dana-kombinasi,Campuran,"Mega Asset Management, PT",2001-08-10,
+257,Mega Dana Kombinasi,mega-dana-kombinasi,Campuran,"Mega Asset Management, PT",2001-08-10,RD1057
 261,Minna Padi Keraton II,minna-padi-keraton-ii,Campuran,"Minna Padi Aset Manajemen, PT",2012-04-09,RD1088
 262,Minna Padi Property Plus,minna-padi-property-plus,Campuran,"Minna Padi Aset Manajemen, PT",2012-04-11,RD1091
 263,MNC Dana Kombinasi,mnc-dana-kombinasi,Campuran,"MNC Asset Management, PT",2007-12-19,
@@ -179,9 +179,9 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 310,Semesta Dana Maxima,semesta-dana-maxima,Campuran,"Semesta Aset Manajemen, PT",2004-10-08,RD1567
 313,Simas Satu,simas-satu,Campuran,"Sinarmas Asset Management, PT",2001-01-15,RD1629
 314,Simas Satu Prima,simas-satu-prima,Campuran,"Sinarmas Asset Management, PT",2012-12-18,RD1630
-315,STAR Balanced,star-balanced,Campuran,"Surya Timur Alam Raya Asset Management, PT",2005-10-03,
+315,STAR Balanced,star-balanced,Campuran,"Surya Timur Alam Raya Asset Management, PT",2005-10-03,RD1643
 316,Sucorinvest Flexi Fund,sucorinvest-flexi-fund,Campuran,"Sucorinvest Asset Management, PT",2006-12-06,RD1655
-318,Reksa Dana Syailendra Balanced Opportunity Fund Kelas A,reksa-dana-syailendra-balanced-opportunity-fund-kelas-a,Campuran,"Syailendra Capital, PT",2008-04-22,
+318,Reksa Dana Syailendra Balanced Opportunity Fund Kelas A,reksa-dana-syailendra-balanced-opportunity-fund-kelas-a,Campuran,"Syailendra Capital, PT",2008-04-22,RD1671
 319,Syailendra Indo Balance Fund,syailendra-indo-balance-fund,Campuran,"Syailendra Capital, PT",2011-03-22,RD1702
 323,TRAM Alpha,tram-alpha,Campuran,"Trimegah Asset Management, PT",2013-05-01,RD1754
 325,TRIM Kombinasi 2,trim-kombinasi-2,Campuran,"Trimegah Asset Management, PT",2006-11-10,RD1767
@@ -196,7 +196,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 338,Manulife Dana Tetap Utama,manulife-dana-tetap-utama,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2012-12-19,RD989
 339,Manulife Obligasi Negara Indonesia II Kelas A,manulife-obligasi-negara-indonesia-ii-kelas-a,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2009-01-23,RD994
 340,Manulife Obligasi Unggulan Kelas A,manulife-obligasi-unggulan-kelas-a,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2003-10-16,RD3206
-341,Manulife Pendapatan Bulanan II Kelas A,manulife-pendapatan-bulanan-ii-kelas-a,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2009-01-23,
+341,Manulife Pendapatan Bulanan II Kelas A,manulife-pendapatan-bulanan-ii-kelas-a,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2009-01-23,RD996
 342,Mega Asset Mantap,mega-asset-mantap,Pendapatan Tetap,"Mega Asset Management, PT",2012-01-12,RD1041
 343,MNC Dana Likuid,mnc-dana-likuid,Pendapatan Tetap,"MNC Asset Management, PT",2007-01-03,RD1098
 344,MNC Dana Syariah,mnc-dana-syariah,Pendapatan Tetap,"MNC Asset Management, PT",2006-06-23,RD1110
@@ -210,7 +210,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 356,Aberdeen Standard Indonesia Government Bond Fund,aberdeen-standard-indonesia-government-bond-fund,Pendapatan Tetap,"Aberdeen Standard Investments Indonesia, PT",2009-06-08,RD3422
 357,Bahana Obligasi Negara Indonesia Kelas G,bahana-obligasi-negara-indonesia-kelas-g,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2005-03-30,
 358,Reksa Dana Allianz Smile Fixed Income Fund,reksa-dana-allianz-smile-fixed-income-fund,Pendapatan Tetap,"Allianz Global Investors Asset Management Indonesia, PT",2013-07-22,
-360,PNM Amanah Syariah Kelas A,pnm-amanah-syariah-kelas-a,Pendapatan Tetap,"PNM Investment Management, PT",2004-09-01,
+360,PNM Amanah Syariah Kelas A,pnm-amanah-syariah-kelas-a,Pendapatan Tetap,"PNM Investment Management, PT",2004-09-01,RD1263
 361,PNM Dana Bertumbuh,pnm-dana-bertumbuh,Pendapatan Tetap,"PNM Investment Management, PT",2013-07-03,RD1264
 362,PNM Dana Sejahtera II,pnm-dana-sejahtera-ii,Pendapatan Tetap,"PNM Investment Management, PT",2005-05-18,RD1267
 363,Panin Dana Utama Plus 2,panin-dana-utama-plus-2,Pendapatan Tetap,"Panin Asset Management, PT",2007-08-30,RD1218
@@ -232,12 +232,12 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 381,Danamas Stabil,danamas-stabil,Pendapatan Tetap,"Sinarmas Asset Management, PT",2005-02-28,RD556
 382,Simas Income Fund,simas-income-fund,Pendapatan Tetap,"Sinarmas Asset Management, PT",2005-08-10,RD1610
 383,Danamas Dollar,danamas-dollar,Pendapatan Tetap,"Sinarmas Asset Management, PT",2004-05-31,
-385,Syailendra Fixed Income Fund Kelas A,syailendra-fixed-income-fund-kelas-a,Pendapatan Tetap,"Syailendra Capital, PT",2011-12-08,
+385,Syailendra Fixed Income Fund Kelas A,syailendra-fixed-income-fund-kelas-a,Pendapatan Tetap,"Syailendra Capital, PT",2011-12-08,RD1700
 386,TRIM Dana Tetap 2 Kelas A,trim-dana-tetap-2-kelas-a,Pendapatan Tetap,"Trimegah Asset Management, PT",2008-05-21,RD1763
 388,TRAM Strategic Plus Kelas A,tram-strategic-plus-kelas-a,Pendapatan Tetap,"Trimegah Asset Management, PT",2011-10-05,RD1761
 390,TRAM Pendapatan Tetap USD,tram-pendapatan-tetap-usd,Pendapatan Tetap,"Trimegah Asset Management, PT",2011-07-18,RD1757
-394,Yuanta Fixed Income,yuanta-fixed-income,Pendapatan Tetap,"Yuanta Asset Management, PT",2013-05-08,
-395,Ashmore Dana Obligasi Nusantara Kelas A,ashmore-dana-obligasi-nusantara-kelas-a,Pendapatan Tetap,"Ashmore Asset Management Indonesia, PT",2013-04-24,
+394,Yuanta Fixed Income,yuanta-fixed-income,Pendapatan Tetap,"Yuanta Asset Management, PT",2013-05-08,RD1827
+395,Ashmore Dana Obligasi Nusantara Kelas A,ashmore-dana-obligasi-nusantara-kelas-a,Pendapatan Tetap,"Ashmore Asset Management Indonesia, PT",2013-04-24,RD39
 396,Axa Bond Income Kelas O,axa-bond-income-kelas-o,Pendapatan Tetap,"AXA Investment Managers Select Indonesia , PT",2011-09-08,
 397,AXA Obligasi Dollar,axa-obligasi-dollar,Pendapatan Tetap,"AXA Investment Managers Select Indonesia , PT",2008-12-01,
 398,Pendapatan Tetap Utama Kelas S,pendapatan-tetap-utama-kelas-s,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2005-05-25,
@@ -259,8 +259,8 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 417,Principal Total Return Bond Fund,principal-total-return-bond-fund,Pendapatan Tetap,"Principal Asset Management, PT",2004-10-22,
 418,Principal Bond,principal-bond,Pendapatan Tetap,"Principal Asset Management, PT",2007-10-02,RD454
 420,BRI Pendapatan Prima Plus,bri-pendapatan-prima-plus,Pendapatan Tetap,"BRI Manajemen Investasi, PT",2010-06-22,
-422,Danareksa Melati Pendapatan Tetap II,danareksa-melati-pendapatan-tetap-ii,Pendapatan Tetap,"BRI Manajemen Investasi, PT",2011-03-04,
-423,Danareksa Melati Pendapatan Tetap,danareksa-melati-pendapatan-tetap,Pendapatan Tetap,"BRI Manajemen Investasi, PT",2010-05-26,
+422,Danareksa Melati Pendapatan Tetap II,danareksa-melati-pendapatan-tetap-ii,Pendapatan Tetap,"BRI Manajemen Investasi, PT",2011-03-04,RD574
+423,Danareksa Melati Pendapatan Tetap,danareksa-melati-pendapatan-tetap,Pendapatan Tetap,"BRI Manajemen Investasi, PT",2010-05-26,RD573
 425,BRI Melati Pendapatan Utama,bri-melati-pendapatan-utama,Pendapatan Tetap,"BRI Manajemen Investasi, PT",2012-09-27,RD578
 426,Danareksa Melati US Dollar,danareksa-melati-us-dollar,Pendapatan Tetap,"BRI Manajemen Investasi, PT",2000-12-01,
 428,BRI Melati Premium Dollar,bri-melati-premium-dollar,Pendapatan Tetap,"BRI Manajemen Investasi, PT",2007-02-19,
@@ -279,19 +279,19 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 443,MRS Bond Kresna,mrs-bond-kresna,Pendapatan Tetap,"Kresna Asset Management, PT",2008-02-27,RD1134
 444,Prestasi Alokasi Portofolio Investasi (PAPI),prestasi-alokasi-portofolio-investasi-papi,Pendapatan Tetap,"Kresna Asset Management, PT",2007-02-22,
 445,Lautandhana Fixed Income,lautandhana-fixed-income,Pendapatan Tetap,"Lautandhana Investment Management, PT",2005-09-06,RD807
-446,Bahana Pendapatan Tetap Utama 2,bahana-pendapatan-tetap-utama-2,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2005-08-22,
+446,Bahana Pendapatan Tetap Utama 2,bahana-pendapatan-tetap-utama-2,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2005-08-22,RD1406
 447,Batavia Dana Obligasi Ultima,batavia-dana-obligasi-ultima,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2007-02-20,RD214
 448,BNP Paribas Obligasi Plus,bnp-paribas-obligasi-plus,Pendapatan Tetap,"BNP Paribas Asset Management, PT",2008-08-25,RD421
 449,Principal Dollar Bond,principal-dollar-bond,Pendapatan Tetap,"Principal Asset Management, PT",2005-02-21,RD468
 451,Danamas Pasti,danamas-pasti,Pendapatan Tetap,"Sinarmas Asset Management, PT",2003-04-28,RD553
 452,BRI Gebyar Indonesia II,bri-gebyar-indonesia-ii,Pendapatan Tetap,"BRI Manajemen Investasi, PT",2008-04-23,
 453,Bahana Obligasi Ganesha Kelas G,bahana-obligasi-ganesha-kelas-g,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2004-05-13,
-454,Investa Dana Dollar Mandiri Kelas A,investa-dana-dollar-mandiri-kelas-a,Pendapatan Tetap,"Mandiri Manajemen Investasi, PT",2008-05-28,
-455,Reksa Dana Mega Dana Obligasi Dua,reksa-dana-mega-dana-obligasi-dua,Pendapatan Tetap,"Mega Asset Management, PT",2007-06-04,
+454,Investa Dana Dollar Mandiri Kelas A,investa-dana-dollar-mandiri-kelas-a,Pendapatan Tetap,"Mandiri Manajemen Investasi, PT",2008-05-28,RD780
+455,Reksa Dana Mega Dana Obligasi Dua,reksa-dana-mega-dana-obligasi-dua,Pendapatan Tetap,"Mega Asset Management, PT",2007-06-04,RD1060
 456,Medali Syariah,medali-syariah,Pendapatan Tetap,"Mega Asset Management, PT",2007-06-04,
 457,Mega Dana Ori Dua,mega-dana-ori-dua,Pendapatan Tetap,"Mega Capital Investama, PT",2008-10-17,RD1063
-458,Mega Dana Pendapatan Tetap,mega-dana-pendapatan-tetap,Pendapatan Tetap,"Mega Asset Management, PT",2007-12-17,
-459,Mega Dana Rido Tiga,mega-dana-rido-tiga,Pendapatan Tetap,"Mega Asset Management, PT",2008-09-19,
+458,Mega Dana Pendapatan Tetap,mega-dana-pendapatan-tetap,Pendapatan Tetap,"Mega Asset Management, PT",2007-12-17,RD1065
+459,Mega Dana Rido Tiga,mega-dana-rido-tiga,Pendapatan Tetap,"Mega Asset Management, PT",2008-09-19,RD1067
 463,Si Dana Obligasi Maxima,si-dana-obligasi-maxima,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2006-12-20,RD1886
 465,Bahana Provident Fund,bahana-provident-fund,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2013-08-13,RD190
 466,Batavia Dana Obligasi Andalan,batavia-dana-obligasi-andalan,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2013-11-11,RD207
@@ -332,7 +332,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 526,Mega Dana ORI,mega-dana-ori,Pendapatan Tetap,"Mega Capital Investama, PT",2003-07-28,RD1062
 527,Dana Premier,dana-premier,Pendapatan Tetap,"Equity Aset Manajemen, PT",2007-03-23,RD544
 529,Pacific Fixed Fund,pacific-fixed-fund,Pendapatan Tetap,"Pacific Capital Investment, PT",2009-11-30,RD1181
-532,Ashmore Dana USD Nusantara Kelas A,ashmore-dana-usd-nusantara-kelas-a,Pendapatan Tetap,"Ashmore Asset Management Indonesia, PT",2014-03-10,
+532,Ashmore Dana USD Nusantara Kelas A,ashmore-dana-usd-nusantara-kelas-a,Pendapatan Tetap,"Ashmore Asset Management Indonesia, PT",2014-03-10,RD47
 534,Batavia Dana Obligasi Cemerlang,batavia-dana-obligasi-cemerlang,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2014-03-21,RD208
 535,Pacific Equity Growth Fund,pacific-equity-growth-fund,Saham,"Pacific Capital Investment, PT",2014-03-21,RD1170
 536,Semesta Dana Saham,semesta-dana-saham,Saham,"Semesta Aset Manajemen, PT",2014-03-21,RD1568
@@ -356,7 +356,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 1068,Mandiri Investa Pasar Uang Kelas A,mandiri-investa-pasar-uang-kelas-a,Pasar Uang,"Mandiri Manajemen Investasi, PT",2004-09-24,RD870
 1069,Mandiri Kapital Prima,mandiri-kapital-prima,Pasar Uang,"Mandiri Manajemen Investasi, PT",2013-09-26,RD873
 1070,Reksa Dana Manulife Dana Kas II Kelas A,reksa-dana-manulife-dana-kas-ii-kelas-a,Pasar Uang,"Manulife Aset Manajemen Indonesia, PT",2009-01-23,RD983
-1071,Manulife Indonesia Money Market Fund Kelas A,manulife-indonesia-money-market-fund-kelas-a,Pasar Uang,"Manulife Aset Manajemen Indonesia, PT",2008-05-15,
+1071,Manulife Indonesia Money Market Fund Kelas A,manulife-indonesia-money-market-fund-kelas-a,Pasar Uang,"Manulife Aset Manajemen Indonesia, PT",2008-05-15,RD992
 1072,Maybank Dana Pasar Uang,maybank-dana-pasar-uang,Pasar Uang,"Maybank Asset Management, PT",2011-09-07,RD1022
 1073,Mega Asset Multicash,mega-asset-multicash,Pasar Uang,"Mega Asset Management, PT",2012-03-12,
 1074,Mrs Cash Kresna,mrs-cash-kresna,Pasar Uang,"Kresna Asset Management, PT",2002-04-05,RD1135
@@ -369,7 +369,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 1081,RD BNI-AM Dana Prima Likuid,rd-bni-am-dana-prima-likuid,Pasar Uang,"BNI Asset Management, PT",2013-08-26,
 1082,Gap Money Market Fund,gap-money-market-fund,Pasar Uang,"GAP Capital, PT",2013-10-10,RD677
 1084,Principal Cash Fund,principal-cash-fund,Pasar Uang,"Principal Asset Management, PT",2011-12-23,
-1086,Mega Dana Kas,mega-dana-kas,Pasar Uang,"Mega Asset Management, PT",2006-09-11,
+1086,Mega Dana Kas,mega-dana-kas,Pasar Uang,"Mega Asset Management, PT",2006-09-11,RD1055
 1087,Reksa Dana PNM Puas,reksa-dana-pnm-puas,Pasar Uang,"PNM Investment Management, PT",2004-08-26,RD1280
 1088,Bahana Dana Likuid Kelas G,bahana-dana-likuid-kelas-g,Pasar Uang,"Bahana TCW Investment Management, PT",2004-04-16,RD124
 1089,Eastspring Investments Cash Reserve Kelas A,eastspring-investments-cash-reserve-kelas-a,Pasar Uang,"Eastspring Investments Indonesia, PT",2013-07-03,RD3448
@@ -476,7 +476,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 1307,BNI AM Proteksi Mega Pundi IV,bni-am-proteksi-mega-pundi-iv,Terproteksi,"BNI Asset Management, PT",2012-05-15,RD371
 1308,Batavia Proteksi Andalan 6,batavia-proteksi-andalan-6,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2013-07-30,
 1311,Danareksa Proteksi Syariah I,danareksa-proteksi-syariah-i,Terproteksi,"BRI Manajemen Investasi, PT",2013-02-20,
-1316,Mega Dana Terproteksi VIII,mega-dana-terproteksi-viii,Terproteksi,"Mega Asset Management, PT",2012-11-13,
+1316,Mega Dana Terproteksi VIII,mega-dana-terproteksi-viii,Terproteksi,"Mega Asset Management, PT",2012-11-13,RD1070
 1317,Mega Dana Terproteksi X,mega-dana-terproteksi-x,Terproteksi,"Mega Capital Investama, PT",2013-10-28,RD1071
 1318,Mega Dana Terproteksi XI,mega-dana-terproteksi-xi,Terproteksi,"Mega Capital Investama, PT",2013-12-24,RD1072
 1320,Premier Proteksi IV,premier-proteksi-iv,Terproteksi,"Indo Premier Investment Management, PT",2012-11-29,
@@ -574,7 +574,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 1699,Lautandhana Growth Fund,lautandhana-growth-fund,Saham,"Lautandhana Investment Management, PT",2014-08-12,RD808
 1700,Simas Syariah Berkembang,simas-syariah-berkembang,Campuran,"Sinarmas Asset Management, PT",2014-08-08,
 1701,Simas Syariah Unggulan,simas-syariah-unggulan,Saham,"Sinarmas Asset Management, PT",2014-08-08,RD1634
-1705,Valbury Equity I,valbury-equity-i,Saham,"KB Valbury Asset Management, PT",2014-08-20,
+1705,Valbury Equity I,valbury-equity-i,Saham,"KB Valbury Asset Management, PT",2014-08-20,RD1809
 1706,Mandiri Seri 14,mandiri-seri-14,Terproteksi,"Mandiri Manajemen Investasi, PT",2014-08-19,
 1707,CIMB-Principal CPF CB XVII,cimb-principal-cpf-cb-xvii,Terproteksi,"Principal Asset Management, PT",2014-08-15,
 1708,HPAM Syariah Ekuitas,hpam-syariah-ekuitas,Saham,"Henan Putihrai Asset Management, PT",2014-08-28,RD697
@@ -674,13 +674,13 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 1824,Pacific Equity Progresif Fund,pacific-equity-progresif-fund,Saham,"Pacific Capital Investment, PT",2015-03-02,RD1176
 1825,Cipta GTWS Equity,cipta-gtws-equity,Saham,"Ciptadana Asset Management, PT",2015-03-03,RD500
 1826,HPAM Smart Protected IV,hpam-smart-protected-iv,Terproteksi,"Henan Putihrai Asset Management, PT",2015-02-24,RD691
-1827,Mega Dana Kas Syariah,mega-dana-kas-syariah,Pasar Uang,"Mega Asset Management, PT",2015-02-27,
+1827,Mega Dana Kas Syariah,mega-dana-kas-syariah,Pasar Uang,"Mega Asset Management, PT",2015-02-27,RD1056
 1828,PNM Dana Tunai,pnm-dana-tunai,Pasar Uang,"PNM Investment Management, PT",2015-03-03,RD1270
 1830,Pratama Dana Optimum Saham,pratama-dana-optimum-saham,Saham,"Pratama Capital Assets Management, PT",2015-03-06,RD1305
 1831,Bahana Optima Protected Fund H 82,bahana-optima-protected-fund-h-82,Terproteksi,"Bahana TCW Investment Management, PT",2015-03-11,
 1832,Syailendra Dana Ekuitas Plus,syailendra-dana-ekuitas-plus,Saham,"Syailendra Capital, PT",2015-03-12,RD1691
 1833,SAM Dana Cerdas,sam-dana-cerdas,Saham,"Samuel Aset Manajemen, PT",2015-03-17,RD1512
-1834,BNI AM Dana Pasar Uang Kemilau Kelas A,bni-am-dana-pasar-uang-kemilau-kelas-a,Pasar Uang,"BNI Asset Management, PT",2015-03-18,
+1834,BNI AM Dana Pasar Uang Kemilau Kelas A,bni-am-dana-pasar-uang-kemilau-kelas-a,Pasar Uang,"BNI Asset Management, PT",2015-03-18,RD325
 1835,Mandiri Seri 17,mandiri-seri-17,Terproteksi,"Mandiri Manajemen Investasi, PT",2015-03-16,
 1836,EMCO VII,emco-vii,Terproteksi,"Emco Asset Management, PT",2015-03-18,RD646
 1837,Danakita Proteksi Seri I,danakita-proteksi-seri-i,Terproteksi,"Danakita Investama, PT",2015-03-23,
@@ -857,7 +857,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2068,Simas Terproteksi 1,simas-terproteksi-1,Terproteksi,"Sinarmas Asset Management, PT",2015-11-18,
 2070,OSO Borneo Equity Fund,oso-borneo-equity-fund,Saham,"OSO Manajemen Investasi, PT",2017-10-18,RD1157
 2071,Pratama Dana Gemilang Saham,pratama-dana-gemilang-saham,Saham,"Pratama Capital Assets Management, PT",2015-11-23,RD1301
-2072,Majoris Obligasi Utama Indonesia,majoris-obligasi-utama-indonesia,Pendapatan Tetap,"Majoris Asset Management, PT",2015-11-30,
+2072,Majoris Obligasi Utama Indonesia,majoris-obligasi-utama-indonesia,Pendapatan Tetap,"Majoris Asset Management, PT",2015-11-30,RD830
 2073,Majoris Saham Alokasi Dinamik Indonesia,majoris-saham-alokasi-dinamik-indonesia,Saham,"Majoris Asset Management, PT",2015-11-30,
 2074,BNIAM PROTEKSI LXV,bniam-proteksi-lxv,Terproteksi,"BNI Asset Management, PT",2015-11-27,
 2075,RDT Maybank CPF IV,rdt-maybank-cpf-iv,Terproteksi,"Maybank Asset Management, PT",2015-11-30,
@@ -909,7 +909,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2131,Trimegah Terproteksi Prima XVII,trimegah-terproteksi-prima-xvii,Terproteksi,"Trimegah Asset Management, PT",2016-01-15,
 2132,Bahana C Optima 98,bahana-c-optima-98,Terproteksi,"Bahana TCW Investment Management, PT",2015-12-23,
 2133,Danareksa Proteksi XVII USD,danareksa-proteksi-xvii-usd,Terproteksi,"BRI Manajemen Investasi, PT",2015-12-21,
-2134,Danareksa Proteksi XXII,danareksa-proteksi-xxii,Terproteksi,"BRI Manajemen Investasi, PT",2015-12-28,
+2134,Danareksa Proteksi XXII,danareksa-proteksi-xxii,Terproteksi,"BRI Manajemen Investasi, PT",2015-12-28,RD614
 2135,HPAM Proteksi Prima,hpam-proteksi-prima,Terproteksi,"Henan Putihrai Asset Management, PT",2015-12-28,RD688
 2136,Simas Investa Proteksi 1,simas-investa-proteksi-1,Terproteksi,"Sinarmas Asset Management, PT",2015-12-29,RD1612
 2137,Sucorinvest  Proteksi 16,sucorinvest-proteksi-16,Terproteksi,"Sucorinvest Asset Management, PT",2015-12-22,
@@ -968,7 +968,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2194,Aberdeen Standard Syariah Asia Pacific Equity USD Fund,aberdeen-standard-syariah-asia-pacific-equity-usd-fund,Saham,"Aberdeen Standard Investments Indonesia, PT",2016-04-12,RD2037
 2195,MNC Pendapatan Tetap III,mnc-pendapatan-tetap-iii,Pendapatan Tetap,"MNC Asset Management, PT",2016-04-11,
 2196,RHB USD Money Market Fund 1,rhb-usd-money-market-fund-1,Pasar Uang,"Allianz Global Investors Asset Management Indonesia, PT",2016-02-18,
-2197,Maybank Money Market Fund 2,maybank-money-market-fund-2,Pasar Uang,"Maybank Asset Management, PT",2016-04-12,
+2197,Maybank Money Market Fund 2,maybank-money-market-fund-2,Pasar Uang,"Maybank Asset Management, PT",2016-04-12,RD1440
 2198,Danareksa Proteksi 27,danareksa-proteksi-27,Terproteksi,"BRI Manajemen Investasi, PT",2016-04-01,
 2199,Insight Terproteksi 6,insight-terproteksi-6,Terproteksi,"Insight Investments Management, PT",2016-03-30,
 2200,Sam Dana Obligasi Terproteksi III,sam-dana-obligasi-terproteksi-iii,Terproteksi,"Samuel Aset Manajemen, PT",2016-03-30,
@@ -980,7 +980,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2206,Millenium Campuran,millenium-campuran,Campuran,"Millenium Capital Management, PT",2016-04-18,
 2207,Millenium MCM Equity Sektoral,millenium-mcm-equity-sektoral,Saham,"Millenium Capital Management, PT",2016-04-18,
 2208,OSO Andalas Equity Fund,oso-andalas-equity-fund,Saham,"OSO Manajemen Investasi, PT",2016-04-20,RD1156
-2209,Majoris Pasar Uang Indonesia,majoris-pasar-uang-indonesia,Pasar Uang,"Majoris Asset Management, PT",2016-04-06,
+2209,Majoris Pasar Uang Indonesia,majoris-pasar-uang-indonesia,Pasar Uang,"Majoris Asset Management, PT",2016-04-06,RD831
 2210,BNI-AM Proteksi Waradana,bni-am-proteksi-waradana,Terproteksi,"BNI Asset Management, PT",2016-04-18,
 2211,Mandiri Obligasi Optima II,mandiri-obligasi-optima-ii,Pendapatan Tetap,"Mandiri Manajemen Investasi, PT",2016-04-26,
 2214,Reksa Dana Terproteksi Simas Gemilang 1,reksa-dana-terproteksi-simas-gemilang-1,Terproteksi,"Sinarmas Asset Management, PT",2016-04-27,
@@ -1026,8 +1026,8 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2259,Insight Life (I-LIFE),insight-life-i-life,Campuran,"Insight Investments Management, PT",2016-06-10,
 2260,Lautandhana Balanced Income Fund,lautandhana-balanced-income-fund,Campuran,"Lautandhana Investment Management, PT",2016-06-13,
 2261,Simas Saham Andalan,simas-saham-andalan,Saham,"Sinarmas Asset Management, PT",2016-06-10,
-2262,Valbury Capital Protected III,valbury-capital-protected-iii,Terproteksi,"KB Valbury Asset Management, PT",2016-06-09,
-2263,PNM Dana Surat Berharga Negara II Kelas A,pnm-dana-surat-berharga-negara-ii-kelas-a,Pendapatan Tetap,"PNM Investment Management, PT",2016-06-14,
+2262,Valbury Capital Protected III,valbury-capital-protected-iii,Terproteksi,"KB Valbury Asset Management, PT",2016-06-09,RD3802
+2263,PNM Dana Surat Berharga Negara II Kelas A,pnm-dana-surat-berharga-negara-ii-kelas-a,Pendapatan Tetap,"PNM Investment Management, PT",2016-06-14,RD1269
 2264,PNM Dana Surat Berharga Negara,pnm-dana-surat-berharga-negara,Pendapatan Tetap,"PNM Investment Management, PT",2016-05-09,RD1268
 2265,Majoris USD Balance Indonesia,majoris-usd-balance-indonesia,Campuran,"Majoris Asset Management, PT",2016-05-16,
 2267,Schroder IDR Income Plan III,schroder-idr-income-plan-iii,Terproteksi,"Schroder Investment Management Indonesia, PT",2016-06-16,
@@ -1189,7 +1189,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2449,Mandiri Pendapatan Tetap Indonesia Sehat,mandiri-pendapatan-tetap-indonesia-sehat,Pendapatan Tetap,"Mandiri Manajemen Investasi, PT",2016-12-01,
 2450,Mandiri Seri 80,mandiri-seri-80,Terproteksi,"Mandiri Manajemen Investasi, PT",2016-11-30,
 2451,EMCO XII,emco-xii,Terproteksi,"Emco Asset Management, PT",2016-10-17,
-2452,Sucorinvest Bond Fund,sucorinvest-bond-fund,Pendapatan Tetap,"Sucorinvest Asset Management, PT",2016-12-07,
+2452,Sucorinvest Bond Fund,sucorinvest-bond-fund,Pendapatan Tetap,"Sucorinvest Asset Management, PT",2016-12-07,RD1436
 2453,Cipta Obligasi Dollar,cipta-obligasi-dollar,Pendapatan Tetap,"Ciptadana Asset Management, PT",2016-12-08,
 2454,Cipta Obligasi Optimal,cipta-obligasi-optimal,Pendapatan Tetap,"Ciptadana Asset Management, PT",2016-11-28,
 2455,Cipta Obligasi Rupiah,cipta-obligasi-rupiah,Pendapatan Tetap,"Ciptadana Asset Management, PT",2016-12-07,
@@ -1198,7 +1198,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2458,HPAM Investa Ekuitas Strategis,hpam-investa-ekuitas-strategis,Saham,"Henan Putihrai Asset Management, PT",2016-12-09,
 2459,RDPT Emco Plantation Fund,rdpt-emco-plantation-fund,Penyertaan Terbatas,"Emco Asset Management, PT",2016-11-14,
 2460,Simas Pendapatan Tetap Prestasi,simas-pendapatan-tetap-prestasi,Pendapatan Tetap,"Sinarmas Asset Management, PT",2016-11-18,
-2461,BNI-AM Dana Pendapatan Tetap Makara Investasi,bni-am-dana-pendapatan-tetap-makara-investasi,Pendapatan Tetap,"BNI Asset Management, PT",2016-12-01,
+2461,BNI-AM Dana Pendapatan Tetap Makara Investasi,bni-am-dana-pendapatan-tetap-makara-investasi,Pendapatan Tetap,"BNI Asset Management, PT",2016-12-01,RD1409
 2462,Bahana E Optima Protected Fund 127,bahana-e-optima-protected-fund-127,Terproteksi,"Bahana TCW Investment Management, PT",2016-12-08,
 2463,Treasure Saham Mantap,treasure-saham-mantap,Saham,"Treasure Fund Investama, PT",2016-12-19,
 2464,Minna Padi Kahuripan Pendapatan Tetap,minna-padi-kahuripan-pendapatan-tetap,Pendapatan Tetap,"Minna Padi Aset Manajemen, PT",2016-12-14,
@@ -1232,7 +1232,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2496,Reksa Dana Allianz Indo Asia Equity Fund Kelas A,reksa-dana-allianz-indo-asia-equity-fund-kelas-a,Saham,"Allianz Global Investors Asset Management Indonesia, PT",2017-01-06,
 2497,PNM SBN 90,pnm-sbn-90,Pendapatan Tetap,"PNM Investment Management, PT",2017-01-11,RD1283
 2498,Corfina Pendapatan Prima,corfina-pendapatan-prima,Pendapatan Tetap,"Corfina Capital, PT",2017-01-18,
-2499,Lautandhana Maxima Income Fund,lautandhana-maxima-income-fund,Pendapatan Tetap,"Lautandhana Investment Management, PT",2017-01-19,
+2499,Lautandhana Maxima Income Fund,lautandhana-maxima-income-fund,Pendapatan Tetap,"Lautandhana Investment Management, PT",2017-01-19,RD1422
 2500,Setiabudi Dana Pasar Uang,setiabudi-dana-pasar-uang,Pasar Uang,"Setiabudi Investment Management, PT",2017-01-19,RD1585
 2501,Pacific Equity Growth Fund V,pacific-equity-growth-fund-v,Saham,"Pacific Capital Investment, PT",2017-01-23,
 2502,Premier ETF Indonesia Sovereign Bonds,premier-etf-indonesia-sovereign-bonds,Indeks & ETF,"Indo Premier Investment Management, PT",2017-02-02,
@@ -1277,7 +1277,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2545,Insight Terproteksi 8,insight-terproteksi-8,Terproteksi,"Insight Investments Management, PT",2017-03-09,
 2546,Victoria Prime Equity Fund,victoria-prime-equity-fund,Saham,"Victoria Manajemen Investasi, PT",2017-03-23,
 2547,Reksa Dana Syariah Mandiri Bukareksa Pasar Uang,reksa-dana-syariah-mandiri-bukareksa-pasar-uang,Pasar Uang,"Mandiri Manajemen Investasi, PT",2017-03-24,
-2548,Syailendra Pendapatan Tetap Premium Kelas A,syailendra-pendapatan-tetap-premium-kelas-a,Pendapatan Tetap,"Syailendra Capital, PT",2017-03-24,
+2548,Syailendra Pendapatan Tetap Premium Kelas A,syailendra-pendapatan-tetap-premium-kelas-a,Pendapatan Tetap,"Syailendra Capital, PT",2017-03-24,RD1710
 2549,Phillip Government Bond,phillip-government-bond,Pendapatan Tetap,"Phillip Asset Management, PT",2017-03-23,
 2550,Pratama Dana Mantap Saham,pratama-dana-mantap-saham,Saham,"Pratama Capital Assets Management, PT",2017-03-29,
 2551,Panin Beta One,panin-beta-one,Saham,"Panin Asset Management, PT",2017-03-31,RD1198
@@ -1384,7 +1384,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2661,Capital Optimal Balanced,capital-optimal-balanced,Campuran,"Capital Asset Management, PT",2017-06-20,RD447
 2662,Trimegah Dana Tetap Optima 2,trimegah-dana-tetap-optima-2,Pendapatan Tetap,"Trimegah Asset Management, PT",2017-06-19,
 2663,Insight Fund Cash ( I-CASH ),insight-fund-cash-i-cash,Pasar Uang,"Insight Investments Management, PT",2017-05-29,RD3857
-2664,Danareksa Seruni Pasar Uang 9,danareksa-seruni-pasar-uang-9,Pasar Uang,"BRI Manajemen Investasi, PT",2017-06-20,
+2664,Danareksa Seruni Pasar Uang 9,danareksa-seruni-pasar-uang-9,Pasar Uang,"BRI Manajemen Investasi, PT",2017-06-20,RD3792
 2665,BNI-AM Dana Pendapatan Tetap Kastara,bni-am-dana-pendapatan-tetap-kastara,Pendapatan Tetap,"BNI Asset Management, PT",2017-07-06,
 2666,SAM Providentia Balanced Fund,sam-providentia-balanced-fund,Campuran,"Samuel Aset Manajemen, PT",2017-07-05,
 2671,Pacific Equity Progresif Fund III,pacific-equity-progresif-fund-iii,Saham,"Pacific Capital Investment, PT",2017-07-05,
@@ -1625,7 +1625,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2910,BNI-AM Dana Pasar Uang Likuid Prioritas,bni-am-dana-pasar-uang-likuid-prioritas,Pasar Uang,"BNI Asset Management, PT",2015-05-27,
 2911,Reksa Dana Syariah Majoris Sukuk Negara Indonesia,reksa-dana-syariah-majoris-sukuk-negara-indonesia,Pendapatan Tetap,"Majoris Asset Management, PT",2017-11-08,
 2912,Principal Sukuk Syariah 3,principal-sukuk-syariah-3,Pendapatan Tetap,"Principal Asset Management, PT",2017-11-07,
-2913,Syailendra Sharia Money Market Fund Kelas A,syailendra-sharia-money-market-fund-kelas-a,Pasar Uang,"Syailendra Capital, PT",2017-10-05,
+2913,Syailendra Sharia Money Market Fund Kelas A,syailendra-sharia-money-market-fund-kelas-a,Pasar Uang,"Syailendra Capital, PT",2017-10-05,RD1715
 2914,Victoria Pasar Uang Syariah,victoria-pasar-uang-syariah,Pasar Uang,"Victoria Manajemen Investasi, PT",2017-10-18,RD1823
 2915,Danakita Proteksi Seri V,danakita-proteksi-seri-v,Terproteksi,"Danakita Investama, PT",2017-10-09,RD547
 2916,Danareksa Proteksi 49,danareksa-proteksi-49,Terproteksi,"BRI Manajemen Investasi, PT",2017-10-12,
@@ -1666,7 +1666,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 2953,Simas Gemilang 10,simas-gemilang-10,Terproteksi,"Sinarmas Asset Management, PT",2017-11-21,RD1602
 2954,Syailendra Equity Garuda Fund,syailendra-equity-garuda-fund,Saham,"Syailendra Capital, PT",2017-11-23,
 2955,Reliance Obligasi Pemerintah,reliance-obligasi-pemerintah,Pendapatan Tetap,"Reliance Manajer Investasi, PT",2017-11-23,
-2956,Ashmore Dana Obligasi Unggulan Nusantara Kelas A,ashmore-dana-obligasi-unggulan-nusantara-kelas-a,Pendapatan Tetap,"Ashmore Asset Management Indonesia, PT",2017-11-24,
+2956,Ashmore Dana Obligasi Unggulan Nusantara Kelas A,ashmore-dana-obligasi-unggulan-nusantara-kelas-a,Pendapatan Tetap,"Ashmore Asset Management Indonesia, PT",2017-11-24,RD41
 2957,Pacific Equity Progresif Fund V,pacific-equity-progresif-fund-v,Saham,"Pacific Capital Investment, PT",2017-11-27,
 2958,Principal Prime Income Fund 5,principal-prime-income-fund-5,Pendapatan Tetap,"Principal Asset Management, PT",2017-11-30,
 2959,Avrist Ada Kas Syariah,avrist-ada-kas-syariah,Pasar Uang,"Avrist Asset Management, PT",2017-11-28,
@@ -1714,14 +1714,14 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 3003,Maybank Dana Proteksi 5,maybank-dana-proteksi-5,Terproteksi,"Maybank Asset Management, PT",2017-12-19,
 3004,MNC Dana Terproteksi XX,mnc-dana-terproteksi-xx,Terproteksi,"MNC Asset Management, PT",2017-12-19,
 3005,Maybank CPF Institusi 7,maybank-cpf-institusi-7,Terproteksi,"Maybank Asset Management, PT",2017-12-20,
-3006,Valbury Capital Protected IV,valbury-capital-protected-iv,Terproteksi,"KB Valbury Asset Management, PT",2017-12-20,
+3006,Valbury Capital Protected IV,valbury-capital-protected-iv,Terproteksi,"KB Valbury Asset Management, PT",2017-12-20,RD1806
 3007,SAM Mutiara Nusa Campuran Kelas A,sam-mutiara-nusa-campuran-kelas-a,Campuran,"Samuel Aset Manajemen, PT",2017-12-21,
 3008,Syailendra Sharia Equity Fund,syailendra-sharia-equity-fund,Saham,"Syailendra Capital, PT",2017-12-27,RD1713
 3009,Simas Dana Ekuitas,simas-dana-ekuitas,Saham,"Sinarmas Asset Management, PT",2017-12-27,
 3010,Cipta Dana Pasar Uang,cipta-dana-pasar-uang,Pasar Uang,"Ciptadana Asset Management, PT",2018-01-02,
 3013,Syailendra Index IDX30,syailendra-index-idx30,Indeks & ETF,"Syailendra Capital, PT",2017-12-29,
 3014,BNI AM Indeks IDX30,bni-am-indeks-idx30,Indeks & ETF,"BNI Asset Management, PT",2017-12-28,RD337
-3015,Panin IDX30 Kelas A,panin-idx30-kelas-a,Indeks & ETF,"Panin Asset Management, PT",2017-12-28,
+3015,Panin IDX30 Kelas A,panin-idx30-kelas-a,Indeks & ETF,"Panin Asset Management, PT",2017-12-28,RD1220
 3016,Cipta Syariah Indeks,cipta-syariah-indeks,Indeks & ETF,"Ciptadana Asset Management, PT",2018-01-02,
 3017,Batavia Proteksi Cemerlang 95,batavia-proteksi-cemerlang-95,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2017-12-28,
 3018,Mega Dana Terproteksi XV,mega-dana-terproteksi-xv,Terproteksi,"Mega Capital Investama, PT",2017-12-22,
@@ -2101,7 +2101,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 3571,Insight Terproteksi 37,insight-terproteksi-37,Terproteksi,"Insight Investments Management, PT",2018-10-09,
 3572,RDST Mandiri Syariah Seri 165,rdst-mandiri-syariah-seri-165,Terproteksi,"Mandiri Manajemen Investasi, PT",2018-10-16,
 3573,Reksa Dana Terproteksi Simas Cemerlang 7,reksa-dana-terproteksi-simas-cemerlang-7,Terproteksi,"Sinarmas Asset Management, PT",2018-10-16,
-3574,Insight Amanah Pendapatan Tetap Syariah I AMANAH,insight-amanah-pendapatan-tetap-syariah-i-amanah,Pendapatan Tetap,"Insight Investments Management, PT",2018-10-16,
+3574,Insight Amanah Pendapatan Tetap Syariah I AMANAH,insight-amanah-pendapatan-tetap-syariah-i-amanah,Pendapatan Tetap,"Insight Investments Management, PT",2018-10-16,RD2093
 3575,MS Bond Kresna,ms-bond-kresna,Pendapatan Tetap,"Kresna Asset Management, PT",2018-10-16,
 3576,KB Valbury Investasi Berimbang,kb-valbury-investasi-berimbang,Campuran,"KB Valbury Asset Management, PT",2018-10-17,
 3577,Simas Balance Gemilang,simas-balance-gemilang,Campuran,"Sinarmas Asset Management, PT",2018-10-17,
@@ -2153,7 +2153,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 3623,Batavia Proteksi Ultima 23,batavia-proteksi-ultima-23,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2018-11-29,RD1910
 3624,Reksa Dana Indeks BNP Paribas Sri Kehati Kelas RK1,reksa-dana-indeks-bnp-paribas-sri-kehati-kelas-rk1,Indeks & ETF,"BNP Paribas Asset Management, PT",2018-11-29,
 3625,Reksa Dana Terproteksi Aurora CPF 3,reksa-dana-terproteksi-aurora-cpf-3,Terproteksi,"Aurora Asset Management, PT",2018-11-30,
-3626,RHB Capital Protected Fund 51,rhb-capital-protected-fund-51,Terproteksi,"Allianz Global Investors Asset Management Indonesia, PT",2018-11-30,
+3626,RHB Capital Protected Fund 51,rhb-capital-protected-fund-51,Terproteksi,"Allianz Global Investors Asset Management Indonesia, PT",2018-11-30,RD1915
 3627,Pinnacle Smart Equity Fund,pinnacle-smart-equity-fund,Saham,"Pinnacle Persada Investama, PT",2018-11-30,RD1913
 3628,Prospera Balance Return Optimiser,prospera-balance-return-optimiser,Campuran,"Prospera Asset Management, PT",2018-11-30,RD1914
 3629,Minna Padi Amanah Saham Syariah,minna-padi-amanah-saham-syariah,Saham,"Minna Padi Aset Manajemen, PT",2018-12-03,RD1916
@@ -2196,7 +2196,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 3667,Reksa Dana Indeks Premier ETF Pefindo I-Grade,reksa-dana-indeks-premier-etf-pefindo-i-grade,Indeks & ETF,"Indo Premier Investment Management, PT",2018-12-20,
 3668,Reksa Dana Syariah Shinhan Mabrur Wahed Balance Fund,reksa-dana-syariah-shinhan-mabrur-wahed-balance-fund,Campuran,"Danapathi Asset Management, PT",2019-01-07,
 3669,Reksa Dana Syariah Cipta Pendapatan Tetap Unggulan Syariah,reksa-dana-syariah-cipta-pendapatan-tetap-unggulan-syariah,Pendapatan Tetap,"Ciptadana Asset Management, PT",2019-01-07,
-3670,RHB Dana Maxima,rhb-dana-maxima,Campuran,"Allianz Global Investors Asset Management Indonesia, PT",2019-01-08,
+3670,RHB Dana Maxima,rhb-dana-maxima,Campuran,"Allianz Global Investors Asset Management Indonesia, PT",2019-01-08,RD1965
 3671,Simas USD Balance Fund,simas-usd-balance-fund,Campuran,"Sinarmas Asset Management, PT",2019-01-10,RD1979
 3672,Kresna Proteksi Cemerlang Seri 2,kresna-proteksi-cemerlang-seri-2,Terproteksi,"Kresna Asset Management, PT",2019-01-10,RD1978
 3673,Panin Dana Likuid Bersama,panin-dana-likuid-bersama,Pasar Uang,"Panin Asset Management, PT",2019-01-10,
@@ -2238,7 +2238,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 3709,PNM Terproteksi Investa 25,pnm-terproteksi-investa-25,Terproteksi,"PNM Investment Management, PT",2019-02-22,
 3710,BNI-AM Likuid Prioritas II,bni-am-likuid-prioritas-ii,Pasar Uang,"BNI Asset Management, PT",2019-02-25,RD2017
 3711,BRI Brawijaya Abadi Pendapatan Tetap,bri-brawijaya-abadi-pendapatan-tetap,Pendapatan Tetap,"BRI Manajemen Investasi, PT",2019-02-25,
-3712,Danareksa BUMN Fund 2018 Properti 5,danareksa-bumn-fund-2018-properti-5,Penyertaan Terbatas,"BRI Manajemen Investasi, PT",2019-02-25,
+3712,Danareksa BUMN Fund 2018 Properti 5,danareksa-bumn-fund-2018-properti-5,Penyertaan Terbatas,"BRI Manajemen Investasi, PT",2019-02-25,RD2050
 3713,Gemilang Soltice Indonesia Campuran,gemilang-soltice-indonesia-campuran,Campuran,"Gemilang Indonesia Manajemen Investasi, PT",2019-02-26,RD2019
 3714,PNM Pembiayaan Mikro BUMN Seri II,pnm-pembiayaan-mikro-bumn-seri-ii,Penyertaan Terbatas,"PNM Investment Management, PT",2019-02-26,
 3715,Reksa Dana Penyertaan Terbatas Batavia Infrastruktur 2,reksa-dana-penyertaan-terbatas-batavia-infrastruktur-2,Penyertaan Terbatas,"Batavia Prosperindo Aset Manajemen, PT",2019-02-27,
@@ -2319,7 +2319,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 3793,Bahana Progressive Protected Fund 183,bahana-progressive-protected-fund-183,Terproteksi,"Bahana TCW Investment Management, PT",2019-05-27,RD3205
 3794,Insight Terproteksi 44,insight-terproteksi-44,Terproteksi,"Insight Investments Management, PT",2019-05-27,RD3202
 3795,Insight Terproteksi 45,insight-terproteksi-45,Terproteksi,"Insight Investments Management, PT",2019-05-27,RD3203
-3796,Danareksa Bumn Fund 2019 Finance 1,danareksa-bumn-fund-2019-finance-1,Penyertaan Terbatas,"BRI Manajemen Investasi, PT",2019-05-27,
+3796,Danareksa Bumn Fund 2019 Finance 1,danareksa-bumn-fund-2019-finance-1,Penyertaan Terbatas,"BRI Manajemen Investasi, PT",2019-05-27,RD3633
 3797,Avrist Proteksi Spirit 9,avrist-proteksi-spirit-9,Terproteksi,"Avrist Asset Management, PT",2019-05-29,RD3207
 3798,Aurora Balance,aurora-balance,Campuran,"Aurora Asset Management, PT",2019-06-11,RD3215
 3799,Phillip MMF Dana Likuid,phillip-mmf-dana-likuid,Pasar Uang,"Phillip Asset Management, PT",2019-06-11,RD3216
@@ -2374,7 +2374,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 3849,Reksa Dana Terproteksi Simas Cemerlang 10,reksa-dana-terproteksi-simas-cemerlang-10,Terproteksi,"Sinarmas Asset Management, PT",2019-07-26,
 3850,Reksa Dana Terproteksi Maybank Dana Proteksi 16,reksa-dana-terproteksi-maybank-dana-proteksi-16,Terproteksi,"Maybank Asset Management, PT",2019-07-26,
 3851,BNP Paribas Pasar Uang Syariah,bnp-paribas-pasar-uang-syariah,Pasar Uang,"BNP Paribas Asset Management, PT",2019-07-26,RD3279
-3852,Danareksa BUMN Fund 2019 Properti 6,danareksa-bumn-fund-2019-properti-6,Penyertaan Terbatas,"BRI Manajemen Investasi, PT",2019-07-26,
+3852,Danareksa BUMN Fund 2019 Properti 6,danareksa-bumn-fund-2019-properti-6,Penyertaan Terbatas,"BRI Manajemen Investasi, PT",2019-07-26,RD3310
 3853,Reksa Dana Terproteksi Maybank Dana Proteksi 12,reksa-dana-terproteksi-maybank-dana-proteksi-12,Terproteksi,"Maybank Asset Management, PT",2019-05-03,
 3854,Reksa Dana Terproteksi Aberdeen Standard Proteksi 1,reksa-dana-terproteksi-aberdeen-standard-proteksi-1,Terproteksi,"Aberdeen Standard Investments Indonesia, PT",2019-05-03,
 3855,Reksa Dana Terproteksi Batavia Proteksi Gebyar 10,reksa-dana-terproteksi-batavia-proteksi-gebyar-10,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2019-07-29,
@@ -2488,7 +2488,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 3965,Batavia Campuran Maxima,batavia-campuran-maxima,Campuran,"Batavia Prosperindo Aset Manajemen, PT",2019-10-14,RD3396
 3966,RHB Sharia Money Market Fund 1,rhb-sharia-money-market-fund-1,Pasar Uang,"Allianz Global Investors Asset Management Indonesia, PT",2019-10-14,
 3967,Sucorinvest Proteksi 32,sucorinvest-proteksi-32,Terproteksi,"Sucorinvest Asset Management, PT",2019-10-11,RD3413
-3968,RHB Equity Growth Fund Kelas IB,rhb-equity-growth-fund-kelas-ib,Saham,"Allianz Global Investors Asset Management Indonesia, PT",2019-10-15,
+3968,RHB Equity Growth Fund Kelas IB,rhb-equity-growth-fund-kelas-ib,Saham,"Allianz Global Investors Asset Management Indonesia, PT",2019-10-15,RD3397
 3969,Avrist ETF Fixed Rate Bond I,avrist-etf-fixed-rate-bond-i,Indeks & ETF,"Avrist Asset Management, PT",2019-10-16,RD3398
 3970,Mandiri Seri 203,mandiri-seri-203,Terproteksi,"Mandiri Manajemen Investasi, PT",2019-10-17,RD3399
 3971,Sucorinvest Proteksi 33,sucorinvest-proteksi-33,Terproteksi,"Sucorinvest Asset Management, PT",2019-10-17,RD3400
@@ -2497,7 +2497,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 3974,RDPT PNM Pos Indonesia,rdpt-pnm-pos-indonesia,Penyertaan Terbatas,"PNM Investment Management, PT",2019-10-23,
 3975,Reksa Dana Terproteksi Simas Gemilang 17,reksa-dana-terproteksi-simas-gemilang-17,Terproteksi,"Sinarmas Asset Management, PT",2019-10-23,
 3976,Reksa Dana Indeks Aurora ETF FTSE Indonesia ESG,reksa-dana-indeks-aurora-etf-ftse-indonesia-esg,Indeks & ETF,"Aurora Asset Management, PT",2019-10-24,
-3977,Indosurya Treasure Balanced Fund,indosurya-treasure-balanced-fund,Campuran,"Delapan Sembilan Aset Manajemen, PT",2019-10-25,
+3977,Indosurya Treasure Balanced Fund,indosurya-treasure-balanced-fund,Campuran,"Delapan Sembilan Aset Manajemen, PT",2019-10-25,RD9437
 3978,Reliance IDX30 Index Fund,reliance-idx30-index-fund,Indeks & ETF,"Reliance Manajer Investasi, PT",2019-10-25,RD3406
 3979,BNI AM Proteksi Redwood Restrukturisasi,bni-am-proteksi-redwood-restrukturisasi,Terproteksi,"BNI Asset Management, PT",2019-10-28,
 3980,Simas Gemilang 18,simas-gemilang-18,Terproteksi,"Sinarmas Asset Management, PT",2019-10-29,RD3409
@@ -2578,7 +2578,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4055,Setiabudi Dana Proteksi 3,setiabudi-dana-proteksi-3,Terproteksi,"Setiabudi Investment Management, PT",2019-12-19,RD3503
 4056,Syailendra Capital Protected Fund 39,syailendra-capital-protected-fund-39,Terproteksi,"Syailendra Capital, PT",2019-12-19,RD3504
 4057,Mandiri Seri 204,mandiri-seri-204,Terproteksi,"Mandiri Manajemen Investasi, PT",2019-12-20,RD3512
-4058,Danareksa Proteksi 65,danareksa-proteksi-65,Terproteksi,"BRI Manajemen Investasi, PT",2019-12-20,
+4058,Danareksa Proteksi 65,danareksa-proteksi-65,Terproteksi,"BRI Manajemen Investasi, PT",2019-12-20,RD3511
 4059,RDPT BUMN Fund 2019 Properti 7,rdpt-bumn-fund-2019-properti-7,Penyertaan Terbatas,"BRI Manajemen Investasi, PT",2019-12-20,
 4060,Eastspring Syariah Equity Islamic Asia Pacific USD Kelas B,eastspring-syariah-equity-islamic-asia-pacific-usd-kelas-b,Saham,"Eastspring Investments Indonesia, PT",2019-12-09,RD3492
 4061,Batavia Obligasi Negara 2,batavia-obligasi-negara-2,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2019-12-23,RD3945
@@ -2599,11 +2599,11 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4076,Simas Terproteksi 18,simas-terproteksi-18,Terproteksi,"Sinarmas Asset Management, PT",2020-01-22,RD3535
 4077,Sucorinvest Proteksi 34,sucorinvest-proteksi-34,Terproteksi,"Sucorinvest Asset Management, PT",2020-01-22,RD3536
 4078,Kresna Proteksi Cemerlang Seri 5,kresna-proteksi-cemerlang-seri-5,Terproteksi,"Kresna Asset Management, PT",2020-01-23,RD3537
-4079,Danareksa Proteksi 66,danareksa-proteksi-66,Terproteksi,"BRI Manajemen Investasi, PT",2020-01-27,
+4079,Danareksa Proteksi 66,danareksa-proteksi-66,Terproteksi,"BRI Manajemen Investasi, PT",2020-01-27,RD3538
 4080,RDPT SAM Jalan Tol,rdpt-sam-jalan-tol,Penyertaan Terbatas,"Samuel Aset Manajemen, PT",2020-01-30,
 4081,RDPT Danareksa BUMN Fund 2019 Properti 8,rdpt-danareksa-bumn-fund-2019-properti-8,Penyertaan Terbatas,"BRI Manajemen Investasi, PT",2020-01-30,
-4082,Danareksa Proteksi Syariah Misbah II,danareksa-proteksi-syariah-misbah-ii,Terproteksi,"BRI Manajemen Investasi, PT",2020-01-30,
-4083,STAR ETF Sri Kehati,star-etf-sri-kehati,Indeks & ETF,"Surya Timur Alam Raya Asset Management, PT",2020-01-30,
+4082,Danareksa Proteksi Syariah Misbah II,danareksa-proteksi-syariah-misbah-ii,Terproteksi,"BRI Manajemen Investasi, PT",2020-01-30,RD3541
+4083,STAR ETF Sri Kehati,star-etf-sri-kehati,Indeks & ETF,"Surya Timur Alam Raya Asset Management, PT",2020-01-30,RD3540
 4084,Panin Dana Berimbang,panin-dana-berimbang,Campuran,"Panin Asset Management, PT",2020-02-05,RD3543
 4085,Majoris Syariah Dana Lestari Universitas Syiah Kuala Indonesia,majoris-syariah-dana-lestari-universitas-syiah-kuala-indonesia,Campuran,"Majoris Asset Management, PT",2020-02-06,RD3544
 4086,HPAM Ultima Protected II,hpam-ultima-protected-ii,Terproteksi,"Henan Putihrai Asset Management, PT",2020-02-07,RD3545
@@ -2624,7 +2624,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4101,Cipta Proteksi XVIII,cipta-proteksi-xviii,Terproteksi,"Ciptadana Asset Management, PT",2020-02-26,RD3560
 4102,Reksa Dana Syariah Terproteksi Misbah Mandiri Syariah Seri 217,reksa-dana-syariah-terproteksi-misbah-mandiri-syariah-seri-217,Terproteksi,"Mandiri Manajemen Investasi, PT",2020-02-27,
 4103,Reksa Dana Syariah Terproteksi Bahana Alhami Syariah,reksa-dana-syariah-terproteksi-bahana-alhami-syariah,Terproteksi,"Bahana TCW Investment Management, PT",2020-02-27,
-4104,Danareksa Proteksi Syariah III,danareksa-proteksi-syariah-iii,Terproteksi,"BRI Manajemen Investasi, PT",2020-02-27,
+4104,Danareksa Proteksi Syariah III,danareksa-proteksi-syariah-iii,Terproteksi,"BRI Manajemen Investasi, PT",2020-02-27,RD3563
 4105,Lautandhana Pasar Uang Optima,lautandhana-pasar-uang-optima,Pasar Uang,"Lautandhana Investment Management, PT",2020-02-24,RD3559
 4106,Premier ETF MSCI Indonesia Large Cap,premier-etf-msci-indonesia-large-cap,Indeks & ETF,"Indo Premier Investment Management, PT",2020-03-03,RD3589
 4107,Avrist Equity Growth Fund,avrist-equity-growth-fund,Saham,"Avrist Asset Management, PT",2020-03-03,RD3588
@@ -2633,15 +2633,15 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4110,Avrist Ada Liquid Syariah,avrist-ada-liquid-syariah,Pasar Uang,"Avrist Asset Management, PT",2020-03-05,RD3663
 4112,Reksa Dana Terproteksi Mandiri Seri 207 Restrukturisasi,reksa-dana-terproteksi-mandiri-seri-207-restrukturisasi,Terproteksi,"Mandiri Manajemen Investasi, PT",2020-03-12,
 4113,Reksa Dana Syariah Terproteksi Bahana Mahmiya Syariah,reksa-dana-syariah-terproteksi-bahana-mahmiya-syariah,Terproteksi,"Bahana TCW Investment Management, PT",2020-03-12,
-4114,Danareksa Proteksi Syariah Misbah III,danareksa-proteksi-syariah-misbah-iii,Terproteksi,"BRI Manajemen Investasi, PT",2020-03-12,
+4114,Danareksa Proteksi Syariah Misbah III,danareksa-proteksi-syariah-misbah-iii,Terproteksi,"BRI Manajemen Investasi, PT",2020-03-12,RD3593
 4115,Simas Investa Equity,simas-investa-equity,Saham,"Sinarmas Asset Management, PT",2020-03-16,RD3596
 4116,Bahana Likuid Syariah Kelas G,bahana-likuid-syariah-kelas-g,Pasar Uang,"Bahana TCW Investment Management, PT",2020-03-16,RD3595
-4117,Star Protected Dollar,star-protected-dollar,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2020-03-18,
+4117,Star Protected Dollar,star-protected-dollar,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2020-03-18,RD3600
 4118,Anargya Saham Acalapati,anargya-saham-acalapati,Saham,"Anargya Aset Manajemen, PT",2020-03-20,RD3622
 4119,Anargya Pendapatan Tetap Padma,anargya-pendapatan-tetap-padma,Pendapatan Tetap,"Anargya Aset Manajemen, PT",2020-03-20,RD3621
 4120,Reksa Dana Terproteksi Mandiri Seri 206 Restrukturisasi,reksa-dana-terproteksi-mandiri-seri-206-restrukturisasi,Terproteksi,"Mandiri Manajemen Investasi, PT",2020-03-20,
 4121,Mandiri Seri 221,mandiri-seri-221,Terproteksi,"Mandiri Manajemen Investasi, PT",2020-03-24,RD3623
-4122,Pinnacle Dana Obligasi Unggulan Kelas A,pinnacle-dana-obligasi-unggulan-kelas-a,Pendapatan Tetap,"Pinnacle Persada Investama, PT",2020-03-26,
+4122,Pinnacle Dana Obligasi Unggulan Kelas A,pinnacle-dana-obligasi-unggulan-kelas-a,Pendapatan Tetap,"Pinnacle Persada Investama, PT",2020-03-26,RD3627
 4123,Manulife Dana Saham Kelas I1,manulife-dana-saham-kelas-i1,Saham,"Manulife Aset Manajemen Indonesia, PT",2020-03-26,RD3626
 4124,Batavia Proteksi Syariah Misbah 3,batavia-proteksi-syariah-misbah-3,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2020-03-27,RD3628
 4125,Bowsprit Commercial And Infrastructure,bowsprit-commercial-and-infrastructure,DIRE,"Bowsprit Asset Management, PT",2020-01-13,
@@ -2678,7 +2678,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4156,Trimegah Dana Obligasi Nusantara,trimegah-dana-obligasi-nusantara,Pendapatan Tetap,"Trimegah Asset Management, PT",2020-05-14,RD3692
 4157,Allianz Capital Protected Fund 54,allianz-capital-protected-fund-54,Terproteksi,"Allianz Global Investors Asset Management Indonesia, PT",2020-05-18,
 4158,Anargya Pasar Uang Syariah Syandana,anargya-pasar-uang-syariah-syandana,Pasar Uang,"Anargya Aset Manajemen, PT",2020-05-20,RD3696
-4159,Danareksa Proteksi 70,danareksa-proteksi-70,Terproteksi,"BRI Manajemen Investasi, PT",2020-05-28,
+4159,Danareksa Proteksi 70,danareksa-proteksi-70,Terproteksi,"BRI Manajemen Investasi, PT",2020-05-28,RD3694
 4160,Batavia Proteksi Maxima 20,batavia-proteksi-maxima-20,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2020-05-29,RD3695
 4161,Insight Terproteksi 53,insight-terproteksi-53,Terproteksi,"Insight Investments Management, PT",2020-06-08,RD3697
 4162,PNM Dana Kas Platinum 2,pnm-dana-kas-platinum-2,Pasar Uang,"PNM Investment Management, PT",2020-06-09,RD3724
@@ -2693,7 +2693,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4171,Avrist Ada Cash USD Diamond,avrist-ada-cash-usd-diamond,Pasar Uang,"Avrist Asset Management, PT",2020-06-19,RD3706
 4172,Bahana Centrum Protected Fund 202,bahana-centrum-protected-fund-202,Terproteksi,"Bahana TCW Investment Management, PT",2020-06-22,RD3707
 4173,Premier ETF Index IDX30,premier-etf-index-idx30,Indeks & ETF,"Indo Premier Investment Management, PT",2020-06-22,RD3710
-4174,PNM Dana Optima Kelas A,pnm-dana-optima-kelas-a,Pendapatan Tetap,"PNM Investment Management, PT",2020-06-22,
+4174,PNM Dana Optima Kelas A,pnm-dana-optima-kelas-a,Pendapatan Tetap,"PNM Investment Management, PT",2020-06-22,RD3709
 4175,Jasa Capital Surat Utang Negara,jasa-capital-surat-utang-negara,Pendapatan Tetap,"Jasa Capital Asset Management, PT",2020-06-22,RD3708
 4176,Pinnacle Balanced Income Fund,pinnacle-balanced-income-fund,Campuran,"Pinnacle Persada Investama, PT",2020-06-24,RD3712
 4177,Mandiri Seri 220,mandiri-seri-220,Terproteksi,"Mandiri Manajemen Investasi, PT",2020-06-25,RD3713
@@ -2704,18 +2704,18 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4182,BNI AM Proteksi Cattleya,bni-am-proteksi-cattleya,Terproteksi,"BNI Asset Management, PT",2020-06-29,RD3718
 4183,Mandiri Pasar Uang Optima Syariah,mandiri-pasar-uang-optima-syariah,Pasar Uang,"Mandiri Manajemen Investasi, PT",2020-07-01,RD3720
 4184,Manulife Dana Kas Syariah Misbah I,manulife-dana-kas-syariah-misbah-i,Pasar Uang,"Manulife Aset Manajemen Indonesia, PT",2020-07-01,RD3721
-4185,Danareksa Proteksi 73,danareksa-proteksi-73,Terproteksi,"BRI Manajemen Investasi, PT",2020-07-01,
+4185,Danareksa Proteksi 73,danareksa-proteksi-73,Terproteksi,"BRI Manajemen Investasi, PT",2020-07-01,RD3719
 4186,Mandiri Seri 218,mandiri-seri-218,Terproteksi,"Mandiri Manajemen Investasi, PT",2020-07-02,RD3722
 4187,Batavia Proteksi Maxima 25,batavia-proteksi-maxima-25,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2020-07-03,RD3723
 4188,BNP Paribas Pasar Uang Selaras,bnp-paribas-pasar-uang-selaras,Pasar Uang,"BNP Paribas Asset Management, PT",2020-07-06,RD3725
 4189,Insight Danakarta Pasar Uang,insight-danakarta-pasar-uang,Pasar Uang,"Insight Investments Management, PT",2020-07-06,RD3726
 4190,Avrist Alokasi Aset Strategis,avrist-alokasi-aset-strategis,Campuran,"Avrist Asset Management, PT",2020-07-07,RD3728
-4191,Danareksa Proteksi Syariah IV,danareksa-proteksi-syariah-iv,Terproteksi,"BRI Manajemen Investasi, PT",2020-07-07,
+4191,Danareksa Proteksi Syariah IV,danareksa-proteksi-syariah-iv,Terproteksi,"BRI Manajemen Investasi, PT",2020-07-07,RD3729
 4192,Syailendra Money Market Fund 5,syailendra-money-market-fund-5,Pasar Uang,"Syailendra Capital, PT",2020-07-09,
 4193,RDPT Shinhan Manufaktur I,rdpt-shinhan-manufaktur-i,Penyertaan Terbatas,"Danapathi Asset Management, PT",2020-07-09,
 4194,Reksa Dana Terproteksi Panin 15,reksa-dana-terproteksi-panin-15,Terproteksi,"Panin Asset Management, PT",2020-07-10,
 4195,Jasa Capital Saham Berkembang,jasa-capital-saham-berkembang,Saham,"Jasa Capital Asset Management, PT",2020-07-14,
-4196,Danareksa Seruni Pasar Uang Dollar VI,danareksa-seruni-pasar-uang-dollar-vi,Pasar Uang,"BRI Manajemen Investasi, PT",2020-07-15,
+4196,Danareksa Seruni Pasar Uang Dollar VI,danareksa-seruni-pasar-uang-dollar-vi,Pasar Uang,"BRI Manajemen Investasi, PT",2020-07-15,RD3735
 4197,RDT HPAM Ultima Protected III,rdt-hpam-ultima-protected-iii,Terproteksi,"Henan Putihrai Asset Management, PT",2020-07-15,
 4198,RDT Nusadana Proteksi 7,rdt-nusadana-proteksi-7,Terproteksi,"Nusadana Investama Indonesia, PT",2020-07-15,
 4199,Bahana Pendapatan Tetap Utama,bahana-pendapatan-tetap-utama,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2020-07-15,RD3733
@@ -2730,7 +2730,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4208,Manulife Obligasi Negara Indonesia II Kelas I1,manulife-obligasi-negara-indonesia-ii-kelas-i1,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2020-07-24,RD3746
 4209,RDST Eastspring Syariah Misbah 2,rdst-eastspring-syariah-misbah-2,Terproteksi,"Eastspring Investments Indonesia, PT",2020-07-23,
 4210,RDST SAM Dana Misbah Syariah 2,rdst-sam-dana-misbah-syariah-2,Terproteksi,"Samuel Aset Manajemen, PT",2020-07-23,
-4211,Danareksa Proteksi 74,danareksa-proteksi-74,Terproteksi,"BRI Manajemen Investasi, PT",2020-07-27,
+4211,Danareksa Proteksi 74,danareksa-proteksi-74,Terproteksi,"BRI Manajemen Investasi, PT",2020-07-27,RD3749
 4212,Sucorinvest Proteksi 36,sucorinvest-proteksi-36,Terproteksi,"Sucorinvest Asset Management, PT",2020-07-28,RD3751
 4213,HPAM Smart Protected XVI,hpam-smart-protected-xvi,Terproteksi,"Henan Putihrai Asset Management, PT",2020-07-28,RD3750
 4214,Batavia Proteksi Maxima 21,batavia-proteksi-maxima-21,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2020-07-29,RD3752
@@ -2750,7 +2750,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4228,Trimegah Kas Syariah 3,trimegah-kas-syariah-3,Pasar Uang,"Trimegah Asset Management, PT",2020-08-19,RD3779
 4229,Manulife Syariah Proteksi Misbah II,manulife-syariah-proteksi-misbah-ii,Terproteksi,"Manulife Aset Manajemen Indonesia, PT",2020-08-24,RD3781
 4230,RDST BNI AM Amanah,rdst-bni-am-amanah,Terproteksi,"BNI Asset Management, PT",2020-08-24,
-4231,Danareksa Proteksi 75,danareksa-proteksi-75,Terproteksi,"BRI Manajemen Investasi, PT",2020-08-25,
+4231,Danareksa Proteksi 75,danareksa-proteksi-75,Terproteksi,"BRI Manajemen Investasi, PT",2020-08-25,RD3784
 4232,Sucorinvest Proteksi 38,sucorinvest-proteksi-38,Terproteksi,"Sucorinvest Asset Management, PT",2020-08-25,RD3785
 4233,Bahana Dynamic Plus Protected Fund 203,bahana-dynamic-plus-protected-fund-203,Terproteksi,"Bahana TCW Investment Management, PT",2020-08-25,RD3783
 4234,Capital Optimal Protected Fund 7,capital-optimal-protected-fund-7,Terproteksi,"Capital Asset Management, PT",2020-08-27,RD3787
@@ -2787,7 +2787,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4265,Reksa Dana Terproteksi Mandiri Seri 222,reksa-dana-terproteksi-mandiri-seri-222,Terproteksi,"Mandiri Manajemen Investasi, PT",2020-11-05,
 4266,RDT Sucorinvest Proteksi 35,rdt-sucorinvest-proteksi-35,Terproteksi,"Sucorinvest Asset Management, PT",2020-11-06,
 4267,Demina Proteksi IV,demina-proteksi-iv,Terproteksi,"Danapathi Asset Management, PT",2020-11-09,
-4268,Mega Dana Terproteksi XXIII,mega-dana-terproteksi-xxiii,Terproteksi,"Mega Asset Management, PT",2020-11-09,
+4268,Mega Dana Terproteksi XXIII,mega-dana-terproteksi-xxiii,Terproteksi,"Mega Asset Management, PT",2020-11-09,RD3838
 4269,Trimegah Terproteksi Futura 21,trimegah-terproteksi-futura-21,Terproteksi,"Trimegah Asset Management, PT",2020-11-10,RD3841
 4270,Manulife Saham Syariah Golden Asia Dolar AS Kelas A1,manulife-saham-syariah-golden-asia-dolar-as-kelas-a1,Saham,"Manulife Aset Manajemen Indonesia, PT",2020-11-11,RD3842
 4271,BNI AM Prioritas Mulberry,bni-am-prioritas-mulberry,Pasar Uang,"BNI Asset Management, PT",2020-11-13,RD3844
@@ -2800,7 +2800,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4278,Allianz Money Market Fund 8,allianz-money-market-fund-8,Pasar Uang,"Allianz Global Investors Asset Management Indonesia, PT",2020-11-26,
 4279,Mandiri Seri 236 Restrukturisasi,mandiri-seri-236-restrukturisasi,Terproteksi,"Mandiri Manajemen Investasi, PT",2020-12-01,
 4280,Bahana Protected Fund 209,bahana-protected-fund-209,Terproteksi,"Bahana TCW Investment Management, PT",2020-12-03,RD3861
-4281,BNI AM Proteksi Adenium,bni-am-proteksi-adenium,Terproteksi,"BNI Asset Management, PT",2020-12-03,
+4281,BNI AM Proteksi Adenium,bni-am-proteksi-adenium,Terproteksi,"BNI Asset Management, PT",2020-12-03,RD3862
 4282,PNM Dana Maxima,pnm-dana-maxima,Pasar Uang,"PNM Investment Management, PT",2020-12-04,RD3863
 4283,BNP Paribas Prima II Kelas IK1,bnp-paribas-prima-ii-kelas-ik1,Pendapatan Tetap,"BNP Paribas Asset Management, PT",2020-12-08,RD3867
 4284,Batavia Proteksi Maxima 15,batavia-proteksi-maxima-15,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2020-12-08,RD3865
@@ -2815,13 +2815,13 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4293,Insight Pasar Uang Dana Likuid,insight-pasar-uang-dana-likuid,Pasar Uang,"Insight Investments Management, PT",2020-12-15,RD3875
 4294,HPAM Smart Protected XVIII,hpam-smart-protected-xviii,Terproteksi,"Henan Putihrai Asset Management, PT",2020-12-16,RD3876
 4295,Bahana Centrum Protected Fund 207 (Restrukturisasi),bahana-centrum-protected-fund-207-restrukturisasi,Terproteksi,"Bahana TCW Investment Management, PT",2020-12-22,
-4296,Danareksa ETF MSCI Indonesia ESG Screened,danareksa-etf-msci-indonesia-esg-screened,Indeks & ETF,"BRI Manajemen Investasi, PT",2020-12-22,
+4296,Danareksa ETF MSCI Indonesia ESG Screened,danareksa-etf-msci-indonesia-esg-screened,Indeks & ETF,"BRI Manajemen Investasi, PT",2020-12-22,RD3878
 4297,BRI Proteksi 69,bri-proteksi-69,Terproteksi,"BRI Manajemen Investasi, PT",2020-12-28,
 4298,Manulife Dana Kas Utama II,manulife-dana-kas-utama-ii,Pasar Uang,"Manulife Aset Manajemen Indonesia, PT",2020-12-28,RD3880
 4299,Manulife USD Fixed Income Kelas I1,manulife-usd-fixed-income-kelas-i1,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2020-12-28,RD3881
 4300,Bahana Protected Fund 208,bahana-protected-fund-208,Terproteksi,"Bahana TCW Investment Management, PT",2020-12-29,RD3882
 4301,Batavia Proteksi Maxima 30,batavia-proteksi-maxima-30,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2020-12-29,RD3883
-4302,STAR Protected Dollar II,star-protected-dollar-ii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-01-12,
+4302,STAR Protected Dollar II,star-protected-dollar-ii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-01-12,RD3884
 4303,PNM Surat Berharga Syariah Negara,pnm-surat-berharga-syariah-negara,Pendapatan Tetap,"PNM Investment Management, PT",2021-01-15,RD3885
 4304,Henan Tactical Equity Kelas A,henan-tactical-equity-kelas-a,Saham,"Henan Putihrai Asset Management, PT",2021-01-19,
 4305,PNM Pembiayaan Mikro BUMN Seri VI,pnm-pembiayaan-mikro-bumn-seri-vi,Penyertaan Terbatas,"PNM Investment Management, PT",2021-01-19,RD3980
@@ -2832,12 +2832,12 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4310,STAR Money Market II Kelas Utama,star-money-market-ii-kelas-utama,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2021-02-04,
 4311,Batavia Global ESG Sharia Equity USD,batavia-global-esg-sharia-equity-usd,Saham,"Batavia Prosperindo Aset Manajemen, PT",2021-01-27,RD3891
 4312,Nusadana Proteksi 10,nusadana-proteksi-10,Terproteksi,"Nusadana Investama Indonesia, PT",2021-02-08,RD3895
-4313,Ashmore Dana USD Fixed Income Kelas A,ashmore-dana-usd-fixed-income-kelas-a,Pendapatan Tetap,"Ashmore Asset Management Indonesia, PT",2021-02-08,
+4313,Ashmore Dana USD Fixed Income Kelas A,ashmore-dana-usd-fixed-income-kelas-a,Pendapatan Tetap,"Ashmore Asset Management Indonesia, PT",2021-02-08,RD3894
 4314,Reksa Dana Terproteksi UOBAM 001,reksa-dana-terproteksi-uobam-001,Terproteksi,"UOB Asset Management Indonesia, PT",2021-02-10,
 4315,Reksa Dana Terproteksi Maybank CPF XVIII,reksa-dana-terproteksi-maybank-cpf-xviii,Terproteksi,"Maybank Asset Management, PT",2021-02-10,
 4316,Phillip Money Market Fund Syariah Bermanfaat,phillip-money-market-fund-syariah-bermanfaat,Pasar Uang,"Phillip Asset Management, PT",2021-02-16,RD3898
 4317,Reksa Dana Campuran Wanteg Diversity Fund,reksa-dana-campuran-wanteg-diversity-fund,Campuran,"Wanteg Asset Management, PT",2021-02-17,
-4318,Star Protected X,star-protected-x,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-02-18,
+4318,Star Protected X,star-protected-x,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-02-18,RD3900
 4319,Trimegah FTSE Indonesia Low Volatility Factor Index Kelas A,trimegah-ftse-indonesia-low-volatility-factor-index-kelas-a,Indeks & ETF,"Trimegah Asset Management, PT",2021-02-19,RD3901
 4320,Trimegah Terproteksi Prima 26,trimegah-terproteksi-prima-26,Terproteksi,"Trimegah Asset Management, PT",2021-02-22,RD3902
 4321,Reksa Dana Syariah Terproteksi BNI AM Amanah II,reksa-dana-syariah-terproteksi-bni-am-amanah-ii,Terproteksi,"BNI Asset Management, PT",2021-03-02,
@@ -2860,7 +2860,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4338,Reksa Dana Pendapatan Tetap Net Dana Stabil,reksa-dana-pendapatan-tetap-net-dana-stabil,Pendapatan Tetap,"Net Assets Management, PT",2021-04-08,
 4339,Bahana Investasi Kas,bahana-investasi-kas,Pasar Uang,"Bahana TCW Investment Management, PT",2021-04-15,RD3936
 4340,Eastspring Syariah Fixed Income USD Kelas A,eastspring-syariah-fixed-income-usd-kelas-a,Pendapatan Tetap,"Eastspring Investments Indonesia, PT",2021-04-15,RD3937
-4341,STAR Sharia Money Market,star-sharia-money-market,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2021-04-16,
+4341,STAR Sharia Money Market,star-sharia-money-market,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2021-04-16,RD3938
 4342,Bahana Protected Fund 216,bahana-protected-fund-216,Terproteksi,"Bahana TCW Investment Management, PT",2021-04-22,RD3939
 4343,Trimegah Terproteksi Futura 23,trimegah-terproteksi-futura-23,Terproteksi,"Trimegah Asset Management, PT",2021-04-22,RD3940
 4344,Bahana Protected Fund 210,bahana-protected-fund-210,Terproteksi,"Bahana TCW Investment Management, PT",2021-04-29,RD3943
@@ -2873,7 +2873,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4351,Batavia Proteksi Maxima 31,batavia-proteksi-maxima-31,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2021-05-07,RD3950
 4352,Trimegah Obligasi Nusantara 2,trimegah-obligasi-nusantara-2,Pendapatan Tetap,"Trimegah Asset Management, PT",2021-05-17,RD3951
 4353,Trimegah Pundi Kas 11,trimegah-pundi-kas-11,Pasar Uang,"Trimegah Asset Management, PT",2021-05-21,RD3952
-4354,STAR Global Sharia Equity USD,star-global-sharia-equity-usd,Saham,"Surya Timur Alam Raya Asset Management, PT",2021-05-25,
+4354,STAR Global Sharia Equity USD,star-global-sharia-equity-usd,Saham,"Surya Timur Alam Raya Asset Management, PT",2021-05-25,RD3953
 4355,BNP Paribas IDX Growth30,bnp-paribas-idx-growth30,Indeks & ETF,"BNP Paribas Asset Management, PT",2021-05-27,RD3954
 4356,Manulife Dana Kas II Kelas I1,manulife-dana-kas-ii-kelas-i1,Pasar Uang,"Manulife Aset Manajemen Indonesia, PT",2021-05-28,RD3955
 4357,Premier Permata Proteksi,premier-permata-proteksi,Terproteksi,"Indo Premier Investment Management, PT",2021-05-28,RD3956
@@ -2891,7 +2891,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4369,Trimegah Terproteksi Prima 30,trimegah-terproteksi-prima-30,Terproteksi,"Trimegah Asset Management, PT",2021-06-22,RD3971
 4370,Manulife Proteksi Dana Utama II,manulife-proteksi-dana-utama-ii,Terproteksi,"Manulife Aset Manajemen Indonesia, PT",2021-06-23,RD3972
 4371,Reksa Dana Terproteksi UOBAM 005,reksa-dana-terproteksi-uobam-005,Terproteksi,"UOB Asset Management Indonesia, PT",2021-06-23,
-4372,STAR Protected XIV,star-protected-xiv,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-06-23,
+4372,STAR Protected XIV,star-protected-xiv,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-06-23,RD3973
 4373,Allianz Capital Protected Fund 57,allianz-capital-protected-fund-57,Terproteksi,"Allianz Global Investors Asset Management Indonesia, PT",2021-06-24,
 4374,UOBAM Inovasi Obligasi Nasional,uobam-inovasi-obligasi-nasional,Pendapatan Tetap,"UOB Asset Management Indonesia, PT",2021-06-24,RD3976
 4375,Batavia Proteksi Maxima 29,batavia-proteksi-maxima-29,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2021-06-29,RD3977
@@ -2916,14 +2916,14 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4394,Manulife Saham Syariah Global Dividen Dolar AS Kelas A5,manulife-saham-syariah-global-dividen-dolar-as-kelas-a5,Saham,"Manulife Aset Manajemen Indonesia, PT",2021-08-13,RD3999
 4395,Manulife Saham Syariah Golden Asia Dolar AS Kelas A2,manulife-saham-syariah-golden-asia-dolar-as-kelas-a2,Saham,"Manulife Aset Manajemen Indonesia, PT",2021-08-20,RD4004
 4396,BRI Proteksi 79,bri-proteksi-79,Terproteksi,"BRI Manajemen Investasi, PT",2021-08-18,
-4397,KISI Premier Money Market Fund,kisi-premier-money-market-fund,Pasar Uang,"Korea Investment Management Indonesia, PT",2021-08-19,
-4398,STAR Protected XII,star-protected-xii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-08-19,
+4397,KISI Premier Money Market Fund,kisi-premier-money-market-fund,Pasar Uang,"Korea Investment Management Indonesia, PT",2021-08-19,RD4001
+4398,STAR Protected XII,star-protected-xii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-08-19,RD4002
 4399,Bahana Apex Fixed Income Fund,bahana-apex-fixed-income-fund,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2021-08-20,RD4003
 4400,Trimegah Terproteksi 21,trimegah-terproteksi-21,Terproteksi,"Trimegah Asset Management, PT",2021-08-25,RD4005
 4401,Bahana Protected Fund 217,bahana-protected-fund-217,Terproteksi,"Bahana TCW Investment Management, PT",2021-08-26,RD4006
 4402,Syailendra Sharia Money Market Fund 2,syailendra-sharia-money-market-fund-2,Pasar Uang,"Syailendra Capital, PT",2021-08-27,RD4007
 4403,Syailendra Money Market Fund 7,syailendra-money-market-fund-7,Pasar Uang,"Syailendra Capital, PT",2021-08-31,RD4008
-4404,STAR Protected XI,star-protected-xi,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-09-03,
+4404,STAR Protected XI,star-protected-xi,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-09-03,RD4009
 4405,Reksa Dana Syariah Bahana MES Syariah Fund Kelas O,reksa-dana-syariah-bahana-mes-syariah-fund-kelas-o,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2021-09-08,
 4406,RDT Kisi Premier Protected Fund I,rdt-kisi-premier-protected-fund-i,Terproteksi,"Korea Investment Management Indonesia, PT",2021-09-07,
 4407,RDT Kisi Premier Protected Fund,rdt-kisi-premier-protected-fund,Terproteksi,"Korea Investment Management Indonesia, PT",2021-09-07,
@@ -2936,22 +2936,22 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4414,BNP Paribas IDX Growth30 ETF,bnp-paribas-idx-growth30-etf,Indeks & ETF,"BNP Paribas Asset Management, PT",2021-09-20,RD4018
 4415,Avrist Proteksi Spirit 14,avrist-proteksi-spirit-14,Terproteksi,"Avrist Asset Management, PT",2021-09-23,RD4020
 4416,BNP Paribas DJIM Global Technology Titans 50 Syariah USD,bnp-paribas-djim-global-technology-titans-50-syariah-usd,Saham,"BNP Paribas Asset Management, PT",2021-09-20,RD4019
-4417,STAR Protected XIII,star-protected-xiii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-09-24,
+4417,STAR Protected XIII,star-protected-xiii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-09-24,RD4022
 4418,PNM Dana Maxima 2,pnm-dana-maxima-2,Pasar Uang,"PNM Investment Management, PT",2021-09-28,RD4024
 4419,Avrist Ada Kas Syariah Emerald,avrist-ada-kas-syariah-emerald,Pasar Uang,"Avrist Asset Management, PT",2021-09-28,RD4023
 4420,Mandiri Obligasi Andalan,mandiri-obligasi-andalan,Pendapatan Tetap,"Mandiri Manajemen Investasi, PT",2021-09-29,RD4026
 4421,Bahana Centrum Protected Fund 221,bahana-centrum-protected-fund-221,Terproteksi,"Bahana TCW Investment Management, PT",2021-09-29,RD4025
 4422,Reksa Dana Terproteksi Panin 21,reksa-dana-terproteksi-panin-21,Terproteksi,"Panin Asset Management, PT",2021-09-30,
 4423,Reliance Riil Perdana,reliance-riil-perdana,Penyertaan Terbatas,"Reliance Manajer Investasi, PT",2019-09-30,
-4424,STAR Protected XV,star-protected-xv,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-10-05,
+4424,STAR Protected XV,star-protected-xv,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-10-05,RD4028
 4425,BNI AM Prioritas Bougenville,bni-am-prioritas-bougenville,Pendapatan Tetap,"BNI Asset Management, PT",2021-10-07,RD4030
 4426,BNI AM Proteksi Rosemary,bni-am-proteksi-rosemary,Terproteksi,"BNI Asset Management, PT",2021-10-07,RD4029
-4428,STAR Protected Dollar III,star-protected-dollar-iii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-10-12,
+4428,STAR Protected Dollar III,star-protected-dollar-iii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-10-12,RD4031
 4429,Bahana Progressive Protected Fund 213,bahana-progressive-protected-fund-213,Terproteksi,"Bahana TCW Investment Management, PT",2021-10-15,RD4032
 4430,Eastspring Investments Yield Discovery Kelas C,eastspring-investments-yield-discovery-kelas-c,Pendapatan Tetap,"Eastspring Investments Indonesia, PT",2021-10-21,RD4035
 4431,Capital Optimal Cash,capital-optimal-cash,Pasar Uang,"Capital Asset Management, PT",2021-10-25,RD4036
 4432,Lautandhana Pasar Uang Likuid,lautandhana-pasar-uang-likuid,Pasar Uang,"Lautandhana Investment Management, PT",2021-10-25,RD4037
-4433,Star Protected Dollar IV,star-protected-dollar-iv,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-10-25,
+4433,Star Protected Dollar IV,star-protected-dollar-iv,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2021-10-25,RD4038
 4434,Trimegah Terproteksi Lestari 19,trimegah-terproteksi-lestari-19,Terproteksi,"Trimegah Asset Management, PT",2021-10-26,RD4039
 4435,Kontrak Investasi Kolektif Pemupukan Dana Tapera Batavia Pasar Uang,kontrak-investasi-kolektif-pemupukan-dana-tapera-batavia-pasar-uang,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",2021-10-26,RD4073
 4436,Kontrak Investasi Kolektif Pemupukan Dana Tapera Mandiri Pasar Uang,kontrak-investasi-kolektif-pemupukan-dana-tapera-mandiri-pasar-uang,Pasar Uang,"Mandiri Manajemen Investasi, PT",2021-10-26,RD4080
@@ -2963,7 +2963,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4442,BNI AM Proteksi Sunflower,bni-am-proteksi-sunflower,Terproteksi,"BNI Asset Management, PT",2021-10-27,RD4041
 4443,Kontrak Investasi Kolektif Pemupukan Dana Tapera BRI MI Pasar Uang,kontrak-investasi-kolektif-pemupukan-dana-tapera-bri-mi-pasar-uang,Pasar Uang,"BRI Manajemen Investasi, PT",2021-10-26,
 4444,Kontrak Investasi Kolektif Pemupukan Dana Tapera Schroder Pasar Uang,kontrak-investasi-kolektif-pemupukan-dana-tapera-schroder-pasar-uang,Pasar Uang,"Schroder Investment Management Indonesia, PT",2021-10-26,RD4084
-4445,Sucorinvest Monthly Income Fund Kelas A,sucorinvest-monthly-income-fund-kelas-a,Pendapatan Tetap,"Sucorinvest Asset Management, PT",2021-10-28,
+4445,Sucorinvest Monthly Income Fund Kelas A,sucorinvest-monthly-income-fund-kelas-a,Pendapatan Tetap,"Sucorinvest Asset Management, PT",2021-10-28,RD4044
 4446,Sucorinvest Proteksi 42,sucorinvest-proteksi-42,Terproteksi,"Sucorinvest Asset Management, PT",2021-10-28,RD4043
 4447,Sucorinvest Sharia Sukuk Fund Kelas A,sucorinvest-sharia-sukuk-fund-kelas-a,Pendapatan Tetap,"Sucorinvest Asset Management, PT",2021-10-29,RD4046
 4448,Reksa Dana Terproteksi Panin 22,reksa-dana-terproteksi-panin-22,Terproteksi,"Panin Asset Management, PT",2021-10-29,RD4045
@@ -2974,7 +2974,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4453,Majoris Sukuk Andalan Indonesia,majoris-sukuk-andalan-indonesia,Pendapatan Tetap,"Majoris Asset Management, PT",2021-11-09,RD4054
 4454,Setiabudi Dana Proteksi 6,setiabudi-dana-proteksi-6,Terproteksi,"Setiabudi Investment Management, PT",2021-11-11,RD4055
 4455,Panin IDX30 Kelas B,panin-idx30-kelas-b,Indeks & ETF,"Panin Asset Management, PT",2021-11-17,RD4056
-4456,Batavia Dana Kas Syariah Kelas A,batavia-dana-kas-syariah-kelas-a,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",2021-11-22,
+4456,Batavia Dana Kas Syariah Kelas A,batavia-dana-kas-syariah-kelas-a,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",2021-11-22,RD4057
 4457,Mega Asset Terproteksi 18,mega-asset-terproteksi-18,Terproteksi,"Mega Asset Management, PT",2021-11-23,RD4060
 4458,Bahana Centrum Protected Fund 222,bahana-centrum-protected-fund-222,Terproteksi,"Bahana TCW Investment Management, PT",2021-11-23,RD4059
 4459,Avrist Ada Kas Syariah Ruby,avrist-ada-kas-syariah-ruby,Pasar Uang,"Avrist Asset Management, PT",2021-11-23,RD4058
@@ -2985,10 +2985,10 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4464,Kontrak Investasi Kolektif Pemupukan Dana Tapera Batavia Pendapatan Tetap,kontrak-investasi-kolektif-pemupukan-dana-tapera-batavia-pendapatan-tetap,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2021-11-30,RD4075
 4465,Kontrak Investasi Kolektif Pemupukan Dana Tapera Mandiri Pendapatan Tetap,kontrak-investasi-kolektif-pemupukan-dana-tapera-mandiri-pendapatan-tetap,Pendapatan Tetap,"Mandiri Manajemen Investasi, PT",2021-11-30,RD4081
 4466,Kontrak Investasi Kolektif Pemupukan Dana Tapera Bahana Pendapatan Tetap,kontrak-investasi-kolektif-pemupukan-dana-tapera-bahana-pendapatan-tetap,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2021-11-30,RD4072
-4467,Kontrak Investasi Kolektif Pemupukan Dana Tapera Manulife Pendapatan Tetap,kontrak-investasi-kolektif-pemupukan-dana-tapera-manulife-pendapatan-tetap,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2021-11-30,
+4467,Kontrak Investasi Kolektif Pemupukan Dana Tapera Manulife Pendapatan Tetap,kontrak-investasi-kolektif-pemupukan-dana-tapera-manulife-pendapatan-tetap,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2021-11-30,RD4083
 4468,Kontrak Investasi Kolektif Pemupukan Dana Tapera BNI AM Pendapatan Tetap,kontrak-investasi-kolektif-pemupukan-dana-tapera-bni-am-pendapatan-tetap,Pendapatan Tetap,"BNI Asset Management, PT",2021-11-30,RD4077
 4469,Kontrak Investasi Kolektif Pemupukan Dana Tapera BRI MI Pendapatan Tetap,kontrak-investasi-kolektif-pemupukan-dana-tapera-bri-mi-pendapatan-tetap,Pendapatan Tetap,"BRI Manajemen Investasi, PT",2021-11-30,
-4470,Kontrak Investasi Kolektif Pemupukan Dana Tapera Schroder Pendapatan Tetap,kontrak-investasi-kolektif-pemupukan-dana-tapera-schroder-pendapatan-tetap,Pendapatan Tetap,"Schroder Investment Management Indonesia, PT",2021-11-30,
+4470,Kontrak Investasi Kolektif Pemupukan Dana Tapera Schroder Pendapatan Tetap,kontrak-investasi-kolektif-pemupukan-dana-tapera-schroder-pendapatan-tetap,Pendapatan Tetap,"Schroder Investment Management Indonesia, PT",2021-11-30,RD4085
 4471,Alpha Dana Ekuitas,alpha-dana-ekuitas,Saham,"Alpha Aset Management, PT",2021-12-02,
 4472,BNI AM Indeks IDX Growth30 Kelas I1,bni-am-indeks-idx-growth30-kelas-i1,Indeks & ETF,"BNI Asset Management, PT",2021-12-03,RD4069
 4473,BNI AM Indeks IDX Growth30 Kelas I2,bni-am-indeks-idx-growth30-kelas-i2,Indeks & ETF,"BNI Asset Management, PT",2021-12-03,RD4070
@@ -3032,7 +3032,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4511,RDPT Danareksa Ekuitas Energi,rdpt-danareksa-ekuitas-energi,Penyertaan Terbatas,"BRI Manajemen Investasi, PT",2022-02-22,RD6217
 4512,BNI AM Proteksi Peterseli (Restrukturisasi),bni-am-proteksi-peterseli-restrukturisasi,Terproteksi,"BNI Asset Management, PT",2022-02-23,
 4513,Trimegah Prima Campuran,trimegah-prima-campuran,Campuran,"Trimegah Asset Management, PT",2022-02-24,RD4187
-4514,STAR Money Market III,star-money-market-iii,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2022-02-25,
+4514,STAR Money Market III,star-money-market-iii,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2022-02-25,RD4188
 4515,Batavia Technology Sharia Equity USD,batavia-technology-sharia-equity-usd,Saham,"Batavia Prosperindo Aset Manajemen, PT",2022-02-16,RD4183
 4516,Simas Kas Syariah,simas-kas-syariah,Pasar Uang,"Sinarmas Asset Management, PT",2022-03-08,RD4189
 4517,Mega Asset Terproteksi 19,mega-asset-terproteksi-19,Terproteksi,"Mega Asset Management, PT",2022-03-08,RD4190
@@ -3044,7 +3044,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4523,Trimegah Terproteksi Prima 33,trimegah-terproteksi-prima-33,Terproteksi,"Trimegah Asset Management, PT",2022-03-25,RD4196
 4524,Syailendra Capital Protected Fund 52,syailendra-capital-protected-fund-52,Terproteksi,"Syailendra Capital, PT",2022-03-28,RD4197
 4525,Cipta Proteksi XXII,cipta-proteksi-xxii,Terproteksi,"Ciptadana Asset Management, PT",2022-03-29,
-4526,STAR Protected XVI,star-protected-xvi,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2022-03-30,
+4526,STAR Protected XVI,star-protected-xvi,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2022-03-30,RD4200
 4527,Kontrak Investasi Kolektif Pemupukan Dana Tapera Batavia Pendapatan Tetap Tanpa Penjualan Kembali,kontrak-investasi-kolektif-pemupukan-dana-tapera-batavia-pendapatan-tetap-tanpa-penjualan-kembali,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2022-03-31,
 4528,Kontrak Investasi Kolektif Pemupukan Dana Tapera Mandiri Pendapatan Tetap Tanpa Penjualan Kembali,kontrak-investasi-kolektif-pemupukan-dana-tapera-mandiri-pendapatan-tetap-tanpa-penjualan-kembali,Pendapatan Tetap,"Mandiri Manajemen Investasi, PT",2022-03-31,
 4529,Mandiri Money Market USD,mandiri-money-market-usd,Pasar Uang,"Mandiri Manajemen Investasi, PT",2022-03-31,RD4202
@@ -3077,7 +3077,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4556,Eastspring Investments Value Discovery Kelas C,eastspring-investments-value-discovery-kelas-c,Saham,"Eastspring Investments Indonesia, PT",2022-06-16,RD4235
 4557,Avrist Proteksi Spirit 15,avrist-proteksi-spirit-15,Terproteksi,"Avrist Asset Management, PT",2022-06-16,RD4234
 4558,Avrist Ada Kas Amar Syariah,avrist-ada-kas-amar-syariah,Pasar Uang,"Avrist Asset Management, PT",2022-06-20,RD4236
-4559,Mandiri Obligasi Utama Sejahtera Kelas A,mandiri-obligasi-utama-sejahtera-kelas-a,Pendapatan Tetap,"Mandiri Manajemen Investasi, PT",2022-06-20,
+4559,Mandiri Obligasi Utama Sejahtera Kelas A,mandiri-obligasi-utama-sejahtera-kelas-a,Pendapatan Tetap,"Mandiri Manajemen Investasi, PT",2022-06-20,RD4237
 4560,BNP Paribas Brilian Proteksi Rupiah,bnp-paribas-brilian-proteksi-rupiah,Terproteksi,"BNP Paribas Asset Management, PT",2022-06-22,RD4238
 4561,BNI AM Proteksi Orchid,bni-am-proteksi-orchid,Terproteksi,"BNI Asset Management, PT",2022-06-29,RD4239
 4562,BNI AM Proteksi Nucifera,bni-am-proteksi-nucifera,Terproteksi,"BNI Asset Management, PT",2022-07-06,RD4240
@@ -3089,7 +3089,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4568,BRI MSCI Indonesia ESG Screened Kelas B,bri-msci-indonesia-esg-screened-kelas-b,Indeks & ETF,"BRI Manajemen Investasi, PT",2022-07-15,
 4569,Avrist Kas Syariah Inara,avrist-kas-syariah-inara,Pasar Uang,"Avrist Asset Management, PT",2022-07-15,RD4250
 4570,Avrist Dana Kas Prima,avrist-dana-kas-prima,Pasar Uang,"Avrist Asset Management, PT",2022-07-22,RD4254
-4571,STAR Balanced III,star-balanced-iii,Campuran,"Surya Timur Alam Raya Asset Management, PT",2022-07-25,
+4571,STAR Balanced III,star-balanced-iii,Campuran,"Surya Timur Alam Raya Asset Management, PT",2022-07-25,RD4255
 4572,PNM Terproteksi Investa 41,pnm-terproteksi-investa-41,Terproteksi,"PNM Investment Management, PT",2022-07-27,RD4258
 4573,Eastspring Brilian Terproteksi 1,eastspring-brilian-terproteksi-1,Terproteksi,"Eastspring Investments Indonesia, PT",2022-07-28,RD4259
 4574,Trimegah Terproteksi Lestari 21,trimegah-terproteksi-lestari-21,Terproteksi,"Trimegah Asset Management, PT",2022-07-28,RD4260
@@ -3103,13 +3103,13 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4582,Syailendra YO INVES IDX30,syailendra-yo-inves-idx30,Indeks & ETF,"Syailendra Capital, PT",2022-08-16,RD5077
 4583,PNM Terproteksi Investa 40,pnm-terproteksi-investa-40,Terproteksi,"PNM Investment Management, PT",2022-08-16,RD5076
 4584,Reksa Dana Terproteksi Panin 28,reksa-dana-terproteksi-panin-28,Terproteksi,"Panin Asset Management, PT",2022-08-19,
-4585,Valbury Liquid Fund,valbury-liquid-fund,Pasar Uang,"KB Valbury Asset Management, PT",2022-08-22,
+4585,Valbury Liquid Fund,valbury-liquid-fund,Pasar Uang,"KB Valbury Asset Management, PT",2022-08-22,RD5523
 4586,KIM Liquid Money Market Fund,kim-liquid-money-market-fund,Pasar Uang,"Korea Investment Management Indonesia, PT",2022-08-24,
 4587,Reksa Dana Syariah Terproteksi Avrist Sukuk Berkah 5,reksa-dana-syariah-terproteksi-avrist-sukuk-berkah-5,Terproteksi,"Avrist Asset Management, PT",2022-08-25,
 4588,Panin IDX30 Kelas C,panin-idx30-kelas-c,Indeks & ETF,"Panin Asset Management, PT",2022-08-29,RD5610
-4589,Star Protected XVIII,star-protected-xviii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2022-08-30,
+4589,Star Protected XVIII,star-protected-xviii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2022-08-30,RD5624
 4590,Majoris Dana Kas Bintang Indonesia,majoris-dana-kas-bintang-indonesia,Pasar Uang,"Majoris Asset Management, PT",2022-08-30,RD5623
-4591,BNI AM Short Duration Bonds Index Kelas R1,bni-am-short-duration-bonds-index-kelas-r1,Indeks & ETF,"BNI Asset Management, PT",2022-09-01,
+4591,BNI AM Short Duration Bonds Index Kelas R1,bni-am-short-duration-bonds-index-kelas-r1,Indeks & ETF,"BNI Asset Management, PT",2022-09-01,RD5638
 4592,Bahana Gebyar Dana Likuid,bahana-gebyar-dana-likuid,Pasar Uang,"Bahana TCW Investment Management, PT",2022-09-01,RD5636
 4593,KIK Pemupukan Dana Tapera Batavia Pasar Uang Syariah,kik-pemupukan-dana-tapera-batavia-pasar-uang-syariah,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",2022-09-07,
 4594,Kontrak Investasi Kolektif Pemupukan Dana Tapera Bahana Pasar Uang Syariah,kontrak-investasi-kolektif-pemupukan-dana-tapera-bahana-pasar-uang-syariah,Pasar Uang,"Bahana TCW Investment Management, PT",2022-09-07,
@@ -3123,9 +3123,9 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4602,Bahana Dana Ekuitas Andalan Kelas S,bahana-dana-ekuitas-andalan-kelas-s,Saham,"Bahana TCW Investment Management, PT",2022-09-19,RD5649
 4603,Setiabudi Dana Proteksi 7,setiabudi-dana-proteksi-7,Terproteksi,"Setiabudi Investment Management, PT",2022-09-19,RD5650
 4604,Reksa Dana Bahana Obligasi Ganesha Kelas I,reksa-dana-bahana-obligasi-ganesha-kelas-i,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2022-09-20,
-4605,Star Fixed Income 3,star-fixed-income-3,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2022-09-20,
+4605,Star Fixed Income 3,star-fixed-income-3,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2022-09-20,RD5652
 4606,Trimegah Terproteksi Prima 35,trimegah-terproteksi-prima-35,Terproteksi,"Trimegah Asset Management, PT",2022-09-22,RD5653
-4607,STAR Protected XVII,star-protected-xvii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2022-09-28,
+4607,STAR Protected XVII,star-protected-xvii,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2022-09-28,RD5655
 4608,Bahana Pendapatan Tetap Makara Prima Kelas I,bahana-pendapatan-tetap-makara-prima-kelas-i,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2022-09-30,
 4609,KIM Priority Money Market Fund,kim-priority-money-market-fund,Pasar Uang,"Korea Investment Management Indonesia, PT",2022-10-03,
 4610,Sucorinvest Proteksi 45,sucorinvest-proteksi-45,Terproteksi,"Sucorinvest Asset Management, PT",2022-10-03,RD5659
@@ -3143,7 +3143,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4622,Cipta Dana Kas Unggulan,cipta-dana-kas-unggulan,Pasar Uang,"Ciptadana Asset Management, PT",2022-10-27,RD5683
 4623,UOBAM ESG Sharia Money Market Indonesia,uobam-esg-sharia-money-market-indonesia,Pasar Uang,"UOB Asset Management Indonesia, PT",2022-10-28,RD5686
 4624,BNI AM Proteksi Alamanda,bni-am-proteksi-alamanda,Terproteksi,"BNI Asset Management, PT",2022-10-31,RD5687
-4625,Capital Sharia Optimal Protected Fund 10,capital-sharia-optimal-protected-fund-10,Terproteksi,"Capital Asset Management, PT",2022-11-01,
+4625,Capital Sharia Optimal Protected Fund 10,capital-sharia-optimal-protected-fund-10,Terproteksi,"Capital Asset Management, PT",2022-11-01,RD5689
 4626,BNI AM Proteksi Moringa,bni-am-proteksi-moringa,Terproteksi,"BNI Asset Management, PT",2022-11-01,RD5688
 4627,Mandiri Saham Atraktif Kelas B,mandiri-saham-atraktif-kelas-b,Saham,"Mandiri Manajemen Investasi, PT",2022-11-07,RD5694
 4628,RDPT Gemilang Ekuitas Digital,rdpt-gemilang-ekuitas-digital,Penyertaan Terbatas,"Gemilang Indonesia Manajemen Investasi, PT",2022-11-25,
@@ -3197,7 +3197,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4676,Mandiri ETF LQ45,mandiri-etf-lq45,Indeks & ETF,"Mandiri Manajemen Investasi, PT",2023-03-03,RD5865
 4677,BNP Paribas Indonesia ESG Equity Kelas RK1,bnp-paribas-indonesia-esg-equity-kelas-rk1,Saham,"BNP Paribas Asset Management, PT",2023-03-14,RD5869
 4678,Anargya Supergama,anargya-supergama,Pasar Uang,"Anargya Aset Manajemen, PT",2023-03-10,RD5868
-4679,STAR Obligasi Negara Prima,star-obligasi-negara-prima,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2023-03-14,
+4679,STAR Obligasi Negara Prima,star-obligasi-negara-prima,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2023-03-14,RD5870
 4680,BNP Paribas Prima II Kelas DR1,bnp-paribas-prima-ii-kelas-dr1,Pendapatan Tetap,"BNP Paribas Asset Management, PT",2023-03-24,RD5881
 4681,Reksa Dana Syariah Terproteksi Bahana Himaya Syariah 2,reksa-dana-syariah-terproteksi-bahana-himaya-syariah-2,Terproteksi,"Bahana TCW Investment Management, PT",2023-03-24,
 4682,Ashmore Dana Balanced Nusantara,ashmore-dana-balanced-nusantara,Campuran,"Ashmore Asset Management Indonesia, PT",2023-03-28,RD5895
@@ -3206,7 +3206,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4685,BNP Paribas Indonesia ESG Equity Kelas IK2,bnp-paribas-indonesia-esg-equity-kelas-ik2,Saham,"BNP Paribas Asset Management, PT",2023-03-31,RD5910
 4686,STAR Fixed Income 4 Kelas Utama,star-fixed-income-4-kelas-utama,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2023-03-31,
 4687,Trimegah Pundi Kas Syariah 2,trimegah-pundi-kas-syariah-2,Pasar Uang,"Trimegah Asset Management, PT",2023-04-05,RD5925
-4688,Valbury Prime Dynamic Equity,valbury-prime-dynamic-equity,Saham,"KB Valbury Asset Management, PT",2023-04-10,
+4688,Valbury Prime Dynamic Equity,valbury-prime-dynamic-equity,Saham,"KB Valbury Asset Management, PT",2023-04-10,RD5940
 4689,HPAM Proteksi Prima II,hpam-proteksi-prima-ii,Terproteksi,"Henan Putihrai Asset Management, PT",2023-04-14,RD5942
 4690,Trimegah Terproteksi Prima Syariah,trimegah-terproteksi-prima-syariah,Terproteksi,"Trimegah Asset Management, PT",2023-04-14,RD5943
 4691,BRI Proteksi 88,bri-proteksi-88,Terproteksi,"BRI Manajemen Investasi, PT",2023-04-17,
@@ -3219,7 +3219,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4698,Mandiri Investa Atraktif Kelas B,mandiri-investa-atraktif-kelas-b,Saham,"Mandiri Manajemen Investasi, PT",2023-05-23,RD5969
 4699,Mandiri Investa Cerdas Bangsa Kelas B,mandiri-investa-cerdas-bangsa-kelas-b,Saham,"Mandiri Manajemen Investasi, PT",2023-05-23,RD5971
 4700,Bahana Centrum Protected Fund 232,bahana-centrum-protected-fund-232,Terproteksi,"Bahana TCW Investment Management, PT",2023-05-23,RD5966
-4701,STAR Protected 20,star-protected-20,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2023-05-23,
+4701,STAR Protected 20,star-protected-20,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2023-05-23,RD5967
 4702,Batavia Proteksi Maxima 51,batavia-proteksi-maxima-51,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2023-05-24,RD5972
 4703,BNP Paribas Sukuk Negara Kelas DR1,bnp-paribas-sukuk-negara-kelas-dr1,Pendapatan Tetap,"BNP Paribas Asset Management, PT",2023-05-24,
 4704,Trimegah Pendapatan Tetap Hijau Inklusif,trimegah-pendapatan-tetap-hijau-inklusif,Pendapatan Tetap,"Trimegah Asset Management, PT",2023-05-25,RD5996
@@ -3234,7 +3234,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4713,PNM INDEKS INFOBANK15,pnm-indeks-infobank15,Indeks & ETF,"PNM Investment Management, PT",2023-06-09,RD6035
 4714,Syailendra Sri Kehati,syailendra-sri-kehati,Indeks & ETF,"Syailendra Capital, PT",2023-06-09,RD6036
 4715,Victoria Pasar Uang Orion,victoria-pasar-uang-orion,Pasar Uang,"Victoria Manajemen Investasi, PT",2023-06-09,RD6037
-4716,STAR Protected Dollar 5,star-protected-dollar-5,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2023-06-13,
+4716,STAR Protected Dollar 5,star-protected-dollar-5,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2023-06-13,RD6040
 4717,BNI AM IDX High Dividend 20 Kelas R1,bni-am-idx-high-dividend-20-kelas-r1,Indeks & ETF,"BNI Asset Management, PT",2023-06-13,
 4718,BNI AM IDX Sharia Growth Kelas R1,bni-am-idx-sharia-growth-kelas-r1,Indeks & ETF,"BNI Asset Management, PT",2023-06-14,
 4719,BNI AM IDX Sharia Growth Kelas I2,bni-am-idx-sharia-growth-kelas-i2,Indeks & ETF,"BNI Asset Management, PT",2023-06-14,
@@ -3244,9 +3244,9 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4723,Batavia Infrastruktur 6,batavia-infrastruktur-6,Penyertaan Terbatas,"Batavia Prosperindo Aset Manajemen, PT",2023-06-22,RD6062
 4724,Manulife Dana Campuran Utama Kelas I,manulife-dana-campuran-utama-kelas-i,Campuran,"Manulife Aset Manajemen Indonesia, PT",2023-06-23,RD6063
 4725,TRIM Kas 2 Kelas B,trim-kas-2-kelas-b,Pasar Uang,"Trimegah Asset Management, PT",2023-06-26,RD6069
-4726,STAR Money Market Kelas Dana,star-money-market-kelas-dana,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2023-06-26,
+4726,STAR Money Market Kelas Dana,star-money-market-kelas-dana,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2023-06-26,RD6068
 4727,Cipta Proteksi XXV,cipta-proteksi-xxv,Terproteksi,"Ciptadana Asset Management, PT",2023-07-03,RD6072
-4728,STAR Sharia Protected 1,star-sharia-protected-1,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2023-07-05,
+4728,STAR Sharia Protected 1,star-sharia-protected-1,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2023-07-05,RD6075
 4729,Insight Terproteksi 55,insight-terproteksi-55,Terproteksi,"Insight Investments Management, PT",2023-07-10,RD6083
 4730,Simas Kas Maksima,simas-kas-maksima,Pasar Uang,"Sinarmas Asset Management, PT",2023-07-10,RD6084
 4731,BNI AM Sri Kehati Kelas R1,bni-am-sri-kehati-kelas-r1,Indeks & ETF,"BNI Asset Management, PT",2023-07-14,
@@ -3264,7 +3264,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4743,Bahana Fazza Syariah USD 1,bahana-fazza-syariah-usd-1,Terproteksi,"Bahana TCW Investment Management, PT",2023-08-09,RD6134
 4744,Trimegah Dana Tetap Syariah 2,trimegah-dana-tetap-syariah-2,Pendapatan Tetap,"Trimegah Asset Management, PT",2023-08-09,RD6135
 4745,Eastspring Investments Alpha Navigator Kelas C,eastspring-investments-alpha-navigator-kelas-c,Saham,"Eastspring Investments Indonesia, PT",2023-08-10,RD6136
-4746,STAR Money Market Kelas Dana Plus,star-money-market-kelas-dana-plus,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2023-08-09,
+4746,STAR Money Market Kelas Dana Plus,star-money-market-kelas-dana-plus,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2023-08-09,RD6137
 4747,Batavia Obligasi Berkembang,batavia-obligasi-berkembang,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2023-08-15,RD6139
 4748,Mega Asset Terproteksi 22,mega-asset-terproteksi-22,Terproteksi,"Mega Asset Management, PT",2023-08-15,RD6181
 4749,Premier Campuran Dinamis Kelas A,premier-campuran-dinamis-kelas-a,Campuran,"Indo Premier Investment Management, PT",2023-08-15,RD6141
@@ -3283,7 +3283,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4762,Mandiri Asia Sharia Equity Dollar Kelas A,mandiri-asia-sharia-equity-dollar-kelas-a,Saham,"Mandiri Manajemen Investasi, PT",2023-08-31,RD6180
 4763,BMI Indo Dana Kas,bmi-indo-dana-kas,Pendapatan Tetap,"Berdikari Manajemen Investasi, PT",2023-09-07,RD6188
 4764,Trimegah Terproteksi Lestari 27,trimegah-terproteksi-lestari-27,Terproteksi,"Trimegah Asset Management, PT",2023-09-13,RD6192
-4765,STAR Orion Stable Dollar Bond,star-orion-stable-dollar-bond,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2023-09-13,
+4765,STAR Orion Stable Dollar Bond,star-orion-stable-dollar-bond,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2023-09-13,RD6191
 4766,Mega Asset Terproteksi 23,mega-asset-terproteksi-23,Terproteksi,"Mega Asset Management, PT",2023-09-14,RD6195
 4767,Panin 34,panin-34,Terproteksi,"Panin Asset Management, PT",2023-09-15,RD6207
 4768,BNI AM Proteksi Kamelia,bni-am-proteksi-kamelia,Terproteksi,"BNI Asset Management, PT",2023-09-18,RD6208
@@ -3292,7 +3292,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4771,Majoris USD Money Market Fund Indonesia,majoris-usd-money-market-fund-indonesia,Pasar Uang,"Majoris Asset Management, PT",2023-09-25,RD6220
 4772,Syailendra Capital Protected Fund Syariah 2,syailendra-capital-protected-fund-syariah-2,Terproteksi,"Syailendra Capital, PT",2023-09-26,RD6221
 4773,Reksa Dana Syariah Allianz High Dividend Global Sharia Equity Dollar Kelas A,reksa-dana-syariah-allianz-high-dividend-global-sharia-equity-dollar-kelas-a,Saham,"Allianz Global Investors Asset Management Indonesia, PT",2023-10-02,
-4774,Reksa Dana Allianz USD Fixed Income Fund Kelas A,reksa-dana-allianz-usd-fixed-income-fund-kelas-a,Pendapatan Tetap,"Allianz Global Investors Asset Management Indonesia, PT",2023-10-02,
+4774,Reksa Dana Allianz USD Fixed Income Fund Kelas A,reksa-dana-allianz-usd-fixed-income-fund-kelas-a,Pendapatan Tetap,"Allianz Global Investors Asset Management Indonesia, PT",2023-10-02,RD6232
 4775,Eastspring Bakti Proteksi 1,eastspring-bakti-proteksi-1,Terproteksi,"Eastspring Investments Indonesia, PT",2023-10-02,RD6233
 4776,Mandiri Investa 3,mandiri-investa-3,Terproteksi,"Mandiri Manajemen Investasi, PT",2023-10-03,
 4777,Cipta Proteksi XXVI,cipta-proteksi-xxvi,Terproteksi,"Ciptadana Asset Management, PT",2023-10-10,RD6252
@@ -3303,9 +3303,9 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4782,Manulife Dana Tetap Stabil Kelas M1,manulife-dana-tetap-stabil-kelas-m1,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2023-10-16,RD6257
 4783,Maybank Obligasi Syariah Negara,maybank-obligasi-syariah-negara,Pendapatan Tetap,"Maybank Asset Management, PT",2023-10-17,RD6258
 4784,Syailendra Pendapatan Total Return Kelas A,syailendra-pendapatan-total-return-kelas-a,Pendapatan Tetap,"Syailendra Capital, PT",2023-11-03,RD6279
-4785,STAR Stable Amanah Sukuk,star-stable-amanah-sukuk,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2023-11-08,
+4785,STAR Stable Amanah Sukuk,star-stable-amanah-sukuk,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2023-11-08,RD6280
 4786,Bahana Sinergi Pasar Uang Kelas I,bahana-sinergi-pasar-uang-kelas-i,Pasar Uang,"Bahana TCW Investment Management, PT",2023-11-09,RD6294
-4787,STAR Protected Dollar 6,star-protected-dollar-6,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2023-11-09,
+4787,STAR Protected Dollar 6,star-protected-dollar-6,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2023-11-09,RD6282
 4788,Trimegah Terproteksi Dana Berkala 12,trimegah-terproteksi-dana-berkala-12,Terproteksi,"Trimegah Asset Management, PT",2023-11-15,RD6298
 4789,Insight Terproteksi Syariah VIII,insight-terproteksi-syariah-viii,Terproteksi,"Insight Investments Management, PT",2023-11-17,RD6300
 4790,BRI Proteksi 93,bri-proteksi-93,Terproteksi,"BRI Manajemen Investasi, PT",2023-11-17,
@@ -3343,7 +3343,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4822,Batavia Proteksi Maxima 53,batavia-proteksi-maxima-53,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2024-01-18,RD6403
 4823,Reksa Dana Pendapatan Tetap Utama Kelas I,reksa-dana-pendapatan-tetap-utama-kelas-i,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2024-01-22,RD6408
 4824,Manulife Saham Syariah ESG Transisi Global Dolar AS Kelas A2,manulife-saham-syariah-esg-transisi-global-dolar-as-kelas-a2,Saham,"Manulife Aset Manajemen Indonesia, PT",2024-01-18,RD6407
-4825,STAR Protected 23,star-protected-23,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2024-01-24,
+4825,STAR Protected 23,star-protected-23,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2024-01-24,RD6409
 4826,Syailendra Sharia Fixed Income Fund Kelas A,syailendra-sharia-fixed-income-fund-kelas-a,Pendapatan Tetap,"Syailendra Capital, PT",2024-01-29,
 4827,Avrist Emerald Stable Fund,avrist-emerald-stable-fund,Pendapatan Tetap,"Avrist Asset Management, PT",2024-01-29,RD6413
 4828,BRI Proteksi 94,bri-proteksi-94,Terproteksi,"BRI Manajemen Investasi, PT",2024-01-30,RD6415
@@ -3392,7 +3392,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4874,Trimegah Terproteksi Syariah 3,trimegah-terproteksi-syariah-3,Terproteksi,"Trimegah Asset Management, PT",2024-05-16,RD6593
 4875,Mandiri Investa Dana Utama Kelas B,mandiri-investa-dana-utama-kelas-b,Pendapatan Tetap,"Mandiri Manajemen Investasi, PT",2024-05-27,
 4876,Syailendra Capital Protected Fund 58,syailendra-capital-protected-fund-58,Terproteksi,"Syailendra Capital, PT",2024-05-28,RD6636
-4877,Simpan Bond Fund Kelas A,simpan-bond-fund-kelas-a,Pendapatan Tetap,"Simpan Asset Management, PT",2024-05-29,
+4877,Simpan Bond Fund Kelas A,simpan-bond-fund-kelas-a,Pendapatan Tetap,"Simpan Asset Management, PT",2024-05-29,RD6598
 4878,Kim Prime Balance Fund,kim-prime-balance-fund,Campuran,"Korea Investment Management Indonesia, PT",2024-06-03,
 4879,Reksa Dana Indeks Panin Sri Kehati Kelas B,reksa-dana-indeks-panin-sri-kehati-kelas-b,Indeks & ETF,"Panin Asset Management, PT",2024-06-05,
 4880,BNI AM Proteksi Azalea,bni-am-proteksi-azalea,Terproteksi,"BNI Asset Management, PT",2024-06-07,RD6642
@@ -3420,7 +3420,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4902,Trimegah Bakti Ganesha Abadi Kelas A,trimegah-bakti-ganesha-abadi-kelas-a,Pendapatan Tetap,"Trimegah Asset Management, PT",2024-07-25,RD6717
 4903,Trimegah Bakti Ganesha Abadi Kelas B,trimegah-bakti-ganesha-abadi-kelas-b,Pendapatan Tetap,"Trimegah Asset Management, PT",2024-07-25,RD6718
 4904,Trimegah Bakti Ganesha Abadi Kelas C,trimegah-bakti-ganesha-abadi-kelas-c,Pendapatan Tetap,"Trimegah Asset Management, PT",2024-07-25,RD6719
-4905,STAR Protected 24,star-protected-24,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2024-07-25,
+4905,STAR Protected 24,star-protected-24,Terproteksi,"Surya Timur Alam Raya Asset Management, PT",2024-07-25,RD6716
 4906,Reksa Dana Terproteksi Panin 37,reksa-dana-terproteksi-panin-37,Terproteksi,"Panin Asset Management, PT",2024-07-26,
 4907,STAR Value High Conviction Equity Fund Kelas Utama,star-value-high-conviction-equity-fund-kelas-utama,Saham,"Surya Timur Alam Raya Asset Management, PT",2024-07-30,
 4908,Avrist Protected Fund 6,avrist-protected-fund-6,Terproteksi,"Avrist Asset Management, PT",2024-07-30,RD6736
@@ -3428,10 +3428,10 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4910,Bahana Dana Likuid Kelas I,bahana-dana-likuid-kelas-i,Pasar Uang,"Bahana TCW Investment Management, PT",2024-07-29,RD6721
 4911,Mandiri Investa 4,mandiri-investa-4,Terproteksi,"Mandiri Manajemen Investasi, PT",2024-07-31,RD8668
 4912,Juara Empowerment Balanced Fund,juara-empowerment-balanced-fund,Campuran,"Juara Capital Indonesia, PT",2024-08-01,RD8671
-4913,HPAM Proteksi Prima Syariah III,hpam-proteksi-prima-syariah-iii,Terproteksi,"Henan Putihrai Asset Management, PT",2024-08-05,
+4913,HPAM Proteksi Prima Syariah III,hpam-proteksi-prima-syariah-iii,Terproteksi,"Henan Putihrai Asset Management, PT",2024-08-05,RD8696
 4914,Manulife Proteksi Dana Utama VII,manulife-proteksi-dana-utama-vii,Terproteksi,"Manulife Aset Manajemen Indonesia, PT",2024-08-07,RD8698
 4915,Mega Asset Terproteksi 27,mega-asset-terproteksi-27,Terproteksi,"Mega Asset Management, PT",2024-08-08,RD8700
-4916,Star Infobank 15 Kelas Profesional,star-infobank-15-kelas-profesional,Indeks & ETF,"Surya Timur Alam Raya Asset Management, PT",2024-08-13,
+4916,Star Infobank 15 Kelas Profesional,star-infobank-15-kelas-profesional,Indeks & ETF,"Surya Timur Alam Raya Asset Management, PT",2024-08-13,RD8711
 4917,Manulife Indonesia Money Market Fund Kelas A2,manulife-indonesia-money-market-fund-kelas-a2,Pasar Uang,"Manulife Aset Manajemen Indonesia, PT",2024-08-15,RD8715
 4918,Reksa Dana Pendapatan Tetap Avrist Pendidikan Solotech Kelas Gold,reksa-dana-pendapatan-tetap-avrist-pendidikan-solotech-kelas-gold,Pendapatan Tetap,"Avrist Asset Management, PT",2024-08-15,
 4919,Reksa Dana Pendapatan Tetap Avrist Pendidikan Solotech Kelas Platinum,reksa-dana-pendapatan-tetap-avrist-pendidikan-solotech-kelas-platinum,Pendapatan Tetap,"Avrist Asset Management, PT",2024-08-15,
@@ -3450,7 +3450,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4932,Batavia Proteksi Maxima 57,batavia-proteksi-maxima-57,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2024-09-25,RD8791
 4933,PNM Terproteksi Investa 48,pnm-terproteksi-investa-48,Terproteksi,"PNM Investment Management, PT",2024-09-25,RD8793
 4934,Reksa Dana Penyertaan Terbatas Bahana Infrastructure Fund II,reksa-dana-penyertaan-terbatas-bahana-infrastructure-fund-ii,Penyertaan Terbatas,"Bahana TCW Investment Management, PT",2024-09-25,RD8792
-4935,Simpan Cash Syariah Fund Kelas A,simpan-cash-syariah-fund-kelas-a,Pasar Uang,"Simpan Asset Management, PT",2024-09-26,
+4935,Simpan Cash Syariah Fund Kelas A,simpan-cash-syariah-fund-kelas-a,Pasar Uang,"Simpan Asset Management, PT",2024-09-26,RD8806
 4936,UOBAM Global Sharia Balanced Fund USD,uobam-global-sharia-balanced-fund-usd,Saham,"UOB Asset Management Indonesia, PT",2024-08-05,RD8699
 4937,Manulife Obligasi Negara Indonesia II Kelas Income 2,manulife-obligasi-negara-indonesia-ii-kelas-income-2,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2024-10-01,
 4938,GROW Obligasi Optima Dinamis Kelas O,grow-obligasi-optima-dinamis-kelas-o,Pendapatan Tetap,"Grow Investments Indonesia, PT",2024-10-02,RD8807
@@ -3473,7 +3473,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4955,Batavia Dana Kas Syariah Kelas B,batavia-dana-kas-syariah-kelas-b,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",2024-11-01,RD8885
 4956,Batavia Dana Kas Syariah Kelas C,batavia-dana-kas-syariah-kelas-c,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",2024-11-01,RD8886
 4957,Eastspring Syariah Berkah Proteksi 3,eastspring-syariah-berkah-proteksi-3,Terproteksi,"Eastspring Investments Indonesia, PT",2024-11-05,RD8887
-4958,STAR Fixed Income 4 Kelas Dana,star-fixed-income-4-kelas-dana,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2024-11-06,
+4958,STAR Fixed Income 4 Kelas Dana,star-fixed-income-4-kelas-dana,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2024-11-06,RD8901
 4959,Trimegah Equity Focus 2 Kelas A,trimegah-equity-focus-2-kelas-a,Saham,"Trimegah Asset Management, PT",2024-11-07,RD8908
 4960,Trimegah Terproteksi Optima 2,trimegah-terproteksi-optima-2,Terproteksi,"Trimegah Asset Management, PT",2024-11-08,RD8909
 4961,LIF Money Market,lif-money-market,Pasar Uang,"LiF Manajemen Investasi, PT",2024-11-11,RD8911
@@ -3510,7 +3510,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 4992,PNM Dana Surat Berharga Negara II Kelas B,pnm-dana-surat-berharga-negara-ii-kelas-b,Pendapatan Tetap,"PNM Investment Management, PT",2025-01-03,RD9117
 4993,Allianz USD Fixed Income Fund Kelas B1,allianz-usd-fixed-income-fund-kelas-b1,Pendapatan Tetap,"Allianz Global Investors Asset Management Indonesia, PT",2025-01-06,RD9119
 4994,Allianz Rupiah Liquid Fund Kelas B1,allianz-rupiah-liquid-fund-kelas-b1,Pasar Uang,"Allianz Global Investors Asset Management Indonesia, PT",2025-01-06,RD9118
-4995,STAR Infobank 15 Kelas Dana,star-infobank-15-kelas-dana,Indeks & ETF,"Surya Timur Alam Raya Asset Management, PT",2025-01-07,
+4995,STAR Infobank 15 Kelas Dana,star-infobank-15-kelas-dana,Indeks & ETF,"Surya Timur Alam Raya Asset Management, PT",2025-01-07,RD9143
 4996,BNI AM Proteksi Alocasia,bni-am-proteksi-alocasia,Terproteksi,"BNI Asset Management, PT",2025-01-08,RD9147
 4997,Allianz Alpha Sector Rotation Kelas B1,allianz-alpha-sector-rotation-kelas-b1,Saham,"Allianz Global Investors Asset Management Indonesia, PT",2025-01-08,RD9141
 4998,Allianz High Dividend Global Sharia Equity Dollar Kelas B1,allianz-high-dividend-global-sharia-equity-dollar-kelas-b1,Saham,"Allianz Global Investors Asset Management Indonesia, PT",2025-01-06,RD9142
@@ -3529,14 +3529,14 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 5011,Reksa Dana Terproteksi Mandiri Investa 7,reksa-dana-terproteksi-mandiri-investa-7,Terproteksi,"Mandiri Manajemen Investasi, PT",2025-02-11,
 5012,Trimegah Sepak Bola Merah Putih Kelas A,trimegah-sepak-bola-merah-putih-kelas-a,Pendapatan Tetap,"Trimegah Asset Management, PT",2025-02-14,
 5013,Trimegah Sepak Bola Merah Putih Kelas B,trimegah-sepak-bola-merah-putih-kelas-b,Pendapatan Tetap,"Trimegah Asset Management, PT",2025-02-14,
-5014,Trimegah Terproteksi Prima Syariah 2,trimegah-terproteksi-prima-syariah-2,Terproteksi,"Trimegah Asset Management, PT",2025-02-17,
+5014,Trimegah Terproteksi Prima Syariah 2,trimegah-terproteksi-prima-syariah-2,Terproteksi,"Trimegah Asset Management, PT",2025-02-17,RD9202
 5015,Batavia Proteksi Maxima 60,batavia-proteksi-maxima-60,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2025-02-18,
 5016,Reksa Dana Terproteksi Capital Optimal Protected Fund 12,reksa-dana-terproteksi-capital-optimal-protected-fund-12,Terproteksi,"Capital Asset Management, PT",2025-03-05,
 5017,Reksa Dana BRI Balanced Regular Income Fund Kelas B,reksa-dana-bri-balanced-regular-income-fund-kelas-b,Campuran,"BRI Manajemen Investasi, PT",2025-02-19,RD9211
-5018,Mega Asset Terproteksi 29,mega-asset-terproteksi-29,Terproteksi,"Mega Asset Management, PT",2025-02-28,
-5019,Premier ETF IDX Pefindo Prime Bank,premier-etf-idx-pefindo-prime-bank,Indeks & ETF,"Indo Premier Investment Management, PT",2025-02-27,
+5018,Mega Asset Terproteksi 29,mega-asset-terproteksi-29,Terproteksi,"Mega Asset Management, PT",2025-02-28,RD9222
+5019,Premier ETF IDX Pefindo Prime Bank,premier-etf-idx-pefindo-prime-bank,Indeks & ETF,"Indo Premier Investment Management, PT",2025-02-27,RD9217
 5020,Reksa Dana Syariah Terproteksi Insight Terproteksi Syariah X,reksa-dana-syariah-terproteksi-insight-terproteksi-syariah-x,Terproteksi,"Insight Investments Management, PT",2025-03-04,
-5021,Bahana ETF Pefindo I Grade,bahana-etf-pefindo-i-grade,Indeks & ETF,"Bahana TCW Investment Management, PT",2025-03-04,
+5021,Bahana ETF Pefindo I Grade,bahana-etf-pefindo-i-grade,Indeks & ETF,"Bahana TCW Investment Management, PT",2025-03-04,RD9236
 5022,Anargya Superoptima,anargya-superoptima,Pendapatan Tetap,"Anargya Aset Manajemen, PT",2025-03-05,
 5023,Maybank Financial Infobank15 Index Fund Kelas C,maybank-financial-infobank15-index-fund-kelas-c,Indeks & ETF,"Maybank Asset Management, PT",2025-03-07,RD9255
 5024,Prospera Proteksi IX,prospera-proteksi-ix,Terproteksi,"Prospera Asset Management, PT",2025-03-18,RD9294
@@ -3561,7 +3561,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 5043,Grow Optima Liquid Fund,grow-optima-liquid-fund,Pasar Uang,"Grow Investments Indonesia, PT",2025-04-22,RD9328
 5044,Manulife Liquid Fund USD Kelas A,manulife-liquid-fund-usd-kelas-a,Pasar Uang,"Manulife Aset Manajemen Indonesia, PT",2025-04-23,RD9349
 5045,Manulife Liquid Fund USD Kelas I,manulife-liquid-fund-usd-kelas-i,Pasar Uang,"Manulife Aset Manajemen Indonesia, PT",2025-04-23,RD9350
-5046,Batavia Index IDX Pefindo Prime Bank Kelas A,batavia-index-idx-pefindo-prime-bank-kelas-a,Indeks & ETF,"Batavia Prosperindo Aset Manajemen, PT",2025-04-25,
+5046,Batavia Index IDX Pefindo Prime Bank Kelas A,batavia-index-idx-pefindo-prime-bank-kelas-a,Indeks & ETF,"Batavia Prosperindo Aset Manajemen, PT",2025-04-25,RD9353
 5047,HPAM Flexi Indonesia Sehat Kelas B,hpam-flexi-indonesia-sehat-kelas-b,Campuran,"Henan Putihrai Asset Management, PT",2025-04-29,RD9354
 5048,Avrist Sukuk Berkah 8,avrist-sukuk-berkah-8,Terproteksi,"Avrist Asset Management, PT",2025-05-07,
 5049,UOBAM Proteksi I,uobam-proteksi-i,Terproteksi,"UOB Asset Management Indonesia, PT",2025-05-08,RD9356
@@ -3569,11 +3569,11 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 5051,BRI MI Proteksi 20 Dollar,bri-mi-proteksi-20-dollar,Terproteksi,"BRI Manajemen Investasi, PT",2025-05-15,RD9358
 5052,Sucorinvest PHEI AAA Corporate Bond Fund,sucorinvest-phei-aaa-corporate-bond-fund,Pendapatan Tetap,"Sucorinvest Asset Management, PT",2025-05-19,RD9360
 5053,HPAM Proteksi Prima Syariah IV,hpam-proteksi-prima-syariah-iv,Terproteksi,"Henan Putihrai Asset Management, PT",2025-05-26,
-5054,BNP Paribas Prima USD Kelas Income,bnp-paribas-prima-usd-kelas-income,Pendapatan Tetap,"BNP Paribas Asset Management, PT",2025-05-26,
-5055,Bahana Balance Flexi Yield Fund Kelas G,bahana-balance-flexi-yield-fund-kelas-g,Campuran,"Bahana TCW Investment Management, PT",2025-05-27,
+5054,BNP Paribas Prima USD Kelas Income,bnp-paribas-prima-usd-kelas-income,Pendapatan Tetap,"BNP Paribas Asset Management, PT",2025-05-26,RD9401
+5055,Bahana Balance Flexi Yield Fund Kelas G,bahana-balance-flexi-yield-fund-kelas-g,Campuran,"Bahana TCW Investment Management, PT",2025-05-27,RD9403
 5056,KIM Money Market Sharia,kim-money-market-sharia,Pasar Uang,"Korea Investment Management Indonesia, PT",2025-06-03,
 5057,Manulife USD Fixed Income Kelas Income 1,manulife-usd-fixed-income-kelas-income-1,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2025-06-03,RD9410
-5058,STAR Stable Income Fund Kelas Profesional,star-stable-income-fund-kelas-profesional,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2025-06-03,
+5058,STAR Stable Income Fund Kelas Profesional,star-stable-income-fund-kelas-profesional,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2025-06-03,RD9411
 5059,Trimegah FTSE4GOOD Indonesia Index Kelas M,trimegah-ftse4good-indonesia-index-kelas-m,Indeks & ETF,"Trimegah Asset Management, PT",2025-06-04,RD9412
 5060,PNM Cinita Anak Bangsa Kelas Gold,pnm-cinita-anak-bangsa-kelas-gold,Pendapatan Tetap,"PNM Investment Management, PT",2025-06-05,
 5061,BNI AM Teakwood Kelas I1,bni-am-teakwood-kelas-i1,Pendapatan Tetap,"BNI Asset Management, PT",2025-06-11,RD9500
@@ -3602,10 +3602,10 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 5084,KIM Fixed Income Sharia,kim-fixed-income-sharia,Pendapatan Tetap,"Korea Investment Management Indonesia, PT",2025-07-31,
 5085,Reksa Dana Terproteksi Capital Optimal Protected Fund 15,reksa-dana-terproteksi-capital-optimal-protected-fund-15,Terproteksi,"Capital Asset Management, PT",2025-08-19,
 5086,Ashmore Dana Obligasi Unggulan Nusantara Kelas B,ashmore-dana-obligasi-unggulan-nusantara-kelas-b,Pendapatan Tetap,"Ashmore Asset Management Indonesia, PT",2025-08-04,RD9546
-5087,STAR Stable Income Fund Kelas Bagi Hasil,star-stable-income-fund-kelas-bagi-hasil,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2025-08-05,
+5087,STAR Stable Income Fund Kelas Bagi Hasil,star-stable-income-fund-kelas-bagi-hasil,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2025-08-05,RD9547
 5088,Syailendra Capital Protected Fund 63,syailendra-capital-protected-fund-63,Terproteksi,"Syailendra Capital, PT",2025-08-13,RD9550
 5089,Eastspring Syariah Mixed Asset Fund Kelas A,eastspring-syariah-mixed-asset-fund-kelas-a,Campuran,"Eastspring Investments Indonesia, PT",2025-08-20,
-5092,STAR Stable Income Fund Kelas Prioritas,star-stable-income-fund-kelas-prioritas,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2025-08-19,
+5092,STAR Stable Income Fund Kelas Prioritas,star-stable-income-fund-kelas-prioritas,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2025-08-19,RD9554
 5093,Panin 42,panin-42,Terproteksi,"Panin Asset Management, PT",2025-08-21,RD9558
 5094,Trimegah Terproteksi Prima Syariah 4,trimegah-terproteksi-prima-syariah-4,Terproteksi,"Trimegah Asset Management, PT",2025-08-22,RD9561
 5095,Recapital Pendapatan Tetap Dana Gemilang,recapital-pendapatan-tetap-dana-gemilang,Pendapatan Tetap,"Recapital Asset Management, PT",2025-08-25,RD9560
@@ -3614,7 +3614,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 5098,Reksa Dana Terproteksi Avrist Protected Fund 7,reksa-dana-terproteksi-avrist-protected-fund-7,Terproteksi,"Avrist Asset Management, PT",2025-08-28,
 5099,Manulife USD Fixed Income Kelas A2,manulife-usd-fixed-income-kelas-a2,Pendapatan Tetap,"Manulife Aset Manajemen Indonesia, PT",2025-09-02,RD9566
 5100,Reksa Dana Syariah Penyertaan Terbatas PNM Pembiayaan Mikro BUMN Seri XVIII,reksa-dana-syariah-penyertaan-terbatas-pnm-pembiayaan-mikro-bumn-seri-xviii,Penyertaan Terbatas,"PNM Investment Management, PT",2025-09-04,
-5101,STAR Money Market II Kelas Dana Plus,star-money-market-ii-kelas-dana-plus,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2025-09-04,
+5101,STAR Money Market II Kelas Dana Plus,star-money-market-ii-kelas-dana-plus,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2025-09-04,RD9569
 5102,Syailendra Progressive Balanced Fund Kelas A,syailendra-progressive-balanced-fund-kelas-a,Campuran,"Syailendra Capital, PT",2025-09-10,RD9570
 5103,Syailendra Progressive Balanced Fund Kelas B,syailendra-progressive-balanced-fund-kelas-b,Campuran,"Syailendra Capital, PT",2025-09-10,RD9571
 5104,Reksa Dana Syariah Berbasis Efek Syariah Luar Negeri Batavia US Franchise Sharia Equity USD,reksa-dana-syariah-berbasis-efek-syariah-luar-negeri-batavia-us-franchise-sharia-equity-usd,Saham,"Batavia Prosperindo Aset Manajemen, PT",2025-09-10,
@@ -3641,8 +3641,8 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 5125,Batavia Proteksi Maxima 63,batavia-proteksi-maxima-63,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2025-10-16,RD9594
 5126,Allianz USD Fixed Income Fund Kelas B2,allianz-usd-fixed-income-fund-kelas-b2,Pendapatan Tetap,"Allianz Global Investors Asset Management Indonesia, PT",2025-10-16,RD9593
 5127,Reksa Dana Terproteksi Panin 43,reksa-dana-terproteksi-panin-43,Terproteksi,"Panin Asset Management, PT",2025-10-21,
-5128,STAR Money Market Bersinar Kelas Utama,star-money-market-bersinar-kelas-utama,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2025-10-22,
-5129,STAR Money Market Bersinar Kelas Dana Plus,star-money-market-bersinar-kelas-dana-plus,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2025-10-22,
+5128,STAR Money Market Bersinar Kelas Utama,star-money-market-bersinar-kelas-utama,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2025-10-22,RD9599
+5129,STAR Money Market Bersinar Kelas Dana Plus,star-money-market-bersinar-kelas-dana-plus,Pasar Uang,"Surya Timur Alam Raya Asset Management, PT",2025-10-22,RD9598
 5130,Allianz Capital Protected Fund 66,allianz-capital-protected-fund-66,Terproteksi,"Allianz Global Investors Asset Management Indonesia, PT",2025-10-22,
 5131,Trimegah Terproteksi 33,trimegah-terproteksi-33,Terproteksi,"Trimegah Asset Management, PT",2025-10-22,
 5132,INDO RDN Kas Bertumbuh,indo-rdn-kas-bertumbuh,Pasar Uang,"Indo Premier Investment Management, PT",2025-10-23,RD9603
@@ -3682,7 +3682,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 5166,Indo ETF RDN Kas Bertumbuh,indo-etf-rdn-kas-bertumbuh,Indeks & ETF,"Indo Premier Investment Management, PT",2025-12-24,
 5167,Henan Ekuitas Syariah Berkah Kelas B,henan-ekuitas-syariah-berkah-kelas-b,Saham,"Henan Putihrai Asset Management, PT",2025-12-29,RD10178
 5168,Bahana Explorer Equity Fund Kelas G,bahana-explorer-equity-fund-kelas-g,Saham,"Bahana TCW Investment Management, PT",2026-01-05,RD10193
-5169,STAR Fixed Income NEO AI Dollar,star-fixed-income-neo-ai-dollar,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2026-01-07,
+5169,STAR Fixed Income NEO AI Dollar,star-fixed-income-neo-ai-dollar,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2026-01-07,RD10196
 5170,Bahana Centrum Protected Fund 243,bahana-centrum-protected-fund-243,Terproteksi,"Bahana TCW Investment Management, PT",2026-01-07,RD10195
 5171,Reksa Dana Pendapatan Tetap Anargya Persija Supergoal,reksa-dana-pendapatan-tetap-anargya-persija-supergoal,Pendapatan Tetap,"Anargya Aset Manajemen, PT",2026-01-09,
 5172,Sequis Liquid Prima III,sequis-liquid-prima-iii,Pasar Uang,"Sequis Aset Manajemen, PT",2026-01-12,RD10212
@@ -3706,7 +3706,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol
 5190,Premier Proteksi XVII,premier-proteksi-xvii,Terproteksi,"Indo Premier Investment Management, PT",2026-02-05,RD10289
 5191,Juara Sinai Balanced Fund Kelas B,juara-sinai-balanced-fund-kelas-b,Campuran,"Juara Capital Indonesia, PT",2026-02-09,RD10292
 5192,Batavia Proteksi Maxima 66,batavia-proteksi-maxima-66,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2026-02-10,RD10293
-5193,STAR Sukuk NUO Abadi Syariah,star-sukuk-nuo-abadi-syariah,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2026-02-11,
+5193,STAR Sukuk NUO Abadi Syariah,star-sukuk-nuo-abadi-syariah,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2026-02-11,RD10294
 5194,Syailendra Capital Protected Fund 69,syailendra-capital-protected-fund-69,Terproteksi,"Syailendra Capital, PT",2026-02-11,RD10290
 5195,Simas Gemilang 24,simas-gemilang-24,Terproteksi,"Sinarmas Asset Management, PT",2026-02-13,RD10296
 5196,PNM Pembiayaan Mikro BUMN Seri XXI,pnm-pembiayaan-mikro-bumn-seri-xxi,Penyertaan Terbatas,"PNM Investment Management, PT",2026-02-13,
