@@ -103,7 +103,7 @@ const readStoredFunds = async () => {
 
 const writeFundIndex = async (funds, bibitRows) => {
   const sortedFunds = [...funds].sort((a, b) => a[0] - b[0]);
-  const symbolsById = matchBibitSymbols(sortedFunds, bibitRows);
+  const symbolsById = matchBibitSymbols('kontan', sortedFunds, bibitRows);
 
   const rows = sortedFunds.map(([id, fund]) => [
     id,

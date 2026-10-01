@@ -33,7 +33,11 @@ Raw data for Indonesian mutual funds (reksa dana). It comes from four sources: t
 
 Kontan only serves the last 12 months of NAV per fund. Every run merges that window into the stored file by date, so the history grows over time.
 
-A Kontan fund is matched to a Bibit fund only when its name, after lowercasing and removing punctuation and the words "reksa dana" and "RD", equals exactly one Bibit fund name (and one Kontan fund name), and the investment managers are compatible. Nothing fuzzier is used, so some funds stay unmatched.
+A Kontan fund is matched to a Bibit fund only when its name, after lowercasing and removing punctuation and the words "reksa dana" and "RD", equals one Bibit fund name (and one Kontan fund name), and exactly one Bibit fund with that name has the same investment manager. Nothing fuzzier is used, so some funds stay unmatched. Three more rules help:
+
+- A trailing "Kelas A" is dropped when the full name finds nothing, because Bibit often lists that class without it. Other classes ("Kelas B") never match this way.
+- A few managers are known by two names, for example after a rename (`MANAGER_ALIASES` in `scrapers/lib.js`). Each pair is the same company, with the same fund names under both names.
+- `scrapers/fund-aliases.json` maps a fund to a Bibit symbol by hand (`"makmur:<makmur_id>": "RD123"`, also `kontan:` and `bareksa:`). It is for renamed funds. An alias wins over the automatic match, and `null` blocks a wrong automatic match. Each alias has the same manager, type, and currency, and a NAV (or one-day return) that agrees with Bibit.
 
 Fund types (`type` column): `Pasar Uang` (money market), `Obligasi` (fixed income), `Saham` (equity), `Campuran` (balanced), `Terproteksi` (capital protected), and `Reksadana Global` (global).
 
@@ -49,7 +53,7 @@ Fund types (`type` column): `Pasar Uang` (money market), `Obligasi` (fixed incom
 
 The matching rules are the same as for Kontan. Bareksa shows the manager on each fund's page, so the managers are compared too.
 
-Bareksa's list of all funds holds 3,812 funds. 3,656 of them have AUM data, and 1,719 are matched to a Bibit fund (1,603 of those are not buyable in the Bibit app). In a sample of 175 IDs outside the list, 39 still answered with AUM data, but they have no fund page, so there is no name to match or show. The scraper ignores them.
+Bareksa's list of all funds holds 3,812 funds. 3,656 of them have AUM data, and 1,847 are matched to a Bibit fund (1,726 of those are not buyable in the Bibit app). In a sample of 175 IDs outside the list, 39 still answered with AUM data, but they have no fund page, so there is no name to match or show. The scraper ignores them.
 
 ### Makmur (`data/makmur/`)
 
@@ -71,7 +75,7 @@ The scraper reads only Makmur's public website. The page of a fund holds the who
 | `lastAum`, `minFirstBuy`, `minNextBuy` | the plain amount, in the fund's currency | `454585760000` |
 | `asof`, `portfolioAsof`, `inceptionDate` | a number like `20260930` | 2026-09-30 |
 
-In `funds.csv` the dates are ISO dates, and the other values are as in the JSON. `last_price` is a whole number, so it is rounded to 0.01 of the NAV. 86 of the 141 funds are matched to a Bibit fund. The matching rules are the same as for Kontan; most of the rest differ in name (for example a "Kelas A" suffix).
+In `funds.csv` the dates are ISO dates, and the other values are as in the JSON. `last_price` is a whole number, so it is rounded to 0.01 of the NAV. 128 of the 141 funds are matched to a Bibit fund. The matching rules are the same as for Kontan. The rest are not in Bibit under a name or NAV that matches.
 
 ### NAV history: buyable vs. other funds
 

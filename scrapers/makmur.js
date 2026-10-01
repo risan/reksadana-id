@@ -126,7 +126,7 @@ const main = async () => {
 
   const bibitRows = await readCsvRows(BIBIT_FUNDS_FILE);
   const sortedRows = [...rowsById.values()].sort((a, b) => a[1].localeCompare(b[1]) || a[0].localeCompare(b[0]));
-  const symbolsById = matchBibitSymbols(sortedRows.map((row) => [row[0], { name: row[1], manager: row[2] }]), bibitRows);
+  const symbolsById = matchBibitSymbols('makmur', sortedRows.map((row) => [row[0], { name: row[1], manager: row[2] }]), bibitRows);
   const rows = sortedRows.map((row) => [...row.slice(0, -1), symbolsById.get(row[0])]);
 
   await writeFileAtomic(path.join(DATA_DIR, 'funds.csv'), toCsv(FUND_HEADER, rows));
