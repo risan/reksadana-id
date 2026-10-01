@@ -158,7 +158,7 @@ const normalizeName = (name) => name
   .replace(/\s+/g, ' ')
   .trim();
 
-// Bibit writes "Name, PT" and Kontan writes "PT. Name".
+// Bibit writes "Name, PT" and Kontan writes "PT. Name", so "pt" and "tbk" are dropped wherever they appear.
 const normalizeManager = (manager) => manager
   .toLowerCase()
   .replace(/[^a-z0-9]+/g, ' ')
@@ -166,15 +166,11 @@ const normalizeManager = (manager) => manager
   .replace(/\s+/g, ' ')
   .trim();
 
+// Equality, not substring: "PT Alpha" and "PT Alpha Capital" are different managers.
 const isSameManager = (otherManager, bibitManager) => {
-  const other = normalizeManager(otherManager);
   const bibit = normalizeManager(bibitManager);
 
-  if (other === '') {
-    return true;
-  }
-
-  return bibit !== '' && (other.includes(bibit) || bibit.includes(other));
+  return bibit !== '' && normalizeManager(otherManager) === bibit;
 };
 
 // `funds` is a list of [id, { name, manager }]. A fund matches a Bibit fund only when the
