@@ -25,8 +25,13 @@ jobs:
         with:
           node-version-file: .node-version
 
-      - name: Scrape
-        run: npm run scrape
+      - name: Scrape Bibit
+        run: npm run scrape:bibit
+
+      # Kontan matches against Bibit's fund list, which is still usable when a few Bibit funds fail.
+      - name: Scrape Kontan
+        if: success() || failure()
+        run: npm run scrape:kontan
 
       # The scrapers exit non-zero when a few funds fail. Still save the funds that
       # succeeded; the failed ones are retried on the next run.
