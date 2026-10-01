@@ -1,0 +1,88 @@
+{
+  "_id": "61e6b8bb3845210a42c08862",
+  "name": "BRI Melati Pendapatan Utama",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "logo": "https://cache.makmur.id/images/managers/61e6796f3845210a42c08858/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "BSDE04BCN2"
+    },
+    {
+      "instrument": "FR0052"
+    },
+    {
+      "instrument": "OPPM02ACN4"
+    },
+    {
+      "instrument": "PIDL02BCN1"
+    },
+    {
+      "instrument": "SIEXCL03BCN1"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9159
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 841
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 10,
+  "return5d": 4,
+  "return1m": 51,
+  "return3m": 250,
+  "returnytd": 15,
+  "return1y": 203,
+  "return3y": 1552,
+  "return5y": 2011,
+  "return10y": 6545,
+  "returnsi": 10502,
+  "drawdownytd": -359,
+  "drawdown1y": -359,
+  "drawdown3y": -359,
+  "drawdown5y": -566,
+  "drawdownsi": -1476,
+  "cagr1y": 203,
+  "cagr3y": 493,
+  "cagr5y": 373,
+  "cagr10y": 516,
+  "cagrsi": 525,
+  "rating": 0,
+  "description": "Reksa Dana BRI MELATI PENDAPATAN UTAMA (selanjutnya disebut “BRI MELATI PENDAPATAN UTAMA”) adalah Reksa Dana Terbuka berbentuk Kontrak Investasi Kolektif (“KIK”) berdasarkan Undang-undang Nomor 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. DANAREKSA MELATI PENDAPATAN UTAMA bertujuan untuk memperoleh pendapatan secara optimal dalam jangka panjang melalui investasi pada Efek Bersifat Utang.DANAREKSA MELATI PENDAPATAN UTAMA akan melakukan investasi dengan komposisi portofolio Efek minimum sebesar 80% (delapan puluh per seratus) dan maksimum sebesar 100% (seratus per seratus) pada pada Efek Bersifat Utang yang diterbitkan oleh Negara Republik Indonesia dan/atau badan hukum yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri; dan minimum sebesar 0% (nol per seratus) dan maksimum sebesar 20% (dua puluh per seratus) pada Instrumen Pasar Uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau Deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, DANAREKSA MELATI PENDAPATAN UTAMA akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia termasuk hukum negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 197705,
+  "expenseRatio": 183,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "bri-melati-pendapatan-utama-55e66a6da7a8",
+  "currency": "IDR",
+  "lastAum": 217070000000,
+  "factsheet": "https://cache.makmur.id/files/products/61e6b8bb3845210a42c08862/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/61e6b8bb3845210a42c08862/prospectus.pdf",
+  "inceptionDate": 20120927,
+  "riskLevel": 40,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

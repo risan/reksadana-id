@@ -1,0 +1,88 @@
+{
+  "_id": "6549fbbe5bcdc24d0cea6b37",
+  "name": "STAR Stable Amanah Sukuk",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT STAR Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6549cd925bcdc24d0cea687f/logo.png"
+  },
+  "custodian": {
+    "name": "BSI",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b3d64cc7bb3913edb05c/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "DEPOSITO PT BANK MEGA SYARIAH"
+    },
+    {
+      "instrument": "OBL SUK IJARAH BKLJT I SMART THP II THN 2026 SERI A"
+    },
+    {
+      "instrument": "OBL SUK IJARAH BKLJT I TOWER BERSAMA INFRASTRUCTURE THP I THN 2025 SERI B"
+    },
+    {
+      "instrument": "OBL SUK IJARAH BKLJT II BUMI SERPONG DAMAI THP II THN 2025 SERI A"
+    },
+    {
+      "instrument": "OBL SUK MUD BKLJT I ARMADIAN TRITUNGGAL THP I THN 2025 SERI B"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9551
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 449
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 10,
+  "return1m": 49,
+  "return3m": 153,
+  "returnytd": 258,
+  "return1y": 414,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 2153,
+  "drawdownytd": -106,
+  "drawdown1y": -106,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -106,
+  "cagr1y": 414,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 696,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH STAR STABLE AMANAH SUKUK, produk investasi syariah cerdas, mematuhi regulasi pasar modal terbaru, menjanjikan pertumbuhan stabil dengan mengelola risiko secara cermat. Dengan alokasi 80%-100% pada sukuk dan efek syariah berpendapatan tetap, baik lokal maupun global, dan 0%-20% pada pasar uang syariah domestik atau deposito syariah, produk ini menawarkan portofolio yang seimbang antara pendapatan dan keamanan. Investasi luar negeri STAR STABLE AMANAH SUKUK selalu sesuai dengan hukum yang berlaku, memastikan kepatuhan dan transparansi. Ideal bagi investor yang mengutamakan etika dan keuntungan.",
+  "isSyariah": true,
+  "lastPrice": 121532,
+  "expenseRatio": 220,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "star-stable-amanah-sukuk-bb03e0e22f40",
+  "currency": "IDR",
+  "lastAum": 1093479692960,
+  "factsheet": "https://cache.makmur.id/files/products/6549fbbe5bcdc24d0cea6b37/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6549fbbe5bcdc24d0cea6b37/prospectus.pdf",
+  "inceptionDate": 20231108,
+  "riskLevel": 40,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

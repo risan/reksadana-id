@@ -1,0 +1,86 @@
+{
+  "_id": "60deecb383d25903cd37fe5f",
+  "name": "Capital Money Market Fund",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Capital Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60dee33a83d25903cd37fe5c/logo.png"
+  },
+  "custodian": {
+    "name": "Danamon",
+    "logo": "https://cache.makmur.id/images/custodians/60ded07f83d25903cd37fe59/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Deposito Bank Capital Tbk"
+    },
+    {
+      "instrument": "Obligasi Bkljt III Jaya Ancol Thp I Thn 2024 seri A"
+    },
+    {
+      "instrument": "Sukuk Ijarah Bkljt I Metro Healthcare Indonesia Thp I Thn 2026 seri A"
+    },
+    {
+      "instrument": "Deposito Bank Aladin Syariah Tbk"
+    },
+    {
+      "instrument": "Obligasi Bkljt I OKI Pulp & Paper Mills Thp IV Thn 2024 seri B"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 3000
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 7000
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 9,
+  "return1m": 44,
+  "return3m": 130,
+  "returnytd": 375,
+  "return1y": 505,
+  "return3y": 1798,
+  "return5y": 2943,
+  "return10y": 7625,
+  "returnsi": 8558,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": 0,
+  "drawdown5y": 0,
+  "drawdownsi": -898,
+  "cagr1y": 505,
+  "cagr3y": 567,
+  "cagr5y": 529,
+  "cagr10y": 583,
+  "cagrsi": 590,
+  "rating": 0,
+  "description": "REKSA DANA CAPITAL MONEY MARKET FUND adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal.REKSA DANA CAPITAL MONEY MARKET FUND bertujuan untuk menghasilkan tingkat pertumbuhan yang optimal dalam jangka waktu pendek dan menengah dengan likuiditas yang tinggi.REKSA DANA CAPITAL MONEY MARKET FUND akan melakukan investasi dengan komposisi portofolio investasi 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dan/atau Efek bersifat utang yang diterbitkan oleh Pemerintah Indonesia dan/atau korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.Dalam hal berinvestasi pada Efek luar negeri, REKSA DANA CAPITAL MONEY MARKET FUND akan tetap memperhatikan peraturan perundang-undangan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 185578,
+  "expenseRatio": 64,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "capital-money-market-fund-4156d5a46202",
+  "currency": "IDR",
+  "lastAum": 1042409295132,
+  "factsheet": "https://cache.makmur.id/files/products/60deecb383d25903cd37fe5f/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60deecb383d25903cd37fe5f/prospectus.pdf",
+  "inceptionDate": 20151221,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

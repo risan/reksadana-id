@@ -1,0 +1,92 @@
+{
+  "_id": "68a2b7ea63796eb8829b41b0",
+  "name": "Sucorinvest Premium Sovereign Balanced Fund Kelas A",
+  "category": "mixed",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Obligasi Berkelanjutan I Oki Pulp Paper Mills Tahap IV Tahun 2024 Seri C"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan II Indonesia Infrastructure Finance Tahap III Tahun 2025 Seri A"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan IV Sarana Multi Infrastruktur Tahap IV Tahun 2025 Seri A"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan V Toyota Astra Financial Services Tahap II Tahun 2025 Seri A"
+    },
+    {
+      "instrument": "Obligasi Negara Republik Indonesia Seri FR0056"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 1097
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 8622
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 281
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 9,
+  "return1m": 55,
+  "return3m": 177,
+  "returnytd": 520,
+  "return1y": 827,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 1684,
+  "drawdownytd": -13,
+  "drawdown1y": -13,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -13,
+  "cagr1y": 827,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 1066,
+  "rating": 0,
+  "description": "REKSA DANA SUCORINVEST PREMIUM SOVEREIGN BALANCED FUND (untuk selanjutnya disebut  “SUCORINVEST PREMIUM SOVEREIGN BALANCED FUND“) adalah Reksa Dana berbentuk Kontrak  Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal sebagaimana diubah  Undang-Undang Republik Indonesia No. 4 tahun 2023 tentang Pengembangan Dan Penguatan Sektor  Keuangan beserta peraturan pelaksanaan dan seluruh perubahannya (“Undang-Undang Pasar Modal”) beserta  peraturan pelaksanaannya.  SUCORINVEST PREMIUM SOVEREIGN BALANCED FUND bertujuan untuk memberikan tingkat pertumbuhan  modal yang optimal dalam jangka menengah dan panjang melalui investasi sesuai dengan Kebijakan Investasi.",
+  "isSyariah": false,
+  "lastPrice": 107455,
+  "expenseRatio": 125,
+  "minFirstBuy": 10000000,
+  "minNextBuy": 10000000,
+  "asof": 20261001,
+  "url": "sucorinvest-premium-sovereign-balanced-fund-kelas-a-df070ded7f54",
+  "currency": "IDR",
+  "lastAum": 650860000000,
+  "factsheet": "https://cache.makmur.id/files/products/68a2b7ea63796eb8829b41b0/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/68a2b7ea63796eb8829b41b0/prospectus.pdf",
+  "inceptionDate": 20250319,
+  "riskLevel": 65,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "campuran"
+}

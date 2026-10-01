@@ -1,0 +1,86 @@
+{
+  "_id": "65fcffb34a56f04220d17e11",
+  "name": "STAR Stable Income Fund Kelas Utama",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT STAR Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6549cd925bcdc24d0cea687f/logo.png"
+  },
+  "custodian": {
+    "name": "Sinarmas",
+    "logo": "https://cache.makmur.id/images/custodians/634d513a79f48d91c48e70e3/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "OBL BKLJT III SINAR MAS MULTIARTHA THP IV THN 2025"
+    },
+    {
+      "instrument": "OBL BKLJT V INDAH KIAT PULP & PAPER THP V THN 2025 SERI B"
+    },
+    {
+      "instrument": "OBL BKLJT VI INDOMOBIL FINANCE DENGAN TINGKAT BUNGA TETAP THN 2025 SERI C"
+    },
+    {
+      "instrument": "OBL BKLJT VI TOWER BERSAMA INFRASTUCTURE THP VI THN 2025 SERI B"
+    },
+    {
+      "instrument": "OBL GERSP 8.5 11/28/27 CORP"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9800
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 200
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 9,
+  "return1m": 44,
+  "return3m": 135,
+  "returnytd": 326,
+  "return1y": 485,
+  "return3y": 2075,
+  "return5y": 4543,
+  "return10y": 10843,
+  "returnsi": 12415,
+  "drawdownytd": -52,
+  "drawdown1y": -52,
+  "drawdown3y": -52,
+  "drawdown5y": -118,
+  "drawdownsi": -1679,
+  "cagr1y": 485,
+  "cagr3y": 649,
+  "cagr5y": 778,
+  "cagr10y": 762,
+  "cagrsi": 805,
+  "rating": 0,
+  "description": "STAR STABLE INCOME FUND adalah Reksa Dana yang dirancang khusus untuk investor yang menginginkan pertumbuhan aset yang stabil dan berkesinambungan dengan tingkat risiko yang terukur. Fokus utama Reksa Dana ini adalah melindungi modal para Pemegang Unit Penyertaan.  Untuk mencapai tujuan ini, STAR STABLE INCOME FUND mengalokasikan minimal 80% dari Nilai Aktiva Bersih pada Efek bersifat utang, seperti obligasi pemerintah dan korporasi. Reksa Dana ini juga dapat berinvestasi pada instrumen pasar uang dan deposito untuk menjaga likuiditas dan fleksibilitas portofolio.  Dengan strategi investasi yang terukur dan fokus pada aset yang relatif stabil, STAR STABLE INCOME FUND dapat menjadi pilihan tepat bagi investor yang ingin meminimalkan risiko dan meraih pertumbuhan aset yang berkesinambungan dalam jangka panjang.",
+  "isSyariah": false,
+  "lastPrice": 224145,
+  "expenseRatio": 224,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "star-stable-income-fund-kelas-utama-a4accf31b845",
+  "currency": "IDR",
+  "lastAum": 9845291757982,
+  "factsheet": "https://cache.makmur.id/files/products/65fcffb34a56f04220d17e11/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/65fcffb34a56f04220d17e11/prospectus.pdf",
+  "inceptionDate": 20160429,
+  "riskLevel": 40,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

@@ -1,0 +1,90 @@
+{
+  "_id": "6242d9e3bf54c80a4005d9b3",
+  "name": "Sucorinvest Flexi Fund",
+  "category": "mixed",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Mandiri ( Persero ) Tbk"
+    },
+    {
+      "instrument": "Bank Tabungan Negara (persero) Tbk"
+    },
+    {
+      "instrument": "Bumi Resources Tbk"
+    },
+    {
+      "instrument": "Indah Kiat Pulp And Paper Tbk"
+    },
+    {
+      "instrument": "Kmi Wire And Cable Tbk"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 6692
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 2152
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 1156
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -63,
+  "return5d": -202,
+  "return1m": -488,
+  "return3m": 642,
+  "returnytd": -1756,
+  "return1y": 138,
+  "return3y": -549,
+  "return5y": 1532,
+  "return10y": 13442,
+  "returnsi": 53491,
+  "drawdownytd": -2840,
+  "drawdown1y": -2840,
+  "drawdown3y": -2840,
+  "drawdown5y": -2840,
+  "drawdownsi": -5531,
+  "cagr1y": 138,
+  "cagr3y": -186,
+  "cagr5y": 289,
+  "cagr10y": 889,
+  "cagrsi": 977,
+  "rating": 0,
+  "description": "REKSA DANA SUCORINVEST FLEXI FUND (Selanjutnya disebut “SUCORINVESTFLEXI FUND”) adalah ReksaDana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. SUCORINVEST FLEXI FUND merupakan pilihan investasi jangka menengah/panjang bagi pemodal untuk memberikan tingkat pertumbuhan modal yang optimal melalui investasi pada efek ekuitas, efek hutang dan instrumen pasar uang. Komposisi portofolio SUCORINVEST FLEXI FUND adalah minimum sebesar 5%(lima persen) dan maksimum sebesar 75% (tujuh puluh lima persen) pada Efek Ekuitas yaitu terdiri atas saham-saham dan Hak Memesan Efek Terlebih Dahulu (HMETD) serta waran yang ditawarkan melalui Penawaran Umum dan dicatatkan pada Bursa Efek di Indonesia, minimum sebesar 5% (lima persen) dan maksimum sebesar 75% (tujuh puluh lima persen) pada Efek Hutang yaitu tersdiri atas obligasi yang diterbitkan oleh Pemerintah Indonesia, obligasi yang diterbitkan oleh perusahaan- perusahaan berbadan hukum Indonesia, dan Efek Hutang lainnya yang memiliki jatuh tempo lebih dari 1 (satu) tahun, dan minimum sebesar 5% (lima persen) dan maksimum sebesar 75% (tujuh puluh lima persen) pada instrumen Pasar Uang yang meliputi Deposito berjangka, Sertifikat Bank Indonesia, dan Instrumen Pasar Uang lainnya termasuk Obligasi yang memiliki jatuh tempo kurang dari 1 (satu) tahun.",
+  "isSyariah": false,
+  "lastPrice": 634909,
+  "expenseRatio": 367,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "sucorinvest-flexi-fund-a2ee5a67611d",
+  "currency": "IDR",
+  "lastAum": 116830000000,
+  "factsheet": "https://cache.makmur.id/files/products/6242d9e3bf54c80a4005d9b3/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6242d9e3bf54c80a4005d9b3/prospectus.pdf",
+  "inceptionDate": 20061206,
+  "riskLevel": 65,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "campuran"
+}

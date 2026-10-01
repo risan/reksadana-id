@@ -1,0 +1,88 @@
+{
+  "_id": "63886a6d79f48d91c48f084d",
+  "name": "BRI Syariah Saham",
+  "category": "equity",
+  "manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "logo": "https://cache.makmur.id/images/managers/61e6796f3845210a42c08858/logo.png"
+  },
+  "custodian": {
+    "name": "Citibank",
+    "logo": "https://cache.makmur.id/images/custodians/61e67a7b3845210a42c08859/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "AADI"
+    },
+    {
+      "instrument": "ADMR"
+    },
+    {
+      "instrument": "ADRO"
+    },
+    {
+      "instrument": "MDKA"
+    },
+    {
+      "instrument": "HRTA"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 8563
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 1437
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -111,
+  "return5d": -350,
+  "return1m": -791,
+  "return3m": 541,
+  "returnytd": -2082,
+  "return1y": -1041,
+  "return3y": -1398,
+  "return5y": -1954,
+  "return10y": -3191,
+  "returnsi": -3054,
+  "drawdownytd": -3492,
+  "drawdown1y": -3492,
+  "drawdown3y": -3492,
+  "drawdown5y": -4379,
+  "drawdownsi": -5170,
+  "cagr1y": -1041,
+  "cagr3y": -490,
+  "cagr5y": -426,
+  "cagr10y": -377,
+  "cagrsi": -292,
+  "rating": 0,
+  "description": "Reksa Dana DANAREKSA SYARIAH SAHAM (selanjutnya disebut “DANAREKSA SYARIAH SAHAM”) adalah Reksa Dana Terbuka berbentuk Kontrak Investasi Kolektif (“KIK”) berdasarkan Undang-undang Nomor 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. DANAREKSA SYARIAH SAHAM bertujuan untuk memberikan pertumbuhan yang maksimal dalam jangka panjang kepada Pemegang Unit Penyertaan melalui mayoritas investasi pada Efek bersifat ekuitas yang masuk dalam Daftar Efek Syariah. DANAREKSA SYARIAH SAHAM akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang masuk dalam Daftar Efek Syariah yang diterbitkan oleh badan hukum yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia, minimum 0% (nol persen), maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Surat Berharga Syariah Negara dan/atau Sukuk yang diterbitkan oleh badan hukum yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia, serta minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito Syariah; sesuai dengan Prinsip-prinsip Syariah di Pasar Modal serta peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": true,
+  "lastPrice": 69464,
+  "expenseRatio": 321,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "bri-syariah-saham-cc26a013530e",
+  "currency": "IDR",
+  "lastAum": 13560000000,
+  "factsheet": "https://cache.makmur.id/files/products/63886a6d79f48d91c48f084d/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/63886a6d79f48d91c48f084d/prospectus.pdf",
+  "inceptionDate": 20140625,
+  "riskLevel": 90,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

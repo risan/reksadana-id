@@ -1,0 +1,90 @@
+{
+  "_id": "622c12cbbf54c80a4005d99e",
+  "name": "Sucorinvest Citra Dana Berimbang",
+  "category": "mixed",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Mandiri ( Persero ) Tbk"
+    },
+    {
+      "instrument": "Bank Tabungan Negara (persero) Tbk"
+    },
+    {
+      "instrument": "Bumi Serpong Damai Tbk"
+    },
+    {
+      "instrument": "Indah Kiat Pulp And Paper Tbk"
+    },
+    {
+      "instrument": "Jasa Marga (persero) Tbk"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 7364
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 2289
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 347
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -84,
+  "return5d": -263,
+  "return1m": -587,
+  "return3m": 578,
+  "returnytd": -1265,
+  "return1y": 553,
+  "return3y": 2066,
+  "return5y": 5314,
+  "return10y": null,
+  "returnsi": 18674,
+  "drawdownytd": -2565,
+  "drawdown1y": -2565,
+  "drawdown3y": -2565,
+  "drawdown5y": -2565,
+  "drawdownsi": -3466,
+  "cagr1y": 553,
+  "cagr3y": 646,
+  "cagr5y": 890,
+  "cagr10y": null,
+  "cagrsi": 1223,
+  "rating": 0,
+  "description": "REKSA DANA SUCORINVEST CITRA DANA BERIMBANG (untuk selanjutnya disebut “SUCORINVEST CITRA DANA BERIMBANG”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. SUCORINVEST CITRA DANA BERIMBANG bertujuan untuk memberikan potensi pertumbuhan di investasi yang optimal dalam jangka menengah hingga panjang, melalui alokasi strategis pada efek bersifat Ekuitas, Efek bersifat Utang berupa Obligasi dan Instrumen Pasar Uang dalam negeri yang sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. SUCORINVEST CITRA DANA BERIMBANG akan berinvestasi dengan komposisi portofolio investasi (1) 1% (satu persen) sampai 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih akan berinvestasi pada Efek Bersifat Ekuitas yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek; (2) 1% (satu persen) sampai 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih akan berinvestasi pada Efek bersifat Utang, baik berupa Obligasi Pemerintah maupupun Obligasi  Korporasi yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek; dan (3) 1% (satu persen) sampai 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih akan berinvestasi pada instrumen pasar uang dalam negeri dan/atau efek berifat utang yang diterbitkan dalam jangka waktu tidak lebih dari 1 (satu) tahun, termasuk setara kas, berdasarkan peraturan perundang-undangan yang berlaku di Indonesia. Manajer Investasi akan selalu menyesuaikan kebijakan investasi tersebut diatas dengan peraturan Otoritas Jasa Keuangan yang berlaku termasuk surat edaran dan kebijakan-kebijakan yang dikeluarkan oleh Otoritas Jasa Keuangan. Dalam hal berinvestasi pada Efek luar negeri, SUCORINVEST CITRA DANA BERIMBANG akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut. Manajer Investasi dapat menempatkan jumlah tertentu dari kekayaan SUCORINVEST CITRA DANA BERIMBANG dalam bentuk kas hanya untuk keperluan penyelesaian transaksi Efek, pemenuhan kewajiban pembayaran kepada Pemegang Unit Penyertaan dan pembayaran biaya-biaya yang menjadi beban SUCORINVEST CITRA DANA BERIMBANG sebagaimana diatur dalam Kontrak dan Prospektus, serta mengantisipasi kebutuhan likuiditas A SUCORINVEST CITRA DANA BERIMBANG lainnya. SUCORINVEST CITRA DANA BERIMBANG dapat melakukan investasi pada Efek yang diperdagangkan di Bursa Efek luar negeri yang informasinya dapat diakses melalui media massa dan fasilitas internet sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 286736,
+  "expenseRatio": 367,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "sucorinvest-citra-dana-berimbang-ee8e6688b0fa",
+  "currency": "IDR",
+  "lastAum": 188060000000,
+  "factsheet": "https://cache.makmur.id/files/products/622c12cbbf54c80a4005d99e/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/622c12cbbf54c80a4005d99e/prospectus.pdf",
+  "inceptionDate": 20170816,
+  "riskLevel": 65,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "campuran"
+}

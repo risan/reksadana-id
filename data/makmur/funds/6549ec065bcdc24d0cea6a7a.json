@@ -1,0 +1,86 @@
+{
+  "_id": "6549ec065bcdc24d0cea6a7a",
+  "name": "STAR Money Market Kelas Utama",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT STAR Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6549cd925bcdc24d0cea687f/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "DEPOSITO PT BANK MEGA SYARIAH"
+    },
+    {
+      "instrument": "OBL BKLJT I OKI PULP & PAPER MILLS THP IV THN 2024 SERI B"
+    },
+    {
+      "instrument": "OBL BKLJT I WAHANA INTI SELARAS THP II THN 2025"
+    },
+    {
+      "instrument": "OBL BKLJT II LONTAR PAPYRUS PULP & PAPER INDUSTRY THP IV THN 2024 SERI B"
+    },
+    {
+      "instrument": "OBL BKLJT II SINAR MAS MULTIARTHA THP II THN 2022 SERI D"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 8777
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 1223
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 8,
+  "return1m": 41,
+  "return3m": 125,
+  "returnytd": 331,
+  "return1y": 451,
+  "return3y": 1618,
+  "return5y": 2642,
+  "return10y": null,
+  "returnsi": 5506,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": 0,
+  "drawdown5y": -8,
+  "drawdownsi": -14,
+  "cagr1y": 451,
+  "cagr3y": 513,
+  "cagr5y": 480,
+  "cagr10y": null,
+  "cagrsi": 489,
+  "rating": 0,
+  "description": "REKSA DANA STAR MONEY MARKET (selanjutnya disebut “STAR MONEY MARKET”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal sebagaimana diubah dengan Undang-Undang Nomor 4 tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan (“Undang-Undang Pasar Modal”) beserta peraturan pelaksanaannya.  STAR MONEY MARKET bertujuan untuk memberikan tingkat pertumbuhan investasi yang menarik dan stabil dengan risiko yang terukur dan tingkat likuiditas yang tinggi.  Didesain untuk memberikan tingkat pertumbuhan investasi yang menarik dengan risiko yang terukur, STAR MONEY MARKET bertujuan untuk mempertahankan alokasi portofolio investasi 100% pada instrumen pasar uang dalam negeri dan/atau Efek Bersifat Utang dengan jangka waktu kurang dari satu tahun, atau sisa jatuh tempo kurang dari satu tahun, yang diperdagangkan di Indonesia dan/atau deposito, sesuai dengan regulasi yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 155062,
+  "expenseRatio": 174,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "star-money-market-kelas-utama-e99425b86000",
+  "currency": "IDR",
+  "lastAum": 312339539916,
+  "factsheet": "https://cache.makmur.id/files/products/6549ec065bcdc24d0cea6a7a/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6549ec065bcdc24d0cea6a7a/prospectus.pdf",
+  "inceptionDate": 20170724,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

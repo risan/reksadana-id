@@ -1,0 +1,82 @@
+{
+  "_id": "6a4e0afcbb5c471dfd215d6d",
+  "name": "TRIM Kas USD",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Trimegah Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a1854cc7bb3913edb050/logo.png"
+  },
+  "custodian": {
+    "name": "DBS Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1aace4cc7bb3913edb059/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Jago USD"
+    },
+    {
+      "instrument": "Bank Tabungan Negara USD"
+    },
+    {
+      "instrument": "Bank Victoria USD"
+    },
+    {
+      "instrument": "Bank Rakyat Indonesia USD"
+    },
+    {
+      "instrument": "Bank J Trust USD"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 10000
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 4,
+  "return1m": 21,
+  "return3m": 62,
+  "returnytd": null,
+  "return1y": null,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 116,
+  "drawdownytd": null,
+  "drawdown1y": null,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -2,
+  "cagr1y": null,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 242,
+  "rating": 0,
+  "description": "REKSA DANA TRIM KAS USD (“TRIM KAS USD”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang Undang No. 8 tahun 1995 tentang Pasar Modal sebagaimana diubah dengan Undang-Undang No. 4 Tahun 2023 tentang  Pengembangan dan Penguatan Sektor Keuangan (Selanjutnya disebut “Undang-Undang Pasar Modal”) beserta peraturan  pelaksanaannya.    TRIM KAS USD bertujuan untuk memberikan tingkat likuiditas yang tinggi sekaligus memberikan tingkat pendapatan investasi  yang optimal dalam denominasi Dolar Amerika Serikat (USD).",
+  "isSyariah": false,
+  "lastPrice": 101,
+  "expenseRatio": 70,
+  "minFirstBuy": 100,
+  "minNextBuy": 10,
+  "asof": 20261001,
+  "url": "trim-kas-usd-ea38e6b1f0f3",
+  "currency": "USD",
+  "lastAum": 5789000,
+  "factsheet": "https://cache.makmur.id/files/products/6a4e0afcbb5c471dfd215d6d/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6a4e0afcbb5c471dfd215d6d/prospectus.pdf",
+  "inceptionDate": 20260408,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

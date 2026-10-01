@@ -1,0 +1,88 @@
+{
+  "_id": "6911f38b43942404647042e7",
+  "name": "Mandiri Investa Dana Utama Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Mandiri Manajemen Investasi",
+    "logo": "https://cache.makmur.id/images/managers/6911eda443942404647039df/logo.png"
+  },
+  "custodian": {
+    "name": "Deutsche Bank",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b6b94cc7bb3913edb05f/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Mandiri (Persero) Tbk"
+    },
+    {
+      "instrument": "Bank Tabungan Negara (Persero) Tbk"
+    },
+    {
+      "instrument": "Energi Mega Persada Tbk"
+    },
+    {
+      "instrument": "FR0047"
+    },
+    {
+      "instrument": "FR0107"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9230
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 583
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 14,
+  "return5d": -3,
+  "return1m": 2,
+  "return3m": 155,
+  "returnytd": -45,
+  "return1y": 56,
+  "return3y": 1323,
+  "return5y": 1839,
+  "return10y": 5387,
+  "returnsi": 23126,
+  "drawdownytd": -307,
+  "drawdown1y": -307,
+  "drawdown3y": -307,
+  "drawdown5y": -307,
+  "drawdownsi": -1578,
+  "cagr1y": 56,
+  "cagr3y": 423,
+  "cagr5y": 343,
+  "cagr10y": 440,
+  "cagrsi": 649,
+  "rating": 0,
+  "description": "REKSA DANA MANDIRI INVESTA DANA UTAMA (selanjutnya disebut “MANDIRI INVESTA DANA UTAMA”) adalah Reksa  Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal  beserta peraturan pelaksanaannya.  MANDIRI INVESTA DANA UTAMA bertujuan untuk memperoleh tambahan nilai yang maksimal dalam jangka  panjang atas aktiva pemilik dana melalui strategi perdagangan aktif di pasar modal dan di pasar uang, sehingga  diperoleh capital gain, diskonto, bunga maupun dividen dengan memperhatikan tingkat risiko atas suatu jenis  investasi.",
+  "isSyariah": false,
+  "lastPrice": 240001,
+  "expenseRatio": 190,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "mandiri-investa-dana-utama-kelas-a-c27ef9ec71fe",
+  "currency": "IDR",
+  "lastAum": 1060000000000,
+  "factsheet": "https://cache.makmur.id/files/products/6911f38b43942404647042e7/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6911f38b43942404647042e7/prospectus.pdf",
+  "inceptionDate": 20070917,
+  "riskLevel": 40,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

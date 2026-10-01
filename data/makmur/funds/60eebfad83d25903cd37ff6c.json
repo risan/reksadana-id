@@ -1,0 +1,88 @@
+{
+  "_id": "60eebfad83d25903cd37ff6c",
+  "name": "Avrist Prime Bond Fund",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Avrist Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a3d94cc7bb3913edb053/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Obligasi Keberlanjutan Berkelanjutan I Bank BJB Tahap II Tahun 2026 Seri B"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan I Bumi Tahap V Tahun 2026 Seri B"
+    },
+    {
+      "instrument": "Obligasi I Adaro Indonesia Tahun 2026 Seri B"
+    },
+    {
+      "instrument": "Obligasi Negara Republik Indonesia Seri FR0068"
+    },
+    {
+      "instrument": "Bank Deposito Bank MNC"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9895
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 105
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 9,
+  "return5d": 8,
+  "return1m": 22,
+  "return3m": 221,
+  "returnytd": -90,
+  "return1y": 159,
+  "return3y": 1492,
+  "return5y": 2145,
+  "return10y": 6160,
+  "returnsi": 9834,
+  "drawdownytd": -521,
+  "drawdown1y": -521,
+  "drawdown3y": -521,
+  "drawdown5y": -521,
+  "drawdownsi": -1186,
+  "cagr1y": 159,
+  "cagr3y": 474,
+  "cagr5y": 396,
+  "cagr10y": 492,
+  "cagrsi": 569,
+  "rating": 0,
+  "description": "Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya.AVRIST PRIME BOND FUND bertujuan untuk memberikan tingkat pendapatan nilai investasi yang relatif stabil melalui investasi pada Efek bersifat utang serta menurunkan tingkat risiko melalui pemilihan penerbit surat berharga secara sangat hati-hati.AVRIST PRIME BOND FUND melakukan investasi dengan komposisi portofolio investasi minimum sebesar 80% (delapan puluh persen) dan maksimum sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri; dan minimum sebesar 0% (nol persen) dan maksimum sebesar 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.Dalam hal berinvestasi pada Efek luar negeri, AVRIST PRIME BOND FUND akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia dan hukum negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 198342,
+  "expenseRatio": 158,
+  "minFirstBuy": 500000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "avrist-prime-bond-fund-5ed20487a934",
+  "currency": "IDR",
+  "lastAum": 42538210000,
+  "factsheet": "https://cache.makmur.id/files/products/60eebfad83d25903cd37ff6c/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60eebfad83d25903cd37ff6c/prospectus.pdf",
+  "inceptionDate": 20140521,
+  "riskLevel": 40,
+  "traits": [
+    "Insurance"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

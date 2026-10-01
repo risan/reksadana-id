@@ -1,0 +1,88 @@
+{
+  "_id": "60d1dfcd4cc7bb3913edb064",
+  "name": "Trimegah FTSE Indonesia Low Volatility Factor Index Kelas A",
+  "category": "equity",
+  "manager": {
+    "name": "PT Trimegah Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a1854cc7bb3913edb050/logo.png"
+  },
+  "custodian": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Central Asia Tbk"
+    },
+    {
+      "instrument": "Bank Rakyat Indonesia (Persero) Tbk"
+    },
+    {
+      "instrument": "Bank Mandiri ( Persero ) Tbk"
+    },
+    {
+      "instrument": "Telkom Indonesia (Persero) Tbk"
+    },
+    {
+      "instrument": "Astra International Tbk"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9934
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 66
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -114,
+  "return5d": -296,
+  "return1m": -856,
+  "return3m": 479,
+  "returnytd": -2040,
+  "return1y": -1426,
+  "return3y": -2984,
+  "return5y": -915,
+  "return10y": null,
+  "returnsi": -1186,
+  "drawdownytd": -3167,
+  "drawdown1y": -3167,
+  "drawdown3y": -4369,
+  "drawdown5y": -4369,
+  "drawdownsi": -4369,
+  "cagr1y": -1426,
+  "cagr3y": -1114,
+  "cagr5y": -190,
+  "cagr10y": null,
+  "cagrsi": -222,
+  "rating": 0,
+  "description": "REKSA DANA INDEKS TRIMEGAH FTSE INDONESIA LOW VOLATILITY FACTOR INDEX (selanjutnya disebut “TRIMEGAH FTSE INDONESIA LOW VOLATILITY FACTOR INDEX”) adalah Reksa Dana Indeks Berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. TRIMEGAH FTSE INDONESIA LOW VOLATILITY FACTOR INDEX bertujuan untuk memberikan alternatif investasi dengan memberikan potensi pertumbuhan investasi menggunakan pendekatan investasi pasif yang sejalan dengan kinerja indeks dengan mereplikasi FTSE Indonesia Low Volatility Factor Index atas nilai investasi jangka panjang, yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia. TRIMEGAH FTSE INDONESIA LOW VOLATILITY FACTOR INDEX akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia yang berasal dari kumpulan Efek yang terdaftar di FTSE Indonesia Low Volatility Factor Index; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek Bersifat Utang dan/atau instrumen pasar uang dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Investasi pada saham-saham yang terdaftar dalam FTSE Indonesia Low Volatility Factor Index tersebut akan berjumlah sekurang-kurangnya 80% (delapan puluh persen) dari keseluruhan saham yang terdaftar dalam FTSE Indonesia Low Volatility Factor Index. Sedangkan porsi tiap-tiap saham akan ditentukan secara prorata mengikuti bobot (weighting) masing-masing saham terhadap FTSE Indonesia Low Volatility Factor Index, dimana pembobotan atas masing-masing saham adalah paling kurang 80% (delapan puluh persen) dan paling banyak 120% (seratus dua puluh persen) dari bobot masing-masing saham yang bersangkutan dalam FTSE Indonesia Low Volatility Factor Index.",
+  "isSyariah": false,
+  "lastPrice": 88139,
+  "expenseRatio": 474,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "trimegah-ftse-indonesia-low-volatility-factor-index-kelas-a-ba448fc6420c",
+  "currency": "IDR",
+  "lastAum": 22480000000,
+  "factsheet": "https://cache.makmur.id/files/products/60d1dfcd4cc7bb3913edb064/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60d1dfcd4cc7bb3913edb064/prospectus.pdf",
+  "inceptionDate": 20210219,
+  "riskLevel": 90,
+  "traits": [
+    "Index"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

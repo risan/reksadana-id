@@ -1,0 +1,88 @@
+{
+  "_id": "637f401a79f48d91c48ef208",
+  "name": "BRI Seruni Pasar Uang Syariah",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "logo": "https://cache.makmur.id/images/managers/61e6796f3845210a42c08858/logo.png"
+  },
+  "custodian": {
+    "name": "Maybank",
+    "logo": "https://cache.makmur.id/images/custodians/620b22ba5266fd0a65d1498d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "ARFAIDJ1"
+    },
+    {
+      "instrument": "PBS021"
+    },
+    {
+      "instrument": "SKSMFP02CN2"
+    },
+    {
+      "instrument": "SMADMF06ACN3"
+    },
+    {
+      "instrument": "SMPNMP01ASECN2"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 6207
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 3793
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 3,
+  "return5d": 12,
+  "return1m": 49,
+  "return3m": 93,
+  "returnytd": 268,
+  "return1y": 385,
+  "return3y": 1562,
+  "return5y": 2306,
+  "return10y": null,
+  "returnsi": 4387,
+  "drawdownytd": -6,
+  "drawdown1y": -6,
+  "drawdown3y": -15,
+  "drawdown5y": -18,
+  "drawdownsi": -232,
+  "cagr1y": 385,
+  "cagr3y": 496,
+  "cagr5y": 424,
+  "cagr10y": null,
+  "cagrsi": 453,
+  "rating": 0,
+  "description": "Reksa Dana Syariah DANAREKSA SERUNI PASAR UANG SYARIAH (selanjutnya disebut “DANAREKSA SERUNI PASAR UANG SYARIAH”) adalah Reksa Dana Terbuka berbentuk Kontrak Investasi Kolektif berdasarkan Undang-undang Nomor 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. DANAREKSA SERUNI PASAR UANG SYARIAH bertujuan untuk memberikan tingkat pertumbuhan investasi yang stabil dengan risiko minimal sekaligus memperoleh tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat dengan berinvestasi pada instrumen pasar uang syariah dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau Efek Syariah Berpendapatan Tetap yang sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang diperdagangkan di Indonesia dan/atau deposito syariah yang tidak bertentangan dengan Prinsip Syariah di Pasar Modal. DANAREKSA SERUNI PASAR UANG SYARIAH akan melakukan investasi dengan komposisi portofolio investasi 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau Efek Syariah Berpendapatan Tetap yang sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang diperdagangkan di Indonesia dan/atau deposito Syariah dalam mata uang Rupiah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": true,
+  "lastPrice": 143868,
+  "expenseRatio": 46,
+  "minFirstBuy": 5000,
+  "minNextBuy": 5000,
+  "asof": 20261001,
+  "url": "bri-seruni-pasar-uang-syariah-15eec9c7c994",
+  "currency": "IDR",
+  "lastAum": 1140000000000,
+  "factsheet": "https://cache.makmur.id/files/products/637f401a79f48d91c48ef208/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/637f401a79f48d91c48ef208/prospectus.pdf",
+  "inceptionDate": 20180719,
+  "riskLevel": 5,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

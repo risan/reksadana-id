@@ -1,0 +1,88 @@
+{
+  "_id": "60d201504cc7bb3913edb071",
+  "name": "Bahana Mes Syariah Kelas G",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Bahana TCW Investment Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a9804cc7bb3913edb058/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "SBSN SERI PBS030"
+    },
+    {
+      "instrument": "SBSN SERI PBS034"
+    },
+    {
+      "instrument": "SKK IJRH BKLJT II BUMI SERPONG DAMAI THP II TH 2025 SR B"
+    },
+    {
+      "instrument": "SUKUK IJARAH BERLANJUTAN III SPINDO TAHAP I TAHUN 2026 SERI C"
+    },
+    {
+      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN I DIAN SWASTATIKA SENTOSA TAHAP IV TAHUN 2025 SERI B"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9884
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 116
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 12,
+  "return5d": 16,
+  "return1m": 36,
+  "return3m": 275,
+  "returnytd": 125,
+  "return1y": 288,
+  "return3y": 1049,
+  "return5y": 1827,
+  "return10y": null,
+  "returnsi": 6322,
+  "drawdownytd": -256,
+  "drawdown1y": -256,
+  "drawdown3y": -256,
+  "drawdown5y": -256,
+  "drawdownsi": -834,
+  "cagr1y": 288,
+  "cagr3y": 338,
+  "cagr5y": 341,
+  "cagr10y": null,
+  "cagrsi": 508,
+  "rating": 0,
+  "description": "BAHANA MES SYARIAH FUND merupakan reksa dana berbentuk Kontrak Investasi Kolektif yang memiliki multi share class (memiliki beberapa Kelas Unit Penyertaan). BAHANA MES SYARIAH FUND terdiri dari 4 (empat) Kelas Unit Penyertaan yaitu BAHANA MES SYARIAH FUND Kelas G (General), BAHANA MES SYARIAH FUND Kelas D (Dividend), BAHANA MES SYARIAH FUND Kelas A dan BAHANA MES SYARIAH FUND Kelas O. BAHANA MES SYARIAH FUND bertujuan untuk menggalang dukungan finansial dari masyarakat untuk berpartisipasi dalam program-program usaha percepatan pengembangan dan penerapan system ekonomi dan etika usaha yang sesuai dengan syariah Islam di Indonesia yang dijalankan oleh Perkumpulan Masyarakat Ekonomi Syariah (MES). Kontribusi dari BAHANA MES SYARIAH FUND merupakan hal yang sangat penting untuk membangun sinergi dan kemitraan di antara perorangan dan lembaga-lembaga yang terlibat dalam kegiatan ekonomi syariah di Indonesia serta mendorong pengembangan aktivitas ekonomi syariah di Indonesia sehingga menjadi pilihan utama bagi masyarakat dalam kegiatan usaha termasuk dalam hal investasi maupun pembiayaan. BAHANA MES SYARIAH FUND mempunyai komposisi investasi sebagai berikut: 1. minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih BAHANA MES SYARIAH FUND dinvestasikan pada Efek Syariah Berpendapatan Tetap yaitu surat berharga yang diterbitkan oleh Pemerintah Indonesia atau Badan Usaha Milik Negara dan/atau sukuk yang diterbitkan oleh perusahaan-perusahaan berbadan hukum Indonesia melalui Penawaran Umum dan dicatatkan pada Bursa Efek baik di Indonesia maupun di luar negeri yang termasuk kategori layak investasi (investment grade) dengan peringkat minimum BBB (PEFINDO) atau peringkat lain yang setara; 2. minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih BAHANA MES SYARIAH FUND dinvestasikan pada setara kas dan atau Instrumen Pasar Uang Syariah antara lain Surat Berharga Syariah Negara dan/atau sukuk, Sertifikat Deposito Syariah, Deposito Syariah dan/atau Efek Pendapatan Tetap Syariah Berbasis Syariah yang mempunyai jatuh tempo kuraFng dari 1 (satu) tahun dan diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": true,
+  "lastPrice": 163221,
+  "expenseRatio": 160,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "bahana-mes-syariah-kelas-g-ca1de951de05",
+  "currency": "IDR",
+  "lastAum": 245610000000,
+  "factsheet": "https://cache.makmur.id/files/products/60d201504cc7bb3913edb071/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60d201504cc7bb3913edb071/prospectus.pdf",
+  "inceptionDate": 20161111,
+  "riskLevel": 40,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

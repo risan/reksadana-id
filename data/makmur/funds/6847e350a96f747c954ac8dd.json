@@ -1,0 +1,88 @@
+{
+  "_id": "6847e350a96f747c954ac8dd",
+  "name": "Danapathi Sukuk Syariah I",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Danapathi Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6833cfee1f93e8abc08018dc/logo.png"
+  },
+  "custodian": {
+    "name": "MEGA",
+    "logo": "https://cache.makmur.id/images/custodians/6847dc58a96f747c954ac810/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "PBS012"
+    },
+    {
+      "instrument": "SMPTHK01CCN1"
+    },
+    {
+      "instrument": "SMDSSA01BCN4"
+    },
+    {
+      "instrument": "SMARMA01CN2"
+    },
+    {
+      "instrument": "SMINKP03BCN3"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9486
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 514
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 7,
+  "return5d": 7,
+  "return1m": 36,
+  "return3m": 238,
+  "returnytd": 126,
+  "return1y": 178,
+  "return3y": 2002,
+  "return5y": 3608,
+  "return10y": null,
+  "returnsi": 10704,
+  "drawdownytd": -266,
+  "drawdown1y": -266,
+  "drawdown3y": -266,
+  "drawdown5y": -266,
+  "drawdownsi": -1143,
+  "cagr1y": 178,
+  "cagr3y": 627,
+  "cagr5y": 636,
+  "cagr10y": null,
+  "cagrsi": 774,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH BERBASIS SUKUK DANAPATHI SUKUK SYARIAH I (selanjutnya disebut \"DANAPATHI SUKUK  SYARIAH I\") adalah Reksa Dana Syariah Berbasis Sukuk berbentuk Kontrak Investasi Kolektif berdasarkan Undang Undang No.8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya.   DANAPATHI SUKUK SYARIAH I bertujuan untuk memperoleh pertumbuhan investasi dengan imbal hasil yang relatif stabil  dalam jangka menengah dan panjang melalui penempatan investasi pada Sukuk yang diterbitkan oleh Pemerintah Republik  Indonesia dan/atau badan hukum Indonesia atau korporasi yang telah dijual dalam Penawaran Umum sesuai dengan  peraturan dan prinsip syariah di pasar modal serta perundang-undangan yang berlaku di Indonesia.   DANAPATHI SUKUK SYARIAH I akan melakukan investasi dengan komposisi investasi minimum 85% (delapan puluh lima  persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Sukuk yang ditawarkan di Indonesia melalui  penawaran umum; Surat Berharga Syariah Negara dan/atau Surat Berharga Komersial Syariah yang jatuh temponya 1  (satu) tahun atau lebih dan masuk dalam kategori layak investasi (investment grade) serta dimasukan dalam Penitipan  Kolektif pada Lembaga Penyimpanan dan Peyelesaian oleh penerbit surat berharga komersial syariah; dan minimum 0%  (nol persen) dan maksimum 15% (lima belas persen) dari Nilai Aktiva Bersih pada instrumen pasar uang syariah dalam  negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito syariah dan/atau kas atau setara kas;  sesuai dengan peraturan perundang-undangan yang berlaku.",
+  "isSyariah": true,
+  "lastPrice": 207038,
+  "expenseRatio": 167,
+  "minFirstBuy": 10000000,
+  "minNextBuy": 1000000,
+  "asof": 20261001,
+  "url": "danapathi-sukuk-syariah-i-8a35276dac1b",
+  "currency": "IDR",
+  "lastAum": 948731668112,
+  "factsheet": "https://cache.makmur.id/files/products/6847e350a96f747c954ac8dd/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6847e350a96f747c954ac8dd/prospectus.pdf",
+  "inceptionDate": 20161227,
+  "riskLevel": 40,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

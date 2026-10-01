@@ -1,0 +1,81 @@
+{
+  "_id": "686233db0a35a0fd218d755d",
+  "name": "Sucorinvest Proteksi 52",
+  "category": "capitalprotected",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Obligasi Berkelanjutan III Lontar Papyrus Pulp Paper Industry Tahap III Tahun  2025 Seri B"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9632
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 368
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 7,
+  "return5d": 10,
+  "return1m": 65,
+  "return3m": 491,
+  "returnytd": 455,
+  "return1y": 837,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 1652,
+  "drawdownytd": -140,
+  "drawdown1y": -140,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -329,
+  "cagr1y": 837,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 1327,
+  "rating": 0,
+  "description": "REKSA DANA TERPROTEKSI SUCORINVEST PROTEKSI 52 (untuk selanjutnya disebut “SUCORINVEST PROTEKSI 52”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No.8 tahun 1995 tentang Pasar Modal sebagaimana diubah dengan Undang-Undang Nomor 4 tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan (“Undang-Undang Pasar Modal”) beserta peraturan pelaksanaannya. SUCORINVEST PROTEKSI 52 bertujuan untuk memberikan proteksi sebesar 100% (seratus persen) terhadap pokok investasi atas Unit Penyertaan pada Tanggal Jatuh Tempo dan untuk memberi potensi tambahan hasil investasi, melalui investasi sesuai dengan Kebijakan Investasi",
+  "isSyariah": false,
+  "lastPrice": 107782,
+  "expenseRatio": 110,
+  "minFirstBuy": 5000000,
+  "minNextBuy": 5000000,
+  "asof": 20261001,
+  "url": "sucorinvest-proteksi-52-54801f313134",
+  "currency": "IDR",
+  "lastAum": 63240000000,
+  "factsheet": "https://cache.makmur.id/files/products/686233db0a35a0fd218d755d/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/686233db0a35a0fd218d755d/prospectus.pdf",
+  "inceptionDate": 20250710,
+  "riskLevel": 50,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": [],
+  "maturityDates": [
+    {
+      "date": 20280521,
+      "maxPayoutPercentage": 10000
+    }
+  ],
+  "status": 4,
+  "fixed1y": 750,
+  "routeCategory": "terproteksi"
+}

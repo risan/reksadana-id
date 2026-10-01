@@ -1,0 +1,88 @@
+{
+  "_id": "691fe0a330df94d0758dcb74",
+  "name": "Insight Elite Fund",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Insight Investments Management",
+    "logo": "https://cache.makmur.id/images/managers/637ee25579f48d91c48ef049/logo.png"
+  },
+  "custodian": {
+    "name": "MEGA",
+    "logo": "https://cache.makmur.id/images/custodians/6847dc58a96f747c954ac810/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "BRIS"
+    },
+    {
+      "instrument": "BUKIT MAKMUR MANDIRI UTAMA, PT"
+    },
+    {
+      "instrument": "INTEGRASI JARINGAN EKOSISTEM, PT"
+    },
+    {
+      "instrument": "BANK BUKOPIN SYARIAH Tbk, PT"
+    },
+    {
+      "instrument": "OKI PULP & PAPER MILLS, PT"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 8188
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 1812
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 3,
+  "return5d": 9,
+  "return1m": 52,
+  "return3m": 227,
+  "returnytd": 462,
+  "return1y": 814,
+  "return3y": 3152,
+  "return5y": 5066,
+  "return10y": 12507,
+  "returnsi": 13054,
+  "drawdownytd": -115,
+  "drawdown1y": -115,
+  "drawdown3y": -115,
+  "drawdown5y": -144,
+  "drawdownsi": -1584,
+  "cagr1y": 814,
+  "cagr3y": 956,
+  "cagr5y": 854,
+  "cagr10y": 845,
+  "cagrsi": 870,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH PENDAPATAN TETAP INSIGHT ELITE FUND adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Pasar Modal. REKSA DANA SYARIAH PENDAPATAN TETAP INSIGHT ELITE FUND bertujuan untuk mendapatkan pengembalian investasi yang optimal dan meningkat dalam jangka panjang serta memberikan kesempatan kepada Pemegang Unit Penyertaan untuk berpartisipasi dalam Kegiatan Sosial Kemanusiaan dan/atau Sosial Keagamaan.",
+  "isSyariah": true,
+  "lastPrice": 230537,
+  "expenseRatio": 65,
+  "minFirstBuy": 100000000,
+  "minNextBuy": 50000000,
+  "asof": 20261001,
+  "url": "insight-elite-fund-f520ee40bd4b",
+  "currency": "IDR",
+  "lastAum": 157360868407,
+  "factsheet": "https://cache.makmur.id/files/products/691fe0a330df94d0758dcb74/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/691fe0a330df94d0758dcb74/prospectus.pdf",
+  "inceptionDate": 20160929,
+  "riskLevel": 40,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

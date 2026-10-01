@@ -1,0 +1,88 @@
+{
+  "_id": "637f3ffc79f48d91c48ef205",
+  "name": "I-Hajj Syariah Fund",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Insight Investments Management",
+    "logo": "https://cache.makmur.id/images/managers/637ee25579f48d91c48ef049/logo.png"
+  },
+  "custodian": {
+    "name": "CIMB Niaga",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b4184cc7bb3913edb05d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "INTEGRASI JARINGAN EKOSISTEM, PT"
+    },
+    {
+      "instrument": "LONTAR PAPYRUS PULP & PAPER INDUSTRY, PT"
+    },
+    {
+      "instrument": "MEDCO POWER INDONESIA, PT"
+    },
+    {
+      "instrument": "OKI PULP & PAPER MILLS, PT"
+    },
+    {
+      "instrument": "PINDO DELI PULP AND PAPER MILLS, PT"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9542
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 458
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 10,
+  "return1m": 52,
+  "return3m": 155,
+  "returnytd": 252,
+  "return1y": 411,
+  "return3y": 2252,
+  "return5y": 4074,
+  "return10y": 10084,
+  "returnsi": 46931,
+  "drawdownytd": -89,
+  "drawdown1y": -89,
+  "drawdown3y": -89,
+  "drawdown5y": -89,
+  "drawdownsi": -618,
+  "cagr1y": 411,
+  "cagr3y": 700,
+  "cagr5y": 707,
+  "cagr10y": 722,
+  "cagrsi": 834,
+  "rating": 0,
+  "description": "REKSA DANA HAJI SYARIAH (I-HAJJ SYARIAH FUND) (selanjutnya disebut “HAJI SYARIAH (I-HAJJ SYARIAH FUND)”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. HAJI SYARIAH (I-HAJJ SYARIAH FUND) bertujuan untuk mendapatkan pengembalian investasi yang stabil dan meningkat dalam jangka panjang dengan tetap mempertahankan nilai modal melalui investasi yang sesuai dengan syariah dengan mengacu kepada peraturan yang dikeluarkan oleh Dewan Syariah Nasional Majelis Ulama Indonesia dan opini dari Dewan Pengawas Syariah. HAJI SYARIAH (I-HAJJ SYARIAH FUND) akan melakukan investasi dengan komposisi portofolio investasi yaitu sebesar minimum sebesar 40% (empat puluh persen) dan maksimum sebesar 100% (seratus persen) pada Efek Obligasi Syariah atau Efek Hutang/Investasi Syariah yang bersifat syariah dan minimum sebesar 0% (nol persen) dan maksimum sebesar 60% (enam puluh persen) pada Efek Pasar Uang Syariah. Pemilihan instrumen dan pengelolaan investasi secara syariah mengacu kepada Fatwa Dewan Syariah Nasional Majelis Ulama Indonesia dan Opini dari Dewan Pengawas Syariah. HAJI SYARIAH (I-HAJJ SYARIAH FUND) dirancang sebagai suatu Reksa Dana Ethical dengan tujuan khusus untuk memberikan kesempatan kepada Pemegang Unit Penyertaan untuk membantu orang yang tidak/kurang mampu agar dapat menunaikan ibadah haji ke tanah suci melalui penyisihan yang berupa infaq haji yang dapat dilihat pada Bab III Informasi Mengenai Infaq Haji.",
+  "isSyariah": true,
+  "lastPrice": 569308,
+  "expenseRatio": 98,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "i-hajj-syariah-fund-158511ecee91",
+  "currency": "IDR",
+  "lastAum": 1476183596315,
+  "factsheet": "https://cache.makmur.id/files/products/637f3ffc79f48d91c48ef205/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/637f3ffc79f48d91c48ef205/prospectus.pdf",
+  "inceptionDate": 20050117,
+  "riskLevel": 40,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

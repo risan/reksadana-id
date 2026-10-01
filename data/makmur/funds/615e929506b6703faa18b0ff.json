@@ -1,0 +1,84 @@
+{
+  "_id": "615e929506b6703faa18b0ff",
+  "name": "Eastspring Syariah Money Market Khazanah Kelas A",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/615e89d906b6703faa18b0fe/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "BANK CIMB NIAGA SYARIAH"
+    },
+    {
+      "instrument": "BANK DANAMON INDONESIA UNIT USAHA SYARIAH"
+    },
+    {
+      "instrument": "BANK PERMATA UNIT USAHA SYARIAH"
+    },
+    {
+      "instrument": "PT BANK ALADIN SYARIAH"
+    },
+    {
+      "instrument": "PT BANK BTPN SYARIAH"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 10000
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 8,
+  "return1m": 38,
+  "return3m": 113,
+  "returnytd": 259,
+  "return1y": 321,
+  "return3y": 1005,
+  "return5y": 1350,
+  "return10y": null,
+  "returnsi": 2342,
+  "drawdownytd": -11,
+  "drawdown1y": -11,
+  "drawdown3y": -21,
+  "drawdown5y": -21,
+  "drawdownsi": -35,
+  "cagr1y": 321,
+  "cagr3y": 324,
+  "cagr5y": 256,
+  "cagr10y": null,
+  "cagrsi": 275,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH EASTSPRING SYARIAH MONEY MARKET KHAZANAH (selanjutnya disebut “EASTSPRING SYARIAH MONEY MARKET KHAZANAH”) adalah Reksa Dana Syariah berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. EASTSPRING SYARIAH MONEY MARKET KHAZANAH bertujuan untuk memberikan potensi imbal hasil yang relatif stabil melalui investasi sesuai dengan Kebijakan Investasi. EASTSPRING SYARIAH MONEY MARKET KHAZANAH akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri dan/atau Efek Syariah Berpendapatan Tetap yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun, yang diperdagangkan di Indonesia dan/atau deposito Syariah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": true,
+  "lastPrice": 123417,
+  "expenseRatio": 154,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "eastspring-syariah-money-market-khazanah-kelas-a-a183b14b80ce",
+  "currency": "IDR",
+  "lastAum": 48250000000,
+  "factsheet": "https://cache.makmur.id/files/products/615e929506b6703faa18b0ff/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/615e929506b6703faa18b0ff/prospectus.pdf",
+  "inceptionDate": 20181226,
+  "riskLevel": 5,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

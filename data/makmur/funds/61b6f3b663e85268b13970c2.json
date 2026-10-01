@@ -1,0 +1,86 @@
+{
+  "_id": "61b6f3b663e85268b13970c2",
+  "name": "Eastspring Investments IDR Fixed Income Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/615e89d906b6703faa18b0fe/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "OBL NEGARA REPUBLIK INDONESIA FR0068"
+    },
+    {
+      "instrument": "OBL NEGARA REPUBLIK INDONESIA FR0080"
+    },
+    {
+      "instrument": "OBL NEGARA REPUBLIK INDONESIA FR0087"
+    },
+    {
+      "instrument": "OBLIGASI NEGARA REPUBLIK IND SERI FR0095"
+    },
+    {
+      "instrument": "OBLIGASI NEGARA REPUBLIK IND SERI FR0098"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9652
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 348
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 11,
+  "return5d": -3,
+  "return1m": -13,
+  "return3m": 160,
+  "returnytd": -178,
+  "return1y": 7,
+  "return3y": 1232,
+  "return5y": 1893,
+  "return10y": 6396,
+  "returnsi": 8553,
+  "drawdownytd": -497,
+  "drawdown1y": -497,
+  "drawdown3y": -497,
+  "drawdown5y": -497,
+  "drawdownsi": -1113,
+  "cagr1y": 7,
+  "cagr3y": 395,
+  "cagr5y": 353,
+  "cagr10y": 507,
+  "cagrsi": 550,
+  "rating": 0,
+  "description": "REKSA DANA EASTSPRING IDR FIXED INCOME FUND adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. REKSA DANA EASTSPRING IDR FIXED INCOME FUND bertujuan untuk memberikan pengembalian investasi yang optimal atas investasi jangka panjang pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi berbadan hukum Indonesia yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia dan instrumen pasar uang dalam negeri. REKSA DANA EASTSPRING IDR FIXED INCOME FUND akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi berbadan hukum Indonesia yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau deposito; sesuai perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 185534,
+  "expenseRatio": 240,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "eastspring-investments-idr-fixed-income-kelas-a-c5da3575f1c1",
+  "currency": "IDR",
+  "lastAum": 5530000000000,
+  "factsheet": "https://cache.makmur.id/files/products/61b6f3b663e85268b13970c2/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/61b6f3b663e85268b13970c2/prospectus.pdf",
+  "inceptionDate": 20150316,
+  "riskLevel": 40,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

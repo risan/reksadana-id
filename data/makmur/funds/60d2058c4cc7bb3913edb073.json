@@ -1,0 +1,88 @@
+{
+  "_id": "60d2058c4cc7bb3913edb073",
+  "name": "Bahana Likuid Syariah Kelas G",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Bahana TCW Investment Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a9804cc7bb3913edb058/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "BANK ALADIN SYARIAH"
+    },
+    {
+      "instrument": "BANK PEMBANGUNAN DAERAH NUSA TENGGARA BARAT, PT"
+    },
+    {
+      "instrument": "BANK PEMBANGUNAN DAERAH RIAU KEPRI, PT"
+    },
+    {
+      "instrument": "BPD SUMATERA SELATAN & BANGKA BELITUNG"
+    },
+    {
+      "instrument": "PT. BANK SYARIAH NASIONAL"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 1826
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 8174
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 10,
+  "return1m": 43,
+  "return3m": 144,
+  "returnytd": 351,
+  "return1y": 477,
+  "return3y": 1590,
+  "return5y": 2353,
+  "return10y": null,
+  "returnsi": 3117,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": -1,
+  "drawdown5y": -1,
+  "drawdownsi": -1,
+  "cagr1y": 477,
+  "cagr3y": 504,
+  "cagr5y": 432,
+  "cagr10y": null,
+  "cagrsi": 423,
+  "rating": 0,
+  "description": "Reksa Dana Syariah BAHANA LIKUID SYARIAH(\"BAHANA LIKUID SYARIAH\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No.8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. BAHANA LIKUID SYARIAH bertujuan untuk menghasilkan tingkat pengembalian yang optimal melalui investasi pada Instrumen Syariah Pasar Uang dan/atau Efek Syariah Pendapatan Tetap yang diterbitkan oleh Pemerintah Republik Indonesia dan korporasi yang berdomisili di Indonesia yang jatuh temponya kurang dari 1 (satu) tahun. BAHANA LIKUID SYARIAH merupakan reksa dana berbentuk Kontrak Investasi Kolektif yang memiliki multi share class (memiliki beberapa Kelas Unit Penyertaan). BAHANA LIKUID SYARIAH terdiri dari 2 (kelas) Kelas Unit Penyertaan yaitu BAHANA LIKUID SYARIAH Kelas S (Sponsor) dan BAHANA LIKUID SYARIAH Kelas G (General). BAHANA LIKUID SYARIAH mempunyai komposisi investasi sebagai berikut: 1. sebesar 100% (seratus persen) pada Instrumen Syariah Pasar Uang dalam negeri antara lain Surat Berharga Syariah Negara dan/atau Sukuk, Sertifikat Deposito Syariah, Deposito Syariah dan/atau Efek Syariah Pendapatan Tetap yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau Efek Syariah Pendapatan Tetap berbasis syariah yang sisa jatuh temponya tidak lebih dari 1 (satu) tahun sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia;",
+  "isSyariah": true,
+  "lastPrice": 131165,
+  "expenseRatio": 150,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "bahana-likuid-syariah-kelas-g-c1f1ab802c63",
+  "currency": "IDR",
+  "lastAum": 1416590000000,
+  "factsheet": "https://cache.makmur.id/files/products/60d2058c4cc7bb3913edb073/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60d2058c4cc7bb3913edb073/prospectus.pdf",
+  "inceptionDate": 20200316,
+  "riskLevel": 5,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

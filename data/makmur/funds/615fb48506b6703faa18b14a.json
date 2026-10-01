@@ -1,0 +1,82 @@
+{
+  "_id": "615fb48506b6703faa18b14a",
+  "name": "Eastspring Investments Cash Reserve Kelas A",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/615e89d906b6703faa18b0fe/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "BANK JABAR BANTEN"
+    },
+    {
+      "instrument": "BANK PERMATA UNIT USAHA SYARIAH"
+    },
+    {
+      "instrument": "BANK RAKYAT INDONESIA"
+    },
+    {
+      "instrument": "BANK TABUNGAN NEGARA"
+    },
+    {
+      "instrument": "BANK UOB INDONESIA"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 10000
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 9,
+  "return1m": 39,
+  "return3m": 121,
+  "returnytd": 257,
+  "return1y": 331,
+  "return3y": 1181,
+  "return5y": 1623,
+  "return10y": 4487,
+  "returnsi": 7882,
+  "drawdownytd": -2,
+  "drawdown1y": -2,
+  "drawdown3y": -32,
+  "drawdown5y": -32,
+  "drawdownsi": -32,
+  "cagr1y": 331,
+  "cagr3y": 379,
+  "cagr5y": 305,
+  "cagr10y": 378,
+  "cagrsi": 448,
+  "rating": 0,
+  "description": "REKSA DANA EASTSPRING INVESTMENTS CASH RESERVE adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. REKSA DANA EASTSPRING INVESTMENTS CASH RESERVE untuk memberikan potensi imbal hasil yang relatif stabil dari investasi pada instumen pasar uang Indonesia. REKSA DANA EASTSPRING INVESTMENTS CASH RESERVE akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau Efek bersifat utang yang diterbitkan oleh korporasi dan/atau Pemerintah Republik Indonesia dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan atau diperdagangkan di Bursa Efek Indonesia dan/atau deposito berdenominasi Rupiah; sesuai dengan peraturan perundangundangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 178824,
+  "expenseRatio": 207,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "eastspring-investments-cash-reserve-kelas-a-e22ecc9fa23e",
+  "currency": "IDR",
+  "lastAum": 17960000000,
+  "factsheet": "https://cache.makmur.id/files/products/615fb48506b6703faa18b14a/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/615fb48506b6703faa18b14a/prospectus.pdf",
+  "inceptionDate": 20130703,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

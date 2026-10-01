@@ -1,0 +1,88 @@
+{
+  "_id": "691dd93730df94d0758d3c14",
+  "name": "Syailendra Sharia Fixed Income Fund Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Syailendra Capital",
+    "logo": "https://cache.makmur.id/images/managers/60d1a4dd4cc7bb3913edb055/logo.png"
+  },
+  "custodian": {
+    "name": "CIMB Niaga",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b4184cc7bb3913edb05d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "SIIJEE02A"
+    },
+    {
+      "instrument": "SISMAR01ACN2"
+    },
+    {
+      "instrument": "SMINKP04CN5"
+    },
+    {
+      "instrument": "SMLPPI02BCN2"
+    },
+    {
+      "instrument": "SMLPPI02CCN2"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9057
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 943
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 11,
+  "return1m": 60,
+  "return3m": 300,
+  "returnytd": 467,
+  "return1y": 630,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 2091,
+  "drawdownytd": -115,
+  "drawdown1y": -115,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -115,
+  "cagr1y": 630,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 736,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH SYAILENDRA SHARIA FIXED INCOME FUND (untuk selanjutnya disebut “SYAILENDRA SHARIA  FIXED INCOME FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun  1995 tentang Pasar Modal sebagaimana terakhir diubah dengan Undang-Undang Nomor 4 tahun 2023 tentang  Pengembangan dan Penguatan Sektor Keuangan (selanjutnya disebut “Undang-Undang Pasar Modal”) beserta peraturan  pelaksanaannya.  SYAILENDRA SHARIA FIXED INCOME FUND bertujuan untuk memberikan hasil investasi yang optimum untuk jangka  menengah dan panjang sesuai dengan Prinsip Syariah di Pasar Modal melalui investasi sesuai dengan Kebijakan Investasi.",
+  "isSyariah": true,
+  "lastPrice": 120913,
+  "expenseRatio": 208,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "syailendra-sharia-fixed-income-fund-kelas-a-00e2ae32e7b6",
+  "currency": "IDR",
+  "lastAum": 2570000000000,
+  "factsheet": "https://cache.makmur.id/files/products/691dd93730df94d0758d3c14/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/691dd93730df94d0758d3c14/prospectus.pdf",
+  "inceptionDate": 20240129,
+  "riskLevel": 40,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

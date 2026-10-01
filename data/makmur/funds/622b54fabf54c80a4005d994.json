@@ -1,0 +1,90 @@
+{
+  "_id": "622b54fabf54c80a4005d994",
+  "name": "Sucorinvest Anak Pintar",
+  "category": "mixed",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Mandiri ( Persero ) Tbk"
+    },
+    {
+      "instrument": "Bank Negara Indonesia (persero) Tbk"
+    },
+    {
+      "instrument": "Bank Rakyat Indonesia (persero) Tbk"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap II Tahun 2025 Seri C"
+    },
+    {
+      "instrument": "Indofood Cbp Sukses Makmur Tbk"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 7464
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 2253
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 283
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -36,
+  "return5d": -167,
+  "return1m": -541,
+  "return3m": 696,
+  "returnytd": -1412,
+  "return1y": 647,
+  "return3y": 3207,
+  "return5y": 6145,
+  "return10y": null,
+  "returnsi": 27244,
+  "drawdownytd": -3095,
+  "drawdown1y": -3095,
+  "drawdown3y": -3095,
+  "drawdown5y": -3095,
+  "drawdownsi": -3095,
+  "cagr1y": 647,
+  "cagr3y": 972,
+  "cagr5y": 1005,
+  "cagr10y": null,
+  "cagrsi": 1467,
+  "rating": 0,
+  "description": "REKSA DANA BALANCED FUND SUCORINVEST ANAK PINTAR adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. REKSA DANA BALANCED FUND SUCORINVEST ANAK PINTAR bertujuan untuk memberikan potensi pertumbuhan nilai investasi yang optimal dalam jangka menengah hingga panjang, melalui alokasi strategis pada Efek bersifat ekuitas, Efek Bersifat Utang dan instrumen pasar uang dalam negeri yang sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia, serta memberikan kesempatan kepada Pemegang Unit Penyertaan untuk ikut mendanai program-program pendidikan dan kesejahteraan bagi masyarakat di Indonesia melalui penyaluran dana filantropi. REKSA DANA BALANCED FUND SUCORINVEST ANAK PINTAR akan melakukan investasi dengan komposisi portofolio investasi minimum 1% (satu persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; minimum 1% (satu persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada Efek Bersifat Utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; dan minimum 1% (satu persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 372444,
+  "expenseRatio": 407,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "sucorinvest-anak-pintar-562339230ecf",
+  "currency": "IDR",
+  "lastAum": 427660000000,
+  "factsheet": "https://cache.makmur.id/files/products/622b54fabf54c80a4005d994/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/622b54fabf54c80a4005d994/prospectus.pdf",
+  "inceptionDate": 20170223,
+  "riskLevel": 65,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "campuran"
+}

@@ -1,0 +1,88 @@
+{
+  "_id": "65dff54e86f16f565bb396ff",
+  "name": "Insight Government Fund",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Insight Investments Management",
+    "logo": "https://cache.makmur.id/images/managers/637ee25579f48d91c48ef049/logo.png"
+  },
+  "custodian": {
+    "name": "Mandiri",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b27d4cc7bb3913edb05b/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "PEMERINTAH REPUBLIK INDONESIA (FR0087)"
+    },
+    {
+      "instrument": "PEMERINTAH REPUBLIK INDONESIA (FR0100)"
+    },
+    {
+      "instrument": "PEMERINTAH REPUBLIK INDONESIA (FR0103)"
+    },
+    {
+      "instrument": "PEMERINTAH REPUBLIK INDONESIA (FR0109)"
+    },
+    {
+      "instrument": "PEMERINTAH REPUBLIK INDONESIA (FR0101)"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9821
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 179
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 6,
+  "return5d": -1,
+  "return1m": 9,
+  "return3m": 172,
+  "returnytd": -42,
+  "return1y": -174,
+  "return3y": 1277,
+  "return5y": 2345,
+  "return10y": 7355,
+  "returnsi": 7757,
+  "drawdownytd": -350,
+  "drawdown1y": -662,
+  "drawdown3y": -662,
+  "drawdown5y": -662,
+  "drawdownsi": -1007,
+  "cagr1y": -174,
+  "cagr3y": 409,
+  "cagr5y": 430,
+  "cagr10y": 567,
+  "cagrsi": 580,
+  "rating": 0,
+  "description": "REKSA DANA INSIGHT GOVERNMENT FUND (I-GOVT) dalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal.  Reksa Dana ini yang berfokus pada Surat Berharga Negara (SBN) untuk memberikan investasi jangka panjang dengan risiko rendah dan potensi imbal hasil stabil. Minimal 80% dana Anda diinvestasikan pada SBN yang diterbitkan oleh pemerintah Republik Indonesia. Aman dan diawasi oleh Otoritas Jasa Keuangan (OJK), I-GOVT menawarkan imbal hasil yang kompetitif.  I-GOVT sangat mudah diakses, dengan pembelian awal hanya Rp10.000 dan transaksi dilakukan secara praktis melalui aplikasi online. Untuk meminimalkan risiko, I-GOVT mengalokasikan sebagian portofolio (maksimal 20%) pada instrumen pasar uang. Berinvestasi di I-GOVT juga memungkinkan Anda berkontribusi dalam pembangunan negeri. Kesempatan ini cocok untuk investor yang mengutamakan keamanan, ingin imbal hasil stabil dalam jangka panjang, dan mendukung pemerintah Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 135398,
+  "expenseRatio": 98,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "insight-government-fund-9cad153e49a2",
+  "currency": "IDR",
+  "lastAum": 128291111700,
+  "factsheet": "https://cache.makmur.id/files/products/65dff54e86f16f565bb396ff/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/65dff54e86f16f565bb396ff/prospectus.pdf",
+  "inceptionDate": 20160728,
+  "riskLevel": 40,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

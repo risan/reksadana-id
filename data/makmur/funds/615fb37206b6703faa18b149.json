@@ -1,0 +1,88 @@
+{
+  "_id": "615fb37206b6703faa18b149",
+  "name": "Eastspring Investments Yield Discovery Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/615e89d906b6703faa18b0fe/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "OB BK I MERDEKA BATTERY MATERIALS IV 26B"
+    },
+    {
+      "instrument": "OBL BKL VII PEGADAIAN THP I THN 2026 A"
+    },
+    {
+      "instrument": "OBL BKL VIII SARANA MULTI FIN III 2026"
+    },
+    {
+      "instrument": "OBL I ADARO INDONESIA TAHUN 2026 SERI A"
+    },
+    {
+      "instrument": "OBL III INTEGRASI JARINGAN EKOSISTEM 26A"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9246
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 754
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 6,
+  "return5d": 4,
+  "return1m": 35,
+  "return3m": 130,
+  "returnytd": -102,
+  "return1y": -1,
+  "return3y": 1152,
+  "return5y": 1484,
+  "return10y": 4911,
+  "returnsi": 9050,
+  "drawdownytd": -343,
+  "drawdown1y": -343,
+  "drawdown3y": -343,
+  "drawdown5y": -373,
+  "drawdownsi": -1306,
+  "cagr1y": -1,
+  "cagr3y": 370,
+  "cagr5y": 281,
+  "cagr10y": 408,
+  "cagrsi": 495,
+  "rating": 0,
+  "description": "REKSA DANA EASTSPRING INVESTMENTS YIELD DISCOVERY adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. REKSA DANA EASTSPRING INVESTMENTS YIELD DISCOVERY bertujuan untuk memperoleh kinerja yang optimal dalam jangka menengah dengan berinvestasi terutama pada Efek bersifat utang yang diterbitkan di Indonesia. REKSA DANA EASTSPRING INVESTMENTS YIELD DISCOVERY akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi Indonesia yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri yang telah mendapat peringkat dari perusahaan pemeringkat Efek yang terdaftar di OJK dan masuk dalam kategori layak investasi (investment grade); dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri dan/atau instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito berdenominasi Rupiah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, REKSA DANA EASTSPRING INVESTMENTS YIELD DISCOVERY akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 158561,
+  "expenseRatio": 237,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "eastspring-investments-yield-discovery-kelas-a-4e34a20cd801",
+  "currency": "IDR",
+  "lastAum": 278430000000,
+  "factsheet": "https://cache.makmur.id/files/products/615fb37206b6703faa18b149/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/615fb37206b6703faa18b149/prospectus.pdf",
+  "inceptionDate": 20130529,
+  "riskLevel": 40,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

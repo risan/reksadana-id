@@ -1,0 +1,88 @@
+{
+  "_id": "62da2bf00e711d0a4c5eb0f2",
+  "name": "Syailendra Equity Opportunity Fund Kelas A",
+  "category": "equity",
+  "manager": {
+    "name": "PT Syailendra Capital",
+    "logo": "https://cache.makmur.id/images/managers/60d1a4dd4cc7bb3913edb055/logo.png"
+  },
+  "custodian": {
+    "name": "Deutsche Bank",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b6b94cc7bb3913edb05f/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "AADI"
+    },
+    {
+      "instrument": "AKRA"
+    },
+    {
+      "instrument": "BBCA"
+    },
+    {
+      "instrument": "BDMN"
+    },
+    {
+      "instrument": "BFIN"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9586
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 414
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -37,
+  "return5d": -209,
+  "return1m": -408,
+  "return3m": 1172,
+  "returnytd": -1827,
+  "return1y": -1147,
+  "return3y": -301,
+  "return5y": 443,
+  "return10y": 2031,
+  "returnsi": 30108,
+  "drawdownytd": -3214,
+  "drawdown1y": -3214,
+  "drawdown3y": -3214,
+  "drawdown5y": -3214,
+  "drawdownsi": -6037,
+  "cagr1y": -1147,
+  "cagr3y": -101,
+  "cagr5y": 87,
+  "cagr10y": 187,
+  "cagrsi": 745,
+  "rating": 0,
+  "description": "Reksa Dana Syailendra Equity Opportunity Fund (selanjutnya disebut Syailendra Equity Opportunity Fund) adalah Reksa Dana terbuka berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. Tujuan Investasi Syailendra Equity Opportunity Fund adalah memberikan hasil investasi yang optimum melalui invetasi pada saham-saham yang masih mempunyai potensi yang cukup besar untuk tumbuh dalam jangka panjang dan dapat berinvestasi pada Efek bersifat utang atau instrumen pasar uang dalam hal terdapat kondisi pasar modal yang sedang dalam kondisi terkoreksi dengan tetap memperhatikan ketentuan pada kebijakan investasi.Kebijakan investasinya adalah sebesar 80% - 98% pada Efek bersifat ekuitas, 0% - 18% pada Efek bersifat utang antara lain Surat Utang Negara (SUN), Obligasi Pemerintah Daerah (Municipal Bond), obligasi yang diterbitkan oleh perusahaan dan Efek bersifat utang lainnya, 2% - 20% pada instrumen pasar uang antara lain Sertifikat Bank Indonesia (SBI), Surat Perbendaharaan Negara (SPN) atau Treasury Bills (T-Bills), Efek bersifat utang yang memiliki jatuh tempo kurang dari 1 (satu) tahun dan deposito. Manajer Investasi dapat berinvestasi pada efek-efek yang ditawarkan dan atau diperdagangkan di bursa efek di Indonesia maupun di luar negeri.sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 401079,
+  "expenseRatio": 522,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "syailendra-equity-opportunity-fund-kelas-a-926bbe2e4843",
+  "currency": "IDR",
+  "lastAum": 220100000000,
+  "factsheet": "https://cache.makmur.id/files/products/62da2bf00e711d0a4c5eb0f2/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/62da2bf00e711d0a4c5eb0f2/prospectus.pdf",
+  "inceptionDate": 20070607,
+  "riskLevel": 90,
+  "traits": [
+    "Insurance"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

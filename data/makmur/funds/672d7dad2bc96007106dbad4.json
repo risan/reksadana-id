@@ -1,0 +1,90 @@
+{
+  "_id": "672d7dad2bc96007106dbad4",
+  "name": "Sucorinvest Aggressive Balanced AI Fund",
+  "category": "mixed",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Amman Mineral Internasional Tbk"
+    },
+    {
+      "instrument": "Astra International Tbk"
+    },
+    {
+      "instrument": "Bank Central Asia Tbk"
+    },
+    {
+      "instrument": "Bank Mandiri ( Persero ) Tbk"
+    },
+    {
+      "instrument": "Bank Negara Indonesia (persero) Tbk"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 7904
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 1941
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 155
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -148,
+  "return5d": -509,
+  "return1m": -830,
+  "return3m": 254,
+  "returnytd": -2280,
+  "return1y": -2267,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": -3617,
+  "drawdownytd": -3321,
+  "drawdown1y": -3321,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -4036,
+  "cagr1y": -2267,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": -2064,
+  "rating": 0,
+  "description": "REKSA DANA SUCORINVEST AGGRESSIVE BALANCED AI FUND (selanjutnya disebut ”SUCORINVEST AGGRESSIVE BALANCED AI FUND”)  adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal  sebagaimana diubah dengan Undang-Undang Nomor 4 tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan (“Undang Undang Pasar Modal”) beserta peraturan pelaksanaannya.  SUCORINVEST AGGRESSIVE BALANCED AI FUND bertujuan untuk memberikan potensi pertumbuhan di investasi yang optimal dalam  jangka menengah hingga panjang, melalui alokasi strategis sesuai dengan Kebijakan Investasi.   SUCORINVEST AGGRESSIVE BALANCED AI FUND akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 1% (satu  persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang ditawarkan melalui  Penawaran Umum dan diperdagangkan di Bursa Efek  Indonesia yang berasal dari kumpulan Efek yang terdaftar di Indeks LQ45; dan  minimum 1% (satu persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada Efek bersifat utang termasuk  Efek Beragun Aset Arus Kas Tetap, yang diperdagangkan baik di dalam maupun di luar negeri; dan minimum 0% (nol persen) dan  maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau deposito; sesuai  dengan peraturan perundang-undangan yang berlaku di Indonesia.  Dalam hal berinvestasi pada Efek luar negeri, Manajer Investasi wajib memastikan kegiatan investasi SUCORINVEST AGGRESSIVE  BALANCED AI FUND pada Efek luar negeri tidak akan bertentangan dengan ketentuan hukum dan peraturan yang berlaku di Indonesia  dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 63827,
+  "expenseRatio": 1681,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "sucorinvest-aggressive-balanced-ai-fund-2c61faa859f9",
+  "currency": "IDR",
+  "lastAum": 10090000000,
+  "factsheet": "https://cache.makmur.id/files/products/672d7dad2bc96007106dbad4/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/672d7dad2bc96007106dbad4/prospectus.pdf",
+  "inceptionDate": 20241022,
+  "riskLevel": 65,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "campuran"
+}

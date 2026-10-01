@@ -1,0 +1,88 @@
+{
+  "_id": "66bd71d01947764d3c8182ed",
+  "name": "Insight Sri Kehati Likuid",
+  "category": "equity",
+  "manager": {
+    "name": "PT Insight Investments Management",
+    "logo": "https://cache.makmur.id/images/managers/637ee25579f48d91c48ef049/logo.png"
+  },
+  "custodian": {
+    "name": "DBS Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1aace4cc7bb3913edb059/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "ANEKA TAMBANG Tbk, PT (ANTM)"
+    },
+    {
+      "instrument": "ASTRA INTERNATIONAL Tbk, PT (ASII)"
+    },
+    {
+      "instrument": "BANK CENTRAL ASIA Tbk, PT (BBCA)"
+    },
+    {
+      "instrument": "BANK MANDIRI ( PERSERO ) Tbk, PT (BMRI)"
+    },
+    {
+      "instrument": "BANK NEGARA INDONESIA (PERSERO) Tbk, PT (BBNI)"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9778
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 222
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -88,
+  "return5d": -276,
+  "return1m": -817,
+  "return3m": 595,
+  "returnytd": -1969,
+  "return1y": -1459,
+  "return3y": -2547,
+  "return5y": -9,
+  "return10y": null,
+  "returnsi": -1048,
+  "drawdownytd": -3138,
+  "drawdown1y": -3138,
+  "drawdown3y": -3776,
+  "drawdown5y": -3776,
+  "drawdownsi": -4338,
+  "cagr1y": -1459,
+  "cagr3y": -933,
+  "cagr5y": -2,
+  "cagr10y": null,
+  "cagrsi": -129,
+  "rating": 0,
+  "description": "REKSA DANA INDEKS I-SRI KEHATI LIKUID (selanjutnya disebut \"REKSA DANA I-SRI KEHATI LIKUID\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif yang didirikan sesuai dengan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. REKSA DANA I-SRI KEHATI LIKUID bertujuan untuk memberikan hasil investasi yang setara dengan kinerja Indeks SRI-KEHATI yang dikelola secara berkelanjutan. REKSA DANA I-SRI KEHATI LIKUID melakukan investasi dengan portofolio investasi yang terdiri dari minimum 80% hingga maksimum 100% dari Nilai Aktiva Bersih pada Efek ekuitas dari perusahaan yang terdaftar dalam Indeks SRI-KEHATI dan diperdagangkan di Bursa Efek Indonesia. Selain itu, REKSA DANA ini juga dapat menginvestasikan hingga 20% dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang memiliki jatuh tempo kurang dari satu tahun dan/atau deposito, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 89523,
+  "expenseRatio": 177,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "insight-sri-kehati-likuid-164a549d1866",
+  "currency": "IDR",
+  "lastAum": 7387272591,
+  "factsheet": "https://cache.makmur.id/files/products/66bd71d01947764d3c8182ed/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/66bd71d01947764d3c8182ed/prospectus.pdf",
+  "inceptionDate": 20180329,
+  "riskLevel": 90,
+  "traits": [
+    "Index"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

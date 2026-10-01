@@ -1,0 +1,86 @@
+{
+  "_id": "637ee50479f48d91c48ef04e",
+  "name": "Insight Money",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Insight Investments Management",
+    "logo": "https://cache.makmur.id/images/managers/637ee25579f48d91c48ef049/logo.png"
+  },
+  "custodian": {
+    "name": "Mandiri",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b27d4cc7bb3913edb05b/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "BARITO PACIFIC Tbk, PT"
+    },
+    {
+      "instrument": "BUKIT MAKMUR MANDIRI UTAMA, PT"
+    },
+    {
+      "instrument": "CHANDRA ASRI PETROCHEMICAL Tbk, PT"
+    },
+    {
+      "instrument": "MERDEKA BATTERY MATERIALS Tbk, PT"
+    },
+    {
+      "instrument": "OKI PULP & PAPER MILLS, PT"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9167
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 833
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 9,
+  "return1m": 45,
+  "return3m": 137,
+  "returnytd": 377,
+  "return1y": 515,
+  "return3y": 1839,
+  "return5y": 3078,
+  "return10y": 7931,
+  "returnsi": 9562,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": 0,
+  "drawdown5y": -33,
+  "drawdownsi": -55,
+  "cagr1y": 515,
+  "cagr3y": 579,
+  "cagr5y": 551,
+  "cagr10y": 601,
+  "cagrsi": 623,
+  "rating": 0,
+  "description": "REKSA DANA INSIGHT MONEY (I-MONEY) (selanjutnya disebut \"INSIGHT MONEY (I-MONEY)\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. INSIGHT MONEY (I-MONEY) bertujuan untuk memberikan tingkat pertumbuhan investasi yang relatif stabil sesuai dengan tingkat risiko yang dapat diterima melalui diversifikasi penempatan pada instrumen pasar uang dan/atau Efek bersifat utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun dan/atau deposito. INSIGHT MONEY (I-MONEY) akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan atau diperdagangkan di Bursa Efek Indonesia dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 195621,
+  "expenseRatio": 68,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "insight-money-20ff31c73b9a",
+  "currency": "IDR",
+  "lastAum": 495774750503,
+  "factsheet": "https://cache.makmur.id/files/products/637ee50479f48d91c48ef04e/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/637ee50479f48d91c48ef04e/prospectus.pdf",
+  "inceptionDate": 20150826,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

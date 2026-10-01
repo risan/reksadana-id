@@ -1,0 +1,89 @@
+{
+  "_id": "6412d967792d78750b097edf",
+  "name": "Eastspring Syariah Fixed Income USD Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/615e89d906b6703faa18b0fe/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "INDONESIA GOVT SUKUK 4.5% 01/12/2030"
+    },
+    {
+      "instrument": "PERUSAHAAN PENERBIT 4.55% 23/07/2030"
+    },
+    {
+      "instrument": "PERUSAHAAN PENERBIT SBSN 4.4%01/03/28"
+    },
+    {
+      "instrument": "PERUSAHAAN PENERBIT SBSN 5.1% 02/07/2029"
+    },
+    {
+      "instrument": "PERUSAHAAN PENERBIT SBSN 5.4% 15/11/2028"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 8603
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 1397
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -15,
+  "return5d": -39,
+  "return1m": -136,
+  "return3m": -125,
+  "returnytd": -93,
+  "return1y": -52,
+  "return3y": 743,
+  "return5y": -84,
+  "return10y": null,
+  "returnsi": -121,
+  "drawdownytd": -156,
+  "drawdown1y": -156,
+  "drawdown3y": -364,
+  "drawdown5y": -908,
+  "drawdownsi": -966,
+  "cagr1y": -52,
+  "cagr3y": 242,
+  "cagr5y": -17,
+  "cagr10y": null,
+  "cagrsi": -22,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH EASTSPRING SYARIAH FIXED INCOME USD (untuk selanjutnya disebut \"EASTSPRING SYARIAH FIXED INCOME USD\") adalah Reksa Dana Syariah berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. EASTSPRING SYARIAH FIXED INCOME USD bertujuan untuk memberikan potensi kinerja optimal atas investasi jangka menengah dengan melakukan investasi sesuai dengan Kebijakan Investasi. EASTSPRING SYARIAH FIXED INCOME USD akan melakukan investasi dengan komposisi portofolio investasi sebesar minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek Syariah berpendapatan tetap yang diperdagangkan baik di dalam maupun di luar negeri; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito Syariah; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek Syariah luar negeri, Manajer Investasi wajib memastikan kegiatan investasi EASTSPRING SYARIAH FIXED INCOME USD pada Efek Syariah luar negeri tidak akan bertentangan dengan ketentuan hukum dan peraturan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek Syariah luar negeri tersebut.",
+  "isSyariah": true,
+  "lastPrice": 93,
+  "expenseRatio": 206,
+  "minFirstBuy": 100,
+  "minNextBuy": 100,
+  "asof": 20261001,
+  "url": "eastspring-syariah-fixed-income-usd-kelas-a-b30afdeaa417",
+  "currency": "USD",
+  "lastAum": 13490000,
+  "factsheet": "https://cache.makmur.id/files/products/6412d967792d78750b097edf/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6412d967792d78750b097edf/prospectus.pdf",
+  "inceptionDate": 20210415,
+  "riskLevel": 40,
+  "traits": [
+    "Sharia",
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

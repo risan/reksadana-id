@@ -1,0 +1,86 @@
+{
+  "_id": "60d1eafd4cc7bb3913edb06a",
+  "name": "BNI-AM Dana Likuid Kelas A",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT BNI Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a2894cc7bb3913edb051/logo.png"
+  },
+  "custodian": {
+    "name": "DBS Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1aace4cc7bb3913edb059/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "DEPOSITO Bank Mega Syariah"
+    },
+    {
+      "instrument": "OBLIGASI BPD Sulselbar"
+    },
+    {
+      "instrument": "DEPOSITO BPD Nagari/Sumbar"
+    },
+    {
+      "instrument": "DEPOSITO BPD Riau Kepri Syariah"
+    },
+    {
+      "instrument": "OBLIGASI Chandra Asri Petrochemical"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 3200
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 6800
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 3,
+  "return5d": 12,
+  "return1m": 53,
+  "return3m": 151,
+  "returnytd": 302,
+  "return1y": 419,
+  "return3y": 1414,
+  "return5y": 2126,
+  "return10y": 5895,
+  "returnsi": 10579,
+  "drawdownytd": -8,
+  "drawdown1y": -8,
+  "drawdown3y": -8,
+  "drawdown5y": -10,
+  "drawdownsi": -16,
+  "cagr1y": 419,
+  "cagr3y": 451,
+  "cagr5y": 393,
+  "cagr10y": 474,
+  "cagrsi": 537,
+  "rating": 0,
+  "description": "REKSA DANA BNI-AM DANA LIKUID (selanjutnya disebut (”BNI-AM DANA LIKUID”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. BNI-AM DANA LIKUID bertujuan untuk memberikan tingkat pertumbuhan investasi yang menarik dengan risiko minimal sekaligus memperoleh tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat. BNI-AM DANA LIKUID akan melakukan investasi dengan komposisi portofolio Efek sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada Instrumen Pasar Uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau Efek bersifat utang, yang diterbitkan oleh korporasi dan/atau Pemerintah Republik Indonesia, dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang dijual dalam Penawaran Umum dan atau diperdagangkan di Bursa Efek Indonesia; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 205793,
+  "expenseRatio": 134,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "bni-am-dana-likuid-kelas-a-09e292e0a1a6",
+  "currency": "IDR",
+  "lastAum": 648228064777,
+  "factsheet": "https://cache.makmur.id/files/products/60d1eafd4cc7bb3913edb06a/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60d1eafd4cc7bb3913edb06a/prospectus.pdf",
+  "inceptionDate": 20121221,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

@@ -1,0 +1,86 @@
+{
+  "_id": "6108ecc84ce7bd6b08deeb3b",
+  "name": "Syailendra Dana Kas",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Syailendra Capital",
+    "logo": "https://cache.makmur.id/images/managers/60d1a4dd4cc7bb3913edb055/logo.png"
+  },
+  "custodian": {
+    "name": "CIMB Niaga",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b4184cc7bb3913edb05d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "ENRG01CN4"
+    },
+    {
+      "instrument": "FR0059"
+    },
+    {
+      "instrument": "IJEE03A"
+    },
+    {
+      "instrument": "IMFI06ACN2"
+    },
+    {
+      "instrument": "MBMA01ACN4"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9097
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 903
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 12,
+  "return1m": 45,
+  "return3m": 134,
+  "returnytd": 333,
+  "return1y": 462,
+  "return3y": 1552,
+  "return5y": 2473,
+  "return10y": 6651,
+  "returnsi": 8321,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": 0,
+  "drawdown5y": 0,
+  "drawdownsi": -4,
+  "cagr1y": 462,
+  "cagr3y": 493,
+  "cagr5y": 452,
+  "cagr10y": 523,
+  "cagrsi": 550,
+  "rating": 0,
+  "description": "REKSA DANA SYAILENDRA DANA KAS (selanjutnya disebut “SYAILENDRA DANA KAS”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. SYAILENDRA DANA KAS bertujuan untuk memperoleh tingkat likuiditas yang tinggi untuk memenuhi kebutuhan uang tunai dalam waktu yang singkat sekaligus memberikan tingkat pendapatan investasi yang menarik. SYAILENDRA DANA KAS akan melakukan investasi dengan portofolio investasi dengan komposisi investasi 100% (seratus persen) dari Nilai Aktiva Bersih pada Instrumen Pasar Uang dalam negeri dan/atau Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, SYAILENDRA DANA KAS akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 183206,
+  "expenseRatio": 126,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "syailendra-dana-kas-31754fdb122c",
+  "currency": "IDR",
+  "lastAum": 3260000000000,
+  "factsheet": "https://cache.makmur.id/files/products/6108ecc84ce7bd6b08deeb3b/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6108ecc84ce7bd6b08deeb3b/prospectus.pdf",
+  "inceptionDate": 20150612,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

@@ -1,0 +1,86 @@
+{
+  "_id": "60dab82da0e7ab0a6943ed46",
+  "name": "Allianz Rupiah Liquid Fund Kelas A",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Allianz Global Investors Asset Management Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/60d1a4564cc7bb3913edb054/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "BANK MANDIRI-TD"
+    },
+    {
+      "instrument": "BANK MAYBANK INDONESIA-TD"
+    },
+    {
+      "instrument": "BANK SYARIAH ID-TD"
+    },
+    {
+      "instrument": "BANK CENTRAL ASIA SYARIAH-TD"
+    },
+    {
+      "instrument": "BANK CIMB NIAGA-TD"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 4203
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 5797
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 10,
+  "return1m": 41,
+  "return3m": 124,
+  "returnytd": 240,
+  "return1y": 331,
+  "return3y": 1283,
+  "return5y": 1742,
+  "return10y": 4828,
+  "returnsi": 9006,
+  "drawdownytd": -10,
+  "drawdown1y": -10,
+  "drawdown3y": -10,
+  "drawdown5y": -12,
+  "drawdownsi": -203,
+  "cagr1y": 331,
+  "cagr3y": 411,
+  "cagr5y": 326,
+  "cagr10y": 402,
+  "cagrsi": 428,
+  "rating": 0,
+  "description": "REKSA DANA ALLIANZ RUPIAH LIQUID FUND (selanjutnya disebut “ALLIANZ RUPIAH LIQUID FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta Peraturan Pelaksanaannya. ALLIANZ RUPIAH LIQUID FUND bertujuan untuk memberikan tingkat likuiditas yang tinggi dalam pemenuhan kebutuhan dana tunai dalam waktu yang singkat sekaligus memberikan tingkat pendapatan investasi yang menarik. ALLIANZ RUPIAH LIQUID FUND akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun baik dalam Rupiah maupun dalam mata uang asing dan/atau Efek bersifat utang yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau mempunyai sisa jatuh tempo tidak lebih dari 1 (satu) tahun; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, ALLIANZ RUPIAH LIQUID FUND akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 190062,
+  "expenseRatio": 128,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "allianz-rupiah-liquid-fund-kelas-a-5902d672685f",
+  "currency": "IDR",
+  "lastAum": 182890000000,
+  "factsheet": "https://cache.makmur.id/files/products/60dab82da0e7ab0a6943ed46/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60dab82da0e7ab0a6943ed46/prospectus.pdf",
+  "inceptionDate": 20110609,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

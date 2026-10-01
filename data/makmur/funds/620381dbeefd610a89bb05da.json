@@ -1,0 +1,86 @@
+{
+  "_id": "620381dbeefd610a89bb05da",
+  "name": "Batavia Dana Kas Maxima",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "logo": "https://cache.makmur.id/images/managers/62037caceefd610a89bb05d9/logo.png"
+  },
+  "custodian": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "OBLIGASI BERKELANJUTAN VI INDOMOBIL FINANCE DENGAN TINGKAT BUNGA TETAP TAHAP II TAHUN 2026 SERI A"
+    },
+    {
+      "instrument": "OBLIGASI BERKELANJUTAN VI PEGADAIAN TAHAP IV TAHUN 2025 SERI A"
+    },
+    {
+      "instrument": "PT. BANK JABAR BANTEN, TBK"
+    },
+    {
+      "instrument": "PT. BANK KB BUKOPIN, TBK"
+    },
+    {
+      "instrument": "PT. BANK NAGARI"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 5802
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 4198
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 9,
+  "return1m": 40,
+  "return3m": 109,
+  "returnytd": 264,
+  "return1y": 373,
+  "return3y": 1348,
+  "return5y": 2008,
+  "return10y": 5261,
+  "returnsi": 9266,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": 0,
+  "drawdown5y": 0,
+  "drawdownsi": -3,
+  "cagr1y": 373,
+  "cagr3y": 431,
+  "cagr5y": 373,
+  "cagr10y": 432,
+  "cagrsi": 340,
+  "rating": 0,
+  "description": "Reksa Dana BATAVIA DANA KAS MAXIMA adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Reksa Dana BATAVIA DANA KAS MAXIMA (selanjutnya disebut “BATAVIA DANA KAS MAXIMA“) bertujuan untuk mendapatkan tingkat pertumbuhan dana yang optimum dengan tetap mempertahankan nilai modal dalam jangka pendek dan menengah melalui penempatan dana pada instrumen pasar uang dan/atau efek bersifat hutang yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun. BATAVIA DANA KAS MAXIMA akan menginvestasikan dananya dengan komposisi investasi sebesar 100% (seratus persen) pada instrumen pasar uang dan/atau setara kas dan/atau efek bersifat hutang dengan jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun meliputi obligasi dan surat hutang lainnya yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun, yang diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 192655,
+  "expenseRatio": 119,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "batavia-dana-kas-maxima-ba1a494c4c9c",
+  "currency": "IDR",
+  "lastAum": 14658993559006,
+  "factsheet": "https://cache.makmur.id/files/products/620381dbeefd610a89bb05da/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/620381dbeefd610a89bb05da/prospectus.pdf",
+  "inceptionDate": 20070220,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

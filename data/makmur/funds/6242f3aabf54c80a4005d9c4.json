@@ -1,0 +1,88 @@
+{
+  "_id": "6242f3aabf54c80a4005d9c4",
+  "name": "Sucorinvest Sharia Sukuk Fund Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Sukuk Ijarah Berkelanjutan I Bali Towerindo Sentra Tahap III Tahun 2025 Seri B"
+    },
+    {
+      "instrument": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap III Tahun 2024 Seri C"
+    },
+    {
+      "instrument": "Sukuk Mudharabah Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap III Tahun 2025"
+    },
+    {
+      "instrument": "Sukuk Mudharabah Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap I Tahun 2025 Seri B"
+    },
+    {
+      "instrument": "Sukuk Mudharabah Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap II Tahun 2026 Seri B"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9902
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 98
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 3,
+  "return5d": 7,
+  "return1m": 26,
+  "return3m": 116,
+  "returnytd": 307,
+  "return1y": 475,
+  "return3y": 1789,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 3128,
+  "drawdownytd": -24,
+  "drawdown1y": -24,
+  "drawdown3y": -47,
+  "drawdown5y": null,
+  "drawdownsi": -48,
+  "cagr1y": 475,
+  "cagr3y": 564,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 568,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH BERBASIS SUKUK SUCORINVEST SHARIA SUKUK FUND (untuk selanjutnya disebut “SUCORINVEST SHARIA SUKUK FUND”) adalah Reksa Dana Syariah berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. SUCORINVEST SHARIA SUKUK FUNDbertujuan untuk menjadi pilihan investasi bagi Pemegang Unit Penyertaan untuk memperoleh tingkat pengembalian yang menarik dan stabil sesuai dengan Prinsip Syariah di Pasar Modal. SUCORINVEST SHARIA SUKUK FUND akan melakukan investasi dengan komposisi portofolio investasi minimum 85% (delapan puluh lima persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Sukuk yang ditawarkan di Indonesia melalui Penawaran Umum dan/atau Surat Berharga Syariah Negara dan/atau Sukuk yang ditawarkan tidak melalui Penawaran Umum yang jatuh temponya 1 (satu) tahun atau lebih dan memiliki peringkat layak investasi (investment grade); dan minimum 0% (nol persen) dan maksimum 15% (lima belas persen) dari Nilai Aktiva Bersih pada Efek Syariah berpendapatan tetap dan/atauinstrumen pasar uang Syariah dalam negeri dan/atau deposito Syariah; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": true,
+  "lastPrice": 131277,
+  "expenseRatio": 150,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "sucorinvest-sharia-sukuk-fund-kelas-a-d90869859872",
+  "currency": "IDR",
+  "lastAum": 3400000000000,
+  "factsheet": "https://cache.makmur.id/files/products/6242f3aabf54c80a4005d9c4/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6242f3aabf54c80a4005d9c4/prospectus.pdf",
+  "inceptionDate": 20211029,
+  "riskLevel": 40,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

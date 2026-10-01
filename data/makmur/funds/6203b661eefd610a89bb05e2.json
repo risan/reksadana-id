@@ -1,0 +1,88 @@
+{
+  "_id": "6203b661eefd610a89bb05e2",
+  "name": "Batavia Dana Kas Syariah Kelas A",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "logo": "https://cache.makmur.id/images/managers/62037caceefd610a89bb05d9/logo.png"
+  },
+  "custodian": {
+    "name": "Deutsche Bank",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b6b94cc7bb3913edb05f/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "PT BANK ALADIN SYARIAH"
+    },
+    {
+      "instrument": "PT. BANK JABAR BANTEN SYARIAH"
+    },
+    {
+      "instrument": "PT. BPD RIAU UNIT USAHA SYARIAH"
+    },
+    {
+      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN III PEGADAIAN TAHAP V TAHUN 2025 SERI A"
+    },
+    {
+      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN VI ADIRA FINANCE TAHAP III TAHUN 2026 SERI A"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 4316
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 5684
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 8,
+  "return1m": 41,
+  "return3m": 108,
+  "returnytd": 220,
+  "return1y": 319,
+  "return3y": 1223,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 1804,
+  "drawdownytd": -6,
+  "drawdown1y": -6,
+  "drawdown3y": -24,
+  "drawdown5y": null,
+  "drawdownsi": -29,
+  "cagr1y": 319,
+  "cagr3y": 392,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 347,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH BATAVIA DANA KAS SYARIAH (selanjutnya disebut “BATAVIA DANA KAS SYARIAH”) adalah Reksa Dana Syariah berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. BATAVIA DANA KAS SYARIAH bertujuan untuk mendapatkan tingkat pertumbuhan dana yang optimum dengan tetap mempertahankan nilai modal dalam jangka pendek dan menengah melalui instrumen investasi yang sesuai dengan Kebijakan Investasi BATAVIA DANA KAS SYARIAH yang memenuhi Prinsip Syariah di Pasar Modal. BATAVIA DANA KAS SYARIAH akan melakukan investasi dengan komposisi portofolio investasi 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah, dan/atau Efek Syariah berpendapatan tetap yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun, yang diperdagangkan baik di dalam maupun di luar negeri dan/atau deposito Syariah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, Manajer Investasi wajib memastikan kegiatan investasi BATAVIA DANA KAS SYARIAH pada Efek luar negeri tidak akan bertentangan dengan ketentuan hukum dan peraturan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": true,
+  "lastPrice": 118037,
+  "expenseRatio": 3,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "batavia-dana-kas-syariah-kelas-a-97a0722f7709",
+  "currency": "IDR",
+  "lastAum": 224967533510,
+  "factsheet": "https://cache.makmur.id/files/products/6203b661eefd610a89bb05e2/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6203b661eefd610a89bb05e2/prospectus.pdf",
+  "inceptionDate": 20211122,
+  "riskLevel": 5,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

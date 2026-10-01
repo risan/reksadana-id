@@ -1,0 +1,82 @@
+{
+  "_id": "691c7e9230df94d0758cd0e5",
+  "name": "Mandiri Investa Pasar Uang 2",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Mandiri Manajemen Investasi",
+    "logo": "https://cache.makmur.id/images/managers/6911eda443942404647039df/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank DKI"
+    },
+    {
+      "instrument": "Bank Hibank Indonesia"
+    },
+    {
+      "instrument": "Bank Jabar Banten Syariah"
+    },
+    {
+      "instrument": "Bank Maybank Indonesia Tbk"
+    },
+    {
+      "instrument": "Bank Mega"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 9770
+    }
+  ],
+  "portfolioAsof": 20260731,
+  "return1d": 1,
+  "return5d": 7,
+  "return1m": 34,
+  "return3m": 96,
+  "returnytd": 231,
+  "return1y": 301,
+  "return3y": 981,
+  "return5y": 1432,
+  "return10y": null,
+  "returnsi": 3226,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": 0,
+  "drawdown5y": 0,
+  "drawdownsi": 0,
+  "cagr1y": 301,
+  "cagr3y": 317,
+  "cagr5y": 271,
+  "cagr10y": null,
+  "cagrsi": 332,
+  "rating": 0,
+  "description": "REKSA DANA MANDIRI INVESTA PASAR UANG 2 (selanjutnya disebut “MANDIRI INVESTA PASAR UANG  2”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Pasar Modal  beserta peraturan pelaksanaannya.  MANDIRI INVESTA PASAR UANG 2 bertujuan untuk memberikan tingkat likuiditas untuk memenuhi  kebutuhan dana tunai dalam waktu yang singkat sekaligus memberikan tingkat pendapatan investasi  yang menarik.",
+  "isSyariah": false,
+  "lastPrice": 132263,
+  "expenseRatio": 143,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "mandiri-investa-pasar-uang-2-a6131aa1e07c",
+  "currency": "IDR",
+  "lastAum": 39650000000,
+  "factsheet": "https://cache.makmur.id/files/products/691c7e9230df94d0758cd0e5/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/691c7e9230df94d0758cd0e5/prospectus.pdf",
+  "inceptionDate": 20180315,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

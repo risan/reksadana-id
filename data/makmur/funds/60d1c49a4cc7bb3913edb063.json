@@ -1,0 +1,89 @@
+{
+  "_id": "60d1c49a4cc7bb3913edb063",
+  "name": "Trimegah Fixed Income Plan",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Trimegah Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a1854cc7bb3913edb050/logo.png"
+  },
+  "custodian": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Obligasi Negara Republik Indonesia Seri FR0104"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan I Bumi Tahap V Tahun 2026 Seri B"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan I Petrindo Jaya Kreasi Tahap II Tahun 2025 Seri A"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri B"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan I Wahana Inti Selaras Tahap III Tahun 2026 Seri A"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9279
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 721
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 8,
+  "return5d": 8,
+  "return1m": 45,
+  "return3m": 226,
+  "returnytd": 187,
+  "return1y": 296,
+  "return3y": 1715,
+  "return5y": 3301,
+  "return10y": null,
+  "returnsi": 5786,
+  "drawdownytd": -189,
+  "drawdown1y": -189,
+  "drawdown3y": -189,
+  "drawdown5y": -189,
+  "drawdownsi": -353,
+  "cagr1y": 296,
+  "cagr3y": 542,
+  "cagr5y": 587,
+  "cagr10y": null,
+  "cagrsi": 640,
+  "rating": 0,
+  "description": "REKSA DANA TRIMEGAH FIXED INCOME PLAN (selanjutnya disebut “TRIMEGAH FIXED INCOME PLAN”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. TRIMEGAH FIXED INCOME PLAN bertujuan untuk memberikan alternatif investasi dengan memberikan tingkat pengembalian yang kompetitif kepada Pemegang Unit Penyertaan melalui investasi pada Efek Bersifat Utang serta dapat berinvestasi pada Efek bersifat ekuitas dan/atau instrumen pasar uang dalam negeri dan/atau deposito. TRIMEGAH FIXED INCOME PLAN akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek Bersifat Utang yang diperdagangkan baik di dalam maupun di luar negeri; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas dan/atau instrumen pasar uang dalam negeri yang memiliki jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 117952,
+  "expenseRatio": 242,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "trimegah-fixed-income-plan-667eadad7fcf",
+  "currency": "IDR",
+  "lastAum": 7194000000000,
+  "factsheet": "https://cache.makmur.id/files/products/60d1c49a4cc7bb3913edb063/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60d1c49a4cc7bb3913edb063/prospectus.pdf",
+  "inceptionDate": 20190523,
+  "riskLevel": 40,
+  "traits": [
+    "Dividend",
+    "Insurance"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

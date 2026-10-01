@@ -1,0 +1,86 @@
+{
+  "_id": "60eec58683d25903cd37ff6d",
+  "name": "Avrist Ada Kas Mutiara",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Avrist Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a3d94cc7bb3913edb053/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Deposito Bank BJB sy"
+    },
+    {
+      "instrument": "Bank Deposito Bank MNC"
+    },
+    {
+      "instrument": "Bank Deposito Bank Riau sy"
+    },
+    {
+      "instrument": "Bank Deposito Bank Mantap"
+    },
+    {
+      "instrument": "Bank Deposito Bank Sulutgo"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 5295
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 4705
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 10,
+  "return1m": 49,
+  "return3m": 141,
+  "returnytd": 355,
+  "return1y": 481,
+  "return3y": 1670,
+  "return5y": 2526,
+  "return10y": null,
+  "returnsi": 6023,
+  "drawdownytd": -2,
+  "drawdown1y": -2,
+  "drawdown3y": -6,
+  "drawdown5y": -8,
+  "drawdownsi": -8,
+  "cagr1y": 481,
+  "cagr3y": 528,
+  "cagr5y": 461,
+  "cagr10y": null,
+  "cagrsi": 510,
+  "rating": 0,
+  "description": "REKSA DANA AVRIST ADA KAS MUTIARA (selanjutnya disebut \"AVRIST ADA KAS MUTIARA\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. AVRIST ADA KAS MUTIARA bertujuan untuk memberikan tingkat pertumbuhan investasi yang relatif stabil dengan risiko yang relatif rendah melalui diversifikasi pada instrumen pasar uang dalam negeri yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan Efek Bersifat Utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun namun pada saat yang sama tetap memberikan likuiditas yang tinggi bagi investor. AVRIST ADA KAS MUTIARA akan melakukan investasi dengan komposisi portofolio efek sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau Efek Bersifat Utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi berbadan hukum Indonesia dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang diperdagangkan di Indonesia dan/atau deposito dalam mata uang Rupiah; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 160228,
+  "expenseRatio": 56,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "avrist-ada-kas-mutiara-8389c11dbf1c",
+  "currency": "IDR",
+  "lastAum": 454585760000,
+  "factsheet": "https://cache.makmur.id/files/products/60eec58683d25903cd37ff6d/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60eec58683d25903cd37ff6d/prospectus.pdf",
+  "inceptionDate": 20170412,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

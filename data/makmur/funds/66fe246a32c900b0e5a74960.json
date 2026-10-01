@@ -1,0 +1,86 @@
+{
+  "_id": "66fe246a32c900b0e5a74960",
+  "name": "STAR Fixed Income Dollar",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT STAR Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6549cd925bcdc24d0cea687f/logo.png"
+  },
+  "custodian": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "OBL GERSP 8.5 11/28/27 CORP"
+    },
+    {
+      "instrument": "OBL ICBPIJ 3.541 04/27/32"
+    },
+    {
+      "instrument": "OBL INDOIS 5.4 11/15/28"
+    },
+    {
+      "instrument": "OBL INDON 4.55 01/11/28"
+    },
+    {
+      "instrument": "OBL INDYIJ 8.75 05/07/29"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9353
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 647
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 3,
+  "return1m": 29,
+  "return3m": 92,
+  "returnytd": 262,
+  "return1y": 361,
+  "return3y": 1408,
+  "return5y": -283,
+  "return10y": null,
+  "returnsi": 1014,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": -62,
+  "drawdown5y": -2114,
+  "drawdownsi": -2520,
+  "cagr1y": 361,
+  "cagr3y": 449,
+  "cagr5y": -57,
+  "cagr10y": null,
+  "cagrsi": 105,
+  "rating": 0,
+  "description": "REKSA DANA STAR FIXED INCOME DOLLAR (selanjutnya disebut “STAR FIXED INCOME DOLLAR”) adalah Reksa Dana berbentuk  Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. STAR FIXED INCOME DOLLAR bertujuan untuk memperoleh pendapatan yang optimal dalam jangka menengah dan panjang serta  mempunyai fleksibilitas tinggi terhadap perubahan nilai tukar mata uang asing dengan tingkat risiko yang minimal, mayoritas pada Efek  yang memiliki denominasi Dollar Amerika Serikat. STAR FIXED INCOME DOLLAR akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen)  dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek Bersifat Utang yang diterbitkan oleh Pemerintah Republik  Indonesia dan/atau korporasi yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun  di luar negeri; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang  dan/atau deposito; dalam denominasi Dollar Amerika Serikat dan/atau denominasi mata uang lain dengan ketentuan mayoritas pada  Efek yang memiliki denominasi Dollar Amerika Serikat, dan sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, STAR FIXED INCOME DOLLAR akan mengacu kepada peraturan perundang-undangan  yang berlaku di Indonesia dan hukum negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 110,
+  "expenseRatio": 164,
+  "minFirstBuy": 100,
+  "minNextBuy": 100,
+  "asof": 20261001,
+  "url": "star-fixed-income-dollar-b205ac355cb3",
+  "currency": "USD",
+  "lastAum": 21699983,
+  "factsheet": "https://cache.makmur.id/files/products/66fe246a32c900b0e5a74960/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/66fe246a32c900b0e5a74960/prospectus.pdf",
+  "inceptionDate": 20170710,
+  "riskLevel": 40,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

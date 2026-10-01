@@ -1,0 +1,88 @@
+{
+  "_id": "65b855533bd47139ba4e4250",
+  "name": "STAR Infobank 15 Kelas Utama",
+  "category": "equity",
+  "manager": {
+    "name": "PT STAR Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6549cd925bcdc24d0cea687f/logo.png"
+  },
+  "custodian": {
+    "name": "DBS Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1aace4cc7bb3913edb059/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "SAHAM PT BANK CENTRAL ASIA TBK"
+    },
+    {
+      "instrument": "SAHAM PT BANK CIMB NIAGA TBK"
+    },
+    {
+      "instrument": "SAHAM PT BANK DANAMON INDONESIA TBK"
+    },
+    {
+      "instrument": "SAHAM PT BANK JAGO TBK"
+    },
+    {
+      "instrument": "SAHAM PT BANK MANDIRI ( PERSERO ) TBK"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9894
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 106
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -49,
+  "return5d": -257,
+  "return1m": -929,
+  "return3m": 678,
+  "returnytd": -1845,
+  "return1y": -1436,
+  "return3y": -2659,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": -2665,
+  "drawdownytd": -2944,
+  "drawdown1y": -2962,
+  "drawdown3y": -4539,
+  "drawdown5y": null,
+  "drawdownsi": -4539,
+  "cagr1y": -1436,
+  "cagr3y": -979,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": -931,
+  "rating": 0,
+  "description": "Dibangun sesuai dengan Undang-Undang Pasar Modal, tujuannya adalah mencerminkan performa Indeks Infobank15. Star Infobank15 menginvestasikan sebagian besar aktiva, yakni 80% hingga 100%, pada saham yang masuk dalam Indeks Infobank15 di Bursa Efek Indonesia, menawarkan eksposur langsung pada pasar ekuitas terkemuka.   Sisa dana, hingga 20%, dialokasikan pada instrumen pasar uang dan deposito, memberikan diversifikasi dan keamanan. Ideal bagi investor yang mencari pertumbuhan modal sejalan dengan salah satu indeks pasar saham terdepan di Indonesia, Star Infobank15 menjanjikan pengelolaan yang seimbang antara potensi pertumbuhan dan risiko.",
+  "isSyariah": false,
+  "lastPrice": 73345,
+  "expenseRatio": 87,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "star-infobank-15-kelas-utama-2f518ee015d7",
+  "currency": "IDR",
+  "lastAum": 42594178066,
+  "factsheet": "https://cache.makmur.id/files/products/65b855533bd47139ba4e4250/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/65b855533bd47139ba4e4250/prospectus.pdf",
+  "inceptionDate": 20230731,
+  "riskLevel": 90,
+  "traits": [
+    "Index"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

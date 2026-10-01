@@ -1,0 +1,88 @@
+{
+  "_id": "637f216179f48d91c48ef12c",
+  "name": "Insight Money Syariah",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Insight Investments Management",
+    "logo": "https://cache.makmur.id/images/managers/637ee25579f48d91c48ef049/logo.png"
+  },
+  "custodian": {
+    "name": "Mandiri",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b27d4cc7bb3913edb05b/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "CIMB NIAGA AUTO FINANCE, PT"
+    },
+    {
+      "instrument": "MEDCO POWER INDONESIA, PT"
+    },
+    {
+      "instrument": "OKI PULP & PAPER MILLS, PT"
+    },
+    {
+      "instrument": "PEGADAIAN, PT"
+    },
+    {
+      "instrument": "PINDO DELI PULP AND PAPER MILLS, PT"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9112
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 888
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 9,
+  "return1m": 43,
+  "return3m": 127,
+  "returnytd": 368,
+  "return1y": 508,
+  "return3y": 1790,
+  "return5y": 2936,
+  "return10y": 7066,
+  "returnsi": 7932,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": 0,
+  "drawdown5y": -1,
+  "drawdownsi": -202,
+  "cagr1y": 508,
+  "cagr3y": 564,
+  "cagr5y": 528,
+  "cagr10y": 549,
+  "cagrsi": 545,
+  "rating": 0,
+  "description": "REKSA DANA INSIGHT MONEY SYARIAH (I-MONEY SYARIAH) (selanjutnya disebut “INSIGHT MONEY SYARIAH (I-MONEY SYARIAH)”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. INSIGHT MONEY SYARIAH (I-MONEY SYARIAH) bertujuan untuk memberikan tingkat pertumbuhan investasi yang optimal sesuai dengan tingkat risiko yang dapat diterima melalui investasi pada instrumen pasar uang syariah dalam negeri dan/atau Sukuk yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun dan/atau deposito Syariah. INSIGHT MONEY SYARIAH (I-MONEY SYARIAH) akan melakukan investasi dengan komposisi investasi sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen Pasar Uang Syariah dalam negeri dan/atau Surat Berharga Syariah Negara (Sukuk Negara) dan/atau Sukuk yang diterbitkan oleh korporasi berbadan hukum Indonesia yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia dan/atau deposito Syariah;sesuai dengan peraturan perundang-undangan yang berlaku.",
+  "isSyariah": true,
+  "lastPrice": 179320,
+  "expenseRatio": 69,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "insight-money-syariah-30adb361340b",
+  "currency": "IDR",
+  "lastAum": 667378019023,
+  "factsheet": "https://cache.makmur.id/files/products/637f216179f48d91c48ef12c/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/637f216179f48d91c48ef12c/prospectus.pdf",
+  "inceptionDate": 20150930,
+  "riskLevel": 5,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

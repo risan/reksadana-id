@@ -1,0 +1,88 @@
+{
+  "_id": "625396dabf54c80a4005db6a",
+  "name": "Syailendra Sharia Money Market Fund Kelas A",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Syailendra Capital",
+    "logo": "https://cache.makmur.id/images/managers/60d1a4dd4cc7bb3913edb055/logo.png"
+  },
+  "custodian": {
+    "name": "CIMB Niaga",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b4184cc7bb3913edb05d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "PBS003"
+    },
+    {
+      "instrument": "SIIJEE02A"
+    },
+    {
+      "instrument": "SIWIFI01ACN1"
+    },
+    {
+      "instrument": "SMADMF06ACN3"
+    },
+    {
+      "instrument": "SMPNMP01ASECN4"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 8205
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 1795
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 9,
+  "return1m": 42,
+  "return3m": 135,
+  "returnytd": 314,
+  "return1y": 440,
+  "return3y": 1570,
+  "return5y": 2549,
+  "return10y": null,
+  "returnsi": 5490,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": -2,
+  "drawdown5y": -2,
+  "drawdownsi": -10,
+  "cagr1y": 440,
+  "cagr3y": 498,
+  "cagr5y": 465,
+  "cagr10y": null,
+  "cagrsi": 492,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH SYAILENDRA SHARIA MONEY MARKET FUND (untuk selanjutnya disebut “SYAILENDRA SHARIA MONEY MARKET FUND”) adalah Reksa Dana Syariah Pasar Uang berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. SYAILENDRA SHARIA MONEY MARKET FUND bertujuan memberikan hasil investasi dengan berinvestasi 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau Efek Syariah Berpendapatan Tetap termasuk Sukuk yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun dan/atau deposito Syariah dalam mata uang Rupiah, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. SYAILENDRA SHARIA MONEY MARKET FUND akan berinvestasi dengan komposisi portofolio investasi 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau Efek Syariah Berpendapatan Tetap termasuk Sukuk yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun dan/atau deposito Syariah dalam mata uang Rupiah; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, Manajer Investasi wajib memastikan kegiatan investasi SYAILENDRA SHARIA MONEY MARKET FUND pada Efek luar negeri tidak akan bertentangan dengan ketentuan hukum dan peraturan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": true,
+  "lastPrice": 154901,
+  "expenseRatio": 159,
+  "minFirstBuy": 50000,
+  "minNextBuy": 50000,
+  "asof": 20261001,
+  "url": "syailendra-sharia-money-market-fund-kelas-a-d33427bae793",
+  "currency": "IDR",
+  "lastAum": 1130000000000,
+  "factsheet": "https://cache.makmur.id/files/products/625396dabf54c80a4005db6a/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/625396dabf54c80a4005db6a/prospectus.pdf",
+  "inceptionDate": 20170825,
+  "riskLevel": 5,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

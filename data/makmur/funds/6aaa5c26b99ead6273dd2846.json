@@ -1,0 +1,90 @@
+{
+  "_id": "6aaa5c26b99ead6273dd2846",
+  "name": "Danapathi Balance Fund",
+  "category": "mixed",
+  "manager": {
+    "name": "PT Danapathi Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6833cfee1f93e8abc08018dc/logo.png"
+  },
+  "custodian": {
+    "name": "DBS Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1aace4cc7bb3913edb059/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "TINS"
+    },
+    {
+      "instrument": "BMRI"
+    },
+    {
+      "instrument": "TPIA"
+    },
+    {
+      "instrument": "BVIC05CN1"
+    },
+    {
+      "instrument": "MEDC"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 6610
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 432
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 2957
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -88,
+  "return5d": -269,
+  "return1m": -225,
+  "return3m": 1338,
+  "returnytd": 757,
+  "return1y": 1787,
+  "return3y": 3843,
+  "return5y": 5505,
+  "return10y": 15006,
+  "returnsi": 18847,
+  "drawdownytd": -2154,
+  "drawdown1y": -2154,
+  "drawdown3y": -2154,
+  "drawdown5y": -2154,
+  "drawdownsi": -3300,
+  "cagr1y": 1787,
+  "cagr3y": 1145,
+  "cagr5y": 917,
+  "cagr10y": 960,
+  "cagrsi": 807,
+  "rating": 0,
+  "description": "REKSA DANA DANAPATHI BALANCE FUND (selanjutnya disebut “DANAPATHI BALANCE FUND”) adalah Reksa Dana terbuka berbentuk Kontrak Investasi Kolektif (“KIK”) berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. DANAPATHI BALANCE FUND bertujuan untuk memberikan hasil optimal untuk para investor dalam jangka panjang melalui proses investasi yang dilakukan secara mendalam dan pengelolaan yang penuh kehati-hatian di dalam pasar modal Indonesia melalui investasi pada Efek bersifat ekuitas, Efek bersifat utang dan instrumenpasar uang.",
+  "isSyariah": false,
+  "lastPrice": 288466,
+  "expenseRatio": 528,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "danapathi-balance-fund-e6c63725f98e",
+  "currency": "IDR",
+  "lastAum": 99838653424,
+  "factsheet": "https://cache.makmur.id/files/products/6aaa5c26b99ead6273dd2846/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6aaa5c26b99ead6273dd2846/prospectus.pdf",
+  "inceptionDate": 20130208,
+  "riskLevel": 65,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "campuran"
+}

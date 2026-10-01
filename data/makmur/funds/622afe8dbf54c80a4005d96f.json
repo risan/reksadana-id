@@ -1,0 +1,90 @@
+{
+  "_id": "622afe8dbf54c80a4005d96f",
+  "name": "Sucorinvest Bond Fund",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Obligasi Berkelanjutan I Angkasa Pura II Tahap II Tahun 2020 Seri C"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan V Indah Kiat Pulp Paper Tahap III Tahun 2025 Seri C"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan III Buma Tahun 2025 Seri  B"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan III Lontar Papyrus Pulp  Paper Industry Tahap I Tahun 2024 Seri A"
+    },
+    {
+      "instrument": "Obligasi Negara Republik Indonesia Seri  FR0059"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi Pemerintah",
+      "weight": 5115
+    },
+    {
+      "asset": "Obligasi Korporasi",
+      "weight": 4036
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 849
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 16,
+  "return5d": 7,
+  "return1m": 2,
+  "return3m": 112,
+  "returnytd": -2,
+  "return1y": 461,
+  "return3y": 987,
+  "return5y": 1101,
+  "return10y": null,
+  "returnsi": 7140,
+  "drawdownytd": -264,
+  "drawdown1y": -264,
+  "drawdown3y": -374,
+  "drawdown5y": -632,
+  "drawdownsi": -993,
+  "cagr1y": 461,
+  "cagr3y": 319,
+  "cagr5y": 211,
+  "cagr10y": null,
+  "cagrsi": 564,
+  "rating": 0,
+  "description": "Reksa Dana Pendapatan Tetap REKSA DANA SUCORINVEST BOND FUND (\"REKSA DANA SUCORINVEST BOND FUND\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No.8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. REKSA DANA SUCORINVEST BOND FUND bertujuan untuk memberikan suatu tingkat pengembalian yang menarik dengan memelihara stabilitas modal dengan berinvestasi pada instrumen berpendapatan tetap. REKSA DANA SUCORINVEST BOND FUND mempunyai komposisi investasi sebagai berikut: Minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada efek bersifat hutang yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek; dan Minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang, termasuk setara kas, berdasarkan peraturan perundang-undangan yang berlaku di Indonesia; Pada setiap saat, 50% (lima puluh persen) dari Portofolio Sucorinvest Bond Fund akan berinvestasi pada efek bersifat hutang yang diterbitkan Pemerintah Indonesia dan/atau BUMN. Manajer Investasi dapat menempatkan jumlah tertentu dari aset REKSA DANA SUCORINVEST BOND FUND dalam bentuk Kas antara lain untuk keperluan penyelesaian transaksi Efek, pemenuhan pembayaran kewajiban kepada Pemegang Unit Penyertaan dan pembayaran biaya-biaya yang menjadi beban REKSA DANA SUCORINVEST BOND FUND sebagaimana diatur dalam Kontrak dan Prospektus, serta mengantisipasi kebutuhan likuiditas REKSA DANA SUCORINVEST BOND FUND lainnya. Manajer Investasi akan selalu menyesuaikan kebijakan investasi tersebut di atas dengan Peraturan Otoritas Jasa Keuangan (“OJK“) yang berlaku dan kebijakan-kebijakan yang dikeluarkan oleh OJK.",
+  "isSyariah": false,
+  "lastPrice": 171398,
+  "expenseRatio": 152,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "sucorinvest-bond-fund-982abb6b9292",
+  "currency": "IDR",
+  "lastAum": 395270000000,
+  "factsheet": "https://cache.makmur.id/files/products/622afe8dbf54c80a4005d96f/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/622afe8dbf54c80a4005d96f/prospectus.pdf",
+  "inceptionDate": 20161207,
+  "riskLevel": 40,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

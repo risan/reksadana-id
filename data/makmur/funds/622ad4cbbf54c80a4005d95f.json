@@ -1,0 +1,86 @@
+{
+  "_id": "622ad4cbbf54c80a4005d95f",
+  "name": "Sucorinvest Maxi Fund",
+  "category": "equity",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "BANK MANDIRI ( PERSERO ) Tbk"
+    },
+    {
+      "instrument": "BANK NEGARA INDONESIA (Persero) Tbk"
+    },
+    {
+      "instrument": "BANK RAKYAT INDONESIA (PERSERO) Tbk"
+    },
+    {
+      "instrument": "BANK TABUNGAN NEGARA (PERSERO) Tbk"
+    },
+    {
+      "instrument": "BUMI RESOURCES Tbk"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9672
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 328
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -61,
+  "return5d": -206,
+  "return1m": -704,
+  "return3m": 802,
+  "returnytd": -574,
+  "return1y": 1693,
+  "return3y": 3600,
+  "return5y": 5682,
+  "return10y": 18044,
+  "returnsi": 15654,
+  "drawdownytd": -2858,
+  "drawdown1y": -2858,
+  "drawdown3y": -2858,
+  "drawdown5y": -3218,
+  "drawdownsi": -3703,
+  "cagr1y": 1693,
+  "cagr3y": 1079,
+  "cagr5y": 942,
+  "cagr10y": 1086,
+  "cagrsi": 802,
+  "rating": 0,
+  "description": "REKSA DANA SUCORINVEST MAXI FUND (untuk selanjutnya disebut “SUCORINVEST MAXI FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. SUCORINVEST MAXI FUND bertujuan untuk memberikan apresiasi modal dan tingkat keuntungan yang optimal dalam jangka panjang dengan cara mengkapitalisasi pasar modal Indonesia. SUCORINVEST MAXI FUND akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1(satu) tahun dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. Manajer Investasi akan selalu menyesuaikan kebijakan investasi tersebut diatas dengan Peraturan OJK yang berlaku dan kebijakan-kebijakan yang dikeluarkan oleh OJK.",
+  "isSyariah": false,
+  "lastPrice": 256542,
+  "expenseRatio": 443,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "sucorinvest-maxi-fund-b1bd5786d824",
+  "currency": "IDR",
+  "lastAum": 1230000000000,
+  "factsheet": "https://cache.makmur.id/files/products/622ad4cbbf54c80a4005d95f/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/622ad4cbbf54c80a4005d95f/prospectus.pdf",
+  "inceptionDate": 20140718,
+  "riskLevel": 90,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

@@ -1,0 +1,88 @@
+{
+  "_id": "67bc706092fbf44c2dcab0f9",
+  "name": "Trimegah Dana Tetap Syariah Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Trimegah Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a1854cc7bb3913edb050/logo.png"
+  },
+  "custodian": {
+    "name": "CIMB Niaga",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b4184cc7bb3913edb05d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap II Tahun 2025 Seri B"
+    },
+    {
+      "instrument": "Sukuk Mudharabah Berkelanjutan II Lontar Papyrus Pulp & Paper Industry Tahap II Tahun 2026 Seri B"
+    },
+    {
+      "instrument": "Sukuk Mudharabah Berkelanjutan II Oki Pulp & Paper Mills Tahap II Tahun 2025 Seri A"
+    },
+    {
+      "instrument": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap I Tahun 2025 Seri B"
+    },
+    {
+      "instrument": "Sukuk Mudharabah Berkelanjutan IV Indah Kiat Pulp & Paper Tahap IV Tahun 2025 Seri B"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9895
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 105
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 11,
+  "return5d": 6,
+  "return1m": 50,
+  "return3m": 278,
+  "returnytd": 310,
+  "return1y": 426,
+  "return3y": 2278,
+  "return5y": 3571,
+  "return10y": null,
+  "returnsi": 5619,
+  "drawdownytd": -161,
+  "drawdown1y": -161,
+  "drawdown3y": -161,
+  "drawdown5y": -179,
+  "drawdownsi": -845,
+  "cagr1y": 426,
+  "cagr3y": 708,
+  "cagr5y": 630,
+  "cagr10y": null,
+  "cagrsi": 675,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH TRIMEGAH DANA TETAP SYARIAH (selanjutnya disebut \"TRIMEGAH DANA TETAP SYARIAH\") adalah  Reksa Dana Syariah berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No.8 tahun 1995 tentang Pasar  Modal dan peraturan pelaksanaannya.  TRIMEGAH DANA TETAP SYARIAH bertujuan untuk memperoleh pertumbuhan nilai investasi yang optimal untuk jangka  panjang sesuai dengan Prinsip Syariah di Pasar Modal melalui investasi pada Efek Syariah Berpendapatan Tetap yang  tercantum dalam Daftar Efek Syariah yang ditetapkan oleh OJK dan/atau pihak lain yang diakui oleh OJK.  TRIMEGAH DANA TETAP SYARIAH akan berinvestasi dengan komposisi portofolio investasi sebesar minimum 80% (delapan  puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek Syariah Berpendapatan Tetap  termasuk Sukuk yang diperdagangkan baik di dalam maupun di luar negeri, dan minimum 0% (nol persen) dan maksimum  20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek Syariah bersifat ekuitas dan/atau instrumen pasar uang syariah  dalam negeri yang memiliki jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito syariah, sesuai dengan  peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": true,
+  "lastPrice": 156195,
+  "expenseRatio": 126,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "trimegah-dana-tetap-syariah-kelas-a-955035ded325",
+  "currency": "IDR",
+  "lastAum": 4960150000000,
+  "factsheet": "https://cache.makmur.id/files/products/67bc706092fbf44c2dcab0f9/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/67bc706092fbf44c2dcab0f9/prospectus.pdf",
+  "inceptionDate": 20191205,
+  "riskLevel": 40,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

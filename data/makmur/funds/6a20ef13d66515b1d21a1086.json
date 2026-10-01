@@ -1,0 +1,88 @@
+{
+  "_id": "6a20ef13d66515b1d21a1086",
+  "name": "KISI Global Sharia Transformative Technology Equity Fund USD",
+  "category": "equity",
+  "manager": {
+    "name": "PT KIM Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/669736ffa9ee6c929486b58b/logo.png"
+  },
+  "custodian": {
+    "name": "Deutsche Bank",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b6b94cc7bb3913edb05f/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "AAPL US Equity"
+    },
+    {
+      "instrument": "GOOGL US Equity"
+    },
+    {
+      "instrument": "AMD US Equity"
+    },
+    {
+      "instrument": "AMZN US Equity"
+    },
+    {
+      "instrument": "CSCO US Equity"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9740
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 260
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 43,
+  "return5d": -85,
+  "return1m": 588,
+  "return3m": -356,
+  "returnytd": 2932,
+  "return1y": 3785,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 6998,
+  "drawdownytd": -1870,
+  "drawdown1y": -1870,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -2831,
+  "cagr1y": 3785,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 3283,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH KISI GLOBAL SHARIA TRANSFORMATIVE TECHNOLOGY EQUITY FUND USD (untuk selanjutnya disebut “KISI  GLOBAL SHARIA TRANSFORMATIVE TECHNOLOGY EQUITY FUND USD”) adalah Reksa Dana Syariah Berbasis Efek Syariah Luar  Negeri berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal sebagaimana  diubah dengan Undang-undang Nomor 4 tahun 2023 tentang Pengembangan dan Penguatan Sektor Jasa Keuangan (“Undang Undang Pasar Modal”) beserta peraturan pelaksanaannya.  KISI GLOBAL SHARIA TRANSFORMATIVE TECHNOLOGY EQUITY FUND USD bertujuan untuk memberikan imbal hasil jangka panjang  yang optimal melalui penempatan investasi termasuk ke dalam Efek Syariah bersifat ekuitas yang berkaitan dengan  Transformative Technology dan memenuhi Prinsip Syariah di Pasar Modal.",
+  "isSyariah": true,
+  "lastPrice": 170,
+  "expenseRatio": 270,
+  "minFirstBuy": 10000,
+  "minNextBuy": 1000,
+  "asof": 20260930,
+  "url": "kisi-global-sharia-transformative-technology-equity-fund-usd-ffc4bc45cbee",
+  "currency": "USD",
+  "lastAum": 572833,
+  "factsheet": "https://cache.makmur.id/files/products/6a20ef13d66515b1d21a1086/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6a20ef13d66515b1d21a1086/prospectus.pdf",
+  "inceptionDate": 20241118,
+  "riskLevel": 90,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

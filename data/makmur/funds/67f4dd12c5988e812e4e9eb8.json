@@ -1,0 +1,81 @@
+{
+  "_id": "67f4dd12c5988e812e4e9eb8",
+  "name": "Avrist Sukuk Berkah 8",
+  "category": "capitalprotected",
+  "manager": {
+    "name": "PT Avrist Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a3d94cc7bb3913edb053/logo.png"
+  },
+  "custodian": {
+    "name": "BSI",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b3d64cc7bb3913edb05c/logo.png"
+  },
+  "holding": {
+    "name": "BSI",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b3d64cc7bb3913edb05c/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Sukuk Mudharabah Berkelanjutan I Pindo Deli PulpAnd Paper Tahap II Tahun 2025 Seri B"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9928
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 72
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 7,
+  "return5d": 11,
+  "return1m": 101,
+  "return3m": 218,
+  "returnytd": 475,
+  "return1y": 933,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 1678,
+  "drawdownytd": -359,
+  "drawdown1y": -359,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -359,
+  "cagr1y": 933,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 1169,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH TERPROTEKSI AVRIST SUKUK BERKAH 8 adalah Reksa Dana Syariah Terproteksi berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal sebagaimana terakhir diubah dengan Undang-Undang Nomor 4 tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan beserta peraturan pelaksanaannya. REKSA DANA SYARIAH TERPROTEKSI AVRIST SUKUK BERKAH 8 bertujuan untuk memberikan proteksi sebesar 100% (seratus persen) atas Pokok Investasi yang akan dicapai secara keseluruhan pada Tanggal Pelunasan Akhir dan potensi tambahan Hasil Investasi melalui investasi sesuai dengan Kebijakan Investasi serta menurunkan tingkat risiko melalui pemilihan Efek Syariah secara selektif dan tidak bertentangan dengan Prinsip Syariah di Pasar Modal.",
+  "isSyariah": false,
+  "lastPrice": 106110,
+  "expenseRatio": 126,
+  "minFirstBuy": 50000000,
+  "minNextBuy": 50000000,
+  "asof": 20261001,
+  "url": "avrist-sukuk-berkah-8-6de7adf515a2",
+  "currency": "IDR",
+  "lastAum": 47348420000,
+  "factsheet": "https://cache.makmur.id/files/products/67f4dd12c5988e812e4e9eb8/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/67f4dd12c5988e812e4e9eb8/prospectus.pdf",
+  "inceptionDate": 20250507,
+  "riskLevel": 50,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": [],
+  "maturityDates": [
+    {
+      "date": 20280430,
+      "maxPayoutPercentage": 10000
+    }
+  ],
+  "status": 4,
+  "fixed1y": 800,
+  "routeCategory": "terproteksi"
+}

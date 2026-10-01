@@ -1,0 +1,88 @@
+{
+  "_id": "650c168b13be668f17faac02",
+  "name": "BRI MSCI Indonesia ESG Screened Kelas A",
+  "category": "equity",
+  "manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "logo": "https://cache.makmur.id/images/managers/61e6796f3845210a42c08858/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "BBCA"
+    },
+    {
+      "instrument": "BBNI"
+    },
+    {
+      "instrument": "BBRI"
+    },
+    {
+      "instrument": "BMRI"
+    },
+    {
+      "instrument": "BRMS"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9941
+    },
+    {
+      "asset": "Saham",
+      "weight": 59
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -124,
+  "return5d": -442,
+  "return1m": -1066,
+  "return3m": 540,
+  "returnytd": -2951,
+  "return1y": -2640,
+  "return3y": -4079,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": -3672,
+  "drawdownytd": -3940,
+  "drawdown1y": -4003,
+  "drawdown3y": -5131,
+  "drawdown5y": null,
+  "drawdownsi": -5131,
+  "cagr1y": -2640,
+  "cagr3y": -1603,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": -1028,
+  "rating": 0,
+  "description": "REKSA DANA INDEKS BRI MSCI INDONESIA ESG SCREENED adalah Reksa Dana yang beroperasi berdasarkan UU No. 8 Tahun 1995 tentang Pasar Modal dan peraturannya, bertujuan untuk memberikan hasil investasi yang setara dengan kinerja Indeks MSCI Indonesia ESG Screened dari MSCI Limited, melalui investasi yang sesuai dengan Kebijakan Investasi. Komposisi portofolio investasinya terdiri dari minimum 80% Nilai Aktiva Bersih pada Efek bersifat ekuitas yang terdaftar dan diperdagangkan di Bursa Efek Indonesia serta tercatat dalam Indeks MSCI Indonesia ESG Screened, dan maksimum 20% dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dengan jatuh tempo maksimal 1 tahun dan/atau deposito, sesuai peraturan yang berlaku di Indonesia. Porsi investasi pada masing-masing Efek akan prorata mengikuti bobotnya dalam Indeks, dengan pembobotan minimal 80% dan maksimal 120% dari bobot Efek tersebut dalam Indeks MSCI Indonesia ESG Screened.",
+  "isSyariah": false,
+  "lastPrice": 63281,
+  "expenseRatio": 286,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "bri-msci-indonesia-esg-screened-kelas-a-37f557719628",
+  "currency": "IDR",
+  "lastAum": 106870000000,
+  "factsheet": "https://cache.makmur.id/files/products/650c168b13be668f17faac02/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/650c168b13be668f17faac02/prospectus.pdf",
+  "inceptionDate": 20220715,
+  "riskLevel": 90,
+  "traits": [
+    "Index"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

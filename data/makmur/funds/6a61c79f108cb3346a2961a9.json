@@ -1,0 +1,84 @@
+{
+  "_id": "6a61c79f108cb3346a2961a9",
+  "name": "Eastspring Syariah Equity Islamic Asia Pacific USD Kelas A",
+  "category": "equity",
+  "manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/615e89d906b6703faa18b0fe/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "ALIBABA GROUP HOLDING LTD"
+    },
+    {
+      "instrument": "ASE TECHNOLOGY HOLDING CO LTD"
+    },
+    {
+      "instrument": "BHP Group Ltd"
+    },
+    {
+      "instrument": "DELTA ELECTRONICS INC"
+    },
+    {
+      "instrument": "ELITE MATERIAL CO LTD"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 10000
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 29,
+  "return5d": -166,
+  "return1m": -35,
+  "return3m": -196,
+  "returnytd": 3179,
+  "return1y": 4808,
+  "return3y": 13599,
+  "return5y": 6498,
+  "return10y": null,
+  "returnsi": 11329,
+  "drawdownytd": -1465,
+  "drawdown1y": -1465,
+  "drawdown3y": -2445,
+  "drawdown5y": -4053,
+  "drawdownsi": -4934,
+  "cagr1y": 4808,
+  "cagr3y": 3314,
+  "cagr5y": 1053,
+  "cagr10y": null,
+  "cagrsi": 793,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH EASTSPRING SYARIAH EQUITY ISLAMIC ASIA PACIFIC USD (selanjutnya disebut “EASTSPRING SYARIAH  EQUITY ISLAMIC ASIA PACIFIC USD”) adalah Reksa Dana Syariah Berbasis Efek Syariah Luar Negeri berbentuk Kontrak  Investasi Kolektif berdasarkan Undang- Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan  pelaksanaannya.  EASTSPRING SYARIAH EQUITY ISLAMIC ASIA PACIFIC USD bertujuan untuk memberikan imbal hasil jangka panjang yang  optimal melalui investasi pada Efek Syariah bersifat ekuitas yang terdaftar dan diperdagangkan pada beberapa Bursa Efek  di wilayah Asia Pasifik dan instrumen pasar uang syariah yang memenuhi Prinsip Syariah di Pasar Modal.",
+  "isSyariah": true,
+  "lastPrice": 213,
+  "expenseRatio": 684,
+  "minFirstBuy": 10000,
+  "minNextBuy": 100,
+  "asof": 20260930,
+  "url": "eastspring-syariah-equity-islamic-asia-pacific-usd-kelas-a-88571877ebb4",
+  "currency": "USD",
+  "lastAum": 7800000,
+  "factsheet": "https://cache.makmur.id/files/products/6a61c79f108cb3346a2961a9/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6a61c79f108cb3346a2961a9/prospectus.pdf",
+  "inceptionDate": 20161028,
+  "riskLevel": 90,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

@@ -1,0 +1,88 @@
+{
+  "_id": "665fee517f3b533b06655cef",
+  "name": "Syailendra Pendapatan Total Return Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Syailendra Capital",
+    "logo": "https://cache.makmur.id/images/managers/60d1a4dd4cc7bb3913edb055/logo.png"
+  },
+  "custodian": {
+    "name": "CIMB Niaga",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b4184cc7bb3913edb05d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "ASDF06BCN5"
+    },
+    {
+      "instrument": "BUMI01BCN5"
+    },
+    {
+      "instrument": "BWPT01BCN4"
+    },
+    {
+      "instrument": "CUAN01ACN2"
+    },
+    {
+      "instrument": "ENRG01BCN2"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9451
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 549
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 3,
+  "return5d": 13,
+  "return1m": 59,
+  "return3m": 240,
+  "returnytd": 453,
+  "return1y": 671,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 2181,
+  "drawdownytd": -96,
+  "drawdown1y": -96,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -102,
+  "cagr1y": 671,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 701,
+  "rating": 0,
+  "description": "REKSA DANA SYAILENDRA PENDAPATAN TOTAL RETURN (untuk selanjutnya disebut “SYAILENDRA PENDAPATAN TOTAL  RETURN“) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang  Pasar Modal sebagaimana terakhir diubah Undang-Undang Republik Indonesia No. 4 tahun 2023 tentang Pengembangan Dan  Penguatan Sektor Keuangan beserta peraturan pelaksanaan dan seluruh perubahannya (“Undang-Undang Pasar Modal”) beserta  peraturan pelaksanaannya. SYAILENDRA PENDAPATAN TOTAL RETURN bertujuan untuk memberikan hasil investasi yang optimum untuk jangka menengah  dan panjang sesuai dengan Kebijakan Investasi. SYAILENDRA PENDAPATAN TOTAL RETURN akan melakukan investasi dengan komposisi portofolio investasi sebesar minimum  sebesar 80% (delapan puluh persen) dan maksimum sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat  utang yang diperdagangkan baik di dalam maupun di luar negeri; dan minimum sebesar 0% (nol persen) dan maksimum sebesar  20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diperdagangkan baik di dalam maupun di luar negeri  dan/atau instrumen pasar uang dalam negeri dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di  Indonesia. Dalam hal berinvestasi pada Efek luar negeri, Manajer Investasi wajib memastikan kegiatan investasi SYAILENDRA PENDAPATAN  TOTAL RETURN pada Efek luar negeri tidak akan bertentangan dengan ketentuan hukum dan peraturan yang berlaku di Indonesia  dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 105444,
+  "expenseRatio": 243,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "syailendra-pendapatan-total-return-kelas-a-cc9cc28a3a5f",
+  "currency": "IDR",
+  "lastAum": 1000000000000,
+  "factsheet": "https://cache.makmur.id/files/products/665fee517f3b533b06655cef/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/665fee517f3b533b06655cef/prospectus.pdf",
+  "inceptionDate": 20231103,
+  "riskLevel": 40,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

@@ -1,0 +1,88 @@
+{
+  "_id": "61c058de63e85268b13970fa",
+  "name": "BNI-AM Indeks IDX Growth30 Kelas R1",
+  "category": "equity",
+  "manager": {
+    "name": "PT BNI Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a2894cc7bb3913edb051/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "SAHAM ADRO"
+    },
+    {
+      "instrument": "SAHAM BBCA"
+    },
+    {
+      "instrument": "SAHAM BBNI"
+    },
+    {
+      "instrument": "SAHAM BBRI"
+    },
+    {
+      "instrument": "SAHAM BMRI"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9900
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 100
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -82,
+  "return5d": -267,
+  "return1m": -861,
+  "return3m": 776,
+  "returnytd": -1478,
+  "return1y": -687,
+  "return3y": -1606,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": -247,
+  "drawdownytd": -2891,
+  "drawdown1y": -2891,
+  "drawdown3y": -3388,
+  "drawdown5y": null,
+  "drawdownsi": -3388,
+  "cagr1y": -687,
+  "cagr3y": -567,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": -51,
+  "rating": 0,
+  "description": "REKSA DANA INDEKS BNI-AM INDEKS IDX GROWTH30 (selanjutnya disebut “BNI-AM IDXG30”) adalah Reksa Dana Indeks Berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. BNI-AM IDXG30 bertujuan untuk memperoleh pertambahan nilai investasi yang setara dengan kinerja Indeks IDX GROWTH30. BNI-AM IDXG30 akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang ditawarkan melalui Penawaran Umum dan diperdagangkan di Bursa Efek Indonesia yang berasal dari kumpulan Efek yang terdaftar di Indeks IDX GROWTH30; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di ndonesia. Investasi pada saham-saham yang terdaftar dalam Indeks IDX GROWTH30 tersebut akan berjumlah sekurang-kurangnya 80% (delapan puluh persen) dari keseluruhan saham yang terdaftar dalam Indeks IDX GROWTH30. Sedangkan porsi tiap-tiap saham akan ditentukan secara prorata mengikuti bobot (weighting) masing-masing saham terhadap Indeks IDX GROWTH30, dimana pembobotan atas masing-masing saham adalah paling kurang 80% (delapan puluh persen) dan paling banyak 120% (seratus dua puluh persen) dari bobot masing-masing saham yang bersangkutan dalam Indeks IDX GROWTH30.",
+  "isSyariah": false,
+  "lastPrice": 97533,
+  "expenseRatio": 3,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "bni-am-indeks-idx-growth30-kelas-r1-f04a0849993e",
+  "currency": "IDR",
+  "lastAum": 43702584090,
+  "factsheet": "https://cache.makmur.id/files/products/61c058de63e85268b13970fa/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/61c058de63e85268b13970fa/prospectus.pdf",
+  "inceptionDate": 20211027,
+  "riskLevel": 90,
+  "traits": [
+    "Index"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

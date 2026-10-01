@@ -1,0 +1,86 @@
+{
+  "_id": "68a53a9c2f36c942296849da",
+  "name": "Sucorinvest PHEI AAA Corporate Bond Fund",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "CIMB Niaga",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b4184cc7bb3913edb05d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Obl Bkljt III Bank Btn Tahap I Tahun 2017 Seri D"
+    },
+    {
+      "instrument": "Obl Bkljt Indonesia EXIMBANK III Thp IV Th17 Sr Obl Bkljt Indonesia EXIMBANK III Thp IV Th17 Sr E"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan III Bussan Auto Finance Tahap III Tahun 2025 Seri B"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan III Sarana Multi Infrastruktur Tahap III Tahun 2023 Seri C"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan IV Indosat Tahap I Tahun 2022 Seri B"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 7935
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 2065
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 4,
+  "return5d": 12,
+  "return1m": 48,
+  "return3m": 167,
+  "returnytd": 373,
+  "return1y": 549,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 935,
+  "drawdownytd": -38,
+  "drawdown1y": -38,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -38,
+  "cagr1y": 549,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 674,
+  "rating": 0,
+  "description": "REKSA DANA PENDAPATAN TETAP SUCORINVEST PHEI AAA CORPORATE BOND FUND (selanjutnya disebut ”SUCORINVEST PHEI AAA  CORPORATE BOND FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995  tentang Pasar Modal sebagaimana diubah dengan Undang-Undang Nomor 4 tahun 2023 tentang Pengembangan dan Penguatan Sektor  Keuangan (“Undang-Undang Pasar Modal”) beserta peraturan pelaksanaannya.  SUCORINVEST PHEI AAA CORPORATE BOND FUND bertujuan untuk memberikan suatu tingkat pengembalian yang menarik dengan  memelihara stabilitas dan modal yang optimal.   SUCORINVEST PHEI AAA CORPORATE BOND FUND akan melakukan investasi dengan komposisi portofolio investasi yaitu: (a) minimum  80% (delapan puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh korporasi; dan  (b) maksimum 20%  (dua puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diperdagangkan baik di dalam maupun di luar negeri dan/atau  instrumen pasar uang dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai dengan  peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 109347,
+  "expenseRatio": 70,
+  "minFirstBuy": 1000000,
+  "minNextBuy": 1000000,
+  "asof": 20261001,
+  "url": "sucorinvest-phei-aaa-corporate-bond-fund-d3182ae9af53",
+  "currency": "IDR",
+  "lastAum": 16560000000,
+  "factsheet": "https://cache.makmur.id/files/products/68a53a9c2f36c942296849da/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/68a53a9c2f36c942296849da/prospectus.pdf",
+  "inceptionDate": 20250519,
+  "riskLevel": 40,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

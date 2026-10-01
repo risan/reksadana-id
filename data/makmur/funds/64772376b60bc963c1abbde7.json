@@ -1,0 +1,84 @@
+{
+  "_id": "64772376b60bc963c1abbde7",
+  "name": "Trimegah Dana Kas 1",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Trimegah Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a1854cc7bb3913edb050/logo.png"
+  },
+  "custodian": {
+    "name": "Deutsche Bank",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b6b94cc7bb3913edb05f/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Panin Syariah"
+    },
+    {
+      "instrument": "Bank Victoria"
+    },
+    {
+      "instrument": "Bank Jabar Syariah"
+    },
+    {
+      "instrument": "BPD Jawa Tengah"
+    },
+    {
+      "instrument": "Bank Sulutgo"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 10000
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 8,
+  "return1m": 39,
+  "return3m": 116,
+  "returnytd": 288,
+  "return1y": 375,
+  "return3y": 1240,
+  "return5y": 1887,
+  "return10y": null,
+  "returnsi": 2384,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": -7,
+  "drawdown5y": -7,
+  "drawdownsi": -7,
+  "cagr1y": 375,
+  "cagr3y": 397,
+  "cagr5y": 352,
+  "cagr10y": null,
+  "cagrsi": 347,
+  "rating": 0,
+  "description": "REKSA DANA TRIMEGAH DANA KAS 1 (selanjutnya disebut “TRIMEGAH DANA KAS 1”) adalah Reksa Dana Berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. TRIMEGAH DANA KAS 1 bertujuan untuk memenuhi kebutuhan likuiditas tunai dalam waktu singkat dengan potensi tambahan hasil investasi. TRIMEGAH DANA KAS 1 akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau Efek Bersifat Utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang diperdagangkan baik di dalam maupun di luar negeri dan/atau deposito dalam mata uang Rupiah, sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 123841,
+  "expenseRatio": 97,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "trimegah-dana-kas-1-30b7ad241d4e",
+  "currency": "IDR",
+  "lastAum": 34260000000,
+  "factsheet": "https://cache.makmur.id/files/products/64772376b60bc963c1abbde7/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/64772376b60bc963c1abbde7/prospectus.pdf",
+  "inceptionDate": 20200625,
+  "riskLevel": 5,
+  "traits": [
+    "SameDay"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

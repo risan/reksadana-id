@@ -1,0 +1,88 @@
+{
+  "_id": "617a204d06b6703faa18b1d2",
+  "name": "Syailendra MSCI Indonesia Value Index Fund Kelas A",
+  "category": "equity",
+  "manager": {
+    "name": "PT Syailendra Capital",
+    "logo": "https://cache.makmur.id/images/managers/60d1a4dd4cc7bb3913edb055/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "ASII"
+    },
+    {
+      "instrument": "BBNI"
+    },
+    {
+      "instrument": "BBRI"
+    },
+    {
+      "instrument": "BMRI"
+    },
+    {
+      "instrument": "BRPT"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9804
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 196
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -94,
+  "return5d": -296,
+  "return1m": -923,
+  "return3m": 348,
+  "returnytd": -2375,
+  "return1y": -1813,
+  "return3y": -3021,
+  "return5y": -1393,
+  "return10y": null,
+  "returnsi": -1806,
+  "drawdownytd": -3267,
+  "drawdown1y": -3267,
+  "drawdown3y": -3985,
+  "drawdown5y": -3985,
+  "drawdownsi": -4959,
+  "cagr1y": -1813,
+  "cagr3y": -1130,
+  "cagr5y": -296,
+  "cagr10y": null,
+  "cagrsi": -237,
+  "rating": 0,
+  "description": "REKSA DANA INDEKS SYAILENDRA MSCI INDONESIA VALUE INDEX FUND (selanjutnya disebut “SYAILENDRA MSCI INDONESIA VALUE INDEX FUND”) adalah Reksa Dana Indeks berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. SYAILENDRA MSCI INDONESIA VALUE INDEX FUND bertujuan untuk memberikan hasil investasi yang optimum melalui investasi pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang ditawarkan melalui Penawaran Umum dan diperdagangkan di Bursa Efek Indonesia yang berasal dari kumpulan Efek yang terdaftar dalam MSCI Value Index serta dapat berinvestasi pada instrumen pasar uang dalam negeri dan/atau deposito, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. SYAILENDRA MSCI INDONESIA VALUE INDEX FUND akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang ditawarkan melalui Penawaran Umum dan diperdagangkan di Bursa Efek Indonesia yang terdaftar dalam MSCI Value Index; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Investasi pada saham-saham yang terdaftar dalam MSCI Value Index tersebut akan berjumlah sekurang-kurangnya 80% (delapan puluh persen) dari keseluruhan saham yang terdaftar dalam MSCI Value Index. Sedangkan porsi tiap-tiap saham akan ditentukan secara prorata mengikuti bobot (weighting) masing-masing saham terhadap MSCI Value Index, dimana Pembobotan atas masing-masing saham adalah paling kurang 80% (delapan puluh persen) dan paling banyak 120% (seratus dua puluh persen) dari pembobotan atas masing-masing saham dalam MSCI Value Index.",
+  "isSyariah": false,
+  "lastPrice": 81940,
+  "expenseRatio": 324,
+  "minFirstBuy": 50000,
+  "minNextBuy": 50000,
+  "asof": 20261001,
+  "url": "syailendra-msci-indonesia-value-index-fund-kelas-a-0e8b2a1deac8",
+  "currency": "IDR",
+  "lastAum": 411100000000,
+  "factsheet": "https://cache.makmur.id/files/products/617a204d06b6703faa18b1d2/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/617a204d06b6703faa18b1d2/prospectus.pdf",
+  "inceptionDate": 20180608,
+  "riskLevel": 90,
+  "traits": [
+    "Index"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

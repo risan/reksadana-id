@@ -1,0 +1,88 @@
+{
+  "_id": "60d1e7b24cc7bb3913edb068",
+  "name": "BNI-AM Quality Long Duration Fund",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT BNI Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a2894cc7bb3913edb051/logo.png"
+  },
+  "custodian": {
+    "name": "DBS Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1aace4cc7bb3913edb059/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "OBLIGASI FR0075"
+    },
+    {
+      "instrument": "OBLIGASI FR0089"
+    },
+    {
+      "instrument": "OBLIGASI BPD Jabar & Banten"
+    },
+    {
+      "instrument": "OBLIGASI FR0067"
+    },
+    {
+      "instrument": "OBLIGASI FR0083"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 700
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 9300
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 16,
+  "return5d": -17,
+  "return1m": -25,
+  "return3m": 111,
+  "returnytd": -295,
+  "return1y": -82,
+  "return3y": 886,
+  "return5y": 1706,
+  "return10y": 6189,
+  "returnsi": 7254,
+  "drawdownytd": -586,
+  "drawdown1y": -586,
+  "drawdown3y": -586,
+  "drawdown5y": -586,
+  "drawdownsi": -3824,
+  "cagr1y": -82,
+  "cagr3y": 287,
+  "cagr5y": 320,
+  "cagr10y": 494,
+  "cagrsi": 541,
+  "rating": 0,
+  "description": "Reksa Dana BNI-AM QUALITY LONG DURATION FUND adalah produk investasi berdasarkan UU Pasar Modal No. 8 tahun 1995. Tujuannya adalah mendapatkan hasil investasi maksimal jangka panjang melalui alokasi strategis dalam Efek bersifat utang dan instrumen pasar uang. Produk ini fokus investasi pada surat utang yang diterbitkan oleh Pemerintah RI dan korporasi Indonesia yang sudah mendapat peringkat layak investasi dan diperdagangkan di Bursa Efek Indonesia. Komposisi investasinya adalah 80%-100% pada Efek bersifat utang dan 0%-20% pada instrumen Pasar Uang atau deposito sesuai regulasi di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 160000,
+  "expenseRatio": 189,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "bni-am-quality-long-duration-fund-3b8dce96b7c7",
+  "currency": "IDR",
+  "lastAum": 9393089977,
+  "factsheet": "https://cache.makmur.id/files/products/60d1e7b24cc7bb3913edb068/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60d1e7b24cc7bb3913edb068/prospectus.pdf",
+  "inceptionDate": 20160530,
+  "riskLevel": 40,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

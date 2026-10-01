@@ -1,0 +1,86 @@
+{
+  "_id": "60d1e13e4cc7bb3913edb065",
+  "name": "TRIM Kas 2 Kelas A",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Trimegah Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a1854cc7bb3913edb050/logo.png"
+  },
+  "custodian": {
+    "name": "DBS Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1aace4cc7bb3913edb059/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Seabank Indonesia"
+    },
+    {
+      "instrument": "Bank Sulutgo"
+    },
+    {
+      "instrument": "BPD Lampung"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri A"
+    },
+    {
+      "instrument": "Bank Sahabat Sampoerna"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 4731
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 5269
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 9,
+  "return1m": 43,
+  "return3m": 121,
+  "returnytd": 316,
+  "return1y": 437,
+  "return3y": 1559,
+  "return5y": 2459,
+  "return10y": 6137,
+  "returnsi": 10599,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": 0,
+  "drawdown5y": 0,
+  "drawdownsi": -7,
+  "cagr1y": 437,
+  "cagr3y": 495,
+  "cagr5y": 450,
+  "cagr10y": 490,
+  "cagrsi": 399,
+  "rating": 0,
+  "description": "REKSA DANA TRIM KAS 2 (selanjutnya disebut “TRIM KAS 2”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. TRIM KAS 2 bertujuan untuk memperoleh pendapatan yang optimal berupa pertumbuhan nilai investasi dengan berusaha tetap mempertahankan nilai investasi awal dan memberikan tingkat likuiditas yang tinggi guna memenuhi kebutuhan dana tunai dalam waktu singkat. TRIM KAS 2 melakukan investasi sebesar 100% (seratus persen) pada Instrumen Pasar Uang dan/atau Efek bersifat utang yang memiliki jatuh tempo kurang dari 1 tahun baik dalam mata uang Rupiah maupun dalam mata uang asing. TRIM KAS 2 juga dapat melakukan perjanjian pembelian kembali (Repo) atas Efek bersifat utang.",
+  "isSyariah": false,
+  "lastPrice": 205987,
+  "expenseRatio": 72,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "trim-kas-2-kelas-a-3ee9c9018b87",
+  "currency": "IDR",
+  "lastAum": 9844540000000,
+  "factsheet": "https://cache.makmur.id/files/products/60d1e13e4cc7bb3913edb065/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60d1e13e4cc7bb3913edb065/prospectus.pdf",
+  "inceptionDate": 20080411,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

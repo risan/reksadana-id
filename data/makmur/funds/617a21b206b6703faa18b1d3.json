@@ -1,0 +1,88 @@
+{
+  "_id": "617a21b206b6703faa18b1d3",
+  "name": "Syailendra Fixed Income Fund Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Syailendra Capital",
+    "logo": "https://cache.makmur.id/images/managers/60d1a4dd4cc7bb3913edb055/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "FR0052"
+    },
+    {
+      "instrument": "FR0054"
+    },
+    {
+      "instrument": "FR0068"
+    },
+    {
+      "instrument": "FR0071"
+    },
+    {
+      "instrument": "FR0078"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9297
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 703
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 9,
+  "return5d": -3,
+  "return1m": 6,
+  "return3m": 150,
+  "returnytd": -181,
+  "return1y": -53,
+  "return3y": 1245,
+  "return5y": 1910,
+  "return10y": 6868,
+  "returnsi": 17549,
+  "drawdownytd": -471,
+  "drawdown1y": -485,
+  "drawdown3y": -485,
+  "drawdown5y": -569,
+  "drawdownsi": -972,
+  "cagr1y": -53,
+  "cagr3y": 399,
+  "cagr5y": 356,
+  "cagr10y": 537,
+  "cagrsi": 707,
+  "rating": 0,
+  "description": "REKSA DANA SYAILENDRA FIXED INCOME FUND (untuk selanjutnya disebut “SYAILENDRA FIXED INCOME FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. SYAILENDRA FIXED INCOME FUND bertujuan untuk memperoleh pendapatan investasi terutama dari Efek-Efek bersifat Utang yang dipilih secara selektif. SYAILENDRA FIXED INCOME FUND akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) pada Efek bersifat Utang, diantaranya Surat Utang Negara, SUKUK dan termasuk Surat Berharga Negara lainnya serta Obligasi korporasi dan Efek bersifat utang lain yang memiliki peringkat minimum setara A dari perusahaan/lembaga pemeringkat Efek; minimum 0% (nol persen) dan maksimum 15% (lima belas persen) pada Efek Bersifat Ekuitas yang diterbitkan, ditawarkan dan/atau diperdagangkan di Indonesia berdasarkan peraturan perundang-undangan di Indonesia dan yang tercatat di Bursa Efek Indonesia; minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari (satu) tahun, meliputi Sertifikat Bank Indonesia, Surat Berharga Pasar Uang, Surat Pengakuan Hutang, Deposito dan setara kas lainnya.",
+  "isSyariah": false,
+  "lastPrice": 270907,
+  "expenseRatio": 259,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "syailendra-fixed-income-fund-kelas-a-613a5e1b9369",
+  "currency": "IDR",
+  "lastAum": 100180000000,
+  "factsheet": "https://cache.makmur.id/files/products/617a21b206b6703faa18b1d3/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/617a21b206b6703faa18b1d3/prospectus.pdf",
+  "inceptionDate": 20111208,
+  "riskLevel": 40,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

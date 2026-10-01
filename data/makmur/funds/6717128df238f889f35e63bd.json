@@ -1,0 +1,86 @@
+{
+  "_id": "6717128df238f889f35e63bd",
+  "name": "KIM Money Market Fund",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT KIM Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/669736ffa9ee6c929486b58b/logo.png"
+  },
+  "custodian": {
+    "name": "KEB Hana Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/65e12f9586f16f565bb3a9bf/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "CIMB Niaga Auto Finance"
+    },
+    {
+      "instrument": "Integrasi Jaringan Ekosistem"
+    },
+    {
+      "instrument": "Mega Syariah"
+    },
+    {
+      "instrument": "Merdeka Battery Materials"
+    },
+    {
+      "instrument": "BJB Syariah"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 7306
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 2694
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 9,
+  "return1m": 39,
+  "return3m": 119,
+  "returnytd": 330,
+  "return1y": 458,
+  "return3y": 1645,
+  "return5y": 2668,
+  "return10y": null,
+  "returnsi": 4014,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": 0,
+  "drawdown5y": 0,
+  "drawdownsi": 0,
+  "cagr1y": 458,
+  "cagr3y": 521,
+  "cagr5y": 484,
+  "cagr10y": null,
+  "cagrsi": 508,
+  "rating": 0,
+  "description": "REKSA DANA KIM MONEY MARKET FUND (selanjutnya disebut “KIM MONEY MARKET FUND”) adalah Reksa Dana  berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta  peraturan pelaksanaannya.  KIM MONEY MARKET FUND bertujuan untuk menghasilkan pertumbuhan nilai investasi yang menarik dengan likuiditas  yang tinggi melalui investasi sesuai dengan kebijakan investasi.",
+  "isSyariah": false,
+  "lastPrice": 140136,
+  "expenseRatio": 69,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "kim-money-market-fund-52334320fc4a",
+  "currency": "IDR",
+  "lastAum": 763913349113,
+  "factsheet": "https://cache.makmur.id/files/products/6717128df238f889f35e63bd/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6717128df238f889f35e63bd/prospectus.pdf",
+  "inceptionDate": 20191212,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

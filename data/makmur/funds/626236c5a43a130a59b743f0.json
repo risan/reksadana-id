@@ -1,0 +1,88 @@
+{
+  "_id": "626236c5a43a130a59b743f0",
+  "name": "Simas Syariah Pendapatan Tetap",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Sinarmas Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6253dea6bf54c80a4005db7a/logo.png"
+  },
+  "custodian": {
+    "name": "CIMB Niaga",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b4184cc7bb3913edb05d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Adira Dinamika Multi Finance Tbk, PT"
+    },
+    {
+      "instrument": "Bank Syariah Indonesia Tbk, PT"
+    },
+    {
+      "instrument": "Indah Kiat Pulp & Paper Tbk, PT"
+    },
+    {
+      "instrument": "Tower Bersama Infrastructure Tbk, PT"
+    },
+    {
+      "instrument": "Medco Power Indonesia, PT"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9190
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 810
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 7,
+  "return1m": 34,
+  "return3m": 104,
+  "returnytd": 206,
+  "return1y": 352,
+  "return3y": 1743,
+  "return5y": 2981,
+  "return10y": null,
+  "returnsi": 4468,
+  "drawdownytd": -157,
+  "drawdown1y": -157,
+  "drawdown3y": -157,
+  "drawdown5y": -157,
+  "drawdownsi": -1242,
+  "cagr1y": 352,
+  "cagr3y": 550,
+  "cagr5y": 536,
+  "cagr10y": null,
+  "cagrsi": 405,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH SIMAS SYARIAH PENDAPATAN TETAP (untuk selanjutnya disebut “SIMAS SYARIAH PENDAPATAN TETAP”) adalah Reksa Dana Syariah berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. SIMAS SYARIAH PENDAPATAN TETAP bertujuan untuk mencapai nilai investasi yang optimal dalam jangka panjang melalui peningkatan nilai modal serta mengurangi risiko investasi dengan diversifikasi portofolio melalui investasi pada Sukuk, Efek Syariah bersifat ekuitas, Efek Beragun Aset Syariah dan/atu instrumen pasar uang Syariah sesuai dengan peraturan perundang-undangan yang berlaku dan mengikuti Prinsip Syariah di Pasar Modal. SIMAS SYARIAH PENDAPATAN TETAP akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Sukuk yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi berbadan hukum Indonesia; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek Syariah bersifat ekuitas dan/atau Efek Beragun Aset Syariah dan/atau instrumen pasar uang Syariah dalam negeri dan/atau deposito Syariah; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": true,
+  "lastPrice": 144681,
+  "expenseRatio": 201,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "simas-syariah-pendapatan-tetap-a715aee2ee05",
+  "currency": "IDR",
+  "lastAum": 32000000000,
+  "factsheet": "https://cache.makmur.id/files/products/626236c5a43a130a59b743f0/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/626236c5a43a130a59b743f0/prospectus.pdf",
+  "inceptionDate": 20170612,
+  "riskLevel": 40,
+  "traits": [
+    "ExitLoad"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

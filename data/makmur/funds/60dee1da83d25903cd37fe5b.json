@@ -1,0 +1,86 @@
+{
+  "_id": "60dee1da83d25903cd37fe5b",
+  "name": "Allianz Fixed Income Fund 2 Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Allianz Global Investors Asset Management Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/60d1a4564cc7bb3913edb054/logo.png"
+  },
+  "custodian": {
+    "name": "BRI",
+    "logo": "https://cache.makmur.id/images/custodians/60ded3d683d25903cd37fe5a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Obligasi FR0058"
+    },
+    {
+      "instrument": "Obligasi FR0068"
+    },
+    {
+      "instrument": "Obligasi FR0072"
+    },
+    {
+      "instrument": "Obligasi FR0082"
+    },
+    {
+      "instrument": "Obligasi FR0087"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9772
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 228
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 15,
+  "return5d": -6,
+  "return1m": -9,
+  "return3m": 170,
+  "returnytd": -198,
+  "return1y": 45,
+  "return3y": 1488,
+  "return5y": 2229,
+  "return10y": 6840,
+  "returnsi": 7067,
+  "drawdownytd": -554,
+  "drawdown1y": -554,
+  "drawdown3y": -554,
+  "drawdown5y": -554,
+  "drawdownsi": -941,
+  "cagr1y": 45,
+  "cagr3y": 473,
+  "cagr5y": 411,
+  "cagr10y": 535,
+  "cagrsi": 538,
+  "rating": 0,
+  "description": "REKSA DANA ALLIANZ FIXED INCOME FUND 2 (selanjutnya disebut “ALLIANZ FIXED INCOME FUND 2”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. ALLIANZ FIXED INCOME FUND 2 bertujuan untuk memberikan tingkat pengembalian yang menarik melalui pengelolaan portofolio secara aktif pada Efek Bersifat Utang yang telah mendapat peringkat dari perusahaan pemeringkat Efek yang terdaftar di OJK dan masuk dalam kategori layak investasi (investment grade). ALLIANZ FIXED INCOME FUND 2 akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek Bersifat Utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau Badan Usaha Milik Negara yang telah mendapat peringkat dari perusahaan pemeringkat Efek yang terdaftar di OJK dan masuk dalam kategori layak investasi (investment grade), yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 170669,
+  "expenseRatio": 105,
+  "minFirstBuy": 100000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "allianz-fixed-income-fund-2-kelas-a-d8f66d4e692b",
+  "currency": "IDR",
+  "lastAum": 87510000000,
+  "factsheet": "https://cache.makmur.id/files/products/60dee1da83d25903cd37fe5b/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60dee1da83d25903cd37fe5b/prospectus.pdf",
+  "inceptionDate": 20160720,
+  "riskLevel": 40,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

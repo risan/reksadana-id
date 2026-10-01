@@ -1,0 +1,89 @@
+{
+  "_id": "60ef0b1a553d51302147a98c",
+  "name": "Avrist Sukuk Income Fund",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Avrist Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a3d94cc7bb3913edb053/logo.png"
+  },
+  "custodian": {
+    "name": "Permata",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b47a4cc7bb3913edb05e/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Deposito Bank Sumselbabel sy"
+    },
+    {
+      "instrument": "SBSN Seri PBS012"
+    },
+    {
+      "instrument": "SBSN Seri PBS015"
+    },
+    {
+      "instrument": "SBSN Seri PBS022"
+    },
+    {
+      "instrument": "SBSN Seri PBS025"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9018
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 982
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 12,
+  "return5d": 8,
+  "return1m": -4,
+  "return3m": 156,
+  "returnytd": -71,
+  "return1y": 160,
+  "return3y": 1420,
+  "return5y": 2206,
+  "return10y": 7541,
+  "returnsi": 7503,
+  "drawdownytd": -362,
+  "drawdown1y": -362,
+  "drawdown3y": -362,
+  "drawdown5y": -362,
+  "drawdownsi": -698,
+  "cagr1y": 160,
+  "cagr3y": 453,
+  "cagr5y": 407,
+  "cagr10y": 578,
+  "cagrsi": 575,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH AVRIST SUKUK INCOME FUND (selanjutnya disebut \"AVRIST SUKUK INCOME FUND\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya.AVRIST SUKUK INCOME FUND bertujuan mempertahankan modal dan memperoleh potensi keuntungan jangka panjang dengan berinvestasi pada Efek Syariah Berpendapatan Tetap/Sukuk.AVRIST SUKUK INCOME FUND akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek Syariah Berpendapatan Tetap/Sukuk yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi yang telah ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri;dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang syariah dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito Syariah; sesuai peraturan perundang-undangan yang berlaku di Indonesia.Dalam hal berinvestasi pada Efek luar negeri, AVRIST SUKUK INCOME FUND akan mengacu pada peraturan perundang-undangan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": true,
+  "lastPrice": 101855,
+  "expenseRatio": 123,
+  "minFirstBuy": 10000000,
+  "minNextBuy": 1000000,
+  "asof": 20261001,
+  "url": "avrist-sukuk-income-fund-0409167f5bb2",
+  "currency": "IDR",
+  "lastAum": 132067500000,
+  "factsheet": "https://cache.makmur.id/files/products/60ef0b1a553d51302147a98c/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60ef0b1a553d51302147a98c/prospectus.pdf",
+  "inceptionDate": 20160928,
+  "riskLevel": 40,
+  "traits": [
+    "Dividend",
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

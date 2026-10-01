@@ -1,0 +1,86 @@
+{
+  "_id": "622ae378bf54c80a4005d967",
+  "name": "Sucorinvest Sustainability Equity Fund",
+  "category": "equity",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "ANEKA TAMBANG (PERSERO) Tbk"
+    },
+    {
+      "instrument": "BANK MANDIRI ( PERSERO ) Tbk"
+    },
+    {
+      "instrument": "BANK NEGARA INDONESIA (Persero) Tbk"
+    },
+    {
+      "instrument": "BANK RAKYAT INDONESIA (PERSERO) Tbk"
+    },
+    {
+      "instrument": "BANK TABUNGAN NEGARA (PERSERO) Tbk"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9848
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 152
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -157,
+  "return5d": -440,
+  "return1m": -988,
+  "return3m": 766,
+  "returnytd": -1497,
+  "return1y": -181,
+  "return3y": 1920,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 2887,
+  "drawdownytd": -3137,
+  "drawdown1y": -3137,
+  "drawdown3y": -3137,
+  "drawdown5y": null,
+  "drawdownsi": -3137,
+  "cagr1y": -181,
+  "cagr3y": 603,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 528,
+  "rating": 0,
+  "description": "REKSA DANA SUCORINVEST SUSTAINABILITY EQUITY FUND (untuk selanjutnya disebut “SUCORINVEST SUSTAINABILITY EQUITY FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. SUCORINVEST SUSTAINABILITY EQUITY FUND bertujuan untuk memberikan potensi hasil investasi yang optimal dalam jangka panjang bagi Pemegang Unit Penyertaan dengan berinvestasi mayoritas pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang mendukung Tujuan Pembangunan Berkelanjutan/ Sustainable Development Goals (SDGs), serta dapat memberikan kesempatan bagi Pemegang Unit Penyertaan untuk berkontribusi kepada masyarakat dan lingkungan. SUCORINVEST SUSTAINABILITY EQUITY FUND akan berinvestasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diperdagangkan baik di dalam maupun di luar negeri, dengan ketentuan minimal 70% (tujuh puluh persen) dari keseluruhan Efek bersifat ekuitas tersebut diatas diinvestasikan pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang mendukung Tujuan Pembangunan Berkelanjutan / Sustainable Development Goals (SDGs); dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diperdagangkan baik di dalam maupun di luar negeri dan/atau instrumen pasar uang dalam negeri dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 128867,
+  "expenseRatio": 345,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "sucorinvest-sustainability-equity-fund-70b552f97d70",
+  "currency": "IDR",
+  "lastAum": 34690000000,
+  "factsheet": "https://cache.makmur.id/files/products/622ae378bf54c80a4005d967/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/622ae378bf54c80a4005d967/prospectus.pdf",
+  "inceptionDate": 20211027,
+  "riskLevel": 90,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

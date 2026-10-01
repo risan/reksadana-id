@@ -1,0 +1,88 @@
+{
+  "_id": "62612144a43a130a59b743df",
+  "name": "Danamas Pasti",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Sinarmas Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6253dea6bf54c80a4005db7a/logo.png"
+  },
+  "custodian": {
+    "name": "CIMB Niaga",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b4184cc7bb3913edb05d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Armadian Tritunggal, PT"
+    },
+    {
+      "instrument": "Barito Pacific Tbk, PT"
+    },
+    {
+      "instrument": "Federal International Finance, PT"
+    },
+    {
+      "instrument": "Hino Finance Indonesia, PT"
+    },
+    {
+      "instrument": "Indah Kiat Pulp & Paper Tbk, PT"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9740
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 260
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 8,
+  "return1m": 42,
+  "return3m": 119,
+  "returnytd": 302,
+  "return1y": 444,
+  "return3y": 1851,
+  "return5y": 3091,
+  "return10y": 8130,
+  "returnsi": 43735,
+  "drawdownytd": -104,
+  "drawdown1y": -104,
+  "drawdown3y": -104,
+  "drawdown5y": -104,
+  "drawdownsi": -479,
+  "cagr1y": 444,
+  "cagr3y": 582,
+  "cagr5y": 553,
+  "cagr10y": 613,
+  "cagrsi": 744,
+  "rating": 0,
+  "description": "REKSA DANA DANAMAS PASTI adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal serta pelaksanaannya di bidang Reksa Dana. DANAMAS PASTI bertujuan untuk memperoleh pendapatan yang stabil dan optimal dalam jangka menengah dan panjang dengan tingkat risiko yang relatif rendah melalui penempatan dana investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) pada Efek bersifat utang yang diterbitkan oleh perusahaan-perusahaan berbadan hukum Indonesia termasuk Obligasi Pemerintah Republik Indonesia, Obligasi Pemerintah Daerah (“Municipal Bonds”) dan Efek bersifat utang lainnya sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia serta minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) pada Instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun. Khusus untuk Obligasi Pemerintah Republik Indonesia, termasuk Obligasi Pemerintah Republik Indonesia yang dilengkapi dengan REPO (Repurchase Agreement), maka komposisi investasinya dapat mencapai 100 % (seratus persen) dengan tetap memperhatikan peraturan perundang-undangan yang berlaku.",
+  "isSyariah": false,
+  "lastPrice": 537347,
+  "expenseRatio": 259,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "danamas-pasti-1bf542c19447",
+  "currency": "IDR",
+  "lastAum": 668000000000,
+  "factsheet": "https://cache.makmur.id/files/products/62612144a43a130a59b743df/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/62612144a43a130a59b743df/prospectus.pdf",
+  "inceptionDate": 20030428,
+  "riskLevel": 40,
+  "traits": [
+    "ExitLoad"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

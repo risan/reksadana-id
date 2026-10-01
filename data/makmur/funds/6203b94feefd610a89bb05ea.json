@@ -1,0 +1,86 @@
+{
+  "_id": "6203b94feefd610a89bb05ea",
+  "name": "Batavia Dana Saham",
+  "category": "equity",
+  "manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "logo": "https://cache.makmur.id/images/managers/62037caceefd610a89bb05d9/logo.png"
+  },
+  "custodian": {
+    "name": "Deutsche Bank",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b6b94cc7bb3913edb05f/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "AMMAN MINERAL INTERNASIONAL TBK"
+    },
+    {
+      "instrument": "ANEKA TAMBANG TBK"
+    },
+    {
+      "instrument": "ASTRA INTERNATIONAL TBK"
+    },
+    {
+      "instrument": "BANK CENTRAL ASIA TBK"
+    },
+    {
+      "instrument": "BANK NEGARA INDONESIA Tbk"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 666
+    },
+    {
+      "asset": "Saham",
+      "weight": 9334
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -117,
+  "return5d": -371,
+  "return1m": -829,
+  "return3m": 396,
+  "returnytd": -1414,
+  "return1y": -894,
+  "return3y": -2451,
+  "return5y": -1447,
+  "return10y": -1305,
+  "returnsi": 471268,
+  "drawdownytd": -2740,
+  "drawdown1y": -2740,
+  "drawdown3y": -3538,
+  "drawdown5y": -3541,
+  "drawdownsi": -5986,
+  "cagr1y": -894,
+  "cagr3y": -895,
+  "cagr5y": -308,
+  "cagr10y": -139,
+  "cagrsi": 1388,
+  "rating": 0,
+  "description": "Reksa Dana BATAVIA DANA SAHAM adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Reksa Dana BATAVIA DANA SAHAM (selanjutnya disebut “BATAVIA DANA SAHAM“) bertujuan mendapatkan kenaikan modal dalam jangka panjang dengan berinvestasi pada saham perusahaan berkapitalisasi pasar besar yang terdaftar di Bursa Efek Indonesia. Batavia Dana Saham akan menginvestasikan dananya dengan komposisi investasi sebagai berikut : BATAVIA DANA SAHAM akan menginvestasikan dananya dengan komposisi investasi sebesar minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih BATAVIA DANA SAHAM pada efek ekuitas dan minimum 0% (nol persen) serta maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih BATAVIA DANA SAHAM pada instrumen pasar uang dan setara kas yang sesuai dengan peraturan dan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 4812675,
+  "expenseRatio": 483,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "batavia-dana-saham-66bb3ddad78a",
+  "currency": "IDR",
+  "lastAum": 926672909491,
+  "factsheet": "https://cache.makmur.id/files/products/6203b94feefd610a89bb05ea/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6203b94feefd610a89bb05ea/prospectus.pdf",
+  "inceptionDate": 19961216,
+  "riskLevel": 90,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

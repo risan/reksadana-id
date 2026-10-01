@@ -1,0 +1,93 @@
+{
+  "_id": "6388710a79f48d91c48f08a1",
+  "name": "BRI MI Anagata Lestari Berimbang kelas A",
+  "category": "mixed",
+  "manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "logo": "https://cache.makmur.id/images/managers/61e6796f3845210a42c08858/logo.png"
+  },
+  "custodian": {
+    "name": "Maybank",
+    "logo": "https://cache.makmur.id/images/custodians/620b22ba5266fd0a65d1498d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "SMINKP04ACN1"
+    },
+    {
+      "instrument": "SMINKP04CN5"
+    },
+    {
+      "instrument": "SMINKP05CCN1"
+    },
+    {
+      "instrument": "SMOPPM01BCN2"
+    },
+    {
+      "instrument": "SMOPPM02BCN2"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 6994
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 1364
+    },
+    {
+      "asset": "Saham",
+      "weight": 1642
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -15,
+  "return5d": -80,
+  "return1m": -159,
+  "return3m": 421,
+  "returnytd": -1084,
+  "return1y": -394,
+  "return3y": 44,
+  "return5y": 504,
+  "return10y": 11,
+  "returnsi": 51751,
+  "drawdownytd": -1938,
+  "drawdown1y": -1938,
+  "drawdown3y": -1938,
+  "drawdown5y": -1938,
+  "drawdownsi": -5125,
+  "cagr1y": -394,
+  "cagr3y": 15,
+  "cagr5y": 99,
+  "cagr10y": 1,
+  "cagrsi": 730,
+  "rating": 0,
+  "description": "Reksa Dana REKSA DANA SYARIAH BRI-MI ANAGATA LESTARI BERIMBANG adalah Reksa Dana terbuka berbentuk Kontrak  Investasi Kolektif (“KIK”) berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya.  REKSA DANA SYARIAH BRI-MI ANAGATA LESTARI BERIMBANG bertujuan untuk memperoleh tingkat pendapatan yang bersaing  dengan tetap mempertahankan nilai modal investasi dan menjaga kestabilan likuiditas. Selain itu REKSA DANA SYARIAH BRI-MI  ANAGATA LESTARI BERIMBANG juga akan memberikan donasi kepada Iluni FEB UI dalam rangka pelaksanaan Program Dana  Abadi/Endowment Fund ILUNI FEB UI.",
+  "isSyariah": true,
+  "lastPrice": 596816,
+  "expenseRatio": 340,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "bri-mi-anagata-lestari-berimbang-kelas-a-e8a7e54e50bf",
+  "currency": "IDR",
+  "lastAum": 26670000000,
+  "factsheet": "https://cache.makmur.id/files/products/6388710a79f48d91c48f08a1/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6388710a79f48d91c48f08a1/prospectus.pdf",
+  "inceptionDate": 20001201,
+  "riskLevel": 65,
+  "traits": [
+    "Sharia",
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "campuran"
+}

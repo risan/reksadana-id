@@ -1,0 +1,86 @@
+{
+  "_id": "622ac5e0bf54c80a4005d957",
+  "name": "Sucorinvest Equity Fund Kelas A",
+  "category": "equity",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "ASTRA INTERNATIONAL Tbk"
+    },
+    {
+      "instrument": "BANK CENTRAL ASIA Tbk"
+    },
+    {
+      "instrument": "BANK MANDIRI ( PERSERO ) Tbk"
+    },
+    {
+      "instrument": "BANK NEGARA INDONESIA (Persero) Tbk"
+    },
+    {
+      "instrument": "BANK RAKYAT INDONESIA (PERSERO) Tbk"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9854
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 146
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -77,
+  "return5d": -232,
+  "return1m": -808,
+  "return3m": 701,
+  "returnytd": -1989,
+  "return1y": 110,
+  "return3y": -642,
+  "return5y": 1179,
+  "return10y": 8536,
+  "returnsi": 15901,
+  "drawdownytd": -3643,
+  "drawdown1y": -3643,
+  "drawdown3y": -3643,
+  "drawdown5y": -3643,
+  "drawdownsi": -4133,
+  "cagr1y": 110,
+  "cagr3y": -219,
+  "cagr5y": 225,
+  "cagr10y": 637,
+  "cagrsi": 683,
+  "rating": 0,
+  "description": "REKSA DANA SUCORINVEST EQUITY FUND (untuk selanjutnya disebut “SUCORINVEST EQUITY FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. SUCORINVEST EQUITY FUND bertujuan untuk memberikan apresiasi modal dan tingkat keuntungan yang optimal dalam jangka panjang dengan cara mengkapitalisasi pertumbuhan pasar modal Indonesia. SUCORINVEST EQUITY FUND akan berinvestasi pada (i) minimum 80% (delapan puluh persen) dan maksimum sebesar 100% (seratus per seratus) pada Efek Bersifat Ekuitas Badan Hukum Indonesia yang tercatat pada Bursa Efek di Indonesia, yang mana minimum 60% (enam puluh persen) dari keseluruhan Efek Bersifat Ekuitas tersebut diatas akan diinvestasikan pada saham-saham LQ 45; (ii) minimum sebesar 0% (nol persen) dan maksimum sebesar 20% (dua puluh persen) pada Instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun yang diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 259008,
+  "expenseRatio": 444,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "sucorinvest-equity-fund-kelas-a-769cfd98c962",
+  "currency": "IDR",
+  "lastAum": 1580000000000,
+  "factsheet": "https://cache.makmur.id/files/products/622ac5e0bf54c80a4005d957/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/622ac5e0bf54c80a4005d957/prospectus.pdf",
+  "inceptionDate": 20120508,
+  "riskLevel": 90,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

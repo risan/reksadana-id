@@ -1,0 +1,88 @@
+{
+  "_id": "61fb3a8f3845210a42c088a2",
+  "name": "Eastspring Syariah Fixed Income Amanah Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/615e89d906b6703faa18b0fe/logo.png"
+  },
+  "custodian": {
+    "name": "DBS Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1aace4cc7bb3913edb059/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Perusahaan Penerbit 5% 15112030"
+    },
+    {
+      "instrument": "Perusahaan Penerbit 5.875% 150728"
+    },
+    {
+      "instrument": "Perusahaan Penerbit 6.1% 150237"
+    },
+    {
+      "instrument": "Perusahaan Penerbit 6.375% 150334"
+    },
+    {
+      "instrument": "Perusahaan Penerbit 6.5% 150639"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9710
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 290
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 12,
+  "return5d": 13,
+  "return1m": -10,
+  "return3m": 171,
+  "returnytd": -124,
+  "return1y": 86,
+  "return3y": 1118,
+  "return5y": 1754,
+  "return10y": null,
+  "returnsi": 5798,
+  "drawdownytd": -404,
+  "drawdown1y": -404,
+  "drawdown3y": -404,
+  "drawdown5y": -404,
+  "drawdownsi": -659,
+  "cagr1y": 86,
+  "cagr3y": 360,
+  "cagr5y": 328,
+  "cagr10y": null,
+  "cagrsi": 495,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH EASTSPRING SYARIAH FIXED INCOME AMANAH (untuk selanjutnya disebut “EASTSPRING SYARIAH FIXED INCOME AMANAH”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. EASTSPRING SYARIAH FIXED INCOME AMANAH bertujuan untuk memberikan potensi kinerja optimal atas investasi jangka menengah pada Efek Syariah Berpendapatan Tetap yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi berbadan hukum Indonesia yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Indonesia serta dapat berinvestasi pada instrumen pasar uang syariah dalam negeri. EASTSPRING SYARIAH FIXED INCOME AMANAH akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek Syariah Berpendapatan Tetap yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi berbadan hukum Indonesia yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Indonesia yang tercantum dalam Daftar Efek Syariah; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito Syariah; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": true,
+  "lastPrice": 157981,
+  "expenseRatio": 233,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "eastspring-syariah-fixed-income-amanah-kelas-a-4b2274d5046b",
+  "currency": "IDR",
+  "lastAum": 1100000000000,
+  "factsheet": "https://cache.makmur.id/files/products/61fb3a8f3845210a42c088a2/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/61fb3a8f3845210a42c088a2/prospectus.pdf",
+  "inceptionDate": 20170417,
+  "riskLevel": 40,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

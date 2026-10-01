@@ -1,0 +1,90 @@
+{
+  "_id": "6205d80beefd610a89bb060c",
+  "name": "Batavia Dana Dinamis",
+  "category": "mixed",
+  "manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "logo": "https://cache.makmur.id/images/managers/62037caceefd610a89bb05d9/logo.png"
+  },
+  "custodian": {
+    "name": "Deutsche Bank",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b6b94cc7bb3913edb05f/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "AMMAN MINERAL INTERNASIONAL TBK"
+    },
+    {
+      "instrument": "BANK CENTRAL ASIA TBK"
+    },
+    {
+      "instrument": "BANK RAKYAT INDONESIA (PERSERO) TBK"
+    },
+    {
+      "instrument": "MAYORA INDAH TBK"
+    },
+    {
+      "instrument": "OBLIGASI BERKELANJUTAN VII TOWER BERSAMA INFRASTRUCTURE TAHAP IV TAHUN 2026 SERI A"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 2054
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 3003
+    },
+    {
+      "asset": "Saham",
+      "weight": 4943
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -76,
+  "return5d": -215,
+  "return1m": -561,
+  "return3m": 254,
+  "returnytd": -1826,
+  "return1y": -1442,
+  "return3y": -2157,
+  "return5y": -1136,
+  "return10y": 669,
+  "returnsi": 62836,
+  "drawdownytd": -2764,
+  "drawdown1y": -2764,
+  "drawdown3y": -3128,
+  "drawdown5y": -3128,
+  "drawdownsi": -5290,
+  "cagr1y": -1442,
+  "cagr3y": -778,
+  "cagr5y": -238,
+  "cagr10y": 65,
+  "cagrsi": 850,
+  "rating": 0,
+  "description": "Reksa Dana BATAVIA DANA DINAMIS adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Reksa Dana BATAVIA DANA DINAMIS (selanjutnya disebut “BATAVIA DANA DINAMIS“) bertujuan mendapatkan tingkat pertumbuhan yang optimal dalam jangka menengah dan/atau panjang melalui penempatan dana pada saham, obligasi dan/atau pasar uang. BATAVIA DANA DINAMIS akan menginvestasikan dananya dengan komposisi investasi sebagai berikut: BATAVIA DANA DINAMIS akan menginvestasikan dananya dengan komposisi investasi sebesar minimum 40% (empat puluh persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih BATAVIA DANA DINAMIS pada Efek bersifat ekuitas dan minimum 1% (satu persen) serta maksimum 40% (empat puluh persen) dari Nilai Aktiva Bersih BATAVIA DANA DINAMIS pada Efek bersifat utang dan/atau minimum 0% (nol persen) serta maksimum 40% (empat puluh persen) dari Nilai Aktiva Bersih BATAVIA DANA DINAMIS pada instrumen pasar uang dan/atau setara kas, yang sesuai dengan peraturan dan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 728357,
+  "expenseRatio": 459,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "batavia-dana-dinamis-6459c51d3d89",
+  "currency": "IDR",
+  "lastAum": 19274241654,
+  "factsheet": "https://cache.makmur.id/files/products/6205d80beefd610a89bb060c/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6205d80beefd610a89bb060c/prospectus.pdf",
+  "inceptionDate": 20020603,
+  "riskLevel": 65,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "campuran"
+}

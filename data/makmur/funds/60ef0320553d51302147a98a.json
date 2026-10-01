@@ -1,0 +1,88 @@
+{
+  "_id": "60ef0320553d51302147a98a",
+  "name": "Avrist Prime Income Fund",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Avrist Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a3d94cc7bb3913edb053/logo.png"
+  },
+  "custodian": {
+    "name": "Permata",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b47a4cc7bb3913edb05e/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Obligasi Berkelanjutan I Bank Jatim Tahap I Tahun 2025 Seri B"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan I Dian Swastatika Sentosa Tahap III Tahun 2024 Seri B"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan II Oki Pulp & Paper Mills Tahap IV Tahun 2026 Seri A"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan II Sampoerna Agro Tahap I Tahun 2025 Seri B"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan III Bussan Auto Finance Tahap III Tahun 2025 Seri B"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 821
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 9179
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 5,
+  "return5d": 17,
+  "return1m": 62,
+  "return3m": 261,
+  "returnytd": 73,
+  "return1y": 249,
+  "return3y": 1966,
+  "return5y": 3399,
+  "return10y": 9517,
+  "returnsi": 10977,
+  "drawdownytd": -303,
+  "drawdown1y": -303,
+  "drawdown3y": -303,
+  "drawdown5y": -303,
+  "drawdownsi": -493,
+  "cagr1y": 249,
+  "cagr3y": 617,
+  "cagr5y": 603,
+  "cagr10y": 692,
+  "cagrsi": 647,
+  "rating": 0,
+  "description": "REKSA DANA AVRIST PRIME INCOME FUND (selanjutnya disebut “AVRIST PRIME INCOME FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. AVRIST PRIME INCOME FUND bertujuan untuk memberikan tingkat pendapatan nilai investasi yang relatif stabil melalui investasi pada Efek bersifat utang serta menurunkan tingkat risiko melalui pemilihan penerbit surat berharga secara sangat hati-hati. AVRIST PRIME INCOME FUND melakukan investasi dengan komposisi portofolio investasi minimum sebesar 80% (delapan puluh persen) dan maksimum sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri; dan minimum sebesar 0% (nol persen) dan maksimum sebesar 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, AVRIST PRIME INCOME FUND akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia dan hukum negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 104139,
+  "expenseRatio": 108,
+  "minFirstBuy": 10000000,
+  "minNextBuy": 1000000,
+  "asof": 20261001,
+  "url": "avrist-prime-income-fund-3518eb1f993d",
+  "currency": "IDR",
+  "lastAum": 57387750000,
+  "factsheet": "https://cache.makmur.id/files/products/60ef0320553d51302147a98a/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60ef0320553d51302147a98a/prospectus.pdf",
+  "inceptionDate": 20141209,
+  "riskLevel": 40,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

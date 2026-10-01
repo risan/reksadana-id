@@ -1,0 +1,92 @@
+{
+  "_id": "634d648b79f48d91c48e7176",
+  "name": "Sucorinvest USD Balanced Fund",
+  "category": "mixed",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Central Asia Tbk"
+    },
+    {
+      "instrument": "Bank Mandiri ( Persero ) Tbk"
+    },
+    {
+      "instrument": "Bank Rakyat Indonesia (persero) Tbk"
+    },
+    {
+      "instrument": "Bank Tabungan Negara (persero) Tbk"
+    },
+    {
+      "instrument": "Bumi Resources Tbk"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 7628
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 1475
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 897
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -59,
+  "return5d": -259,
+  "return1m": -748,
+  "return3m": 776,
+  "returnytd": -1223,
+  "return1y": 653,
+  "return3y": 3245,
+  "return5y": 4439,
+  "return10y": null,
+  "returnsi": 8337,
+  "drawdownytd": -2950,
+  "drawdown1y": -2950,
+  "drawdown3y": -2950,
+  "drawdown5y": -2950,
+  "drawdownsi": -2950,
+  "cagr1y": 653,
+  "cagr3y": 982,
+  "cagr5y": 762,
+  "cagr10y": null,
+  "cagrsi": 956,
+  "rating": 0,
+  "description": "REKSA DANA SUCORINVEST USD BALANCED FUND (untuk selanjutnya disebut “SUCORINVEST USD BALANCED FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. SUCORINVEST USD BALANCED FUND bertujuan untuk mencapai kenaikan nilai kapital dan memberikan pendapatan dalam jangka menengah hingga panjang dengan melakukan investasi portofolio secara berimbang melalui penempatan dana sesuai dengan Kebijakan Investasi. SUCORINVEST USD BALANCED FUND akan melakukan investasi dengan komposisi portofolio investasi sebesarminimum 1% (satu persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diperdagangkan baik di dalam maupun di luar negeri; dan minimum 1% (satu persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diperdagangkan baik di dalam maupun di luar negeri; dan minimum 0% (nol persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau Efek lainnya dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, Manajer Investasi wajib memastikan kegiatan investasi SUCORINVEST USD BALANCED FUND pada Efek luar negeri tidak akan bertentangan dengan ketentuan hukum dan peraturan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 154,
+  "expenseRatio": 255,
+  "minFirstBuy": 1000,
+  "minNextBuy": 1000,
+  "asof": 20261001,
+  "url": "sucorinvest-usd-balanced-fund-2b8b31d31638",
+  "currency": "USD",
+  "lastAum": 2900000,
+  "factsheet": "https://cache.makmur.id/files/products/634d648b79f48d91c48e7176/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/634d648b79f48d91c48e7176/prospectus.pdf",
+  "inceptionDate": 20200210,
+  "riskLevel": 65,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "campuran"
+}

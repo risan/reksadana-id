@@ -1,0 +1,88 @@
+{
+  "_id": "60d1ebb64cc7bb3913edb06b",
+  "name": "BNI-AM Dana Lancar Syariah",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT BNI Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a2894cc7bb3913edb051/logo.png"
+  },
+  "custodian": {
+    "name": "Maybank",
+    "logo": "https://cache.makmur.id/images/custodians/620b22ba5266fd0a65d1498d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "DEPOSITO BPD BJB Syariah"
+    },
+    {
+      "instrument": "DEPOSITO BPD Riau Kepri Syariah"
+    },
+    {
+      "instrument": "DEPOSITO BPD Sumselbabel UUS"
+    },
+    {
+      "instrument": "SUKUK CIMB Niaga Auto Finance"
+    },
+    {
+      "instrument": "SUKUK Indah Kiat Pulp & Paper"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 5400
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 4600
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 10,
+  "return1m": 41,
+  "return3m": 109,
+  "returnytd": 283,
+  "return1y": 388,
+  "return3y": 1314,
+  "return5y": 2051,
+  "return10y": 5378,
+  "returnsi": 9076,
+  "drawdownytd": -8,
+  "drawdown1y": -8,
+  "drawdown3y": -10,
+  "drawdown5y": -10,
+  "drawdownsi": -56,
+  "cagr1y": 388,
+  "cagr3y": 420,
+  "cagr5y": 380,
+  "cagr10y": 440,
+  "cagrsi": 496,
+  "rating": 0,
+  "description": "Reksa Dana BNI-AM DANA LANCAR SYARIAH (selanjutnya disebut ”BNI-AM DANA LANCAR SYARIAH”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. BNI-AM DANA LANCAR SYARIAH bertujuan untuk memberikan tingkat pertumbuhan investasi yang stabil dengan risiko minimal sekaligus memperoleh tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat dengan berinvestasi pada instrumen pasar uang syariah dalam negeri dan/atau Efek Syariah bersifat utang yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia dan/atau deposito syariah yang tidak bertentangan dengan prinsip-prinsip syariah di Pasar Modal. BNI-AM DANA LANCAR SYARIAH akan melakukan investasi dengan komposisi portofolio 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang syariah dalam negeri dan/atau Efek Syariah bersifat utang yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia yang tidak bertentangan dengan prinsip-prinsip syariah di Pasar Modal dan/atau deposito syariah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": true,
+  "lastPrice": 190764,
+  "expenseRatio": 125,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "bni-am-dana-lancar-syariah-52ecf7982c62",
+  "currency": "IDR",
+  "lastAum": 86213614599,
+  "factsheet": "https://cache.makmur.id/files/products/60d1ebb64cc7bb3913edb06b/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60d1ebb64cc7bb3913edb06b/prospectus.pdf",
+  "inceptionDate": 20130604,
+  "riskLevel": 5,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

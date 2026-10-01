@@ -1,0 +1,86 @@
+{
+  "_id": "67b59e7592fbf44c2dca1ab0",
+  "name": "TRIM Dana Tetap 2 Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Trimegah Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a1854cc7bb3913edb050/logo.png"
+  },
+  "custodian": {
+    "name": "Deutsche Bank",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b6b94cc7bb3913edb05f/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Obligasi Berkelanjutan I Petrindo Jaya Kreasi Tahap II Tahun 2025 Seri A"
+    },
+    {
+      "instrument": "Obligasi Negara Republik Indonesia Seri FR0104"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan IV Lontar Papyrus Pulp & Paper Industry Tahap II Tahun 2026 Seri B"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan I Bumi Tahap III Tahun 2025"
+    },
+    {
+      "instrument": "Obligasi Negara Republik Indonesia Seri FR0101"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9325
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 675
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 9,
+  "return5d": 9,
+  "return1m": 62,
+  "return3m": 259,
+  "returnytd": 123,
+  "return1y": 234,
+  "return3y": 1704,
+  "return5y": 2773,
+  "return10y": 7433,
+  "returnsi": 25178,
+  "drawdownytd": -291,
+  "drawdown1y": -291,
+  "drawdown3y": -291,
+  "drawdown5y": -291,
+  "drawdownsi": -3140,
+  "cagr1y": 234,
+  "cagr3y": 538,
+  "cagr5y": 502,
+  "cagr10y": 572,
+  "cagrsi": 708,
+  "rating": 0,
+  "description": "REKSA DANA TRIM DANA TETAP 2 (selanjutnya disebut “TRIM DANA TETAP 2”) adalah Reksa Dana berbentuk Kontrak  Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan  pelaksanaannya.  TRIM DANA TETAP 2 bertujuan untuk mempertahankan investasi awal dan untuk memperoleh pendapatan yang  optimal berupa kupon bunga dan apresiasi nilai pokok dari Efek bersifat utang.   Kebijakan investasi TRIM DANA TETAP 2 adalah sebesar minimum 80% (delapan puluh persen) dan maksimum 100%  (seratus persen) pada Efek bersifat utang serta minimum 0% (nol persen) dan maksimum 20% (dua puluh persen)  pada instrumen pasar uang antara lain Sertifikat Bank Indonesia (SBI), Surat Perbendaharaan Negara (SPN) dan  deposito sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 351782,
+  "expenseRatio": 210,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "trim-dana-tetap-2-kelas-a-a0d2e88d8b25",
+  "currency": "IDR",
+  "lastAum": 2751460000000,
+  "factsheet": "https://cache.makmur.id/files/products/67b59e7592fbf44c2dca1ab0/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/67b59e7592fbf44c2dca1ab0/prospectus.pdf",
+  "inceptionDate": 20080521,
+  "riskLevel": 40,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

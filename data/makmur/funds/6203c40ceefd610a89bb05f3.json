@@ -1,0 +1,88 @@
+{
+  "_id": "6203c40ceefd610a89bb05f3",
+  "name": "Batavia Dana Saham Syariah",
+  "category": "equity",
+  "manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "logo": "https://cache.makmur.id/images/managers/62037caceefd610a89bb05d9/logo.png"
+  },
+  "custodian": {
+    "name": "Deutsche Bank",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b6b94cc7bb3913edb05f/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "ALAMTRI RESOURCES INDONESIA TBK"
+    },
+    {
+      "instrument": "ANEKA TAMBANG TBK"
+    },
+    {
+      "instrument": "INDOFOOD CBP SUKSES MAKMUR TBK"
+    },
+    {
+      "instrument": "INDOFOOD SUKSES MAKMUR TBK"
+    },
+    {
+      "instrument": "KALBE FARMA TBK"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 702
+    },
+    {
+      "asset": "Saham",
+      "weight": 9298
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -107,
+  "return5d": -329,
+  "return1m": -776,
+  "return3m": 332,
+  "returnytd": -1313,
+  "return1y": -712,
+  "return3y": -1869,
+  "return5y": -1273,
+  "return10y": -2952,
+  "returnsi": 4382,
+  "drawdownytd": -2982,
+  "drawdown1y": -2982,
+  "drawdown3y": -2982,
+  "drawdown5y": -3475,
+  "drawdownsi": -6783,
+  "cagr1y": -712,
+  "cagr3y": -666,
+  "cagr5y": -269,
+  "cagr10y": -344,
+  "cagrsi": 191,
+  "rating": 0,
+  "description": "Reksa Dana BATAVIA DANA SAHAM SYARIAH adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Reksa Dana BATAVIA DANA SAHAM SYARIAH (selanjutnya disebut “BATAVIA DANA SAHAM SYARIAH“) bertujuan mendapatkan kenaikan modal dalam jangka panjang dengan berinvestasi pada saham perusahaan yang terdaftar di Bursa Efek Indonesia yang merupakan bagian dari Daftar Efek Syariah. BATAVIA DANA SAHAM SYARIAH akan menginvestasikan dananya dengan komposisi investasi sebesar minimal 80 % (delapan puluh persen ) dan maksimum 100% (seratus persen) pada efek ekuitas dan minimal 0% (nol persen) serta maksimum 20% (dua puluh persen) pada Efek Syariah berpendapatan tetap dan atau instrumen pasar uang yang sesuai dengan prinsip-prinsip Syariah di Pasar Modal .",
+  "isSyariah": true,
+  "lastPrice": 143822,
+  "expenseRatio": 600,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "batavia-dana-saham-syariah-e23668324807",
+  "currency": "IDR",
+  "lastAum": 26317693798,
+  "factsheet": "https://cache.makmur.id/files/products/6203c40ceefd610a89bb05f3/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6203c40ceefd610a89bb05f3/prospectus.pdf",
+  "inceptionDate": 20070719,
+  "riskLevel": 90,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

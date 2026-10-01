@@ -1,0 +1,86 @@
+{
+  "_id": "637f2ea679f48d91c48ef191",
+  "name": "Insight Retail Cash Fund",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Insight Investments Management",
+    "logo": "https://cache.makmur.id/images/managers/637ee25579f48d91c48ef049/logo.png"
+  },
+  "custodian": {
+    "name": "CIMB Niaga",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b4184cc7bb3913edb05d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "BARITO PACIFIC Tbk, PT"
+    },
+    {
+      "instrument": "BUKIT MAKMUR MANDIRI UTAMA, PT"
+    },
+    {
+      "instrument": "CHANDRA ASRI PETROCHEMICAL Tbk, PT"
+    },
+    {
+      "instrument": "LONTAR PAPYRUS PULP & PAPER INDUSTRY, PT"
+    },
+    {
+      "instrument": "MERDEKA BATTERY MATERIALS Tbk, PT"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9000
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 1000
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 9,
+  "return1m": 45,
+  "return3m": 135,
+  "returnytd": 378,
+  "return1y": 516,
+  "return3y": 1756,
+  "return5y": 2784,
+  "return10y": null,
+  "returnsi": 7383,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": -2,
+  "drawdown5y": -2,
+  "drawdownsi": -15,
+  "cagr1y": 516,
+  "cagr3y": 554,
+  "cagr5y": 503,
+  "cagr10y": null,
+  "cagrsi": 674,
+  "rating": 0,
+  "description": "REKSA DANA INSIGHT RETAIL CASH FUND (I-RETAIL CASH) (selanjutnya disebut “INSIGHT RETAIL CASH FUND (I-RETAIL CASH)”) adalah Reksa Dana Saham berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. INSIGHT RETAIL CASH FUND (I-RETAIL CASH) bertujuan untuk memberikan tingkat pertumbuhan investasi yang relatif stabil sesuai dengan tingkat risiko yang dapat diterima melalui diversifikasi penempatan pada instrumen pasar uang dan/atau Efek Bersifat Utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang diperdagangkan baik di dalam maupun di luar negeri dan/atau deposito. INSIGHT RETAIL CASH FUND (I-RETAIL CASH) akan melakukan investasi dengan komposisi portofolio investasi 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau Efek Bersifat Utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang diperdagangkan baik di dalam maupun di luar negeri dan/atau deposito, sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, Manajer Investasi wajib memastikan kegiatan investasi INSIGHT RETAIL CASH FUND (I-RETAIL CASH) pada Efek luar negeri tidak akan bertentangan dengan ketentuan hukum dan peraturan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "isSyariah": false,
+  "lastPrice": 173826,
+  "expenseRatio": 109,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "insight-retail-cash-fund-c8c4080185d5",
+  "currency": "IDR",
+  "lastAum": 157179530808,
+  "factsheet": "https://cache.makmur.id/files/products/637f2ea679f48d91c48ef191/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/637f2ea679f48d91c48ef191/prospectus.pdf",
+  "inceptionDate": 20180413,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

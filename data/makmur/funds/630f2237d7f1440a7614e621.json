@@ -1,0 +1,88 @@
+{
+  "_id": "630f2237d7f1440a7614e621",
+  "name": "Batavia Dana Obligasi Ultima",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "logo": "https://cache.makmur.id/images/managers/62037caceefd610a89bb05d9/logo.png"
+  },
+  "custodian": {
+    "name": "Standard Chartered",
+    "logo": "https://cache.makmur.id/images/custodians/60d1ab4e4cc7bb3913edb05a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "OBLIGASI BERKELANJUTAN I OTO MULTIARTHA TAHAP II TAHUN 2024 SERI B"
+    },
+    {
+      "instrument": "OBLIGASI BERKELANJUTAN VII FEDERAL INTERNATIONAL FINANCE TAHAP I TAHUN 2025 SERI B"
+    },
+    {
+      "instrument": "OBLIGASI BERKELANJUTAN VII SARANA MULTIGRIYA FINANSIAL TAHAP VI TAHUN 2024 SERI C"
+    },
+    {
+      "instrument": "OBLIGASI BERKELANJUTAN VII TOWER BERSAMA INFRASTRUCTURE TAHAP IV TAHUN 2026 SERI A"
+    },
+    {
+      "instrument": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0082"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 2160
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 7840
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 6,
+  "return5d": -3,
+  "return1m": 11,
+  "return3m": 156,
+  "returnytd": -65,
+  "return1y": 46,
+  "return3y": 1168,
+  "return5y": 1669,
+  "return10y": 5678,
+  "returnsi": 24937,
+  "drawdownytd": -325,
+  "drawdown1y": -325,
+  "drawdown3y": -325,
+  "drawdown5y": -339,
+  "drawdownsi": -496,
+  "cagr1y": 46,
+  "cagr3y": 375,
+  "cagr5y": 314,
+  "cagr10y": 460,
+  "cagrsi": 658,
+  "rating": 0,
+  "description": "Reksa Dana BATAVIA DANA OBLIGASI ULTIMA adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Reksa Dana BATAVIA DANA OBLIGASI ULTIMA (selanjutnya disebut \"BATAVIA DANA OBLIGASI ULTIMA\") bertujuan untuk mendapatkan tingkat pertumbuhan dana yang optimum dengan tetap mempertahankan nilai modal dalam jangka menengah melalui penempatan dalam instrumen efek hutang jangka pendek dan menengah. BATAVIA DANA OBLIGASI ULTIMA akan menginvestasikan dananya dengan komposisi investasi sebesar Minimum 80%( delapan puluh persen ) dan maksimum 100 % ( seratus persen ) pada efek bersifat hutang. Minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun, meliputi Sertifikat Bank Indonesia, Surat Berharga, Pasar Uang, Surat Pengakuan Hutang Sertifikat deposito, serta Obligasi baik dalam rupiah maupun dalam mata uang asing dan Obligasi yang diterbitkan oleh Pemerintah Republik Indonesia. Serta Minimum 0% (nol persen) dan maksimum 15% (lima belas persen) pada efek bersifat ekuitas yang diterbitkan sesuai dengan peraturan perundang undangan yang berlaku di Indonesia, untuk jangka pendek dan apabila dianggap menguntungkan.",
+  "isSyariah": false,
+  "lastPrice": 288773,
+  "expenseRatio": 180,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "batavia-dana-obligasi-ultima-cff013796527",
+  "currency": "IDR",
+  "lastAum": 801921683814,
+  "factsheet": "https://cache.makmur.id/files/products/630f2237d7f1440a7614e621/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/630f2237d7f1440a7614e621/prospectus.pdf",
+  "inceptionDate": 20070220,
+  "riskLevel": 40,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

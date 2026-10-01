@@ -1,0 +1,88 @@
+{
+  "_id": "6a607f7c108cb3346a291d0f",
+  "name": "Batavia Technology Sharia Equity USD",
+  "category": "equity",
+  "manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "logo": "https://cache.makmur.id/images/managers/62037caceefd610a89bb05d9/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "ADVANCED MICRO DEVICES"
+    },
+    {
+      "instrument": "ALPHABET INC-CL A"
+    },
+    {
+      "instrument": "APPLE INC"
+    },
+    {
+      "instrument": "ASML HLDG"
+    },
+    {
+      "instrument": "BROADCOM INC"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 297
+    },
+    {
+      "asset": "Saham",
+      "weight": 9703
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 18,
+  "return5d": -4,
+  "return1m": 585,
+  "return3m": -467,
+  "returnytd": 1975,
+  "return1y": 2162,
+  "return3y": 7929,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 5647,
+  "drawdownytd": -2067,
+  "drawdown1y": -2067,
+  "drawdown3y": -2971,
+  "drawdown5y": null,
+  "drawdownsi": -3750,
+  "cagr1y": 2162,
+  "cagr3y": 2148,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 1016,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH BATAVIA TECHNOLOGY SHARIA EQUITY USD (selanjutnya disebut “BATAVIA TECHNOLOGY SHARIA  EQUITY USD”) adalah Reksa Dana Syariah Berbasis Efek Syariah Luar Negeri berbentuk Kontrak Investasi Kolektif berdasarkan  Undang-Undang tentang Pasar Modal beserta peraturan pelaksanaannya.  BATAVIA TECHNOLOGY SHARIA EQUITY USD bertujuan untuk memberikan Pemegang Unit Penyertaan potensi keuntungan terkait  dengan hasil investasi dari instrumen-instrumen investasi sesuai dengan Kebijakan Investasi BATAVIA TECHNOLOGY SHARIA EQUITY  USD yang memenuhi Prinsip Syariah di Pasar Modal.",
+  "isSyariah": true,
+  "lastPrice": 156,
+  "expenseRatio": 302,
+  "minFirstBuy": 10000,
+  "minNextBuy": 100,
+  "asof": 20260930,
+  "url": "batavia-technology-sharia-equity-usd-b70d46a2e5d8",
+  "currency": "USD",
+  "lastAum": 173281717,
+  "factsheet": "https://cache.makmur.id/files/products/6a607f7c108cb3346a291d0f/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6a607f7c108cb3346a291d0f/prospectus.pdf",
+  "inceptionDate": 20220216,
+  "riskLevel": 90,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

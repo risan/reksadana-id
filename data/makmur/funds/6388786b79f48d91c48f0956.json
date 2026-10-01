@@ -1,0 +1,86 @@
+{
+  "_id": "6388786b79f48d91c48f0956",
+  "name": "BRI Mawar",
+  "category": "equity",
+  "manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "logo": "https://cache.makmur.id/images/managers/61e6796f3845210a42c08858/logo.png"
+  },
+  "custodian": {
+    "name": "Citibank",
+    "logo": "https://cache.makmur.id/images/custodians/61e67a7b3845210a42c08859/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "AMMN"
+    },
+    {
+      "instrument": "ASII"
+    },
+    {
+      "instrument": "BBCA"
+    },
+    {
+      "instrument": "BBNI"
+    },
+    {
+      "instrument": "BBRI"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Saham",
+      "weight": 9599
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 401
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -117,
+  "return5d": -371,
+  "return1m": -804,
+  "return3m": 627,
+  "returnytd": -2047,
+  "return1y": -1078,
+  "return3y": -2715,
+  "return5y": -1813,
+  "return10y": -2836,
+  "returnsi": 55381,
+  "drawdownytd": -3294,
+  "drawdown1y": -3294,
+  "drawdown3y": -3505,
+  "drawdown5y": -3804,
+  "drawdownsi": -6380,
+  "cagr1y": -1078,
+  "cagr3y": -1002,
+  "cagr5y": -392,
+  "cagr10y": -328,
+  "cagrsi": 640,
+  "rating": 0,
+  "description": "Reksa Dana DANAREKSA MAWAR (“DANAREKSA MAWAR ”) adalah Reksa Dana terbuka berbentuk Kontrak Investasi Kolektif (“KIK”) berdasarkan Undang-undang Nomor 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. DANAREKSA MAWAR bertujuan untuk mendapatkan pertumbuhan nilai investasi yang optimal dalam jangka panjang dari investasi yang dilakukan pemodal. Kekayaan DANAREKSA MAWAR akan diinvestasikan minimum 80% (Delapan Puluh per Seratus) hingga maksimum 100% (Seratus per Seratus) ke dalam Efek Ekuitas, maksimum 20% (Dua Puluh per Seratus) dalam Efek Utang serta maksimum 20% (Dua Puluh per Seratus) pada Instrumen Pasar Uang.",
+  "isSyariah": false,
+  "lastPrice": 653805,
+  "expenseRatio": 402,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "bri-mawar-6b9e55548609",
+  "currency": "IDR",
+  "lastAum": 16190000000,
+  "factsheet": "https://cache.makmur.id/files/products/6388786b79f48d91c48f0956/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6388786b79f48d91c48f0956/prospectus.pdf",
+  "inceptionDate": 19960705,
+  "riskLevel": 90,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

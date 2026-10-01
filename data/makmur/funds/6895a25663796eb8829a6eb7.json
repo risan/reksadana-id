@@ -1,0 +1,81 @@
+{
+  "_id": "6895a25663796eb8829a6eb7",
+  "name": "Capital Optimal Protected Fund 15",
+  "category": "capitalprotected",
+  "manager": {
+    "name": "PT Capital Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60dee33a83d25903cd37fe5c/logo.png"
+  },
+  "custodian": {
+    "name": "Danamon",
+    "logo": "https://cache.makmur.id/images/custodians/60ded07f83d25903cd37fe59/logo.png"
+  },
+  "holding": {
+    "name": "Danamon",
+    "logo": "https://cache.makmur.id/images/custodians/60ded07f83d25903cd37fe59/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Obligasi Berkelanjutan II Oki Pulp & Paper Mills Tahap II Tahun 2025 Seri A"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 200
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 9800
+    }
+  ],
+  "portfolioAsof": 20250819,
+  "return1d": 12,
+  "return5d": 9,
+  "return1m": 52,
+  "return3m": 160,
+  "returnytd": 261,
+  "return1y": 810,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 1059,
+  "drawdownytd": -620,
+  "drawdown1y": -620,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -620,
+  "cagr1y": 810,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 942,
+  "rating": 0,
+  "description": "REKSA DANA TERPROTEKSI CAPITAL OPTIMAL PROTECTED FUND 15 (untuk selanjutnya disebut “CAPITAL OPTIMAL PROTECTED FUND 15”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No.8 tahun 1995 tentang Pasar Modal sebagaimana diubah dengan Undang-Undang Nomor 4 tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan (“Undang-Undang Pasar Modal”) beserta peraturan pelaksanaannya. CAPITAL OPTIMAL PROTECTED FUND 15 bertujuan untuk memberikan proteksi sebesar 100% (seratus persen) atas pokok investasi pada Tanggal Jatuh Tempo dan memberikan potensi tambahan hasil investasi melalui investasi sesuai dengan Kebijakan Investasi.",
+  "isSyariah": false,
+  "lastPrice": 102951,
+  "expenseRatio": 79,
+  "minFirstBuy": 5000000,
+  "minNextBuy": 5000000,
+  "asof": 20261001,
+  "url": "capital-optimal-protected-fund-15-a7f0609d3e45",
+  "currency": "IDR",
+  "lastAum": 50000000000,
+  "factsheet": "https://cache.makmur.id/files/products/6895a25663796eb8829a6eb7/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6895a25663796eb8829a6eb7/prospectus.pdf",
+  "inceptionDate": 20250819,
+  "riskLevel": 50,
+  "traits": [
+    "Dividend"
+  ],
+  "exitWindows": [],
+  "maturityDates": [
+    {
+      "date": 20280729,
+      "maxPayoutPercentage": 10000
+    }
+  ],
+  "status": 4,
+  "fixed1y": 800,
+  "routeCategory": "terproteksi"
+}

@@ -1,0 +1,88 @@
+{
+  "_id": "6114bceee93d4a5743f94712",
+  "name": "Avrist Ada Liquid Syariah",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Avrist Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60d1a3d94cc7bb3913edb053/logo.png"
+  },
+  "custodian": {
+    "name": "BSI",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b3d64cc7bb3913edb05c/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Deposito Bank Aladin sy"
+    },
+    {
+      "instrument": "Bank Deposito Bank BJB sy"
+    },
+    {
+      "instrument": "Bank Deposito Bank Riau sy"
+    },
+    {
+      "instrument": "Bank Deposito Bank Sumselbabel sy"
+    },
+    {
+      "instrument": "Sukuk Ijarah Berkelanjutan II PLN Tahap I Tahun 2017 Seri B"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 5854
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 4146
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 10,
+  "return1m": 45,
+  "return3m": 143,
+  "returnytd": 352,
+  "return1y": 512,
+  "return3y": 1664,
+  "return5y": 2427,
+  "return10y": null,
+  "returnsi": 3370,
+  "drawdownytd": -7,
+  "drawdown1y": -7,
+  "drawdown3y": -7,
+  "drawdown5y": -36,
+  "drawdownsi": -36,
+  "cagr1y": 512,
+  "cagr3y": 526,
+  "cagr5y": 444,
+  "cagr10y": null,
+  "cagrsi": 451,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH AVRIST ADA LIQUID SYARIAH (selanjutnya disebut “AVRIST ADA LIQUID SYARIAH”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. AVRIST ADA LIQUID SYARIAH bertujuan untuk memberikan tingkat pertumbuhan investasi yang relatif stabil dengan risiko minimal sekaligus memperoleh tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat dengan berinvestasi pada Efek-efek yang sesuai dengan Kebijakan Investasi serta tidak bertentangan dengan Prinsip Syariah di Pasar Modal. AVRIST ADA LIQUID SYARIAH akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau Efek Syariah Berpendapatan Tetap yang diperdagangkan di Indonesia yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun dan/atau deposito Syariah; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": true,
+  "lastPrice": 133695,
+  "expenseRatio": 36,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "avrist-ada-liquid-syariah-3a897d18e6d0",
+  "currency": "IDR",
+  "lastAum": 94167900000,
+  "factsheet": "https://cache.makmur.id/files/products/6114bceee93d4a5743f94712/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6114bceee93d4a5743f94712/prospectus.pdf",
+  "inceptionDate": 20200305,
+  "riskLevel": 5,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

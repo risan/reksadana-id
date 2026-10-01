@@ -1,0 +1,88 @@
+{
+  "_id": "691f1f0d30df94d0758d9dce",
+  "name": "Mandiri Investa Indeks Obligasi Negara Kelas A",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Mandiri Manajemen Investasi",
+    "logo": "https://cache.makmur.id/images/managers/6911eda443942404647039df/logo.png"
+  },
+  "custodian": {
+    "name": "CIMB Niaga",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b4184cc7bb3913edb05d/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "FR0068"
+    },
+    {
+      "instrument": "FR0080"
+    },
+    {
+      "instrument": "FR0083"
+    },
+    {
+      "instrument": "FR0091"
+    },
+    {
+      "instrument": "FR0096"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9603
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 286
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 10,
+  "return5d": -10,
+  "return1m": -35,
+  "return3m": 91,
+  "returnytd": -390,
+  "return1y": null,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": -399,
+  "drawdownytd": -665,
+  "drawdown1y": null,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -665,
+  "cagr1y": null,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": -450,
+  "rating": 0,
+  "description": "REKSA DANA INDEKS MANDIRI INVESTA INDEKS OBLIGASI NEGARA (untuk selanjutnya disebut “MANDIRI INVESTA INDEKS  OBLIGASI NEGARA”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995  tentang Pasar Modal sebagaimana diubah dengan Undang-Undang Nomor 4 tahun 2023 tentang Pengembangan dan  Penguatan Sektor Keuangan (“Undang-Undang Pasar Modal”) beserta peraturan pelaksanaannya.  MANDIRI INVESTA INDEKS OBLIGASI NEGARA bertujuan untuk memperoleh pertambahan nilai investasi yang setara dengan  kinerja Indeks Mandiri Investa Indeks Obligasi Negara.",
+  "isSyariah": false,
+  "lastPrice": 96010,
+  "expenseRatio": 505,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "mandiri-investa-indeks-obligasi-negara-kelas-a-729660a9480f",
+  "currency": "IDR",
+  "lastAum": 19570000000,
+  "factsheet": "https://cache.makmur.id/files/products/691f1f0d30df94d0758d9dce/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/691f1f0d30df94d0758d9dce/prospectus.pdf",
+  "inceptionDate": 20251112,
+  "riskLevel": 40,
+  "traits": [
+    "Index"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

@@ -1,0 +1,88 @@
+{
+  "_id": "68c7cc89334caac934c5cab1",
+  "name": "KIM Fixed Income Sharia",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT KIM Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/669736ffa9ee6c929486b58b/logo.png"
+  },
+  "custodian": {
+    "name": "BRI",
+    "logo": "https://cache.makmur.id/images/custodians/60ded3d683d25903cd37fe5a/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Aladin Syariah I"
+    },
+    {
+      "instrument": "Bank Aladin Syariah II"
+    },
+    {
+      "instrument": "Dian Swastatika Sentosa"
+    },
+    {
+      "instrument": "Indah Kiat Pulp & Paper"
+    },
+    {
+      "instrument": "Integrasi Jaringan Ekosistem"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 1518
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 8442
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 9,
+  "return5d": -12,
+  "return1m": 26,
+  "return3m": 331,
+  "returnytd": 232,
+  "return1y": 443,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 564,
+  "drawdownytd": -440,
+  "drawdown1y": -440,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -440,
+  "cagr1y": 443,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 480,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH KIM FIXED INCOME SHARIA (untuk selanjutnya disebut “KIM FIXED INCOME SHARIA”) adalah Reksa Dana  Syariah berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal sebagaimana  diubah dengan Undang-undang Nomor 4 tahun 2023 tentang Pengembangan dan Penguatan Sektor Jasa Keuangan beserta  peraturan pelaksanaannya.  KIM FIXED INCOME SHARIA bertujuan untuk memperoleh hasil investasi yang optimal dalam jangka menengah hingga panjang  sesuai dengan Prinsip Syariah di Pasar Modal sesuai dengan Kebijakan Investasi.",
+  "isSyariah": true,
+  "lastPrice": 105644,
+  "expenseRatio": 68,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "kim-fixed-income-sharia-0424e152b175",
+  "currency": "IDR",
+  "lastAum": 689929102194,
+  "factsheet": "https://cache.makmur.id/files/products/68c7cc89334caac934c5cab1/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/68c7cc89334caac934c5cab1/prospectus.pdf",
+  "inceptionDate": 20250731,
+  "riskLevel": 40,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

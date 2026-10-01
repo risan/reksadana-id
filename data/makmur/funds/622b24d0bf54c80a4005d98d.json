@@ -1,0 +1,86 @@
+{
+  "_id": "622b24d0bf54c80a4005d98d",
+  "name": "Sucorinvest Money Market Fund",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/622ac483bf54c80a4005d956/logo.png"
+  },
+  "custodian": {
+    "name": "HSBC Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b72f4cc7bb3913edb060/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri A"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap II Tahun 2023 Seri B"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan V Chandra Asri Pacific Tahap III Tahun 2026 Seri A"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan VII Astra Sedaya Finance Tahap III Tahun 2026 Seri A"
+    },
+    {
+      "instrument": "SBSN Seri PBS003"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 7702
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 2298
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 2,
+  "return5d": 6,
+  "return1m": 39,
+  "return3m": 106,
+  "returnytd": 305,
+  "return1y": 430,
+  "return3y": 1561,
+  "return5y": 2507,
+  "return10y": 7287,
+  "returnsi": 9951,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": -4,
+  "drawdown5y": -4,
+  "drawdownsi": -136,
+  "cagr1y": 430,
+  "cagr3y": 495,
+  "cagr5y": 458,
+  "cagr10y": 563,
+  "cagrsi": 584,
+  "rating": 0,
+  "description": "REKSA DANA SUCORINVEST MONEY MARKET FUND (untuk selanjutnya disebut “SUCORINVEST MONEY MARKET FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. SUCORINVEST MONEY MARKET FUND bertujuan untuk memberikan tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat sekaligus memberikan tingkat pendapatan investasi yang menarik. SUCORINVEST MONEY MARKET FUND akan melakukan investasi dengan komposisi portofolio investasi 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia;",
+  "isSyariah": false,
+  "lastPrice": 199507,
+  "expenseRatio": 122,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "sucorinvest-money-market-fund-b7149591679c",
+  "currency": "IDR",
+  "lastAum": 9710000000000,
+  "factsheet": "https://cache.makmur.id/files/products/622b24d0bf54c80a4005d98d/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/622b24d0bf54c80a4005d98d/prospectus.pdf",
+  "inceptionDate": 20140804,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

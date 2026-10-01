@@ -1,0 +1,86 @@
+{
+  "_id": "669739d5a9ee6c929486b5df",
+  "name": "KIM Fixed Income Fund Plus",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT KIM Indonesia",
+    "logo": "https://cache.makmur.id/images/managers/669736ffa9ee6c929486b58b/logo.png"
+  },
+  "custodian": {
+    "name": "KEB Hana Indonesia",
+    "logo": "https://cache.makmur.id/images/custodians/65e12f9586f16f565bb3a9bf/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bumi Resources"
+    },
+    {
+      "instrument": "Chandra Asri Pacific"
+    },
+    {
+      "instrument": "Energi Mega Persada"
+    },
+    {
+      "instrument": "Merdeka Battery Materials"
+    },
+    {
+      "instrument": "Oki Pulp & Paper Mills"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9396
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 604
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 5,
+  "return5d": -3,
+  "return1m": 20,
+  "return3m": 235,
+  "returnytd": -85,
+  "return1y": 112,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 1727,
+  "drawdownytd": -551,
+  "drawdown1y": -551,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -551,
+  "cagr1y": 112,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 619,
+  "rating": 0,
+  "description": "REKSA DANA KIM FIXED INCOME FUND PLUS (untuk selanjutnya disebut “KIM FIXED INCOME FUND PLUS“)  adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995  tentang Pasar Modal sebagaimana terakhir diubah dengan Undang-Undang Nomor 4 tahun 2023 tentang  Pengembangan dan Penguatan Sektor Keuangan (“Undang-Undang Pasar Modal”) beserta peraturan  pelaksanaannya.  KIM FIXED INCOME FUND PLUS bertujuan untuk memberikan hasil investasi yang optimal dalam jangka  menengah hingga panjang melalui strategi pengelolaan investasi yang aktif dengan tetap memperhatikan  ketentuan investasi sesuai dengan Kebijakan Investasi.",
+  "isSyariah": false,
+  "lastPrice": 117267,
+  "expenseRatio": 147,
+  "minFirstBuy": 100000,
+  "minNextBuy": 100000,
+  "asof": 20261001,
+  "url": "kim-fixed-income-fund-plus-4d7fbdd03a46",
+  "currency": "IDR",
+  "lastAum": 3590844665581,
+  "factsheet": "https://cache.makmur.id/files/products/669739d5a9ee6c929486b5df/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/669739d5a9ee6c929486b5df/prospectus.pdf",
+  "inceptionDate": 20240206,
+  "riskLevel": 40,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}

@@ -1,0 +1,86 @@
+{
+  "_id": "6203bca9eefd610a89bb05eb",
+  "name": "Batavia Dana Saham Optimal",
+  "category": "equity",
+  "manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "logo": "https://cache.makmur.id/images/managers/62037caceefd610a89bb05d9/logo.png"
+  },
+  "custodian": {
+    "name": "Deutsche Bank",
+    "logo": "https://cache.makmur.id/images/custodians/60d1b6b94cc7bb3913edb05f/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "ALAMTRI RESOURCES INDONESIA TBK"
+    },
+    {
+      "instrument": "ASTRA OTOPARTS Tbk"
+    },
+    {
+      "instrument": "BANK CENTRAL ASIA TBK"
+    },
+    {
+      "instrument": "BANK NEGARA INDONESIA TBK"
+    },
+    {
+      "instrument": "BANK RAKYAT INDONESIA (PERSERO) TBK"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 812
+    },
+    {
+      "asset": "Saham",
+      "weight": 9188
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": -112,
+  "return5d": -375,
+  "return1m": -832,
+  "return3m": 437,
+  "returnytd": -1278,
+  "return1y": -1074,
+  "return3y": -1890,
+  "return5y": -756,
+  "return10y": -234,
+  "returnsi": 16265,
+  "drawdownytd": -2632,
+  "drawdown1y": -2632,
+  "drawdown3y": -3099,
+  "drawdown5y": -3099,
+  "drawdownsi": -6983,
+  "cagr1y": -1074,
+  "cagr3y": -674,
+  "cagr5y": -156,
+  "cagr10y": -24,
+  "cagrsi": 496,
+  "rating": 0,
+  "description": "Reksa Dana BATAVIA DANA SAHAM OPTIMAL adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Reksa Dana BATAVIA DANA SAHAM OPTIMAL (selanjutnya disebut “BATAVIA DANA SAHAM OPTIMAL”) bertujuan mendapatkan kenaikan modal dalam jangka panjang dengan berinvestasi pada saham perusahaan berkapitalisasi pasar besar, menengah dan/atau kecil yang terdaftar di Bursa Efek Indonesia. BATAVIA DANA SAHAM OPTIMAL akan menginvestasikan dananya dengan komposisi investasi sebesar minimal 80% (delapan puluh persen) dan maksimum 95 % (sembilan puluh lima persen) pada efek ekuitas, minimal 0% (nol persen) dan maksimum 20% ( duapuluh persen) pada instrumen pasar uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun yang diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 262647,
+  "expenseRatio": 615,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "batavia-dana-saham-optimal-fa35aa7289a1",
+  "currency": "IDR",
+  "lastAum": 192878601696,
+  "factsheet": "https://cache.makmur.id/files/products/6203bca9eefd610a89bb05eb/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6203bca9eefd610a89bb05eb/prospectus.pdf",
+  "inceptionDate": 20061019,
+  "riskLevel": 90,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "saham"
+}

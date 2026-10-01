@@ -1,0 +1,88 @@
+{
+  "_id": "60deef0483d25903cd37fe60",
+  "name": "Capital Sharia Money Market",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Capital Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/60dee33a83d25903cd37fe5c/logo.png"
+  },
+  "custodian": {
+    "name": "Danamon",
+    "logo": "https://cache.makmur.id/images/custodians/60ded07f83d25903cd37fe59/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Deposito Aladin Syariah"
+    },
+    {
+      "instrument": "Sukuk Ijarah Bkljt I Metrohealth Care Indonesia Thp I Thn 2026 seri A"
+    },
+    {
+      "instrument": "Deposito BTPN Syariah"
+    },
+    {
+      "instrument": "Deposito BPD Riau"
+    },
+    {
+      "instrument": "Sukuk Mudharabah Bkljt I OKI Pulp & Paper Mills Thp II Thn 2023 seri B"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 5900
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 4100
+    }
+  ],
+  "portfolioAsof": 20260831,
+  "return1d": 1,
+  "return5d": 10,
+  "return1m": 41,
+  "return3m": 125,
+  "returnytd": 365,
+  "return1y": 488,
+  "return3y": 1664,
+  "return5y": 2624,
+  "return10y": null,
+  "returnsi": 5375,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": 0,
+  "drawdown5y": 0,
+  "drawdownsi": -27,
+  "cagr1y": 488,
+  "cagr3y": 526,
+  "cagr5y": 477,
+  "cagr10y": null,
+  "cagrsi": 499,
+  "rating": 0,
+  "description": "REKSA DANA SYARIAH CAPITAL SHARIA MONEY MARKET (selanjutnya disebut \"CAPITAL SHARIA MONEY MARKET\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya.CAPITAL SHARIA MONEY MARKET bertujuan untuk menghasilkan tingkat pertumbuhan yang stabil dalam jangka waktu pendek dan menengah dengan likuiditas yang tinggi dengan melakukan investasi pada instrumen investasi yang sesuai dengan Prinsip Syariah di Pasar Modal dan peraturan perundang-undangan yang berlaku.CAPITAL SHARIA MONEY MARKET akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen)dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau Efek Syariah Berpendapatan Tetap yang sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang diperdagangkan di Indonesia dan/atau deposito Syariah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": true,
+  "lastPrice": 153746,
+  "expenseRatio": 64,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261001,
+  "url": "capital-sharia-money-market-856d7acffdbe",
+  "currency": "IDR",
+  "lastAum": 75601136593,
+  "factsheet": "https://cache.makmur.id/files/products/60deef0483d25903cd37fe60/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/60deef0483d25903cd37fe60/prospectus.pdf",
+  "inceptionDate": 20171205,
+  "riskLevel": 5,
+  "traits": [
+    "Sharia"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}
