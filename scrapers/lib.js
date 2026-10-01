@@ -133,6 +133,15 @@ export const runPool = async ({ items, worker, concurrency, label, describeItem 
   return failures;
 };
 
+export const decodeHtml = (text) => text
+  .replaceAll('&quot;', '"')
+  .replaceAll('&#039;', "'")
+  .replaceAll('&#39;', "'")
+  .replaceAll('&lt;', '<')
+  .replaceAll('&gt;', '>')
+  .replaceAll('&amp;', '&')
+  .trim();
+
 const BIBIT_SYMBOL_COLUMN = 0;
 const BIBIT_NAME_COLUMN = 1;
 const BIBIT_MANAGER_COLUMN = 3;

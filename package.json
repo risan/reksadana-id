@@ -9,6 +9,8 @@
     "scrape": "npm run scrape:bibit && npm run scrape:kontan",
     "scrape:bibit": "node scrapers/bibit.js",
     "scrape:kontan": "node scrapers/kontan.js",
+    "scrape:bareksa": "node scrapers/bareksa.js",
+    "test": "node --test scrapers/*.test.js",
     "dev": "astro dev",
     "build": "astro build && node scripts/check-dist.js",
     "preview": "wrangler dev"

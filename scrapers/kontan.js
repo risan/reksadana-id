@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { HttpError, matchBibitSymbols, readCsvRows, reportMatches, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
+import { HttpError, decodeHtml, matchBibitSymbols, readCsvRows, reportMatches, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
 
 const BASE_URL = 'https://pusatdata.kontan.co.id';
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'kontan');
@@ -77,15 +77,6 @@ const parseChart = (html) => {
 
   return { rows: [...navByDate].map(([date, nav]) => [date, String(nav)]), hasConflict };
 };
-
-const decodeHtml = (text) => text
-  .replaceAll('&quot;', '"')
-  .replaceAll('&#039;', "'")
-  .replaceAll('&#39;', "'")
-  .replaceAll('&lt;', '<')
-  .replaceAll('&gt;', '>')
-  .replaceAll('&amp;', '&')
-  .trim();
 
 const parseFundPage = (html) => {
   const header = html.match(/<div class="wdt_perusahaan">\s*<div class="wrn_atas">([^<]*)<\/div>\s*<div class="wrn_tbal[^"]*"[^>]*>([^<]*)<\/div>/);
