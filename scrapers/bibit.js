@@ -28,7 +28,7 @@ const request = async (url) => {
     headers: {
       Accept: 'application/json',
       Origin: 'https://app.bibit.id',
-      'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) bibit-reksadana-scraper',
+      'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) reksadana-id-scraper',
     },
     signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
   });

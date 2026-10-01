@@ -1,4 +1,4 @@
-# Bibit Reksadana
+# Reksadana ID
 
 Raw data for Indonesian mutual funds (reksa dana). It comes from four sources: the public API behind [Bibit](https://app.bibit.id/), the [Kontan pusatdata](https://pusatdata.kontan.co.id/reksadana) pages, [Bareksa](https://www.bareksa.com/id/data/reksadana/daftar), and the public fund pages of [Makmur](https://www.makmur.id/). The data lives in this repository, so you can read it without calling any of the sites.
 
@@ -103,7 +103,7 @@ Cloudflare Workers Builds deploys the site from GitHub. In the Cloudflare dashbo
 
 | Setting | Value |
 |---|---|
-| Worker name | `bibit-reksadana` |
+| Worker name | `reksadana-id` |
 | Production branch | `main` |
 | Root directory | `/` |
 | Build command | `npm run build` |

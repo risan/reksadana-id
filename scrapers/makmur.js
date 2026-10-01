@@ -19,7 +19,7 @@ const fetchText = (url) => withRetries(async () => {
     const response = await fetch(url, {
       headers: {
         Accept: 'text/html,application/xml',
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) bibit-reksadana-scraper',
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) reksadana-id-scraper',
       },
       signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
     });
