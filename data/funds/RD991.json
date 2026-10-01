@@ -1,0 +1,208 @@
+{
+  "id": 991,
+  "custodian_bank_id": null,
+  "symbol": "RD991",
+  "name": "Manulife Greater Indonesia Fund",
+  "type": "Saham",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17952,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 91.27
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 8.73
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BBCA",
+      "name": "PT Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "PT Bank Mandiri (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "PT Manulife Aset Manajemen Indonesia",
+    "ojkCode": "MAN02",
+    "telepon": "+62 21 25557788",
+    "fax": "+62 21 25557676",
+    "email": "MAMI_customer_id@manulifeam.com",
+    "url": "www.reksadana-manulife.com"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK A. G. - CUSTODY",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 24791380.54956,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.03
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.05977653631284929,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.1822503961965135,
+    "3y": -0.27384332080104345,
+    "5y": -0.27384332080104345,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 0.7452
+  },
+  "trade": null
+}

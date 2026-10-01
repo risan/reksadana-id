@@ -1,0 +1,271 @@
+{
+  "id": 431,
+  "custodian_bank_id": 6,
+  "symbol": "RD431",
+  "name": "BNP Paribas Solaris",
+  "type": "Saham",
+  "profile": "REKSA DANA BNP PARIBAS SOLARIS bertujuan untuk memberikan pendapatan yang potensial kepada Pemegang Unit Penyertaan (PUP) melalui alokasi utama pada Efek\nbersifat ekuitas.\n\nREKSA DANA BNP PARIBAS SOLARIS mempunyai kebijakan investasi minimum sebesar 80% dan maksimum sebesar 100% portofolio investasi pada Efek bersifat ekuitas yang dijual melalui Penawaran Umum dan/atau diperdagangkan pada Bursa Efek baik di dalam maupun di luar negeri; minimum sebesar 0% dan maksimum sebesar 20% pada Efek bersifat utang yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri, termasuk Efek bersifat utang yang dikeluarkan oleh Negara Republik Indonesia, Sertifikat Bank Indonesia (SBI), Sertifikat Deposito, instrumen pasar uang lainnya serta dapat termasuk kas dan Deposito Berjangka, sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 6,
+    "name": "CITIBANK",
+    "color": "#3d7fd0",
+    "icon_url": "https://assets.bibit.id/icons/banks/Citibank_05042023141502.svg"
+  },
+  "released_date": "2008-05-15",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Deposito",
+      "percentage": 6.04
+    },
+    {
+      "name": "Kas",
+      "percentage": 8.14
+    },
+    {
+      "name": "Saham",
+      "percentage": 85.81
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TPIA",
+      "name": "Chandra Asri Pacific Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4710,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "DSNG",
+      "name": "Dharma Satya Nusantara Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4892,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INKP",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4514,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MEDC",
+      "name": "Medco Energi Internasional Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4403,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "HEAL",
+      "name": "Medikaloka Hermina Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4550,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TKIM",
+      "name": "Pabrik Kertas Tjiwi Kimia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4540,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Bank Mega - MM",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4587075431",
+      "name": "Reksa Dana BNP Paribas Solaris"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNP Paribas Asset Management",
+    "ojkCode": "MEES2",
+    "telepon": "+62 21 2521574",
+    "fax": "+62 21 2521594",
+    "email": "sales.service@bnpparibas-ip.co.id",
+    "url": "www.bnpparibas-ip.co.id"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK, N. A",
+    "ojkCode": "CITI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 347430000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0493
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.0907839816959558,
+    "3y": -0.06522076859241777,
+    "5y": -0.05561818418596187,
+    "10y": -0.02401412039372064,
+    "all": 0.025700388401068697
+  },
+  "cagr_adjusted": {
+    "1y": -0.0907839816959558,
+    "3y": -0.06522076859241777,
+    "5y": -0.05561818418596187,
+    "10y": -0.02401412039372064,
+    "all": 0.025704266794627006
+  },
+  "simplereturn": {
+    "1d": 0.0010413029380955674,
+    "1m": -0.07792200333122734,
+    "3m": 0.25784867549928325,
+    "ytd": -0.08395670358387963,
+    "1y": -0.0907839816959558,
+    "3y": -0.18317849256662566,
+    "5y": -0.2488302670734217,
+    "10y": -0.21578464033450895,
+    "all": 0.5946184866604423
+  },
+  "changesvalue": {
+    "1d": 1.6700000000000728,
+    "1m": -135.66999999999985,
+    "3m": 329.10000000000014,
+    "ytd": -147.13999999999987,
+    "1y": -160.29999999999995,
+    "3y": -360.03,
+    "5y": -531.8099999999997,
+    "10y": -441.75,
+    "all": 598.6500000000001
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.3814312577543425,
+    "3y": -0.3814312577543425,
+    "5y": -0.4630608814925513,
+    "10y": -0.5277207850964243,
+    "all": -0.6252113605743582
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3814312577543424,
+    "3y": -0.3814312577543424,
+    "5y": -0.4630608814925512,
+    "10y": -0.5277207850964242,
+    "all": -0.6252113605743582
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2008-05-16",
+    "value": 1605.43
+  },
+  "trade": null
+}

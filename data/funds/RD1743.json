@@ -1,0 +1,265 @@
+{
+  "id": 1743,
+  "custodian_bank_id": 6,
+  "symbol": "RD1743",
+  "name": "Schroder Global Sharia Equity Fund USD",
+  "type": "Reksadana Global",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 6,
+    "name": "CITIBANK",
+    "color": "#3d7fd0",
+    "icon_url": "https://assets.bibit.id/icons/banks/Citibank_05042023141502.svg"
+  },
+  "released_date": "2016-02-22",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 5000,
+  "minsell": 1000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": 1000,
+  "min_buy_after_sell_all": 10000,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Syariah Bersifat Ekuitas",
+      "percentage": 91.36
+    },
+    {
+      "name": "Efek Syariah Pendapatan Tetap dan/atau Pasar Uang Syariah",
+      "percentage": 8.64
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "ALPHABET INC (Sharia Equity)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "AMAZON.COM INC (Sharia Equity)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "APPLE INC (Sharia Equity)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "ASML HOLDING NV (Sharia Equity)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BROADCOM INC (Sharia Equity)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "META PLATFORMS INC (Sharia Equity)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "MICROSOFT CORP (Sharia Equity)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "NVIDIA CORP (Sharia Equity)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SAMSUNG ELECTRONICS CO LTD (Sharia Equity)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TAIWAN SEMICONDUCTOR MANUFAC (Sharia Equity)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4588772169",
+      "name": "Reksa Dana Syariah Schroder Global Sharia Equity Fund",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Schroder Investment Management Indonesia",
+    "ojkCode": "SCH02"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK, N. A",
+    "ojkCode": "CITI1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 32816984,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0198
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.14033476219636665,
+    "3y": 0.15635348565505125,
+    "5y": 0.06770974489476345,
+    "10y": 0.07732922456333169,
+    "all": 0.07887416275823322
+  },
+  "cagr_adjusted": {
+    "1y": 0.1318698032853376,
+    "3y": 0.1559911384179531,
+    "5y": 0.06855944125488023,
+    "10y": 0.07674180524949081,
+    "all": 0.07877857097415619
+  },
+  "simplereturn": {
+    "1d": -0.0009397655061308408,
+    "1m": -0.0035261560435637662,
+    "3m": 0.015049558970628318,
+    "ytd": 0.09318382136911185,
+    "1y": 0.1318698032853376,
+    "3y": 0.5447688901190146,
+    "5y": 0.3931357254290171,
+    "10y": 1.0946706699193092,
+    "all": 1.2358537806710062
+  },
+  "changesvalue": {
+    "1d": -0.0020999999999999908,
+    "1m": -0.00790000000000024,
+    "3m": 0.03310000000000013,
+    "ytd": 0.19030000000000014,
+    "1y": 0.2601,
+    "3y": 0.7872999999999999,
+    "5y": 0.6299999999999999,
+    "10y": 1.1666999999999998,
+    "all": 1.234
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.08298164920100537,
+    "3y": -0.15821262493986854,
+    "5y": -0.25217187133129837,
+    "10y": -0.27460147148988345,
+    "all": -0.27460147148988345
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0829816492010053,
+    "3y": -0.1582126249398685,
+    "5y": -0.2521718713312984,
+    "10y": -0.2746014714898835,
+    "all": -0.2746014714898835
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2016-02-23",
+    "value": 2.2325
+  },
+  "trade": null
+}

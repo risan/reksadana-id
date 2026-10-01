@@ -1,0 +1,268 @@
+{
+  "id": 1669,
+  "custodian_bank_id": 2,
+  "symbol": "RD1669",
+  "name": "Sucorinvest Sharia Money Market Fund",
+  "type": "Pasar Uang",
+  "profile": "Sucorinvest Sharia Money Market Fund bertujuan untuk memberikan tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat sekaligus memberikan tingkat pendapatan investasi yang menarik yang sesuai Prinsip Syariah di Pasar Modal pada Efek Syariah yang terdaftar pada Daftar Efek Syariah.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2018-10-01",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Deposito Syariah dan Setara Kas",
+      "percentage": 36.85
+    },
+    {
+      "name": "Sukuk (dgn. sisa jt. tempo dan/atau jk. waktu < 1 tahun)",
+      "percentage": 63.15
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "SBSN Seri PBS003",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk ljarah Berkelanjutan II Moratelindo Tahap II Tahun 2024 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan III Sarana Multi Infrastruktur Tahap II Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berwawasan Sosial Berkelanjutan | Pegadaian Tahap III Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Wakalah Bi Al-istitsmar Berkelanjutan I Cimb Niaga Auto Finance Tahap III Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Cimb Niaga Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Jabar Banten Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Panin Dubai Syariah Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT BPD Sumatera Selatan Dan Bangka Belitung",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT. Bank Syariah Indonesia",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585792951",
+      "name": "Reksa Dana  Sucorinvest Sharia Money Market Fund"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "ojkCode": "GAMA2"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 7100000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0174
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.065
+  },
+  "cagr": {
+    "1y": 0.04130567588581591,
+    "3y": 0.0475665351083292,
+    "5y": 0.04401143489506021,
+    "10y": null,
+    "all": 0.05194426368992189
+  },
+  "cagr_adjusted": {
+    "1y": 0.04130567588581591,
+    "3y": 0.0475665351083292,
+    "5y": 0.04401143489506021,
+    "10y": null,
+    "all": 0.05196250720290285
+  },
+  "simplereturn": {
+    "1d": 0.00013335289175753218,
+    "1m": 0.00433880147304988,
+    "3m": 0.010005925447102104,
+    "ytd": 0.029795823092449547,
+    "1y": 0.04130567588581591,
+    "3y": 0.14959495397726852,
+    "5y": 0.2402986679014696,
+    "10y": null,
+    "all": 0.4996920591246481
+  },
+  "changesvalue": {
+    "1d": 0.20000000000004547,
+    "1m": 6.480000000000018,
+    "3m": 14.860000000000127,
+    "ytd": 43.40000000000009,
+    "1y": 59.5,
+    "3y": 195.19000000000005,
+    "5y": 290.6100000000001,
+    "10y": null,
+    "all": 499.788
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00008085436108218325,
+    "3y": -0.00011112181172989732,
+    "5y": -0.00011112181172989732,
+    "10y": -0.00011112181172989732,
+    "all": -0.00011112181172989732
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0000808543610821,
+    "3y": -0.00011112181173,
+    "5y": -0.00011112181173,
+    "10y": -0.00011112181173,
+    "all": -0.00011112181173
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-10-02",
+    "value": 1499.98
+  },
+  "trade": null
+}

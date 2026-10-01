@@ -1,0 +1,147 @@
+{
+  "id": 494,
+  "custodian_bank_id": null,
+  "symbol": "RD494",
+  "name": "Cipta Balance",
+  "type": "Campuran",
+  "profile": "CIPTA BALANCE bertujuan memberikan tingkat pertumbuhan investa  i yang optimal dalam jangka panjang melalui diversifikasi investasi dana pada Efek Utang, Efek Ekuitas, Efek Pasar Uang dan Kas.\n\nCIPTA BALANCE melakukan investasi pada Efek Utang yang diterbitkan oleh pemerintah, BUMN, maupun  swasta, Efek Ekuitas yaitu saham yang tercatat pada Bursa Efek di Indonesia maupun di Bursa Efek Luar Negeri yang informasinya dapat diakses melalui media massa atau fasilitas internet termasuk di dalamnya adalah instrumen Hak Untuk Memesan Efek Terlebih Dahulu (HMETD), Waran dan Obligasi \nKonversi serta pada Instrumen Pasar Uang termasuk surat utang yang jatuh tempo kurang dari satu tahun, baik dalam mata uang Rupiah maupun mata uang lainnya, dengan alokasi investasi sebagai berikut:\n- Minimum 5% (lima per seratus) dan maksimum 75% (tujuh puluh lima per seratus) pada Efek Ekuitas ; \n- Minimum 5% (lima per seratus) dan maksimum 75% (tujuh puluh lima per seratus) pada Efek Utang ;\n- Minimum 5% (lima per seratus) dan maksimum 75% (tujuh puluh lima per seratus) pada Instrumen Pasar Uang",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [],
+  "investment_manager": {
+    "name": "Ciptadana Asset Management, PT",
+    "ojkCode": "KI002",
+    "telepon": "+62 21 25574883",
+    "fax": "+62 21 25574893",
+    "email": "customerservice@ciptadana.com",
+    "url": "www.ciptadana.com"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA - CUSTODY, Tbk, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": null,
+    "date": "2019-01-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.09704234237577447,
+    "3y": -0.0108539657044503,
+    "5y": 0.1054763907501355,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.8431282503696005,
+    "3y": -0.8593450888890494,
+    "5y": -0.8593450888890494,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2019-01-14",
+    "first_date": "2007-10-18",
+    "value": 2364.96
+  },
+  "trade": null
+}

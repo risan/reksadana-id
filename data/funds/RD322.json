@@ -1,0 +1,276 @@
+{
+  "id": 322,
+  "custodian_bank_id": 13,
+  "symbol": "RD322",
+  "name": "BNI-AM Dana Lancar Syariah",
+  "type": "Pasar Uang",
+  "profile": "BNI-AM DANA LANCAR SYARIAH bertujuan untuk memberikan tingkat pertumbuhan investasi yang stabil dengan risiko minimal sekaligus memperoleh tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat dengan berinvestasi pada instrumen pasar uang syariah dalam negeri dan/atau Efek Syariah bersifat utang yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia dan/atau deposito syariah yang tidak bertentangan dengan prinsip-prinsip syariah di Pasar Modal.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 72,
+    "name": "JAGO",
+    "color": "#f09f1a",
+    "icon_url": "https://assets.bibit.id/icons/banks/jago-circle-v2.svg"
+  },
+  "released_date": "2013-06-28",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas & Deposito Syariah",
+      "percentage": 54
+    },
+    {
+      "name": "Sukuk Pemerintah",
+      "percentage": 8
+    },
+    {
+      "name": "Sukuk Korp.",
+      "percentage": 38
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank Mega Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD BJB Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Riau Kepri Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Sumselbabel UUS",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "CIMB Niaga Auto Finance",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indah Kiat Pulp & Paper",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OKI Pulp & Paper Mills",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Pegadaian",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sampoerna Agro",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585678962",
+      "name": "Reksa Dana BNI-AM Dana Lancar Syariah"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNI Asset Management",
+    "ojkCode": "NI002",
+    "telepon": "+62 21 29969646",
+    "fax": "+62 21 29969647",
+    "email": "corsec@bni-am.co.id",
+    "url": "www.bni-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "PT Bank Maybank Indonesia Tbk",
+    "ojkCode": "BII01"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 86213614599,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0121
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0326
+  },
+  "cagr": {
+    "1y": 0.038712699268554474,
+    "3y": 0.041920302994921776,
+    "5y": 0.03799405967619007,
+    "10y": 0.04395147947722755,
+    "all": 0.04986140518246396
+  },
+  "cagr_adjusted": {
+    "1y": 0.038712699268554474,
+    "3y": 0.041920302994921776,
+    "5y": 0.03799405967619007,
+    "10y": 0.04395147947722755,
+    "all": 0.04987195548839596
+  },
+  "simplereturn": {
+    "1d": 0.0001311014620435369,
+    "1m": 0.004117197988785737,
+    "3m": 0.01074784433644771,
+    "ytd": 0.028035317708445584,
+    "1y": 0.038712699268554474,
+    "3y": 0.13110651143756935,
+    "5y": 0.2049647451287624,
+    "10y": 0.537457576563722,
+    "all": 0.90717
+  },
+  "changesvalue": {
+    "1d": 0.25,
+    "1m": 7.820000000000164,
+    "3m": 20.279999999999973,
+    "ytd": 52.00999999999999,
+    "1y": 71.08000000000015,
+    "3y": 221.06000000000017,
+    "5y": 324.4100000000001,
+    "10y": 666.7,
+    "all": 907.1700000000001
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0008411059739953375,
+    "3y": -0.0009766318630585191,
+    "5y": -0.0009766318630585191,
+    "10y": -0.0009766318630585191,
+    "all": -0.005602892565989004
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0008411059739954,
+    "3y": -0.0009766318630585,
+    "5y": -0.0009766318630585,
+    "10y": -0.0009766318630585,
+    "all": -0.0056028925659891
+  },
+  "instant_redemption": {
+    "type": 1,
+    "quota_limit": 3
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2013-06-28",
+    "value": 1907.17
+  },
+  "trade": null
+}

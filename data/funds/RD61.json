@@ -1,0 +1,206 @@
+{
+  "id": 61,
+  "custodian_bank_id": null,
+  "symbol": "RD61",
+  "name": "Aurora Likuid",
+  "type": "Pasar Uang",
+  "profile": "Reksa Dana Aurora Likuid bertujuan untuk memberikan imbal hasil yang stabil dan berkesinambungan dengan tetap berusaha mempertahankan nilai investasi awal, serta memberikan tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu singkat. Aurora Likuid berinvestasi sebesar 100% pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo dibawah satu tahun dan/atau Efek bersifat Utang dengan jangka waktu dibawah satu tahun dan/atau deposito sesuai peraturan dan undang-undang yang berlaku di Indonesia yang diseleksi dengan parameter internal.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Surat Utang <1 tahun",
+      "percentage": 0
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "SYJBIDJ1 PT Bank Jabar Banten Syariah",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "MAYAIDJA PT Bank Mayapada Inter'l TBK",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "GNESIDJA PT Bank Ganesha",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BBUKIDJA PT Bank Bukopin",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PDLPIDJ1 PT BPD Lampung",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Aurora Asset Management,PT",
+    "ojkCode": "ARO02",
+    "telepon": "021-80667091-93",
+    "fax": "021-80667094"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 213487.49,
+    "date": "2020-05-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.03699323883234729,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.007043176346486879,
+    "3y": -0.007043176346486879,
+    "5y": -0.007043176346486879,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2020-05-18",
+    "first_date": "2018-02-19",
+    "value": 1076.5743
+  },
+  "trade": null
+}

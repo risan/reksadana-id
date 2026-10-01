@@ -1,0 +1,208 @@
+{
+  "id": 996,
+  "custodian_bank_id": null,
+  "symbol": "RD996",
+  "name": "Manulife Pendapatan Bulanan II",
+  "type": "Obligasi",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 17.69
+    },
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 82.31
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "BBTNIJ 7 3/4% 07/08/20",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOIS 8 3/4% 08/15/23",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOIS 8 1/2% 11/15/26",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOIS 6 1/8% 10/15/25",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOIS 5.45% 01/15/22",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "PT Manulife Aset Manajemen Indonesia",
+    "ojkCode": "MAN02",
+    "telepon": "+62 21 25557788",
+    "fax": "+62 21 25557676",
+    "email": "MAMI_customer_id@manulifeam.com",
+    "url": "www.reksadana-manulife.com"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK A. G. - CUSTODY",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1258336935649,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0167
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.03426922935577514,
+    "3y": 0.01124237383355076,
+    "5y": 0.01093289392785857,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.019934980731649343,
+    "3y": -0.048816371387296,
+    "5y": -0.048816371387296,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2009-01-27",
+    "value": 1128.1
+  },
+  "trade": null
+}

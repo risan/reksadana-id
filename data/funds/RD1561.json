@@ -1,0 +1,147 @@
+{
+  "id": 1561,
+  "custodian_bank_id": null,
+  "symbol": "RD1561",
+  "name": "Schroder Money Market Fund",
+  "type": "Pasar Uang",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [],
+  "investment_manager": {
+    "name": "Schroder Investment Management Indonesia, PT",
+    "ojkCode": "SCH02",
+    "telepon": "+62 21 2965 5100",
+    "fax": "+62 21 515 0505",
+    "email": "-",
+    "url": "www.schroders.com/id/id/investasi-reksadana"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 0.01,
+    "date": "2020-03-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.05470955136570699,
+    "3y": 0.05074043196612843,
+    "5y": 0.05815779459391779,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": 0,
+    "3y": 0,
+    "5y": 0,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2020-03-23",
+    "first_date": "2014-05-06",
+    "value": 1391.2605
+  },
+  "trade": null
+}

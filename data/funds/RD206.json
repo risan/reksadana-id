@@ -1,0 +1,268 @@
+{
+  "id": 206,
+  "custodian_bank_id": 2,
+  "symbol": "RD206",
+  "name": "Batavia Dana Likuid",
+  "type": "Pasar Uang",
+  "profile": "Reksa Dana BATAVIA DANA LIKUID (selanjutnya disebut “BATAVIA DANA LIKUID“) BATAVIA DANA LIKUID bertujuan untuk mendapatkan tingkat pertumbuhan dana yang optimum dengan tetap mempertahankan nilai modal dalam jangka pendek dan menengah melalui penempatan dana pada instrumen pasar uang dan/atau setara kas, yang diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.\n\nBATAVIA DANA LIKUID akan menginvestasikan dananya dengan komposisi investasi sebagai berikut :\n- BATAVIA DANA LIKUID menginvestasikan dananya dengan komposisi investasi sebesar 100% (seratus persen) pada instrumen pasar uang dan/atau setara kas, yang diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2014-01-13",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "PT BANK ALADIN SYARIAH (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK SMBC INDONESIA, TBK. (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK HSBC INDONESIA, TBK. (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK JABAR BANTEN SYARIAH (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK JAGO TBK (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK MEGA SYARIAH (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK MEGA, TBK (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK TABUNGAN PENSIUNAN NASIONAL SYARIAH (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK UOB INDONESIA (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BPD DKI (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5026669240",
+      "name": "Reksa Dana Batavia Dana Likuid"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "ojkCode": "BZ002",
+    "telepon": "+62 21 5208390, +62 21 5207374, +62 21 5206936",
+    "fax": "+62 21 5206899",
+    "email": "customer@bpam.co.id",
+    "url": "www.bpam.co.id"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 247237432902,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.007
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.029160003762580988,
+    "3y": 0.03346632039165165,
+    "5y": 0.027148426416711002,
+    "10y": 0.02655361083733565,
+    "all": 0.02808907809253469
+  },
+  "cagr_adjusted": {
+    "1y": 0.029160003762580988,
+    "3y": 0.03346632039165165,
+    "5y": 0.027148426416711002,
+    "10y": 0.02655361083733565,
+    "all": 0.02809521470502463
+  },
+  "simplereturn": {
+    "1d": 0.000133601473835121,
+    "1m": 0.00392441963056811,
+    "3m": 0.010091469477033321,
+    "ytd": 0.023222186252292998,
+    "1y": 0.029160003762580988,
+    "3y": 0.10379642707476444,
+    "5y": 0.1433153274814314,
+    "10y": 0.29961988998739053,
+    "all": 0.4223442234422343
+  },
+  "changesvalue": {
+    "1d": 0.1899999999998272,
+    "1m": 5.559999999999945,
+    "3m": 14.210000000000036,
+    "ytd": 32.27999999999997,
+    "1y": 40.299999999999955,
+    "3y": 133.75,
+    "5y": 178.28999999999996,
+    "10y": 327.90999999999985,
+    "all": 422.3399999999999
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00004287031016669829,
+    "3y": -0.00004287031016669829,
+    "5y": -0.00004287031016669829,
+    "10y": -0.00030764632977942075,
+    "all": -0.01647140915935219
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0000428703101667,
+    "3y": -0.0000428703101667,
+    "5y": -0.0000428703101667,
+    "10y": -0.0003076463297793,
+    "all": -0.0003076463297793
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2014-01-15",
+    "value": 1422.33
+  },
+  "trade": null
+}

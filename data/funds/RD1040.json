@@ -1,0 +1,182 @@
+{
+  "id": 1040,
+  "custodian_bank_id": null,
+  "symbol": "RD1040",
+  "name": "Mega Asset Madania Syariah",
+  "type": "Campuran",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Cash & Equivalent",
+      "percentage": -31.51
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 0
+    },
+    {
+      "name": "Saham",
+      "percentage": 131.51
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "KLBF",
+      "name": "Kalbe Farma Tbk",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SIAGII01ACN1",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Mega Asset Management, PT",
+    "ojkCode": "CD004",
+    "telepon": "+62 21 79175924",
+    "fax": "+62 21 79175925",
+    "email": "-",
+    "url": "www.mega-asset.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK DANAMON INDONESIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BDMN2"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": null,
+    "date": "2026-02-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.01509300197373731,
+    "3y": -0.02421475090632308,
+    "5y": -0.01868259598929367,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.08720663809158324,
+    "3y": -0.13473645767710252,
+    "5y": -0.18693652589699616,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-02-09",
+    "first_date": "2014-05-14",
+    "value": 839.6296
+  },
+  "trade": null
+}

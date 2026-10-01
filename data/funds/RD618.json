@@ -1,0 +1,271 @@
+{
+  "id": 618,
+  "custodian_bank_id": 3,
+  "symbol": "RD618",
+  "name": "BRI Seruni Pasar Uang II Kelas A",
+  "type": "Pasar Uang",
+  "profile": "BRI SERUNI PASAR UANG II dikelola secara aktif guna memperoleh pendapatan yang optimal dan risiko yang terkendali melalui investasi 100% (Seratus per Seratus) pada Instrumen Pasar Uang dalam negeri dan/atau Efek Bersifat Utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (Satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (Satu) tahun yang ditawarkan melalui Penawaran Umum dan/atau dicatatkan di Bursa Efek. Kebijakan Investasi ini sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 72,
+    "name": "JAGO",
+    "color": "#f09f1a",
+    "icon_url": "https://assets.bibit.id/icons/banks/jago-circle-v2.svg"
+  },
+  "released_date": "2008-02-06",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Utang",
+      "percentage": 64.15
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 35.85
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "BKLBN-JKT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "ADMF07ACN3",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0056",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "MDKA05CN3",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PDJBIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PDJMIDJ1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PDRIIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PDSBIDJ1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SMFP08ACN2",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SSPIIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4589791107",
+      "name": "Reksa Dana BRI Seruni Pasar Uang II Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "ojkCode": "OD002",
+    "telepon": "021-29555789",
+    "fax": "(62-21) 29 555 878",
+    "email": "reksadanaonline@danareksa.com",
+    "url": "https://bri-mi.co.id/"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 2730000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0113
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.071
+  },
+  "cagr": {
+    "1y": 0.03792062671044483,
+    "3y": 0.04438294017354494,
+    "5y": 0.03739303907171054,
+    "10y": 0.043783856942909205,
+    "all": 0.03558025507957008
+  },
+  "cagr_adjusted": {
+    "1y": 0.03792062671044483,
+    "3y": 0.04438294017354494,
+    "5y": 0.03739303907171054,
+    "10y": 0.043783856942909205,
+    "all": 0.0355855724461307
+  },
+  "simplereturn": {
+    "1d": 0.00017044951370825956,
+    "1m": 0.00489804506335445,
+    "3m": 0.010758766672034792,
+    "ytd": 0.02695056492098291,
+    "1y": 0.03792062671044483,
+    "3y": 0.139145784185563,
+    "5y": 0.20148028173588495,
+    "10y": 0.5349907338858357,
+    "all": 0.9199572
+  },
+  "changesvalue": {
+    "1d": 0.327199999999948,
+    "1m": 9.358200000000124,
+    "3m": 20.436500000000024,
+    "ytd": 50.38599999999997,
+    "1y": 70.14599999999996,
+    "3y": 234.5213000000001,
+    "5y": 321.96410000000014,
+    "10y": 669.1632,
+    "all": 919.9572000000001
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0002163851408572004,
+    "3y": -0.00028370117511944404,
+    "5y": -0.0011762228471107194,
+    "10y": -0.001345668007820544,
+    "all": -0.0022257438435925314
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0002163851408572,
+    "3y": -0.0002837011751195,
+    "5y": -0.0011762228471108,
+    "10y": -0.0013456680078204,
+    "all": -0.0022257438435925
+  },
+  "instant_redemption": {
+    "type": 1,
+    "quota_limit": 3
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2008-02-08",
+    "value": 1919.9572
+  },
+  "trade": null
+}

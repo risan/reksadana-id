@@ -1,0 +1,260 @@
+{
+  "id": 9328,
+  "custodian_bank_id": 4,
+  "symbol": "RD9328",
+  "name": "Grow Optima Liquid Fund",
+  "type": "Pasar Uang",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2025-04-22",
+  "is_top_product": 0,
+  "is_featured_product": 1,
+  "is_cash_sweepable": 1,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 1000000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang dan/atau Deposito",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "DEPOSITO BANK SULUT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO BPD RIAU",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK ALADIN SYARIAH Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK CAPITAL INDONESIA Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK CIMB NIAGA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK JAGO Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK MEGA Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK NEO COMMERCE Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK PANIN DUBAI SYARIAH Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK PERMATA Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5030629509",
+      "name": "Reksa Dana Grow Optima Liquid Fund"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Grow Investments Indonesia",
+    "ojkCode": "AYR02"
+  },
+  "custodian_bank": {
+    "name": "BANK PERMATA Tbk, PT",
+    "ojkCode": "BALI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 261695467925.51,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0053
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.056
+  },
+  "cagr": {
+    "1y": 0.03424724939476853,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.03501075024722833
+  },
+  "cagr_adjusted": {
+    "1y": 0.03424724939476853,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.03507846462337638
+  },
+  "simplereturn": {
+    "1d": 0.00013323182337265926,
+    "1m": 0.004060419035244456,
+    "3m": 0.010451219629448172,
+    "ytd": 0.02668959184072217,
+    "1y": 0.03424724939476853,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.050939999999999985
+  },
+  "changesvalue": {
+    "1d": 0.14000000000010004,
+    "1m": 4.25,
+    "3m": 10.870000000000118,
+    "ytd": 27.32000000000005,
+    "1y": 34.80000000000007,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 50.940000000000055
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0006400094524472433,
+    "3y": -0.0006400094524472433,
+    "5y": -0.0006400094524472433,
+    "10y": -0.0006400094524472433,
+    "all": -0.0006400094524472433
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": -0.0006400094524473,
+    "5y": -0.0006400094524473,
+    "10y": -0.0006400094524473,
+    "all": -0.0006400094524473
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2025-04-22",
+    "value": 1050.94
+  },
+  "trade": null
+}

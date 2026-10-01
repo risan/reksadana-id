@@ -1,0 +1,160 @@
+{
+  "id": 1311,
+  "custodian_bank_id": null,
+  "symbol": "RD1311",
+  "name": "Pratama Pendapatan Tetap Sbn",
+  "type": "Obligasi",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Fixed Income",
+      "percentage": 47.4
+    },
+    {
+      "name": "Equities",
+      "percentage": 14.1
+    },
+    {
+      "name": "Cash & others",
+      "percentage": 38.5
+    }
+  ],
+  "investment_manager": {
+    "name": "Pratama Capital Assets Management, PT",
+    "ojkCode": "PLA02",
+    "telepon": "+62 21 29035885",
+    "fax": "+62 21 29035865",
+    "email": "cs@pratamacapital.com",
+    "url": "www.pratamacapital.com"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 4599639336.48,
+    "date": "2020-10-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.1120549091366709,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.05336569493741161,
+    "3y": -0.11772858918235529,
+    "5y": -0.11772858918235529,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2020-11-03",
+    "first_date": "2018-01-26",
+    "value": 1192.2044
+  },
+  "trade": null
+}

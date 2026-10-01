@@ -1,0 +1,212 @@
+{
+  "id": 570,
+  "custodian_bank_id": null,
+  "symbol": "RD570",
+  "name": "Danareksa Mawar Rotasi Sektor Strategis",
+  "type": "Saham",
+  "profile": "DANAREKSA MAWAR ROTASI SEKTOR STRATEGIS bertujuan untuk memberikan pertumbuhan yang maksimal dalam jangka panjang melalui investasi pada Efek bersifat ekuitas dengan menggunakan rotasi sektoral secara strategis. Uraian mengenai rotasi sektoral tercantum pada Bab V Prospektus.\n\nDANAREKSA MAWAR ROTASI SEKTOR STRATEGIS akan melakukan investasi dengan komposisi portofolio Efek minimum sebesar 80% (Delapan Puluh per Seratus) dan maksimum sebesar 100% (Seratus per Seratus) pada Efek bersifat Ekuitas yang diterbitkan oleh badan hukum yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun luar negeri; dan minimum sebesar 0% (Nol per Seratus) dan maksimum sebesar 20% (Dua Puluh per Seratus) pada Efek bersifat Utang yang diterbitkan oleh Negara Republik Indonesia dan/atau badan hukum Indonesia yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri dan/atau Instrumen Pasar Uang dalam negeri yang mempunyai jatuh tempo kurang dari\n1 (Satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas",
+      "percentage": 8.6
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 0
+    },
+    {
+      "name": "Saham",
+      "percentage": 91.4
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "UNVR",
+      "name": "Unilever Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-03-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "HMSP",
+      "name": "HM Sampoerna Tbk",
+      "annualDividend": 0,
+      "date": "2019-03-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-03-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "PT Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2019-03-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-03-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Danareksa Investment Management, PT",
+    "ojkCode": "OD002",
+    "telepon": "+62 21 500688",
+    "fax": "+62 21 3501707",
+    "email": "reksadanaonline@danareksa.com",
+    "url": "www.danareksa.com"
+  },
+  "custodian_bank": {
+    "name": "BANK PERMATA - CUSTODY, Tbk, PT",
+    "ojkCode": "BALI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 9978753286.31,
+    "date": "2019-03-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.01821727174925014,
+    "3y": 0.064604738454342,
+    "5y": 0.04798406268175248,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.11672403678531917,
+    "3y": -0.17387550958384435,
+    "5y": -0.26965403978389,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2019-03-29",
+    "first_date": "2012-09-27",
+    "value": 1397.8159
+  },
+  "trade": null
+}

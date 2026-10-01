@@ -1,0 +1,267 @@
+{
+  "id": 337,
+  "custodian_bank_id": 3,
+  "symbol": "RD337",
+  "name": "BNI-AM Indeks IDX30",
+  "type": "Saham",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 12,
+    "name": "STANDARD CHARTERED",
+    "color": "#0072AA",
+    "icon_url": "https://assets.bibit.id/icons/banks/Standard_Chartered_05042023140038.svg"
+  },
+  "released_date": "2017-12-28",
+  "is_top_product": 1,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas & Deposito",
+      "percentage": 1
+    },
+    {
+      "name": "Saham",
+      "percentage": 99
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BRPT",
+      "name": "Barito Pacific Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4586,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "GOTO",
+      "name": "GoTo Gojek Tokopedia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4425,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INDF",
+      "name": "Indofood Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4919,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585637549",
+      "name": "Reksa Dana Indeks BNI-AM Indeks IDX30"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNI Asset Management",
+    "ojkCode": "NI002",
+    "telepon": "+62 21 29969646",
+    "fax": "+62 21 29969647",
+    "email": "corsec@bni-am.co.id",
+    "url": "www.bni-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": true,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 935116154723,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0139
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.15311975756263863,
+    "3y": -0.09691386869226037,
+    "5y": -0.05197718450659472,
+    "10y": null,
+    "all": -0.05301106740336059
+  },
+  "cagr_adjusted": {
+    "1y": -0.15311975756263863,
+    "3y": -0.0796628089352499,
+    "5y": -0.03288122728690224,
+    "10y": null,
+    "all": -0.039933594188899635
+  },
+  "simplereturn": {
+    "1d": -0.012743273507238917,
+    "1m": -0.06950679311472485,
+    "3m": 0.059779572350043386,
+    "ytd": -0.1989609193048909,
+    "1y": -0.15311975756263863,
+    "3y": -0.22045549060408165,
+    "5y": -0.1539440827382772,
+    "10y": null,
+    "all": -0.3001925682595482
+  },
+  "changesvalue": {
+    "1d": -8.079999999999927,
+    "1m": -46.75999999999999,
+    "3m": 35.31000000000006,
+    "ytd": -155.48000000000002,
+    "1y": -113.17999999999995,
+    "3y": -187.367326019315,
+    "5y": -125.84312987523208,
+    "10y": null,
+    "all": -302.84326863728006
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.31979390296264487,
+    "3y": -0.3787799002856982,
+    "5y": -0.44923116656071205,
+    "10y": -0.48795625971269374,
+    "all": -0.48795625971269374
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3197939029626449,
+    "3y": -0.3432461483021981,
+    "5y": -0.3914805317333628,
+    "10y": -0.4831954732762356,
+    "all": -0.4831954732762356
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2017-12-29",
+    "value": 625.98
+  },
+  "trade": null
+}

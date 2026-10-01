@@ -1,0 +1,271 @@
+{
+  "id": 218,
+  "custodian_bank_id": 5,
+  "symbol": "RD218",
+  "name": "Batavia Dana Saham Syariah",
+  "type": "Saham",
+  "profile": "Reksa Dana BATAVIA DANA SAHAM SYARIAH bertujuan mendapatkan kenaikan modal dalam jangka panjang dengan berinvestasi pada saham perusahaan yang\nterdaftar di Bursa Efek Indonesia yang merupakan bagian dari Daftar Efek Syariah.\n\nBATAVIA DANA SAHAM SYARIAH akan menginvestasikan dananya dengan komposisi investasi sebesar minimal 80 % (delapan puluh persen ) dan maksimum 100% (seratus persen) pada efek ekuitas dan minimal 0% (nol persen) serta maksimum 20% (dua puluh persen) pada efek yang bersifat hutang dan atau instrumen pasar uang yang sesuai dengan prinsip-prinsip Syariah di Pasar Modal .",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2007-07-19",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 92.98
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 7.02
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ADRO",
+      "name": "Alamtri Resources Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5007,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ICBP",
+      "name": "Indofood CBP Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4891,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INDF",
+      "name": "Indofood Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4919,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "KLBF",
+      "name": "Kalbe Farma Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4973,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MIKA",
+      "name": "PT Mitra Keluarga Karyasehat Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5056,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "EXCL",
+      "name": "XLSMART Telecom Sejahtera Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4785,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK DKI UNIT USAHA SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4586496786",
+      "name": "Reksa Dana Batavia Dana Saham Syariah"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "ojkCode": "BZ002",
+    "telepon": "+62 21 5208390, +62 21 5207374, +62 21 5206936",
+    "fax": "+62 21 5206899",
+    "email": "customer@bpam.co.id",
+    "url": "www.bpam.co.id"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 26317693797.72,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0569
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.06330255723002187,
+    "3y": -0.06329406751512967,
+    "5y": -0.027613836463207475,
+    "10y": -0.033337547166140236,
+    "all": 0.019773603503314252
+  },
+  "cagr_adjusted": {
+    "1y": -0.06330255723002187,
+    "3y": -0.06329406751512967,
+    "5y": -0.027613836463207475,
+    "10y": -0.033337547166140236,
+    "all": 0.019776451172040188
+  },
+  "simplereturn": {
+    "1d": -0.00776008572267084,
+    "1m": -0.07074464685202941,
+    "3m": 0.05456259973886546,
+    "ytd": -0.12183483135208273,
+    "1y": -0.06330255723002187,
+    "3y": -0.17811735042880006,
+    "5y": -0.1306516136362278,
+    "10y": -0.2875596632396037,
+    "all": 0.4567626605743602
+  },
+  "changesvalue": {
+    "1d": -11.370000000000118,
+    "1m": -110.68000000000006,
+    "3m": 75.22000000000003,
+    "ytd": -201.70000000000005,
+    "1y": -98.25,
+    "3y": -315.07000000000016,
+    "5y": -218.49,
+    "10y": -586.8,
+    "all": 455.8399999999999
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.29819923018040273,
+    "3y": -0.29819923018040273,
+    "5y": -0.3475122414335764,
+    "10y": -0.4495050061610686,
+    "all": -0.6783148978420391
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.2981992301804027,
+    "3y": -0.2981992301804027,
+    "5y": -0.3475122414335764,
+    "10y": -0.4495050061610686,
+    "all": -0.6783148978420391
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2007-07-20",
+    "value": 1453.82
+  },
+  "trade": null
+}

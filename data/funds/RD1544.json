@@ -1,0 +1,267 @@
+{
+  "id": 1544,
+  "custodian_bank_id": 5,
+  "symbol": "RD1544",
+  "name": "Schroder Dana Mantap Plus II",
+  "type": "Obligasi",
+  "profile": "Schroder Dana Mantap Plus II bertujuan untuk memberikan suatu tingkat pengembalian yang menarik dengan penekanan pada stabilitas modal. Komposisi Schroder Dana Mantap Plus II adalah minimum 80% dan maksimum 100% pada Efek bersifat utang, dan minimum 0% dan maksimum 20% pada kas. Dalam hal berinvestasi pada efek bersifat utang yang mempunyai jatuh tempo kurang dari 1\ntahun dan kas, investasi tersebut tidak akan melebihi 95%. Schroder Dana Mantap Plus II dapat mengadakan perjanjian pembelian kembali (REPO) sehubungan dengan penyelesaian transaksi tersebut di atas.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2007-01-29",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Bersifat Utang",
+      "percentage": 98.42
+    },
+    {
+      "name": "Kas",
+      "percentage": 1.58
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN IV BANK PANIN TAHAP II TAHUN 2024",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN V BANK SMBC INDONESIA TAHAP II TAHUN 2024 SERI B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN V MEDCO ENERGI INTERNASIONAL TAHAP III TAHUN 2025 SERI A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0095",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5805,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0096",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5808,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0103",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8710,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0104",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8733,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0109",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9551,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS030",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6385,
+      "product_type": "FR",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585796299",
+      "name": "Reksa Dana Schroder Dana Mantap Plus II"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Schroder Investment Management Indonesia",
+    "ojkCode": "SCH02",
+    "telepon": "+62 21 2965 5100",
+    "fax": "+62 21 515 0505",
+    "email": "-",
+    "url": "www.schroders.com/id/id/investasi-reksadana"
+  },
+  "custodian_bank": {
+    "name": "BUT DEUTSCHE BANK AG",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 781193611588,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.015
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": 0.0663
+  },
+  "cagr": {
+    "1y": -0.041188376864637055,
+    "3y": -0.010476273397554303,
+    "5y": -0.011576943981054466,
+    "10y": 0.020367222759089643,
+    "all": 0.05300159744964805
+  },
+  "cagr_adjusted": {
+    "1y": 0.007162764889347306,
+    "3y": 0.04076830391599984,
+    "5y": 0.036208933288061296,
+    "10y": 0.04915342609844808,
+    "all": 0.06800136353233266
+  },
+  "simplereturn": {
+    "1d": 0.0013573727055877782,
+    "1m": -0.0029551765960704746,
+    "3m": 0.015163628561609466,
+    "ytd": -0.013793373940746423,
+    "1y": 0.007162764889347306,
+    "3y": 0.12735883470778964,
+    "5y": 0.19463892248665204,
+    "10y": 0.615809033985147,
+    "all": 2.6498709498344515
+  },
+  "changesvalue": {
+    "1d": 3.75,
+    "1m": -8.402837788564739,
+    "3m": 42.34716221143526,
+    "ytd": -40.64341772006401,
+    "1y": 20.666582279935938,
+    "3y": 363.64003921106905,
+    "5y": 570.7377660183852,
+    "10y": 1392.522810460273,
+    "all": 2652.732810460273
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.06696906099790123,
+    "3y": -0.07295958349168763,
+    "5y": -0.08085793173360367,
+    "10y": -0.09002053592365467,
+    "all": -0.24392006423409762
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0436288919928248,
+    "3y": -0.0436288919928245,
+    "5y": -0.0436288919928247,
+    "10y": -0.0900205359236547,
+    "all": -0.2439200642340976
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2007-01-30",
+    "value": 2766.44
+  },
+  "trade": null
+}

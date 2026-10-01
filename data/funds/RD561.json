@@ -1,0 +1,168 @@
+{
+  "id": 561,
+  "custodian_bank_id": null,
+  "symbol": "RD561",
+  "name": "Danareksa Gebyar Indonesia Ii",
+  "type": "Obligasi",
+  "profile": "DANAREKSA GEBYAR INDONESIA II bertujuan untuk memperoleh pendapatan secara terus menerus dan optimal dalam jangka panjang melalui investasi pada Efek Bersifat Utang.\n\nDANAREKSA GEBYAR INDONESIA II dikelola secara aktif guna mendapatkan peragaman (Diversifikasi) yang menunjang tujuan investasi melalui investasi minimum 80% (Delapan Puluh per Seratus) dan maksimum 100 % (Seratus per Seratus) pada Efek Bersifat Utang yaitu Surat Utang Negara dan obligasi korporasi yang masuk dalam kategori layak investasi (Investment Grade); dan minimum 0% (Nol per Seratus) dan maksimum 20% (Dua Puluh per Seratus) pada Instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (Satu) tahun sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 2.08
+    },
+    {
+      "name": "Efek Utang",
+      "percentage": 97.92
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Obligasi Pemerintah",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "ojkCode": "OD002",
+    "telepon": "+62 21 500688",
+    "fax": "+62 21 3501707",
+    "email": "reksadanaonline@danareksa.com",
+    "url": "www.danareksa.com"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 401874908338.4,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.1138593966417987,
+    "3y": 0.05507341739071236,
+    "5y": 0.0712210553554673,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.048437494173176776,
+    "3y": -0.1004999641055565,
+    "5y": -0.13175205851735794,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2008-04-24",
+    "value": 3139.016
+  },
+  "trade": null
+}

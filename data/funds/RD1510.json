@@ -1,0 +1,211 @@
+{
+  "id": 1510,
+  "custodian_bank_id": null,
+  "symbol": "RD1510",
+  "name": "Sam Dana Berkembang",
+  "type": "Campuran",
+  "profile": "SAM DANA BERKEMBANG bertujuan untuk memperoleh penghasilan yang optimal bagi pemegang Unit Penyertaan dengan menginvestasikan sebagian besar dananya pada Efek bersifat Ekuitas dan sisanya pada Efek Pendapatan Tetap yang terdiri dari Obligasi Pemerintah maupun Korporasi dan Instrumen Pasar Uang.\n\nSAM DANA BERKEMBANG mempunyai komposisi portofolio minimum 30%, maksimum 75% dalam Efek bersifat Ekuitas dengan target alokasi sebesar 65%, dan minimum 25%, maksimum 70% dalam Efek Pendapatan Tetap dengan target alokasi sebesar 35%.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 11.96
+    },
+    {
+      "name": "Saham",
+      "percentage": 76.39
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 11.64
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0078",
+      "annualDividend": 0,
+      "date": "2019-10-02",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "MEDC",
+      "name": "PT Medco Energi Internasional Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-02",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "PT Bank Mandiri (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-02",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "PT Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-02",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Money Market",
+      "annualDividend": 0,
+      "date": "2019-10-02",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Samuel Aset Manajemen, PT",
+    "ojkCode": "IF002",
+    "telepon": "+62 21 83701608, +62 21 28548133",
+    "fax": "+62 21 83701610",
+    "email": "marketing@sam.co.id",
+    "url": "www.sam.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA - CUSTODY, Tbk, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 12816126439.47,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.07655703154465177,
+    "3y": 0.04814713612353905,
+    "5y": 0.04960318761967653,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.18229403784302,
+    "3y": -0.23286546774503247,
+    "5y": -0.23286546774503247,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2000-01-04",
+    "value": 15490.3321
+  },
+  "trade": null
+}

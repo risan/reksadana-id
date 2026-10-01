@@ -1,0 +1,271 @@
+{
+  "id": 1761,
+  "custodian_bank_id": 2,
+  "symbol": "RD1761",
+  "name": "TRAM Strategic Plus Kelas A",
+  "type": "Obligasi",
+  "profile": "TRAM STRATEGIC PLUS bertujuan untuk memberikan tingkat pengembalian yang optimal melalui strategi investasi yang mampu memanfaatkan sektor-sektor unggulan melalui investasi pada Efek bersifat utang dan Efek bersifat ekuitas di Pasar Modal dan/atau instrumen pasar uang dalam negeri.\n\nTRAM STRATEGIC PLUS akan melakukan investasi dengan komposisi portofolio Efek yaitu minimum 80% dan maksimum 100% pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi berbadan hukum Indonesia yang telah dijual dalam\nPenawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; dan minimum 0% dan maksimum 20% pada Efek bersifat ekuitas yang diterbitkan oleh korporasi berbadan hukum Indonesia yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek\nIndonesia dan/atau instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2011-10-05",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 96.67
+    },
+    {
+      "name": "Lainnya",
+      "percentage": 3.33
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "FR0110",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 10929,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0104",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8733,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0109",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9551,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0064",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0107",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9239,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0103",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8710,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS038",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6386,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0106",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9238,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0091",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5802,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0096",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5808,
+      "product_type": "FR",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585393674",
+      "name": "Reksa Dana Tram Strategic Plus Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Trimegah Asset Management",
+    "ojkCode": "LG002",
+    "telepon": "+62 21 29248088",
+    "fax": "+62 21 2924 8040",
+    "email": "cs_tram@trimegah.com",
+    "url": "www.trimegah-am.com"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 127360000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0197
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.06
+  },
+  "cagr": {
+    "1y": -0.012871583396452335,
+    "3y": 0.03145936237168212,
+    "5y": 0.03156205485051178,
+    "10y": 0.04535717842773557,
+    "all": 0.051091390145977966
+  },
+  "cagr_adjusted": {
+    "1y": -0.012871583396452335,
+    "3y": 0.03145936237168212,
+    "5y": 0.03156205485051178,
+    "10y": 0.04535717842773557,
+    "all": 0.05110095987319574
+  },
+  "simplereturn": {
+    "1d": 0.0023690832265108597,
+    "1m": -0.0012866542731586605,
+    "3m": 0.014112041346648008,
+    "ytd": -0.025366533717408934,
+    "1y": -0.012871583396452335,
+    "3y": 0.09737829662047659,
+    "5y": 0.1680913099525856,
+    "10y": 0.5582856046291922,
+    "all": 1.11129
+  },
+  "changesvalue": {
+    "1d": 4.989999999999782,
+    "1m": -2.7200000000002547,
+    "3m": 29.38000000000011,
+    "ytd": -54.94999999999982,
+    "1y": -27.5300000000002,
+    "3y": 187.3499999999999,
+    "5y": 303.81999999999994,
+    "10y": 756.4099999999999,
+    "all": 1111.29
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.05708655992504197,
+    "3y": -0.05708655992504197,
+    "5y": -0.05708655992504197,
+    "10y": -0.11952086002192319,
+    "all": -0.15555882837068669
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.057086559925042,
+    "3y": -0.057086559925042,
+    "5y": -0.057086559925042,
+    "10y": -0.1195208600219232,
+    "all": -0.1555588283706867
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2011-10-06",
+    "value": 2111.29
+  },
+  "trade": null
+}

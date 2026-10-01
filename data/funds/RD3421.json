@@ -1,0 +1,258 @@
+{
+  "id": 3421,
+  "custodian_bank_id": null,
+  "symbol": "RD3421",
+  "name": "Aberdeen Standard Indonesia Equity Fund",
+  "type": "Saham",
+  "profile": "ABERDEEN INDONESIA EQUITY FUND akan dikelola secara aktif guna memperoleh pertumbuhan nilai investasi yang optimal dalam jangka panjang melalui investasi pada Efek bersifat ekuitas sebagai investasi utama dan instrumen Pasar Uang.\n\nKebijakan investasi ABERDEEN INDONESIA EQUITY FUND akan dikelola secara aktif melalui investasi pada Efek bersifat ekuitas termasuk hak memesan efek terlebih dahulu (Right), warrant, yang telah dicatat atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri serta instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun meliputi Sertifikat Bank Indonesia, Surat Berharga Pasar Uang, Surat Pengakuan Hutang, Sertifikat Deposito, baik dalam Rupiah maupun dalam mata uang asing dan Obligasi yang diterbitkan oleh Pemerintah Republik Indonesia dengan jangkauan alokasi sebagai berikut: (i) Efek bersifat ekuitas minimum sebesar 80% (delapan puluh perseratus) dan maksimum sebesar 100% (seratus perseratus); (ii) Instrumen pasar uang minimum sebesar 0% (nol perseratus) dan maksimum sebesar 20% (dua puluh perseratus)",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 5.4
+    },
+    {
+      "name": "Saham",
+      "percentage": 94.6
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BNLI",
+      "name": "Bank Permata Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BTPS",
+      "name": "PT Bank Tabungan Pensiunan Nasional Syariah Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "HEAL",
+      "name": "PT Medikaloka Hermina Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "HMSP",
+      "name": "HM Sampoerna Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "UNVR",
+      "name": "Unilever Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "PT Bank Mandiri (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "PT Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Aberdeen Standard Investments Indonesia, PT",
+    "ojkCode": "",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "CITIBANK N. A. - CUSTODY",
+    "ojkCode": ""
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 199741880837.15,
+    "date": "2021-01-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2021-01-27",
+    "first_date": "2019-11-04",
+    "value": 1952.4987
+  },
+  "trade": null
+}

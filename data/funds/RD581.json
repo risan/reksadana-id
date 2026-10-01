@@ -1,0 +1,168 @@
+{
+  "id": 581,
+  "custodian_bank_id": null,
+  "symbol": "RD581",
+  "name": "Danareksa Melati Premium Dollar",
+  "type": "Obligasi",
+  "profile": "DANAREKSA MELATI PREMIUM DOLLAR bertujuan memperoleh pendapatan yang optimal dan berkala dalam denominasi Dollar Amerika Serikat. DANAREKSA MELATI PREMIUM DOLLAR akan berinvestasi minimum 80% hingga maksimum 98% pada Efek Bersifat Utang dalam denominasi Dollar Amerika Serikat yang terdiri dari Efek Bersifat Utang yang diterbitkan oleh Negara Republik Indonesia dan perusahaan-perusahaan berbadan hukum Indonesia serta Efek Bersifat Utang lainnya yang diterbitkan sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia; serta minimum 2% hingga maksimum 20% dalam Instrumen Pasar Uang dalam denominasi Dollar Amerika Serikat yang mempunyai jatuh tempo kurang dari 1 tahun sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17922,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Utang",
+      "percentage": 86.72
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 13.28
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Republic of Indonesia",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "ojkCode": "OD002",
+    "telepon": "+62 21 500688",
+    "fax": "+62 21 3501707",
+    "email": "reksadanaonline@danareksa.com",
+    "url": "www.danareksa.com"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK N. A. - CUSTODY",
+    "ojkCode": "CITI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1984581.22156,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.08683121019108264,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.025138488193732544,
+    "3y": -0.0482473842714769,
+    "5y": -0.0482473842714769,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 1.384578
+  },
+  "trade": null
+}

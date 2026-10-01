@@ -1,0 +1,216 @@
+{
+  "id": 1671,
+  "custodian_bank_id": null,
+  "symbol": "RD1671",
+  "name": "Syailendra Balanced Opportunity Fund",
+  "type": "Campuran",
+  "profile": "Tujuan Investasi Syailendra Balanced Opportunity Fund adalah memberikan hasil investasi yang optimum melalui invetasi pada Efek Ekuitas dan/atau Efek Utang yang masih mempunyai potensi yang cukup besar untuk tumbuh dalam jangka menengah dan panjang serta dapat berinvestasi pada instrumen pasar uang dalam hal terdapat kondisi pasar modal yang sedang dalam kondisi terkoreksi dengan tetap memperhatikan ketentuan pada kebijakan investasi. Kebijakan investasinya adalah sebesar 10% - 75% pada Efek bersifat Ekuitas, 10% - 75% pada Efek bersifat Utang antara lain Surat Utang Negara (SUN), Obligasi Pemerintah Daerah (Municipal Bond), obligasi yang diterbitkan oleh perusahaan (investment grade atau non investment grade) dan Efek bersifat utang lainnya, 2% - 75% pada instrumen pasar uang antara lain Sertifikat Bank Indonesia (SBI), Surat Perbendaharaan Negara (SPN) atau Treasury Bills (T-Bills), Efek bersifat utang yang memiliki jatuh tempo kurang dari 1 (satu) tahun dan deposito. Manajer Investasi dapat berinvestasi pada efek-efek yang ditawarkan dan atau diperdagangkan di bursa efek di Indonesia maupun di luar negeri.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas&Setara",
+      "percentage": 1.2
+    },
+    {
+      "name": "Saham",
+      "percentage": 60.62
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 37.2
+    },
+    {
+      "name": "Deposito",
+      "percentage": 0.98
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "WOMF03ACN2",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SIBMTR01ACN1",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "PT Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Syailendra Capital, PT",
+    "ojkCode": "SYA02",
+    "telepon": "+62 21 51400888",
+    "fax": "+62 21 51400967",
+    "email": "cs@syailendracapital.com",
+    "url": "www.syailendracapital.com"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK A. G. - CUSTODY",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1511712320671.12,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.08011404133998568,
+    "3y": 0.04899711149982755,
+    "5y": 0.03197360249808989,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.08065506816314472,
+    "3y": -0.15089199731707592,
+    "5y": -0.18834879199523258,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2008-04-23",
+    "value": 4354.44
+  },
+  "trade": null
+}

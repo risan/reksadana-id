@@ -1,0 +1,224 @@
+{
+  "id": 8839,
+  "custodian_bank_id": 2,
+  "symbol": "RD8839",
+  "name": "Sucorinvest Money Market USD",
+  "type": "Pasar Uang",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2024-10-10",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100,
+  "minsell": 100,
+  "minbuy": 100,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi dengan jatuh tempo < 1 tahun",
+      "percentage": 88
+    },
+    {
+      "name": "Deposito dan Setara Kas",
+      "percentage": 12
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "INDOIS415 032927",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indon27",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi USD Berkelanjutan II Indah Kiat Pulp Paper Tahap IV Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Republic Of Indonesia Roi 27",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sni0627",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Bank Mega - USD Ccy",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "6038233212",
+      "name": "Reksa Dana Sucorinvest Money Market USD",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "ojkCode": "GAMA2"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 18120000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0101
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.03669724770642202,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.04206657856020457
+  },
+  "cagr_adjusted": {
+    "1y": 0.03669724770642202,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.04206657856020457
+  },
+  "simplereturn": {
+    "1d": 0.00009219138932414772,
+    "1m": 0.0048165987402741806,
+    "3m": 0.010338083263481401,
+    "ytd": 0.028148990617003156,
+    "1y": 0.03669724770642202,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.08479999999999999
+  },
+  "changesvalue": {
+    "1d": 0.00009999999999998899,
+    "1m": 0.0052000000000000934,
+    "3m": 0.011099999999999888,
+    "ytd": 0.02970000000000006,
+    "1y": 0.03839999999999999,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.08479999999999999
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0007403979639055702,
+    "3y": -0.0018327384971544847,
+    "5y": -0.0018327384971544847,
+    "10y": -0.0018327384971544847,
+    "all": -0.0018327384971544847
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0007403979639056,
+    "3y": -0.0018327384971544,
+    "5y": -0.0018327384971544,
+    "10y": -0.0018327384971544,
+    "all": -0.0018327384971544
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2024-10-10",
+    "value": 1.0848
+  },
+  "trade": null
+}

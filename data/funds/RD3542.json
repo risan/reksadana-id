@@ -1,0 +1,267 @@
+{
+  "id": 3542,
+  "custodian_bank_id": 6,
+  "symbol": "RD3542",
+  "name": "BNP Paribas Prima II Kelas RK1",
+  "type": "Obligasi",
+  "profile": "REKSA DANA BNP PARIBAS PRIMA II bertujuan untuk memberikan pendapatan yang\npotensial kepada Pemegang Unit Penyertaan melalui alokasi yang strategis dalam Efek bersifat utang dan instrumen pasar uang, dengan meminimalisir risiko investasi melalui pemilihan penerbit surat berharga secara selektif.\n\nREKSA DANA BNP PARIBAS PRIMA II mempunyai kebijakan investasi 100 % portofolio investasi pada Efek bersifat utang yang dijual melalui Penawaran Umum dan/atau diperdagangkan pada Bursa Efek di Indonesia yang minimum memiliki peringkat BBB (investment grade) atau yang setara, Efek bersifat utang yang dikeluarkan oleh Negara Republik Indonesia, Sertifikat Bank Indonesia (SBI), Sertifikat Deposito, instrumen pasar uang lainnya dan Deposito Berjangka, sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal REKSA DANA BNP PARIBAS PRIMA II berinvestasi pada instrumen pasar uang, investasi tersebut tidak akan melebihi 90 % portofolio investasi.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2007-09-25",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pendapatan Tetap",
+      "percentage": 99.35
+    },
+    {
+      "name": "Kas",
+      "percentage": 0.65
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "FR0083",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5811,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0096",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5808,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0103",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8710,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0104",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8733,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0106",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9238,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "ID REC FR0068 8.375% 15Mar34",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indo Recap FR0065 6.625% 15May33",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indo Recap FR0071 9% 15Mar29",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0108",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9548,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Ob Rep Id FR0082 7% 15Sep2030",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4587075538",
+      "name": "Reksa Dana BNP Paribas Prima II"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNP Paribas Asset Management",
+    "ojkCode": "MEES2",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "CITIBANK, N. A",
+    "ojkCode": "CITI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 676160000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0143
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0695
+  },
+  "cagr": {
+    "1y": 0.006196538842723198,
+    "3y": 0.039238330720351655,
+    "5y": 0.034185994731786185,
+    "10y": 0.04543056791758504,
+    "all": 0.06474109239785442
+  },
+  "cagr_adjusted": {
+    "1y": 0.006196538842723198,
+    "3y": 0.039238330720351655,
+    "5y": 0.034185994731786185,
+    "10y": 0.04543056791758504,
+    "all": 0.0647507098610629
+  },
+  "simplereturn": {
+    "1d": 0.0013960673390047695,
+    "1m": -0.0042581057917480125,
+    "3m": 0.01532728570725217,
+    "ytd": -0.015039030433289913,
+    "1y": 0.006196538842723198,
+    "3y": 0.12239434511660807,
+    "5y": 0.1830231974472052,
+    "10y": 0.5593799475412937,
+    "all": 2.29957
+  },
+  "changesvalue": {
+    "1d": 4.600000000000364,
+    "1m": -14.109999999999673,
+    "3m": 49.809999999999945,
+    "ytd": -50.379999999999654,
+    "1y": 20.320000000000164,
+    "3y": 359.80999999999995,
+    "5y": 510.47000000000025,
+    "10y": 1183.6200000000003,
+    "all": 2299.57
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.04861534980244808,
+    "3y": -0.04861534980244808,
+    "5y": -0.04952229638193584,
+    "10y": -0.10051391605751736,
+    "all": -0.20003167564143176
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.048615349802448,
+    "3y": -0.048615349802448,
+    "5y": -0.0495222963819359,
+    "10y": -0.1005139160575174,
+    "all": -0.2000316756414317
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2007-09-25",
+    "value": 3299.57
+  },
+  "trade": null
+}

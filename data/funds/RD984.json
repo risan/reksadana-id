@@ -1,0 +1,267 @@
+{
+  "id": 984,
+  "custodian_bank_id": 3,
+  "symbol": "RD984",
+  "name": "Manulife Dana Kas Syariah",
+  "type": "Pasar Uang",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 72,
+    "name": "JAGO",
+    "color": "#f09f1a",
+    "icon_url": "https://assets.bibit.id/icons/banks/jago-circle-v2.svg"
+  },
+  "released_date": "2018-08-31",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 15000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang Syariah",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "TD Bank Syariah Indonesia",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Bank DKI Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Muamalat Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOIS 6 01/15/27",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Syariah Nasional",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PNMNIJ 5 1/2 10/27/26",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SMIPIJ 5 12/07/26",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Aladin Syariah Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PPGDIJ 6.1 09/13/26",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BNGAIJ 6.15 09/13/26",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585794547",
+      "name": "Reksa Dana Syariah Manulife Dana Kas Syariah"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Manulife Aset Manajemen Indonesia",
+    "ojkCode": "MAN02",
+    "telepon": "+62 21 25557788",
+    "fax": "+62 21 25557676",
+    "email": "MAMI_customer_id@manulifeam.com",
+    "url": "www.reksadana-manulife.com"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 253937193272.01,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0092
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0687
+  },
+  "cagr": {
+    "1y": 0.03905972103442812,
+    "3y": 0.0424114582204822,
+    "5y": 0.034991369005439976,
+    "10y": null,
+    "all": 0.03987017120505043
+  },
+  "cagr_adjusted": {
+    "1y": 0.03905972103442812,
+    "3y": 0.0424114582204822,
+    "5y": 0.034991369005439976,
+    "10y": null,
+    "all": 0.03988395719979354
+  },
+  "simplereturn": {
+    "1d": 0.00013841032103911743,
+    "1m": 0.0044335191607041136,
+    "3m": 0.012672046262557801,
+    "ytd": 0.028720430993788515,
+    "1y": 0.03905972103442812,
+    "3y": 0.13270685686470274,
+    "5y": 0.18763678514891757,
+    "10y": null,
+    "all": 0.3716032608695652
+  },
+  "changesvalue": {
+    "1d": 0.19000000000005457,
+    "1m": 6.060000000000173,
+    "3m": 17.180000000000064,
+    "ytd": 38.330000000000155,
+    "1y": 51.61000000000013,
+    "3y": 160.85000000000014,
+    "5y": 216.91000000000008,
+    "10y": null,
+    "all": 371.96000000000004
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0000665522953146036,
+    "3y": -0.00016274452364684056,
+    "5y": -0.0011482925575219127,
+    "10y": -0.0011482925575219127,
+    "all": -0.0011482925575219127
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0000665522953147,
+    "3y": -0.0001627445236468,
+    "5y": -0.0011482925575217,
+    "10y": -0.0011482925575217,
+    "all": -0.0011482925575217
+  },
+  "instant_redemption": {
+    "type": 1,
+    "quota_limit": 3
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-09-03",
+    "value": 1372.92
+  },
+  "trade": null
+}

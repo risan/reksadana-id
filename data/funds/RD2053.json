@@ -1,0 +1,41 @@
+{
+  "id": 2053,
+  "custodian_bank_id": null,
+  "symbol": "RD2053",
+  "name": "Principal Index Idx30",
+  "type": "Saham",
+  "profile": "CIMB-PRINCIPAL INDEX IDX30 bertujuan untuk memberikan hasil investasi yang setara dengan kinerja Indeks IDX30 yang diterbitkan oleh Bursa Efek.\n\nCIMB-PRINCIPAL INDEX IDX30 akan berinvestasi pada minimum 80 % (delapan puluh persen) dan maksimum 100 % (seratus persen) pada Efek bersifat ekuitas yang berasal dari kumpulan Efek yang terdaftar pada Indeks IDX30; serta minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) pada istrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun; sesuai peraturan perundang-undangan yang berlaku di Indonesia.\n\nInvestasi pada saham-saham yang terdaftar pada Indeks IDX30 tersebut akan berjumlah sekurang-kurangnya 80% (delapan puluh persen) dari keseluruhan saham yang terdaftar dalam pada Indeks IDX30. Sedangkan porsi tiap-tiap saham akan ditentukan secara prorata mengikuti bobot (weighting) masing-masing saham terhadap Indeks IDX30, dimana pembobotan atas masing-masing saham adalah paling kurang 80% (delapan puluh persen) dan paling banyak 120% (seratus dua puluh persen) dari bobot masing-masing saham yang bersangkutan dalam Indeks IDX30.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "nav": {
+    "date": null,
+    "first_date": null,
+    "value": null
+  },
+  "trade": null
+}

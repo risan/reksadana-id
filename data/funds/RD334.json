@@ -1,0 +1,267 @@
+{
+  "id": 334,
+  "custodian_bank_id": 8,
+  "symbol": "RD334",
+  "name": "BNI-AM Dana Saham Inspiring Equity Fund",
+  "type": "Saham",
+  "profile": "BNI-AM Dana Saham Inspiring Equity Fund (dahulu BNI-AM DANA SAHAM SEKTORAL) bertujuan untuk memperoleh pertambahan nilai investasi yang optimal dengan melakukan investasi dalam Efek bersifat ekuitas yang diterbitkan korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri untuk memperoleh capital gain dan dividen.\n\nBNI-AM Dana Saham Inspiring Equity Fund akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri; dan/atau minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri dan/atau instrumen pasar uang dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2014-04-07",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 94
+    },
+    {
+      "name": "Kas & Deposito",
+      "percentage": 6
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Mega Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BFIN",
+      "name": "BFI Finance Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4915,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "SSIA",
+      "name": "Surya Semesta Internusa Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4405,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585637140",
+      "name": "Reksa Dana BNI-AM Dana Saham Inspiring Equity Fund"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNI Asset Management",
+    "ojkCode": "NI002",
+    "telepon": "+62 21 29969646",
+    "fax": "+62 21 29969647",
+    "email": "corsec@bni-am.co.id",
+    "url": "www.bni-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK DANAMON INDONESIA Tbk, PT",
+    "ojkCode": "BDMN2"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1101065043564,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0218
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.1272088769953582,
+    "3y": -0.07498192240912327,
+    "5y": -0.03825762293908097,
+    "10y": -0.03449703024057316,
+    "all": -0.01736353804151447
+  },
+  "cagr_adjusted": {
+    "1y": -0.1272088769953582,
+    "3y": -0.06447152543942436,
+    "5y": -0.02534535482991207,
+    "10y": -0.028037261274285963,
+    "all": -0.012106119503266455
+  },
+  "simplereturn": {
+    "1d": -0.00806292346301729,
+    "1m": -0.06413695089295812,
+    "3m": 0.08834240157919648,
+    "ytd": -0.19148333594242672,
+    "1y": -0.1272088769953582,
+    "3y": -0.18121282443880893,
+    "5y": -0.12046366645613182,
+    "10y": -0.2475179218149962,
+    "all": -0.14109742334046804
+  },
+  "changesvalue": {
+    "1d": -6.5323000000000775,
+    "1m": -55.07490000000007,
+    "3m": 65.23209999999995,
+    "ytd": -190.32670000000007,
+    "1y": -117.1291,
+    "3y": -183.99074455232608,
+    "5y": -117.65760990243598,
+    "10y": -282.5714099024359,
+    "all": -141.12140990243597
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.32124064783486583,
+    "3y": -0.32309312203236695,
+    "5y": -0.3738776630064461,
+    "10y": -0.5120957345599559,
+    "all": -0.5120957345599559
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3212406478348659,
+    "3y": -0.3212406478348662,
+    "5y": -0.3388940781573843,
+    "10y": -0.5120957345599559,
+    "all": -0.5120957345599559
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2014-04-08",
+    "value": 803.6329
+  },
+  "trade": null
+}

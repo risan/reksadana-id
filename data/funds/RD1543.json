@@ -1,0 +1,268 @@
+{
+  "id": 1543,
+  "custodian_bank_id": 5,
+  "symbol": "RD1543",
+  "name": "Schroder Dana Likuid",
+  "type": "Pasar Uang",
+  "profile": "Reksa Dana Schroder Dana Likuid bertujuan untuk memberikan suatu tingkat pengembalian investasi yang menarik melalui investasi pada instrumen Pasar Uang serta menurunkan tingkat resiko melalui diversifikasi penempatan instrumen Pasar Uang yang dipilih secara selektif. Schroder Dana Likuid juga bertujuan memberikan tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat. Komposisi lnvestasi dari Schroder Dana Likuid adalah 100% pada\ninstrumen Pasar Uang. Schroder Dana Likuid dapat mengadakan perjanjian pembelian kembali (Repo).",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2004-06-09",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Instrumen Pasar Uang",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN VII ADIRA FINANCE TAHAP II TAHUN 2025 SERI A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN VII FEDERAL INTERNATIONAL FINANCE TAHAP II TAHUN 2025 SERI A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN VIII SARANA MULTIGRIYA FINANSIAL TAHAP III TAHUN 2026",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI I ADARO INDONESIA TAHUN 2026 SERI A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0059",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0090",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5806,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "ORI024-T3",
+      "name": "Obligasi Negara Ritel",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6238,
+      "product_type": "SBN",
+      "serie_id": 3623
+    },
+    {
+      "symbol": "ORI025-T3",
+      "name": "Obligasi Negara Ritel",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6410,
+      "product_type": "SBN",
+      "serie_id": 3803
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "SR019-T3",
+      "name": "Sukuk Ritel",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6178,
+      "product_type": "SBN",
+      "serie_id": 3603
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585796493",
+      "name": "Reksa Dana Schroder Dana Likuid"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Schroder Investment Management Indonesia",
+    "ojkCode": "SCH02",
+    "telepon": "+62 21 2965 5100",
+    "fax": "+62 21 515 0505",
+    "email": "-",
+    "url": "www.schroders.com/id/id/investasi-reksadana"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 574972795458,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0122
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": 0.0576
+  },
+  "cagr": {
+    "1y": 0.03202171125942077,
+    "3y": 0.03899725797798226,
+    "5y": 0.03124326699139046,
+    "10y": 0.03514799361440524,
+    "all": 0.024661740785313135
+  },
+  "cagr_adjusted": {
+    "1y": 0.03202171125942077,
+    "3y": 0.03899725797798226,
+    "5y": 0.03124326699139046,
+    "10y": 0.03514799361440524,
+    "all": 0.024664804908221205
+  },
+  "simplereturn": {
+    "1d": 0.00019741158573771678,
+    "1m": 0.004203052313719091,
+    "3m": 0.013943988604659507,
+    "ytd": 0.023225009355342774,
+    "1y": 0.03202171125942077,
+    "3y": 0.12161343881238418,
+    "5y": 0.1662875248811797,
+    "10y": 0.4126170600101684,
+    "all": 0.7226300000000001
+  },
+  "changesvalue": {
+    "1d": 0.3400000000001455,
+    "1m": 7.210000000000036,
+    "3m": 23.690000000000055,
+    "ytd": 39.100000000000136,
+    "1y": 53.450000000000045,
+    "3y": 186.7800000000002,
+    "5y": 245.61000000000013,
+    "10y": 503.1700000000001,
+    "all": 722.6300000000001
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0019339728652369992,
+    "3y": -0.0019339728652369992,
+    "5y": -0.0026776629357896375,
+    "10y": -0.020061201090381786,
+    "all": -0.020061201090381786
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.001933972865237,
+    "3y": -0.001933972865237,
+    "5y": -0.0026776629357896,
+    "10y": -0.0200612010903817,
+    "all": -0.0200612010903817
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2004-06-10",
+    "value": 1722.63
+  },
+  "trade": null
+}

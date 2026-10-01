@@ -1,0 +1,266 @@
+{
+  "id": 10578,
+  "custodian_bank_id": 2,
+  "symbol": "RD10578",
+  "name": "Grow Absolute Mixed Alpha Kelas P",
+  "type": "Campuran",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2026-05-22",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 46.18
+    },
+    {
+      "name": "Pasar Uang dan/atau Deposito",
+      "percentage": 3.33
+    },
+    {
+      "name": "Obligasi Negara",
+      "percentage": 50.49
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "AUTO",
+      "name": "Astra Otoparts Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4584,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "AVIA",
+      "name": "Avia Avian Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4772,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BFIN",
+      "name": "BFI Finance Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4915,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK ALADIN SYARIAH Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBL NEGARA REPUBLIK INDONESIA SERI FR0059",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0104",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8733,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0108",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9548,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0109",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9551,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "SMGR",
+      "name": "Semen Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4424,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "6039722453",
+      "name": "Reksa Dana Grow Absolute Mixed Alpha Kelas P"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Grow Investments Indonesia",
+    "ojkCode": "AYR02"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 21383341996.91,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.08295509943494217,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.08295509943494217
+  },
+  "cagr_adjusted": {
+    "1y": 0.08361411277436881,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.08361411277436881
+  },
+  "simplereturn": {
+    "1d": -0.00045643919161708624,
+    "1m": -0.0188931043028997,
+    "3m": 0.016161995122770056,
+    "ytd": null,
+    "1y": 0.029239999999999933,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.029239999999999933
+  },
+  "changesvalue": {
+    "1d": -0.4700000000000273,
+    "1m": -19.819999999999936,
+    "3m": 16.370000000000005,
+    "ytd": null,
+    "1y": 29.24000000000001,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 29.24000000000001
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.039520712212693154,
+    "3y": -0.039520712212693154,
+    "5y": -0.039520712212693154,
+    "10y": -0.039520712212693154,
+    "all": -0.039520712212693154
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0395207122126933,
+    "3y": -0.0395207122126933,
+    "5y": -0.0395207122126933,
+    "10y": -0.0395207122126933,
+    "all": -0.0395207122126933
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2026-05-22",
+    "value": 1029.24
+  },
+  "trade": null
+}

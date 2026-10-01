@@ -1,0 +1,267 @@
+{
+  "id": 838,
+  "custodian_bank_id": 12,
+  "symbol": "RD838",
+  "name": "Majoris Sukuk Negara Indonesia",
+  "type": "Obligasi",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2017-11-08",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Sukuk",
+      "percentage": 97.72
+    },
+    {
+      "name": "Deposito Syariah dan Kas",
+      "percentage": 2.28
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SBSN RI Seri PBS004",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SBSN RI Seri PBS012",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SBSN RI Seri PBS021",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SBSN RI Seri PBS022",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SBSN RI Seri PBS023",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SBSN RI Seri PBS029",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS030",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6385,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS034",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6024,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS037",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6077,
+      "product_type": "FR",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585392911",
+      "name": "Reksa Dana Syariah Majoris Sukuk Negara Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Majoris Asset Management",
+    "ojkCode": "MJR02",
+    "telepon": "+62 21 522 3118",
+    "fax": "+62 21 522 3119",
+    "email": "investorrelations@majoris-asset.com",
+    "url": "www.majoris-asset.com"
+  },
+  "custodian_bank": {
+    "name": "BANK NEGARA INDONESIA (PERSERO), TBK",
+    "ojkCode": "BNI01"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 268810000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0182
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0687
+  },
+  "cagr": {
+    "1y": 0.005335236677000976,
+    "3y": 0.03682016237020491,
+    "5y": 0.033737230780543914,
+    "10y": null,
+    "all": 0.046912901498249227
+  },
+  "cagr_adjusted": {
+    "1y": 0.005335236677000976,
+    "3y": 0.03682016237020491,
+    "5y": 0.033737230780543914,
+    "10y": null,
+    "all": 0.04692768340010023
+  },
+  "simplereturn": {
+    "1d": 0.001257186323655901,
+    "1m": -0.0024250535395831108,
+    "3m": 0.009096020129659488,
+    "ytd": -0.01695214311630322,
+    "1y": 0.005335236677000976,
+    "3y": 0.11457757817247205,
+    "5y": 0.18045867993201092,
+    "10y": null,
+    "all": 0.5037534487948343
+  },
+  "changesvalue": {
+    "1d": 1.8880999999998949,
+    "1m": -3.6555000000000746,
+    "3m": 13.554699999999912,
+    "ytd": -25.931100000000015,
+    "1y": 7.980199999999968,
+    "3y": 154.58249999999998,
+    "5y": 229.87829999999985,
+    "10y": null,
+    "all": 503.7469
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.03903276954050783,
+    "3y": -0.03903276954050783,
+    "5y": -0.03903276954050783,
+    "10y": -0.0571214738164173,
+    "all": -0.0571214738164173
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.039032769540508,
+    "3y": -0.039032769540508,
+    "5y": -0.039032769540508,
+    "10y": -0.0571214738164172,
+    "all": -0.0571214738164172
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2017-11-09",
+    "value": 1503.7339
+  },
+  "trade": null
+}

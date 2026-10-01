@@ -1,0 +1,208 @@
+{
+  "id": 564,
+  "custodian_bank_id": null,
+  "symbol": "RD564",
+  "name": "Danareksa Mawar",
+  "type": "Saham",
+  "profile": "DANAREKSA MAWAR bertujuan untuk memperoleh pertumbuhan nilai\ninvestasi yang maksimal dalam jangka panjang. Kekayaan DANAREKSA MAWAR akan diinvestasikan minimum 80% (Delapan Puluh per Seratus) hingga maksimum 100% (Seratus per Seratus) ke dalam Efek Ekuitas, maksimum 20% (Dua Puluh per Seratus) dalam Efek Utang serta maksimum 20% (Dua Puluh per Seratus) pada Instrumen Pasar Uang.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 4.01
+    },
+    {
+      "name": "Efek Ekuitas",
+      "percentage": 95.99
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "UNVR",
+      "name": "Unilever Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "PT Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "PT Bank Mandiri (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "ojkCode": "OD002",
+    "telepon": "+62 21 500688",
+    "fax": "+62 21 3501707",
+    "email": "reksadanaonline@danareksa.com",
+    "url": "www.danareksa.com"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK N. A. - CUSTODY",
+    "ojkCode": "CITI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 16188183942.96,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.0094904201434578,
+    "3y": 0.003818312759391151,
+    "5y": 0.01119776683405749,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.1424108532913032,
+    "3y": -0.2311861533331585,
+    "5y": -0.26032036544209514,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2000-01-05",
+    "value": 6615.4723
+  },
+  "trade": null
+}

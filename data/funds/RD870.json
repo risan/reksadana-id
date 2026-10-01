@@ -1,0 +1,268 @@
+{
+  "id": 870,
+  "custodian_bank_id": 6,
+  "symbol": "RD870",
+  "name": "Mandiri Investa Pasar Uang Kelas A",
+  "type": "Pasar Uang",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2005-03-17",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Deposito",
+      "percentage": 20.62
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 90.2
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Adira Dinamika Multi Finance Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank BTPN Syariah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Riau Kepri Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Jawa Tengah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Federal International Finance",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pegadaian (Persero)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pemerintah RI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sarana Multigriya Finansial (Persero)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Wahana Ottomitra Multiartha Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5025730744",
+      "name": "Reksa Dana Mandiri Investa Pasar Uang Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Mandiri Manajemen Investasi",
+    "ojkCode": "CC002",
+    "telepon": "+62 21 5263505",
+    "fax": "+62 21 5263506",
+    "email": "-",
+    "url": "www.mandiri-investasi.co.id"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK, N. A",
+    "ojkCode": "CITI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 7950000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0126
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0608
+  },
+  "cagr": {
+    "1y": 0.03319162213814897,
+    "3y": 0.040316888626719116,
+    "5y": 0.03336910790297276,
+    "10y": 0.040055527161972915,
+    "all": 0.02907943602823937
+  },
+  "cagr_adjusted": {
+    "1y": 0.03319162213814897,
+    "3y": 0.040316888626719116,
+    "5y": 0.03336910790297276,
+    "10y": 0.040055527161972915,
+    "all": 0.02908318803241694
+  },
+  "simplereturn": {
+    "1d": 0.00016720694286376236,
+    "1m": 0.004752022454254323,
+    "3m": 0.01171412515072312,
+    "ytd": 0.02273479383149124,
+    "1y": 0.03319162213814897,
+    "3y": 0.12589255355321316,
+    "5y": 0.17835831802901558,
+    "10y": 0.48103479948563543,
+    "all": 0.8543000000000001
+  },
+  "changesvalue": {
+    "1d": 0.30999999999994543,
+    "1m": 8.769999999999982,
+    "3m": 21.470000000000027,
+    "ytd": 41.22000000000003,
+    "1y": 59.569999999999936,
+    "3y": 207.33999999999992,
+    "5y": 280.66999999999985,
+    "10y": 602.27,
+    "all": 854.3
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00006488590894349056,
+    "3y": -0.00006488590894349056,
+    "5y": -0.00006488590894349056,
+    "10y": -0.001163424831848725,
+    "all": -0.0033607376958114665
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0000648859089434,
+    "3y": -0.0000648859089434,
+    "5y": -0.0000648859089434,
+    "10y": -0.0000648859089434,
+    "all": -0.0000648859089434
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2005-03-22",
+    "value": 1854.3
+  },
+  "trade": null
+}

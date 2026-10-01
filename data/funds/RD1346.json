@@ -1,0 +1,256 @@
+{
+  "id": 1346,
+  "custodian_bank_id": null,
+  "symbol": "RD1346",
+  "name": "Prospera Saham SMC",
+  "type": "Saham",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham non-SMC",
+      "percentage": 40.1
+    },
+    {
+      "name": "Saham SMC",
+      "percentage": 47.6
+    },
+    {
+      "name": "Kas / pasar uang",
+      "percentage": 12.3
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PTPP",
+      "name": "PP (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "IPCC",
+      "name": "PT Indonesia Kendaraan Terminal Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "INCO",
+      "name": "Vale Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "SCMA",
+      "name": "Surya Citra Media Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "CARS",
+      "name": "PT Industri dan Perdagangan Bintraco Dharma Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ASSA",
+      "name": "Adi Sarana Armada Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "HKMU",
+      "name": "PT HK Metals Utama Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "MCAS",
+      "name": "PT M Cash Integrasi Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Prospera Asset Management, PT"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA - CUSTODY, Tbk, PT"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 89093976388.55,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0722
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.0243497849746257,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.11949235734818464,
+    "3y": -0.11949235734818464,
+    "5y": -0.11949235734818464,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2017-04-21",
+    "value": 1700.7125
+  },
+  "trade": null
+}

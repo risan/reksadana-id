@@ -1,0 +1,272 @@
+{
+  "id": 1628,
+  "custodian_bank_id": 7,
+  "symbol": "RD1628",
+  "name": "Simas Saham Unggulan",
+  "type": "Saham",
+  "profile": "SIMAS SAHAM UNGGULAN bertujuan untuk memperoleh pendapatan yang optimal dalam jangka panjang dengan tingkat fleksibilitas investasi yang cukup tinggi serta mengurangi risiko dengan berbagai jenis investasi portofolio efek yang terdiri dari Efek bersifat Ekuitas, Efek bersifat utang dan/atau Efek Beragun Asset serta Instrumen Pasar Uang sesuai peraturan perundang – undangan yang berlaku.\n\nSIMAS SAHAM UNGGULAN akan melakukan investasi dengan komposisi portfolio investasi minimum 80% dan maksimum 98% pada Efek bersifat Ekuitas yang diterbitkan oleh korporasi yang dijual dalam Penawaran Umum dan/atau perdagangkan di Bursa Efek Indonesia; dan minimum 2% dan maksimum 20% Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau\nkorporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia, Efek Beragun Aset, instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1\n(satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2012-12-18",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Ekuitas",
+      "percentage": 89.8
+    },
+    {
+      "name": "Pasar Uang & Kas",
+      "percentage": 10.2
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ARCI",
+      "name": "Archi Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4850,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Tabungan Negara (Persero) Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BRMS",
+      "name": "Bumi Resources Minerals Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4633,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TINS",
+      "name": "Timah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4493,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INCO",
+      "name": "Vale Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4470,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585200230",
+      "name": "Reksa Dana Simas Saham Unggulan"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sinarmas Asset Management",
+    "ojkCode": "DH002",
+    "telepon": "+62 21 3925550",
+    "fax": "+62 21 392 5539",
+    "email": "cs@sinarmas-am.co.id",
+    "url": "www.sinarmas-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "CIMB NIAGA",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 519000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0425
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.11081282682390747,
+    "3y": -0.05472422017938727,
+    "5y": -0.03672567563596152,
+    "10y": -0.023472119401094504,
+    "all": 0.008723982844898837
+  },
+  "cagr_adjusted": {
+    "1y": -0.11081282682390747,
+    "3y": -0.05472422017938727,
+    "5y": -0.03672567563596152,
+    "10y": -0.023472119401094504,
+    "all": 0.008725723741811908
+  },
+  "simplereturn": {
+    "1d": -0.0036678383066337528,
+    "1m": -0.06772762843779578,
+    "3m": 0.09622297178766304,
+    "ytd": -0.20356995910867637,
+    "1y": -0.11081282682390747,
+    "3y": -0.15535232454158343,
+    "5y": -0.1706269433321056,
+    "10y": -0.21141870346613434,
+    "all": 0.12726851182433263
+  },
+  "changesvalue": {
+    "1d": -4.16150000000016,
+    "1m": -82.12340000000017,
+    "3m": 99.22559999999999,
+    "ytd": -288.94150000000013,
+    "1y": -140.87720000000013,
+    "3y": -207.91510000000017,
+    "5y": -232.56349999999998,
+    "10y": -303.0685000000001,
+    "all": 127.62549999999999
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.32485890816350516,
+    "3y": -0.32485890816350516,
+    "5y": -0.32485890816350516,
+    "10y": -0.5480210633143976,
+    "all": -0.5480210633143976
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3248589081635051,
+    "3y": -0.3248589081635051,
+    "5y": -0.3248589081635051,
+    "10y": -0.5480210633143976,
+    "all": -0.5480210633143976
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2012-12-19",
+    "value": 1130.4305
+  },
+  "trade": null
+}

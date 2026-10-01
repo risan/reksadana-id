@@ -1,0 +1,271 @@
+{
+  "id": 3480,
+  "custodian_bank_id": 7,
+  "symbol": "RD3480",
+  "name": "Trimegah Dana Tetap Syariah Kelas A",
+  "type": "Obligasi",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2019-12-05",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 98.95
+    },
+    {
+      "name": "Lainnya",
+      "percentage": 1.05
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap II Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan II Lontar Papyrus Pulp & Paper Industry Tahap II Tahun 2026 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp & Paper Mills Tahap II Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap I Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan IV Indah Kiat Pulp & Paper Tahap IV Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap III Tahun 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Ijarah Berkelanjutan I Tower Bersama Infrastructure Tahap I I Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap IV Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp & Paper Mills Tahap I Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4999164134",
+      "name": "Reksa Dana Syariah Trimegah Dana Tetap Syariah Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Trimegah Asset Management",
+    "ojkCode": "LG002",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA TBK, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 4960150000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0122
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.069
+  },
+  "cagr": {
+    "1y": 0.041674375105695605,
+    "3y": 0.07039898889893936,
+    "5y": 0.06285618957513517,
+    "10y": null,
+    "all": 0.06754407559424114
+  },
+  "cagr_adjusted": {
+    "1y": 0.041674375105695605,
+    "3y": 0.07039898889893936,
+    "5y": 0.06285618957513517,
+    "10y": null,
+    "all": 0.06757209824539334
+  },
+  "simplereturn": {
+    "1d": 0.0007007685556952303,
+    "1m": 0.00354144659924982,
+    "3m": 0.027418744556663377,
+    "ytd": 0.029899156561992157,
+    "1y": 0.041674375105695605,
+    "3y": 0.22641391824147727,
+    "5y": 0.3563523683430423,
+    "10y": null,
+    "all": 0.5621526304791784
+  },
+  "changesvalue": {
+    "1d": 1.092600000000175,
+    "1m": 5.5060000000000855,
+    "3m": 41.63810000000012,
+    "ytd": 45.295500000000175,
+    "1y": 62.42060000000015,
+    "3y": 288.04269999999997,
+    "5y": 409.9189000000001,
+    "10y": null,
+    "all": 561.4636
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.016055066219557768,
+    "3y": -0.016055066219557768,
+    "5y": -0.017907855983079424,
+    "10y": -0.08454687679349848,
+    "all": -0.08454687679349848
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0160550662195579,
+    "3y": -0.0160550662195579,
+    "5y": -0.0179078559830794,
+    "10y": -0.0845468767934985,
+    "all": -0.0845468767934985
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2019-12-06",
+    "value": 1560.2379
+  },
+  "trade": null
+}

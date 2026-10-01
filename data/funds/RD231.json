@@ -1,0 +1,147 @@
+{
+  "id": 231,
+  "custodian_bank_id": null,
+  "symbol": "RD231",
+  "name": "Batavia Prima Ekspektasi",
+  "type": "Campuran",
+  "profile": "Reksa Dana BATAVIA PRIMA EKSPEKTASI  mempunyai tujuan untuk mempertahankan nilai modal dan mendapatkan tingkat penghasilan yang meningkat secara terus menerus dalam jangka menengah dan panjang melalui penempatan dana sebagian pada efek ekuitas, serta sisanya pada efek bersifat utang dan instrumen pasar uang sesuai dengan peraturan dan perundang-undangan yang berlaku di Indonesia.\n\nBATAVIA PRIMA EKSPEKTASI akan menginvestasikan dananya dengan komposisi investasi sebagai berikut ;\nminimal 5% ( lima persen) dan maksimum 79% (tujuh puluh sembilan persen) pada efek ekuitas dan minimal 5% ( lima persen ) serta maksimum 79% (tujuh puluh sembilan persen ) pada efek yang bersifat utang dan minimal 5% ( lima persen) serta maksimum 79% (tujuh puluh sembilan persen) pada instrumen pasar uang yang sesuai dengan peraturan dan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [],
+  "investment_manager": {
+    "name": "Batavia Prosperindo Aset Manajemen, PT",
+    "ojkCode": "BZ002",
+    "telepon": "+62 21 5208390, +62 21 5207374, +62 21 5206936",
+    "fax": "+62 21 5206899",
+    "email": "customer@bpam.co.id",
+    "url": "www.bpam.co.id"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK A. G. - CUSTODY",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": null,
+    "date": "2021-09-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.1226313840289293,
+    "3y": 0.06810739660046972,
+    "5y": 0.0653744229389821,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.07527164048248003,
+    "3y": -0.13777496769468867,
+    "5y": -0.22497496848363485,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2021-09-24",
+    "first_date": "2009-03-03",
+    "value": 4693.7
+  },
+  "trade": null
+}

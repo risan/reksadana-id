@@ -1,0 +1,275 @@
+{
+  "id": 423,
+  "custodian_bank_id": 5,
+  "symbol": "RD423",
+  "name": "BNP Paribas Pesona",
+  "type": "Saham",
+  "profile": "REKSA DANA BNP PARIBAS PESONA bertujuan untuk memberikan tingkat pertumbuhan nilai investasi jangka panjang yang menarik melalui investasi utama dalam efek ekuitas yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek, baik di dalam maupun di luar negeri serta Efek bersifat utang yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek, baik di dalam maupun di luar negeri yang masuk dalam kategori layak investasi dan/atau instrumen pasar uang dalam negeri dan/atau deposito berjangka, sesuai peraturan perundang-undangan yang berlaku di Indonesia.\n\nREKSA DANA BNP PARIBAS PESONA melakukan investasi pada minimum 80% dan maksimum 100% pada Efek bersifat Ekuitas yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek, baik di dalam maupun di luar negeri; minimum 0% dan maksimum 20% pada Efek bersifat utang yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri yang masuk dalam kategori layak investasi; minimum 0% dan maksimum 20% pada instrumen pasar uang dalam negeri dan/atau deposito berjangka; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "1997-11-10",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pendapatan Tetap",
+      "percentage": 4.61
+    },
+    {
+      "name": "Kas",
+      "percentage": 1.39
+    },
+    {
+      "name": "Saham",
+      "percentage": 94
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ISAT",
+      "name": "Indosat Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4866,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MSTI",
+      "name": "Mastersystem Infotama Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6260,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0109",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9551,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4587075872",
+      "name": "Reksa Dana BNP Paribas Pesona"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNP Paribas Asset Management",
+    "ojkCode": "MEES2",
+    "telepon": "+62 21 2521574",
+    "fax": "+62 21 2521594",
+    "email": "sales.service@bnpparibas-ip.co.id",
+    "url": "www.bnpparibas-ip.co.id"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 235610000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0285
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.11298359533351354,
+    "3y": -0.07623015893095642,
+    "5y": -0.03156953761096426,
+    "10y": -0.021402837017906906,
+    "all": 0.0986994718230203
+  },
+  "cagr_adjusted": {
+    "1y": -0.08834175075551909,
+    "3y": -0.06726461796263095,
+    "5y": -0.019220893677688422,
+    "10y": -0.018095359808204425,
+    "all": 0.10082616933486754
+  },
+  "simplereturn": {
+    "1d": -0.002878705779059021,
+    "1m": 0.03573606650943706,
+    "3m": 0.035854696477293,
+    "ytd": -0.13455739255947052,
+    "1y": -0.08834175075551909,
+    "3y": -0.1885246081021047,
+    "5y": -0.09248037123333264,
+    "10y": -0.18735179401172664,
+    "all": 11.918820499673721
+  },
+  "changesvalue": {
+    "1d": -64.22999999999956,
+    "1m": 767.6200000000026,
+    "3m": 770.0800000000017,
+    "ytd": -3447.3899999999994,
+    "1y": -2155.869999999999,
+    "3y": -5168.700000000001,
+    "5y": -2267.16,
+    "10y": -5111.829999999998,
+    "all": 20456.510000000002
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.304750052632467,
+    "3y": -0.33139678637374503,
+    "5y": -0.33139678637374503,
+    "10y": -0.4861436879346721,
+    "all": -0.6149451400233459
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3047500526324669,
+    "3y": -0.331396786373745,
+    "5y": -0.331396786373745,
+    "10y": -0.4861436879346721,
+    "all": -0.6149451400233459
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2000-01-05",
+    "value": 21299.1
+  },
+  "trade": null
+}

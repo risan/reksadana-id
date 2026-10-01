@@ -1,0 +1,212 @@
+{
+  "id": 1568,
+  "custodian_bank_id": null,
+  "symbol": "RD1568",
+  "name": "Semesta Dana Saham",
+  "type": "Saham",
+  "profile": "SEMESTA DANA SAHAM bertujuan untuk memperoleh hasil investasi jangka panjang yang optimal dengan memanfaatkan investasi pada Efek\nbersifat ekuitas yang memiliki fundamental yang baik, Efek bersifat utang serta instrumen pasar uang dan/atau deposito berdasarkan riset yang mendalam dan strategi pengelolaan secara aktif. SEMESTA DANA SAHAM akan melakukan investasi dengan komposisi portofolio investasi minimum 80% dan maksimum 100% dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diterbitkan oleh korporasi berbadan hukum Indonesia yang ditawarkan melalui penawaran umum dan/atau diperdagangkan di Bursa Efek Indonesia, minimum 0% dan maksimum 20% dari Nilai aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi berbadan hukum Indonesia yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; dan minimum 0% dan maksimum 20% dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 9.58
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 0.37
+    },
+    {
+      "name": "Saham",
+      "percentage": 87.72
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-06-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ICBP",
+      "name": "Indofood CBP Sukses Makmur Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "INTP",
+      "name": "Indocement Tunggal Prakarsa Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Semesta Aset Manajemen, PT",
+    "ojkCode": "MG002",
+    "telepon": "+62 21 83703808",
+    "fax": "+62 21 83703787",
+    "email": "info@semestaindovest.co.id",
+    "url": "www.semestaindovest.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK DANAMON INDONESIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BDMN2"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 9794432786.63,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.1376658470899073,
+    "3y": 0.01516289670324333,
+    "5y": 0.01808775669472351,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.13906489571827585,
+    "3y": -0.22602693680159214,
+    "5y": -0.26270775770456956,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2014-03-21",
+    "value": 1258.7682
+  },
+  "trade": null
+}

@@ -1,0 +1,265 @@
+{
+  "id": 4183,
+  "custodian_bank_id": 2,
+  "symbol": "RD4183",
+  "name": "Batavia Technology Sharia Equity USD",
+  "type": "Reksadana Global",
+  "profile": "Batavia Technology Sharia Equity USD bertujuan untuk memberikan Pemegang Unit Penyertaan potensi keuntungan terkait dengan hasil investasi dari instrumen-instrumen investasi sesuai dengan Kebijakan Investasi Batavia Technology Sharia Equity USD yang memenuhi Prinsip Syariah di Pasar Modal.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2022-02-16",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100,
+  "minsell": 100,
+  "minbuy": 10000,
+  "min_buy_next_purchase": 100,
+  "min_buy_after_sell_all": 10000,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 102.52
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": -2.52
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "ADVANCED MICRO DEVICES",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "ALPHABET INC-CL A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "APPLE INC",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "ASML HLDG",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BROADCOM INC",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "META PLATFORMS INC-CLASS A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "MICRON TECHNOLOGY INC",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "MICROSOFT CORP",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "NVIDIA CORP",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TAIWAN SEMICONDUCTOR-SP ADR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4952960079",
+      "name": "Reksa Dana Syariah Batavia Technology Sharia Equity USD",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "ojkCode": "BZ002"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 173281716.92,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0297
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.21700171419666514,
+    "3y": 0.21412317698189098,
+    "5y": null,
+    "10y": null,
+    "all": 0.10121994389537048
+  },
+  "cagr_adjusted": {
+    "1y": 0.21615109591170523,
+    "3y": 0.2148482587145597,
+    "5y": null,
+    "10y": null,
+    "all": 0.10164651792504853
+  },
+  "simplereturn": {
+    "1d": 0.0017926883923427006,
+    "1m": 0.058517115410634535,
+    "3m": -0.04667032230548951,
+    "ytd": 0.19753558855043618,
+    "1y": 0.21615109591170523,
+    "3y": 0.7929414460868567,
+    "5y": null,
+    "10y": null,
+    "all": 0.5647
+  },
+  "changesvalue": {
+    "1d": 0.0027999999999999137,
+    "1m": 0.08650000000000002,
+    "3m": -0.0766,
+    "ytd": 0.2581,
+    "1y": 0.2781,
+    "3y": 0.692,
+    "5y": null,
+    "10y": null,
+    "all": 0.5647
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.2067219965860263,
+    "3y": -0.29714193182738247,
+    "5y": -0.3750238686270767,
+    "10y": -0.3750238686270767,
+    "all": -0.3750238686270767
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.2067219965860263,
+    "3y": -0.2971419318273824,
+    "5y": -0.3750238686270766,
+    "10y": -0.3750238686270766,
+    "all": -0.3750238686270766
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2022-02-16",
+    "value": 1.5647
+  },
+  "trade": null
+}

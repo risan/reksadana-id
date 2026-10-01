@@ -1,0 +1,213 @@
+{
+  "id": 1054,
+  "custodian_bank_id": null,
+  "symbol": "RD1054",
+  "name": "Mega Dana Capital Growth",
+  "type": "Saham",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 0
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 100
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 0
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "LSIP",
+      "name": "PP London Sumatra Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-08-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "HMSP",
+      "name": "HM Sampoerna Tbk",
+      "annualDividend": 0,
+      "date": "2019-08-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "AALI",
+      "name": "Astra Agro Lestari Tbk",
+      "annualDividend": 0,
+      "date": "2019-08-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ITMG",
+      "name": "Indo Tambangraya Megah Tbk",
+      "annualDividend": 0,
+      "date": "2019-08-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "DYAN",
+      "name": "PT Dyandra Media International Tbk.",
+      "annualDividend": 0,
+      "date": "2019-08-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Mega Capital Investama, PT",
+    "ojkCode": "CD003",
+    "telepon": "+62 21 7918 6999",
+    "fax": "+62 21 7918 7670/7918 7671",
+    "email": "cs@megainvestama.co.id",
+    "url": "www.megainvestama.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA - CUSTODY, Tbk, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": null,
+    "date": "2021-02-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.07662723153815976,
+    "3y": -0.008873201148690835,
+    "5y": -0.0015755945915501,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.12155091517503658,
+    "3y": -0.27836146149139507,
+    "5y": -0.27836146149139507,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2021-02-24",
+    "first_date": "2013-12-18",
+    "value": 357.8567
+  },
+  "trade": null
+}

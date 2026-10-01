@@ -1,0 +1,159 @@
+{
+  "id": 23,
+  "custodian_bank_id": null,
+  "symbol": "RD23",
+  "name": "Asanusa Amanah Syariah Fund",
+  "type": "Campuran",
+  "profile": "Reksa Dana AAA Amanah Syariah Fund bertujuan untuk memperoleh hasil investasi yang menarik dan optimal untuk jangka menengah dan panjang namun tetap memberikan pendapatan yang memadai melalui investasi pada Efek bersifat ekuitas, obligasi dan Efek bersifat utang lainnya dan instrumen pasar uang yang sesuai dengan Syariah Islam. Syariah Islam yang dijadikan pedoman AAA Amanah Syariah Fund mengacu pada Fatwa Dewan Syariah Nasional dan Keputusan Dewan Pengawas Syariah AAA Amanah Syariah Fund. \n\nAAA Amanah Syariah Fund melakukan investasi dengan komposisi minimum 30% dan maksimum 98% pada Obligasi dan/atau Efek bersifat utang lainnya yang sesuai dengan Syariah Islam, yang ditawarkan melalui Penawaran Umum dan/atau dicatatkan di Bursa Efek dan instrumen pasar uang yang sesuai dengan Syariah Islam dengan ketentuan investasi pada instrumen pasar uang tidak akan melebihi 95%, serta minimum 5% dan maksimum 80% pada Efek bersifat ekuitas yang sesuai dengan Syariah Islam, yang ditawarkan melalui Penawaran Umum dan atau dicatatkan di Bursa Efek Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham Syariah",
+      "percentage": 26
+    },
+    {
+      "name": "Sukuk",
+      "percentage": 13
+    },
+    {
+      "name": "Pasar Uang & L ain L ain",
+      "percentage": 61
+    }
+  ],
+  "investment_manager": {
+    "name": "Simpan Asset Management, PT",
+    "ojkCode": "BJ002",
+    "telepon": "+62 21 5153180",
+    "fax": "+62 21 5153181",
+    "email": "-",
+    "url": "-"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA - CUSTODY, Tbk, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 3135290567.07,
+    "date": "2026-06-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.02
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.03937553345669986,
+    "3y": 0.01061270106500523,
+    "5y": 0.0237366781010302,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.07582732662247282,
+    "3y": -0.14060206023291644,
+    "5y": -0.20173700099055036,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-07-01",
+    "first_date": "2005-06-22",
+    "value": 771.6212
+  },
+  "trade": null
+}

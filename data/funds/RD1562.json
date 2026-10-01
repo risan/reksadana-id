@@ -1,0 +1,208 @@
+{
+  "id": 1562,
+  "custodian_bank_id": null,
+  "symbol": "RD1562",
+  "name": "Schroder Prestasi Gebyar Indonesia II",
+  "type": "Obligasi",
+  "profile": "Reksa Dana SCHRODER PRESTASI GEBYAR INDONESIA II bertujuan untuk memberikan suatu tingkat pengembalian yang menarik dengan penekanan pada stabilitas modal. SCHRODER PRESTASI GEBYAR INDONESIA II akan melakukan investasi minimum 80% dan maksimum 100% pada Efek bersifat utang yang terdiri atas Surat Utang Negara, Obligasi Negara dalam rangka program rekapitalisasi bank umum, serta Efek bersifat utang yang diterbitkan oleh Negara Republik Indonesia lainnya; dan minimum 0% dan maksimum 20% pada Sertifikat Bank Indonesia, Surat Perbendaharaan Negara, Sertifikat Deposito dan instrumen pasar uang lainnya sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Money Market",
+      "percentage": 1.9
+    },
+    {
+      "name": "Debt Securities",
+      "percentage": 98.1
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "FR0082",
+      "annualDividend": 0,
+      "date": "2019-10-29",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0080",
+      "annualDividend": 0,
+      "date": "2019-10-29",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0078",
+      "annualDividend": 0,
+      "date": "2019-10-29",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0068",
+      "annualDividend": 0,
+      "date": "2019-10-29",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0071",
+      "annualDividend": 0,
+      "date": "2019-10-29",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "PT Schroder Investment Management Indonesia",
+    "ojkCode": "SCH02",
+    "telepon": "+62 21 2965 5100",
+    "fax": "+62 21 515 0505",
+    "email": "-",
+    "url": "www.schroders.com/id/id/investasi-reksadana"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 226248119683.59,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0136
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.115314940590477,
+    "3y": 0.0566222414092532,
+    "5y": 0.0721120774538151,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.04584200326680954,
+    "3y": -0.09418676075397614,
+    "5y": -0.11775385614403822,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2008-05-15",
+    "value": 3611.9696
+  },
+  "trade": null
+}

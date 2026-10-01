@@ -1,0 +1,212 @@
+{
+  "id": 1754,
+  "custodian_bank_id": null,
+  "symbol": "RD1754",
+  "name": "TRAM Alpha",
+  "type": "Campuran",
+  "profile": "TRAM ALPHA bertujuan untuk mendapat hasil investasi yang optimal dalam jangka panjang dan dalam segala kondisi pasar melalui investasi di beberapa kelas aset, yaitu Efek bersifat ekuitas, Efek bersifat utang\ndan instrumen pasar uang dalam negeri.\n\nTRAM ALPHA akan melakukan investasi dengan komposisi portofolio Efek yaitu minimum 1% dan maksimum 79% dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik\ndi dalam maupun di luar negeri; minimum 1% dan maksimum 79% dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia\ndan/atau korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri; dan minimum 0% dan maksimum 79% dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo\nkurang dari 1 (satu) tahun; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 29.85
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 35.81
+    },
+    {
+      "name": "Lainnya",
+      "percentage": 34.34
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ADRO",
+      "name": "ADARO ENERGY Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "PT Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "PT Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TBIG",
+      "name": "PT Tower Bersama Infrastructure Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia FR0059",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "PT Trimegah Asset Management",
+    "ojkCode": "LG002",
+    "telepon": "+62 21 29248088",
+    "fax": "+62 21 2924 8040",
+    "email": "cs_tram@trimegah.com",
+    "url": "www.trimegah-am.com"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 120199581216,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0446
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.01547147837752183,
+    "3y": 0.06863885361476663,
+    "5y": 0.05649767418957174,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.111396238217774,
+    "3y": -0.111396238217774,
+    "5y": -0.19648969362611113,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2013-05-02",
+    "value": 1608.38
+  },
+  "trade": null
+}

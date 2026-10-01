@@ -1,0 +1,193 @@
+{
+  "id": 5638,
+  "custodian_bank_id": 3,
+  "symbol": "RD5638",
+  "name": "BNI-AM Short Duration Bonds Index Kelas R1",
+  "type": "Obligasi",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 12,
+    "name": "STANDARD CHARTERED",
+    "color": "#0072AA",
+    "icon_url": "https://assets.bibit.id/icons/banks/Standard_Chartered_05042023140038.svg"
+  },
+  "released_date": "2021-12-21",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 98
+    },
+    {
+      "name": "Kas & Deposito",
+      "percentage": 2
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "FR0101",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6261,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0104",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8733,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0109",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9551,
+      "product_type": "FR",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4957152804",
+      "name": "Reksa Dana Indeks BNI-AM Short Duration Bonds Index Kelas R1"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNI Asset Management",
+    "ojkCode": "NI002"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": true,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 205844607461,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0059
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0663
+  },
+  "cagr": {
+    "1y": -0.05028650464335116,
+    "3y": 0.0068221908292609434,
+    "5y": null,
+    "10y": null,
+    "all": 0.013763966435512698
+  },
+  "cagr_adjusted": {
+    "1y": -0.010684802389537729,
+    "3y": 0.04380227261411207,
+    "5y": null,
+    "10y": null,
+    "all": 0.045864329331671616
+  },
+  "simplereturn": {
+    "1d": 0.003225714638103394,
+    "1m": -0.0017903705319337604,
+    "3m": 0.01873493595555953,
+    "ytd": -0.01770712758326165,
+    "1y": -0.010684802389537729,
+    "3y": 0.1372467758531195,
+    "5y": null,
+    "10y": null,
+    "all": 0.20088692928944796
+  },
+  "changesvalue": {
+    "1d": 3.400000000000091,
+    "1m": -1.9158576025170078,
+    "3m": 19.644142397482938,
+    "ytd": -19.654203332317138,
+    "1y": -11.896672676559092,
+    "3y": 142.19863952590003,
+    "5y": null,
+    "10y": null,
+    "all": 200.88692928944806
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.07698601143629547,
+    "3y": -0.07698601143629547,
+    "5y": -0.07698601143629547,
+    "10y": -0.07698601143629547,
+    "all": -0.07698601143629547
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0481688336259727,
+    "3y": -0.0481688336259733,
+    "5y": -0.0481688336259726,
+    "10y": -0.0481688336259726,
+    "all": -0.0481688336259726
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2022-09-01",
+    "value": 1057.43
+  },
+  "trade": null
+}

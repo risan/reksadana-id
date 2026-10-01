@@ -1,0 +1,268 @@
+{
+  "id": 1539,
+  "custodian_bank_id": 5,
+  "symbol": "RD1539",
+  "name": "Schroder Dana Andalan II",
+  "type": "Obligasi",
+  "profile": "Reksa Dana Schroder Dana Andalan II bertujuan untuk  memberikan suatu tingkat pengembalian yang menarik dengan penekanan pada stabilitas modal. Komposisi \nlnvestasi dari Schroder Dana Andalan II adalah minimum 80% dan maksimum 100% pada Efek Bersiat Utang,dan minimum 0% dan maksimum 20% pada kas. Dalam hal berinvestasi pada Elek Bersiat Utang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan kas,investasi tersebut tidak akan melebihi 90%.Manajer lnvestasi akan selaiu menyesuaikan kebijakan investasi tersebut dengan Peraturan  OJK    yang berlaku dan kebijakan·kebijakan yang dikeluarkan  oleh OJK.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": "2026-10-05",
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Bersifat Utang",
+      "percentage": 92.85
+    },
+    {
+      "name": "Kas",
+      "percentage": 7.15
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN IV BANK PANIN TAHAP III TAHUN 2025 SERI A (Bond)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN V BANK SMBC INDONESIA TAHAP II TAHUN 2024 SERI A (Bond)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN V MERDEKA COPPER GOLD TAHAP I TAHUN 2024 (Bond)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN VI TOWER BERSAMA INFRASTRUCTURE TAHAP VI TAHUN 2025 SERI A (Bond)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN VII FEDERAL INTERNATIONAL FINANCE TAHAP II TAHUN 2025 SERI B (Bond)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN VIII SARANA MULTIGRIYA FINANSIAL TAHAP III TAHUN 2026 (Bond)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERWAWASAN SOSIAL BERKELANJUTAN I BANK BRI TAHAP I TAHUN 2025 SERI A (Bond)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "SR021-T3",
+      "name": "Sukuk Ritel",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8720,
+      "product_type": "SBN",
+      "serie_id": 3923
+    },
+    {
+      "symbol": "SR022-T3",
+      "name": "Sukuk Ritel",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9136,
+      "product_type": "SBN",
+      "serie_id": 4263
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5026961374",
+      "name": "Reksa Dana Schroder Dana Andalan II"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Schroder Investment Management Indonesia",
+    "ojkCode": "SCH02",
+    "telepon": "+62 21 2965 5100",
+    "fax": "+62 21 515 0505",
+    "email": "-",
+    "url": "www.schroders.com/id/id/investasi-reksadana"
+  },
+  "custodian_bank": {
+    "name": "BUT DEUTSCHE BANK AG",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 249104839790,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0152
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.008278429990329905,
+    "3y": 0.005562546658731682,
+    "5y": -0.0013252172817742602,
+    "10y": 0.0035513936749516084,
+    "all": 0.005204419302804464
+  },
+  "cagr_adjusted": {
+    "1y": 0.024679326536204416,
+    "3y": 0.02781252341035656,
+    "5y": 0.0118752497312955,
+    "10y": 0.01016208337990232,
+    "all": 0.008895953257022082
+  },
+  "simplereturn": {
+    "1d": 0.000547080867670191,
+    "1m": 0.0036674262431333204,
+    "3m": 0.017279436593260478,
+    "ytd": 0.016191965372986283,
+    "1y": 0.024679326536204416,
+    "3y": 0.08577969360728388,
+    "5y": 0.0608033105518162,
+    "10y": 0.10639608816350798,
+    "all": 0.17194751411168752
+  },
+  "changesvalue": {
+    "1d": 0.599999999999909,
+    "1m": 4.020672738872008,
+    "3m": 18.793460827562058,
+    "ytd": 17.9196480782839,
+    "1y": 27.30742801904489,
+    "3y": 92.57516093485287,
+    "5y": 67.16516093485279,
+    "10y": 112.685160934853,
+    "all": 171.9251609348529
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.021712460986126336,
+    "3y": -0.021712460986126336,
+    "5y": -0.030535869250795433,
+    "10y": -0.030535869250795433,
+    "all": -0.05048130946138296
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.009411279926016,
+    "3y": -0.0094112799260166,
+    "5y": -0.0305358692507955,
+    "10y": -0.0305358692507955,
+    "all": -0.0504813094613829
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2008-11-04",
+    "value": 1097.33
+  },
+  "trade": null
+}

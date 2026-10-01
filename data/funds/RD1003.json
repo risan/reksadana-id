@@ -1,0 +1,270 @@
+{
+  "id": 1003,
+  "custodian_bank_id": 2,
+  "symbol": "RD1003",
+  "name": "Manulife USD Fixed Income Kelas A",
+  "type": "Obligasi",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 38,
+    "name": "HSBC INDONESIA",
+    "color": "#f40c02",
+    "icon_url": "https://assets.bibit.id/icons/banks/HSBC_05042023141254.svg"
+  },
+  "released_date": "2013-11-15",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 150,
+  "minsell": 100,
+  "minbuy": 100,
+  "min_buy_next_purchase": 10,
+  "min_buy_after_sell_all": 100,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "balance",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 30,
+      "max_value": 60,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 83.77
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 16.23
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "INDON 5.03 05/29/31",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDON 3.55 03/31/32",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDON 4.35 02/21/31",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Hongkong & Shanghai Banking Corp Ltd",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOIS 5 05/25/30",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOIS 5.4 11/15/28",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDON 4.55 01/11/28",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOIS 4.55 07/23/30",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDON 3 1/2 01/11/28",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDON 4.3 04/16/31",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4587903325",
+      "name": "Reksa Dana Manulife USD Fixed Income Fund Kelas A",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Manulife Aset Manajemen Indonesia",
+    "ojkCode": "MAN02",
+    "telepon": "+62 21 25557788",
+    "fax": "+62 21 25557676",
+    "email": "MAMI_customer_id@manulifeam.com",
+    "url": "www.reksadana-manulife.com"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 122646974.73,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0134
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.042
+  },
+  "cagr": {
+    "1y": -0.011570912012856538,
+    "3y": 0.029213032311723452,
+    "5y": -0.00014626536412132296,
+    "10y": 0.005988910239454581,
+    "all": 0.017006441263498706
+  },
+  "cagr_adjusted": {
+    "1y": -0.011570912012856538,
+    "3y": 0.029213032311723452,
+    "5y": -0.00014626536412132296,
+    "10y": 0.005988910239454581,
+    "all": 0.017006441263498706
+  },
+  "simplereturn": {
+    "1d": 0.00008130081300805614,
+    "1m": -0.010696477400675586,
+    "3m": -0.009979879275653913,
+    "ytd": -0.018432812001276777,
+    "1y": -0.011570912012856538,
+    "3y": 0.0902242311441992,
+    "5y": -0.0007311129163283248,
+    "10y": 0.06152916810493614,
+    "all": 0.2425252525252526
+  },
+  "changesvalue": {
+    "1d": 0.00009999999999998899,
+    "1m": -0.01330000000000009,
+    "3m": -0.012399999999999967,
+    "ytd": -0.02310000000000012,
+    "1y": -0.014399999999999968,
+    "3y": 0.10179999999999989,
+    "5y": -0.0009000000000001229,
+    "10y": 0.07129999999999992,
+    "all": 0.24009999999999998
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.020634161886551983,
+    "3y": -0.026874585268745865,
+    "5y": -0.11240152684154969,
+    "10y": -0.1164200824642252,
+    "all": -0.1164200824642252
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0206341618865519,
+    "3y": -0.0268745852687459,
+    "5y": -0.1124015268415496,
+    "10y": -0.1164200824642251,
+    "all": -0.1164200824642251
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2013-11-18",
+    "value": 1.2301
+  },
+  "trade": null
+}

@@ -1,0 +1,268 @@
+{
+  "id": 6651,
+  "custodian_bank_id": 2,
+  "symbol": "RD6651",
+  "name": "Grow Saham Indonesia Plus Kelas O",
+  "type": "Saham",
+  "profile": "PT GROW INVESTMENTS INDONESIA sebagai Manajer Investasi yang didirikan pada tahun 2017. \nREKSA DANA GROW SAHAM INDONESIA PLUS adalah Reksa Dana berbentuk Kontrak Investasi Kolektif sebagaimana termaktub dalam akta Kontrak Investasi Kolektif REKSA DANA GROW SAHAM INDONESIA PLUS No. 05 tanggal 03 April 2024 yang dibuat di hadapan Leolin Jayanti, S.H, M.Kn Notaris di Kota Jakarta Selatan (selanjutnya disebut \"Kontrak Investasi Kolektif REKSA DANA GROW SAHAM INDONESIA PLUS\"), antara PT Grow Investments Indonesia sebagai Manajer Investasi dan PT Bank HSBC Indonesia sebagai Bank Kustodian. \nREKSA DANA GROW SAHAM INDONESIA PLUS bertujuan untuk memperoleh potensi hasil investasi dari pertumbuhan ekonomi Indonesia dengan melakukan investasi jangka panjang sesuai Kebijakan Investasi. \nREKSA DANA GROW SAHAM INDONESIA PLUS akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% (delapan puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diperdagangkan baik di dalam maupun diluar negeri; dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. ",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2024-06-19",
+  "is_top_product": 0,
+  "is_featured_product": 1,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 98.13
+    },
+    {
+      "name": "Pasar Uang dan/atau Deposito",
+      "percentage": 1.87
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "AUTO",
+      "name": "Astra Otoparts Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4584,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BFIN",
+      "name": "BFI Finance Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4915,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FULLERTON LUXFUNDS - Global Absolute Alpha A USD Cap",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TOTL",
+      "name": "Total Bangun Persada Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5020,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5027158639",
+      "name": "REKSA DANA GROW SAHAM INDONESIA PLUS KELAS O"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Grow Investments Indonesia",
+    "ojkCode": "AYR02"
+  },
+  "custodian_bank": {
+    "name": "HSBC INDONESIA",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 33143011391.22,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0198
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.08548551925309311,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -0.035041083284495955
+  },
+  "cagr_adjusted": {
+    "1y": -0.08548551925309311,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -0.0350824027421448
+  },
+  "simplereturn": {
+    "1d": -0.006563773145653262,
+    "1m": -0.03306582743246789,
+    "3m": 0.07751747679502463,
+    "ytd": -0.15638071005592213,
+    "1y": -0.08548551925309311,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -0.07826999999999995
+  },
+  "changesvalue": {
+    "1d": -6.090000000000032,
+    "1m": -31.519999999999982,
+    "3m": 66.31000000000006,
+    "ytd": -170.8599999999999,
+    "1y": -86.15999999999997,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -78.26999999999998
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.2712778000313486,
+    "3y": -0.2712778000313486,
+    "5y": -0.2712778000313486,
+    "10y": -0.2712778000313486,
+    "all": -0.2712778000313486
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.2712778000313485,
+    "3y": -0.2712778000313485,
+    "5y": -0.2712778000313485,
+    "10y": -0.2712778000313485,
+    "all": -0.2712778000313485
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2024-06-19",
+    "value": 921.73
+  },
+  "trade": null
+}

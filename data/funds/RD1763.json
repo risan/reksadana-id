@@ -1,0 +1,272 @@
+{
+  "id": 1763,
+  "custodian_bank_id": 5,
+  "symbol": "RD1763",
+  "name": "TRIM Dana Tetap 2 Kelas A",
+  "type": "Obligasi",
+  "profile": "Tujuan investasi TRIM DANA TETAP 2 adalah untuk mempertahankan investasi awal dan untuk memperoleh pendapatan yang optimal berupa kupon bunga dan apresiasi nilai pokok dari Efek bersifat utang. Kebijakan investasi TRIM DANA TETAP 2 adalah sebesar minimum 80% dan maksimum 100% pada Efek bersifat utang serta minimum 0% dan maksimum 20% pada instrumen pasar uang.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2008-05-21",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 93.25
+    },
+    {
+      "name": "Lainnya",
+      "percentage": 6.75
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Petrindo Jaya Kreasi Tahap II Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0104",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8733,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan IV Lontar Papyrus Pulp & Paper Industry Tahap II Tahun 2026 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Bumi Tahap III Tahun 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0101",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6261,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Provident Investasi Bersama Tahap II Tahun 2026 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Provident Investasi Bersama Tahap II Tahun 2026 Seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Bumi Tahap IV Tahun 2026",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II Oki Pulp & Paper Mills Tahap I Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Lontar Papyrus Pulp & Paper Industry Tahap III Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585395936",
+      "name": "Reksa Dana TRIM Dana Tetap 2"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Trimegah Asset Management",
+    "ojkCode": "LG002",
+    "telepon": "+62 21 29248088",
+    "fax": "+62 21 2924 8040",
+    "email": "cs_tram@trimegah.com",
+    "url": "www.trimegah-am.com"
+  },
+  "custodian_bank": {
+    "name": "BUT DEUTSCHE BANK AG",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 2751460000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0192
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.072
+  },
+  "cagr": {
+    "1y": 0.02259178549296048,
+    "3y": 0.05352969864051116,
+    "5y": 0.05005068373159305,
+    "10y": 0.05706098816982186,
+    "all": 0.07076299209372183
+  },
+  "cagr_adjusted": {
+    "1y": 0.02259178549296048,
+    "3y": 0.05352969864051116,
+    "5y": 0.05005068373159305,
+    "10y": 0.05706098816982186,
+    "all": 0.07077391081321638
+  },
+  "simplereturn": {
+    "1d": 0.000765934425762671,
+    "1m": 0.005921495113120789,
+    "3m": 0.025103028287936535,
+    "ytd": 0.0113661214765024,
+    "1y": 0.02259178549296048,
+    "3y": 0.16933876736255504,
+    "5y": 0.27658962420160016,
+    "10y": 0.7418086812417859,
+    "all": 2.511916419198964
+  },
+  "changesvalue": {
+    "1d": 2.6899999999996,
+    "1m": 20.6899999999996,
+    "3m": 86.06999999999971,
+    "ytd": 39.5,
+    "1y": 77.64999999999964,
+    "3y": 508.9899999999998,
+    "5y": 761.5137999999997,
+    "10y": 1496.8719999999998,
+    "all": 2513.9359999999997
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.02909911123467024,
+    "3y": -0.02909911123467024,
+    "5y": -0.02909911123467024,
+    "10y": -0.05190098428622525,
+    "all": -0.4403276602900412
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0290991112346702,
+    "3y": -0.0290991112346702,
+    "5y": -0.0290991112346702,
+    "10y": -0.0519009842862253,
+    "all": -0.4403276602900412
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2008-05-22",
+    "value": 3514.74
+  },
+  "trade": null
+}

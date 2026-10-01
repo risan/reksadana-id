@@ -1,0 +1,211 @@
+{
+  "id": 1971,
+  "custodian_bank_id": null,
+  "symbol": "RD1971",
+  "name": "Shinhan Metro Harmoni Balance Fund",
+  "type": "Campuran",
+  "profile": "ARCHIPELAGO METRO HARMONI BALANCE FUND bertujuan untuk mendapatkan peningkatan hasil investasi yang optimal melalui pengelolaan aset secara fleksibel dan selektif dengan alokasi investasi pada Efek bersifat ekuitas dan Efek Bersifat Utang serta dapat berinvestasi pada instrumen pasar uang.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Money Market",
+      "percentage": 26.6
+    },
+    {
+      "name": "Fixed Income",
+      "percentage": 14.2
+    },
+    {
+      "name": "Equity",
+      "percentage": 59.2
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "APIC",
+      "name": "PACIFIC STRATEGIC FINANCIAL Tbk",
+      "annualDividend": 0,
+      "date": "2019-08-06",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PNLF",
+      "name": "Panin Financial Tbk",
+      "annualDividend": 0,
+      "date": "2019-08-06",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INKP01XXMF MTN",
+      "annualDividend": 0,
+      "date": "2019-08-06",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TARA",
+      "name": "PT Sitara Propertindo Tbk",
+      "annualDividend": 0,
+      "date": "2019-08-06",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TBMS",
+      "name": "Tembaga Mulia Semanan Tbk",
+      "annualDividend": 0,
+      "date": "2019-08-06",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Shinhan Asset Management Indonesia, PT",
+    "ojkCode": "AAM01",
+    "telepon": "+62 21 3100078, +62 21 3150460",
+    "fax": "+62 21 3151916",
+    "email": "aam@archipelago.co.id",
+    "url": "www.archipelago.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA - CUSTODY, Tbk, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 667901232.26,
+    "date": "2020-05-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.02067345850866675,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.10243501581083114,
+    "3y": -0.12750727028939857,
+    "5y": -0.12750727028939857,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2020-06-03",
+    "first_date": "2018-01-26",
+    "value": 984.62
+  },
+  "trade": null
+}

@@ -1,0 +1,272 @@
+{
+  "id": 620,
+  "custodian_bank_id": 13,
+  "symbol": "RD620",
+  "name": "BRI Seruni Pasar Uang Syariah",
+  "type": "Pasar Uang",
+  "profile": "BRI SERUNI PASAR UANG SYARIAH bertujuan untuk memberikan tingkat pertumbuhan investasi yang stabil dengan risiko minimal sekaligus memperoleh tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat dengan berinvestasi pada instrumen pasar uang syariah dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau Efek Syariah Berpendapatan Tetap yang sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang diperdagangkan di Indonesia dan/atau deposito syariah yang tidak bertentangan dengan Prinsip Syariah di Pasar Modal.\nBRI SERUNI PASAR UANG SYARIAH akan melakukan investasi dengan komposisi portofolio investasi 100% (seratus persen)dariNilaiAktivaBersihpadainstrumenpasaruangSyariahdalamnegeriyangmempunyaijatuhtempotidak lebihdari1 (satu) tahun dan/atau Efek Syariah Berpendapatan Tetap yang sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang diperdagangkan di Indonesia dan/atau deposito Syariah dalam mata uang Rupiah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2018-07-24",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Utang",
+      "percentage": 62.07
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 37.93
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "ARFAIDJ1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PBS021",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PDRIIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SKSMFP02CN2",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SMADMF06ACN3",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SMPNMP01ASECN2",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SMPPGD03ACN5",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SMSMI103ACN2",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SWAGIDJ1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SYDKIDJ1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5027999773",
+      "name": "REKSA DANA SYARIAH BRI SERUNI PASAR UANG SYARIAH"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "ojkCode": "OD002",
+    "telepon": "+62 21 500688",
+    "fax": "+62 21 3501707",
+    "email": "reksadanaonline@danareksa.com",
+    "url": "www.danareksa.com"
+  },
+  "custodian_bank": {
+    "name": "PT Bank Maybank Indonesia Tbk",
+    "ojkCode": "BII01"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 1140000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0061
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.066
+  },
+  "cagr": {
+    "1y": 0.0382665282138519,
+    "3y": 0.049467462816977115,
+    "5y": 0.04232895139385473,
+    "10y": null,
+    "all": 0.0453673690442602
+  },
+  "cagr_adjusted": {
+    "1y": 0.0382665282138519,
+    "3y": 0.049467462816977115,
+    "5y": 0.04232895139385473,
+    "10y": null,
+    "all": 0.04538288647268218
+  },
+  "simplereturn": {
+    "1d": 0.00018616744582988787,
+    "1m": 0.004902796499393736,
+    "3m": 0.00902574768008746,
+    "ytd": 0.0264683312412195,
+    "1y": 0.0382665282138519,
+    "3y": 0.15586452644305804,
+    "5y": 0.23033677059080215,
+    "10y": null,
+    "all": 0.4382915516026491
+  },
+  "changesvalue": {
+    "1d": 0.26769999999987704,
+    "1m": 7.0168999999998505,
+    "3m": 12.864899999999807,
+    "ytd": 37.08569999999986,
+    "1y": 53.00729999999999,
+    "3y": 193.9393,
+    "5y": 269.25559999999996,
+    "10y": null,
+    "all": 438.2698999999999
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0005998945189014115,
+    "3y": -0.0015004784712030483,
+    "5y": -0.0017996355486669113,
+    "10y": -0.023154669728789212,
+    "all": -0.023154669728789212
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0005998945189014,
+    "3y": -0.0015004784712029,
+    "5y": -0.0017996355486668,
+    "10y": -0.0231546697287893,
+    "all": -0.0231546697287893
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-07-25",
+    "value": 1438.2205
+  },
+  "trade": null
+}

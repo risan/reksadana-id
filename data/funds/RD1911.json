@@ -1,0 +1,267 @@
+{
+  "id": 1911,
+  "custodian_bank_id": 5,
+  "symbol": "RD1911",
+  "name": "BNP Paribas SRI KEHATI Kelas RK1",
+  "type": "Saham",
+  "profile": "REKSA DANA BNP PARIBAS SRI-KEHATI bertujuan untuk memberikan potensi tingkat pertumbuhan investasi yang mengikuti kinerja indeks SRI KEHATI. Produk ini menggunakan pendekatan investasi pasif dengan mereplikasi indeks SRI-KEHATI.\n\nREKSA DANA BNP PARIBAS SRI-KEHATI mempunyai kebijakan investasi minimum sebesar 80% (delapan puluh perseratus) pada Efek Bersifat Ekuitas dan maksimum sebesar 20% (dua puluh per seratus) pada  instrumen pasar uang seperti Deposito Berjangka, Sertifikat Deposito, Sertifikat Bank Indonesia, Surat Berharga Pasar  Uang, Obligasi yang  jatuh temponya kurang dari 1 tahun dan instrumen pasar uang lainnya.\n",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2018-11-29",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas",
+      "percentage": 1.29
+    },
+    {
+      "name": "Saham",
+      "percentage": 98.71
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ICBP",
+      "name": "Indofood CBP Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4891,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INDF",
+      "name": "Indofood Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4919,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "KLBF",
+      "name": "Kalbe Farma Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4973,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "PGAS",
+      "name": "Perusahaan Gas Negara Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5027,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4587075635",
+      "name": "Reksa Dana Indeks BNP Paribas Sri-Kehati"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNP Paribas Asset Management",
+    "ojkCode": "MEES2"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": true,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 2390000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0165
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.13278604709491337,
+    "3y": -0.08244132861206799,
+    "5y": 0.0018860840027907777,
+    "10y": null,
+    "all": -0.01272979447789524
+  },
+  "cagr_adjusted": {
+    "1y": -0.13278604709491337,
+    "3y": -0.08244132861206799,
+    "5y": 0.0018860840027907777,
+    "10y": null,
+    "all": -0.012734215448295005
+  },
+  "simplereturn": {
+    "1d": -0.00994482439620703,
+    "1m": -0.055385682312517726,
+    "3m": 0.0732295496872164,
+    "ytd": -0.1807121310160671,
+    "1y": -0.13278604709491337,
+    "3y": -0.2274945863266078,
+    "5y": 0.009466060299814893,
+    "10y": null,
+    "all": -0.09557536368941022
+  },
+  "changesvalue": {
+    "1d": -9.029999999999973,
+    "1m": -52.710000000000036,
+    "3m": 61.34000000000003,
+    "ytd": -198.28999999999996,
+    "1y": -137.6500000000001,
+    "3y": -264.74,
+    "5y": 8.430000000000064,
+    "10y": null,
+    "all": -95
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.31297582710591865,
+    "3y": -0.36595217665819435,
+    "5y": -0.36595217665819435,
+    "10y": -0.42789227886685866,
+    "all": -0.42789227886685866
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3129758271059187,
+    "3y": -0.3659521766581942,
+    "5y": -0.3659521766581942,
+    "10y": -0.4278922788668587,
+    "all": -0.4278922788668587
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-11-30",
+    "value": 898.98
+  },
+  "trade": null
+}

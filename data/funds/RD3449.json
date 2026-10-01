@@ -1,0 +1,234 @@
+{
+  "id": 3449,
+  "custodian_bank_id": 3,
+  "symbol": "RD3449",
+  "name": "Eastspring Syariah Money Market Khazanah Kelas A",
+  "type": "Pasar Uang",
+  "profile": "EASTSPRING SYARIAH MONEY MARKET KHAZANAH bertujuan untuk memberikan potensi imbal hasil yang relatif stabil melalui investasi sesuai dengan Kebijakan Investasi.\n\nEASTSPRING SYARIAH MONEY MARKET KHAZANAH akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri dan/atau Efek Syariah Berpendapatan Tetap yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun, yang diperdagangkan di Indonesia dan/atau deposito Syariah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 12,
+    "name": "STANDARD CHARTERED",
+    "color": "#0072AA",
+    "icon_url": "https://assets.bibit.id/icons/banks/Standard_Chartered_05042023140038.svg"
+  },
+  "released_date": "2018-12-26",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "kas/Pasar Uang Syariah",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "BANK CIMB NIAGA SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK DANAMON INDONESIA UNIT USAHA SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK PERMATA UNIT USAHA SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK ALADIN SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK BTPN SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK SYARIAH INDONESIA TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4998741465",
+      "name": "Reksa Dana Syariah Eastspring Syariah Money Market Khazanah Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "ojkCode": "EII01",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 48250000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0147
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0509
+  },
+  "cagr": {
+    "1y": 0.032049780870496036,
+    "3y": 0.032384985465208294,
+    "5y": 0.025614018214222156,
+    "10y": null,
+    "all": 0.027399048436984152
+  },
+  "cagr_adjusted": {
+    "1y": 0.032049780870496036,
+    "3y": 0.032384985465208294,
+    "5y": 0.025614018214222156,
+    "10y": null,
+    "all": 0.027408847714646578
+  },
+  "simplereturn": {
+    "1d": 0.0001134687393624656,
+    "1m": 0.004019462661307482,
+    "3m": 0.01122711553275546,
+    "ytd": 0.02568450451349058,
+    "1y": 0.032049780870496036,
+    "3y": 0.10033528320730478,
+    "5y": 0.134801081498648,
+    "10y": null,
+    "all": 0.2336145879153837
+  },
+  "changesvalue": {
+    "1d": 0.14000000000010004,
+    "1m": 4.940000000000055,
+    "3m": 13.700000000000045,
+    "ytd": 30.90000000000009,
+    "1y": 38.319999999999936,
+    "3y": 112.51999999999998,
+    "5y": 146.57999999999993,
+    "10y": null,
+    "all": 233.68000000000006
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0011170688114386929,
+    "3y": -0.0020500843389126278,
+    "5y": -0.0020500843389126278,
+    "10y": -0.02453668956757693,
+    "all": -0.02453668956757693
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0011170688114388,
+    "3y": -0.0020500843389127,
+    "5y": -0.0020500843389127,
+    "10y": -0.0245366895675769,
+    "all": -0.0245366895675769
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-12-27",
+    "value": 1233.96
+  },
+  "trade": null
+}

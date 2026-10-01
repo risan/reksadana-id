@@ -1,0 +1,208 @@
+{
+  "id": 47,
+  "custodian_bank_id": null,
+  "symbol": "RD47",
+  "name": "Ashmore Dana USD Nusantara",
+  "type": "Obligasi",
+  "profile": "ASHMORE DANA USD NUSANTARA bertujuan untuk memberikan suatu tingkat pengembalian investasi menarik dalam jangka\npanjang dengan melakukan investasi pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau Badan Usaha Milik Negara Indonesia dalam mata uang Dolar Amerika Serikat.\n\nASHMORE DANA USD NUSANTARA akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau Badan Usaha Milik Negara Indonesia yang dijual dalam Penawaran Umum dan/atau\ndiperdagangkan di Bursa Efek baik di dalam maupun di luar negeri yang telah mendapat peringkat dari perusahaan pemeringkat Efek internasional dalam mata uang Dolar Amerika Serikat; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau\ndeposito dalam mata uang Dolar Amerika Serikat;sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal akan berinvestasi pada Efek luar negeri, ASHMORE DANA USD NUSANTARA akan mengacu pada ketentuan peraturan perundang- undangan yang berlaku di Indonesia dan hukum negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17922,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    }
+  },
+  "asset": [
+    {
+      "name": "Instrumen Pasar Uang",
+      "percentage": 3.08
+    },
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 96.92
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Rep Of Indonesia 8.5% 12/10/2035 (Regs)",
+      "annualDividend": 0,
+      "date": "2019-11-08",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Rep Of Indonesia 6.75 15/01/2044 (Regs)",
+      "annualDividend": 0,
+      "date": "2019-11-08",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Rep Of Indonesia 7.75% 17/01/2038 (Regs)",
+      "annualDividend": 0,
+      "date": "2019-11-08",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Rep Of Indonesia 6.625% 17/02/2037 (Regs)",
+      "annualDividend": 0,
+      "date": "2019-11-08",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Penerbit Sbsn 4.15% 29/03/2027 (Regs)",
+      "annualDividend": 0,
+      "date": "2019-11-08",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Ashmore Asset Management Indonesia, PT",
+    "ojkCode": "EL002",
+    "telepon": "+62 21 29539000",
+    "fax": "+62 21 29539001",
+    "email": "-",
+    "url": "-"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 97633065.35079,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.1108872660119196,
+    "3y": 0.04153610399603092,
+    "5y": 0.05406039410691954,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.014155289387720815,
+    "3y": -0.04826742763962488,
+    "5y": -0.04826742763962488,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2014-03-11",
+    "value": 1.1468
+  },
+  "trade": null
+}

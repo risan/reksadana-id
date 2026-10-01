@@ -1,0 +1,268 @@
+{
+  "id": 6639,
+  "custodian_bank_id": 5,
+  "symbol": "RD6639",
+  "name": "Mandiri Investa Dana Utama Kelas D",
+  "type": "Obligasi",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 92.3
+    },
+    {
+      "name": "Deposito",
+      "percentage": 5.83
+    },
+    {
+      "name": "Saham",
+      "percentage": 0
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Tabungan Negara (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Energi Mega Persada Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0047",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0107",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9239,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indomobil Finance Indonesia",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Mayora Indah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OKI Pulp & Paper Mills",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pindo Deli Pulp And Paper Mills",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5025875505",
+      "name": "Reksa Dana Mandiri Investa Dana Utama"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Mandiri Manajemen Investasi",
+    "ojkCode": "CC002"
+  },
+  "custodian_bank": {
+    "name": "BUT DEUTSCHE BANK AG",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1060000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0342
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.071
+  },
+  "cagr": {
+    "1y": 0.004644194182495287,
+    "3y": 0.031382541867971625,
+    "5y": 0.01346148499186195,
+    "10y": 0.019904906126426702,
+    "all": 0.01960764556037109
+  },
+  "cagr_adjusted": {
+    "1y": 0.004644194182495287,
+    "3y": 0.031382541867971625,
+    "5y": 0.01346148499186195,
+    "10y": 0.030385274057164846,
+    "all": 0.02994525559894723
+  },
+  "simplereturn": {
+    "1d": 0.0011034998892680559,
+    "1m": -0.0018388371544090232,
+    "3m": 0.014027908847599635,
+    "ytd": -0.0059035413664974,
+    "1y": 0.004644194182495287,
+    "3y": 0.09713312493984616,
+    "5y": 0.06914409914079611,
+    "10y": 0.34895180192037634,
+    "all": 0.3487513204948238
+  },
+  "changesvalue": {
+    "1d": 2.8899999999998727,
+    "1m": -4.829999999999927,
+    "3m": 36.26999999999998,
+    "ytd": -15.570000000000164,
+    "1y": 12.11999999999989,
+    "3y": 232.1199999999999,
+    "5y": 169.55999999999995,
+    "10y": 751.2304182102248,
+    "all": 750.9104182102251
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.030686453311942308,
+    "3y": -0.030686453311942308,
+    "5y": -0.04375718621384539,
+    "10y": -0.0545800579230451,
+    "all": -0.0545800579230451
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0306864533119424,
+    "3y": -0.0306864533119424,
+    "5y": -0.0437571862138455,
+    "10y": -0.0525108548073938,
+    "all": -0.0540012861855346
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2016-08-12",
+    "value": 2621.83
+  },
+  "trade": null
+}

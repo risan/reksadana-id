@@ -1,0 +1,276 @@
+{
+  "id": 860,
+  "custodian_bank_id": 5,
+  "symbol": "RD860",
+  "name": "Mandiri Investa Dana Syariah Kelas A",
+  "type": "Obligasi",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2009-02-10",
+  "is_top_product": 1,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham Syariah",
+      "percentage": 0
+    },
+    {
+      "name": "Sukuk",
+      "percentage": 92.58
+    },
+    {
+      "name": "Deposito Syariah",
+      "percentage": 4.66
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bumi Serpong Damai",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OKI Pulp & Paper Mills",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PBS029",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS030",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6385,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PBS039",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PBSG001",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Samudera Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Smart Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Tower Bersama Infrastructure Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "XLSMART Telecom Sejahtera Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4588048444",
+      "name": "Reksa Dana Mandiri Investa Dana Syariah"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Mandiri Manajemen Investasi",
+    "ojkCode": "CC002",
+    "telepon": "+62 21 5263505",
+    "fax": "+62 21 5263506",
+    "email": "-",
+    "url": "www.mandiri-investasi.co.id"
+  },
+  "custodian_bank": {
+    "name": "BUT DEUTSCHE BANK AG",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 662790000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0174
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.07
+  },
+  "cagr": {
+    "1y": 0.008987523982059376,
+    "3y": 0.040673128635864364,
+    "5y": 0.03659141926202403,
+    "10y": 0.041968554138359204,
+    "all": 0.0918870781169221
+  },
+  "cagr_adjusted": {
+    "1y": 0.008987523982059376,
+    "3y": 0.040673128635864364,
+    "5y": 0.03659141926202403,
+    "10y": 0.041968554138359204,
+    "all": 0.09190198272542349
+  },
+  "simplereturn": {
+    "1d": 0.0008550163789740051,
+    "1m": -0.000739268949856764,
+    "3m": 0.01739588028632255,
+    "ytd": -0.005567266748176536,
+    "1y": 0.008987523982059376,
+    "3y": 0.12704958178138925,
+    "5y": 0.1968453794475229,
+    "10y": 0.5085028140189309,
+    "all": 3.717437174371744
+  },
+  "changesvalue": {
+    "1d": 4.030000000000655,
+    "1m": -3.4899999999997817,
+    "3m": 80.66000000000076,
+    "ytd": -26.409999999999854,
+    "1y": 42.02000000000044,
+    "3y": 531.7800000000007,
+    "5y": 775.8700000000003,
+    "10y": 1590.1900000000005,
+    "all": 3717.4000000000005
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.036131386094292006,
+    "3y": -0.036131386094292006,
+    "5y": -0.036131386094292006,
+    "10y": -0.04782732044068283,
+    "all": -0.04782732044068283
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0361313860942922,
+    "3y": -0.0361313860942922,
+    "5y": -0.0361313860942922,
+    "10y": -0.0478273204406828,
+    "all": -0.0478273204406828
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2009-02-11",
+    "value": 4717.39
+  },
+  "trade": null
+}

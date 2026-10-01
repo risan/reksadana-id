@@ -1,0 +1,211 @@
+{
+  "id": 1047,
+  "custodian_bank_id": 7,
+  "symbol": "RD1047",
+  "name": "Mega Asset Strategic Total Return",
+  "type": "Campuran",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 69.83
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 26.85
+    },
+    {
+      "name": "Deposito & Cash",
+      "percentage": 3.32
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "BUKOPIN (TD)",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BEEF",
+      "name": "PT Estika Tata Tiara Tbk.",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SIAGII01ACN1",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BBRI02DCN2",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0075",
+      "annualDividend": 0,
+      "date": "2019-11-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Mega Asset Management, PT",
+    "ojkCode": "CD004",
+    "telepon": "+62 21 79175924",
+    "fax": "+62 21 79175925",
+    "email": "-",
+    "url": "www.mega-asset.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA - CUSTODY, Tbk, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 254834722105.52,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.1308337589153596,
+    "3y": 0.06020564912014947,
+    "5y": 0.03111813344930181,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": 0.13249325066986595,
+    "3y": 0.03902361662775178,
+    "5y": 0.05042369130641844,
+    "10y": 0.04976285214952503,
+    "all": 0.03157407362184572
+  },
+  "simplereturn": {
+    "1d": -0.004610422185992391,
+    "1m": -0.00959291393987427,
+    "3m": -0.027171402424603364,
+    "ytd": 0.0015075706264064959,
+    "1y": 0.13249325066986595,
+    "3y": 0.12169880467532646,
+    "5y": 0.27885863859650994,
+    "10y": 0.6252194220929492,
+    "all": 0.5311270014301288
+  },
+  "changesvalue": {
+    "1d": -7.091200000000072,
+    "1m": -14.828899999999976,
+    "3m": -42.76099999999997,
+    "ytd": 2.3045999999999367,
+    "1y": 179.11429999999996,
+    "3y": 166.10480000000007,
+    "5y": 333.8363999999999,
+    "10y": 588.9692,
+    "all": 531.0792
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.04786011478852814,
+    "3y": -0.0808167793345671,
+    "5y": -0.21682530666837674,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0535877114944488,
+    "3y": -0.1572598232326557,
+    "5y": -0.1572598232326557,
+    "10y": -0.1572598232326557,
+    "all": -0.1572598232326557
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2012-09-07",
+    "value": 1502.7392
+  },
+  "trade": null
+}

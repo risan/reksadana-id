@@ -1,0 +1,246 @@
+{
+  "id": 5643,
+  "custodian_bank_id": 3,
+  "symbol": "RD5643",
+  "name": "BRI MSCI Indonesia ESG Screened Kelas A",
+  "type": "Saham",
+  "profile": "Reksa Dana Indeks BRI MSCI Indonesia ESG Screened bertujuan untuk memberikan hasil investasi yang setara sengan kinerja Indeks MSCI Indonesia ESG Screneed yang diterbitkan oleh MSCI Limited  melalui investasi sesuai dengan kebijakan investasi. \n\nReksa Dana Indeks BRI MSCI Indonesia ESG Screened akan melakukan investasi dengan komposisi portofolio yaitu minimum 80% Nilai Aktiva Bersih pada Efek Bersifat ekuitas yang diperdagangkan di Bursa Efek Indonesia serta terdaftar dalam Indeks MSCI Indonesia ESG Screened, dan maksimum 20% dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempi tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. ",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2022-07-15",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Ekuitas",
+      "percentage": 99.41
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 0.59
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BRMS",
+      "name": "Bumi Resources Minerals Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4633,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BRPT",
+      "name": "Barito Pacific Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4586,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "GOTO",
+      "name": "GoTo Gojek Tokopedia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4425,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4959993588",
+      "name": "Reksa Dana Indeks BRI MSCI Indonesia ESG Screened Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "ojkCode": "OD002"
+  },
+  "custodian_bank": {
+    "name": "STANDARD CHARTERED",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": true,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 106870000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0194
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.2645516006473755,
+    "3y": -0.15680589999895078,
+    "5y": null,
+    "10y": null,
+    "all": -0.10567917689854023
+  },
+  "cagr_adjusted": {
+    "1y": -0.2645516006473755,
+    "3y": -0.15680589999895078,
+    "5y": null,
+    "10y": null,
+    "all": -0.10574652926701633
+  },
+  "simplereturn": {
+    "1d": -0.014625369094488194,
+    "1m": -0.07292405191497975,
+    "3m": 0.068506628866839,
+    "ytd": -0.2863014614150775,
+    "1y": -0.2645516006473755,
+    "3y": -0.40050898679815483,
+    "5y": null,
+    "10y": null,
+    "all": -0.3649851337958374
+  },
+  "changesvalue": {
+    "1d": -9.509999999999991,
+    "1m": -50.39999999999998,
+    "3m": 41.08000000000004,
+    "ytd": -257.03,
+    "1y": -230.48000000000002,
+    "3y": -428.05999999999995,
+    "5y": null,
+    "10y": null,
+    "all": -368.27
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.4003091356010433,
+    "3y": -0.5130775063404771,
+    "5y": -0.5130775063404771,
+    "10y": -0.5130775063404771,
+    "all": -0.5130775063404771
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.4003091356010433,
+    "3y": -0.5130775063404771,
+    "5y": -0.5130775063404771,
+    "10y": -0.5130775063404771,
+    "all": -0.5130775063404771
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2022-09-08",
+    "value": 640.73
+  },
+  "trade": null
+}

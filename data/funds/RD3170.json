@@ -1,0 +1,271 @@
+{
+  "id": 3170,
+  "custodian_bank_id": 10,
+  "symbol": "RD3170",
+  "name": "Trimegah Balanced Absolute Strategy Kelas A",
+  "type": "Campuran",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2019-04-25",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 77.7
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 16.68
+    },
+    {
+      "name": "Lainnya",
+      "percentage": 5.62
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "MEDC",
+      "name": "Medco Energi Internasional Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4403,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INCO",
+      "name": "Vale Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4470,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TOWR",
+      "name": "Sarana Menara Nusantara Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4838,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "DSSA",
+      "name": "Dian Swastatika Sentosa Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4727,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ISAT",
+      "name": "Indosat Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4866,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BUMI",
+      "name": "Bumi Resources Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4498,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "WINS",
+      "name": "Wintermar Offshore Marine Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4397,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BRIS",
+      "name": "Bank Syariah Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4342,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap I Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "DEWA",
+      "name": "Darma Henwa Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4966,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "6037643221",
+      "name": "Reksa Dana Trimegah Balanced Absolute Strategy Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Trimegah Asset Management",
+    "ojkCode": "LG002",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "PT BANK DBS INDONESIA",
+    "ojkCode": "DBSI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1280870000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0672
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.19176467177549494,
+    "3y": -0.02595439713020231,
+    "5y": 0.013846682962763479,
+    "10y": null,
+    "all": 0.07159415317113615
+  },
+  "cagr_adjusted": {
+    "1y": -0.19176467177549494,
+    "3y": -0.02595439713020231,
+    "5y": 0.013846682962763479,
+    "10y": null,
+    "all": 0.07162145563840805
+  },
+  "simplereturn": {
+    "1d": -0.006350130388551922,
+    "1m": -0.05148734930877663,
+    "3m": 0.08404782735491412,
+    "ytd": -0.2434669344115492,
+    "1y": -0.19176467177549494,
+    "3y": -0.07585978287892592,
+    "5y": 0.07117745374906348,
+    "10y": null,
+    "all": 0.6725392952845659
+  },
+  "changesvalue": {
+    "1d": -10.690000000000055,
+    "1m": -90.79999999999995,
+    "3m": 129.69000000000005,
+    "ytd": -538.3199999999999,
+    "1y": -396.8799999999999,
+    "3y": -137.30999999999995,
+    "5y": 111.15000000000009,
+    "10y": null,
+    "all": 672.62
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.37223607715184237,
+    "3y": -0.37223607715184237,
+    "5y": -0.37223607715184237,
+    "10y": -0.37223607715184237,
+    "all": -0.37223607715184237
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3722360771518423,
+    "3y": -0.3722360771518423,
+    "5y": -0.3722360771518423,
+    "10y": -0.3722360771518423,
+    "all": -0.3722360771518423
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2019-04-26",
+    "value": 1672.74
+  },
+  "trade": null
+}

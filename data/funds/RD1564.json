@@ -1,0 +1,264 @@
+{
+  "id": 1564,
+  "custodian_bank_id": 5,
+  "symbol": "RD1564",
+  "name": "Schroder Syariah Balanced Fund",
+  "type": "Campuran",
+  "profile": "Reksa Dana Schroder Syariah Balanced Fund bertujuan untuk memberikan pertumbuhan modal yang optimal melalui pengelolaan portofolio secara aktif pada Efek-efek Syariah bersifat Ekuitas, Obligasi Syariah (Sukuk), dan atau instrumen pasar uang berbasis syariah, termasuk kas.\nKomposisi lnvestasi dari Schroder Syariah Balanced Fund adalah minimum 5% dan maksimum 79% pada Efek Syariah bersifat ekuitas yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di\nBursa Efek, minimum 5% dan maksimum 79% pada Surat Berharga Syariah Negara dan/atau Obligasi Syariah (Sukuk) yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek; serta minimum 5% dan maksimum 79% pada instrumen pasar uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun termasuk kas, sesuai prinsip-prinsip syariah Islam serta sesuai dengan peraturan\nperundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2009-05-28",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1.5,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Syariah Bersifat Ekuitas",
+      "percentage": 44.34
+    },
+    {
+      "name": "SBSN dan/atau Sukuk",
+      "percentage": 46.22
+    },
+    {
+      "name": "Instrumen Pasar Uang Syariah",
+      "percentage": 9.44
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK MAYBANK INDONESIA Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK SYARIAH INDONESIA Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS030",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6385,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "SR018-T5",
+      "name": "Sukuk Ritel",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5864,
+      "product_type": "SBN",
+      "serie_id": 3266
+    },
+    {
+      "symbol": "SR019-T5",
+      "name": "Sukuk Ritel",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6179,
+      "product_type": "SBN",
+      "serie_id": 3604
+    },
+    {
+      "symbol": "SR021-T3",
+      "name": "Sukuk Ritel",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8720,
+      "product_type": "SBN",
+      "serie_id": 3923
+    },
+    {
+      "symbol": "SR022-T3",
+      "name": "Sukuk Ritel",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9136,
+      "product_type": "SBN",
+      "serie_id": 4263
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585795799",
+      "name": "Reksa Dana Schroder Syariah Balanced Fund"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Schroder Investment Management Indonesia",
+    "ojkCode": "SCH02",
+    "telepon": "+62 21 2965 5100",
+    "fax": "+62 21 515 0505",
+    "email": "-",
+    "url": "www.schroders.com/id/id/investasi-reksadana"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 190855623888,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0247
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.005592593871981744,
+    "3y": 0.029870677312908933,
+    "5y": 0.03469508772819241,
+    "10y": 0.015808829295424154,
+    "all": 0.06265107244182011
+  },
+  "cagr_adjusted": {
+    "1y": -0.005592593871981744,
+    "3y": 0.029870677312908933,
+    "5y": 0.03469508772819241,
+    "10y": 0.015808829295424154,
+    "all": 0.06266124160899245
+  },
+  "simplereturn": {
+    "1d": -0.0006699900022216765,
+    "1m": -0.028939112835216774,
+    "3m": 0.06254083203224492,
+    "ytd": -0.08758078370094746,
+    "1y": -0.005592593871981744,
+    "3y": 0.09231545635989713,
+    "5y": 0.18593786690945358,
+    "10y": 0.16982213173711092,
+    "all": 1.8787099999999999
+  },
+  "changesvalue": {
+    "1d": -1.9299999999998363,
+    "1m": -85.78999999999996,
+    "3m": 169.44000000000005,
+    "ytd": -276.32000000000016,
+    "1y": -16.190000000000055,
+    "3y": 243.28999999999996,
+    "5y": 451.34000000000015,
+    "10y": 417.9000000000001,
+    "all": 1878.71
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.17892514722343889,
+    "3y": -0.17892514722343889,
+    "5y": -0.17892514722343889,
+    "10y": -0.23824940873917932,
+    "all": -0.23824940873917932
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.1789251472234389,
+    "3y": -0.1789251472234389,
+    "5y": -0.1789251472234389,
+    "10y": -0.2382494087391794,
+    "all": -0.2382494087391794
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2009-05-12",
+    "value": 2878.71
+  },
+  "trade": null
+}

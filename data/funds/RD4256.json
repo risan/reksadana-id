@@ -1,0 +1,263 @@
+{
+  "id": 4256,
+  "custodian_bank_id": 3,
+  "symbol": "RD4256",
+  "name": "Eastspring IDX ESG Leaders Plus Kelas A",
+  "type": "Saham",
+  "profile": "Reksa Dana Indeks Eastspring IDX ESG Leaders Plus  bertujuan untuk memberikan potensi tingkat pertumbuhan investasi yang berbasis dari kinerja indeks IDX ESG Leaders",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 12,
+    "name": "STANDARD CHARTERED",
+    "color": "#0072AA",
+    "icon_url": "https://assets.bibit.id/icons/banks/Standard_Chartered_05042023140038.svg"
+  },
+  "released_date": "2022-01-12",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas dan atau Pasar Uang",
+      "percentage": 2.13
+    },
+    {
+      "name": "Saham",
+      "percentage": 97.87
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BRPT",
+      "name": "Barito Pacific Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4586,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TPIA",
+      "name": "Chandra Asri Pacific Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4710,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "GOTO",
+      "name": "GoTo Gojek Tokopedia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4425,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "JSMR",
+      "name": "Jasa Marga (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4729,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "PGEO",
+      "name": "Pertamina Geothermal Energy Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5837,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4953385841",
+      "name": "Reksa Dana Indeks Eastspring IDX ESG Leaders Plus"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "ojkCode": "EII01"
+  },
+  "custodian_bank": {
+    "name": "STANDARD CHARTERED",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": true,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 125660000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0455
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.28987518902205067,
+    "3y": -0.12413555100232121,
+    "5y": null,
+    "10y": null,
+    "all": -0.09346271005532247
+  },
+  "cagr_adjusted": {
+    "1y": -0.28987518902205067,
+    "3y": -0.12413555100232121,
+    "5y": null,
+    "10y": null,
+    "all": -0.0935143649490855
+  },
+  "simplereturn": {
+    "1d": -0.016043031601332247,
+    "1m": -0.08813343187120526,
+    "3m": 0.004902587032896699,
+    "ytd": -0.31228825599440446,
+    "1y": -0.28987518902205067,
+    "3y": -0.3280906314732953,
+    "5y": null,
+    "10y": null,
+    "all": -0.37073
+  },
+  "changesvalue": {
+    "1d": -10.259999999999991,
+    "1m": -60.82000000000005,
+    "3m": 3.0699999999999363,
+    "ytd": -285.75,
+    "1y": -256.87,
+    "3y": -307.27,
+    "5y": null,
+    "10y": null,
+    "all": -370.73
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.37936956109483966,
+    "3y": -0.4412236186862698,
+    "5y": -0.45069096063109604,
+    "10y": -0.45069096063109604,
+    "all": -0.45069096063109604
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3793695610948398,
+    "3y": -0.4412236186862699,
+    "5y": -0.450690960631096,
+    "10y": -0.450690960631096,
+    "all": -0.450690960631096
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2022-01-12",
+    "value": 629.27
+  },
+  "trade": null
+}

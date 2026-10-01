@@ -1,0 +1,208 @@
+{
+  "id": 863,
+  "custodian_bank_id": null,
+  "symbol": "RD863",
+  "name": "Mandiri Investa Ekuitas Dinamis",
+  "type": "Saham",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 94.62
+    },
+    {
+      "name": "Deposito",
+      "percentage": 5.41
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "TBIG",
+      "name": "PT Tower Bersama Infrastructure Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-16",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PGAS",
+      "name": "Perusahaan Gas Negara (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-16",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ASSA",
+      "name": "Adi Sarana Armada Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-16",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "SILO",
+      "name": "PT Siloam International Hospitals Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-16",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ADRO",
+      "name": "ADARO ENERGY Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-16",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "PT Mandiri Manajemen Investasi",
+    "ojkCode": "CC002",
+    "telepon": "+62 21 5263505",
+    "fax": "+62 21 5263506",
+    "email": "-",
+    "url": "www.mandiri-investasi.co.id"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK A. G. - CUSTODY",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 175526555813.74,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.048
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.004270794110069476,
+    "3y": -0.03247797985110734,
+    "5y": -0.06327970069932876,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.15017055432454063,
+    "3y": -0.23056918970119689,
+    "5y": -0.3845761789642609,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2011-03-22",
+    "value": 775.76
+  },
+  "trade": null
+}

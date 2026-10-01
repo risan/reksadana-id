@@ -1,0 +1,211 @@
+{
+  "id": 703,
+  "custodian_bank_id": null,
+  "symbol": "RD703",
+  "name": "I Am Bumn Balanced Plus Fund",
+  "type": "Campuran",
+  "profile": "I AM BUMN BALANCED PLUS FUND bertujuan untuk menghasilkan kinerja portofolio yang optimal dalam jangka panjang melalui pengelolaan secara aktif atas investasi terutama pada Efek bersifat ekuitas yang diterbitkan oleh BUMN dan Efek bersifat utang yang diterbitkan oleh BUMN dan/atau Pemerintah Republik Indonesia di Indonesia dan instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1(satu) tahun dan/atau deposito berdenominasi Rupiah.\n\nI AM BUMN BALANCED PLUS FUND akan berinvestasi minimum 5% dan maksimum 75% dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diterbitkan oleh BUMN yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; dan minimum 5% dan maksimum 75% pada Efek bersifat utang yang diterbitkan oleh BUMN dan/atau Pemerintah Republik Indonesia yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; dan minimum 5% dan maksimum 75% pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito berdenominasi Rupiah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas dan Setara Kas",
+      "percentage": 18.87
+    },
+    {
+      "name": "Saham",
+      "percentage": 49
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 32.13
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "WIKA",
+      "name": "Wijaya Karya Tbk",
+      "annualDividend": 0,
+      "date": "2019-11-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Deposito - Bank Ina Perdana Tbk",
+      "annualDividend": 0,
+      "date": "2019-11-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "SMGR",
+      "name": "Semen Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-11-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Ritel - Sukuk Negara Ritel 010",
+      "annualDividend": 0,
+      "date": "2019-11-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-11-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Indoasia Aset Manajemen, PT",
+    "ojkCode": "IND02",
+    "telepon": "+62 21 57903892",
+    "fax": "+62 21 57903893",
+    "email": "iam.cs@indoasiaaset.co.id",
+    "url": "www.indoasiaaset.com"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 15495013978.56,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.2097238653954305,
+    "3y": 0.05978675688345358,
+    "5y": 0.0538933507976469,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.10891853933601359,
+    "3y": -0.13386303476992523,
+    "5y": -0.2246407663650879,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2014-04-02",
+    "value": 1102.2359
+  },
+  "trade": null
+}

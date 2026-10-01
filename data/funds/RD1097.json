@@ -1,0 +1,216 @@
+{
+  "id": 1097,
+  "custodian_bank_id": null,
+  "symbol": "RD1097",
+  "name": "Mnc Dana Lancar",
+  "type": "Pasar Uang",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi  Pemerintah",
+      "percentage": 26.13
+    },
+    {
+      "name": "Deposito",
+      "percentage": 19.92
+    },
+    {
+      "name": "Kas",
+      "percentage": 0.77
+    },
+    {
+      "name": "Obligasi Korporasi",
+      "percentage": 53.18
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN INDONESIA EXIMBANK II THP V THN 2015 C",
+      "annualDividend": 0,
+      "date": "2019-10-18",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK IJARAH BERKELANJUTAN III INDOSAT TAHAP II TAHUN 2019 SERI A",
+      "annualDividend": 0,
+      "date": "2019-10-18",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN I PUPUK INDONESIA THP I THN 2017 A",
+      "annualDividend": 0,
+      "date": "2019-10-18",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN I AGUNG PODOMORO LAND THP III THN 2014",
+      "annualDividend": 0,
+      "date": "2019-10-18",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK IJARAH BERKELANJUTAN II XL AXIATA THP II THN 2019 A",
+      "annualDividend": 0,
+      "date": "2019-10-18",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "MNC Asset Management, PT",
+    "ojkCode": "EP002",
+    "telepon": "+62 21 29709600",
+    "fax": "+62 21 39836853",
+    "email": "cs.mam@mncgroup.com",
+    "url": "www.mncassetmanagement.com"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 446713223108.33,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.05172594276338849,
+    "3y": 0.05769214794793487,
+    "5y": 0.06413897652763123,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": 0,
+    "3y": -0.00018502407578591118,
+    "5y": -0.0044087545268461925,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2004-09-24",
+    "value": 2083.2876
+  },
+  "trade": null
+}

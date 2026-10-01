@@ -1,7 +1,11 @@
 {
-  "dependencies": {
-    "axios": "^0.21.1",
-    "crypto-js": "^4.0.0",
-    "yup": "^0.32.8"
+  "name": "bibit-reksadana",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "scrape": "node scrape.js"
   }
 }

@@ -1,0 +1,270 @@
+{
+  "id": 140,
+  "custodian_bank_id": 9,
+  "symbol": "RD140",
+  "name": "Bahana Likuid Plus",
+  "type": "Pasar Uang",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2017-08-29",
+  "is_top_product": 1,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Likuiditas",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "BANK BENGKULU - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK CAPITAL INDONESIA PT TBK - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK MANDIRI TASPEN POS, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK NATIONALNOBU TBK, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK PEMBANGUNAN DAERAH NUSA TENGGARA TIMUR, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD SULAWESI TENGAH - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK PEMBANGUNAN DAERAH JAWA TENGAH - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK SEABANK INDONESIA - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK SYARIAH NASIONAL - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK WOORI SAUDARA INDONESIA 1906, TBK - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "2060740308",
+      "name": "RD BAHANA LIKUID PLUS"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Bahana TCW Investment Management",
+    "ojkCode": "DX002",
+    "telepon": "+62 21 2505277",
+    "fax": "+62 21 2505279",
+    "email": "sinar@bahana.co.id",
+    "url": "www.sinar.bahanatcw.com"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 1957310000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0228
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.055
+  },
+  "cagr": {
+    "1y": 0.04789919921467911,
+    "3y": 0.0510959225713814,
+    "5y": 0.044665096681005156,
+    "10y": null,
+    "all": 0.05000886301212071
+  },
+  "cagr_adjusted": {
+    "1y": 0.04789919921467911,
+    "3y": 0.0510959225713814,
+    "5y": 0.044665096681005156,
+    "10y": null,
+    "all": 0.05002430585258155
+  },
+  "simplereturn": {
+    "1d": 0.0001475967400372813,
+    "1m": 0.004874368943306395,
+    "3m": 0.013658270082534951,
+    "ytd": 0.03533421021164651,
+    "1y": 0.04789919921467911,
+    "3y": 0.16125354851688756,
+    "5y": 0.244186324991019,
+    "10y": null,
+    "all": 0.5585144148558514
+  },
+  "changesvalue": {
+    "1d": 0.2300000000000182,
+    "1m": 7.559999999999945,
+    "3m": 21,
+    "ytd": 53.190000000000055,
+    "1y": 71.24000000000001,
+    "3y": 216.42000000000007,
+    "5y": 305.8799999999999,
+    "10y": null,
+    "all": 558.52
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.000007014147535566728,
+    "3y": -0.000007014147535566728,
+    "5y": -0.000007765783955893113,
+    "10y": -0.0035484831723610055,
+    "all": -0.0035484831723610055
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": -0.0000070141475356,
+    "5y": -0.0000077657839559,
+    "10y": -0.003548483172361,
+    "all": -0.003548483172361
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2017-08-30",
+    "value": 1558.53
+  },
+  "trade": {
+    "total_trades": 5598,
+    "period": "1d"
+  }
+}

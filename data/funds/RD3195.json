@@ -1,0 +1,268 @@
+{
+  "id": 3195,
+  "custodian_bank_id": 9,
+  "symbol": "RD3195",
+  "name": "Trimegah Fixed Income Plan",
+  "type": "Obligasi",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": "2026-10-01",
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2019-05-23",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 92.79
+    },
+    {
+      "name": "Lainnya",
+      "percentage": 7.21
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "FR0104",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8733,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Bumi Tahap V Tahun 2026 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Petrindo Jaya Kreasi Tahap II Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Wahana Inti Selaras Tahap III Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berwawasan Lingkungan Berkelanjutan I Oki Pulp & Paper Mills Tahap I Tahun 2023 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II Lontar Papyrus Pulp & Paper Industry Tahap II Tahun 2023 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II Oki Pulp & Paper Mills Tahap IV Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II Provident Investasi Bersama Tahap V Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap II Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "2060879969",
+      "name": "RD Trimegah Fixed Income Plan"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Trimegah Asset Management",
+    "ojkCode": "LG002",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 7194000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0224
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.07
+  },
+  "cagr": {
+    "1y": -0.011640420985329913,
+    "3y": 0.012383313415843533,
+    "5y": 0.016886861555925226,
+    "10y": null,
+    "all": 0.022558794402694815
+  },
+  "cagr_adjusted": {
+    "1y": 0.028677938028681904,
+    "3y": 0.05382709615158765,
+    "5y": 0.058546794002124924,
+    "10y": null,
+    "all": 0.06382690869996277
+  },
+  "simplereturn": {
+    "1d": 0.010674211185682791,
+    "1m": 0.0035983652880700046,
+    "3m": 0.021756061379379243,
+    "ytd": 0.017679156428199283,
+    "1y": 0.028677938028681904,
+    "3y": 0.17032931357017445,
+    "5y": 0.32907749965657485,
+    "10y": null,
+    "all": 0.5769376420032628
+  },
+  "changesvalue": {
+    "1d": 12.57170700000006,
+    "1m": 4.26790700000015,
+    "3m": 25.345606999999973,
+    "ytd": 21.096079475618808,
+    "1y": 34.196465189272885,
+    "3y": 193.46514423241115,
+    "5y": 356.6837123795151,
+    "10y": null,
+    "all": 576.9376420032629
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.033585395435641874,
+    "3y": -0.03377324915145685,
+    "5y": -0.03377324915145685,
+    "10y": -0.04496136709643139,
+    "all": -0.04496136709643139
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0189730751910546,
+    "3y": -0.0189730751910551,
+    "5y": -0.0189730751910547,
+    "10y": -0.0353275337501689,
+    "all": -0.0353275337501689
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2019-05-23",
+    "value": 1178.5507
+  },
+  "trade": null
+}

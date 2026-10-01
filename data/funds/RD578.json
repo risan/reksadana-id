@@ -1,0 +1,268 @@
+{
+  "id": 578,
+  "custodian_bank_id": 3,
+  "symbol": "RD578",
+  "name": "BRI Melati Pendapatan Utama",
+  "type": "Obligasi",
+  "profile": "BRI MELATI PENDAPATAN UTAMA bertujuan untuk memperoleh pendapatan secara optimal dalam jangka panjang melalui investasi pada Efek Bersifat Utang.\n\nBRI MELATI PENDAPATAN UTAMA akan melakukan investasi dengan komposisi portofolio Efek minimum sebesar 80% (Delapan Puluh per Seratus) dan maksimum sebesar 100% (Seratus per Seratus) pada pada Efek Bersifat Utang yang diterbitkan oleh Negara Republik Indonesia dan/atau badan hukum yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri; dan minimum sebesar 0% (Nol per Seratus) dan maksimum sebesar 20% (Dua Puluh per Seratus) pada Instrumen Pasar Uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (Satu) tahun dan/atau Deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2012-09-27",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Utang",
+      "percentage": 91.59
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 8.41
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "BSDE04BCN2",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0052",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OPPM02ACN4",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PIDL02BCN1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SIEXCL03BCN1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SMII01DCN1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank DKI Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TBIG06ACN6",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TPIA04CCN1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "WISL01CCN3",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4588979103",
+      "name": "Reksa Dana BRI Melati Pendapatan Utama"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "ojkCode": "OD002",
+    "telepon": "+62 21 500688",
+    "fax": "+62 21 3501707",
+    "email": "reksadanaonline@danareksa.com",
+    "url": "www.danareksa.com"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 217070000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0166
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0769
+  },
+  "cagr": {
+    "1y": -0.015410200573431565,
+    "3y": 0.03629980728545856,
+    "5y": 0.029641410476271224,
+    "10y": 0.04772390466648391,
+    "all": 0.04974752687760198
+  },
+  "cagr_adjusted": {
+    "1y": 0.02073255574089683,
+    "3y": 0.04882805458078798,
+    "5y": 0.03709210406241059,
+    "10y": 0.051507842756497224,
+    "all": 0.05246097427608065
+  },
+  "simplereturn": {
+    "1d": 0.001043710978675838,
+    "1m": 0.0035989246721204182,
+    "3m": 0.02410129818411777,
+    "ytd": 0.0002645213740479768,
+    "1y": 0.02073255574089683,
+    "3y": 0.15375311530294766,
+    "5y": 0.1997386189600594,
+    "10y": 0.6524379579718531,
+    "all": 1.047618495620822
+  },
+  "changesvalue": {
+    "1d": 2.0592999999998938,
+    "1m": 7.0827999999999065,
+    "3m": 47.04067519290902,
+    "ytd": 0.5414956208219337,
+    "1y": 41.59009562082201,
+    "3y": 272.872695620822,
+    "5y": 340.89799562082203,
+    "10y": 808.4684956208218,
+    "all": 1047.618495620822
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.05904199631135887,
+    "3y": -0.05904199631135887,
+    "5y": -0.05904199631135887,
+    "10y": -0.11258891798057646,
+    "all": -0.14757660542078888
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0360749714945942,
+    "3y": -0.0360749714945942,
+    "5y": -0.0565941574017588,
+    "10y": -0.1125889179805765,
+    "all": -0.147576605420789
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2012-09-27",
+    "value": 1975.1151
+  },
+  "trade": null
+}

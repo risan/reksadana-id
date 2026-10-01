@@ -1,0 +1,271 @@
+{
+  "id": 1541,
+  "custodian_bank_id": 2,
+  "symbol": "RD1541",
+  "name": "Schroder Dana Istimewa",
+  "type": "Saham",
+  "profile": "Reksa Dana Schroder Dana lstimewa bertujuan untuk memberikan keuntungan modal dalam jangka panjang dengan cara mengkapitalisasi pertumbuhan pasar modal Indonesia, termasuk memanfaatkan peluang untuk berinvestasi ke dalam perusahaan-perusahaan berkapitalisasi kecil. \n\nKomposisi investasi SCHRODER DANA ISTIMEWA adalah minimum 80% dan maksimum 100% pada Efek Ekuitas perusahaan yang tercatat pada Bursa Efek di Indonesia maupun di Bursa Efek Luar Negeri yang informasinya dapat diakses melalui media massa atau internet di mana minimum 25% dari total portofolio dapat diinvestasikan pada perusahaan berkapitalisasi kecil; dan minimum 0% dan maksimum 20% pada instrumen Pasar Uang berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.\n\nReksa Dana SCHRODERS dapat mengadakan Perjanjian Pembelian Kembali (Repo).",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2004-12-27",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1.5,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Bersifat Ekuitas",
+      "percentage": 98.8
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 1.2
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BFIN",
+      "name": "BFI Finance Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4915,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "CMRY",
+      "name": "Cisarua Mountain Dairy Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4898,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "HMSP",
+      "name": "H.M. Sampoerna Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4275,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "HRTA",
+      "name": "Hartadinata Abadi Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4911,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ICBP",
+      "name": "Indofood CBP Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4891,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "KLBF",
+      "name": "Kalbe Farma Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4973,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MIKA",
+      "name": "PT Mitra Keluarga Karyasehat Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5056,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "RAJA",
+      "name": "Rukun Raharja Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4617,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4589045243",
+      "name": "Reksa Dana Schroder Dana Istimewa"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Schroder Investment Management Indonesia",
+    "ojkCode": "SCH02",
+    "telepon": "+62 21 2965 5100",
+    "fax": "+62 21 515 0505",
+    "email": "-",
+    "url": "www.schroders.com/id/id/investasi-reksadana"
+  },
+  "custodian_bank": {
+    "name": "HSBC INDONESIA",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 291386796023,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0257
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.08234085000906832,
+    "3y": -0.04878127218814465,
+    "5y": -0.03091936658416128,
+    "10y": -0.02003835472398996,
+    "all": 0.08508899358797839
+  },
+  "cagr_adjusted": {
+    "1y": -0.08234085000906832,
+    "3y": -0.04878127218814465,
+    "5y": -0.03091936658416128,
+    "10y": -0.02003835472398996,
+    "all": 0.0851001452364244
+  },
+  "simplereturn": {
+    "1d": -0.004610549785362128,
+    "1m": -0.07894274169582649,
+    "3m": 0.0521787197133432,
+    "ytd": -0.1911457678623154,
+    "1y": -0.08234085000906832,
+    "3y": -0.13932105954141194,
+    "5y": -0.14532781051078403,
+    "10y": -0.18324691845176166,
+    "all": 4.917975427617439
+  },
+  "changesvalue": {
+    "1d": -27.419999999999163,
+    "1m": -507.3799999999992,
+    "3m": 293.5700000000006,
+    "ytd": -1398.9499999999998,
+    "1y": -531.1799999999994,
+    "3y": -958.2599999999993,
+    "5y": -1006.5999999999995,
+    "10y": -1328.1699999999992,
+    "all": 4919.5
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.3415217523797205,
+    "3y": -0.3415217523797205,
+    "5y": -0.3584305832861764,
+    "10y": -0.476954540534132,
+    "all": -0.5678430239430514
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3415217523797204,
+    "3y": -0.3415217523797204,
+    "5y": -0.3584305832861764,
+    "10y": -0.476954540534132,
+    "all": -0.5678430239430515
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2004-12-28",
+    "value": 5919.81
+  },
+  "trade": null
+}

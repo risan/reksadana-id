@@ -1,0 +1,209 @@
+{
+  "id": 1135,
+  "custodian_bank_id": null,
+  "symbol": "RD1135",
+  "name": "Mrs Cash Kresna",
+  "type": "Pasar Uang",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Money Market",
+      "percentage": 34.4
+    },
+    {
+      "name": "cash",
+      "percentage": 65.6
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Sinar Mas Multifinance Tahap II Tahun 2019 Seri A",
+      "annualDividend": 0,
+      "date": "2019-10-09",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III BFI Finance Indonesia Tahap II Tahun 2017 Seri B",
+      "annualDividend": 0,
+      "date": "2019-10-09",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Ritel Republik Indonesia Seri ORI013",
+      "annualDividend": 0,
+      "date": "2019-10-09",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi I AKR Corporindo Tahun 2012 Seri B",
+      "annualDividend": 0,
+      "date": "2019-10-09",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Summarecon Agung Tahap II Tahun 2014",
+      "annualDividend": 0,
+      "date": "2019-10-09",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Kresna Asset Management, PT",
+    "ojkCode": "KS002",
+    "telepon": "+62 21 515 5848",
+    "fax": "+62 21 515 1033",
+    "email": "info@kresna-am.com",
+    "url": "www.kresna-am.com"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA - CUSTODY, Tbk, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": null,
+    "date": "2025-05-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.05047786047965963,
+    "3y": 0.03011847476221274,
+    "5y": 0.03839189800459342,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0049251636989768866,
+    "3y": -0.0049251636989768866,
+    "5y": -0.0049251636989768866,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2024-01-25",
+    "first_date": "2007-07-11",
+    "value": 1483.4301
+  },
+  "trade": null
+}

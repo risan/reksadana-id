@@ -1,0 +1,272 @@
+{
+  "id": 124,
+  "custodian_bank_id": 3,
+  "symbol": "RD124",
+  "name": "Bahana Dana Likuid Kelas G",
+  "type": "Pasar Uang",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 72,
+    "name": "JAGO",
+    "color": "#f09f1a",
+    "icon_url": "https://assets.bibit.id/icons/banks/jago-circle-v2.svg"
+  },
+  "released_date": "2004-04-16",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 16.46
+    },
+    {
+      "name": "Likuiditas",
+      "percentage": 83.54
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "BANK BENGKULU - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK CAPITAL INDONESIA PT TBK - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK JAGO TBK, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK MANDIRI TASPEN POS, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK NATIONALNOBU TBK, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK SYARIAH INDONESIA - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0042",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK SYARIAH NASIONAL - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK WOORI SAUDARA INDONESIA 1906, TBK - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT.BRI (PERSERO) TBK. - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4586218301",
+      "name": "Reksa Dana Bahana Dana Likuid"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Bahana TCW Investment Management",
+    "ojkCode": "DX002",
+    "telepon": "+62 21 2505277",
+    "fax": "+62 21 2505279",
+    "email": "sinar@bahana.co.id",
+    "url": "www.sinar.bahanatcw.com"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 3989550000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0301
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0475
+  },
+  "cagr": {
+    "1y": 0.03991396782065593,
+    "3y": 0.04468554914291856,
+    "5y": 0.03824263382592186,
+    "10y": 0.04569077328114357,
+    "all": 0.03159445151807305
+  },
+  "cagr_adjusted": {
+    "1y": 0.03991396782065593,
+    "3y": 0.04468554914291856,
+    "5y": 0.03824263382592186,
+    "10y": 0.04569077328114357,
+    "all": 0.031598365220018465
+  },
+  "simplereturn": {
+    "1d": 0.0003481443903989856,
+    "1m": 0.004665288059060302,
+    "3m": 0.012896890343698786,
+    "ytd": 0.02896022509272278,
+    "1y": 0.03991396782065593,
+    "3y": 0.14013627036402987,
+    "5y": 0.20640823401690223,
+    "10y": 0.5632655599079772,
+    "all": 1.0113599999999998
+  },
+  "changesvalue": {
+    "1d": 0.6999999999998181,
+    "1m": 9.339999999999918,
+    "3m": 25.6099999999999,
+    "ytd": 56.6099999999999,
+    "1y": 77.19999999999982,
+    "3y": 247.2199999999998,
+    "5y": 344.1299999999999,
+    "10y": 724.7199999999998,
+    "all": 1011.3599999999999
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.000005897304342195042,
+    "3y": -0.000005897304342195042,
+    "5y": -0.00008852534480630059,
+    "10y": -0.0007168907820372938,
+    "all": -0.00424251774143769
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": 0,
+    "5y": -0.0000885253448062,
+    "10y": -0.0007168907820374,
+    "all": -0.0042425177414378
+  },
+  "instant_redemption": {
+    "type": 1,
+    "quota_limit": 3
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2004-04-19",
+    "value": 2011.36
+  },
+  "trade": null
+}

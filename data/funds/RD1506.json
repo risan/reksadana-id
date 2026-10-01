@@ -1,0 +1,208 @@
+{
+  "id": 1506,
+  "custodian_bank_id": null,
+  "symbol": "RD1506",
+  "name": "Saham Eastspring Investments Alpha Navigator",
+  "type": "Saham",
+  "profile": "REKSA DANA SAHAM EASTSPRING INVESTMENTS ALPHA NAVIGATOR bertujuan untuk memberikan imbal hasil investasi yang menarik dalam jangka panjang melalui investasi utama pada Efek bersifat ekuitas yang diterbitkan di Indonesia.\n\nREKSA DANA SAHAM EASTSPRING INVESTMENTS ALPHA NAVIGATOR akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% dan maksimum 100% pada Efek bersifat ekuitas yang diterbitkan oleh korporasi Indonesia yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia dan minimum 0% dan maksimum 20% pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito berdenominasi Rupiah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 93.46
+    },
+    {
+      "name": "Kas dan/atau pasar uang",
+      "percentage": 6.54
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BBCA",
+      "name": "PT Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-15",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-15",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "UNVR",
+      "name": "Unilever Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-15",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "PT Bank Mandiri (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-15",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-15",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Eastspring Investments Indonesia, PT",
+    "ojkCode": "EII01",
+    "telepon": "+62 21 29245555",
+    "fax": "+62 21 29245556",
+    "email": "-",
+    "url": "www.eastspring.co.id"
+  },
+  "custodian_bank": {
+    "name": "STANDARD CHARTERED BANK - CUSTODY",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 160372566702.94,
+    "date": "2019-11-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0366
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.07603035694832783,
+    "3y": 0.05157886289201308,
+    "5y": 0.0213257131289224,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.10908185950824556,
+    "3y": -0.1910043438528849,
+    "5y": -0.2742879329949801,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2019-12-19",
+    "first_date": "2012-08-30",
+    "value": 1414.31
+  },
+  "trade": null
+}

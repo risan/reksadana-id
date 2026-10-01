@@ -1,0 +1,231 @@
+{
+  "id": 1349,
+  "custodian_bank_id": null,
+  "symbol": "RD1349",
+  "name": "Aberdeen Dana Pendapatan Riil",
+  "type": "Obligasi",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {
+    "Commissioner": [
+      "Ian MacDonald",
+      "Nicholas Hadow",
+      "Wong Chee Kin",
+      "Adrian Sennelius"
+    ],
+    "President Commissioner": [
+      "Hugh Young"
+    ],
+    "Director": [
+      "Bharat Shah Joshi",
+      "Tri Meryta"
+    ],
+    "President Director": [
+      "Omar Sjawaldy Anwar"
+    ]
+  },
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 4.6
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 95.4
+    }
+  ],
+  "holding": [
+    {
+      "name": "Pegadaian [Persero] 7.70% 03/10/2022",
+      "annualDividend": 0,
+      "date": "2018-09-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "name": "Surya Artha Nusantara Finance 9.00% 09/06/2019",
+      "annualDividend": 0,
+      "date": "2018-09-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "name": "Adira Dinamika Multi Finance 7.45% 12/12/2020",
+      "annualDividend": 0,
+      "date": "2018-09-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "name": "Bank Permata 11.75% 24/10/2021",
+      "annualDividend": 0,
+      "date": "2018-09-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "name": "Bank Rakyat Indonesia [Persero] 8.00% 01/12/2019",
+      "annualDividend": 0,
+      "date": "2018-09-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Aberdeen Standard Investments Indonesia, PT",
+    "ojkCode": "RO002",
+    "telepon": "(021) 2981 2800",
+    "fax": "(021) 2981 2836",
+    "email": "enquiries.indonesia@aberdeen-asset.com",
+    "url": "http://www.aberdeen-asset.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK PERMATA - CUSTODY, Tbk, PT",
+    "ojkCode": "BALI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 6574137.17,
+    "date": "2018-09-01"
+  },
+  "shareholders": [
+    {
+      "name": "Aberdeen Standard Inestments (Asia) Limited",
+      "share": "39600000000",
+      "value": "99"
+    },
+    {
+      "name": "Sigit Pratama Wiryadi",
+      "share": "400000000",
+      "value": "1"
+    }
+  ],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.012570776813719542,
+    "3y": -0.012570776813719542,
+    "5y": -0.012570776813719542,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2018-09-24",
+    "first_date": "2018-08-28",
+    "value": 1232.46
+  },
+  "trade": null
+}

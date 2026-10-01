@@ -1,0 +1,258 @@
+{
+  "id": 1337,
+  "custodian_bank_id": null,
+  "symbol": "RD1337",
+  "name": "Prospera Bijak",
+  "type": "Saham",
+  "profile": "PROSPERA BIJAK bertujuan untuk memperoleh pertumbuhan investasi yang optimal dalam jangka panjang melalui investasi pada beragam Efek yang tersedia dalam Pasar Modal dan Pasar Uang, terdiri dari Efek bersifat ekuitas dan instrument pasar uang dalam negeri, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.\n\nPROSPERA BIJAK akan melakukan investasi dengan komposisi portofolio Efek minimum 80% dan maksimum 95% pada Efek bersifat ekuitas yang telah dijual dalam Penawaran Umum dan atau diperdagangkan di Bursa Efek baik di dalam maupun diluar negeri; dan minimum 5% dan maksimum 20%  pada instrument pasar uang dalam negeri termasuk Efek bersifat utang yang mempunyai sisa jatuh tempo kurang dari 1 (satu) tahun, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, PROSPERA BIJAK akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia termasuk hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas / Pasar Uang",
+      "percentage": 9.8
+    },
+    {
+      "name": "Saham",
+      "percentage": 90.2
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "POWR",
+      "name": "PT Cikarang Listrindo Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "SCMA",
+      "name": "Surya Citra Media Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "PT Bank Mandiri (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "PT Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "HMSP",
+      "name": "HM Sampoerna Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "UNVR",
+      "name": "Unilever Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-17",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Prospera Asset Management, PT",
+    "ojkCode": "PROS2",
+    "telepon": "+62 21 29529408",
+    "fax": "+62 21 29529477",
+    "email": "-",
+    "url": "www.prosperaasset.com"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK A. G. - CUSTODY",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 19969698713.73,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.03215859030837009,
+    "3y": 0.03947517865336314,
+    "5y": 0.04686274224123532,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.10213620219282449,
+    "3y": -0.1435399057819754,
+    "5y": -0.2617387375285455,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2011-07-04",
+    "value": 929.9053
+  },
+  "trade": null
+}

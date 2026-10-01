@@ -1,0 +1,263 @@
+{
+  "id": 3448,
+  "custodian_bank_id": 3,
+  "symbol": "RD3448",
+  "name": "Eastspring Investments Cash Reserve Kelas A",
+  "type": "Pasar Uang",
+  "profile": "EASTSPRING INVESTMENTS CASH RESERVE adalah Reksa Dana berbentuk Kontrak Investasi Kolektif sebagaimana termaktub dalam akta KONTRAK INVESTASI KOLEKTIF REKSA DANA EASTSPRING INVESTMENTS CASH RESERVE Nomor 08 tanggal 23 Januari 2013, dan adendum Kontrak Investasi Kolektif tanggal 6 Oktober 2014 no. 14 dan ADDENDUM I Kontrak Investasi Kolektif REKSA DANA EASTSPRING INVESTMENTS CASH RESERVE Nomor 21 tanggal 17 November 2014, dan ADDENDUM II Kontrak Investasi Kolektif REKSA DANA EASTSPRING INVESTMENTS CASH RESERVE Nomor 12 tanggal 01 Maret 2018 yang\nseluruhnya dibuat di hadapan Leolin Jayayanti, SH., notaris di Jakarta (selanjutnya disebut “Kontrak Investasi Kolektif EASTSPRING INVESTMENTS CASH RESERVE”), antara PT Eastspring Investments Indonesia sebagai Manajer Investasi dengan Standard Chartered Bank, Cabang Jakarta sebagai\nBank Kustodian.\n\nREKSA DANA EASTSPRING INVESTMENTS CASH RESERVE telah mendapat surat pernyataan efektif dari OJK sesuai dengan Surat No. S-82 / D.04 / 2013 tanggal 12 April 2013 dari Otoritas Jasa Keuangan.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 12,
+    "name": "STANDARD CHARTERED",
+    "color": "#0072AA",
+    "icon_url": "https://assets.bibit.id/icons/banks/Standard_Chartered_05042023140038.svg"
+  },
+  "released_date": "2013-07-03",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas dan/ Pasar Uang",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "BANK JABAR BANTEN",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK PERMATA UNIT USAHA SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK RAKYAT INDONESIA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK TABUNGAN NEGARA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK UOB INDONESIA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0090",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5806,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK ALADIN SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK BTPN SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK SYARIAH INDONESIA TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SK IJR II INTGR JARINGAN EKOSISTEM 26 A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4586915509",
+      "name": "Reksa Dana Eastspring Investments Cash Reserve Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "ojkCode": "EII01",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 17960000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0204
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0533
+  },
+  "cagr": {
+    "1y": 0.03292601900800185,
+    "3y": 0.03784380895454009,
+    "5y": 0.030503846771410936,
+    "10y": 0.03773693332699812,
+    "all": 0.044820540660917674
+  },
+  "cagr_adjusted": {
+    "1y": 0.03292601900800185,
+    "3y": 0.03784380895454009,
+    "5y": 0.030503846771410936,
+    "10y": 0.03773693332699812,
+    "all": 0.04483001347104154
+  },
+  "simplereturn": {
+    "1d": 0.00013985309830544246,
+    "1m": 0.00403785134641832,
+    "3m": 0.011960083997939686,
+    "ytd": 0.025484538920850452,
+    "1y": 0.03292601900800185,
+    "3y": 0.11788208664986777,
+    "5y": 0.16211226957177383,
+    "10y": 0.4483473752430329,
+    "all": 0.7878936368091041
+  },
+  "changesvalue": {
+    "1d": 0.25,
+    "1m": 7.189999999999827,
+    "3m": 21.12999999999988,
+    "ytd": 44.429999999999836,
+    "1y": 56.99000000000001,
+    "3y": 188.52999999999997,
+    "5y": 249.39999999999986,
+    "10y": 553.4399999999998,
+    "all": 787.8699999999999
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00022681137232216653,
+    "3y": -0.0032399627646069185,
+    "5y": -0.0032399627646069185,
+    "10y": -0.0032399627646069185,
+    "all": -0.0032399627646069185
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0002268113723222,
+    "3y": -0.003239962764607,
+    "5y": -0.003239962764607,
+    "10y": -0.003239962764607,
+    "all": -0.003239962764607
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2013-07-04",
+    "value": 1787.84
+  },
+  "trade": null
+}

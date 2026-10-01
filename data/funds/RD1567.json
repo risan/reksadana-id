@@ -1,0 +1,211 @@
+{
+  "id": 1567,
+  "custodian_bank_id": null,
+  "symbol": "RD1567",
+  "name": "Semesta Dana Maxima",
+  "type": "Campuran",
+  "profile": "SEMESTA DANA MAXIMA bertujuan memperoleh hasil investasi yang optimal dengan memanfaatkan seluruh instrumen investasi di Pasar Modal yaitu Surat Utang maupun Efek Ekuitas dan Instrumen investasi di Pasar Uang. SEMESTA DANA MAXIMA memiliki kebijakan investasi minimum 5% dan maksimum 75% pada Efek Utang, minimum 5% dan maksimum 75% pada Efek Bersifat Ekuitas serta 5% dan maksimum 75% pada Instrumen Pasar Uang.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 54.15
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 27.67
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 16.08
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-06-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Korporasi",
+      "annualDividend": 0,
+      "date": "2019-06-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "INTP",
+      "name": "Indocement Tunggal Prakarsa Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "HMSP",
+      "name": "HM Sampoerna Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Semesta Aset Manajemen, PT",
+    "ojkCode": "MG002",
+    "telepon": "+62 21 83703808",
+    "fax": "+62 21 83703787",
+    "email": "info@semestaindovest.co.id",
+    "url": "www.semestaindovest.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK DANAMON INDONESIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BDMN2"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 6976949131.68,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.1255961124586,
+    "3y": 0.07627968491400794,
+    "5y": 0.06482749915727903,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.10064907992162131,
+    "3y": -0.15982801773821875,
+    "5y": -0.17306496499111024,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2004-11-12",
+    "value": 10747.5926
+  },
+  "trade": null
+}

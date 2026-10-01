@@ -1,0 +1,275 @@
+{
+  "id": 1436,
+  "custodian_bank_id": 2,
+  "symbol": "RD1436",
+  "name": "Sucorinvest Bond Fund",
+  "type": "Obligasi",
+  "profile": "Reksa Dana Sucorinvest Bond Fund bertujuan untuk memberikan suatu tingkat pengembalian yang menarik dengan memelihara\nstabilitas modal dengan berinvestasi pada instrumen berpendapatan tetap.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2016-12-07",
+  "is_top_product": 1,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0.5,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Inst. Psr. Uang termasuk Setara Kas",
+      "percentage": 8.49
+    },
+    {
+      "name": "Obligasi &/ Sukuk Pemerintah RI & BUMN Infrastruktur",
+      "percentage": 51.15
+    },
+    {
+      "name": "Obligasi &/ Sukuk Korporasi",
+      "percentage": 40.36
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Angkasa Pura II Tahap II Tahun 2020 Seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Buma Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Lontar Papyrus Pulp Paper Industry Tahap I Tahun 2024 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan V Indah Kiat Pulp Paper Tahap III Tahun 2025 Seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan V Indah Kiat Pulp Paper Tahap IV Tahun 2025 Seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0059",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0090",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5806,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0103",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8710,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0108",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9548,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585677371",
+      "name": "Reksa Dana Pendapatan Tetap Reksa Dana Sucorinvest Bond Fund"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "ojkCode": "GAMA2",
+    "telepon": "+62 21 5363020",
+    "fax": "+62 21 5363019",
+    "email": "-",
+    "url": "www.sucorinvest.com/id/asset-management"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 395270000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0149
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.076
+  },
+  "cagr": {
+    "1y": 0.046540357400589594,
+    "3y": 0.031337975887452574,
+    "5y": 0.02082101923855073,
+    "10y": null,
+    "all": 0.05628709443514568
+  },
+  "cagr_adjusted": {
+    "1y": 0.046540357400589594,
+    "3y": 0.031337975887452574,
+    "5y": 0.02082101923855073,
+    "10y": null,
+    "all": 0.056303238097547226
+  },
+  "simplereturn": {
+    "1d": 0.0020436246523203305,
+    "1m": -0.0009924457365698691,
+    "3m": 0.009700259617654083,
+    "ytd": -0.0018199211367506685,
+    "1y": 0.046540357400589594,
+    "3y": 0.09699090990679116,
+    "5y": 0.10853145041134926,
+    "10y": null,
+    "all": 0.7120617896590364
+  },
+  "changesvalue": {
+    "1d": 3.490000000000009,
+    "1m": -1.7000000000000455,
+    "3m": 16.440000000000055,
+    "ytd": -3.119999999999891,
+    "1y": 76.09999999999991,
+    "3y": 151.29999999999995,
+    "5y": 167.53999999999996,
+    "10y": null,
+    "all": 711.72
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.026364104969911817,
+    "3y": -0.03209859036913376,
+    "5y": -0.06322441391872835,
+    "10y": -0.0993072649856962,
+    "all": -0.0993072649856962
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0263641049699118,
+    "3y": -0.0320985903691338,
+    "5y": -0.0632244139187284,
+    "10y": -0.0993072649856962,
+    "all": -0.0993072649856962
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2016-12-08",
+    "value": 1711.24
+  },
+  "trade": null
+}

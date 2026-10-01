@@ -1,0 +1,208 @@
+{
+  "id": 704,
+  "custodian_bank_id": null,
+  "symbol": "RD704",
+  "name": "I Am Equity Fund",
+  "type": "Saham",
+  "profile": "I AM EQUITY FUND bertujuan memberikan kesempatan kepada investor untuk memperoleh tingkat pertumbuhan dana yang menarik dalam jangka panjang dengan resiko yang terjaga melalui investasi utama pada Efek bersifat ekuitas yang diterbitkan di Indonesia.\n\nI AM EQUITY FUND akan berinvestasi minimum 80% dan maksimum 98% dari Nilai Aktiva Bersih dalam Efek bersifat ekuitas yang diterbitkan oleh korporasi Indonesia yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; dan minimum 2% dan maksimum 20% pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1(satu) tahun dan/atau deposito berdenominasi Rupiah; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas dan Setara Kas",
+      "percentage": 6.85
+    },
+    {
+      "name": "Saham",
+      "percentage": 93.15
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "SMGR",
+      "name": "Semen Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-11-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "WIKA",
+      "name": "Wijaya Karya Tbk",
+      "annualDividend": 0,
+      "date": "2019-11-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-11-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "MTLA",
+      "name": "Metropolitan Land Tbk",
+      "annualDividend": 0,
+      "date": "2019-11-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "KLBF",
+      "name": "Kalbe Farma Tbk",
+      "annualDividend": 0,
+      "date": "2019-11-12",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Indoasia Aset Manajemen, PT",
+    "ojkCode": "IND02",
+    "telepon": "+62 21 57903892",
+    "fax": "+62 21 57903893",
+    "email": "iam.cs@indoasiaaset.co.id",
+    "url": "www.indoasiaaset.com"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 13330883574.04,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.1281775391778281,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.154117859067333,
+    "3y": -0.17139067399394292,
+    "5y": -0.17139067399394292,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 686.8966
+  },
+  "trade": null
+}

@@ -1,0 +1,258 @@
+{
+  "id": 3423,
+  "custodian_bank_id": null,
+  "symbol": "RD3423",
+  "name": "Aberdeen Standard Indonesia Money Market Fund",
+  "type": "Pasar Uang",
+  "profile": "ABERDEEN INDONESIA MONEY MARKET FUND bertujuan untuk memberikan likuiditas yang tinggi dan tingkat pertumbuhan nilai investasi serta menurunkan tingkat risiko melalui diversifikasi penempatan pada efek utang dan instrumen pasar uang.\n\nKebijakan investasi ABERDEEN INDONESIA MONEY MARKET FUND adalah melakukan investasi dengan komposisi portofolio Efek sebesar 100% (seratus persen) dari Nilai Aktiva Bersih ABERDEEN INDONESIA MONEY MARKET FUND pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia yang mempunyai sisa jatuh tempo kurang dari 1 (satu) tahun; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 20.8
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 79.2
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Indosat 8.25% 03/08/2020",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sarana Multigriya Finansial [Persero] 8.00% 22/02/2020",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Tabungan Negara 8.30% 13/07/2020",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Rakyat Indonesia [Persero] 9.50% 03/07/2020",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pegadaian [Persero] 9.50% 07/05/2020",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Eximbank 8.40% 23/02/2020",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Adira Dinamika Multi Finance 8.60% 22/03/2020",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Astra Sedaya Finance 8.00% 23/02/2020",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Listrik Negara 12.55% 12/01/2020",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "XL Axiata 8.25% 26/10/2019",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Aberdeen Standard Investments Indonesia, PT",
+    "ojkCode": "",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK A. G. - CUSTODY",
+    "ojkCode": ""
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 321375510010.02,
+    "date": "2021-01-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2021-01-27",
+    "first_date": "2019-11-04",
+    "value": 1454.26
+  },
+  "trade": null
+}

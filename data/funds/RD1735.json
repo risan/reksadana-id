@@ -1,0 +1,273 @@
+{
+  "id": 1735,
+  "custodian_bank_id": 6,
+  "symbol": "RD1735",
+  "name": "Manulife Saham Syariah Asia Pasifik Dollar AS",
+  "type": "Reksadana Global",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2015-12-04",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 300,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": 100,
+  "min_buy_after_sell_all": 10000,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Syariah Bersifat Ekuitas Luar Negeri",
+      "percentage": 97.47
+    },
+    {
+      "name": "Pasar Uang Syariah",
+      "percentage": 1.32
+    },
+    {
+      "name": "Efek Syariah Bersifat Ekuitas",
+      "percentage": 1.2
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Samsung Electronics Co Ltd",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SK hynix Inc",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BHP Group Ltd",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "MediaTek Inc",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Samsung Electronics Co Ltd.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Delta Electronics Inc",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Advantech Co Ltd",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Samsung Biologics Co Ltd",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Elite Material Co Ltd",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "AAC Technologies Holdings Inc",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "6039566419",
+      "name": "Reksa Dana Syariah Manulife Saham Syariah Asia Pasifik Dollar AS",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Manulife Aset Manajemen Indonesia",
+    "ojkCode": "MAN02",
+    "telepon": "+62 21 25557788",
+    "fax": "+62 21 25557676",
+    "email": "MAMI_customer_id@manulifeam.com",
+    "url": "www.reksadana-manulife.com"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK, N. A",
+    "ojkCode": "CITI1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 339645442.72,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0363
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.4944929194678871,
+    "3y": 0.21783685502996564,
+    "5y": 0.0730211264331786,
+    "10y": 0.05992024613710312,
+    "all": 0.06028724442646882
+  },
+  "cagr_adjusted": {
+    "1y": 0.4888793840889649,
+    "3y": 0.2176425544977696,
+    "5y": 0.07176812476045757,
+    "10y": 0.06145268527233627,
+    "all": 0.06023720520803999
+  },
+  "simplereturn": {
+    "1d": -0.0004785604900459095,
+    "1m": -0.01112636712276871,
+    "3m": -0.05927393928474922,
+    "ytd": 0.303826705786878,
+    "1y": 0.4888793840889649,
+    "3y": 0.8053418618722448,
+    "5y": 0.41417834653666463,
+    "10y": 0.8155424200278163,
+    "all": 0.8098786828422879
+  },
+  "changesvalue": {
+    "1d": -0.0009999999999998899,
+    "1m": -0.023499999999999854,
+    "3m": -0.13160000000000016,
+    "ytd": 0.4866999999999999,
+    "1y": 0.6858,
+    "3y": 0.9317,
+    "5y": 0.6116999999999999,
+    "10y": 0.9381999999999999,
+    "all": 0.9346000000000001
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.2075391962134978,
+    "3y": -0.21052238248262467,
+    "5y": -0.3089553215150127,
+    "10y": -0.3994656358365073,
+    "all": -0.3994656358365073
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.2075391962134979,
+    "3y": -0.2105223824826246,
+    "5y": -0.3089553215150128,
+    "10y": -0.3994656358365073,
+    "all": -0.3994656358365073
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2016-08-12",
+    "value": 2.0886
+  },
+  "trade": null
+}

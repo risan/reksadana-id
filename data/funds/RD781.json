@@ -1,0 +1,271 @@
+{
+  "id": 781,
+  "custodian_bank_id": 7,
+  "symbol": "RD781",
+  "name": "BNI-AM ITB Harmoni",
+  "type": "Obligasi",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 34,
+    "name": "CIMB NIAGA",
+    "color": "#EE1C25",
+    "icon_url": "https://assets.bibit.id/icons/banks/CIMB_Niaga_05042023141521.svg"
+  },
+  "released_date": "2017-10-25",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi Korporasi",
+      "percentage": 66
+    },
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 30
+    },
+    {
+      "name": "Kas & Deposito",
+      "percentage": 4
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank BTN",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Jabar & Banten",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Chandra Asri Petrochemical",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Energi Mega Persada",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0108",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9548,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0110",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 10929,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indah Kiat Pulp & Paper",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Mayora Indah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Medco Energi",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OKI Pulp & Paper Mills",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585794334",
+      "name": "Reksa Dana BNI AM Dana Pendapatan Tetap ITB Harmoni"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNI Asset Management",
+    "ojkCode": "NI002",
+    "telepon": "+62 21 29969646",
+    "fax": "+62 21 29969647",
+    "email": "corsec@bni-am.co.id",
+    "url": "www.bni-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA TBK, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 64102176279,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0183
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0801
+  },
+  "cagr": {
+    "1y": 0.004537162458906563,
+    "3y": 0.04427296208544629,
+    "5y": 0.03942066018221646,
+    "10y": null,
+    "all": 0.04842590373429845
+  },
+  "cagr_adjusted": {
+    "1y": 0.004537162458906563,
+    "3y": 0.04427296208544629,
+    "5y": 0.03942066018221646,
+    "10y": null,
+    "all": 0.048441549151185814
+  },
+  "simplereturn": {
+    "1d": 0.0012294384315651996,
+    "1m": -0.0013932523839134126,
+    "3m": 0.014797532104561029,
+    "ytd": -0.010386996008414973,
+    "1y": 0.004537162458906563,
+    "3y": 0.13878595099102276,
+    "5y": 0.2132679475056003,
+    "10y": null,
+    "all": 0.5078873161732085
+  },
+  "changesvalue": {
+    "1d": 1.9196999999999207,
+    "1m": -2.18119999999999,
+    "3m": 22.7965999999999,
+    "ytd": -16.40910000000008,
+    "1y": 7.061199999999872,
+    "3y": 190.53009999999995,
+    "5y": 274.80780000000004,
+    "10y": null,
+    "all": 526.5731000000001
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.036311278662493174,
+    "3y": -0.036311278662493174,
+    "5y": -0.041097399083535824,
+    "10y": -0.09750643462312747,
+    "all": -0.09750643462312747
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0363112786624932,
+    "3y": -0.0363112786624932,
+    "5y": -0.0410973990835358,
+    "10y": -0.0975064346231274,
+    "all": -0.0975064346231274
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 1563.3643
+  },
+  "trade": null
+}

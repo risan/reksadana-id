@@ -1,0 +1,272 @@
+{
+  "id": 83,
+  "custodian_bank_id": 3,
+  "symbol": "RD83",
+  "name": "Avrist Prime Bond Fund",
+  "type": "Obligasi",
+  "profile": "Avrist Prime Bond Fund bertujuan untuk memberikan tingkat pendapatan nilai investasi yang relatif stabil melalui investasi pada Efek bersifat\nutang serta menurunkan tingkat risiko melalui pemilihan penerbit surat berharga secara sangat hati-hati.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2014-05-21",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 1000000,
+  "minsell": 500000,
+  "minbuy": 500000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pendapatan Tetap",
+      "percentage": 98.95
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 1.05
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank Deposito Bank MNC",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Bumi Tahap V Tahun 2026 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi I Adaro Indonesia Tahun 2026 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Keberlanjutan Berkelanjutan I Bank BJB Tahap II Tahun 2026 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0068",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0074",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0097",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5804,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0103",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8710,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Pindo Deli Pulp & Paper Tahap II Tahun 2025 Seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan IV Indah Kiat Pulp & Paper Tahap V Tahun 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585330184",
+      "name": "Reksa Dana Avrist Prime Bond Fund"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Avrist Asset Management",
+    "ojkCode": "TP002",
+    "telepon": "+62 21 2521662",
+    "fax": "+62 21 2522106",
+    "email": "cs.aam@Avrist.com",
+    "url": "www.avrist-am.com"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 42538210000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0155
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0792
+  },
+  "cagr": {
+    "1y": 0.017374071354859133,
+    "3y": 0.04712760175644415,
+    "5y": 0.03951106741832877,
+    "10y": 0.049069964307274505,
+    "all": 0.05617491809572628
+  },
+  "cagr_adjusted": {
+    "1y": 0.017374071354859133,
+    "3y": 0.04712760175644415,
+    "5y": 0.03951106741832877,
+    "10y": 0.049069964307274505,
+    "all": 0.056187705941686206
+  },
+  "simplereturn": {
+    "1d": 0.0017086326389275097,
+    "1m": 0.0005503716270802705,
+    "3m": 0.02170696118011617,
+    "ytd": -0.009917958249642811,
+    "1y": 0.017374071354859133,
+    "3y": 0.14815050872598312,
+    "5y": 0.21379568035086427,
+    "10y": 0.6145240927534343,
+    "all": 0.9661163256801539
+  },
+  "changesvalue": {
+    "1d": 3.3799999999998818,
+    "1m": 1.0899999999999181,
+    "3m": 42.09999999999991,
+    "ytd": -19.850000000000136,
+    "1y": 33.83999999999992,
+    "3y": 255.68999999999983,
+    "5y": 349.03,
+    "10y": 754.23,
+    "all": 973.7099999999999
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.0521466428012306,
+    "3y": -0.0521466428012306,
+    "5y": -0.0521466428012306,
+    "10y": -0.09499433420296732,
+    "all": -0.11862930674415917
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0521466428012305,
+    "3y": -0.0521466428012305,
+    "5y": -0.0521466428012305,
+    "10y": -0.0949943342029673,
+    "all": -0.1186293067441592
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2014-05-22",
+    "value": 1981.57
+  },
+  "trade": null
+}

@@ -1,0 +1,271 @@
+{
+  "id": 3206,
+  "custodian_bank_id": 3,
+  "symbol": "RD3206",
+  "name": "Manulife Obligasi Unggulan Kelas A",
+  "type": "Obligasi",
+  "profile": "Manulife Obligasi Unggulan (\"MOU\") mempunyai tujuan untuk menghasilkan pendapatan\nyang lebih tinggi dengan melakukan investasi pada Efek bersifat utang yang diterbitkan oleh\nbadan hukum Indonesia dan/atau Negara Republik Indonesia termasuk instrumen pasar\nuang yang mempunyai jatuh tempo kurang dari 1 tahun dan diterbitkan berdasarkan\nperundang-undangan yang berlaku di Indonesia dan dalam mata uang Rupiah.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2003-10-16",
+  "is_top_product": 1,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 35000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 71.85
+    },
+    {
+      "name": "Obligasi Korporasi",
+      "percentage": 18.27
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 9.88
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "INDOGB 8 3/4 05/15/31",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOGB 5 7/8 03/15/31",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOGB 6 7/8 04/15/29",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOGB 6 1/2 07/15/30",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOGB 9 03/15/29",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOGB 6 1/8 05/15/28",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOGB 7 09/15/30",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOGB 7 02/15/33",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOGB 8 1/4 05/15/29",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOGB 10 1/2 08/15/30",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585794555",
+      "name": "Reksa Dana Manulife Obligasi Unggulan Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Manulife Aset Manajemen Indonesia",
+    "ojkCode": "MAN02",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 13597824047894.1,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0147
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0706
+  },
+  "cagr": {
+    "1y": -0.055276272708834284,
+    "3y": -0.021806110725933303,
+    "5y": -0.025162773284669426,
+    "10y": 0.009924692562507387,
+    "all": 0.04263010337546547
+  },
+  "cagr_adjusted": {
+    "1y": 0.004717496780083152,
+    "3y": 0.04063192355870182,
+    "5y": 0.038429674469057096,
+    "10y": 0.05927744874688923,
+    "all": 0.06456619609341341
+  },
+  "simplereturn": {
+    "1d": 0.0012206169105342113,
+    "1m": -0.000468045498069003,
+    "3m": 0.01624163667130607,
+    "ytd": -0.005215822209000409,
+    "1y": 0.004717496780083152,
+    "3y": 0.12691571171705807,
+    "5y": 0.20749530499892344,
+    "10y": 0.7786777224205697,
+    "all": 3.1957782009859663
+  },
+  "changesvalue": {
+    "1d": 3.180000000000291,
+    "1m": -1.2276412173400786,
+    "3m": 42.3271669127239,
+    "ytd": -14.321917570805908,
+    "1y": 13.025197309681062,
+    "3y": 353.6861670988628,
+    "5y": 614.7878391813101,
+    "10y": 1840.116686183721,
+    "all": 3201.4666861837213
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.06948262127073201,
+    "3y": -0.06987646704353068,
+    "5y": -0.13360263015456164,
+    "10y": -0.16703821246852024,
+    "all": -0.17627212725175412
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0330469995465574,
+    "3y": -0.0330469995465576,
+    "5y": -0.0330469995465571,
+    "10y": -0.0660123456268511,
+    "all": -0.1762721272517541
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2003-11-04",
+    "value": 2608.42
+  },
+  "trade": null
+}

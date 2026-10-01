@@ -1,0 +1,271 @@
+{
+  "id": 66,
+  "custodian_bank_id": 3,
+  "symbol": "RD66",
+  "name": "Avrist Ada Kas Mutiara",
+  "type": "Pasar Uang",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2017-04-12",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pendapatan Tetap",
+      "percentage": 47.05
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 52.95
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank Deposito Bank BJB sy",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Deposito Bank Mantap",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Deposito Bank MNC",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Deposito Bank Riau sy",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Deposito Bank Sulutgo",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Deposito Bank Sumselbabel sy",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Deposito Bank Victoria",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi III BUMA Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Subordinasi Berkelanjutan II Bank BJB Tahap I Tahun 2020 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan III Pegadaian Tahap V Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585330206",
+      "name": "Reksa Dana Avrist Ada Kas Mutiara"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Avrist Asset Management",
+    "ojkCode": "TP002",
+    "telepon": "+62 21 2521662",
+    "fax": "+62 21 2522106",
+    "email": "cs.aam@Avrist.com",
+    "url": "www.avrist-am.com"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 454585760000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0055
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0322
+  },
+  "cagr": {
+    "1y": 0.047938350025840126,
+    "3y": 0.052748506175371856,
+    "5y": 0.04603785573534247,
+    "10y": null,
+    "all": 0.05074753134539289
+  },
+  "cagr_adjusted": {
+    "1y": 0.047938350025840126,
+    "3y": 0.052748506175371856,
+    "5y": 0.04603785573534247,
+    "10y": null,
+    "all": 0.050762577429956934
+  },
+  "simplereturn": {
+    "1d": 0.0001685772083614978,
+    "1m": 0.005031714861125858,
+    "3m": 0.013944097020026858,
+    "ytd": 0.035246902809283,
+    "1y": 0.047938350025840126,
+    "3y": 0.16673950093956225,
+    "5y": 0.252382553221431,
+    "10y": null,
+    "all": 0.5983616371654927
+  },
+  "changesvalue": {
+    "1d": 0.2699999999999818,
+    "1m": 8.019999999999982,
+    "3m": 22.029999999999973,
+    "ytd": 54.54000000000019,
+    "1y": 73.27999999999997,
+    "3y": 228.93000000000006,
+    "5y": 322.82000000000016,
+    "10y": null,
+    "all": 599.69
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00022428277572361655,
+    "3y": -0.0005761016187050272,
+    "5y": -0.0008222995454512105,
+    "10y": -0.0008222995454512105,
+    "all": -0.0008222995454512105
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0002242827757236,
+    "3y": -0.000576101618705,
+    "5y": -0.0008222995454511,
+    "10y": -0.0008222995454511,
+    "all": -0.0008222995454511
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2017-04-13",
+    "value": 1601.91
+  },
+  "trade": null
+}

@@ -1,0 +1,271 @@
+{
+  "id": 1001,
+  "custodian_bank_id": 2,
+  "symbol": "RD1001",
+  "name": "Manulife Syariah Sektoral Amanah Kelas A",
+  "type": "Saham",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2009-01-21",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 500000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Syariah Bersifat Ekuitas",
+      "percentage": 89.61
+    },
+    {
+      "name": "Pasar Uang Syariah",
+      "percentage": 10.39
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "TD PT Bank CIMB Niaga, Tbk. - Unit Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BRMS",
+      "name": "Bumi Resources Minerals Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4633,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INDF",
+      "name": "Indofood Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4919,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ADRO",
+      "name": "Alamtri Resources Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5007,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TINS",
+      "name": "Timah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4493,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TAPG",
+      "name": "Triputra Agro Persada Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4961,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "UNTR",
+      "name": "United Tractors Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4571,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "CMRY",
+      "name": "Cisarua Mountain Dairy Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4898,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585792978",
+      "name": "Reksa Dana Manulife Syariah Sektoral Amanah Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Manulife Aset Manajemen Indonesia",
+    "ojkCode": "MAN02",
+    "telepon": "+62 21 25557788",
+    "fax": "+62 21 25557676",
+    "email": "MAMI_customer_id@manulifeam.com",
+    "url": "www.reksadana-manulife.com"
+  },
+  "custodian_bank": {
+    "name": "HSBC INDONESIA",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 176119164061,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0318
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.08553237712842798,
+    "3y": -0.036710704021217566,
+    "5y": -0.01899024463362775,
+    "10y": -0.020507067529001888,
+    "all": 0.0682209081584011
+  },
+  "cagr_adjusted": {
+    "1y": -0.08553237712842798,
+    "3y": -0.036710704021217566,
+    "5y": -0.01899024463362775,
+    "10y": -0.020507067529001888,
+    "all": 0.06823182102698322
+  },
+  "simplereturn": {
+    "1d": -0.0011243947060267656,
+    "1m": -0.0479307476190054,
+    "3m": 0.09378805090914044,
+    "ytd": -0.13783572206047157,
+    "1y": -0.08553237712842798,
+    "3y": -0.1061385588214857,
+    "5y": -0.09141276586126623,
+    "10y": -0.18714502728566407,
+    "all": 2.2161794561510537
+  },
+  "changesvalue": {
+    "1d": -3.6200000000003456,
+    "1m": -161.9000000000001,
+    "3m": 275.75,
+    "ytd": -514.1300000000001,
+    "1y": -300.78999999999996,
+    "3y": -381.8600000000001,
+    "5y": -323.5500000000002,
+    "10y": -740.4000000000001,
+    "all": 2215.98
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.3169792702163393,
+    "3y": -0.3169792702163393,
+    "5y": -0.33272380894088127,
+    "10y": -0.5076549273696311,
+    "all": -0.5076549273696311
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3169792702163393,
+    "3y": -0.3169792702163393,
+    "5y": -0.3327238089408812,
+    "10y": -0.5076549273696311,
+    "all": -0.5076549273696311
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2009-01-22",
+    "value": 3215.89
+  },
+  "trade": null
+}

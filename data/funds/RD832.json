@@ -1,0 +1,275 @@
+{
+  "id": 832,
+  "custodian_bank_id": 12,
+  "symbol": "RD832",
+  "name": "Majoris Pasar Uang Syariah Indonesia",
+  "type": "Pasar Uang",
+  "profile": "Didirikan pertama kali pada tanggal 26 Juni 2015, PT Majoris Asset Management (\"Majoris\") merupakan Manajer Investasi yang terdaftar dan diawasi oleh Otoritas Jasa Keuangan (\"OJK) dan mendapatkan izin usahanya sebagai Manajer Investasi berdasarkan Surat Keputusan Dewan Komisioner OJK No: KEP-60/D.04/2015 tertanggal 27 Oktober 2015. Kegiatan utama Majoris adalah melakukan jasa pengelolaan investasi melalui produk Reksa Dana, Kontrak Pengelolaan Dana, Reksa Dana Penyertaaan Terbatas, Dana Investasi Real Estate, dan produk lainnya sesuai dengan ketentuan yang ditetapkan oleh OJK. Tujuan produk ini adalah untuk meningkatkan tingkat pendapatan investasi yang menarik dan sekaligus memberikan tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai, dengan berinvestasi pada instrument pasar uang dalam negeri yang jatuh temponya kurang dari setahun dan/atau deposito sesuai dengan Prinsip Syariah di Pasar Modal.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 72,
+    "name": "JAGO",
+    "color": "#f09f1a",
+    "icon_url": "https://assets.bibit.id/icons/banks/jago-circle-v2.svg"
+  },
+  "released_date": "2018-01-09",
+  "is_top_product": 1,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Sukuk (<1 tahun)",
+      "percentage": 57.96
+    },
+    {
+      "name": "Deposito Syariah dan Kas",
+      "percentage": 42.04
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank BJB Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Riau Kepri Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Syariah Nasional",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Sumsel Babel UUS",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Sumut UUS",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT CIMB Niaga Auto Finance",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Indah Kiat Pulp & Paper tahun 2022 seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Sarana Multigriya Finansial II 2026",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Sarana Multi Infrastruktur 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585392937",
+      "name": "Reksa Dana Syariah Majoris Pasar Uang Syariah Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Majoris Asset Management",
+    "ojkCode": "MJR02",
+    "telepon": "+62 21 522 3118",
+    "fax": "+62 21 522 3119",
+    "email": "investorrelations@majoris-asset.com",
+    "url": "www.majoris-asset.com"
+  },
+  "custodian_bank": {
+    "name": "BANK NEGARA INDONESIA (PERSERO), TBK",
+    "ojkCode": "BNI01"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 2582250000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0068
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0681
+  },
+  "cagr": {
+    "1y": 0.04505988536499639,
+    "3y": 0.04967062149117307,
+    "5y": 0.04643987611947775,
+    "10y": null,
+    "all": 0.047200363327191575
+  },
+  "cagr_adjusted": {
+    "1y": 0.04505988536499639,
+    "3y": 0.04967062149117307,
+    "5y": 0.04643987611947775,
+    "10y": null,
+    "all": 0.047215527385697786
+  },
+  "simplereturn": {
+    "1d": 0.00015106198784198277,
+    "1m": 0.00468068655891285,
+    "3m": 0.012184476226627883,
+    "ytd": 0.0327582968627218,
+    "1y": 0.04505988536499639,
+    "3y": 0.15653592229045743,
+    "5y": 0.25479102469976955,
+    "10y": null,
+    "all": 0.4956684133682674
+  },
+  "changesvalue": {
+    "1d": 0.2258999999999105,
+    "1m": 6.968000000000075,
+    "3m": 18.004200000000083,
+    "ytd": 47.44049999999993,
+    "1y": 64.48749999999995,
+    "3y": 202.43309999999997,
+    "5y": 303.6962000000001,
+    "10y": null,
+    "all": 495.6585
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0032605299893622153,
+    "3y": -9.306372377171357e-7,
+    "5y": -9.306372377171357e-7,
+    "10y": -0.003329280296450743,
+    "all": -0.003329280296450743
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": 0,
+    "5y": 0,
+    "10y": -0.0033292802964507,
+    "all": -0.0033292802964507
+  },
+  "instant_redemption": {
+    "type": 1,
+    "quota_limit": 3
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-10",
+    "value": 1495.6385
+  },
+  "trade": {
+    "total_trades": 16114,
+    "period": "1d"
+  }
+}

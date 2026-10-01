@@ -1,0 +1,271 @@
+{
+  "id": 424,
+  "custodian_bank_id": 2,
+  "symbol": "RD424",
+  "name": "BNP Paribas Pesona Syariah",
+  "type": "Saham",
+  "profile": "REKSA DANA SYARIAH BNP PARIBAS PESONA SYARIAH bertujuan untuk memberikan tingkat pertumbuhan investasi yang menarik dalam jangka panjang melalui mayoritas investasi pada Efek Syariah bersifat ekuitas. REKSA DANA SYARIAH BNP PARIBAS PESONA SYARIAH juga dapat berinvestasi pada Efek Syariah (instrumen) pasar uang dan/atau pada instrumen investasi lainnya yang sesuai Prinsip-prinsip Syariah di Pasar Modal serta peraturan perundang-undangan yang berlaku di Indonesia.\n\nREKSA DANA SYARIAH BNP PARIBAS PESONA SYARIAH melakukan investasi dengan komposisi minimum sebesar 80% dan maksimum sebesar 100% pada Efek Syariah bersifat ekuitas yang dijual dalam Penawaran Umum dan/atau diperdagangkan pada Bursa Efek baik di dalam maupun di luar negeri serta minimum sebesar 0% dan maksimum sebesar 20% pada Efek Syariah (instrumen) pasar uang dan/atau Instrumen investasi lainnya baik jangka panjang maupun jangka pendek yang sesuai dengan Prinsip-prinsip Syariah di Pasar Modal serta peraturan perundangan-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2007-05-07",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas",
+      "percentage": 2.5
+    },
+    {
+      "name": "Saham",
+      "percentage": 97.5
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "CMRY",
+      "name": "Cisarua Mountain Dairy Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4898,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INKP",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4514,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ISAT",
+      "name": "Indosat Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4866,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "KLBF",
+      "name": "Kalbe Farma Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4973,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MAPA",
+      "name": "Map Aktif Adiperkasa Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5049,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TINS",
+      "name": "Timah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4493,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TAPG",
+      "name": "Triputra Agro Persada Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4961,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "EXCL",
+      "name": "XLSMART Telecom Sejahtera Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4785,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4586993771",
+      "name": "Reksa Dana Syariah BNP Paribas Pesona Syariah"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNP Paribas Asset Management",
+    "ojkCode": "MEES2",
+    "telepon": "+62 21 2521574",
+    "fax": "+62 21 2521594",
+    "email": "sales.service@bnpparibas-ip.co.id",
+    "url": "www.bnpparibas-ip.co.id"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 211530000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0192
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.052895267370606236,
+    "3y": -0.02163177633769653,
+    "5y": 0.001592438941072416,
+    "10y": -0.009078131063905093,
+    "all": 0.04556767804497386
+  },
+  "cagr_adjusted": {
+    "1y": -0.052895267370606236,
+    "3y": -0.02163177633769653,
+    "5y": 0.001592438941072416,
+    "10y": -0.009078131063905093,
+    "all": 0.045574253995771086
+  },
+  "simplereturn": {
+    "1d": 0.0024719006169187097,
+    "1m": -0.04448042402200669,
+    "3m": 0.08245047314006215,
+    "ytd": -0.11910605481150893,
+    "1y": -0.052895267370606236,
+    "3y": -0.06350165000868435,
+    "5y": 0.007987593737386556,
+    "10y": -0.0871611170536134,
+    "all": 1.3751814586774787
+  },
+  "changesvalue": {
+    "1d": 5.849999999999909,
+    "1m": -110.44000000000005,
+    "3m": 180.71000000000004,
+    "ytd": -320.7800000000002,
+    "1y": -132.5,
+    "3y": -160.87000000000035,
+    "5y": 18.799999999999727,
+    "10y": -226.5300000000002,
+    "all": 1373.6
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.3163079155929892,
+    "3y": -0.3163079155929892,
+    "5y": -0.3163079155929892,
+    "10y": -0.46156721066400896,
+    "all": -0.6432036863364816
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3163079155929892,
+    "3y": -0.3163079155929892,
+    "5y": -0.3163079155929892,
+    "10y": -0.461567210664009,
+    "all": -0.6432036863364816
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2007-05-08",
+    "value": 2372.45
+  },
+  "trade": null
+}

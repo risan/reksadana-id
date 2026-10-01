@@ -1,0 +1,212 @@
+{
+  "id": 1110,
+  "custodian_bank_id": null,
+  "symbol": "RD1110",
+  "name": "Mnc Dana Syariah",
+  "type": "Obligasi",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas",
+      "percentage": 16.66
+    },
+    {
+      "name": "Deposito",
+      "percentage": 0.46
+    },
+    {
+      "name": "Obligasi Korporasi",
+      "percentage": 82.88
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN II BANK MAYBANK INDONESIA THP I THN 2017",
+      "annualDividend": 0,
+      "date": "2019-10-18",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN II ADIRA FINANCE THP II THN 2016 C",
+      "annualDividend": 0,
+      "date": "2019-10-18",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK IJARAH BERKELANJUTAN I TIMAH THP I THN 2017 B",
+      "annualDividend": 0,
+      "date": "2019-10-18",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK IJARAH BERKELANJUTAN I TIMAH THP I THN 2017 A",
+      "annualDividend": 0,
+      "date": "2019-10-18",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK IJARAH BERKELANJUTAN I GLOBAL MEDIACOM THP I THN 2017 B",
+      "annualDividend": 0,
+      "date": "2019-10-18",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "MNC Asset Management, PT",
+    "ojkCode": "EP002",
+    "telepon": "+62 21 29709600",
+    "fax": "+62 21 39836853",
+    "email": "cs.mam@mncgroup.com",
+    "url": "www.mncassetmanagement.com"
+  },
+  "custodian_bank": {
+    "name": "BANK NEGARA INDONESIA (PERSERO) - CUSTODY, Tbk, PT",
+    "ojkCode": "BNI01"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 108529891002.53,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.04757934520822005,
+    "3y": 0.05969539190075457,
+    "5y": 0.0705330698074198,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": 0,
+    "3y": -0.002108979727864835,
+    "5y": -0.002561116303522404,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2006-08-09",
+    "value": 3901.2109
+  },
+  "trade": null
+}

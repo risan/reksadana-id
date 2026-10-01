@@ -1,0 +1,269 @@
+{
+  "id": 1565,
+  "custodian_bank_id": 5,
+  "symbol": "RD1565",
+  "name": "Schroder USD Bond Fund Kelas A",
+  "type": "Obligasi",
+  "profile": "SCHRODER USO BOND FUND bertujuan untuk memberikan suatu tingkat pengembalian yang menarik melalui pengelolaan portofolio secara aktif pada Efek bersifat utang dalam denominasi Dollar Amerika Serikat yang ditransaksikan di Bursa Efek di Indonesian maupun Bursa Efek di Luar Negeri, sesuai dengan peraturan perundang-undangan yang berlaku. Komposisi SCHRODER USO BOND FUND adalah minimum 80% dan maksimum 98% pada Efek bersifat utang dalam denominasi\nDollar Amerika Serikat, dan minimum 2% dan maksimum 20% pada kas\ndalam denominasi Dollar Amerika Serikat, dengan ketentuan investasi pada Efek bersilat utang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan kas tersebut tidak akan melebihi 95%.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2007-10-01",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100,
+  "minsell": 100,
+  "minbuy": 100,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0.5,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Bersifat Utang",
+      "percentage": 97.66
+    },
+    {
+      "name": "Kas",
+      "percentage": 2.34
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN 4.4 03/01/28",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN 4.45 02/20/29",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN 4.7 06/06/32",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN 5 05/25/30",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN 5.1 07/02/29",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN 5.25 11/25/34",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN 5.4 11/15/28",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "REPUBLIC OF INDONESIA 4.55 01/11/28",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "REPUBLIC OF INDONESIA 4.65 09/20/32",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "REPUBLIC OF INDONESIA 4.75 02/11/29",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4587664193",
+      "name": "Reksa Dana Schroder USD Bond Fund",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Schroder Investment Management Indonesia",
+    "ojkCode": "SCH02",
+    "telepon": "+62 21 2965 5100",
+    "fax": "+62 21 515 0505",
+    "email": "-",
+    "url": "www.schroders.com/id/id/investasi-reksadana"
+  },
+  "custodian_bank": {
+    "name": "BUT DEUTSCHE BANK AG",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 24189329,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0129
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.01104394326900715,
+    "3y": 0.031841624592038764,
+    "5y": 0.001487750405730015,
+    "10y": 0.015453949120938004,
+    "all": 0.028349412276100328
+  },
+  "cagr_adjusted": {
+    "1y": -0.01104394326900715,
+    "3y": 0.031841624592038764,
+    "5y": 0.001487750405730015,
+    "10y": 0.015453949120938004,
+    "all": 0.028349412276100328
+  },
+  "simplereturn": {
+    "1d": 0.0004704222039280115,
+    "1m": -0.017610716554073536,
+    "3m": -0.01647494074802014,
+    "ytd": -0.018290923778200963,
+    "1y": -0.01104394326900715,
+    "3y": 0.09859882482081761,
+    "5y": 0.007460918995736643,
+    "10y": 0.16574169236039737,
+    "all": 0.7014
+  },
+  "changesvalue": {
+    "1d": 0.0008000000000001339,
+    "1m": -0.03049999999999997,
+    "3m": -0.02849999999999997,
+    "ytd": -0.03170000000000006,
+    "1y": -0.018999999999999906,
+    "3y": 0.15270000000000006,
+    "5y": 0.012599999999999945,
+    "10y": 0.2419,
+    "all": 0.7014
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.02303670936979374,
+    "3y": -0.034225301636602534,
+    "5y": -0.11692307692307691,
+    "10y": -0.12964366944655037,
+    "all": -0.35113691340106445
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0230367093697938,
+    "3y": -0.0342253016366026,
+    "5y": -0.1169230769230769,
+    "10y": -0.1296436694465504,
+    "all": -0.3511369134010643
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2007-10-02",
+    "value": 1.7014
+  },
+  "trade": null
+}

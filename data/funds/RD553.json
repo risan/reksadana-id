@@ -1,0 +1,288 @@
+{
+  "id": 553,
+  "custodian_bank_id": 7,
+  "symbol": "RD553",
+  "name": "Danamas Pasti",
+  "type": "Obligasi",
+  "profile": "DANAMAS PASTI bertujuan untuk memperoleh pendapatan yang stabil dan optimal dalam jangka menengah dan panjang dengan tingkat risiko yang relatif rendah melalui penempatan dana investasi minimum 80% dan maksimum 100%  pada Efek bersifat utang yang diterbitkan oleh perusahaan – perusahaan berbadan hukum Indonesia termasuk Obligasi Pemerintah Republik Indonesia, Obligasi Pemerintah Daerah (“Municipal Bonds”) dan Efek bersifat utang lainnya sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia serta minimum 0% dan maksimum 20% pada Instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun. Khusus untuk Obligasi Pemerintah Republik Indonesia, termasuk Obligasi Pemerintah Republik Indonesia yang dilengkapi dengan REPO (Repurchase\nAgreement), maka komposisi investasinya dapat mencapai 100 % dengan tetap\nmemperhatikan peraturan perundang – undangan yang berlaku.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2003-04-28",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang & Kas",
+      "percentage": 2.6
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 97.4
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Armadian Tritunggal, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Barito Pacific Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Federal International Finance, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Hino Finance Indonesia, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indah Kiat Pulp & Paper Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Mandiri Tunas Finance, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pindo Deli Pulp And Paper Mills, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Bank Pembangunan Daerah Jawa Barat D",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sinar Mas Multiartha Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sinar Mas Multifinance, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585394956",
+      "name": "Reksa Dana Danamas Pasti"
+    }
+  ],
+  "exitload": [
+    {
+      "operator": "lt",
+      "period": "< 1 Bulan",
+      "period_value": 1,
+      "period_type": "M",
+      "period_2_value": "0",
+      "period_2_type": "M",
+      "value": 0.5,
+      "value_type": "percent"
+    },
+    {
+      "operator": "gt",
+      "period": "> 1 Bulan",
+      "period_value": 1,
+      "period_type": "M",
+      "period_2_value": "0",
+      "period_2_type": "M",
+      "value": 0,
+      "value_type": "percent"
+    }
+  ],
+  "investment_manager": {
+    "name": "PT Sinarmas Asset Management",
+    "ojkCode": "DH002",
+    "telepon": "+62 21 3925550",
+    "fax": "+62 21 392 5539",
+    "email": "cs@sinarmas-am.co.id",
+    "url": "www.sinarmas-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA TBK, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 668000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.028
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0786
+  },
+  "cagr": {
+    "1y": 0.04439250687780305,
+    "3y": 0.05820565324932803,
+    "5y": 0.055340798120109724,
+    "10y": 0.06128657239306845,
+    "all": 0.0732506604704053
+  },
+  "cagr_adjusted": {
+    "1y": 0.04439250687780305,
+    "3y": 0.05820565324932803,
+    "5y": 0.055340798120109724,
+    "10y": 0.06128657239306845,
+    "all": 0.07325966909078185
+  },
+  "simplereturn": {
+    "1d": 0.0001335258950605489,
+    "1m": 0.004646832085157593,
+    "3m": 0.011888897734528836,
+    "ytd": 0.03009224819447054,
+    "1y": 0.04439250687780305,
+    "3y": 0.18497784877884405,
+    "5y": 0.30907231621376186,
+    "10y": 0.8127031725879335,
+    "all": 4.1107182503331705
+  },
+  "changesvalue": {
+    "1d": 0.7173000000002503,
+    "1m": 24.85059999999976,
+    "3m": 63.1251000000002,
+    "ytd": 156.95380000000023,
+    "1y": 228.3701000000001,
+    "3y": 838.6925999999994,
+    "5y": 1268.4979999999996,
+    "10y": 2408.788,
+    "all": 4321.446
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.010433719416487408,
+    "3y": -0.010433719416487408,
+    "5y": -0.010433719416487408,
+    "10y": -0.010433719416487408,
+    "all": -0.20563282870975175
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0104337194164873,
+    "3y": -0.0104337194164873,
+    "5y": -0.0104337194164873,
+    "10y": -0.0104337194164873,
+    "all": -0.2056328287097518
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2003-09-09",
+    "value": 5372.709
+  },
+  "trade": null
+}

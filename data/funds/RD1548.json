@@ -1,0 +1,272 @@
+{
+  "id": 1548,
+  "custodian_bank_id": 5,
+  "symbol": "RD1548",
+  "name": "Schroder Dana Prestasi Plus",
+  "type": "Saham",
+  "profile": "Reksa Dana Schroder Dana Prestasi Plus bertujuan untuk memperoleh keuntungan dari pertumbuhan ekonomi Indonesia dengan investasi modal dalam jangka panjang pada saham. Target komposisi dari Schroder Dana Prestasi Plus adalah minimum 80% pada Efek Ekuitas Badan Hukum Indonesia yang tercatat pada Bursa\nEfek di Indonesia dan maksimum 20% pada instrumen Pasar Uang berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Bersifat Ekuitas",
+      "percentage": 95.59
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 4.41
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ADRO",
+      "name": "Alamtri Resources Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5007,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ARCI",
+      "name": "Archi Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4850,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MYOR",
+      "name": "Mayora Indah Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4987,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MIKA",
+      "name": "PT Mitra Keluarga Karyasehat Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5056,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK BTPN SYARIAH Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TAPG",
+      "name": "Triputra Agro Persada Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4961,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5027217571",
+      "name": "Reksa Dana Schroder Dana Prestasi Plus"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Schroder Investment Management Indonesia",
+    "ojkCode": "SCH02",
+    "telepon": "+62 21 2965 5100",
+    "fax": "+62 21 515 0505",
+    "email": "-",
+    "url": "www.schroders.com/id/id/investasi-reksadana"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK A. G. - CUSTODY",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 2454765225545,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0206
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.08487453492443642,
+    "3y": -0.05532630465231758,
+    "5y": 0.0036557581226792646,
+    "10y": -0.005195343025630517,
+    "all": 0.13851053608170005
+  },
+  "cagr_adjusted": {
+    "1y": -0.08487453492443642,
+    "3y": -0.05532630465231758,
+    "5y": 0.0036557581226792646,
+    "10y": -0.005195343025630517,
+    "all": 0.13852608235276787
+  },
+  "simplereturn": {
+    "1d": -0.009077407352963585,
+    "1m": -0.0780245690079362,
+    "3m": 0.07189338211103946,
+    "ytd": -0.14723813445609824,
+    "1y": -0.08487453492443642,
+    "3y": -0.1569652678153023,
+    "5y": 0.018412925757883114,
+    "10y": -0.05075548436719035,
+    "all": 28.27259568351069
+  },
+  "changesvalue": {
+    "1d": -268.6200000000026,
+    "1m": -2481.5800000000017,
+    "3m": 1966.7700000000004,
+    "ytd": -5063.010000000002,
+    "1y": -2719.6500000000015,
+    "3y": -5459.770000000004,
+    "5y": 530.1699999999983,
+    "10y": -1567.9099999999999,
+    "all": 28321.789999999997
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.311377450238547,
+    "3y": -0.311377450238547,
+    "5y": -0.311377450238547,
+    "10y": -0.4462693459859014,
+    "all": -0.5662259292837715
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.311377450238547,
+    "3y": -0.311377450238547,
+    "5y": -0.311377450238547,
+    "10y": -0.4462693459859014,
+    "all": -0.4462693459859014
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2000-09-26",
+    "value": 29323.53
+  },
+  "trade": null
+}

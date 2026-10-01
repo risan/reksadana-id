@@ -1,0 +1,270 @@
+{
+  "id": 2046,
+  "custodian_bank_id": 5,
+  "symbol": "RD2046",
+  "name": "Jarvis Money Market Fund",
+  "type": "Pasar Uang",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2019-03-21",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000000,
+  "minsell": 10000000,
+  "minbuy": 10000000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Short Term Fixed Income",
+      "percentage": 0
+    },
+    {
+      "name": "Deposito",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "PT Allobank Indonesia, Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Bank BTPN Syariah, Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Bank Hibank Indonesia",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Bank ICBC Indonesia",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Bank Ina Perdana, Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Bank Jago, Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Bank Nano Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Bank Panin Dubai Syariah, Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Bank SulutGo",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BPD Lampung",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4993380957",
+      "name": "Reksa Dana Jarvis Money Market Fund"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Jarvis Aset Manajemen",
+    "ojkCode": "JAM02",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 58836324505,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0061
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.031491565737176375,
+    "3y": 0.033924151551915305,
+    "5y": 0.031396376805678194,
+    "10y": null,
+    "all": 0.03735687654398978
+  },
+  "cagr_adjusted": {
+    "1y": 0.031491565737176375,
+    "3y": 0.033924151551915305,
+    "5y": 0.031396376805678194,
+    "10y": null,
+    "all": 0.03737071661979452
+  },
+  "simplereturn": {
+    "1d": 0.00009861633693408756,
+    "1m": 0.0033944486304235966,
+    "3m": 0.009093066154352458,
+    "ytd": 0.02366661749062393,
+    "1y": 0.031491565737176375,
+    "3y": 0.10526404037524828,
+    "5y": 0.1671535819257055,
+    "10y": null,
+    "all": 0.3182777205595606
+  },
+  "changesvalue": {
+    "1d": 0.12999999999988177,
+    "1m": 4.459999999999809,
+    "3m": 11.879999999999882,
+    "ytd": 30.47999999999979,
+    "1y": 40.25,
+    "3y": 125.55999999999995,
+    "5y": 188.80999999999995,
+    "10y": null,
+    "all": 318.29999999999984
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.018063258267729365,
+    "3y": -0.018063258267729365,
+    "5y": -0.018063258267729365,
+    "10y": -0.018063258267729365,
+    "all": -0.018063258267729365
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": -0.0180632582677294,
+    "5y": -0.0180632582677294,
+    "10y": -0.0180632582677294,
+    "all": -0.0180632582677294
+  },
+  "instant_redemption": {
+    "type": 2
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2019-03-22",
+    "value": 1318.37
+  },
+  "trade": null
+}

@@ -1,0 +1,272 @@
+{
+  "id": 555,
+  "custodian_bank_id": 7,
+  "symbol": "RD555",
+  "name": "Danamas Rupiah Plus",
+  "type": "Pasar Uang",
+  "profile": "DANAMAS RUPIAH PLUS bertujuan untuk memperoleh tingkat pendapatan yang stabil dan bersaing dengan tetap mempertahankan nilai modal investasi serta menjaga kestabilan likuiditas dengan tingkat resiko yang relatif rendah dengan diversifikasi portofolio melalui investasi 100% (seratus persen) pada instrumen pasar uang dan/atau efek hutang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun yang diterbitkan sesuai dengan peraturan perundang – undangan yang berlaku di Indonesia, termasuk Obligasi Pemerintah Republik Indonesia, Obligasi Pemerintah Daerah (“Municipal Bonds”), serta Efek bersifat utang lainnya termasuk Sertifikat Bank Indonesia (SBI) dan instrumen pasar uang lainnya sesuai dengan\nperaturan perundang – undangan yang berlaku. Semua investasi portofolio efek tersebut di atas dapat dalam denominasi Rupiah maupun mata uang asing. Khusus untuk Obligasi Pemerintah Republik Indonesia, komposisi investasinya dapat mencapai 100% (seratus persen) dengan tetap memperhatikan peraturan perundang – undangan yang berlaku.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2006-06-09",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligas &/ Sukuk Pemerintah &/ Korporasi",
+      "percentage": 95.8
+    },
+    {
+      "name": "Inst Pasar Uang",
+      "percentage": 4.2
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Astra Sedaya Finance, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Tabungan Negara (Persero) Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Hutama Karya (Persero), PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indomobil Finance Indonesia, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Oki Pulp & Paper Mills, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pemerintah Republik Indonesia",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pindo Deli Pulp And Paper Mills, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Prime Agri Resources Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Profesional Telekomunikasi Indonesia, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Wahana Inti Selaras, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585394654",
+      "name": "Reksa Dana Danamas Rupiah Plus"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sinarmas Asset Management",
+    "ojkCode": "DH002",
+    "telepon": "+62 21 3925550",
+    "fax": "+62 21 392 5539",
+    "email": "cs@sinarmas-am.co.id",
+    "url": "www.sinarmas-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA TBK, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 1529000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0126
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0657
+  },
+  "cagr": {
+    "1y": 0.040222280246645425,
+    "3y": 0.04589154608638335,
+    "5y": 0.043074363121901715,
+    "10y": 0.04715513831507012,
+    "all": 0.032311981501014664
+  },
+  "cagr_adjusted": {
+    "1y": 0.040222280246645425,
+    "3y": 0.04589154608638335,
+    "5y": 0.043074363121901715,
+    "10y": 0.04715513831507012,
+    "all": 0.03231641839121724
+  },
+  "simplereturn": {
+    "1d": 0.0001095910024946356,
+    "1m": 0.0036226756319548414,
+    "3m": 0.010132470918082781,
+    "ytd": 0.02895892274481393,
+    "1y": 0.040222280246645425,
+    "3y": 0.14408938942221727,
+    "5y": 0.2347423860969855,
+    "10y": 0.5852956983879769,
+    "all": 0.9054747000000001
+  },
+  "changesvalue": {
+    "1d": 0.20879999999988286,
+    "1m": 6.877999999999929,
+    "3m": 19.11349999999993,
+    "ytd": 53.627500000000055,
+    "1y": 73.67900000000009,
+    "3y": 239.9801,
+    "5y": 362.25829999999996,
+    "10y": 703.5066999999999,
+    "all": 905.4747
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0000782484589191279,
+    "3y": -0.0000782484589191279,
+    "5y": -0.0000782484589191279,
+    "10y": -0.0009357323400955853,
+    "all": -0.0015370521432392925
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": 0,
+    "5y": 0,
+    "10y": -0.0009357323400956,
+    "all": -0.0015370521432393
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2006-06-28",
+    "value": 1905.4747
+  },
+  "trade": null
+}

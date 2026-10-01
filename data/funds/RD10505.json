@@ -1,0 +1,263 @@
+{
+  "id": 10505,
+  "custodian_bank_id": 3,
+  "symbol": "RD10505",
+  "name": "Sucorinvest Monthly Income Fund Kelas B",
+  "type": "Obligasi",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2026-04-28",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi &/ Sukuk",
+      "percentage": 98.4
+    },
+    {
+      "name": "Inst. Psr. Uang Dalam Negeri &/ Deposito",
+      "percentage": 1.6
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap III Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Petrosea Tahap I Tahun 2024 Seri D",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap III Tahun 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Tbs Energi Utama Tahap II Tahun 2026 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Tbs Energi Utama Tahap II Tahun 2026 Seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II Provident Investasi Bersama Tahap III Tahun 2024 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Lontar Papyrus Pulp Paper Industry Tahap I Tahun 2024 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Sinar Mas Multiartha Tahap I Tahun 2024",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan V Indah Kiat Pulp Paper Tahap III Tahun 2025 Seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Lontar Papyrus Pulp Paper Industry Tahap I Tahun 2024",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "6038077580",
+      "name": "REKSA DANA PENDAPATAN TETAP SUCORINVEST MONTHLY INCOME FUND KELAS B"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "ojkCode": "GAMA2"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1890000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0815
+  },
+  "cagr": {
+    "1y": -0.026469650410969825,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -0.026469650410969825
+  },
+  "cagr_adjusted": {
+    "1y": 0.021460565423214062,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.021460565423214062
+  },
+  "simplereturn": {
+    "1d": 0.00008092906567402913,
+    "1m": 0.0018012055049287934,
+    "3m": 0.008535780198825726,
+    "ytd": null,
+    "1y": 0.009057753888028985,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.009057753888028985
+  },
+  "changesvalue": {
+    "1d": 0.08000000000004093,
+    "1m": 1.7866517644490614,
+    "3m": 8.496686325515043,
+    "ytd": null,
+    "1y": 9.05775388802897,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 9.05775388802897
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.011909999999999976,
+    "3y": -0.011909999999999976,
+    "5y": -0.011909999999999976,
+    "10y": -0.011909999999999976,
+    "all": -0.011909999999999976
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.00347,
+    "3y": -0.00347,
+    "5y": -0.00347,
+    "10y": -0.00347,
+    "all": -0.00347
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2026-04-28",
+    "value": 988.6
+  },
+  "trade": null
+}

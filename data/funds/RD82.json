@@ -1,0 +1,271 @@
+{
+  "id": 82,
+  "custodian_bank_id": 3,
+  "symbol": "RD82",
+  "name": "Avrist IDX30",
+  "type": "Saham",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2017-08-18",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Ekuitas",
+      "percentage": 99.76
+    },
+    {
+      "name": "Kas atau Setara Kas",
+      "percentage": 0.24
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BRPT",
+      "name": "Barito Pacific Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4586,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "GOTO",
+      "name": "GoTo Gojek Tokopedia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4425,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INDF",
+      "name": "Indofood Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4919,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585330214",
+      "name": "Reksa Dana Indeks Avrist IDX30"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Avrist Asset Management",
+    "ojkCode": "TP002",
+    "telepon": "+62 21 2521662",
+    "fax": "+62 21 2522106",
+    "email": "cs.aam@Avrist.com",
+    "url": "www.avrist-am.com"
+  },
+  "custodian_bank": {
+    "name": "STANDARD CHARTERED",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": true,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 70077820000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0151
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.16072802135649966,
+    "3y": -0.08080622533307036,
+    "5y": -0.032726428969546695,
+    "10y": null,
+    "all": -0.042278643633034796
+  },
+  "cagr_adjusted": {
+    "1y": -0.16072802135649966,
+    "3y": -0.08080622533307036,
+    "5y": -0.032726428969546695,
+    "10y": null,
+    "all": -0.04229169877698913
+  },
+  "simplereturn": {
+    "1d": -0.01307563382904564,
+    "1m": -0.0707621015717953,
+    "3m": 0.058507147544725635,
+    "ytd": -0.20499962497455182,
+    "1y": -0.16072802135649966,
+    "3y": -0.22335737389174415,
+    "5y": -0.15326676176890153,
+    "10y": null,
+    "all": -0.31283110436038974
+  },
+  "changesvalue": {
+    "1d": -9.829999999999927,
+    "1m": -56.5,
+    "3m": 41.00999999999999,
+    "ytd": -191.31999999999994,
+    "1y": -142.08999999999992,
+    "3y": -213.38,
+    "5y": -134.29999999999995,
+    "10y": null,
+    "all": -337.77
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.323362409479921,
+    "3y": -0.3496786950074148,
+    "5y": -0.3876430120739893,
+    "10y": -0.477938724854592,
+    "all": -0.477938724854592
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.323362409479921,
+    "3y": -0.3496786950074147,
+    "5y": -0.3876430120739893,
+    "10y": -0.4779387248545919,
+    "all": -0.4779387248545919
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 741.95
+  },
+  "trade": null
+}

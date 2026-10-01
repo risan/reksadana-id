@@ -1,0 +1,288 @@
+{
+  "id": 556,
+  "custodian_bank_id": 7,
+  "symbol": "RD556",
+  "name": "Danamas Stabil",
+  "type": "Obligasi",
+  "profile": "DANAMAS STABIL bertujuan untuk memperoleh pendapatan yang stabil dan optimal dalam jangka menengah dan panjang dengan tingkat risiko yang relatif rendah melalui penempatan dana investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) pada Efek bersifat utang yang diterbitkan oleh perusahaan – perusahaan berbadan hukum Indonesia, Obligasi Pemerintah Republik Indonesia, Obligasi Pemerintah Daerah (“Municipal Bonds”) dan Efek bersifat utang lainnya, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia, serta minimum 0% dan maksimum 20% pada Instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun, Efek Beragun Aset yang telah dijual dalam Penawaran Umum dan atau Efek Ekuitas beserta semua turunannya yang telah dijual dalam Penawaran Umum dan atau dicatatkan di Bursa Efek baik di dalam maupun di luar negeri. Semua investasi portofolio efek tersebut diatas dapat dalam denominasi Rupiah maupun mata uang asing. Khusus untuk Obligasi Pemerintah Republik Indonesia komposisi investasinya dapat mencapai 100% (seratus persen) dengan tetap memperhatikan peraturan perundang – undangan yang berlaku.\n\nDANAMAS STABIL dapat mengadakan perjanjian pembelian kembali (REPO) sehubungan dengan penyelesaian transaksi Efek-efek tersebut di atas, perjanjian pembelian kembali tersebut (REPO) dapat dalam denominasi Rupiah maupun mata uang asing.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2005-02-24",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 1000000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 92
+    },
+    {
+      "name": "Ekuitas, Pasar Uang & EBA",
+      "percentage": 8
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Armadian Tritunggal, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Kb Indonesia Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Energi Mitra Investama, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Lontar Papyrus Pulp & Paper Industry, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Merdeka Copper Gold Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Oki Pulp & Paper Mills, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Indah Kiat Pulp & Paper Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pyridam Farma Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sinar Mas Multiartha Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sinar Mas Multifinance, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585394859",
+      "name": "Reksa Dana Danamas Stabil"
+    }
+  ],
+  "exitload": [
+    {
+      "operator": "lt",
+      "period": "< 1 Bulan",
+      "period_value": 1,
+      "period_type": "M",
+      "period_2_value": "0",
+      "period_2_type": "Y",
+      "value": 0.5,
+      "value_type": "percent"
+    },
+    {
+      "operator": "gte",
+      "period": "≥ 1 Bulan",
+      "period_value": 1,
+      "period_type": "M",
+      "period_2_value": "0",
+      "period_2_type": "Y",
+      "value": 0,
+      "value_type": "percent"
+    }
+  ],
+  "investment_manager": {
+    "name": "PT Sinarmas Asset Management",
+    "ojkCode": "DH002",
+    "telepon": "+62 21 3925550",
+    "fax": "+62 21 392 5539",
+    "email": "cs@sinarmas-am.co.id",
+    "url": "www.sinarmas-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA TBK, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 16682000000000,
+    "date": "2026-08-31"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0176
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0781
+  },
+  "cagr": {
+    "1y": 0.05451166864346435,
+    "3y": 0.05973496191161187,
+    "5y": 0.05776082902084978,
+    "10y": 0.06493524357171565,
+    "all": 0.08054031790548466
+  },
+  "cagr_adjusted": {
+    "1y": 0.05451166864346435,
+    "3y": 0.05973496191161187,
+    "5y": 0.05776082902084978,
+    "10y": 0.06493524357171565,
+    "all": 0.08055095598033413
+  },
+  "simplereturn": {
+    "1d": 0.00013890793184523353,
+    "1m": 0.004572043402429449,
+    "3m": 0.012807243002246338,
+    "ytd": 0.03763381009065814,
+    "1y": 0.05451166864346435,
+    "3y": 0.19012283297274268,
+    "5y": 0.324150658926295,
+    "10y": 0.8759963998904927,
+    "all": 4.312055217379623
+  },
+  "changesvalue": {
+    "1d": 0.741399999999885,
+    "1m": 24.29489999999987,
+    "3m": 67.5016999999998,
+    "ytd": 193.60649999999987,
+    "1y": 275.9459000000006,
+    "3y": 852.7629999999999,
+    "5y": 1306.7586000000001,
+    "10y": 2492.6206,
+    "all": 4333.1886
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.0009254942374125052,
+    "3y": -0.0009254942374125052,
+    "5y": -0.0009254942374125052,
+    "10y": -0.0009254942374125052,
+    "all": -0.05811717138249595
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": 0,
+    "5y": 0,
+    "10y": -0.0009254942374125,
+    "all": -0.058117171382496
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2005-03-16",
+    "value": 5338.0896
+  },
+  "trade": null
+}

@@ -1,0 +1,210 @@
+{
+  "id": 59,
+  "custodian_bank_id": null,
+  "symbol": "RD59",
+  "name": "Aurora Dana Ekuitas",
+  "type": "Saham",
+  "profile": "Reksa Dana Aurora Dana Ekuitas bertujuan memberikan hasil investasi yang optimal melalui investasi pada ekuitas yang berpotensi tumbuh cukup besar dalam jangka panjang dan dapat berinvestasi pada efek bersifat utang serta instrumen pasar uang dalam hal kondisi terkoreksi. Aurora Dana Ekuitas akan berinvestasi pada ekuitas terutama pada segmen kapitalisasi pasar menengah dan kecil, universe saham mengacu pada indeks Kompas 100 yang diseleksi lebih lanjut menggunakan parameter internal.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 99.65
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 0.35
+    },
+    {
+      "name": "Surat Utang",
+      "percentage": 0
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "NIKL",
+      "name": "Pelat Timah Nusantara Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "INAF",
+      "name": "Indofarma (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "META",
+      "name": "Nusantara Infrastructure Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "SMBR",
+      "name": "PT Semen Baturaja (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PCAR",
+      "name": "PT Prima Cakrawala Abadi Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Aurora Asset Management, PT",
+    "ojkCode": "ARO02",
+    "telepon": "021-80667091-93",
+    "fax": "021-80667094"
+  },
+  "custodian_bank": {
+    "name": "BANK MEGA - CUSTODY, Tbk, PT",
+    "ojkCode": "MEGA3"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 3448948398.97,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.4401314184883527,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.4482879050719575,
+    "3y": -0.45173650899064155,
+    "5y": -0.45173650899064155,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 211.9728
+  },
+  "trade": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": 2629,
+  "custodian_bank_id": null,
+  "symbol": "RD2629",
+  "name": "Pratama Dana Likuid",
+  "type": "Pasar Uang",
+  "profile": "Pratama Dana Likuid bertujuan untuk memberikan hasil investasi yang menarik melalui investasi pada instrumen pasar uang serta menurunkan tingkat risiko melalui diversifikasi penempatan instrumen pasar uang dan/atau Efek Bersifat Utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya\ntidak lebih dari 1 (satu) tahun dan/atau deposito yang dipilih secara bijaksana.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "nav": {
+    "date": null,
+    "first_date": null,
+    "value": null
+  },
+  "trade": null
+}

@@ -1,0 +1,267 @@
+{
+  "id": 6323,
+  "custodian_bank_id": 2,
+  "symbol": "RD6323",
+  "name": "Batavia Index PEFINDO I-Grade",
+  "type": "Saham",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2023-12-05",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 99.43
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 0.57
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BRPT",
+      "name": "Barito Pacific Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4586,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BUMI",
+      "name": "Bumi Resources Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4498,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TPIA",
+      "name": "Chandra Asri Pacific Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4710,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INKP",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4514,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5026669215",
+      "name": "Reksa Dana Indeks Batavia Index Pefindo I-Grade"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "ojkCode": "BZ002"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": true,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 174345571095,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.2205802706401354,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -0.09711035196062723
+  },
+  "cagr_adjusted": {
+    "1y": -0.2205802706401354,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -0.09719989571125609
+  },
+  "simplereturn": {
+    "1d": -0.013760418003362695,
+    "1m": -0.06259430696778834,
+    "3m": 0.09739759062258058,
+    "ytd": -0.23311221245697977,
+    "1y": -0.2205802706401354,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -0.25065269999999995
+  },
+  "changesvalue": {
+    "1d": -10.45519999999999,
+    "1m": -50.036899999999946,
+    "3m": 66.50700000000006,
+    "ytd": -227.7804,
+    "1y": -212.06960000000004,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -250.65269999999998
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.36618753488111555,
+    "3y": -0.4358803373729515,
+    "5y": -0.4358803373729515,
+    "10y": -0.4358803373729515,
+    "all": -0.4358803373729515
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3661875348811155,
+    "3y": -0.4358803373729515,
+    "5y": -0.4358803373729515,
+    "10y": -0.4358803373729515,
+    "all": -0.4358803373729515
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2023-12-05",
+    "value": 749.3473
+  },
+  "trade": null
+}

@@ -1,0 +1,263 @@
+{
+  "id": 562,
+  "custodian_bank_id": 6,
+  "symbol": "RD562",
+  "name": "BRI Indeks Syariah",
+  "type": "Saham",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 6,
+    "name": "CITIBANK",
+    "color": "#3d7fd0",
+    "icon_url": "https://assets.bibit.id/icons/banks/Citibank_05042023141502.svg"
+  },
+  "released_date": "2006-04-05",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Ekuitas",
+      "percentage": 99.85
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 0.15
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ADRO",
+      "name": "Alamtri Resources Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5007,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BRMS",
+      "name": "Bumi Resources Minerals Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4633,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BUMI",
+      "name": "Bumi Resources Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4498,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ICBP",
+      "name": "Indofood CBP Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4891,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INDF",
+      "name": "Indofood Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4919,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INKP",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4514,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "UNTR",
+      "name": "United Tractors Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4571,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4586496573",
+      "name": "Reksa Dana Indeks BRI Indeks Syariah"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "ojkCode": "OD002"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK",
+    "ojkCode": "CITI1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": true,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 104630000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0156
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.328102020355698,
+    "3y": -0.11229558615426716,
+    "5y": -0.05687753600116052,
+    "10y": -0.05807848872043997,
+    "all": 0.026854919032423208
+  },
+  "cagr_adjusted": {
+    "1y": -0.328102020355698,
+    "3y": -0.11229558615426716,
+    "5y": -0.05687753600116052,
+    "10y": -0.05807848872043997,
+    "all": 0.026858556078041662
+  },
+  "simplereturn": {
+    "1d": -0.004203235392745253,
+    "1m": -0.08013779107028418,
+    "3m": 0.08840033871314268,
+    "ytd": -0.3548066873695923,
+    "1y": -0.328102020355698,
+    "3y": -0.30047194333430804,
+    "5y": -0.25382542543236397,
+    "10y": -0.4502728926622196,
+    "all": 0.7216785453673067
+  },
+  "changesvalue": {
+    "1d": -7.269999999999982,
+    "1m": -150.05000000000018,
+    "3m": 139.88999999999987,
+    "ytd": -947.1600000000003,
+    "1y": -841.06,
+    "3y": -739.81,
+    "5y": -585.8899999999999,
+    "10y": -1410.75,
+    "all": 721.9599999999999
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.4749501095496602,
+    "3y": -0.4749501095496602,
+    "5y": -0.4749501095496602,
+    "10y": -0.5521691647993906,
+    "all": -0.6558351059928116
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.4749501095496602,
+    "3y": -0.4749501095496602,
+    "5y": -0.4749501095496602,
+    "10y": -0.5521691647993906,
+    "all": -0.6558351059928116
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2006-04-06",
+    "value": 1722.35
+  },
+  "trade": null
+}

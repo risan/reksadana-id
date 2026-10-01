@@ -1,0 +1,264 @@
+{
+  "id": 4221,
+  "custodian_bank_id": 6,
+  "symbol": "RD4221",
+  "name": "Mandiri Indeks FTSE Indonesia ESG Kelas A",
+  "type": "Saham",
+  "profile": "REKSA DANA INDEKS MANDIRI INDEKS FTSE INDONESIA ESG bertujuan untuk memberikan hasil investasi yangsetara dengan kinerja Indeks FTSE Indonesia ESG yang diterbitkan oleh FTSE Russell. \nREKSA DANA INDEKS MANDIRI INDEKS FTSE INDONESIA ESG akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% (delapan puluh persen) dan maksimum seluruhnya dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diperdagangkan di Bursa Efek Indonesia serta terdaftar dalam Indeks FTSE Indonesia ESG; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2022-05-17",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 50000,
+  "minsell": 50000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Deposito",
+      "percentage": 0
+    },
+    {
+      "name": "Saham",
+      "percentage": 99.27
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BRPT",
+      "name": "Barito Pacific Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4586,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INDF",
+      "name": "Indofood Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4919,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "UNTR",
+      "name": "United Tractors Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4571,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4952361361",
+      "name": "Reksa Dana Indeks Mandiri Indeks FTSE Indonesia ESG"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Mandiri Manajemen Investasi",
+    "ojkCode": "CC002"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK",
+    "ojkCode": "CITI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": true,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 81530000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0222
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.1801235631267213,
+    "3y": -0.09244597375090802,
+    "5y": null,
+    "10y": null,
+    "all": -0.05752679097731861
+  },
+  "cagr_adjusted": {
+    "1y": -0.1801235631267213,
+    "3y": -0.09244597375090802,
+    "5y": null,
+    "10y": null,
+    "all": -0.057561668189889725
+  },
+  "simplereturn": {
+    "1d": -0.00837266729258035,
+    "1m": -0.06057947705728983,
+    "3m": 0.07323116326331758,
+    "ytd": -0.21845255592835489,
+    "1y": -0.1801235631267213,
+    "3y": -0.2524892142130012,
+    "5y": null,
+    "10y": null,
+    "all": -0.22898000000000007
+  },
+  "changesvalue": {
+    "1d": -6.509999999999991,
+    "1m": -49.72000000000003,
+    "3m": 52.610000000000014,
+    "ytd": -215.51,
+    "1y": -169.39,
+    "3y": -260.43000000000006,
+    "5y": null,
+    "10y": null,
+    "all": -228.98000000000002
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.33371381339421013,
+    "3y": -0.38936584662001306,
+    "5y": -0.38936584662001306,
+    "10y": -0.38936584662001306,
+    "all": -0.38936584662001306
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3337138133942101,
+    "3y": -0.389365846620013,
+    "5y": -0.389365846620013,
+    "10y": -0.389365846620013,
+    "all": -0.389365846620013
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2022-05-13",
+    "value": 771.02
+  },
+  "trade": null
+}

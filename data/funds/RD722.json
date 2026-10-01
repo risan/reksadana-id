@@ -1,0 +1,388 @@
+{
+  "id": 722,
+  "custodian_bank_id": null,
+  "symbol": "RD722",
+  "name": "Insight Government Fund",
+  "type": "Obligasi",
+  "profile": "Bertujuan untuk memberikan tingkat pertumbuhan investasi yang relatif stabil sesuai dengan tingkat risiko yang dapat diterima melalui diversifikasi penempatan pada instrumen pasar uang dan/atau efek bersifat utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun dan/atau deposito.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Utang",
+      "percentage": 98.21
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 1.79
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan Indonesia Eximbank I Tahap I Tahun 2018 Seri B",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Sarana Multi Infrastruktur Tahap III Tahun 2019 Seri A",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Sarana Multigriya Finansial Tahap VII Tahun 2017 Seri B",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara RI Seri FR0056",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II PTPP Tahap I Tahun 2018 Seri A",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II Adhi Karya Tahap II Tahun 2019 Seri B",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Waskita Beton Precast Tahap I Tahun 2019",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0080",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0059",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Waskita Karya Tahap II Tahun 2018 Seri B",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0082",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SBSN Seri PBS012",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0070",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II Waskita Karya Tahap II Tahun 2016",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0079",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0078",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0068",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Hutama Karya Tahap II Tahun 2017",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0075",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0072",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi I Angkasa Pura I Tahun 2016 Seri C",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0077",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0063",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Insight Investments Management, PT",
+    "ojkCode": "IIM02",
+    "telepon": "+62 21 29333078",
+    "fax": "+62 21 29333077",
+    "email": "-",
+    "url": "www.i-invest.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK MANDIRI (PERSERO) - CUSTODY, Tbk, PT",
+    "ojkCode": "BMAN1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 128291111720.78,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.1184179738945754,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.03250097126319629,
+    "3y": -0.08261859437409702,
+    "5y": -0.08261859437409702,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2016-07-29",
+    "value": 1353.1107
+  },
+  "trade": null
+}

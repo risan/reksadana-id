@@ -1,0 +1,273 @@
+{
+  "id": 426,
+  "custodian_bank_id": 6,
+  "symbol": "RD426",
+  "name": "BNP Paribas Prima USD Kelas RK1",
+  "type": "Obligasi",
+  "profile": "REKSA DANA BNP PARIBAS PRIMA USD bertujuan untuk memberikan pendapatan yang potensial dalam denominasi Dolar Amerika Serikat kepada Pemegang Unit Penyertaan melalui alokasi yang strategis pada Efek bersifat utang yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun luar negeri yang masuk dalam kategori layak investasi dan instrumen pasar uang dalam negeri dalam denominasi Dolar Amerika Serikat, dengan meminimalisasi risiko investasi melalui pemilihan penerbit surat berharga secara selektif.\n\nREKSA DANA BNP PARIBAS PRIMA USD mempunyai kebijakan investasi minimum sebesear 80% dan maksimum sebesar 100% pada Efek bersifat utang yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun luar negeri yang masuk dalam kategori layak investasi; serta minimum sebesar 0% dan maksimum sebesar 20% pada instrumen pasar uang dalam negeri termasuk Efek bersifat utang dengan masa jatuh tempo maksimum 1 (satu) tahun, dalam mata uang Dolar Amerika Serikat, yang diterbitkan sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia, dan atau kas. Dalam hal berinvestasi pada Efek luar negeri, REKSA DANA BNP PARIBAS PRIMA USD akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 6,
+    "name": "CITIBANK",
+    "color": "#3d7fd0",
+    "icon_url": "https://assets.bibit.id/icons/banks/Citibank_05042023141502.svg"
+  },
+  "released_date": "2010-08-09",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100,
+  "minsell": 100,
+  "minbuy": 100,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Deposito",
+      "percentage": 4.07
+    },
+    {
+      "name": "Pendapatan Tetap",
+      "percentage": 85.51
+    },
+    {
+      "name": "Kas",
+      "percentage": 10.42
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Indois 5.2 5.2% 07Feb2034 - FI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indonesia Govt Sukuk 4.55% 23Jul2030 - FI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pp Sbsn 5% 25May2030 - FI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "REP ID 3.55 03/31/32 - FI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "REP ID 4.65 09/20/32 - FI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "REP ID 6 3/4 01/15/44 - FI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Republic Of Indonesia 5.95% 08/01/2046 - FI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Republic Of Indonesia 8.50% 10/12/35 - FI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sbsn Indo lii Indois 5.4% 11/15/28 - FI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Citibank Na (Jakarta Branch) - MM",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4588692122",
+      "name": "Reksa Dana BNP Paribas Prima USD",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNP Paribas Asset Management",
+    "ojkCode": "MEES2",
+    "telepon": "+62 21 2521574",
+    "fax": "+62 21 2521594",
+    "email": "sales.service@bnpparibas-ip.co.id",
+    "url": "www.bnpparibas-ip.co.id"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK, N. A",
+    "ojkCode": "CITI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 147360000,
+    "date": "2026-08-31"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0122
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0502
+  },
+  "cagr": {
+    "1y": -0.01712050771160789,
+    "3y": 0.03254117867652018,
+    "5y": -0.0019110607181984651,
+    "10y": 0.01551924485113898,
+    "all": 0.018185352932839738
+  },
+  "cagr_adjusted": {
+    "1y": -0.01712050771160789,
+    "3y": 0.03254117867652018,
+    "5y": -0.0019110607181984651,
+    "10y": 0.01551924485113898,
+    "all": 0.018188465696400424
+  },
+  "simplereturn": {
+    "1d": 0.00022529288074513154,
+    "1m": -0.0212375073486184,
+    "3m": -0.026246527270068598,
+    "ytd": -0.0266023532850983,
+    "1y": -0.01712050771160789,
+    "3y": 0.10083477973386246,
+    "5y": -0.00951885178850298,
+    "10y": 0.16649150464179385,
+    "all": 0.3379206428930186
+  },
+  "changesvalue": {
+    "1d": 0.000300000000000189,
+    "1m": -0.028899999999999926,
+    "3m": -0.03589999999999982,
+    "ytd": -0.03639999999999999,
+    "1y": -0.023199999999999887,
+    "3y": 0.12200000000000011,
+    "5y": -0.012799999999999923,
+    "10y": 0.19010000000000016,
+    "all": 0.33640000000000003
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.03043541575651676,
+    "3y": -0.047286122387610874,
+    "5y": -0.15270350564468216,
+    "10y": -0.16105309604353568,
+    "all": -0.16105309604353568
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0304354157565167,
+    "3y": -0.0472861223876109,
+    "5y": -0.1527035056446821,
+    "10y": -0.1610530960435358,
+    "all": -0.1610530960435358
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2010-08-10",
+    "value": 1.3319
+  },
+  "trade": null
+}

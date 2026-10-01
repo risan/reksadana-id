@@ -1,0 +1,261 @@
+{
+  "id": 10476,
+  "custodian_bank_id": 10,
+  "symbol": "RD10476",
+  "name": "Trim Kas USD",
+  "type": "Pasar Uang",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2026-04-08",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10,
+  "minsell": 10,
+  "minbuy": 100,
+  "min_buy_next_purchase": 10,
+  "min_buy_after_sell_all": 100,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Deposito",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank Jago USD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Tabungan Negara USD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Victoria USD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Rakyat Indonesia USD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank J Trust USD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Syariah Indonesia USD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Mandiri USD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank CTBC Indonesia USD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Danamon Indonesia USD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Maybank Indonesia USD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "6620426596",
+      "name": "Reksa Dana TRIM Kas USD",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Trimegah Asset Management",
+    "ojkCode": "LG002"
+  },
+  "custodian_bank": {
+    "name": "PT BANK DBS INDONESIA",
+    "ojkCode": "DBSI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 5789000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.035
+  },
+  "cagr": {
+    "1y": 0.023996736870475877,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.023996736870475877
+  },
+  "cagr_adjusted": {
+    "1y": 0.02413550274479448,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.02413550274479448
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": 0.002179728524720037,
+    "3m": 0.006067236920628494,
+    "ytd": null,
+    "1y": 0.011500000000000066,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.011500000000000066
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": 0.0021999999999999797,
+    "3m": 0.006099999999999994,
+    "ytd": null,
+    "1y": 0.011500000000000066,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.011500000000000066
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00019999999999997797,
+    "3y": -0.00019999999999997797,
+    "5y": -0.00019999999999997797,
+    "10y": -0.00019999999999997797,
+    "all": -0.00019999999999997797
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0002,
+    "3y": -0.0002,
+    "5y": -0.0002,
+    "10y": -0.0002,
+    "all": -0.0002
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2026-04-08",
+    "value": 1.0115
+  },
+  "trade": null
+}

@@ -1,0 +1,275 @@
+{
+  "id": 429,
+  "custodian_bank_id": 5,
+  "symbol": "RD429",
+  "name": "BNP Paribas Rupiah Plus",
+  "type": "Pasar Uang",
+  "profile": "REKSA DANA BNP PARIBAS RUPIAH PLUS bertujuan untuk memberikan pendapatan melalui alokasi investasi pada instrumen pasar uang dalam negeri dan/atau deposito, termasuk efek Bersifat Utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun, yang telah dijual melalui penawaran umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun luar negeri, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.\n\nREKSA DANA BNP PARIBAS RUPIAH PLUS mempunyai kebijakan investasi 100% pada instrumen  pasar uang  dalam negeri dan/atau deposito  dan/atau  Efek Bersifat Utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang telah dijual melalui penawaran umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun luar negeri, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2003-10-14",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Deposito",
+      "percentage": 58.19
+    },
+    {
+      "name": "Pendapatan Tetap",
+      "percentage": 38.18
+    },
+    {
+      "name": "Kas",
+      "percentage": 3.63
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank Indonesia 0.00% - MM",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OB NEG Ri Seri FR0056 150926 FXH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OB NEG Ri Seri FR0059 150527 FXH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sun Tb Fr 0042 150727 H",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Bank Btpn Syariah Tbk PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Bank Danamon Indonesia Tbk PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Bank Maybank Indonesia Tbk PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Bank Tabungan NEG Tbk PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Smbc Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4587075775",
+      "name": "Reksa Dana BNP Paribas Rupiah Plus"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNP Paribas Asset Management",
+    "ojkCode": "MEES2",
+    "telepon": "+62 21 2521574",
+    "fax": "+62 21 2521594",
+    "email": "sales.service@bnpparibas-ip.co.id",
+    "url": "www.bnpparibas-ip.co.id"
+  },
+  "custodian_bank": {
+    "name": "BUT DEUTSCHE BANK AG",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 616410000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.007
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0598
+  },
+  "cagr": {
+    "1y": 0.03378101776042319,
+    "3y": 0.03614323179531875,
+    "5y": 0.0287063528476168,
+    "10y": 0.030393693522170473,
+    "all": 0.04292042639107296
+  },
+  "cagr_adjusted": {
+    "1y": 0.03378101776042319,
+    "3y": 0.03614323179531875,
+    "5y": 0.0287063528476168,
+    "10y": 0.030393693522170473,
+    "all": 0.04292565342932031
+  },
+  "simplereturn": {
+    "1d": 0.00016375525064082908,
+    "1m": 0.004029421659479393,
+    "3m": 0.01261576662374031,
+    "ytd": 0.025974584051160043,
+    "1y": 0.03378101776042319,
+    "3y": 0.11239591010360295,
+    "5y": 0.1520122820484704,
+    "10y": 0.34906203127247326,
+    "all": 1.6261949522019123
+  },
+  "changesvalue": {
+    "1d": 0.43000000000029104,
+    "1m": 10.539999999999964,
+    "3m": 32.720000000000255,
+    "ytd": 66.49000000000024,
+    "1y": 85.82000000000016,
+    "3y": 265.3600000000001,
+    "5y": 346.5500000000002,
+    "10y": 679.5400000000002,
+    "all": 1626.2600000000002
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0004296131159722272,
+    "3y": -0.0004296131159722272,
+    "5y": -0.0004296131159722272,
+    "10y": -0.016390245804935533,
+    "all": -0.09420094550593305
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0004296131159723,
+    "3y": -0.0004296131159723,
+    "5y": -0.0004296131159723,
+    "10y": -0.0163902458049356,
+    "all": -0.0942009455059331
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2003-10-16",
+    "value": 2626.3
+  },
+  "trade": null
+}

@@ -1,0 +1,267 @@
+{
+  "id": 3487,
+  "custodian_bank_id": 10,
+  "symbol": "RD3487",
+  "name": "Eastspring Syariah Fixed Income Amanah Kelas A",
+  "type": "Obligasi",
+  "profile": "Memberikan potensi kinerja optimal atas investasi jangka menengah pada Efek Syariah Berpendapatan Tetap yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi berbadan hukum Indonesia yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Indonesia serta dapat berinvestasi pada instrumen pasar uang syariah dalam negeri.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2017-04-17",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang Syariah",
+      "percentage": 2.9
+    },
+    {
+      "name": "Obligasi Syariah",
+      "percentage": 97.1
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Perusahaan Penerbit 5% 15112030",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Penerbit 5.875% 150728",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Penerbit 6.1% 150237",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Penerbit 6.375% 150334",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Penerbit 6.5% 150639",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Penerbit 6.625% 150929",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Penerbit 6.75% 150647",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Penerbit 6.875% 150336",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Penerbit 6.875% 151249",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Penerbit 8.625% 150434",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4586915550",
+      "name": "Reksa Dana Syariah Eastspring Syariah Fixed Income Amanah Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "ojkCode": "EII01",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "PT BANK DBS INDONESIA",
+    "ojkCode": "DBSI1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1100000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0135
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0647
+  },
+  "cagr": {
+    "1y": 0.008467968710056839,
+    "3y": 0.03554077150539192,
+    "5y": 0.03267996036261067,
+    "10y": null,
+    "all": 0.04938982904429001
+  },
+  "cagr_adjusted": {
+    "1y": 0.008467968710056839,
+    "3y": 0.03554077150539192,
+    "5y": 0.03267996036261067,
+    "10y": null,
+    "all": 0.04940448439239642
+  },
+  "simplereturn": {
+    "1d": 0.0018857142857142684,
+    "1m": -0.0024149855543402765,
+    "3m": 0.01618979540580745,
+    "ytd": -0.013596129322631434,
+    "1y": 0.008467968710056839,
+    "3y": 0.11045664703274438,
+    "5y": 0.1744343554629355,
+    "10y": null,
+    "all": 0.5778595498315118
+  },
+  "changesvalue": {
+    "1d": 2.9700000000000273,
+    "1m": -3.8199999999999363,
+    "3m": 25.1400000000001,
+    "ytd": -21.75,
+    "1y": 13.25,
+    "3y": 156.96000000000004,
+    "5y": 234.37000000000012,
+    "10y": null,
+    "all": 577.9
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.040356534702253644,
+    "3y": -0.040356534702253644,
+    "5y": -0.040356534702253644,
+    "10y": -0.06586583437507776,
+    "all": -0.06586583437507776
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0403565347022536,
+    "3y": -0.0403565347022536,
+    "5y": -0.0403565347022536,
+    "10y": -0.0658658343750776,
+    "all": -0.0658658343750776
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2017-04-18",
+    "value": 1577.97
+  },
+  "trade": null
+}

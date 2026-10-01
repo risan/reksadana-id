@@ -1,0 +1,272 @@
+{
+  "id": 1409,
+  "custodian_bank_id": 7,
+  "symbol": "RD1409",
+  "name": "BNI-AM Dana Pendapatan Tetap Makara Investasi",
+  "type": "Obligasi",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 34,
+    "name": "CIMB NIAGA",
+    "color": "#EE1C25",
+    "icon_url": "https://assets.bibit.id/icons/banks/CIMB_Niaga_05042023141521.svg"
+  },
+  "released_date": "2016-12-01",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas & Deposito",
+      "percentage": 7
+    },
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 32
+    },
+    {
+      "name": "Obligasi Korporasi",
+      "percentage": 61
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Obligasi Bank Pan Indonesia",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Energi Mega Persada",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0103",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8710,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0104",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8733,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0108",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9548,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Indah Kiat Pulp & Paper",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Indonesian Paradise Property",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi OKI Pulp & Paper Mills",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Pindo Deli Pulp & Paper Mills",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Telkom",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585793834",
+      "name": "Reksa Dana BNI AM Dana Pendapatan Tetap Makara Investasi"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNI Asset Management",
+    "ojkCode": "NI002",
+    "telepon": "+62 21 29969646",
+    "fax": "+62 21 29969647",
+    "email": "corsec@bni-am.co.id",
+    "url": "www.bni-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA TBK, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 168895579259,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0174
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0737
+  },
+  "cagr": {
+    "1y": -0.05895346614913166,
+    "3y": -0.003512825471808201,
+    "5y": -0.0033594102725813535,
+    "10y": null,
+    "all": 0.008845914561322665
+  },
+  "cagr_adjusted": {
+    "1y": 0.0012184767546326025,
+    "3y": 0.04459526733192232,
+    "5y": 0.042598001952534936,
+    "10y": null,
+    "all": 0.053997773586423436
+  },
+  "simplereturn": {
+    "1d": 0.0013144066033441426,
+    "1m": -0.00019295794184970294,
+    "3m": 0.015672842528788422,
+    "ytd": -0.0068878923297169825,
+    "1y": 0.0012184767546326025,
+    "3y": 0.13984070389787862,
+    "5y": 0.23192549039610877,
+    "10y": null,
+    "all": 0.5786963291835641
+  },
+  "changesvalue": {
+    "1d": 1.595199999999977,
+    "1m": -0.23570389541191616,
+    "3m": 19.04234380948401,
+    "ytd": -8.827834831287873,
+    "1y": 1.5734828814390767,
+    "3y": 171.74113730292197,
+    "5y": 286.6233082872059,
+    "10y": null,
+    "all": 651.460563961713
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.07139141276808181,
+    "3y": -0.07310819094850607,
+    "5y": -0.07310819094850607,
+    "10y": -0.07310819094850607,
+    "all": -0.07310819094850607
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0342364532294026,
+    "3y": -0.0342364532294024,
+    "5y": -0.0342364532294023,
+    "10y": -0.0342364532294024,
+    "all": -0.0342364532294024
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 1215.2227
+  },
+  "trade": null
+}

@@ -1,0 +1,208 @@
+{
+  "id": 1524,
+  "custodian_bank_id": null,
+  "symbol": "RD1524",
+  "name": "Sam Indonesian Equity Fund",
+  "type": "Saham",
+  "profile": "SAM INDONESIAN EQUITY FUND bertujuan untuk memperoleh hasil pertumbuhan jangka panjang dengan dari investasi saham-saham yang aktif diperdagangkan termasuk saham blue-chips yang memiliki fundamental yang baik dan instrumen\npasar uang dan/atau setara kas berdasarkan riset mendalam dan strategi pengelolaan secara aktif.\n\nSAM INDONESIAN EQUITY FUND melakukan investasi dengan komposisi investasi sebesar minimum 80% dan maksimum 98% pada Efek ekuitas dan turunannya yang diterbitkan, ditawarkan dan/atau diperdagangkan di Indonesia sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia serta minimum 2% dan maksimum 20% pada instrumen pasar uang dan/atau setara kas yang diterbitkan, ditawarkan dan/atau diperdagangkan di Indonesia sesuai dengan peraturan perundang-undangan yang berlaku.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Money Market",
+      "percentage": 2.93
+    },
+    {
+      "name": "Equity",
+      "percentage": 97.07
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-02",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "MEDC",
+      "name": "PT Medco Energi Internasional Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-02",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BNLI",
+      "name": "Bank Permata Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-02",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "WOOD",
+      "name": "PT Integra Indocabinet Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-02",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "PT Bank Mandiri (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-02",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Samuel Aset Manajemen, PT",
+    "ojkCode": "IF002",
+    "telepon": "+62 21 83701608, +62 21 28548133",
+    "fax": "+62 21 83701610",
+    "email": "marketing@sam.co.id",
+    "url": "www.sam.co.id"
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK A. G. - CUSTODY",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 652835230943.58,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.0542598356138867,
+    "3y": 0.05074200718397481,
+    "5y": 0.03302723211382386,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.19732113934444762,
+    "3y": -0.28671366122413455,
+    "5y": -0.3474930668662235,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2011-10-19",
+    "value": 1862.52
+  },
+  "trade": null
+}

@@ -1,0 +1,267 @@
+{
+  "id": 841,
+  "custodian_bank_id": 9,
+  "symbol": "RD841",
+  "name": "Bahana Pendapatan Tetap Makara Prima kelas G",
+  "type": "Obligasi",
+  "profile": "Reksa Dana Makara Prima bertujuan untuk menghasilkan tingkat pengembalian yang stabil dan optimal melalui investasi pada Efek bersifat utang, yang diterbitkan oleh Pemerintah Republik Indonesia dan korporasi yang berdomisili di Indonesia, dan investasi pada Efek bersifat ekuitas yang dicatatkan di Bursa Efek di Indonesia serta Efek bersifat utang yang dicatatkan di Bursa Efek luar negeri sesuai dengan peraturan perundang?undangan yang berlaku di Indonesia dengan tujuan untuk menambah tingkat pengembalian dan peragaman (diversifikasi) portofolio.\n\nReksa Dana Makara Prima mempunyai target komposisi investasi sebagai berikut:\n- minimum 80% dan maksimum 100% pada Efek bersifat utang, yaitu Surat Utang Negara dan atau Obligasi yang telah dijual dalam Penawaran Umum dan atau dicatatkan di Bursa Efek .\n- minimum 0% dan maksimum 20% pada setara Kas dan atau Instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun, yaitu antara lain Surat Utang Negara kurang dari 1 (satu)\ntahun, Sertifikat Bank Indonesia, Deposito, Sertifikat Deposito, transaksi REPO dan surat utang lainnya yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan diterbitkan berdasarkan peraturan perundang?undangan yang berlaku di Indonesia.\n- minimum 0% dan maksimum 20% pada Efek bersifat ekuitas, yaitu saham yang telah dijual dalam Penawaran Umum dan dicatatkan di Bursa Efek.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2004-11-04",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 200000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 94.51
+    },
+    {
+      "name": "Likuiditas",
+      "percentage": 5.49
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "OBL BKLJT IV BUMI SERPONG DAMAI THP II TH 2025 SR C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBL PERPETUAL BERKELANJUTAN I INDONESIA INFRASTRUCTURE FINANCE TAHAP I TAHUN 2026",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN I DIAN SWASTATIKA SENTOSA TAHAP IV TAHUN 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN I MERDEKA BATTERY MATERIALS TAHAP II TAHUN 2025 SERI B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN III PROVIDENT INVESTASI BERSAMA TAHAP II TAHUN 2026 SERI C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN III SINAR MAS MULTIARTHA TAHAP IV TAHUN 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN V SMART TAHAP II TAHUN 2026 SERI B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN VI ASTRA SEDAYA FINANCE TAHAP IV TAHUN 2024 SERI B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0110",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 10929,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS034",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6024,
+      "product_type": "FR",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4586215876\t",
+      "name": "Reksa Dana Bahana Pendapatan Tetap Makara Prima Kelas G"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Bahana TCW Investment Management",
+    "ojkCode": "DX002",
+    "telepon": "+62 21 2505277",
+    "fax": "+62 21 2505279",
+    "email": "sinar@bahana.co.id",
+    "url": "www.sinar.bahanatcw.com"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 4292830000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.02
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0741
+  },
+  "cagr": {
+    "1y": -0.027997459476876818,
+    "3y": 0.035622684329992715,
+    "5y": 0.034400551166491766,
+    "10y": null,
+    "all": 0.03439453168747297
+  },
+  "cagr_adjusted": {
+    "1y": -0.027997459476876818,
+    "3y": 0.035622684329992715,
+    "5y": 0.034400551166491766,
+    "10y": null,
+    "all": 0.03440556972569664
+  },
+  "simplereturn": {
+    "1d": 0.00030109536893752065,
+    "1m": -0.004190464565965835,
+    "3m": -0.004263125036925941,
+    "ytd": -0.0364446026044406,
+    "1y": -0.027997459476876818,
+    "3y": 0.1107201842252068,
+    "5y": 0.1842508807739851,
+    "10y": null,
+    "all": 0.3413705896334758
+  },
+  "changesvalue": {
+    "1d": 1.0491000000001804,
+    "1m": -14.666600000000017,
+    "3m": -14.922000000000025,
+    "ytd": -131.82569999999987,
+    "1y": -100.39099999999962,
+    "3y": 347.4287000000004,
+    "5y": 542.2623000000003,
+    "10y": null,
+    "all": 886.9944
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.044955234874498484,
+    "3y": -0.044955234874498484,
+    "5y": -0.044955234874498484,
+    "10y": -0.11800297483062994,
+    "all": -0.11800297483062994
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0449552348744986,
+    "3y": -0.0449552348744986,
+    "5y": -0.0449552348744986,
+    "10y": -0.1180029748306299,
+    "all": -0.1180029748306299
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 3485.3272
+  },
+  "trade": null
+}

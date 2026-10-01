@@ -1,0 +1,271 @@
+{
+  "id": 13,
+  "custodian_bank_id": 2,
+  "symbol": "RD13",
+  "name": "ABF Indonesia Bond Index Fund",
+  "type": "Obligasi",
+  "profile": "Mendapatkan tingkat pertumbuhan yang stabil dan optimal melalui investasi pada Efek bersifat utang.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2005-05-25",
+  "is_top_product": 1,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 1000000,
+  "minsell": 1000000,
+  "minbuy": 1000000,
+  "min_buy_next_purchase": 100000,
+  "min_buy_after_sell_all": 1000000,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 98.6
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 1.4
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0082",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0087",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0091",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5802,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0096",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5808,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0100",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6155,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0101",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6261,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0103",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8710,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0104",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8733,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0106",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9238,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0109",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9551,
+      "product_type": "FR",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4587484098",
+      "name": "Reksa Dana Indeks ABF Indonesia Bond Index Fund"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Bahana TCW Investment Management",
+    "ojkCode": "DX002",
+    "telepon": "+62 21 2505277",
+    "fax": "+62 21 2505279",
+    "email": "sinar@bahana.co.id",
+    "url": "www.sinar.bahanatcw.com"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": true,
+  "index": true,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 7850300000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0021
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0691
+  },
+  "cagr": {
+    "1y": 0.010580157352288122,
+    "3y": 0.05195362218748545,
+    "5y": 0.04883185512946708,
+    "10y": 0.06284770002826123,
+    "all": 0.08091009353059797
+  },
+  "cagr_adjusted": {
+    "1y": 0.010580157352288122,
+    "3y": 0.05195362218748545,
+    "5y": 0.04883185512946708,
+    "10y": 0.06284770002826123,
+    "all": 0.08092235106155443
+  },
+  "simplereturn": {
+    "1d": 0.0013257826410391083,
+    "1m": -0.0028984635604015763,
+    "3m": 0.01853267067670461,
+    "ytd": -0.013520019069149347,
+    "1y": 0.010580157352288122,
+    "3y": 0.16409863525628232,
+    "5y": 0.2691979044965893,
+    "10y": 0.8395448073063339,
+    "all": 3.3176154511340243
+  },
+  "changesvalue": {
+    "1d": 78.27189999999973,
+    "1m": -171.8452000000034,
+    "3m": 1075.6524999999965,
+    "ytd": -810.2107000000033,
+    "1y": 618.913999999997,
+    "3y": 8333.4366,
+    "5y": 12538.664299999997,
+    "10y": 26980.0317,
+    "all": 45424.5917
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.049898780140278154,
+    "3y": -0.049898780140278154,
+    "5y": -0.049898780140278154,
+    "10y": -0.09618645836821305,
+    "all": -0.2760120415115265
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0498987801402782,
+    "3y": -0.0498987801402782,
+    "5y": -0.0498987801402782,
+    "10y": -0.096186458368213,
+    "all": -0.2760120415115266
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2007-12-18",
+    "value": 59116.5317
+  },
+  "trade": null
+}

@@ -1,0 +1,278 @@
+{
+  "id": 1657,
+  "custodian_bank_id": 2,
+  "symbol": "RD1657",
+  "name": "Sucorinvest Money Market Fund",
+  "type": "Pasar Uang",
+  "profile": "SUCORINVEST MONEY MARKET FUND bertujuan untuk memberikan tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat sekaligus memberikan tingkat pendapatan investasi yang menarik.\n\nSUCORINVEST MONEY MARKET FUND akan melakukan investasi dengan komposisi portofolio investasi 100% dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan atau diperdagangkan di Bursa Efek Indonesia dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2014-10-20",
+  "is_top_product": 1,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi &/ Sukuk Pemerintah RI (dgn. jangka waktu <= 1 thn &/ sisa jatuh tempo <= 1 thn)",
+      "percentage": 2.94
+    },
+    {
+      "name": "Obligasi &/ Sukuk Korporasi (dgn. sisa JT < 1 tahun)",
+      "percentage": 74.08
+    },
+    {
+      "name": "Deposito dan Setara Kas",
+      "percentage": 22.98
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap II Tahun 2023 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan V Chandra Asri Pacific Tahap III Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan VII Astra Sedaya Finance Tahap III Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Bank Capital",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Bank Ganesha",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Aladin Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Mnc Internasional Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Victoria International Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585677575",
+      "name": "Reksa Dana Sucorinvest Money Market Fund"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "ojkCode": "GAMA2",
+    "telepon": "+62 21 5363020",
+    "fax": "+62 21 5363019",
+    "email": "-",
+    "url": "www.sucorinvest.com/id/asset-management"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 9710000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0119
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0761
+  },
+  "cagr": {
+    "1y": 0.042941545540102544,
+    "3y": 0.04947095466070395,
+    "5y": 0.04575150546480078,
+    "10y": 0.056247205815000534,
+    "all": 0.05904511525131939
+  },
+  "cagr_adjusted": {
+    "1y": 0.042941545540102544,
+    "3y": 0.04947095466070395,
+    "5y": 0.04575150546480078,
+    "10y": 0.056247205815000534,
+    "all": 0.05905904357491254
+  },
+  "simplereturn": {
+    "1d": 0.00016044845342721992,
+    "1m": 0.004324972056350518,
+    "3m": 0.01045033179676813,
+    "ytd": 0.030351709995506182,
+    "1y": 0.042941545540102544,
+    "3y": 0.15587606404246324,
+    "5y": 0.2506693083709002,
+    "10y": 0.7284456614040866,
+    "all": 0.9852405501701866
+  },
+  "changesvalue": {
+    "1d": 0.31999999999993634,
+    "1m": 8.589999999999918,
+    "3m": 20.63000000000011,
+    "ytd": 58.75999999999999,
+    "1y": 82.13000000000011,
+    "3y": 269,
+    "5y": 399.79999999999995,
+    "10y": 840.6700000000001,
+    "all": 989.95
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00011058054787638216,
+    "3y": -0.00042393000067830755,
+    "5y": -0.00042393000067830755,
+    "10y": -0.00042393000067830755,
+    "all": -0.013644777961344667
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": -0.0004239300006783,
+    "5y": -0.0004239300006783,
+    "10y": -0.0004239300006783,
+    "all": -0.0136447779613448
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2014-10-21",
+    "value": 1994.73
+  },
+  "trade": {
+    "total_trades": 10954,
+    "period": "1d"
+  }
+}

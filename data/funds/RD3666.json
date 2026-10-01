@@ -1,0 +1,152 @@
+{
+  "id": 3666,
+  "custodian_bank_id": null,
+  "symbol": "RD3666",
+  "name": "Cipta Dana Prima",
+  "profile": "LIPPO DANA PRIMA bertujuan untuk memperoleh pertumbuhan nilai investasi yang optimum dalam jangka panjang melalui investasi pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek di dalam maupun di luar negeri dan Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Jndonesia dan/atau korporasi yang dijual  dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia  serta  instrumen  pasar  uang dalam  negeri  yang  mempunyai  jatuh tempo kurang  dari  1 (satu)  tahun.\n\nLIPPO DANA PRIMA akan melakukan investasi dengan komposisi portofolio Efek yaitu minimum 5% dan maksimum 75% pada Efek bersifat Ekuitas yang diterbitkan oleh korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek di dalam  maupun  di luar negeri,  minimum  5% dan maksimum 75% pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi yang dijual dalam Penawaran  Umum dan/atau diperdagangkan di Bursa  Efek di dalam maupun  di luar negeri yang telah mendapat peringkat dari perusahaan pemeringkat Efek yang terdaftar di BAPEPAM & LK, dan/atau instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Fixed Income",
+      "percentage": 44
+    },
+    {
+      "name": "Equity",
+      "percentage": 15
+    },
+    {
+      "name": "Cash & MM",
+      "percentage": 41
+    }
+  ],
+  "investment_manager": {
+    "name": "Ciptadana Asset Management, PT"
+  },
+  "custodian_bank": {
+    "name": ""
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": null,
+    "date": "2022-01-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2022-01-26",
+    "first_date": "2020-03-31",
+    "value": 1397.2022
+  },
+  "trade": null
+}

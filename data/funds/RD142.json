@@ -1,0 +1,270 @@
+{
+  "id": 142,
+  "custodian_bank_id": 3,
+  "symbol": "RD142",
+  "name": "Bahana Liquid USD",
+  "type": "Pasar Uang",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 12,
+    "name": "STANDARD CHARTERED",
+    "color": "#0072AA",
+    "icon_url": "https://assets.bibit.id/icons/banks/Standard_Chartered_05042023140038.svg"
+  },
+  "released_date": "2014-08-27",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100,
+  "minsell": 100,
+  "minbuy": 1000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 20,
+      "max_value": 60,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Likuiditas",
+      "percentage": 70.16
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 29.84
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "ALLO BANK INDONESIA TBK, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK CAPITAL INDONESIA PT TBK - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK MNC INTERNASIONAL - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK NATIONALNOBU TBK, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK PEMBANGUNAN DAERAH RIAU KEPRI, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK PEMBANGUNAN DAERAH SULAWESI SELATAN, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDON 4.35 01/08/2027",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAN PENERBIT SBSN 4.4% 06JUNE27",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK WOORI SAUDARA INDONESIA 1906, TBK - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT.BANK VICTORIA INTERNASIONAL - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "6038404998",
+      "name": "Reksa Dana Bahana Liquid USD",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Bahana TCW Investment Management",
+    "ojkCode": "DX002",
+    "telepon": "+62 21 2505277",
+    "fax": "+62 21 2505279",
+    "email": "sinar@bahana.co.id",
+    "url": "www.sinar.bahanatcw.com"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 64280000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0155
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.03
+  },
+  "cagr": {
+    "1y": 0.026631974144510018,
+    "3y": 0.028995550229048872,
+    "5y": 0.02224303288732532,
+    "10y": 0.014723364585454979,
+    "all": 0.00018103712174433184
+  },
+  "cagr_adjusted": {
+    "1y": 0.026631974144510018,
+    "3y": 0.028995550229048872,
+    "5y": 0.02224303288732532,
+    "10y": 0.014723364585454979,
+    "all": 0.00018103712174433184
+  },
+  "simplereturn": {
+    "1d": 0.000055880583193612665,
+    "1m": 0.0022030220302200476,
+    "3m": 0.006503856015313447,
+    "ytd": 0.01932790203317758,
+    "1y": 0.026631974144510018,
+    "3y": 0.08953325426135272,
+    "5y": 0.11627396686574532,
+    "10y": 0.1573816799358827,
+    "all": 0.0021929999999998895
+  },
+  "changesvalue": {
+    "1d": 0.00005599999999983396,
+    "1m": 0.002202999999999844,
+    "3m": 0.006475999999999926,
+    "ytd": 0.01900299999999988,
+    "1y": 0.025997999999999855,
+    "3y": 0.08235599999999987,
+    "5y": 0.1043909999999999,
+    "10y": 0.13627899999999993,
+    "all": 0.0021929999999998895
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.000018468869181886838,
+    "3y": -0.000018468869181886838,
+    "5y": -0.000027801347141975796,
+    "10y": -0.0000808229158367757,
+    "all": -0.1413086714399363
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": -0.0000184688691819,
+    "5y": -0.0000278013471421,
+    "10y": -0.0000808229158368,
+    "all": -0.1413086714399364
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2014-08-28",
+    "value": 1.002193
+  },
+  "trade": null
+}

@@ -1,0 +1,274 @@
+{
+  "id": 1766,
+  "custodian_bank_id": 10,
+  "symbol": "RD1766",
+  "name": "TRIM Kas 2 Kelas A",
+  "type": "Pasar Uang",
+  "profile": "Tujuan investasi TRIM KAS 2 adalah untuk memperoleh pendapatan yang optimal berupa pertumbuhan nilai investasi dengan berusaha tetap mempertahankan nilai investasi awal dan memberikan tingkat likuiditas yang tinggi guna memenuhi kebutuhan dana tunai dalam waktu singkat.\n\nKebijakan investasi TRIM KAS 2 adalah sebesar 100% pada Instrumen Pasar Uang dan/atau Efek bersifat utang yang memiliki jatuh tempo kurang dari 1 tahun baik dalam mata uang Rupiah maupun dalam mata uang asing. TRIM KAS 2 juga dapat melakukan perjanjian pembelian kembali (Repo) atas Efek bersifat utang.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 72,
+    "name": "JAGO",
+    "color": "#f09f1a",
+    "icon_url": "https://assets.bibit.id/icons/banks/jago-circle-v2.svg"
+  },
+  "released_date": "2008-04-11",
+  "is_top_product": 1,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 3,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 47.31
+    },
+    {
+      "name": "Lainnya",
+      "percentage": 52.69
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank Seabank Indonesia",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Sulutgo",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Lampung",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Sahabat Sampoerna",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Nagari",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan V Merdeka Copper Gold Tahap III Tahun 2026",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Sulteng",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Riau Kepri Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Jtrust Indonesia",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585396029",
+      "name": "Reksa Dana TRIM Kas 2 Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Trimegah Asset Management",
+    "ojkCode": "LG002",
+    "telepon": "+62 21 29248088",
+    "fax": "+62 21 2924 8040",
+    "email": "cs_tram@trimegah.com",
+    "url": "www.trimegah-am.com"
+  },
+  "custodian_bank": {
+    "name": "PT BANK DBS INDONESIA",
+    "ojkCode": "DBSI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 9844540000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0072
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.055
+  },
+  "cagr": {
+    "1y": 0.04371008210089422,
+    "3y": 0.04941375461221953,
+    "5y": 0.04494595470442797,
+    "10y": 0.04900010933248855,
+    "all": 0.03987770907783239
+  },
+  "cagr_adjusted": {
+    "1y": 0.04371008210089422,
+    "3y": 0.04941375461221953,
+    "5y": 0.04494595470442797,
+    "10y": 0.04900010933248855,
+    "all": 0.039883739417371666
+  },
+  "simplereturn": {
+    "1d": 0.00014529417092123964,
+    "1m": 0.004688730208131098,
+    "3m": 0.012109720086806108,
+    "ytd": 0.03146459008495328,
+    "1y": 0.04371008210089422,
+    "3y": 0.15568707578194507,
+    "5y": 0.2458597208824247,
+    "10y": 0.6134493431654187,
+    "all": 1.0595697
+  },
+  "changesvalue": {
+    "1d": 0.29919999999992797,
+    "1m": 9.611699999999928,
+    "3m": 24.642399999999952,
+    "ytd": 62.82670000000007,
+    "1y": 86.25379999999996,
+    "3y": 277.4526000000001,
+    "5y": 406.4384,
+    "10y": 783.0687,
+    "all": 1059.5697
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00011031049208665156,
+    "3y": -0.0007240515787454438,
+    "5y": -0.00011031049208665156,
+    "10y": -0.0007240515787454438,
+    "all": -0.0007240515787454438
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": 0,
+    "5y": 0,
+    "10y": -0.0007240515787454,
+    "all": -0.0007240515787454
+  },
+  "instant_redemption": {
+    "type": 1,
+    "quota_limit": 3
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2008-04-14",
+    "value": 2059.5697
+  },
+  "trade": {
+    "total_trades": 4632,
+    "period": "1d"
+  }
+}

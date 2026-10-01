@@ -1,0 +1,156 @@
+{
+  "id": 1055,
+  "custodian_bank_id": null,
+  "symbol": "RD1055",
+  "name": "Mega Dana Kas",
+  "type": "Pasar Uang",
+  "profile": "MEGA DANA KAS bertujuan untuk memberikan tingkat pertumbuhan nilai investasi yang stabil dan berkesinambungan dengan resiko yang relatif kecil dan moderat melalui investasi yang terdiversifikasi pada instrumen pasar uang.\n\nUntuk mencapai tujuan investasi Reksa Dana ini, maka investasi akan dilakukan\n100% pada instrumen pasar uang yang meliputi Deposito, Sertifikat Deposito,\nNegotiable Certificate Deposit (BCD), Sertifikat Bank Indonesia, Promissory Note, Medium Term Note yang akan jatuh tempo dalam waktu 1 tahun atau kurang,\nobligasi yang akan jatuh tempo dalam waktu 1 tahun atau kurang serta perjanjian\njual dan beli kembali (REPO) obligasi.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 83.63
+    },
+    {
+      "name": "Cash & Deposito",
+      "percentage": 15.47
+    }
+  ],
+  "investment_manager": {
+    "name": "Mega Capital Investama, PT",
+    "ojkCode": "CD003",
+    "telepon": "+62 21 7918 6999",
+    "fax": "+62 21 7918 7670/7918 7671",
+    "email": "cs@megainvestama.co.id",
+    "url": "www.megainvestama.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA - CUSTODY, Tbk, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 336364542727.52,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.06679237869071564,
+    "3y": 0.06364130049296035,
+    "5y": 0.06836987503801084,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0032804757477148394,
+    "3y": -0.0032804757477148394,
+    "5y": -0.0032804757477148394,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2006-12-21",
+    "value": 2313.4183
+  },
+  "trade": null
+}

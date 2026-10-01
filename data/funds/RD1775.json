@@ -1,0 +1,267 @@
+{
+  "id": 1775,
+  "custodian_bank_id": 11,
+  "symbol": "RD1775",
+  "name": "Trimegah Kas Syariah",
+  "type": "Pasar Uang",
+  "profile": "Reksa Dana Trimegah Kas Syariah bertujuan memperoleh pendapatan yang optimal berupa pertumbuhan nilai investasi dengan berusaha tetap mempertahankan nilai investasi awal dan memberikan tingkat likuiditas yang tinggi guna memenuhi kebutuhan dana tunai dalam waktu singkat melalui investasi yang sesuai dengan Prinsip Syariah di Pasar Modal pada Efek Syariah yang tercantum dalam Daftar Efek Syariah.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2016-12-22",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 3,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 53.87
+    },
+    {
+      "name": "Lainnya",
+      "percentage": 46.13
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank Panin Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Riau Kepri Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Jabar Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berwawasan Sosial Berkelanjutan I Pegadaian Tahap III Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berwawasan Sosial Orange Berkelanjutan I PNM Tahap IV Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah II Pindo Deli Pulp And Paper Mills Tahun 2023 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Aladin Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Musyarakah Berkelanjutan II Sarana Multigriya Finansial Tahap II Tahun 2026",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Nusa Tenggara Barat Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Wakalah BI Al-Istitsmar Berkelanjutan I CIMB Niaga Auto Finance Tahap IV Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4997185811",
+      "name": "Reksa Dana Trimegah Kas Syariah"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Trimegah Asset Management",
+    "ojkCode": "LG002"
+  },
+  "custodian_bank": {
+    "name": "BANK MANDIRI, PT - CUSTODY",
+    "ojkCode": "BMAN1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 2234580000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0072
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.055
+  },
+  "cagr": {
+    "1y": 0.044051016986165425,
+    "3y": 0.049721301767653214,
+    "5y": 0.04492850124877812,
+    "10y": null,
+    "all": 0.045661155888892635
+  },
+  "cagr_adjusted": {
+    "1y": 0.044051016986165425,
+    "3y": 0.049721301767653214,
+    "5y": 0.04492850124877812,
+    "10y": null,
+    "all": 0.04567423753762423
+  },
+  "simplereturn": {
+    "1d": 0.00014598893935047208,
+    "1m": 0.004667578196865918,
+    "3m": 0.012029695119857742,
+    "ytd": 0.0315372010116719,
+    "1y": 0.044051016986165425,
+    "3y": 0.15670345024388554,
+    "5y": 0.24575567803259268,
+    "10y": null,
+    "all": 0.5476034000000001
+  },
+  "changesvalue": {
+    "1d": 0.2258999999999105,
+    "1m": 7.190000000000055,
+    "3m": 18.395899999999983,
+    "ytd": 47.31489999999985,
+    "1y": 65.2971,
+    "3y": 209.6603,
+    "5y": 305.3025,
+    "10y": null,
+    "all": 547.6034
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00000460531368895456,
+    "3y": -0.000026761436923150583,
+    "5y": -0.000026761436923150583,
+    "10y": -0.003961457783089428,
+    "all": -0.003961457783089428
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": 0,
+    "5y": 0,
+    "10y": -0.0039614577830895,
+    "all": -0.0039614577830895
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2016-12-22",
+    "value": 1547.6034
+  },
+  "trade": null
+}

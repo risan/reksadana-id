@@ -1,0 +1,208 @@
+{
+  "id": 468,
+  "custodian_bank_id": null,
+  "symbol": "RD468",
+  "name": "Principal Dollar Bond",
+  "type": "Obligasi",
+  "profile": "DOLLAR BOND bertujuan memberikan tingkat pendapatan yang optimal dalam denominasi Dollar Amerika Serikat malalui investasi pada Efek bersifat utang.\n\nDOLLAR BOND akan berinvestasi 100 % (seratus per seratus) portofolio investasi pada Efek bersifat utang dalam denominasi Dollar Amerika Serikat dan atau mata uang asing yang ditawarkan melalui Penawaran Umum dan atau dicatatkan di Bursa Efek di Indonesia maupun luar negeri termasuk Efek Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dalam denominasi Dollar Amerika Serikat atau mata uang asing. Dalam hal investasi pada Efek Pasar Uang, investasi tersebut tidak akan melebihi 90%.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17590,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar uang",
+      "percentage": 3.2
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 96.8
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Republic of Indonesia",
+      "annualDividend": 0,
+      "date": "2019-10-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Republic of Indonesia",
+      "annualDividend": 0,
+      "date": "2019-10-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Republic of Indonesia",
+      "annualDividend": 0,
+      "date": "2019-10-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDON 2038",
+      "annualDividend": 0,
+      "date": "2019-10-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Eurobonds Indonesia, 2025",
+      "annualDividend": 0,
+      "date": "2019-10-14",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Principal Asset Management, PT",
+    "ojkCode": "ZG002",
+    "telepon": "+62 21 57901581",
+    "fax": "+62 21 57901582",
+    "email": "-",
+    "url": "www.cimb-principal.co.id"
+  },
+  "custodian_bank": {
+    "name": "STANDARD CHARTERED BANK - CUSTODY",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 333981.50421,
+    "date": "2025-07-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0153
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.09555783199850976,
+    "3y": 0.0284362937443281,
+    "5y": 0.01828760534692964,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.020528459063946736,
+    "3y": -0.06392860395228128,
+    "5y": -0.07321251465151923,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2025-07-31",
+    "first_date": "2005-02-22",
+    "value": 1.0959
+  },
+  "trade": null
+}

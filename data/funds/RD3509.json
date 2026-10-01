@@ -1,0 +1,268 @@
+{
+  "id": 3509,
+  "custodian_bank_id": 3,
+  "symbol": "RD3509",
+  "name": "Eastspring Investments Value Discovery Kelas A",
+  "type": "Saham",
+  "profile": "EASTSPRING VALUE DISCOVERY bertujuan untuk mendapatkan kinerja portofolio yang menarik dalam jangka panjang melalui pengelolaan secara aktif atas investasi terutama pada Efek bersifat ekuitas yang diterbitkan di Indonesia.\n\nEASTSPRING VALUE DISCOVERY akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% dan maksimum 100% dari Nilai Aktiva Bersih pada Efek bersifat ekuitas korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri; dan minimum 0% dan maksimum 20%  dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri dan/atau instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito berdenominasi Rupiah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 12,
+    "name": "STANDARD CHARTERED",
+    "color": "#0072AA",
+    "icon_url": "https://assets.bibit.id/icons/banks/Standard_Chartered_05042023140038.svg"
+  },
+  "released_date": "2013-05-29",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 93.08
+    },
+    {
+      "name": "Kas dan/atau pasar uang",
+      "percentage": 6.92
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "SSIA",
+      "name": "Surya Semesta Internusa Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4405,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "UNTR",
+      "name": "United Tractors Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4571,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4586915487",
+      "name": "Reksa Dana Eastspring Investments Value Discovery Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "ojkCode": "EII01",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "STANDARD CHARTERED",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 316540000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0515
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.18297063173462913,
+    "3y": -0.0958471319818206,
+    "5y": -0.050486184488372166,
+    "10y": -0.01235715304036522,
+    "all": 0.00020820480496319682
+  },
+  "cagr_adjusted": {
+    "1y": -0.18297063173462913,
+    "3y": -0.0958471319818206,
+    "5y": -0.050486184488372166,
+    "10y": -0.01235715304036522,
+    "all": 0.0002082475531632877
+  },
+  "simplereturn": {
+    "1d": -0.004593786507732234,
+    "1m": -0.03856562275878561,
+    "3m": 0.12770873525057214,
+    "ytd": -0.23714500330053045,
+    "1y": -0.18297063173462913,
+    "3y": -0.260861894049667,
+    "5y": -0.22819703843585204,
+    "10y": -0.11692167161452383,
+    "all": 0.0027826815475300304
+  },
+  "changesvalue": {
+    "1d": -4.639999999999986,
+    "1m": -40.33000000000004,
+    "3m": 113.86000000000001,
+    "ytd": -312.55000000000007,
+    "1y": -225.15999999999997,
+    "3y": -354.84000000000003,
+    "5y": -297.2700000000001,
+    "10y": -133.12,
+    "all": 2.7899999999999636
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.37849177113445165,
+    "3y": -0.38880618176662407,
+    "5y": -0.46005611433295346,
+    "10y": -0.48361045130641334,
+    "all": -0.48361045130641334
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3784917711344517,
+    "3y": -0.3888061817666241,
+    "5y": -0.4600561143329534,
+    "10y": -0.4836104513064133,
+    "all": -0.4836104513064133
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2013-05-30",
+    "value": 1005.42
+  },
+  "trade": null
+}

@@ -1,0 +1,273 @@
+{
+  "id": 1658,
+  "custodian_bank_id": 3,
+  "symbol": "RD1658",
+  "name": "Sucorinvest Premium Fund Kelas A",
+  "type": "Campuran",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2014-01-27",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000000,
+  "minsell": 10000000,
+  "minbuy": 10000000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi &/ Sukuk",
+      "percentage": 75.85
+    },
+    {
+      "name": "Inst. Psr. Uang Dalam Negeri",
+      "percentage": 0.86
+    },
+    {
+      "name": "Efek Ekuitas",
+      "percentage": 23.29
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap III Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Oki Pulp Paper Mills Tahap VI Tahun 2024 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap III Tahun 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Tbs Energi Utama Tahap III Tahun 2026",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II Provident Investasi Bersama Tahap III Tahun 2024 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Buma Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Sinar Mas Multiartha Tahap I Tahun 2024",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan IV Bumi Serpong Damai Tahap II Tahun 2025 Seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan V Indah Kiat Pulp Paper Tahap II Tahun 2024 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap III Tahun 2024 Seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4999924104",
+      "name": "Reksa Dana Sucorinvest Premium Fund Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "ojkCode": "GAMA2",
+    "telepon": "+62 21 5363020",
+    "fax": "+62 21 5363019",
+    "email": "-",
+    "url": "www.sucorinvest.com/id/asset-management"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 932610000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0376
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.047955951161567256,
+    "3y": 0.05438190738513038,
+    "5y": 0.08214999062203066,
+    "10y": 0.05004483977813279,
+    "all": 0.05087340748330482
+  },
+  "cagr_adjusted": {
+    "1y": 0.047955951161567256,
+    "3y": 0.05438190738513038,
+    "5y": 0.08214999062203066,
+    "10y": 0.05004483977813279,
+    "all": 0.05088750872899861
+  },
+  "simplereturn": {
+    "1d": -0.0002912183911910615,
+    "1m": 0.00003970925102270151,
+    "3m": 0.010357518362453577,
+    "ytd": 0.024721579462410936,
+    "1y": 0.047955951161567256,
+    "3y": 0.17217872631766018,
+    "5y": 0.48401161504121726,
+    "10y": 0.6295903725989354,
+    "all": 0.6534729351606683
+  },
+  "changesvalue": {
+    "1d": -0.5127999999999702,
+    "1m": 0.06989999999996144,
+    "3m": 18.046100000000024,
+    "ytd": 42.469100000000026,
+    "1y": 80.55680000000007,
+    "3y": 258.5761,
+    "5y": 574.1445000000001,
+    "10y": 680.115,
+    "all": 695.7180000000001
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.0075306332640181495,
+    "3y": -0.007926747988252991,
+    "5y": -0.007926747988252991,
+    "10y": -0.3599298394794075,
+    "all": -0.3599298394794075
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0075306332640181,
+    "3y": -0.0079267479882529,
+    "5y": -0.0079267479882529,
+    "10y": -0.3599298394794076,
+    "all": -0.3599298394794076
+  },
+  "instant_redemption": {
+    "type": 2
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2016-08-15",
+    "value": 1760.365
+  },
+  "trade": null
+}

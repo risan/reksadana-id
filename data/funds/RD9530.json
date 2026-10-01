@@ -1,0 +1,265 @@
+{
+  "id": 9530,
+  "custodian_bank_id": 10,
+  "symbol": "RD9530",
+  "name": "BRI Seruni Likuid Dolar",
+  "type": "Pasar Uang",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2025-07-10",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 50,
+  "minsell": 100,
+  "minbuy": 1000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Utang",
+      "percentage": 25.69
+    },
+    {
+      "name": "Pasar Uang + Kas",
+      "percentage": 74.31
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "BMRIIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BRINIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BSSPIDSP",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DBSBIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "JAGBIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PDJBIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "US71567RAH93",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "US71568QAC15",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "USY20721BQ18",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "VICTIDJ1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "6037671403",
+      "name": "Reksa Dana BRI Seruni Likuid Dolar",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "ojkCode": "OD002"
+  },
+  "custodian_bank": {
+    "name": "PT BANK DBS INDONESIA",
+    "ojkCode": "DBSI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 196960000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0481
+  },
+  "cagr": {
+    "1y": 0.031530915576694296,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.03329614237402856
+  },
+  "cagr_adjusted": {
+    "1y": 0.031530915576694296,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.03337185970544532
+  },
+  "simplereturn": {
+    "1d": 0.00005475693683920646,
+    "1m": 0.002465186463429969,
+    "3m": 0.007544332024165046,
+    "ytd": 0.02314260610099117,
+    "1y": 0.031530915576694296,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.041020999999999974
+  },
+  "changesvalue": {
+    "1d": 0.00005699999999997374,
+    "1m": 0.0025599999999998957,
+    "3m": 0.007794999999999996,
+    "ytd": 0.023546999999999985,
+    "1y": 0.03182099999999988,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.041020999999999974
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": 0,
+    "5y": 0,
+    "10y": 0,
+    "all": 0
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2025-07-10",
+    "value": 1.041021
+  },
+  "trade": null
+}

@@ -1,0 +1,41 @@
+{
+  "id": 2609,
+  "custodian_bank_id": null,
+  "symbol": "RD2609",
+  "name": "Bni-am Dana Pendapatan Tetap Syariah Dompet Dhuafa",
+  "type": "Obligasi",
+  "profile": "BNI-AM DANA SYARIAH bertujuan untuk mempertahankan nilai investasi dan memberikan tingkat pertumbuhan nilai investasi yang stabil dalam jangka panjang kepada para pemodal yang berpegang pada Syariah Islam (selanjutnya disebut ”Syariah”) dengan hasil investasi yang bersih dari unsur riba’ dan gharar.\n\nBNI-AM DANA SYARIAH akan melakukan investasi dengan komposisi portofolio Efek minimum 80% (delapan puluh persen) dan maksimum 98% (sembilan puluh delapan persen) pada Efek Pendapatan Tetap, termasuk Efek bersifat Utang/Investasi termasuk Obligasi Syariah, transaksi REPO yang bersifat Syariah serta Instrumen Pasar Uang yang bersifat Syariah; minimum 2% (dua persen) dan maksimum 20% (dua puluh persen) pada Kas dan/atau yang setara kas.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "nav": {
+    "date": null,
+    "first_date": null,
+    "value": null
+  },
+  "trade": null
+}

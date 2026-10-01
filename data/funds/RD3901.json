@@ -1,0 +1,267 @@
+{
+  "id": 3901,
+  "custodian_bank_id": 9,
+  "symbol": "RD3901",
+  "name": "Trimegah FTSE Indonesia Low Volatility Factor Index Kelas A",
+  "type": "Saham",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2021-02-19",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 99.34
+    },
+    {
+      "name": "Lainnya",
+      "percentage": 0.66
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INDF",
+      "name": "Indofood Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4919,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "UNTR",
+      "name": "United Tractors Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4571,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "CPIN",
+      "name": "Charoen Pokphand Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5031,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ADRO",
+      "name": "Alamtri Resources Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5007,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "2060767184",
+      "name": "RDI Trimegah FTSE Indo Low Vol Index Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Trimegah Asset Management",
+    "ojkCode": "LG002"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": true,
+  "index": true,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 22480000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.042
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.14435348326013397,
+    "3y": -0.10800700700348287,
+    "5y": -0.019205424721611353,
+    "10y": null,
+    "all": -0.020229747618988103
+  },
+  "cagr_adjusted": {
+    "1y": -0.14435348326013397,
+    "3y": -0.10800700700348287,
+    "5y": -0.019205424721611353,
+    "10y": null,
+    "all": -0.02023952001160567
+  },
+  "simplereturn": {
+    "1d": -0.009437336280419983,
+    "1m": -0.05335288016107764,
+    "3m": 0.059033400656426815,
+    "ytd": -0.19477787942367775,
+    "1y": -0.14435348326013397,
+    "3y": -0.2902844375298713,
+    "5y": -0.09240880147811092,
+    "10y": null,
+    "all": -0.10844140000000002
+  },
+  "changesvalue": {
+    "1d": -8.494100000000003,
+    "1m": -50.24810000000002,
+    "3m": 49.697900000000004,
+    "ytd": -215.66210000000012,
+    "1y": -150.41210000000012,
+    "3y": -364.66099999999994,
+    "5y": -90.77640000000008,
+    "10y": null,
+    "all": -108.44140000000004
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.3167175868802017,
+    "3y": -0.43687831759772344,
+    "5y": -0.43687831759772344,
+    "10y": -0.43687831759772344,
+    "all": -0.43687831759772344
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3167175868802017,
+    "3y": -0.4368783175977234,
+    "5y": -0.4368783175977234,
+    "10y": -0.4368783175977234,
+    "all": -0.4368783175977234
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2021-02-19",
+    "value": 891.5586
+  },
+  "trade": null
+}

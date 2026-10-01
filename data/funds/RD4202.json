@@ -1,0 +1,254 @@
+{
+  "id": 4202,
+  "custodian_bank_id": 10,
+  "symbol": "RD4202",
+  "name": "Mandiri Money Market USD",
+  "type": "Pasar Uang",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100,
+  "minsell": 100,
+  "minbuy": 100,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Deposito",
+      "percentage": 39.29
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 57.41
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank DBS Indonesia",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Mega Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Mega Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Tabungan Negara (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Woori Saudara Indonesia 1906 Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pemerintah RI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Perusahaan Listrik Negara (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5404462715",
+      "name": "Reksa Dana Mandiri Money Market USD",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Mandiri Manajemen Investasi",
+    "ojkCode": "CC002"
+  },
+  "custodian_bank": {
+    "name": "PT BANK DBS INDONESIA",
+    "ojkCode": "DBSI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 337400000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0049
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.024409317803660402,
+    "3y": 0.02917713874223704,
+    "5y": null,
+    "10y": null,
+    "all": 0.02305880296944518
+  },
+  "cagr_adjusted": {
+    "1y": 0.024409317803660402,
+    "3y": 0.02917713874223704,
+    "5y": null,
+    "10y": null,
+    "all": 0.023072989586649717
+  },
+  "simplereturn": {
+    "1d": 0.000034290829549199486,
+    "1m": 0.0008154949458278882,
+    "3m": 0.0051919215007592,
+    "ytd": 0.01773729626078624,
+    "1y": 0.024409317803660402,
+    "3y": 0.09011017115876463,
+    "5y": null,
+    "10y": null,
+    "all": 0.10820600000000002
+  },
+  "changesvalue": {
+    "1d": 0.00003799999999998249,
+    "1m": 0.0009030000000000982,
+    "3m": 0.005724000000000062,
+    "ytd": 0.019314000000000053,
+    "1y": 0.02640599999999993,
+    "3y": 0.09160600000000008,
+    "5y": null,
+    "10y": null,
+    "all": 0.10820600000000002
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0003238613656846301,
+    "3y": -0.0003238613656846301,
+    "5y": -0.0009000000000000119,
+    "10y": -0.0009000000000000119,
+    "all": -0.0009000000000000119
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0003238613656846,
+    "3y": -0.0003238613656846,
+    "5y": -0.0009,
+    "10y": -0.0009,
+    "all": -0.0009
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2022-03-31",
+    "value": 1.108206
+  },
+  "trade": null
+}

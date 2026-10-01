@@ -1,0 +1,215 @@
+{
+  "id": 1094,
+  "custodian_bank_id": null,
+  "symbol": "RD1094",
+  "name": "Mnc Dana Kombinasi",
+  "type": "Campuran",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas",
+      "percentage": 18.46
+    },
+    {
+      "name": "Ekuitas",
+      "percentage": 73.15
+    },
+    {
+      "name": "Deposito",
+      "percentage": 8.39
+    },
+    {
+      "name": "Obligasi Korporasi",
+      "percentage": 0
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "IIKP",
+      "name": "Inti Agri Resources Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "VIVA",
+      "name": "PT Visi Media Asia Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "SMBR",
+      "name": "PT Semen Baturaja (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "NASA",
+      "name": "PT Ayana Land International Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "DEWA",
+      "name": "Darma Henwa Tbk",
+      "annualDividend": 0,
+      "date": "2019-06-13",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "MNC Asset Management, PT",
+    "ojkCode": "EP002",
+    "telepon": "+62 21 29709600",
+    "fax": "+62 21 39836853",
+    "email": "cs.mam@mncgroup.com",
+    "url": "www.mncassetmanagement.com"
+  },
+  "custodian_bank": {
+    "name": "BANK RAKYAT INDONESIA (PERSERO) - CUSTODY, Tbk, PT",
+    "ojkCode": "BRI01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 25272186.14,
+    "date": "2020-04-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.1911236457865313,
+    "3y": -0.117961853856168,
+    "5y": -0.07078878173595671,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.27830980991897547,
+    "3y": -0.36063010719103783,
+    "5y": -0.4125784326139653,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2020-05-05",
+    "first_date": "2008-01-03",
+    "value": 1113.8852
+  },
+  "trade": null
+}

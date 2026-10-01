@@ -1,0 +1,274 @@
+{
+  "id": 523,
+  "custodian_bank_id": 2,
+  "symbol": "RD523",
+  "name": "Sucorinvest Citra Dana Berimbang",
+  "type": "Campuran",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2017-08-16",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi &/ Sukuk",
+      "percentage": 22.89
+    },
+    {
+      "name": "Inst. Psr. Uang Dalam Negeri &/ EBU yang diterbitkan JW <1 thn termasuk Setara Kas",
+      "percentage": 3.47
+    },
+    {
+      "name": "Efek Ekuitas",
+      "percentage": 73.64
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBTN",
+      "name": "Bank Tabungan Negara (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4346,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BSDE",
+      "name": "Bumi Serpong Damai Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4520,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INKP",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4514,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "JSMR",
+      "name": "Jasa Marga (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4729,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MEDC",
+      "name": "Medco Energi Internasional Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4403,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap III Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap II Tahun 2025 Seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Tbs Energi Utama Tahap II Tahun 2026 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TINS",
+      "name": "Timah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4493,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585793044",
+      "name": "Reksa Dana Sucorinvest Citra Dana Berimbang"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "ojkCode": "GAMA2",
+    "telepon": "+62 21 5363020",
+    "fax": "+62 21 5363019",
+    "email": "-",
+    "url": "www.sucorinvest.com/id/asset-management"
+  },
+  "custodian_bank": {
+    "name": "HSBC INDONESIA",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 188060000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0383
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.08255372992965793,
+    "3y": 0.06760821271951922,
+    "5y": 0.092852356614193,
+    "10y": null,
+    "all": 0.11965280745483531
+  },
+  "cagr_adjusted": {
+    "1y": 0.08255372992965793,
+    "3y": 0.06760821271951922,
+    "5y": 0.092852356614193,
+    "10y": null,
+    "all": 0.11969273926248714
+  },
+  "simplereturn": {
+    "1d": -0.007737707168102181,
+    "1m": -0.03728672492717433,
+    "3m": 0.06575290969801051,
+    "ytd": -0.11906720282702732,
+    "1y": 0.08255372992965793,
+    "3y": 0.21684627782009147,
+    "5y": 0.5588612644471278,
+    "10y": null,
+    "all": 1.6686138527059886
+  },
+  "changesvalue": {
+    "1d": -22.550000000000182,
+    "1m": -112,
+    "3m": 178.40999999999985,
+    "ytd": -390.8499999999999,
+    "1y": 220.51999999999998,
+    "3y": 515.3200000000002,
+    "5y": 1036.71,
+    "10y": null,
+    "all": 1808.135
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.25649770134852323,
+    "3y": -0.25649770134852323,
+    "5y": -0.25649770134852323,
+    "10y": -0.346594423484211,
+    "all": -0.346594423484211
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.2564977013485233,
+    "3y": -0.2564977013485233,
+    "5y": -0.2564977013485233,
+    "10y": -0.346594423484211,
+    "all": -0.346594423484211
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 2891.75
+  },
+  "trade": null
+}

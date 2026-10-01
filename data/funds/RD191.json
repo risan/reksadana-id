@@ -1,0 +1,212 @@
+{
+  "id": 191,
+  "custodian_bank_id": null,
+  "symbol": "RD191",
+  "name": "Bahana Quant Strategy",
+  "type": "Campuran",
+  "profile": "BAHANA QUANT STRATEGY bertujuan untuk mendapatkan tingkat keuntungan yang optimal dalam jangka menengah dan panjang melalui penempatan dana pada Efek bersifat ekuitas, Efek bersifat utang dan dalam instrumen pasar uang.\n\nBAHANA QUANT STRATEGY mempunyai komposisi investasi sebagai berikut:\n1. minimum 2% (dua persen) dan maksimum 79% (tujuh puluh sembilan persen) pada Efek bersifat ekuitas dari perusahaan berbadan hukum Indonesia,; dan\n2. minimum 2% (dua persen) dan maksimum 79% (tujuh puluh sembilan persen) pada Efek bersifat utang, yaitu surat utang yang diterbitkan oleh Pemerintah Indonesia atau badan usaha milik Negara serta obligasi yang diterbitkan oleh perusahaan?perusahaan berbadan hukum Indonesia melalui Penawaran Umum dan dicatatkan pada Bursa Efek di Indonesia; dan\n3. minimum 2% (dua persen) dan maksimum 79% (tujuh puluh sembilan persen) pada setara kas dan atau instrumen pasar uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun meliputi Deposito Berjangka, Sertifikat Deposito (Negotiable Certificates of Deposit), Surat Berharga Pasar Uang, Surat Pengakuan Utang, Sertifikat Bank Indonesia, Surat Berharga Komersial (Commercial Paper) yang telah diperingkat oleh perusahaan pemeringkat Efek, Obligasi yang jatuh temponya kurang dari 1 (satu) tahun dan instrumen pasar uang lainnya sesuai peraturan perundang?undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Likuiditas",
+      "percentage": 31.17
+    },
+    {
+      "name": "Saham",
+      "percentage": 4.78
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 64.05
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BMRI",
+      "name": "PT Bank Mandiri (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-11",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "PT Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-11",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-11",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-11",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Pemerintah",
+      "annualDividend": 0,
+      "date": "2019-10-11",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "PT Bahana TCW Investment Management",
+    "ojkCode": "DX002",
+    "telepon": "+62 21 2505277",
+    "fax": "+62 21 2505279",
+    "email": "sinar@bahana.co.id",
+    "url": "www.sinar.bahanatcw.com"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK N. A. - CUSTODY",
+    "ojkCode": "CITI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": null,
+    "date": "2024-05-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.05411399744868373,
+    "3y": 0.05351234600401655,
+    "5y": 0.03832573456989086,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.08161162856336446,
+    "3y": -0.11535089209855565,
+    "5y": -0.28477590632261585,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2024-05-16",
+    "first_date": "2010-02-24",
+    "value": 1238.62
+  },
+  "trade": null
+}

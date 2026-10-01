@@ -1,0 +1,267 @@
+{
+  "id": 985,
+  "custodian_bank_id": 6,
+  "symbol": "RD985",
+  "name": "Manulife Dana Saham Kelas A",
+  "type": "Saham",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2003-08-01",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 150000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "balance",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 91.44
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 8.56
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Tabungan Negara (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "INDF",
+      "name": "Indofood Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4919,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TINS",
+      "name": "Timah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4493,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585793770",
+      "name": "Reksa Dana Manulife Dana Saham"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Manulife Aset Manajemen Indonesia",
+    "ojkCode": "MAN02",
+    "telepon": "+62 21 25557788",
+    "fax": "+62 21 25557676",
+    "email": "MAMI_customer_id@manulifeam.com",
+    "url": "www.reksadana-manulife.com"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK",
+    "ojkCode": "CITI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1630067427564.25,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0347
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.09942053660273331,
+    "3y": -0.08868758166137525,
+    "5y": -0.06860974999479075,
+    "10y": -0.04035018238554544,
+    "all": 0.0931951921884
+  },
+  "cagr_adjusted": {
+    "1y": -0.09942053660273331,
+    "3y": -0.08868758166137525,
+    "5y": -0.06860974999479075,
+    "10y": -0.04035018238554544,
+    "all": 0.09320670902773198
+  },
+  "simplereturn": {
+    "1d": -0.008107795599594847,
+    "1m": -0.05506059107579242,
+    "3m": 0.05953341504902254,
+    "ytd": -0.14257140684245406,
+    "1y": -0.09942053660273331,
+    "3y": -0.24316385459441525,
+    "5y": -0.29909616431567554,
+    "10y": -0.3375885191399427,
+    "all": 6.885563837653124
+  },
+  "changesvalue": {
+    "1d": -64.51000000000022,
+    "1m": -459.8599999999997,
+    "3m": 443.4399999999996,
+    "ytd": -1312.2699999999995,
+    "1y": -871.2500000000009,
+    "3y": -2535.63,
+    "5y": -3367.760000000001,
+    "10y": -4022.0600000000004,
+    "all": 6891.21
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.2863258802233384,
+    "3y": -0.3290910851431197,
+    "5y": -0.44309389187533077,
+    "10y": -0.5422836428896992,
+    "all": -0.6114789349482663
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.2863258802233383,
+    "3y": -0.3290910851431196,
+    "5y": -0.4430938918753308,
+    "10y": -0.5422836428896992,
+    "all": -0.6114789349482664
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2003-08-04",
+    "value": 7892.03
+  },
+  "trade": null
+}

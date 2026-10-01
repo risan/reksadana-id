@@ -1,0 +1,274 @@
+{
+  "id": 1551,
+  "custodian_bank_id": 2,
+  "symbol": "RD1551",
+  "name": "Schroder Dynamic Balanced Fund",
+  "type": "Campuran",
+  "profile": "SCHRODER DYNAMIC BALANCED FUND bertujuan untuk memberikan pertumbuhan modal yang optimal dalam jangka panjang melalui strategi pengelolaan investasi yang aktif dalam Efek bersifat ekuitas, Efek bersifat utang dan instrumen pasar uang termasuk deposito.\n\nSCHRODER DYNAMIC BALANCED FUND akan melakukan investasi dengan komposisi portofolio investasi minimum 1% dan maksimum 79% dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri; minimum 1% dan maksimum 79% dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri; dan/atau minimum 1% dan maksimum 79% dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau deposito; sesuai peraturan perundang·undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2014-06-10",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1.5,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Bersifat Ekuitas",
+      "percentage": 72.9
+    },
+    {
+      "name": "Efek Bersifat Utang",
+      "percentage": 23.88
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 3.22
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ADRO",
+      "name": "Alamtri Resources Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5007,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ARCI",
+      "name": "Archi Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4850,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0100",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6155,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0103",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8710,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SBSN SERI PBS029",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4589045294",
+      "name": "Reksa Dana Schroder Dynamic Balanced Fund"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Schroder Investment Management Indonesia",
+    "ojkCode": "SCH02",
+    "telepon": "+62 21 2965 5100",
+    "fax": "+62 21 515 0505",
+    "email": "-",
+    "url": "www.schroders.com/id/id/investasi-reksadana"
+  },
+  "custodian_bank": {
+    "name": "HSBC INDONESIA",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 86046043614,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0239
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.02083792263772377,
+    "3y": -0.016859761619418157,
+    "5y": 0.01716590847866528,
+    "10y": 0.02914951191577342,
+    "all": 0.0413335054994437
+  },
+  "cagr_adjusted": {
+    "1y": -0.02083792263772377,
+    "3y": -0.016859761619418157,
+    "5y": 0.01716590847866528,
+    "10y": 0.02914951191577342,
+    "all": 0.04134289054457696
+  },
+  "simplereturn": {
+    "1d": -0.0031578819764339627,
+    "1m": -0.04385868016999295,
+    "3m": 0.0691634595381736,
+    "ytd": -0.1059169538886412,
+    "1y": -0.02083792263772377,
+    "3y": -0.04973132258623669,
+    "5y": 0.08882724468042857,
+    "10y": 0.3328605814038301,
+    "all": 0.6467213360968431
+  },
+  "changesvalue": {
+    "1d": -5.209999999999809,
+    "1m": -75.43999999999983,
+    "3m": 106.3900000000001,
+    "ytd": -194.82999999999993,
+    "1y": -35,
+    "3y": -86.06999999999994,
+    "5y": 134.17000000000007,
+    "10y": 410.72,
+    "all": 645.9000000000001
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.22042039872869112,
+    "3y": -0.22042039872869112,
+    "5y": -0.22042039872869112,
+    "10y": -0.3057710833962559,
+    "all": -0.3057710833962559
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.2204203987286911,
+    "3y": -0.2204203987286911,
+    "5y": -0.2204203987286911,
+    "10y": -0.3057710833962559,
+    "all": -0.3057710833962559
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2014-06-11",
+    "value": 1644.63
+  },
+  "trade": null
+}

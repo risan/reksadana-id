@@ -1,0 +1,271 @@
+{
+  "id": 1634,
+  "custodian_bank_id": 8,
+  "symbol": "RD1634",
+  "name": "Simas Syariah Unggulan",
+  "type": "Saham",
+  "profile": "SIMAS SYARIAH UNGGULAN bertujuan untuk memberikan pertumbuhan nilai investasi yang menarik dan optimal dalam jangka panjang melalui investasi portofolio pada Efek bersifat Ekuitas Syariah serta Efek bersifat Utang Syariah, Efek Beragun Asset Syariah dan atau Instrumen Pasar Uang Syariah yang sesuai dengan peraturan perundang – undangan yang berlaku dan mengikuti prinsip – prinsip Syariah Islam.\n\nPortofolio Simas Syariah Unggulan akan dikelola secara aktif guna mendapatkan pendapatan optimal dalam jangka panjang melalui penempatan portofolio investasi minimum 80% dan maksimum 98%  pada Efek bersifat Ekuitas yang termasuk dalam Daftar Efek Syariah yang diterbitkan oleh korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; serta minimum 2% dan maksimum 20% pada Efek bersifat Utang Syariah yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia, Efek Beragun Aset Syariah, Instrumen Pasar Uang\nSyariah dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito syariah; yang sesuai dengan prinsip-prinsip Syariah Islam.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2014-08-08",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Sbsn &/ Sukuk Korporasi &/ Pemerintah, Inst Pasar Uang",
+      "percentage": 7.7
+    },
+    {
+      "name": "Efek Ekuitas Syariah",
+      "percentage": 92.3
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "AADI",
+      "name": "Adaro Andalan Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8951,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ADRO",
+      "name": "Alamtri Resources Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5007,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ARCI",
+      "name": "Archi Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4850,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "AALI",
+      "name": "Astra Agro Lestari Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5009,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Mega Syariah, PT",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "DSNG",
+      "name": "Dharma Satya Nusantara Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4892,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ELSA",
+      "name": "Elnusa Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4426,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "HRTA",
+      "name": "Hartadinata Abadi Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4911,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MAPI",
+      "name": "Mitra Adiperkasa Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4489,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585395570",
+      "name": "Reksa Dana Simas Syariah Unggulan"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sinarmas Asset Management",
+    "ojkCode": "DH002",
+    "telepon": "+62 21 3925550",
+    "fax": "+62 21 392 5539",
+    "email": "cs@sinarmas-am.co.id",
+    "url": "www.sinarmas-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK DANAMON",
+    "ojkCode": "BDMN2"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 36000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0455
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.19754453056766652,
+    "3y": -0.006021510024414534,
+    "5y": 0.012449740864056036,
+    "10y": -0.042595642899154185,
+    "all": -0.0361403331616893
+  },
+  "cagr_adjusted": {
+    "1y": -0.19754453056766652,
+    "3y": -0.006021510024414534,
+    "5y": 0.012449740864056036,
+    "10y": -0.042595642899154185,
+    "all": -0.036148336570533623
+  },
+  "simplereturn": {
+    "1d": -0.009310635677471368,
+    "1m": -0.041692734551033284,
+    "3m": 0.17747177851715845,
+    "ytd": -0.20965091418059834,
+    "1y": -0.19754453056766652,
+    "3y": -0.017955972655742003,
+    "5y": 0.06381808182033932,
+    "10y": -0.3529259311712222,
+    "all": -0.36055881000459844
+  },
+  "changesvalue": {
+    "1d": -6.011600000000044,
+    "1m": -27.829400000000078,
+    "3m": 96.41110000000003,
+    "ytd": -169.67820000000006,
+    "1y": -157.46800000000007,
+    "3y": -11.695699999999988,
+    "5y": 38.37289999999996,
+    "10y": -348.8814,
+    "all": -360.68140000000005
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.397454190032268,
+    "3y": -0.397454190032268,
+    "5y": -0.397454190032268,
+    "10y": -0.5796481293226199,
+    "all": -0.5796481293226199
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.397454190032268,
+    "3y": -0.397454190032268,
+    "5y": -0.397454190032268,
+    "10y": -0.5796481293226199,
+    "all": -0.5796481293226199
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2014-08-11",
+    "value": 639.6586
+  },
+  "trade": null
+}

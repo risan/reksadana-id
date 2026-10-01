@@ -1,0 +1,268 @@
+{
+  "id": 830,
+  "custodian_bank_id": 11,
+  "symbol": "RD830",
+  "name": "Majoris Obligasi Utama Indonesia",
+  "type": "Obligasi",
+  "profile": "Didirikan pertama kali pada tanggal 26 Juni 2015, PT Majoris Asset Management (\"Majoris\") merupakan Manajer Investasi yang terdaftar dan diawasi oleh Otoritas Jasa Keuangan (\"OJK) dan mendapatkan izin usahanya sebagai Manajer Investasi berdasarkan Surat Keputusan Dewan Komisioner OJK No: KEP-60/D.04/2015 tertanggal 27 Oktober 2015. Kegiatan utama Majoris adalah melakukan jasa pengelolaan investasi melalui produk Reksa Dana, Kontrak Pengelolaan Dana, Reksa Dana Penyertaaan Terbatas, Dana Investasi Real Estate, dan produk lainnya sesuai dengan ketentuan yang ditetapkan oleh OJK. Tujuan produk ini adalah untuk meningkatkan pertumbuhan nilai investasi yang optimal dan stabil melalui penembatan pada Efek bersifat utang (obligasi pemerintah atau obligasi korporasi) dalam jangka menengah dan panjang serta dengan risiko yang terukur",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2015-11-30",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 91.99
+    },
+    {
+      "name": "Deposito dan Kas",
+      "percentage": 8.01
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank BJB Syariah tahun 2025 seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank BJB tahap I tahun 2021 seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank BTN tahap I tahun 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Mega",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Dian Swastatika Sentosa 2024 seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Lontar Papyrus Pulp & Paper Industry",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Medco Power Indonesia 2025 seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Oki Pulp & Paper Mills 2025 seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Petrosea tahun 2024 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sinar Mas Multiartha tahun 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "0357969241",
+      "name": "Reksa Dana Majoris Obligasi Utama Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Majoris Asset Management",
+    "ojkCode": "MJR02",
+    "telepon": "+62 21 522 3118",
+    "fax": "+62 21 522 3119",
+    "email": "investorrelations@majoris-asset.com",
+    "url": "www.majoris-asset.com"
+  },
+  "custodian_bank": {
+    "name": "BANK MANDIRI, PT - CUSTODY",
+    "ojkCode": "BMAN1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 30560000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0192
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0779
+  },
+  "cagr": {
+    "1y": 0.036393889779207766,
+    "3y": 0.05136074188622208,
+    "5y": 0.040925431538592516,
+    "10y": 0.046218154184920035,
+    "all": 0.05362196435656141
+  },
+  "cagr_adjusted": {
+    "1y": 0.036393889779207766,
+    "3y": 0.05136074188622208,
+    "5y": 0.040925431538592516,
+    "10y": 0.046218154184920035,
+    "all": 0.053635876125038395
+  },
+  "simplereturn": {
+    "1d": 0.0008412112373685776,
+    "1m": 0.002989789904485507,
+    "3m": 0.027194720141664463,
+    "ytd": 0.02444734847826191,
+    "1y": 0.036393889779207766,
+    "3y": 0.16213148890646956,
+    "5y": 0.2220756646117461,
+    "10y": 0.5711676091260991,
+    "all": 0.7616850179512566
+  },
+  "changesvalue": {
+    "1d": 1.4805999999998676,
+    "1m": 5.250999999999976,
+    "3m": 46.63689999999997,
+    "ytd": 42.03780000000006,
+    "1y": 61.858799999999974,
+    "3y": 245.75929999999994,
+    "5y": 320.1111000000001,
+    "10y": 640.3816999999999,
+    "all": 761.6317
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.019665654246849296,
+    "3y": -0.02482449222277261,
+    "5y": -0.053161666892305504,
+    "10y": -0.10173584119477663,
+    "all": -0.10173584119477663
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0196656542468493,
+    "3y": -0.0248244922227726,
+    "5y": -0.0531616668923056,
+    "10y": -0.1017358411947766,
+    "all": -0.1017358411947766
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2015-12-01",
+    "value": 1761.5617
+  },
+  "trade": null
+}

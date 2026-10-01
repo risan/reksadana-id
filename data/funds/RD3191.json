@@ -1,0 +1,274 @@
+{
+  "id": 3191,
+  "custodian_bank_id": 5,
+  "symbol": "RD3191",
+  "name": "Jarvis Balanced Fund",
+  "type": "Campuran",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2019-05-22",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 1000000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Money Market",
+      "percentage": 20.39
+    },
+    {
+      "name": "Equity",
+      "percentage": 77.81
+    },
+    {
+      "name": "Bonds",
+      "percentage": 1.8
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ADMR",
+      "name": "Alamtri Minerals Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4548,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD - PT Allo Bank Indonesia, Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ARCI",
+      "name": "Archi Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4850,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD - PT Bank Panin Dubai Syariah, Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BRMS",
+      "name": "Bumi Resources Minerals Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4633,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "DEWA",
+      "name": "Darma Henwa Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4966,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ENRG",
+      "name": "Energi Mega Persada Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4594,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INDY",
+      "name": "Indika Energy Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4452,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "WINS",
+      "name": "Wintermar Offshore Marine Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4397,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585793940",
+      "name": "Reksa Dana Jarvis Balanced Fund"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Jarvis Aset Manajemen",
+    "ojkCode": "JAM02",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "DEUTSCHE BANK",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 107117335414,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.061
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.01047702483234203,
+    "3y": 0.024051936678764596,
+    "5y": -0.006312226194513326,
+    "10y": null,
+    "all": 0.09351351423187926
+  },
+  "cagr_adjusted": {
+    "1y": -0.01047702483234203,
+    "3y": 0.024051936678764596,
+    "5y": -0.006312226194513326,
+    "10y": null,
+    "all": 0.09354989579962725
+  },
+  "simplereturn": {
+    "1d": 0.0023457123284826853,
+    "1m": -0.04003021898826031,
+    "3m": 0.035996846051932874,
+    "ytd": -0.16787012942251012,
+    "1y": -0.01047702483234203,
+    "3y": 0.0739052109512266,
+    "5y": -0.031165196105479076,
+    "10y": null,
+    "all": 0.9315945275622051
+  },
+  "changesvalue": {
+    "1d": 4.519999999999982,
+    "1m": -80.53999999999996,
+    "3m": 67.11000000000013,
+    "ytd": -389.6399999999999,
+    "1y": -20.450000000000045,
+    "3y": 132.92000000000007,
+    "5y": -62.12999999999988,
+    "10y": null,
+    "all": 931.5200000000001
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.30689914042265676,
+    "3y": -0.30689914042265676,
+    "5y": -0.36384506577609466,
+    "10y": -0.36384506577609466,
+    "all": -0.36384506577609466
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3068991404226568,
+    "3y": -0.3068991404226568,
+    "5y": -0.3638450657760946,
+    "10y": -0.3638450657760946,
+    "all": -0.3638450657760946
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2019-05-23",
+    "value": 1931.44
+  },
+  "trade": null
+}

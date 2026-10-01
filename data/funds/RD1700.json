@@ -1,0 +1,213 @@
+{
+  "id": 1700,
+  "custodian_bank_id": null,
+  "symbol": "RD1700",
+  "name": "Syailendra Fixed Income Fund",
+  "type": "Obligasi",
+  "profile": "Tujuan Investasi Syailendra Fixed Income Fund adalah memperoleh pendapatan investasi terutama dari Efek-Efek bersifat Utang yang dipilih secara selektif. Kebijakan investasinya adalah sebesar 80% - 100% pada Efek bersifat Utang, diantaranya Surat Utang Negara, SUKUK dan termasuk Surat Berharga Negara lainnya serta Obligasi korporasi dan Efek bersifat utang lain yang memiliki peringkat minimum setara A dari perusahaan/lembaga pemeringkat Efek; sebesar 0% - 15% pada Efek Bersifat Ekuitas yang diterbitkan, ditawarkan dan/atau diperdagangkan di Indonesia berdasarkan peraturan perundang-undangan di Indonesia dan yang tercatat di Bursa Efek Indonesia; sebesar 0% - 20% pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun, meliputi Sertifikat Bank Indonesia, Surat Berharga Pasar Uang, Surat Pengakuan Hutang, Deposito dan setara kas lainnya. Manajer Investasi dapat berinvestasi pada efek-efek yang ditawarkan dan atau diperdagangkan di bursa efek di Indonesia maupun di luar negeri.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas&Setara",
+      "percentage": 1.04
+    },
+    {
+      "name": "Deposito",
+      "percentage": 5.99
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 92.97
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "FR0034",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PBS012",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0079",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0082",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0076",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Syailendra Capital, PT",
+    "ojkCode": "SYA02",
+    "telepon": "+62 21 51400888",
+    "fax": "+62 21 51400967",
+    "email": "cs@syailendracapital.com",
+    "url": "www.syailendracapital.com"
+  },
+  "custodian_bank": {
+    "name": "STANDARD CHARTERED BANK - CUSTODY",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 100189178817.01,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.1273715800360575,
+    "3y": 0.07477540136634953,
+    "5y": 0.08140080077989609,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.046278377059387754,
+    "3y": -0.09721868229896768,
+    "5y": -0.09721868229896768,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2011-12-09",
+    "value": 2706.59
+  },
+  "trade": null
+}

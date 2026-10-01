@@ -1,0 +1,262 @@
+{
+  "id": 1210,
+  "custodian_bank_id": null,
+  "symbol": "RD1210",
+  "name": "Panin Dana Prima",
+  "type": "Saham",
+  "profile": "PANIN DANA PRIMA bertujuan untuk mendapatkan peningkatan nilai investasi yang tinggi di Pasar Modal Indonesia dengan melakukan investasi pada saham yang memiliki prospek tingkat pertumbuhan di atas rata-rata dan secara dinamis melakukan alokasi asset berdasarkan perkembangan pasar.\n\nPANIN DANA PRIMA akan berinvestasi pada minimum sebesar 80% dan maksimum sebesar 100% pada Efek bersifat ekuitas di pasar modal Indonesia, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia; dan sisanya pada Efek bersifat utang dengan peringkat minimum investment grade yaitu AA atau yang setara sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia, dan instrumen pasar uang yang diterbitkan sesuai dengan peraturan perundang-undangan yang belaku di Indonesia.\n\nPANIN DANA PRIMA dapat melakukan pembelian Efek yang diperdagangkan di Bursa Efek luar negeri dengan tidak melampaui batas maksimum 15% dari Nilai Aktiva Bersih PANIN DANA PRIMA.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Inst. Pasar Uang & Kas",
+      "percentage": 13.23
+    },
+    {
+      "name": "Efek Obligasi",
+      "percentage": 0
+    },
+    {
+      "name": "Efek Ekuitas",
+      "percentage": 86.77
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "MAPI",
+      "name": "Mitra Adiperkasa Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ICBP",
+      "name": "Indofood CBP Sukses Makmur Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TCID",
+      "name": "Mandom Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "GGRM",
+      "name": "Gudang Garam Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PNBN",
+      "name": "Bank Pan Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "DLTA",
+      "name": "Delta Djakarta Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "PT Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PNLF",
+      "name": "Panin Financial Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telekomunikasi Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Panin Asset Management, PT",
+    "ojkCode": "GR003",
+    "telepon": "+62 21 5150595",
+    "fax": "+62 21 5150601",
+    "email": "cs@panin-am.co.id",
+    "url": "www.panin-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 301034395691.86,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.04589274584247383,
+    "3y": 0.01096825957556113,
+    "5y": 0.002900506945555659,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.1153850225434282,
+    "3y": -0.2134939890552926,
+    "5y": -0.3051011641031689,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2007-12-28",
+    "value": 3130.7843
+  },
+  "trade": null
+}

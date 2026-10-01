@@ -1,0 +1,272 @@
+{
+  "id": 1755,
+  "custodian_bank_id": 2,
+  "symbol": "RD1755",
+  "name": "TRAM Consumption Plus Kelas A",
+  "type": "Saham",
+  "profile": "TRAM CONSUMPTION PLUS bertujuan untuk memperoleh peningkatan nilai investasi yang maksimal dalam jangka panjang berupa capital gain dan dividen melalui investasi pada Efek bersifat ekuitas. TRAM CONSUMPTION PLUS akan melakukan investasi dengan komposisi portofolio Efek yaitu minimum 80% dan maksimum 100% pada Efek bersifat ekuitas yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; minimum 0% dan maksimum 20% pada Efek pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2011-05-05",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 85.75
+    },
+    {
+      "name": "Lainnya",
+      "percentage": 14.25
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "EMAS",
+      "name": "Merdeka Gold Resources Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9567,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INCO",
+      "name": "Vale Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4470,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585393879",
+      "name": "Reksa Dana Tram Consumption Plus Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Trimegah Asset Management",
+    "ojkCode": "LG002",
+    "telepon": "+62 21 29248088",
+    "fax": "+62 21 2924 8040",
+    "email": "cs_tram@trimegah.com",
+    "url": "www.trimegah-am.com"
+  },
+  "custodian_bank": {
+    "name": "HSBC INDONESIA",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 107150000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0443
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.05235399984350142,
+    "3y": -0.015124046384607404,
+    "5y": 0.013082175367073123,
+    "10y": 0.014592131510737127,
+    "all": 0.039580377918004395
+  },
+  "cagr_adjusted": {
+    "1y": -0.05235399984350142,
+    "3y": -0.015124046384607404,
+    "5y": 0.013082175367073123,
+    "10y": 0.014592131510737127,
+    "all": 0.039587550631406065
+  },
+  "simplereturn": {
+    "1d": -0.008519812247571257,
+    "1m": -0.059273452266901394,
+    "3m": 0.12414834433807553,
+    "ytd": -0.1704462426478648,
+    "1y": -0.05235399984350142,
+    "3y": -0.04468938824234714,
+    "5y": 0.06714484606030702,
+    "10y": 0.15588572155764835,
+    "all": 0.8192460993049853
+  },
+  "changesvalue": {
+    "1d": -15.610000000000127,
+    "1m": -114.46000000000004,
+    "3m": 200.6199999999999,
+    "ytd": -373.2500000000002,
+    "1y": -100.36000000000013,
+    "3y": -84.98000000000002,
+    "5y": 114.29999999999995,
+    "10y": 244.99,
+    "all": 818.05
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.3334325717493748,
+    "3y": -0.3334325717493748,
+    "5y": -0.3334325717493748,
+    "10y": -0.4581807797823626,
+    "all": -0.4581807797823626
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3334325717493748,
+    "3y": -0.3334325717493748,
+    "5y": -0.3334325717493748,
+    "10y": -0.4581807797823626,
+    "all": -0.4581807797823626
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2011-05-06",
+    "value": 1816.59
+  },
+  "trade": null
+}

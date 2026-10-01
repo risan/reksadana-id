@@ -1,0 +1,209 @@
+{
+  "id": 56,
+  "custodian_bank_id": null,
+  "symbol": "RD56",
+  "name": "Aurora Berimbang",
+  "type": "Campuran",
+  "profile": "Reksa Dana Aurora Berimbang bertujuan memberikan imbal hasil dengan investasi berdasarkan alokasi berimbang di sejumlah kelasnya, yaitu efek bersifat ekuitas di Indonesia dan efek bersifat utang baik yang dikeluarkan oleh pemerintah Republik Indonesia maupun yang dikeluarkan oleh badan hukum atau\nperusahaan yang masuk kategori layak investasi (\"Investment Grade\") serta dapat berinvestasi pada instrumen pasar uang, seiring upaya pengembangan nilai investasi yang responsif terhadap pergerakan siklus perekonomian.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Surat Utang",
+      "percentage": 0
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 1.08
+    },
+    {
+      "name": "Saham",
+      "percentage": 98.92
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "NIKL",
+      "name": "Pelat Timah Nusantara Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "ITMG",
+      "name": "Indo Tambangraya Megah Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBTN",
+      "name": "Bank Tabungan Negara (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "HMSP",
+      "name": "HM Sampoerna Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "INKP",
+      "name": "Indah Kiat Pulp & Paper Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-10",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Aurora Asset Management, PT",
+    "ojkCode": "ARO02",
+    "telepon": "021-80667091-93",
+    "fax": "021-80667094"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA - CUSTODY, Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 604.58,
+    "date": "2024-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.23002386019244,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.28882655821629966,
+    "3y": -0.28882655821629966,
+    "5y": -0.28882655821629966,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2024-05-08",
+    "first_date": "2018-03-23",
+    "value": 389.7611
+  },
+  "trade": null
+}

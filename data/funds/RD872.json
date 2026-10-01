@@ -1,0 +1,274 @@
+{
+  "id": 872,
+  "custodian_bank_id": 5,
+  "symbol": "RD872",
+  "name": "Mandiri Investa Syariah Berimbang Kelas A",
+  "type": "Campuran",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2004-11-04",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham syariah",
+      "percentage": 52.28
+    },
+    {
+      "name": "Deposito Syariah",
+      "percentage": 3.07
+    },
+    {
+      "name": "Sukuk",
+      "percentage": 44.25
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "AADI",
+      "name": "Adaro Andalan Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8951,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ADRO",
+      "name": "Alamtri Resources Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5007,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ADMR",
+      "name": "Alamtri Minerals Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4548,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank DKI (Unit Usaha Syariah)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "INKP",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4514,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4563,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pernerintah RI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sarana Multi Infrastruktur (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TINS",
+      "name": "Timah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4493,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4588048428",
+      "name": "Reksa Dana Mandiri Investa Syariah Berimbang"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Mandiri Manajemen Investasi",
+    "ojkCode": "CC002",
+    "telepon": "+62 21 5263505",
+    "fax": "+62 21 5263506",
+    "email": "-",
+    "url": "www.mandiri-investasi.co.id"
+  },
+  "custodian_bank": {
+    "name": "BUT DEUTSCHE BANK AG",
+    "ojkCode": "DBJK1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 577480000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.04
+  },
+  "avg_yield": {
+    "date": "2023-06-30",
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.031207906126322182,
+    "3y": 0.04872379821950967,
+    "5y": 0.03771009407060144,
+    "10y": null,
+    "all": 0.034937658706227115
+  },
+  "cagr_adjusted": {
+    "1y": -0.031207906126322182,
+    "3y": 0.04872379821950967,
+    "5y": 0.03771009407060144,
+    "10y": null,
+    "all": 0.03494887397450697
+  },
+  "simplereturn": {
+    "1d": -0.0008449897360003344,
+    "1m": -0.03176589509135619,
+    "3m": 0.05806135242255106,
+    "ytd": -0.10229388098240566,
+    "1y": -0.031207906126322182,
+    "3y": 0.15340909090909083,
+    "5y": 0.20331742655091123,
+    "10y": null,
+    "all": 0.34749983099353265
+  },
+  "changesvalue": {
+    "1d": -3.5399999999999636,
+    "1m": -137.32999999999993,
+    "3m": 229.69999999999982,
+    "ytd": -476.9800000000005,
+    "1y": -134.84000000000015,
+    "3y": 556.7399999999998,
+    "5y": 707.2599999999998,
+    "10y": null,
+    "all": 1079.4699999999998
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.19571854818932388,
+    "3y": -0.19571854818932388,
+    "5y": -0.19571854818932388,
+    "10y": -0.19571854818932388,
+    "all": -0.19571854818932388
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.195718548189324,
+    "3y": -0.195718548189324,
+    "5y": -0.195718548189324,
+    "10y": -0.195718548189324,
+    "all": -0.195718548189324
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 4185.86
+  },
+  "trade": null
+}

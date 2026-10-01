@@ -1,0 +1,269 @@
+{
+  "id": 3531,
+  "custodian_bank_id": 6,
+  "symbol": "RD3531",
+  "name": "BNP Paribas Greater China Equity Syariah USD Kelas RK1",
+  "type": "Reksadana Global",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 6,
+    "name": "CITIBANK",
+    "color": "#3d7fd0",
+    "icon_url": "https://assets.bibit.id/icons/banks/Citibank_05042023141502.svg"
+  },
+  "released_date": "2020-01-15",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 1000,
+  "minsell": 1000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 1.5,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas",
+      "percentage": 7.87
+    },
+    {
+      "name": "Saham",
+      "percentage": 92.13
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Advanced Micro Fabrication Inc China A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Alibaba Group Holding",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Byd H H",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Contemporary Amperex Technology A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Delta Electronics",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Elite Material",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Jiangsu Hengli Hydraulic A A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Mediatek",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Taiwan Semiconductor Manufacturing",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Wiwynn Corporation",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4588688753",
+      "name": "REKSA DANA SYARIAH BNP PARIBAS GREATER CHINA EQUITY SYARIAH USD",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNP Paribas Asset Management",
+    "ojkCode": "MEES2",
+    "telepon": "",
+    "fax": "",
+    "email": "",
+    "url": ""
+  },
+  "custodian_bank": {
+    "name": "CITIBANK, N. A",
+    "ojkCode": "CITI1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 235340000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0264
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.12145801133436374,
+    "3y": 0.1547252036623008,
+    "5y": -0.013387843789965381,
+    "10y": null,
+    "all": -0.020518211814758214
+  },
+  "cagr_adjusted": {
+    "1y": 0.11589023611997451,
+    "3y": 0.15631445930289423,
+    "5y": -0.013440376492048767,
+    "10y": null,
+    "all": -0.019915937538477757
+  },
+  "simplereturn": {
+    "1d": 0.004134604341334391,
+    "1m": -0.02214517391790627,
+    "3m": -0.03135386660757811,
+    "ytd": 0.16001061430277286,
+    "1y": 0.11589023611997451,
+    "3y": 0.5460654288240494,
+    "5y": -0.06541956173169428,
+    "10y": null,
+    "all": -0.1263115818926751
+  },
+  "changesvalue": {
+    "1d": 0.0035999999999999366,
+    "1m": -0.01980000000000004,
+    "3m": -0.028299999999999992,
+    "ytd": 0.12059999999999993,
+    "1y": 0.09079999999999999,
+    "3y": 0.30879999999999996,
+    "5y": -0.06120000000000003,
+    "10y": null,
+    "all": -0.12639999999999996
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.10380211708792397,
+    "3y": -0.1582744405182568,
+    "5y": -0.5008609338600223,
+    "10y": -0.5720364741641337,
+    "all": -0.5720364741641337
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.103802117087924,
+    "3y": -0.1582744405182568,
+    "5y": -0.5008609338600223,
+    "10y": -0.5720364741641337,
+    "all": -0.5720364741641337
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2020-01-16",
+    "value": 0.8743
+  },
+  "trade": null
+}

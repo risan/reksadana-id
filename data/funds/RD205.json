@@ -1,0 +1,271 @@
+{
+  "id": 205,
+  "custodian_bank_id": 9,
+  "symbol": "RD205",
+  "name": "Batavia Dana Kas Maxima",
+  "type": "Pasar Uang",
+  "profile": "Reksa Dana BATAVIA DANA KAS MAXIMA bertujuan untuk mendapatkan tingkat pertumbuhan dana yang optimum dengan tetap mempertahankan nilai modal dalam jangka pendek dan menengah melalui penempatan dana pada instrumen pasar uang dan/atau efek bersifat hutang yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun.\n\nBATAVIA DANA KAS MAXIMA akan menginvestasikan dananya dengan komposisi investasi sebesar 100% (seratus persen) pada instrumen pasar uang dan/atau setara kas dan/atau efek bersifat hutang dengan jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun meliputi obligasi dan surat hutang lainnya yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun, yang diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.\n\nBATAVIA DANA KAS MAXIMA juga dapat mengadakan perjanjian pembelian atau penjualan kembali (REPO) sehubungan dengan penyelesaian transaksi instrumen pasar uang tersebut di atas.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2007-02-20",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 3.06
+    },
+    {
+      "name": "Obligasi Korporasi",
+      "percentage": 38.92
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 58.02
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN VI INDOMOBIL FINANCE DENGAN TINGKAT BUNGA TETAP TAHAP II TAHUN 2026 SERI A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN VI PEGADAIAN TAHAP IV TAHUN 2025 SERI A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK JABAR BANTEN, TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK KB BUKOPIN, TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK NAGARI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK SEABANK INDONESIA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK SUMUT (BPD SUMUT)",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK TABUNGAN NEGARA (PERSERO), TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK VICTORIA INTERNATIONAL TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BPD RIAU UNIT USAHA SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4586542842",
+      "name": "Reksa Dana Batavia Dana Kas Maxima"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "ojkCode": "BZ002",
+    "telepon": "+62 21 5208390, +62 21 5207374, +62 21 5206936",
+    "fax": "+62 21 5206899",
+    "email": "customer@bpam.co.id",
+    "url": "www.bpam.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CENTRAL ASIA Tbk, PT",
+    "ojkCode": "BCA01"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 14658993559006.4,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0125
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0594
+  },
+  "cagr": {
+    "1y": 0.037246043583847976,
+    "3y": 0.0430126278545202,
+    "5y": 0.037259229402728966,
+    "10y": 0.04315985881658446,
+    "all": 0.03430676151181311
+  },
+  "cagr_adjusted": {
+    "1y": 0.037246043583847976,
+    "3y": 0.0430126278545202,
+    "5y": 0.037259229402728966,
+    "10y": 0.04315985881658446,
+    "all": 0.034311680263391375
+  },
+  "simplereturn": {
+    "1d": 0.00019731034840853034,
+    "1m": 0.004385073023719155,
+    "3m": 0.010793877347550218,
+    "ytd": 0.026227324791561202,
+    "1y": 0.037246043583847976,
+    "3y": 0.13466771909569641,
+    "5y": 0.20070560808831317,
+    "10y": 0.5258388517474097,
+    "all": 0.92628
+  },
+  "changesvalue": {
+    "1d": 0.37999999999988177,
+    "1m": 8.410000000000082,
+    "3m": 20.569999999999936,
+    "ytd": 49.23000000000002,
+    "1y": 69.17000000000007,
+    "3y": 228.6199999999999,
+    "5y": 321.99,
+    "10y": 663.8399999999999,
+    "all": 926.28
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00029427597344344747,
+    "3y": -0.00029427597344344747,
+    "5y": -0.00029427597344344747,
+    "10y": -0.00029427597344344747,
+    "all": -0.011515840458656612
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": 0,
+    "5y": 0,
+    "10y": -0.0002942759734434,
+    "all": -0.0115158404586567
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2007-04-30",
+    "value": 1926.28
+  },
+  "trade": null
+}

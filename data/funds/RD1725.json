@@ -1,0 +1,269 @@
+{
+  "id": 1725,
+  "custodian_bank_id": 6,
+  "symbol": "RD1725",
+  "name": "BNP Paribas Cakra Syariah USD Kelas RK1",
+  "type": "Reksadana Global",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 6,
+    "name": "CITIBANK",
+    "color": "#3d7fd0",
+    "icon_url": "https://assets.bibit.id/icons/banks/Citibank_05042023141502.svg"
+  },
+  "released_date": "2016-02-16",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 1000,
+  "minsell": 1000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 1,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas",
+      "percentage": -1.2
+    },
+    {
+      "name": "Saham",
+      "percentage": 101.2
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Advanced Micro Devices",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Alphabet Class A A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Amazon Com Inc",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Apple",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Broadcom Inc",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Eli Lilly",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Micron Technology",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Microsoft",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Nvidia",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Visa Class A A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4588693901",
+      "name": "REKSA DANA SYARIAH BNP PARIBAS CAKRA SYARIAH USD",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNP Paribas Asset Management",
+    "ojkCode": "MEES2",
+    "telepon": "+62 21 2521574",
+    "fax": "+62 21 2521594",
+    "email": "sales.service@bnpparibas-ip.co.id",
+    "url": "www.bnpparibas-ip.co.id"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK, N. A",
+    "ojkCode": "CITI1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 51570000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0266
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.09253499222395023,
+    "3y": 0.1366420691003951,
+    "5y": 0.06779790737523972,
+    "10y": null,
+    "all": 0.08399907190084388
+  },
+  "cagr_adjusted": {
+    "1y": 0.08593394595578219,
+    "3y": 0.13641994783781408,
+    "5y": 0.06900559956120644,
+    "10y": null,
+    "all": 0.08392589433595488
+  },
+  "simplereturn": {
+    "1d": -0.0005861419300815518,
+    "1m": -0.0028405530723921713,
+    "3m": 0.013716663835569909,
+    "ytd": 0.047203334064487956,
+    "1y": 0.08593394595578219,
+    "3y": 0.4676298801106671,
+    "5y": 0.3960465524299668,
+    "10y": null,
+    "all": 1.013580767608604
+  },
+  "changesvalue": {
+    "1d": -0.0013999999999998458,
+    "1m": -0.006799999999999695,
+    "3m": 0.03230000000000022,
+    "ytd": 0.10760000000000014,
+    "1y": 0.1889000000000003,
+    "3y": 0.7606000000000002,
+    "5y": 0.6772000000000002,
+    "10y": null,
+    "all": 1.2016000000000002
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.09820962975838687,
+    "3y": -0.1786639300200361,
+    "5y": -0.267652334619775,
+    "10y": -0.28115156398798624,
+    "all": -0.28115156398798624
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0982096297583869,
+    "3y": -0.1786639300200362,
+    "5y": -0.267652334619775,
+    "10y": -0.2811515639879862,
+    "all": -0.2811515639879862
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 2.3871
+  },
+  "trade": null
+}

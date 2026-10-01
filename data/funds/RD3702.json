@@ -1,0 +1,264 @@
+{
+  "id": 3702,
+  "custodian_bank_id": 3,
+  "symbol": "RD3702",
+  "name": "Eastspring Syariah Greater China Equity USD Kelas A",
+  "type": "Reksadana Global",
+  "profile": "Reksa Dana Syariah Eastspring Syariah Greater China Equity USD berinvestasi pada efek syariah bersifat ekuitas yang diterbitkan oleh korporasi berbadan hukum yang beroperasi di Republik Rakyat Tiongkok, Hong Kong SAR, atau Taiwan yang diperdagangkan di Bursa Efek di Republik Rakyat Tiongkok, Hong Kong SAR, Taiwan atau Amerika Serikat, dan melakukan penempatan pada instrumen deposito syariah. Reksadana ini dikategorikan berisiko tinggi.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2020-06-15",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 1000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": 100,
+  "min_buy_after_sell_all": 10000,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 30,
+      "max_value": 175,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas dan/atau  Pasar Uang Syariah",
+      "percentage": 0.51
+    },
+    {
+      "name": "Efek Syariah (dalam dan luar negeri)",
+      "percentage": 99.49
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "ALIBABA GROUP HOLDING LTD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "ASPEED TECHNOLOGY INC",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DELTA ELECTRONICS INC",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INNOVENT BIOLOGICS INC",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "MEDIATEK INCORPORATION",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "MEITUAN",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TAIWAN SEMICONDUCTOR MANUFAC",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TECHTRONIC INDUSTRIES CO LTD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "WUXI APPTEC CO LTD - CNY1 H",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "WUXI BIOLOGICS (CAYMAN) INC - USD0.00002",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4589027661",
+      "name": "REKSA DANA SYARIAH EASTSPRING SYARIAH GREATER CHINA EQUITY USD ",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "ojkCode": "EII01"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 21580000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0438
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.07143129889093869,
+    "3y": 0.10342885321382789,
+    "5y": -0.048988296404154474,
+    "10y": null,
+    "all": -0.03219764355645882
+  },
+  "cagr_adjusted": {
+    "1y": 0.06224229768134504,
+    "3y": 0.10510687140634456,
+    "5y": -0.048005027784798315,
+    "10y": null,
+    "all": -0.03149692872219356
+  },
+  "simplereturn": {
+    "1d": 0.004569133646544765,
+    "1m": -0.030774466026554537,
+    "3m": -0.11465695947804722,
+    "ytd": 0.09419770917467907,
+    "1y": 0.06224229768134504,
+    "3y": 0.34962414084028026,
+    "5y": -0.21806028128972765,
+    "10y": null,
+    "all": -0.18256099999999997
+  },
+  "changesvalue": {
+    "1d": 0.003717999999999999,
+    "1m": -0.02595499999999995,
+    "3m": -0.10586299999999993,
+    "ytd": 0.07037199999999999,
+    "1y": 0.047897999999999996,
+    "3y": 0.21176000000000006,
+    "5y": -0.22795999999999994,
+    "10y": null,
+    "all": -0.18256099999999997
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.18551765853699875,
+    "3y": -0.22402162375364687,
+    "5y": -0.5197817532429656,
+    "10y": -0.6231754651824394,
+    "all": -0.6231754651824394
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.1855176585369988,
+    "3y": -0.224021623753647,
+    "5y": -0.5197817532429655,
+    "10y": -0.6231754651824394,
+    "all": -0.6231754651824394
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2020-06-15",
+    "value": 0.817439
+  },
+  "trade": null
+}

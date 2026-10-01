@@ -1,0 +1,267 @@
+{
+  "id": 6649,
+  "custodian_bank_id": 2,
+  "symbol": "RD6649",
+  "name": "Grow SRI KEHATI Kelas O",
+  "type": "Saham",
+  "profile": "REKSA DANA INDEKS -ROW SRI-KEHATI adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 Tahun 1995 tentang Pasar Modal sebagaimana terakhir diubah dengan Undang-Undang Nomor 4 Tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan (\"Undang-Undang Pasar Modal\") beserta peraturan pelaksanaannya. \nREKSA DANA INDEKS GROW SRI-KEHATI berujuan untuk memperoleh potensi hasil investasi dari pertumbuhan ekonomi Indonesia dengan melakukan investasi jangka panjang pada saham-saham yang terdaftar dalam indeks SRI-KEHATI. \nREKSA DANA INDEKS GROW SRI-KEHATI akan melakukan investasi dengan komposisi portofolio investasi, yaitu minimum 80% (delapan puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat Ekuitas yang berasal dari kumpulan Efek yang terdaftar dalam Indeks SRI-KEHATI, dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diperdagangkan baik di dalam maupun di luar negeri dan/atau instrumen pasar uang dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. ",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2024-06-19",
+  "is_top_product": 1,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 99.01
+    },
+    {
+      "name": "Pasar Uang dan/atau Deposito",
+      "percentage": 0.99
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ICBP",
+      "name": "Indofood CBP Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4891,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INDF",
+      "name": "Indofood Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4919,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ISAT",
+      "name": "Indosat Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4866,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "KLBF",
+      "name": "Kalbe Farma Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4973,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5027158175",
+      "name": "REKSA DANA INDEKS GROW SRI KEHATI KELAS O"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Grow Investments Indonesia",
+    "ojkCode": "AYR02"
+  },
+  "custodian_bank": {
+    "name": "HSBC INDONESIA",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": true,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 117337009211,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0149
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.11909058101768322,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -0.043593479155021986
+  },
+  "cagr_adjusted": {
+    "1y": -0.11909058101768322,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -0.04364465325640221
+  },
+  "simplereturn": {
+    "1d": -0.009062681719934629,
+    "1m": -0.054499963359609827,
+    "3m": 0.06329099021673867,
+    "ytd": -0.17360234239180172,
+    "1y": -0.11909058101768322,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -0.09683000000000008
+  },
+  "changesvalue": {
+    "1d": -8.259999999999991,
+    "1m": -52.06000000000006,
+    "3m": 53.75999999999999,
+    "ytd": -189.73000000000013,
+    "1y": -122.10000000000002,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": -96.83000000000004
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.29620393704950376,
+    "3y": -0.3238834524091694,
+    "5y": -0.3238834524091694,
+    "10y": -0.3238834524091694,
+    "all": -0.3238834524091694
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.2962039370495039,
+    "3y": -0.3238834524091694,
+    "5y": -0.3238834524091694,
+    "10y": -0.3238834524091694,
+    "all": -0.3238834524091694
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2024-06-19",
+    "value": 903.17
+  },
+  "trade": null
+}

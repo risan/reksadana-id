@@ -1,0 +1,276 @@
+{
+  "id": 323,
+  "custodian_bank_id": 10,
+  "symbol": "RD323",
+  "name": "BNI-AM Dana Likuid Kelas A",
+  "type": "Pasar Uang",
+  "profile": "BNI-AM DANA LIKUID bertujuan untuk memberikan tingkat pertumbuhan investasi yang menarik dengan risiko minimal sekaligus memperoleh tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat.\n\nBNI-AM DANA LIKUID akan melakukan investasi dengan komposisi portofolio Efek sebesar 100% dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau Efek bersifat utang, yang diterbitkan oleh korporasi dan/atau Pemerintah Republik Indonesia, dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang dijual dalam Penawaran Umum dan atau diperdagangkan di\nBursa Efek Indonesia; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2012-12-27",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Kas & Deposito",
+      "percentage": 32
+    },
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 13
+    },
+    {
+      "name": "Obligasi Korporasi",
+      "percentage": 55
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank Mega Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Nagari/Sumbar",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Riau Kepri Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Sulselbar",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Chandra Asri Petrochemical",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Energi Mega Persada",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0059",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5998,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0090",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5806,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OKI Pulp & Paper Mills",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sampoerna Agro",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585677966",
+      "name": "Reksa Dana BNI AM Dana Likuid Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNI Asset Management",
+    "ojkCode": "NI002",
+    "telepon": "+62 21 29969646",
+    "fax": "+62 21 29969647",
+    "email": "corsec@bni-am.co.id",
+    "url": "www.bni-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "PT BANK DBS INDONESIA",
+    "ojkCode": "DBSI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 648228064777,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0049
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0507
+  },
+  "cagr": {
+    "1y": 0.04165590711851719,
+    "3y": 0.04495941736422959,
+    "5y": 0.03925955751453669,
+    "10y": 0.04740106157126944,
+    "all": 0.05379317692542407
+  },
+  "cagr_adjusted": {
+    "1y": 0.04165590711851719,
+    "3y": 0.04495941736422959,
+    "5y": 0.03925955751453669,
+    "10y": 0.04740106157126944,
+    "all": 0.05380416718223846
+  },
+  "simplereturn": {
+    "1d": 0.0001798832217572155,
+    "1m": 0.005174258673845911,
+    "3m": 0.014828334648776753,
+    "ytd": 0.02981944145488047,
+    "1y": 0.04165590711851719,
+    "3y": 0.14103317840464125,
+    "5y": 0.21232800023571707,
+    "10y": 0.589022685317494,
+    "all": 1.0571982840514789
+  },
+  "changesvalue": {
+    "1d": 0.3700000000003456,
+    "1m": 10.590000000000146,
+    "3m": 30.060000000000173,
+    "ytd": 59.570000000000164,
+    "1y": 82.27000000000021,
+    "3y": 254.2800000000002,
+    "5y": 360.3100000000002,
+    "10y": 762.5900000000001,
+    "all": 1057.2300000000002
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.0007507656815559649,
+    "3y": -0.0007507656815559649,
+    "5y": -0.0009876202944486545,
+    "10y": -0.0012569130216188995,
+    "all": -0.0012569130216188995
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.000750765681556,
+    "3y": -0.000750765681556,
+    "5y": -0.0009876202944487,
+    "10y": -0.0012569130216189,
+    "all": -0.0012569130216189
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2012-12-28",
+    "value": 2057.26
+  },
+  "trade": null
+}

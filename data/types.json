@@ -1,0 +1,21 @@
+{
+  "types": [
+    {
+      "code": 3,
+      "label": "Pasar Uang"
+    },
+    {
+      "code": 2,
+      "label": "Obligasi"
+    },
+    {
+      "code": 1,
+      "label": "Saham"
+    },
+    {
+      "code": 0,
+      "label": "Campuran"
+    }
+  ],
+  "show_sharia_tab": true
+}

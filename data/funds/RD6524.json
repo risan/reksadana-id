@@ -1,0 +1,263 @@
+{
+  "id": 6524,
+  "custodian_bank_id": 6,
+  "symbol": "RD6524",
+  "name": "BNP Paribas Sukuk Negara Kelas RK1",
+  "type": "Obligasi",
+  "profile": "BNP PARIBAS SUKUK NEGARA bertujuan untuk memberikan tingkat pengembalian yang potensial kepada Pemegang Unit Penyertaan melalui alokasi yang strategis pada Sukuk yang diterbitkan oleh Pemerintah Republik Indonesia yang telah dijual melalui Penawaran Umum dan/atau diperdagangkan baik di dalam maupun diluar negeri, yang sesuai dengan Prinsip Syariah di Pasar Modal dan peraturan perundang-undangan yang berlaku di Indonesia.\nSesuai dengan tujuan investasinya, BNP PARIBAS SUKUK NEGARA akan melakukan investasi dengan komposisi portofolio investasi minimum sebesar 85% (delapan puluh lima persen) dan maksimum sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada Sukuk yang ditawarkan di Indonesia melalui Penawaran Umum dan/atau Surat Berharga Syariah Negara; dan minimum sebesar 0% (nol pesen) dan maksimum sebesar 15% (lima belas persen) dari Nilai Aktiva Bersih pada surat berharga komersial syariah yang jatuh temponya 1 (satu) tahun atau lebih dan masuk kategori layak investasi (investment grade) serta dimasukkan dalam Penitipan Kolektif pada Lembaga Penyimpanan dan Penyelesaian oleh penerbit surat berharga komersial syariah dan/atau instrumen pasar uang Syariah dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito syariah; sesuai dengan Prinsip Syariah di Pasar Modal dan peraturan perundang-undangan yang berlaku di Indonesia",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2024-04-03",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pendapatan Tetap",
+      "percentage": 97.99
+    },
+    {
+      "name": "Kas",
+      "percentage": 2.01
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Pbs023 8.125% 15May2030",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pbs029 6.375% 15Mar2034",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS034",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6024,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS037",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6077,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS038",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6386,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sbsn Pbs012 8.875% 15Nov31",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sbsn Pbs028",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sbsn Pbs033 6.75% 15Jun2047",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sbsn Seri Pbs005 6.75% 15Apr43",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4999418624",
+      "name": "Reksa Dana Syariah Berbasis Sukuk BNP Paribas Sukuk Negara kelas RK1"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BNP Paribas Asset Management",
+    "ojkCode": "MEES2"
+  },
+  "custodian_bank": {
+    "name": "CITIBANK, N. A",
+    "ojkCode": "CITI1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 17940000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0226
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.069
+  },
+  "cagr": {
+    "1y": 0.008117729964215892,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.03950784439357902
+  },
+  "cagr_adjusted": {
+    "1y": 0.008117729964215892,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.039552107093989486
+  },
+  "simplereturn": {
+    "1d": 0.0007904276486139228,
+    "1m": -0.002499320836729102,
+    "3m": 0.014701818382800047,
+    "ytd": -0.00861300861300851,
+    "1y": 0.008117729964215892,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.10153999999999996
+  },
+  "changesvalue": {
+    "1d": 0.8699999999998909,
+    "1m": -2.759999999999991,
+    "3m": 15.960000000000036,
+    "ytd": -9.569999999999936,
+    "1y": 8.86999999999989,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 101.53999999999996
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.033076639679387454,
+    "3y": -0.033076639679387454,
+    "5y": -0.033076639679387454,
+    "10y": -0.033076639679387454,
+    "all": -0.033076639679387454
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0330766396793875,
+    "3y": -0.0330766396793875,
+    "5y": -0.0330766396793875,
+    "10y": -0.0330766396793875,
+    "all": -0.0330766396793875
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2024-04-03",
+    "value": 1101.54
+  },
+  "trade": null
+}

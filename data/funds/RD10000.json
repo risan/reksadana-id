@@ -1,0 +1,268 @@
+{
+  "id": 10000,
+  "custodian_bank_id": 2,
+  "symbol": "RD10000",
+  "name": "Batavia USD Money Market",
+  "type": "Pasar Uang",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2025-11-07",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100,
+  "minsell": 100,
+  "minbuy": 100,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Reksadana",
+      "percentage": 4.22
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 54.31
+    },
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 41.47
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "HSBC GLF-USD LIQUIDITY-C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN INDOIS 4.15 03/29/27",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN INDOIS 4.4 PCT 06/06/27",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT ALLO BANK INDONESIA TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK MEGA, TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK RAKYAT INDONESIA (PERSERO), TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK TABUNGAN NEGARA (PERSERO), TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK VICTORIA INTERNATIONAL TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "REPUBLIC OF INDONESIA 3.85 PCT 18.07.2027",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "REPUBLIC OF INDONESIA 4.350PCT 08.01.2027",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": " 6038532112 ",
+      "name": "Reksa Dana Batavia USD Money Market ",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "ojkCode": "BZ002"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 47637807.49,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.023731042123253943,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.023731042123253943
+  },
+  "cagr_adjusted": {
+    "1y": 0.023731042123253943,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.023731042123253943
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": 0.0017655713585091881,
+    "3m": 0.005909583374372085,
+    "ytd": 0.01794079537526172,
+    "1y": 0.021300000000000097,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.021300000000000097
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": 0.0018000000000000238,
+    "3m": 0.006000000000000005,
+    "ytd": 0.018000000000000016,
+    "1y": 0.021300000000000097,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.021300000000000097
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00029776674937964653,
+    "3y": -0.00029776674937964653,
+    "5y": -0.00029776674937964653,
+    "10y": -0.00029776674937964653,
+    "all": -0.00029776674937964653
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0002977667493797,
+    "3y": -0.0002977667493797,
+    "5y": -0.0002977667493797,
+    "10y": -0.0002977667493797,
+    "all": -0.0002977667493797
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2025-11-07",
+    "value": 1.0213
+  },
+  "trade": null
+}

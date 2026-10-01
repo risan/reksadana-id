@@ -1,0 +1,268 @@
+{
+  "id": 8812,
+  "custodian_bank_id": 3,
+  "symbol": "RD8812",
+  "name": "Grow Obligasi Optima Dinamis Kelas Q",
+  "type": "Obligasi",
+  "profile": "REKSA DANA GROW OBLIGASI OPTIMA DINAMIS bertujuan untuk memperoleh pertumbuhan hasil investasi yang optimal dalam jangka menengah dan panjang melalui investasi sesuai Kebijakan Investasi. \n\nREKSA DANA GROW OBLIGASI OPTIMA DINAMIS akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% (delapan puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat Utang yang diperdagangkan baik di dalam maupun di luar negeri; dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Instrumen pasar uang dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": "2026-07-17",
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2024-10-02",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 1000000,
+  "minsell": 10000,
+  "minbuy": 1000000,
+  "min_buy_next_purchase": 10000,
+  "min_buy_after_sell_all": 1000000,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi Korporasi",
+      "percentage": 4.64
+    },
+    {
+      "name": "Pasar Uang dan/atau Deposito",
+      "percentage": 14.03
+    },
+    {
+      "name": "Obligasi Negara",
+      "percentage": 81.33
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK ALADIN SYARIAH Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK CAPITAL INDONESIA Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBL NEGARA REPUBLIK INDONESIA SERI FR0073",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBL NEGARA REPUBLIK INDONESIA SERI FR0079",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0104",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8733,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBL NEGARA REPUBLIK INDONESIA SERI FR0105",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0106",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9238,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0107",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9239,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0108",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9548,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0110",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 10929,
+      "product_type": "FR",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5028617113",
+      "name": "REKSA DANA GROW OBLIGASI OPTIMA DINAMIS KELAS Q"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Grow Investments Indonesia",
+    "ojkCode": "AYR02"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 2751689969.64,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0085
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.071
+  },
+  "cagr": {
+    "1y": -0.024029539859875104,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.01531419909494458
+  },
+  "cagr_adjusted": {
+    "1y": 0.010904305134121328,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.04720042444622785
+  },
+  "simplereturn": {
+    "1d": 0.00330926008837662,
+    "1m": -0.003903909707593245,
+    "3m": 0.01933224741429096,
+    "ytd": -0.01934549192645263,
+    "1y": 0.010904305134121328,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.09635163032671001
+  },
+  "changesvalue": {
+    "1d": 3.3999999999998636,
+    "1m": -4.039999999999964,
+    "3m": 19.722178844637142,
+    "ytd": -20.87862216162398,
+    "1y": 11.517127082659044,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 96.35163032670994
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.07790573979001891,
+    "3y": -0.07790573979001891,
+    "5y": -0.07790573979001891,
+    "10y": -0.07790573979001891,
+    "all": -0.07790573979001891
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0615198454905382,
+    "3y": -0.0615198454905381,
+    "5y": -0.0615198454905381,
+    "10y": -0.0615198454905381,
+    "all": -0.0615198454905381
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2024-10-02",
+    "value": 1030.82
+  },
+  "trade": null
+}

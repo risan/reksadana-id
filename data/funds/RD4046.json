@@ -1,0 +1,267 @@
+{
+  "id": 4046,
+  "custodian_bank_id": 2,
+  "symbol": "RD4046",
+  "name": "Sucorinvest Sharia Sukuk Fund Kelas A",
+  "type": "Obligasi",
+  "profile": "Produk Reksa Dana Berbasis Sukuk terbaru dari Sucorinvest Asset Management. SSSF bertujuan untuk menjadi pilihan investasi bagi Pemegang Unit Penyertaan untuk memperoleh tingkat pengembalian yang menarik dengan memelihara stabilitas modal yang optimal sesuai dengan prinsip syariah di Pasar Modal.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2021-10-29",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0.5,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Syariah Berpendapatan Tetap &/ Inst. Psr Uang Syariah Dlm. Negeri &/ Deposito Syariah",
+      "percentage": 0.98
+    },
+    {
+      "name": "Sukuk &/ SBSN",
+      "percentage": 99.02
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Sukuk Ijarah Berkelanjutan I Bali Towerindo Sentra Tahap III Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap III Tahun 2024 Seri C",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan | Pindo Deli Pulp And Paper Mills Tahap III Tahun 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap I Tahun 2025 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap II Tahun 2026 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp Paper Mills Tahap I Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp Paper Mills Tahap II Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp Paper Mills Tahap IV Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan IV Indah Kiat Pulp Paper Tahap I Tahun 2024 Seri B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan IV Indah Kiat Pulp Paper Tahap V Tahun 2025",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4994889879",
+      "name": "Reksa Dana Berbasis Sukuk Sucorinvest Sharia Sukuk Fund Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "ojkCode": "GAMA2"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 3400000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0143
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0814
+  },
+  "cagr": {
+    "1y": 0.04754797100986563,
+    "3y": 0.05630467756594104,
+    "5y": null,
+    "10y": null,
+    "all": 0.05674088084301965
+  },
+  "cagr_adjusted": {
+    "1y": 0.04754797100986563,
+    "3y": 0.05630467756594104,
+    "5y": null,
+    "10y": null,
+    "all": 0.056773336006726405
+  },
+  "simplereturn": {
+    "1d": 0.00011430661606692816,
+    "1m": 0.0030111504275986967,
+    "3m": 0.011467942937735565,
+    "ytd": 0.03043222235307974,
+    "1y": 0.04754797100986563,
+    "3y": 0.17860318087523464,
+    "5y": null,
+    "10y": null,
+    "all": 0.3124100000000001
+  },
+  "changesvalue": {
+    "1d": 0.15000000000009095,
+    "1m": 3.9400000000000546,
+    "3m": 14.88000000000011,
+    "ytd": 38.75999999999999,
+    "1y": 59.570000000000164,
+    "3y": 198.8800000000001,
+    "5y": null,
+    "10y": null,
+    "all": 312.4100000000001
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.002432920895314994,
+    "3y": -0.004732271939513311,
+    "5y": -0.004812699780914476,
+    "10y": -0.004812699780914476,
+    "all": -0.004812699780914476
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0024329208953149,
+    "3y": -0.0047322719395131,
+    "5y": -0.0048126997809144,
+    "10y": -0.0048126997809144,
+    "all": -0.0048126997809144
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2021-10-29",
+    "value": 1312.41
+  },
+  "trade": null
+}

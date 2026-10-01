@@ -1,0 +1,211 @@
+{
+  "id": 1217,
+  "custodian_bank_id": null,
+  "symbol": "RD1217",
+  "name": "Panin Dana US Dollar",
+  "type": "Campuran",
+  "profile": "PANIN DANA US DOLLAR bertujuan untuk memberikan hasil investasi jangka panjang dalam US Dollar Amerika Serikat di atas infl asi maupun deposito US Dollar Amerika Serikat di Indonesia, melalui investasi pada Efek bersifat utang dalam denominasi Dollar Amerika Serikat dan Efek bersifat ekuitas, serta instrumen pasar uang dalam denominasi US Dollar.\n\nPANIN DANA US DOLLAR akan berinvestasi minimum sebesar 65% dan maksimum sebesar 75% pada Efek bersifat utang yaitu Surat Utang Negara dan atau Obligasi Korporasi dengan peringkat minimal A (investment grade) atau yang setara, dalam denominasi US Dollar Amerika Serikat, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia; minimum sebesar 5% dan maksimum 35% pada Efek bersifat ekuitas yang telah dijual dalam Penawaran Umum dan atau\ndicatatkan di Bursa Efek baik di dalam maupun di luar negeri, sesuai dengan peraturan perundangundangan yang berlaku di Indonesia; dan minimum sebesar 5% dan maksimum 35% pada instrumen pasar uang dalam denominasi US Dollar Amerika Serikat yang mempunyai jatuh tempo kurang dari 1 (satu) tahun, yang diterbitkan sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17952,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "USD"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Ekuitas",
+      "percentage": 19.45
+    },
+    {
+      "name": "Inst. Pasar Uang & Kas",
+      "percentage": 7.46
+    },
+    {
+      "name": "Efek Obligasi",
+      "percentage": 73.09
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "PNLF",
+      "name": "Panin Financial Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Rep of Indonesia – Indon 29",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Rep of Indonesia – Indon 27 New",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PNBN",
+      "name": "Bank Pan Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2019-10-22",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Panin Asset Management, PT",
+    "ojkCode": "GR003",
+    "telepon": "+62 21 5150595",
+    "fax": "+62 21 5150601",
+    "email": "cs@panin-am.co.id",
+    "url": "www.panin-am.co.id"
+  },
+  "custodian_bank": {
+    "name": "STANDARD CHARTERED BANK - CUSTODY",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1805706.13269,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.105959086866291,
+    "3y": 0.07412135328811931,
+    "5y": 0.05255227399626161,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.04225850179760715,
+    "3y": -0.0642237725761231,
+    "5y": -0.13092475969506134,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2007-12-14",
+    "value": 1.7587
+  },
+  "trade": null
+}

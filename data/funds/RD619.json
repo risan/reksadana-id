@@ -1,0 +1,272 @@
+{
+  "id": 619,
+  "custodian_bank_id": 7,
+  "symbol": "RD619",
+  "name": "BRI Seruni Pasar Uang III",
+  "type": "Pasar Uang",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2010-02-01",
+  "is_top_product": 1,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Utang",
+      "percentage": 59.55
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 40.45
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "BBRI01ASOCN2",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BDKIIDJ1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0056",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "JAGBIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "MDKA05CN3",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PDJBIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PDRIIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SSPIIDJA",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SWAGIDJ1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SYDKIDJ1",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4993225099",
+      "name": "Reksa Dana BRI Seruni Pasar Uang III"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT BRI Manajemen Investasi",
+    "ojkCode": "OD002",
+    "telepon": "+62 21 500688",
+    "fax": "+62 21 3501707",
+    "email": "reksadanaonline@danareksa.com",
+    "url": "www.danareksa.com"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA TBK, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 2390000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0048
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0706
+  },
+  "cagr": {
+    "1y": 0.042102471116439055,
+    "3y": 0.04932162191636236,
+    "5y": 0.04230258459720626,
+    "10y": 0.044325984062648205,
+    "all": 0.039530666019281346
+  },
+  "cagr_adjusted": {
+    "1y": 0.042102471116439055,
+    "3y": 0.04932162191636236,
+    "5y": 0.04230258459720626,
+    "10y": 0.044325984062648205,
+    "all": 0.03953730665772737
+  },
+  "simplereturn": {
+    "1d": 0.00017326628734593008,
+    "1m": 0.0049681707443200995,
+    "3m": 0.01106172538699246,
+    "ytd": 0.029640285421768553,
+    "1y": 0.042102471116439055,
+    "3y": 0.15538271379617807,
+    "5y": 0.2301811652119614,
+    "10y": 0.5429819262474289,
+    "all": 0.9054901
+  },
+  "changesvalue": {
+    "1d": 0.33009999999990214,
+    "1m": 9.420000000000073,
+    "3m": 20.84739999999988,
+    "ytd": 54.853399999999965,
+    "1y": 76.9846,
+    "3y": 256.26160000000004,
+    "5y": 356.5392999999999,
+    "10y": 670.5500999999999,
+    "all": 905.4901
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00018145297458960208,
+    "3y": -0.00028059520873058297,
+    "5y": -0.0007045712867441711,
+    "10y": -0.007510150996066556,
+    "all": -0.007510150996066556
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0001814529745897,
+    "3y": -0.0002646476693835,
+    "5y": -0.0007045712867442,
+    "10y": -0.0075101509960665,
+    "all": -0.0075101509960665
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2010-02-17",
+    "value": 1905.4901
+  },
+  "trade": null
+}

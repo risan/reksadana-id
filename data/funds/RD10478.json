@@ -1,0 +1,252 @@
+{
+  "id": 10478,
+  "custodian_bank_id": 2,
+  "symbol": "RD10478",
+  "name": "Grow USD Liquid Fund",
+  "type": "Pasar Uang",
+  "profile": "REKSA DANA GROW USD LIQUID FUND adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang\nNomor 8 tahun 1995 tentang Pasar Modal sebagaimana terakhir diubah dengan Undang-Undang Nomor 4 tahun 2023 tentang\nPengembangan dan Penguatan Sektor Keuangan (“Undang-Undang Pasar Modal”) beserta peraturan pelaksanaannya.\nREKSA DANA GROW USD LIQUID FUND bertujuan untuk memperoleh pendapatan yang optimal berupa pertumbuhan nilai\ninvestasi dan memenuhi kebutuhan dana tunai dalam denominasi Dolar Amerika Serikat (USD).\nREKSA DANA GROW USD LIQUID FUND hanya melakukan investasi pada instrumen pasar uang dalam negeri dan/atau Efek\nbersifat Utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun, yang ditawarkan melalui Penawaran Umum dan diperdagangkan baik di dalam maupun di luar negeri dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2026-04-22",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": false,
+  "min_asset": 100,
+  "minsell": 10,
+  "minbuy": 100,
+  "min_buy_next_purchase": 10,
+  "min_buy_after_sell_all": 100,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang dan/atau Deposito",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT Bank Allo Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT Bank China Construction Bank Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK DANAMON INDONESIA TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK MANDIRI (PERSERO) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK MEGA TBK",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK NEGARA INDONESIA (PERSERO) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT Bank Syariah Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBL INDON 4.35 01/08/27 REGS",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "6038587871",
+      "name": "Reksa Dana Grow USD Liquid Fund",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Grow Investments Indonesia",
+    "ojkCode": "AYR02"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1666493.62,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.038
+  },
+  "cagr": {
+    "1y": 0.021303845011086953,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.021303845011086953
+  },
+  "cagr_adjusted": {
+    "1y": 0.021303845011086953,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.021303845011086953
+  },
+  "simplereturn": {
+    "1d": 0.0000990785693053553,
+    "1m": 0.001587616590593477,
+    "3m": 0.005378486055777065,
+    "ytd": null,
+    "1y": 0.009400000000000075,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.009400000000000075
+  },
+  "changesvalue": {
+    "1d": 0.00009999999999998899,
+    "1m": 0.0016000000000000458,
+    "3m": 0.005400000000000071,
+    "ytd": null,
+    "1y": 0.009400000000000075,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.009400000000000075
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00029999999999996696,
+    "3y": -0.00029999999999996696,
+    "5y": -0.00029999999999996696,
+    "10y": -0.00029999999999996696,
+    "all": -0.00029999999999996696
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0003,
+    "3y": -0.0003,
+    "5y": -0.0003,
+    "10y": -0.0003,
+    "all": -0.0003
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2026-04-22",
+    "value": 1.0094
+  },
+  "trade": null
+}

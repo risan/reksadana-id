@@ -1,0 +1,208 @@
+{
+  "id": 706,
+  "custodian_bank_id": null,
+  "symbol": "RD706",
+  "name": "I-hajj Syariah Fund",
+  "type": "Obligasi",
+  "profile": "Mendapatkan pengembalian investasi yang stabil dan meningkat dalam jangka panjang dengan tetap mempertahankan nilai modal melalui investasi yang sesuai dengan prinsip syariah, serta menyisihkan 1% dari Nilai Aktiva Bersih guna memberangkatkan haji/umroh bagi masyarakat menengah bawah.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 4.58
+    },
+    {
+      "name": "Efek Utang",
+      "percentage": 95.42
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Sukuk Wakalah Medco Power Indonesia II Tahun 2019 Seri A",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Ijarah Berkelanjutan III PLN Tahap III Tahun 2019 Seri A",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Ijarah Berkelanjutan III Indosat Tahap I Tahun 2019 Seri B",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Bank CIMB Niaga Tahap I Tahun 2018 Seri B",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Ijarah Berkelanjutan I Aneka Gas Industri Tahap I Tahun 2017 Seri A",
+      "annualDividend": 0,
+      "date": "2019-10-28",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Insight Investments Management, PT",
+    "ojkCode": "IIM02",
+    "telepon": "+62 21 29333078",
+    "fax": "+62 21 29333077",
+    "email": "-",
+    "url": "www.i-invest.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK CIMB NIAGA - CUSTODY, Tbk, PT",
+    "ojkCode": "BNGA1"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 1476183596318.93,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.04904059026195506,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.005119706949287095,
+    "3y": -0.009075060274394198,
+    "5y": -0.009075060274394198,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2018-01-26",
+    "value": 5692.0985
+  },
+  "trade": null
+}

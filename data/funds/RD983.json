@@ -1,0 +1,267 @@
+{
+  "id": 983,
+  "custodian_bank_id": 3,
+  "symbol": "RD983",
+  "name": "Manulife Dana Kas II Kelas A",
+  "type": "Pasar Uang",
+  "profile": "Berdiri pada 1996, PT Manulife Aset Manajemen Indonesia (MAMI) adalah anak perusahaan Manulife yang menawarkan jasa manajemen investasi dan berbagai reksa dana di Indonesia. Sejak berdiri, MAMI terus berhasil mempertahankan posisinya sebagai salah satu perusahaan terbesar di industri manajemen investasi di Indonesia, dengan dana kelolaan Rp 109.4 triliun pada akhir Maret 2022. MAMI mengelola 31 reksa dana yang terdiri dari reksa dana pasar uang, pendapatan tetap, campuran, saham, baik rupiah, dolar AS dan syariah. MAMI terdaftar dan diawasi oleh Otoritas Jasa Keuangan, dengan izin No. Kep-07/PM/MI/1997 tanggal 21 Agustus 1997. \n\nReksa Dana Manulife Dana Kas II Kelas D1 adalah salah satu Kelas Unit Penyertaan MDK II. Informasi tanggal efektif, Nomor Surat Pernyataan Efektif, tujuan investasi, Total Nilai Aktiva Bersih, 10 kepemilikan Efek terbesar dalam portofolio, kebijakan investasi, dan persentase portofolio merujuk pada MDK II.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 72,
+    "name": "JAGO",
+    "color": "#f09f1a",
+    "icon_url": "https://assets.bibit.id/icons/banks/jago-circle-v2.svg"
+  },
+  "released_date": "2009-01-23",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 20000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 100
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "TD PT Bank Rakyat Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Tabungan Negara (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOGB 5 1/8 04/15/27",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BBKPIJ 6.45 09/09/26",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank KB Bukopin",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "IMASIJ 4.95 03/04/27",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank DKI",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PPGDIJ 6.1 09/13/26",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Syariah Nasional",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Aladin Syariah Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585794571",
+      "name": "Reksa Dana Manulife Dana Kas II"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Manulife Aset Manajemen Indonesia",
+    "ojkCode": "MAN02",
+    "telepon": "+62 21 25557788",
+    "fax": "+62 21 25557676",
+    "email": "MAMI_customer_id@manulifeam.com",
+    "url": "www.reksadana-manulife.com"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 5248627398086.95,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0101
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0686
+  },
+  "cagr": {
+    "1y": 0.03829723289612108,
+    "3y": 0.044920603271069615,
+    "5y": 0.03809371770428749,
+    "10y": 0.04403307992731387,
+    "all": 0.03801563139309394
+  },
+  "cagr_adjusted": {
+    "1y": 0.03829723289612108,
+    "3y": 0.044920603271069615,
+    "5y": 0.03809371770428749,
+    "10y": 0.04403307992731387,
+    "all": 0.03802163129255032
+  },
+  "simplereturn": {
+    "1d": 0.00019645349738928175,
+    "1m": 0.0045015342599468156,
+    "3m": 0.01304345549464081,
+    "ytd": 0.027953264225028862,
+    "1y": 0.03829723289612108,
+    "3y": 0.14090603512330913,
+    "5y": 0.205543300806321,
+    "10y": 0.5386597528193544,
+    "all": 0.93468
+  },
+  "changesvalue": {
+    "1d": 0.38000000000010914,
+    "1m": 8.670000000000073,
+    "3m": 24.910000000000082,
+    "ytd": 52.61000000000013,
+    "1y": 71.36000000000013,
+    "3y": 238.94000000000005,
+    "5y": 329.8600000000001,
+    "10y": 677.3,
+    "all": 934.6800000000001
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00030431657318563676,
+    "3y": -0.0003234894513030051,
+    "5y": -0.0004385938194819694,
+    "10y": -0.0008120649651972567,
+    "all": -0.0009739614390776863
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0003043165731855,
+    "3y": -0.0003234894513031,
+    "5y": -0.0004385938194821,
+    "10y": -0.0008120649651972,
+    "all": -0.0009739614390777
+  },
+  "instant_redemption": {
+    "type": 1,
+    "quota_limit": 3
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2009-01-27",
+    "value": 1934.68
+  },
+  "trade": null
+}

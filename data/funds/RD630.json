@@ -1,0 +1,268 @@
+{
+  "id": 630,
+  "custodian_bank_id": 3,
+  "symbol": "RD630",
+  "name": "Eastspring Investments IDR High Grade Kelas A",
+  "type": "Obligasi",
+  "profile": "EASTSPRING INVESTMENTS IDR HIGH GRADE bertujuan untuk memberikan potensi keuntungan atas investasi jangka panjang pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi Indonesia yang ditawarkan dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia dan instrumen pasar uang dalam negeri.\n\nEASTSPRING INVESTMENTS IDR HIGH GRADE akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% dan maksimum 100% dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi Indonesia yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia yang telah mendapat peringkat dari perusahaan pemeringkat Efek yang terdaftar di OJK dan masuk dalam kategori layak investasi (investment grade) dan minimum 0% dan maksimum 20% dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito berdenominasi Rupiah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 12,
+    "name": "STANDARD CHARTERED",
+    "color": "#0072AA",
+    "icon_url": "https://assets.bibit.id/icons/banks/Standard_Chartered_05042023140038.svg"
+  },
+  "released_date": "2013-01-09",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": true,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 94.21
+    },
+    {
+      "name": "Kas dan/atau pasar uang",
+      "percentage": 5.79
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "OBL NEGARA REPUBLIK INDONESIA FR0087",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBL NEGERA REPUBLIC INDONESIA FR0072",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0091",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5802,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI NEGARA REPUBLIK IND SERI FR0098",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0100",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6155,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0101",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6261,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0103",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8710,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0104",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 8733,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0108",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9548,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0109",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 9551,
+      "product_type": "FR",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "5402470399",
+      "name": "REKSA DANA EASTSPRING INVESTMENTS IDR HIGH GRADE KELAS A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "ojkCode": "EII01",
+    "telepon": "+62 21 29245555",
+    "fax": "+62 21 29245556",
+    "email": "-",
+    "url": "www.eastspring.co.id"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 8080000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0218
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0692
+  },
+  "cagr": {
+    "1y": -0.0695319305273262,
+    "3y": -0.005905331537306324,
+    "5y": 0.005004762021451059,
+    "10y": 0.031161880180613277,
+    "all": 0.03339943882534002
+  },
+  "cagr_adjusted": {
+    "1y": -0.008596289132457913,
+    "3y": 0.04299822931221642,
+    "5y": 0.03438357440372464,
+    "10y": 0.04612504049501798,
+    "all": 0.044305483955767944
+  },
+  "simplereturn": {
+    "1d": 0.0019845321353821888,
+    "1m": -0.003015187505398753,
+    "3m": 0.013651743188194398,
+    "ytd": -0.026239278240023145,
+    "1y": -0.008596289132457913,
+    "3y": 0.13462072828700666,
+    "5y": 0.18415370330089442,
+    "10y": 0.5697698257417001,
+    "all": 0.813555079679386
+  },
+  "changesvalue": {
+    "1d": 3.1100000000001273,
+    "1m": -4.774579566673992,
+    "3m": 21.487843778217893,
+    "ytd": -44.35540072250001,
+    "1y": -14.506839651261998,
+    "3y": 215.17507967938582,
+    "5y": 282.03507967938594,
+    "10y": 658.255079679386,
+    "all": 813.5550796793859
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.09254524226503213,
+    "3y": -0.09254524226503213,
+    "5y": -0.09254524226503213,
+    "10y": -0.10870173040479669,
+    "all": -0.16010808363192497
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0574308440376319,
+    "3y": -0.0574308440376311,
+    "5y": -0.0617296657489128,
+    "10y": -0.1087017304047967,
+    "all": -0.160108083631925
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2013-01-09",
+    "value": 1570.23
+  },
+  "trade": null
+}

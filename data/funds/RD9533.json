@@ -1,0 +1,148 @@
+{
+  "id": 9533,
+  "custodian_bank_id": null,
+  "symbol": "RD9533",
+  "name": "Capital Optimal Protected Fund 15",
+  "type": "Terproteksi",
+  "profile": "CAPITAL OPTIMAL PROTECTED FUND 15 bertujuan untuk memberikan proteksi sebesar 100% (seratus persen) atas Pokok Investasi pada Tanggal Jatuh Tempo dan memberikan potensi tambahan hasil investasi melalui investasi sesuai dengan Kebijakan Investasi.\n\nJumlah Unit Penyertaan yang Ditawarkan : Secara terus menerus dengan jumlah sekurang-kurangnya sebesar 10.000.000 (sepuluh juta) Unit Penyertaan dan sampai dengan jumlah sebanyak-banyaknya sebesar 1.000.000.000 (satu miliar) Unit Penyertaan pada Masa Penawaran.\nIndikasi Tanggal Penawaran : 15 Juli 2025 – 15 Agustus 2025\nIndikasi Tanggal Peluncuran : 18 Agustus 2025\nIndikasi Target Efek yang menjadi Basis Nilai Proteksi : Obligasi Berkelanjutan II Oki Pulp & Paper Mills Tahap II Tahun 2025 Seri A\nPeringkat Efek : IdA+ (Single A Plus) dari Pefindo\nJangka Waktu Investasi : Maksimum 3 (tiga) tahun 3 (tiga) bulan sejak Tanggal Emisi",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 2
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 98
+    }
+  ],
+  "investment_manager": {
+    "name": "Capital Asset Management, PT"
+  },
+  "custodian_bank": {
+    "name": ""
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 28160299943.08,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": null
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2025-08-19",
+    "value": 1028.2895
+  },
+  "trade": null
+}

@@ -1,0 +1,269 @@
+{
+  "id": 3595,
+  "custodian_bank_id": 3,
+  "symbol": "RD3595",
+  "name": "Bahana Likuid Syariah Kelas G",
+  "type": "Pasar Uang",
+  "profile": "-",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "moneymarket",
+  "bank_redeem": {
+    "id": 72,
+    "name": "JAGO",
+    "color": "#f09f1a",
+    "icon_url": "https://assets.bibit.id/icons/banks/jago-circle-v2.svg"
+  },
+  "released_date": "2020-03-17",
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Sukuk",
+      "percentage": 18.26
+    },
+    {
+      "name": "Likuiditas",
+      "percentage": 81.74
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "BANK ALADIN SYARIAH - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK PEMBANGUNAN DAERAH NUSA TENGGARA BARAT, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK PEMBANGUNAN DAERAH RIAU KEPRI, PT - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD SUMATERA SELATAN & BANGKA BELITUNG - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK SYARIAH NASIONAL - TD",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN I DIAN SWASTATIKA SENTOSA TAHAP II TAHUN 2024 SERI B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK MUDHARABAH BERWAWASAN SOSIAL BERKELANJUTAN I PEGADAIAN TAHAP III TAHUN 2025 A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK MUDHARABAH BERWAWASAN SOSIAL ORANGE BERKELANJUTAN I PNM TAHAP IV TAHUN 2026 SERI A",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK WAKALAH BERKELANJUTAN I MEDCO POWER INDONESIA TAHAP I TAHUN 2022 SERI B",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4991041456",
+      "name": "Reksa Dana Bahana Likuid Syariah Kelas G"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Bahana TCW Investment Management",
+    "ojkCode": "DX002"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 1416590000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.017
+  },
+  "avg_yield": {
+    "date": "2026-08-31",
+    "percentage": 0.0575
+  },
+  "cagr": {
+    "1y": 0.047595082320799564,
+    "3y": 0.05034254889238121,
+    "5y": 0.04314033289360042,
+    "10y": null,
+    "all": 0.042269361409351
+  },
+  "cagr_adjusted": {
+    "1y": 0.047595082320799564,
+    "3y": 0.05034254889238121,
+    "5y": 0.04314033289360042,
+    "10y": null,
+    "all": 0.04228742367687577
+  },
+  "simplereturn": {
+    "1d": 0.00022881724366752287,
+    "1m": 0.00474256818878338,
+    "3m": 0.014301183386186134,
+    "ytd": 0.03488849255827908,
+    "1y": 0.047595082320799564,
+    "3y": 0.15875835012193829,
+    "5y": 0.2351328950590541,
+    "10y": null,
+    "all": 0.31139000000000006
+  },
+  "changesvalue": {
+    "1d": 0.3000000000001819,
+    "1m": 6.190000000000055,
+    "3m": 18.49000000000001,
+    "ytd": 44.210000000000036,
+    "1y": 59.580000000000155,
+    "3y": 179.67000000000007,
+    "5y": 249.6500000000001,
+    "10y": null,
+    "all": 311.3900000000001
+  },
+  "riskprofile": "Low",
+  "maxdrawdown": {
+    "1y": -0.00008501666326587998,
+    "3y": -0.00008501666326587998,
+    "5y": -0.00013926154246068911,
+    "10y": -0.00013926154246068911,
+    "all": -0.00013926154246068911
+  },
+  "maxdrawdown_adjusted": {
+    "1y": 0,
+    "3y": -0.000085016663266,
+    "5y": -0.0001392615424608,
+    "10y": -0.0001392615424608,
+    "all": -0.0001392615424608
+  },
+  "instant_redemption": {
+    "type": 1,
+    "quota_limit": 3
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2020-03-16",
+    "value": 1311.39
+  },
+  "trade": {
+    "total_trades": 3673,
+    "period": "1d"
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "id": 3937,
+  "custodian_bank_id": 3,
+  "symbol": "RD3937",
+  "name": "Eastspring Syariah Fixed Income USD Kelas A",
+  "type": "Obligasi",
+  "profile": "",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2021-04-15",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 17905,
+    "currency": "USD"
+  },
+  "is_has_dividend": true,
+  "min_asset": 100,
+  "minsell": 100,
+  "minbuy": 100,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 5,
+      "max_value": 150,
+      "type": "balance",
+      "currency": "USD"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Pasar Uang Syariah",
+      "percentage": 13.97
+    },
+    {
+      "name": "Obligasi Syariah",
+      "percentage": 86.03
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "INDONESIA GOVT SUKUK 4.5% 01/12/2030",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT 4.55% 23/07/2030",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN 4.4%01/03/28",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN 5.1% 02/07/2029",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN 5.4% 15/11/2028",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "6620426651",
+      "name": "REKSA DANA SYARIAH EASTSPRING SYARIAH FIXED INCOME USD KELAS A",
+      "swift_code": "CENAIDJAXXX",
+      "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Eastspring Investments Indonesia",
+    "ojkCode": "EII01"
+  },
+  "custodian_bank": {
+    "name": "BUT. STANDARD CHARTERED BANK",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": true,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 13490000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0182
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.04278090802685375,
+    "3y": 0.004283029786262826,
+    "5y": -0.013354984297888062,
+    "10y": null,
+    "all": -0.012900519732346738
+  },
+  "cagr_adjusted": {
+    "1y": -0.023439568746332684,
+    "3y": 0.011002077111610387,
+    "5y": -0.009399642188500867,
+    "10y": null,
+    "all": -0.009281175084738247
+  },
+  "simplereturn": {
+    "1d": 0.0001782408699873006,
+    "1m": -0.014120649047394074,
+    "3m": -0.011956696122715438,
+    "ytd": -0.01787657677636323,
+    "1y": -0.023439568746332684,
+    "3y": 0.033370700191274194,
+    "5y": -0.04612294414320728,
+    "10y": null,
+    "all": -0.04968853657799999
+  },
+  "changesvalue": {
+    "1d": 0.00016599999999999948,
+    "1m": -0.013475010611000093,
+    "3m": -0.011385010611000057,
+    "ytd": -0.01729753657800004,
+    "1y": -0.022809536578,
+    "3y": 0.030688463422000045,
+    "5y": -0.04595053657799997,
+    "10y": null,
+    "all": -0.04968853657799999
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.04758768655571666,
+    "3y": -0.05726322864598832,
+    "5y": -0.09083326558326776,
+    "10y": -0.0966371134226246,
+    "all": -0.0966371134226246
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.0283434718885564,
+    "3y": -0.0382145156605871,
+    "5y": -0.0908332655832678,
+    "10y": -0.0966371134226247,
+    "all": -0.0966371134226247
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2021-04-15",
+    "value": 0.93149
+  },
+  "trade": null
+}

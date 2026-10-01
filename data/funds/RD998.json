@@ -1,0 +1,272 @@
+{
+  "id": 998,
+  "custodian_bank_id": 2,
+  "symbol": "RD998",
+  "name": "Manulife Saham Andalan",
+  "type": "Saham",
+  "profile": "Manulife Saham Andalan (\"MSA\") mempunyai tujuan untuk menghasilkan peningkatan modal dengan berinvestasi pada saham-saham dari perusahaan-perusahaan yang bergerak dalam sektor-sektor yang memiliki posisi yang baik di bursa dengan memanfaatkan peluang-peluang yang ada pada perekonomian Indonesia dan global, serta memberikan kinerja investasi jangka panjang yang optimal.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2007-11-01",
+  "is_top_product": 0,
+  "is_featured_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 300000,
+  "minsell": 100000,
+  "minbuy": 100000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 2,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 96.56
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 3.44
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank CIMB Niaga, Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "GOTO",
+      "name": "GoTo Gojek Tokopedia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4425,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBTN",
+      "name": "Bank Tabungan Negara (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4346,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "CMRY",
+      "name": "Cisarua Mountain Dairy Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4898,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4994064195",
+      "name": "Reksa Dana Manulife Saham Andalan"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Manulife Aset Manajemen Indonesia",
+    "ojkCode": "MAN02",
+    "telepon": "+62 21 25557788",
+    "fax": "+62 21 25557676",
+    "email": "MAMI_customer_id@manulifeam.com",
+    "url": "www.reksadana-manulife.com"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 990760237656,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0307
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.11335613590052807,
+    "3y": -0.05649940654240282,
+    "5y": -0.07338475108636966,
+    "10y": -0.011708116434723581,
+    "all": 0.028706126883870642
+  },
+  "cagr_adjusted": {
+    "1y": -0.11335613590052807,
+    "3y": -0.05649940654240282,
+    "5y": -0.07338475108636966,
+    "10y": -0.011708116434723581,
+    "all": 0.028710342074331763
+  },
+  "simplereturn": {
+    "1d": -0.01064360455673874,
+    "1m": -0.07699758655396705,
+    "3m": 0.037492776983668374,
+    "ytd": -0.2057877214629944,
+    "1y": -0.11335613590052807,
+    "3y": -0.16010202724994205,
+    "5y": -0.316879663263794,
+    "10y": -0.1111012674059868,
+    "all": 0.7085432672563181
+  },
+  "changesvalue": {
+    "1d": -18.34999999999991,
+    "1m": -142.28999999999996,
+    "3m": 61.6400000000001,
+    "ytd": -441.96000000000004,
+    "1y": -218.06999999999994,
+    "3y": -325.1399999999999,
+    "5y": -791.2199999999998,
+    "10y": -213.19000000000005,
+    "all": 707.36
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.2995211028062481,
+    "3y": -0.2995211028062481,
+    "5y": -0.47235788168212023,
+    "10y": -0.5189032196772632,
+    "all": -0.6354399910434393
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.299521102806248,
+    "3y": -0.299521102806248,
+    "5y": -0.4723578816821202,
+    "10y": -0.5189032196772632,
+    "all": -0.6354399910434393
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2007-11-02",
+    "value": 1705.69
+  },
+  "trade": null
+}

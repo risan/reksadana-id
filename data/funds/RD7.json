@@ -1,0 +1,177 @@
+{
+  "id": 7,
+  "custodian_bank_id": null,
+  "symbol": "RD7",
+  "name": "Aberdeen Proteksi Income Plus Xvii",
+  "type": "Terproteksi",
+  "profile": "ABERDEEN PROTEKSI INCOME PLUS XVII bertujuan untuk memberikan proteksi sebesar 100% (seratus persen) terhadap Pokok Investasi atas Unit Penyertaan pada Tanggal Jatuh Tempo serta memberikan Pemegang Unit Penyertaan potensi imbal hasil yang tetap, yang diinvestasikan pada Tanggal Emisi.\n\nABERDEEN PROTEKSI INCOME PLUS XVII akan berinvestasi sampai dengan Tanggal Jatuh Tempo dengan komposisi portofolio Efek minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) pada Efek Bersifat Utang yang diterbitkan oleh Negara Republik Indonesia dan/atau korporasi berbadan hukum Indonesia yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia yang telah mendapat peringkat dari perusahaan pemeringkat Efek yang terdaftar di OJK dan masuk dalam kategori layak investasi (investment grade); dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) pada instrumen pasar uang dalam negeri dan/atau deposito berdenominasi Rupiah.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 324232,
+  "minsell": 324232,
+  "minbuy": 234,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 97.1
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 2.9
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "Bank Himpunan Saudara 1906 12.625% 29/11/2019",
+      "annualDividend": 0,
+      "date": "2019-03-15",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pasar Uang",
+      "annualDividend": 0,
+      "date": "2019-03-15",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Aberdeen Standard Investments Indonesia, PT",
+    "ojkCode": "RO002",
+    "telepon": "(021) 2981 2800",
+    "fax": "(021) 2981 2836",
+    "email": "enquiries.indonesia@aberdeen-asset.com",
+    "url": "http://www.aberdeen-asset.co.id"
+  },
+  "custodian_bank": {
+    "name": "BANK PERMATA - CUSTODY, Tbk, PT",
+    "ojkCode": "BALI1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 86180774325.2,
+    "date": "2019-10-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 34234
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": -0.0286915421703916,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.038347838425882075,
+    "3y": -0.07500085305792836,
+    "5y": -0.07500085305792836,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2019-11-07",
+    "first_date": "2018-01-26",
+    "value": 809.72
+  },
+  "trade": null
+}

@@ -1,0 +1,271 @@
+{
+  "id": 1653,
+  "custodian_bank_id": 2,
+  "symbol": "RD1653",
+  "name": "Sucorinvest Equity Fund Kelas A",
+  "type": "Saham",
+  "profile": "SUCORINVEST EQUITY FUND bertujuan untuk memberikan apresiasi modal dan tingkat keuntungan yang optimal dalam jangka panjang dengan cara mengkapitalisasi pasar modal Indonesia.\n\nSUCORINVEST EQUITY FUND akan berinvestasi pada (i) minimum 80% dan maksimum sebesar 100% pada Efek Bersifat Ekuitas Badan Hukum\nIndonesia yang tercatat pada Bursa Efek di Indonesia, yang mana minimum 60% dari keseluruhan Efek Bersifat Ekuitas tersebut diatas akan diinvestasikan pada saham-saham LQ 45; (ii) minimum sebesar 0% dan maksimum sebesar 20% pada Instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun yang diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 1,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "equity",
+  "bank_redeem": {
+    "id": 31,
+    "name": "BCA",
+    "color": "#0b71b9",
+    "icon_url": "https://assets.bibit.id/icons/banks/BCA_05042023142023.svg"
+  },
+  "released_date": "2012-05-08",
+  "is_top_product": 1,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 10000,
+  "minsell": 10000,
+  "minbuy": 10000,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0.5,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Efek Ekuitas",
+      "percentage": 98.54
+    },
+    {
+      "name": "Inst. Psr. Uang",
+      "percentage": 1.46
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4338,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBTN",
+      "name": "Bank Tabungan Negara (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4346,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BUMI",
+      "name": "Bumi Resources Tbk",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4498,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INKP",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4514,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "PGAS",
+      "name": "Perusahaan Gas Negara Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 5027,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TINS",
+      "name": "Timah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-08-31",
+      "clickable": 1,
+      "company_id": 4493,
+      "product_type": "Saham",
+      "serie_id": null
+    }
+  ],
+  "bank": [
+    {
+      "id": 31,
+      "bank": "BCA",
+      "account": "4585677273",
+      "name": "Reksa Dana Sucorinvest Equity Fund Kelas A"
+    }
+  ],
+  "exitload": [],
+  "investment_manager": {
+    "name": "PT Sucorinvest Asset Management",
+    "ojkCode": "GAMA2",
+    "telepon": "+62 21 5363020",
+    "fax": "+62 21 5363019",
+    "email": "-",
+    "url": "www.sucorinvest.com/id/asset-management"
+  },
+  "custodian_bank": {
+    "name": "PT Bank HSBC Indonesia",
+    "ojkCode": "HSBC1"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": true,
+  "aum": {
+    "value": 1580000000000,
+    "date": "2026-08-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0483
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.014710799063858193,
+    "3y": -0.01935652759145845,
+    "5y": 0.02643473501046767,
+    "10y": 0.06447890552810298,
+    "all": 0.06890893500633521
+  },
+  "cagr_adjusted": {
+    "1y": 0.014710799063858193,
+    "3y": -0.01935652759145845,
+    "5y": 0.02643473501046767,
+    "10y": 0.06447890552810298,
+    "all": 0.06892248472610274
+  },
+  "simplereturn": {
+    "1d": -0.006811263318112659,
+    "1m": -0.0490572911922762,
+    "3m": 0.07891930323498042,
+    "ytd": -0.19272677786609682,
+    "1y": 0.014710799063858193,
+    "3y": -0.05695280970325867,
+    "5y": 0.13934880634867985,
+    "10y": 0.8679730048880332,
+    "all": 1.6115886055051378
+  },
+  "changesvalue": {
+    "1d": -17.90000000000009,
+    "1m": -134.6500000000001,
+    "3m": 190.92000000000007,
+    "ytd": -623.1300000000001,
+    "1y": 37.83999999999969,
+    "3y": -157.6300000000001,
+    "5y": 319.23,
+    "10y": 1212.81,
+    "all": 1610.67
+  },
+  "riskprofile": "High",
+  "maxdrawdown": {
+    "1y": -0.364286925457895,
+    "3y": -0.364286925457895,
+    "5y": -0.364286925457895,
+    "10y": -0.4132764170429878,
+    "all": -0.4132764170429878
+  },
+  "maxdrawdown_adjusted": {
+    "1y": -0.3642869254578949,
+    "3y": -0.3642869254578949,
+    "5y": -0.3642869254578949,
+    "10y": -0.4132764170429878,
+    "all": -0.4132764170429878
+  },
+  "instant_redemption": {
+    "type": 2,
+    "quota_limit": null
+  },
+  "nav": {
+    "date": "2026-09-30",
+    "first_date": "2012-05-09",
+    "value": 2610.1
+  },
+  "trade": null
+}

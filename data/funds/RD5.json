@@ -1,0 +1,258 @@
+{
+  "id": 5,
+  "custodian_bank_id": null,
+  "symbol": "RD5",
+  "name": "Aberdeen Indonesia Government Bond Fund",
+  "type": "Obligasi",
+  "profile": "ABERDEEN INDONESIA GOVERNMENT BOND FUND bertujuan untuk mendapatkan imbal hasil yang optimum melalui pegelolaan yang aktif dengan berinvestasi pada Efek bersifat utang yang diterbitkan Pemerintah Republik Indonesia serta Efek pasar uang dan/atau kas sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.\n\nABERDEEN INDONESIA GOVERNMENT BOND FUND melakukan investasi pada (i) Minimum 80% (delapan puluh perseratus) dan maksimum 100% (seratus perseratus) pada Efek bersifat utang yang diterbitkan Pemerintah Republik Indonesia; (ii) Minimum sebesar 0% (nol  perseratus) dan maksimum sebesar 20% (dua puluh perseratus) pada Instrumen Pasar Uang dan/atau kas, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. Seluruh Kebijakan Investasi tersebut diatas wajib dilakukan sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "instrument_group": 0,
+  "tradeable": 0,
+  "notbuyable": 0,
+  "status": 1,
+  "dividend_date": null,
+  "robocategory": "fixincome",
+  "bank_redeem": {
+    "id": null,
+    "name": null,
+    "color": null,
+    "icon_url": null
+  },
+  "released_date": null,
+  "is_top_product": 0,
+  "is_cash_sweepable": 0,
+  "is_oversubscribed": false,
+  "currency_exchange": {
+    "exchange_rate": 1,
+    "currency": "IDR"
+  },
+  "is_has_dividend": false,
+  "min_asset": 0,
+  "minsell": 0,
+  "minbuy": 0,
+  "min_buy_next_purchase": null,
+  "min_buy_after_sell_all": null,
+  "executive": {},
+  "fee": {
+    "subscription": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "redemption": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "transfer": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    },
+    "switch": {
+      "value": 0,
+      "max_value": null,
+      "type": "percent",
+      "currency": "IDR"
+    }
+  },
+  "asset": [
+    {
+      "name": "Obligasi",
+      "percentage": 96.8
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 3.2
+    }
+  ],
+  "holding": [
+    {
+      "symbol": "",
+      "name": "FR0079 8.375% 15/04/2039",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indonesia (Rep Of) 5.625% 15/05/2023",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0078 8.25% 15/05/2029",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indonesia (Rep Of) 7.00% 15/05/2027",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0074 7.50% 15/08/2032",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBL Negara RI Seri FR0072 8.25% 15/05/2036",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indonesia (Rep Of) 8.375% 15/03/2034",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FR0077 8.125% 15/05/2024",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indonesia (Rep Of) 8.375% 15/09/2026",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indonesia (Rep Of) 6.125% 15/05/2028",
+      "annualDividend": 0,
+      "date": "2019-10-21",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    }
+  ],
+  "investment_manager": {
+    "name": "Aberdeen Standard Investments Indonesia, PT",
+    "ojkCode": "RO002",
+    "telepon": "(021) 2981 2800",
+    "fax": "(021) 2981 2836",
+    "email": "enquiries.indonesia@aberdeen-asset.com",
+    "url": "http://www.aberdeen-asset.co.id"
+  },
+  "custodian_bank": {
+    "name": "STANDARD CHARTERED BANK - CUSTODY",
+    "ojkCode": "SCBJK"
+  },
+  "sharia": false,
+  "etf": false,
+  "index": false,
+  "is_instant_redemption": false,
+  "aum": {
+    "value": 135977962502.95,
+    "date": "2019-10-01"
+  },
+  "shareholders": [],
+  "expenseratio": {
+    "percentage": 0.0212
+  },
+  "avg_yield": {
+    "date": null,
+    "percentage": null
+  },
+  "cagr": {
+    "1y": 0.1103174648744554,
+    "3y": 0.05248354688732815,
+    "5y": 0.07045223307636705,
+    "10y": null,
+    "all": null
+  },
+  "cagr_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "simplereturn": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "changesvalue": {
+    "1d": 0,
+    "1m": null,
+    "3m": null,
+    "ytd": null,
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "riskprofile": "Moderate",
+  "maxdrawdown": {
+    "1y": -0.047328771387657786,
+    "3y": -0.09951422548925193,
+    "5y": -0.13662194924842408,
+    "10y": null,
+    "all": null
+  },
+  "maxdrawdown_adjusted": {
+    "1y": null,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": null
+  },
+  "nav": {
+    "date": "2019-11-07",
+    "first_date": "2009-06-09",
+    "value": 1985.56
+  },
+  "trade": null
+}
