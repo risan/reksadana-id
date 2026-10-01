@@ -6,7 +6,9 @@
     "node": ">=22"
   },
   "scripts": {
-    "scrape": "node scrape.js",
+    "scrape": "npm run scrape:bibit && npm run scrape:kontan",
+    "scrape:bibit": "node scrapers/bibit.js",
+    "scrape:kontan": "node scrapers/kontan.js",
     "dev": "astro dev",
     "build": "astro build && node scripts/check-dist.js",
     "preview": "wrangler dev"

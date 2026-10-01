@@ -3,11 +3,14 @@ import path from 'node:path';
 
 export const DATA_DIR = path.resolve('data');
 
+const BIBIT_DIR = path.join(DATA_DIR, 'bibit');
+const KONTAN_DIR = path.join(DATA_DIR, 'kontan');
+
 const BOOLEAN_COLUMNS = ['sharia', 'etf', 'index', 'tradeable'];
 const NUMBER_COLUMNS = ['status', 'nav', 'aum', 'expense_ratio'];
 
-function readText(...segments) {
-  const file = path.join(DATA_DIR, ...segments);
+function readText(directory, ...segments) {
+  const file = path.join(directory, ...segments);
 
   if (!existsSync(file)) {
     return null;
@@ -17,7 +20,7 @@ function readText(...segments) {
 }
 
 function readJson(fallback, ...segments) {
-  const text = readText(...segments);
+  const text = readText(BIBIT_DIR, ...segments);
 
   if (text === null) {
     return fallback;
@@ -72,8 +75,8 @@ function parseCsv(text) {
   return rows;
 }
 
-function readCsvObjects(...segments) {
-  const text = readText(...segments);
+function readCsvObjects(directory, ...segments) {
+  const text = readText(directory, ...segments);
 
   if (text === null) {
     return [];
@@ -93,13 +96,13 @@ function emptyToNull(value) {
 }
 
 export function listFundSymbols() {
-  return readdirSync(path.join(DATA_DIR, 'funds'))
+  return readdirSync(path.join(BIBIT_DIR, 'funds'))
     .filter((file) => file.endsWith('.json'))
     .map((file) => file.slice(0, -'.json'.length));
 }
 
 export function loadFundIndex() {
-  return readCsvObjects('funds.csv').map((row) => {
+  return readCsvObjects(BIBIT_DIR, 'funds.csv').map((row) => {
     const record = {};
 
     for (const [column, raw] of Object.entries(row)) {
@@ -140,7 +143,7 @@ export function loadFundDetails(symbol) {
 }
 
 export function loadNavSeries(symbol) {
-  return readCsvObjects('nav', `${symbol}.csv`).map((row) => ({
+  return readCsvObjects(BIBIT_DIR, 'nav', `${symbol}.csv`).map((row) => ({
     date: row.date,
     nav: Number(row.nav),
     nav_adjusted: row.nav_adjusted === '' || row.nav_adjusted === undefined ? null : Number(row.nav_adjusted),
@@ -148,16 +151,44 @@ export function loadNavSeries(symbol) {
 }
 
 export function loadAumSeries(symbol) {
-  return readCsvObjects('aum', `${symbol}.csv`).map((row) => ({
+  return readCsvObjects(BIBIT_DIR, 'aum', `${symbol}.csv`).map((row) => ({
     date: row.date,
     aum: Number(row.aum),
   }));
 }
 
 export function readDataFileText(...segments) {
-  return readText(...segments);
+  return readText(BIBIT_DIR, ...segments);
 }
 
 export function listDataFiles(subdirectory) {
-  return readdirSync(path.join(DATA_DIR, subdirectory));
+  return readdirSync(path.join(BIBIT_DIR, subdirectory));
+}
+
+let kontanFundsBySymbol = null;
+
+function loadKontanFundsBySymbol() {
+  if (kontanFundsBySymbol === null) {
+    const matchedRows = readCsvObjects(KONTAN_DIR, 'funds.csv').filter((row) => row.bibit_symbol !== '');
+
+    kontanFundsBySymbol = new Map(matchedRows.map((row) => [row.bibit_symbol, { id: Number(row.kontan_id), name: row.name }]));
+  }
+
+  return kontanFundsBySymbol;
+}
+
+// The Kontan fund matched to a Bibit symbol, with its NAV history, or null when there is no match.
+export function loadKontan(symbol) {
+  const fund = loadKontanFundsBySymbol().get(symbol);
+
+  if (!fund) {
+    return null;
+  }
+
+  const nav = readCsvObjects(KONTAN_DIR, 'nav', `${fund.id}.csv`).map((row) => ({
+    date: row.date,
+    nav: Number(row.nav),
+  }));
+
+  return { ...fund, nav };
 }

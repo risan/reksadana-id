@@ -1,12 +1,12 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { HttpError, readCsvRows, runPool, toCsv, withRetries, writeFileAtomic } from './lib.js';
 
 const API_URL = 'https://api.bibit.id';
-const DATA_DIR = path.join(import.meta.dirname, 'data');
+const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'bibit');
 const PAGE_SIZE = 50;
 const CONCURRENCY = 4;
-const MAX_ATTEMPTS = 5;
 const REQUEST_TIMEOUT_MS = 60 * 1000;
 const DAY_IN_MS = 24 * 60 * 60 * 1000;
 const NAV_HEADER = ['date', 'nav', 'nav_adjusted'];
@@ -22,15 +22,6 @@ const decrypt = (payload) => {
 
   return JSON.parse(decrypted.toString('utf8'));
 };
-
-const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
-class HttpError extends Error {
-  constructor(url, status, message) {
-    super(`GET ${url} failed with ${status}: ${message}`);
-    this.status = status;
-  }
-}
 
 const request = async (url) => {
   const response = await fetch(url, {
@@ -59,25 +50,14 @@ const get = async (pathname, params = {}) => {
     url.searchParams.set(name, value);
   }
 
-  for (let attempt = 1; ; attempt++) {
-    try {
-      const body = await request(url);
+  return withRetries(async () => {
+    const body = await request(url);
 
-      return {
-        data: typeof body.data === 'string' ? decrypt(body.data) : body.data,
-        meta: body.meta,
-      };
-    } catch (error) {
-      // Timeouts, dropped connections, and truncated bodies are worth a retry too.
-      const retryable = !(error instanceof HttpError) || error.status === 429 || error.status >= 500;
-
-      if (!retryable || attempt === MAX_ATTEMPTS) {
-        throw error;
-      }
-
-      await sleep(2 ** attempt * 1000);
-    }
-  }
+    return {
+      data: typeof body.data === 'string' ? decrypt(body.data) : body.data,
+      meta: body.meta,
+    };
+  });
 };
 
 // Keep the API's default order: sorting by name or AUM has ties that repeat
@@ -118,14 +98,6 @@ const fetchAllFunds = async () => {
   return [...fundsBySymbol.values()];
 };
 
-// Write to a temporary file first, so an interrupted run never leaves a half-written file.
-const writeFileAtomic = async (file, text) => {
-  const temporaryFile = `${file}.tmp`;
-
-  await fs.writeFile(temporaryFile, text);
-  await fs.rename(temporaryFile, file);
-};
-
 const writeJson = (file, data) => writeFileAtomic(file, JSON.stringify(data, null, 2) + '\n');
 
 const readJson = async (file) => {
@@ -134,32 +106,6 @@ const readJson = async (file) => {
   } catch (error) {
     if (error.code === 'ENOENT') {
       return null;
-    }
-
-    throw error;
-  }
-};
-
-const toCsvCell = (value) => {
-  const text = value === null || value === undefined ? '' : String(value);
-
-  if (/[",\n]/.test(text)) {
-    return `"${text.replaceAll('"', '""')}"`;
-  }
-
-  return text;
-};
-
-const toCsv = (header, rows) => [header, ...rows].map((row) => row.map(toCsvCell).join(',')).join('\n') + '\n';
-
-const readCsvRows = async (file) => {
-  try {
-    const text = await fs.readFile(file, 'utf8');
-
-    return text.trim().split('\n').slice(1).map((line) => line.split(','));
-  } catch (error) {
-    if (error.code === 'ENOENT') {
-      return [];
     }
 
     throw error;
@@ -329,34 +275,6 @@ const scrapeFund = async (fund) => {
   await writeJson(fundFile, fundData);
 };
 
-const runPool = async (items, worker) => {
-  let next = 0;
-  let done = 0;
-  const failures = [];
-
-  const runWorker = async () => {
-    while (next < items.length) {
-      const item = items[next++];
-
-      try {
-        await worker(item);
-      } catch (error) {
-        failures.push(`${item.symbol}: ${error.message}`);
-      }
-
-      done++;
-
-      if (done % 100 === 0 || done === items.length) {
-        console.log(`Funds scraped: ${done}/${items.length}`);
-      }
-    }
-  };
-
-  await Promise.all(Array.from({ length: CONCURRENCY }, runWorker));
-
-  return failures;
-};
-
 const writeFundIndex = (funds) => {
   const header = [
     'symbol', 'name', 'type', 'investment_manager', 'currency', 'sharia', 'etf', 'index',
@@ -402,7 +320,13 @@ const main = async () => {
 
   await writeFundIndex(allFunds);
 
-  const failures = await runPool(funds, scrapeFund);
+  const failures = await runPool({
+    items: funds,
+    worker: scrapeFund,
+    concurrency: CONCURRENCY,
+    label: 'Funds scraped',
+    describeItem: (fund) => fund.symbol,
+  });
 
   if (failures.length > 0) {
     console.error(`${failures.length} funds failed:\n${failures.join('\n')}`);
