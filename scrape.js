@@ -41,13 +41,14 @@ const request = async (url) => {
     signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
   });
 
-  const body = await response.json();
-
   if (!response.ok) {
-    throw new HttpError(url, response.status, body.message);
+    const text = await response.text();
+    const message = text.startsWith('{') ? JSON.parse(text).message : response.statusText;
+
+    throw new HttpError(url, response.status, message);
   }
 
-  return body;
+  return response.json();
 };
 
 const get = async (pathname, params = {}) => {
@@ -190,7 +191,7 @@ const fetchChart = async (pathname, period) => {
     return data.chart;
   } catch (error) {
     // A few delisted funds answer 422 "product not found" instead of an empty chart.
-    if (error instanceof HttpError && error.status === 422) {
+    if (error instanceof HttpError && error.status === 422 && error.message.includes('tidak ditemukan')) {
       return [];
     }
 
@@ -206,7 +207,7 @@ const updateChart = async ({ file, pathname, header, toRow, forceFull }) => {
   const chart = await fetchChart(pathname, period);
 
   if (chart.length === 0) {
-    return;
+    return false;
   }
 
   const rowsByDate = new Map(period === 'ALL' ? [] : storedRows.map((row) => [row[0], row]));
@@ -218,6 +219,8 @@ const updateChart = async ({ file, pathname, header, toRow, forceFull }) => {
   const rows = [...rowsByDate.values()].sort((a, b) => a[0].localeCompare(b[0]));
 
   await writeFileAtomic(file, toCsv(header, rows));
+
+  return true;
 };
 
 // The fund file from the previous run tells us which charts have new data.
@@ -237,9 +240,11 @@ const scrapeFund = async (fund) => {
     dividendsChanged = JSON.stringify(dividends) !== JSON.stringify(await readJson(dividendsFile));
   }
 
+  let navUpdated = false;
+
   // A new dividend rescales every past adjusted NAV, so it needs the full history again.
   if (dividendsChanged || fund.nav?.date !== previous?.nav?.date) {
-    await updateChart({
+    navUpdated = await updateChart({
       file: path.join(DATA_DIR, 'nav', `${symbol}.csv`),
       pathname: `/products/${symbol}/chart`,
       header: ['date', 'nav', 'nav_adjusted'],
@@ -258,7 +263,8 @@ const scrapeFund = async (fund) => {
     });
   }
 
-  if (dividendsChanged) {
+  // Save new dividends only once the full NAV refresh has landed, or the next run would skip it.
+  if (dividendsChanged && navUpdated) {
     await writeJson(dividendsFile, dividends);
   }
 

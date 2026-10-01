@@ -29,7 +29,9 @@ npm run scrape
 node scrape.js RD8807 RD216
 ```
 
-The first run downloads the full history and takes a while. Later runs only download new NAV and AUM rows, so they are much faster.
+The first run downloads the full history and takes a few minutes. Later runs only download NAV and AUM rows that are newer than the last run, so they take less than a minute.
+
+The scraper decides what is new by comparing with `data/funds/<symbol>.json` from the last run. To download a fund's full history again, delete that file and its CSV files, then run the scraper.
 
 ## How the API works
 
