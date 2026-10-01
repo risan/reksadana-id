@@ -491,9 +491,9 @@ const details = [
     return [...rowsByDate.values()].sort((a, b) => a.date.localeCompare(b.date));
   }
 
-  // Bibit lists a fund you cannot buy with one NAV per update, so only buyable funds have a daily history from Bibit.
+  // Bibit lists a fund you cannot buy with one NAV per update. Only its chart gives a daily history, and only that has nav_adjusted.
   function hasDailyNav(fund) {
-    return Boolean(fund.tradeable) || (fund.kontan?.nav.length ?? 0) > 1 || (fund.bareksa?.nav.length ?? 0) > 1;
+    return fund.nav.some((row) => row.nav_adjusted !== null) || (fund.kontan?.nav.length ?? 0) > 1 || (fund.bareksa?.nav.length ?? 0) > 1;
   }
 
   // Bareksa reports a USD fund's AUM in both currencies; divide the one that matches the fund's NAV.
