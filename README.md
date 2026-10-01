@@ -24,9 +24,31 @@ The `tradeable` column is `1` for funds you can buy in the Bibit app.
 - **Buyable funds:** `data/nav/` has the full daily history from the launch date.
 - **Other funds:** Bibit does not give their NAV history, even to a logged-in user. The fund list still shows their latest NAV, so every scraper run adds that day's row. These rows have an empty `nav_adjusted`. History for these funds starts on the day this repository started collecting it (2026-10-01).
 
+## Website
+
+An [Astro](https://astro.build/) site builds from `data/` into static files. It has a fund explorer, a page with charts for every fund, bulk downloads, and a read-only JSON API (see `/api/` on the site). It is served by Cloudflare Workers as static assets, so there is no server code.
+
+You need Node.js 22.12 or newer.
+
+```bash
+npm ci
+npm run dev       # dev server at http://localhost:4321
+npm run build     # writes dist/ and checks Cloudflare's free plan limits
+npm run preview   # serves dist/ locally with wrangler
+```
+
+To deploy, either:
+
+- Run `npx wrangler login` once, then `npm run deploy`.
+- Or connect this repository in the Cloudflare dashboard (Workers & Pages, then Workers Builds). Use `npm run build` as the build command and `npx wrangler deploy` as the deploy command. Every push then deploys.
+
+The build fails if `dist/` has more than 19,000 files or a file over 24 MiB, because the free plan allows 20,000 files and 25 MiB per file.
+
 ## Update the data
 
-You need Node.js 22 or newer. There are no dependencies to install.
+The GitHub Actions workflow `.github/workflows/scrape.yml` runs the scraper every day at 23:00 UTC. It commits `data/` only when something changed. You can also start it by hand from the Actions tab. With Workers Builds connected, that commit deploys the new data.
+
+To run the scraper yourself, you need Node.js 22 or newer. The scraper has no dependencies to install.
 
 ```bash
 # Update every fund

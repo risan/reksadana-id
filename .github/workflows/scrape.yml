@@ -1,0 +1,41 @@
+name: Scrape
+
+on:
+  schedule:
+    # Indonesian funds publish their NAV during the evening (UTC+7), so 23:00 UTC is 06:00 the next day in Jakarta.
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Scrape
+        run: node scrape.js
+
+      - name: Commit and push changes
+        run: |
+          if [ -z "$(git status --porcelain data)" ]; then
+            echo "No data changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git commit -m "Update data $(date -u +%F)"
+          git push
