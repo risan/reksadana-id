@@ -1,0 +1,499 @@
+{
+  "factsheets": [
+    {
+      "name": "Mandiri Investa Pasar Uang_DECEMBER_2017.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_DECEMBER_2017.pdf",
+      "date": "2017-12-30"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_NOVEMBER_2017.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_NOVEMBER_2017.pdf",
+      "date": "2017-11-29"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_SEPTEMBER_2017.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_SEPTEMBER_2017.pdf",
+      "date": "2017-09-29"
+    },
+    {
+      "name": "Mandiri Investa Equity Movement_OCTOBER_2017.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaEquityMovement_OCTOBER_2017.pdf",
+      "date": "2017-10-30"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_January_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_January_2018.pdf",
+      "date": "2018-01-30"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_FEBRUARY_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_FEBRUARY_2018.pdf",
+      "date": "2018-02-27"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_APRIL_2019.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_APRIL_2019.pdf",
+      "date": "2019-04-29"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_MARCH_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_MARCH_2018.pdf",
+      "date": "2018-03-28"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_APRIL_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_APRIL_2018.pdf",
+      "date": "2018-04-29"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_MAY_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_MAY_2018.pdf",
+      "date": "2018-05-30"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_JUNE_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_JUNE_2018.pdf",
+      "date": "2018-06-28"
+    },
+    {
+      "name": "REKSADANA MANDIRI INVESTA PASAR UANG_JULY_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/REKSADANAMANDIRIINVESTAPASARUANG_JULY_2018.pdf",
+      "date": "2018-07-30"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_AUG_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_AUG_2018.pdf",
+      "date": "2018-08-30"
+    },
+    {
+      "name": "MANDIRI INVESTA PASAR UANG_SEPTEMBER_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MANDIRIINVESTAPASARUANG_SEPTEMBER_2018.pdf",
+      "date": "2018-09-27"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_OCTOBER_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_OCTOBER_2018.pdf",
+      "date": "2018-10-30"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_NOVEMBER_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_NOVEMBER_2018.pdf",
+      "date": "2018-11-29"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_DESEMBER_2018.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_DESEMBER_2018.pdf",
+      "date": "2018-12-27"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_JANUARI_2019.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_JANUARI_2019.pdf",
+      "date": "2019-01-30"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_FEBRUARI_2019.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_FEBRUARI_2019.pdf",
+      "date": "2019-02-27"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_MARET_2019.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_MARET_2019.pdf",
+      "date": "2019-03-28"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_MEI_2019.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_MEI_2019.pdf",
+      "date": "2019-05-30"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_JUNI_2019.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_JUNI_2019.pdf",
+      "date": "2019-06-27"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_JULI_2019.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_JULI_2019.pdf",
+      "date": "2019-07-30"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_AGUSTUS_2019.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_AGUSTUS_2019.pdf",
+      "date": "2019-08-30"
+    },
+    {
+      "name": "Mandiri Investa Pasar Uang_SEPTEMBER_2019.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/factsheets/MandiriInvestaPasarUang_SEPTEMBER_2019.pdf",
+      "date": "2019-09-29"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JANUARI_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JANUARI_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_FEBRUARI_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_FEBRUARI_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_MARET_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_MARET_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_APRIL_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_APRIL_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_MEI_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_MEI_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JUNI_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JUNI_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JULI_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JULI_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_AGUSTUS_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_AGUSTUS_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_SEPTEMBER_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_SEPTEMBER_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_OKTOBER_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_OKTOBER_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_NOVEMBER_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_NOVEMBER_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_DESEMBER_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_DESEMBER_2021.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JANUARI_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JANUARI_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_FEBRUARI_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_FEBRUARI_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_MARET_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_MARET_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_APRIL_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_APRIL_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_MEI_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_MEI_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JUNI_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JUNI_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JULI_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JULI_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_AGUSTUS_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_AGUSTUS_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_SEPTEMBER_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_SEPTEMBER_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_OKTOBER_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_OKTOBER_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_NOVEMBER_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_NOVEMBER_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_DESEMBER_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_DESEMBER_2022.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JANUARI_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JANUARI_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_FEBRUARI_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_FEBRUARI_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_MARET_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_MARET_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_APRIL_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_APRIL_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_MEI_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_MEI_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JUNI_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JUNI_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JULI_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JULI_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_AGUSTUS_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_AGUSTUS_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_SEPTEMBER_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_SEPTEMBER_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_OKTOBER_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_OKTOBER_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_NOVEMBER_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_NOVEMBER_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_DESEMBER_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_DESEMBER_2023.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JANUARI_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JANUARI_2024.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_FEBRUARI_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_FEBRUARI_2024.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_MARET_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_MARET_2024.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_APRIL_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_APRIL_2024.pdf",
+      "date": "2024-06-07"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_MEI_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_MEI_2024.pdf",
+      "date": "2024-06-14"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JUNI_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JUNI_2024.pdf",
+      "date": "2024-07-15"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JULI_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JULI_2024.pdf",
+      "date": "2024-08-13"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_AGUSTUS_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_AGUSTUS_2024.pdf",
+      "date": "2024-09-12"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_SEPTEMBER_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_SEPTEMBER_2024.pdf",
+      "date": "2024-10-10"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_OKTOBER_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_OKTOBER_2024.pdf",
+      "date": "2024-11-13"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_NOVEMBER_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_NOVEMBER_2024.pdf",
+      "date": "2024-12-12"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_DESEMBER_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_DESEMBER_2024.pdf",
+      "date": "2025-01-13"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_JANUARI_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_JANUARI_2025.pdf",
+      "date": "2025-02-14"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_FEBRUARI_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_FEBRUARI_2025.pdf",
+      "date": "2025-03-10"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_MARET_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_MARET_2025.pdf",
+      "date": "2025-04-16"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_April_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_April_2025.pdf",
+      "date": "2025-04-30"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Mei_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Mei_2025.pdf",
+      "date": "2025-05-28"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Juni_2025..pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Juni_2025..pdf",
+      "date": "2025-06-30"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Juli_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Juli_2025.pdf",
+      "date": "2025-07-31"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Agustus_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Agustus_2025.pdf",
+      "date": "2025-08-29"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_September_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_September_2025.pdf",
+      "date": "2025-09-30"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Oktober_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Oktober_2025.pdf",
+      "date": "2025-10-31"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_November_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_November_2025.pdf",
+      "date": "2025-11-28"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Desember_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Desember_2025.pdf",
+      "date": "2025-12-30"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Januari_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Januari_2026.pdf",
+      "date": "2026-01-30"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Februari_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Februari_2026.pdf",
+      "date": "2026-02-27"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Maret_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Maret_2026.pdf",
+      "date": "2026-03-31"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_April_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_April_2026.pdf",
+      "date": "2026-04-30"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Mei_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Mei_2026.pdf",
+      "date": "2026-05-29"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Juni_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Juni_2026.pdf",
+      "date": "2026-06-30"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Juli_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Juli_2026.pdf",
+      "date": "2026-07-31"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Agustus_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Mandiri_Investa_Pasar_Uang_Agustus_2026.pdf",
+      "date": "2026-08-31"
+    }
+  ],
+  "prospectus": [
+    {
+      "name": "Mandiri Investa Pasar Uang.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/prospectus/MandiriInvestaPasarUang.pdf"
+    },
+    {
+      "name": "PR_Mandiri Investa Pasar Uang_2018_FEBRUARI.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/prospectus/PR_MandiriInvestaPasarUang_2018_FEBRUARI.pdf"
+    },
+    {
+      "name": "PR_Mandiri Investa Pasar Uang_2019_FEBRUARI.pdf",
+      "file": "https://bibit.s3.ap-southeast-1.amazonaws.com/prospectus/PR_MandiriInvestaPasarUang_2019_FEBRUARI.pdf"
+    },
+    {
+      "name": "MIPU_-_Pembaharuan_Prospektus_Maret_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/prospectus/MIPU_-_Pembaharuan_Prospektus_Maret_2024.pdf"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_April_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Mandiri_Investa_Pasar_Uang_April_2025.pdf"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Oktober_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Mandiri_Investa_Pasar_Uang_Oktober_2025.pdf"
+    },
+    {
+      "name": "Mandiri_Investa_Pasar_Uang_Maret_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Mandiri_Investa_Pasar_Uang_Maret_2026.pdf"
+    }
+  ]
+}

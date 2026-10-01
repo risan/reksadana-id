@@ -9,6 +9,7 @@ const CONCURRENCY = 4;
 const MAX_ATTEMPTS = 5;
 const REQUEST_TIMEOUT_MS = 60 * 1000;
 const DAY_IN_MS = 24 * 60 * 60 * 1000;
+const NAV_HEADER = ['date', 'nav', 'nav_adjusted'];
 
 // The API wraps most payloads as hex: a 16-byte IV, the AES-256-CBC ciphertext,
 // and the 32-character key itself as the last 32 characters.
@@ -223,13 +224,31 @@ const updateChart = async ({ file, pathname, header, toRow, forceFull }) => {
   return true;
 };
 
+const fileExists = (file) => fs.access(file).then(() => true, () => false);
+
+// Bibit has no NAV chart for most funds you cannot buy in the app, but the fund
+// list still carries their latest NAV. Saving it on every run builds their history.
+const saveNavFromList = async (file, nav) => {
+  const storedRows = await readCsvRows(file);
+
+  if (storedRows.some((row) => row[0] === nav.date)) {
+    return;
+  }
+
+  const rows = [...storedRows, [nav.date, nav.value, '']].sort((a, b) => a[0].localeCompare(b[0]));
+
+  await writeFileAtomic(file, toCsv(NAV_HEADER, rows));
+};
+
 // The fund file from the previous run tells us which charts have new data.
 // It is written last, so a fund that failed halfway is retried in full next run.
 const scrapeFund = async (fund) => {
   const { symbol } = fund;
   const { sort_value, ...fundData } = fund;
   const fundFile = path.join(DATA_DIR, 'funds', `${symbol}.json`);
+  const navFile = path.join(DATA_DIR, 'nav', `${symbol}.csv`);
   const dividendsFile = path.join(DATA_DIR, 'dividends', `${symbol}.json`);
+  const documentsFile = path.join(DATA_DIR, 'documents', `${symbol}.json`);
   const previous = await readJson(fundFile);
 
   let dividends = null;
@@ -240,17 +259,36 @@ const scrapeFund = async (fund) => {
     dividendsChanged = JSON.stringify(dividends) !== JSON.stringify(await readJson(dividendsFile));
   }
 
+  const navChanged = Boolean(fund.nav?.date) && (fund.nav.date !== previous?.nav?.date || !(await fileExists(navFile)));
   let navUpdated = false;
 
   // A new dividend rescales every past adjusted NAV, so it needs the full history again.
-  if (dividendsChanged || fund.nav?.date !== previous?.nav?.date) {
+  if (dividendsChanged || navChanged) {
     navUpdated = await updateChart({
-      file: path.join(DATA_DIR, 'nav', `${symbol}.csv`),
+      file: navFile,
       pathname: `/products/${symbol}/chart`,
-      header: ['date', 'nav', 'nav_adjusted'],
+      header: NAV_HEADER,
       toRow: (point) => [point.formated_date, point.value, point.value_adjusted],
       forceFull: dividendsChanged,
     });
+  }
+
+  if (navChanged && !navUpdated && fund.nav.value !== null) {
+    await saveNavFromList(navFile, fund.nav);
+  }
+
+  // Factsheets come out monthly, like the AUM figure, so refresh documents on the same beat.
+  if (fund.aum?.date !== previous?.aum?.date || !(await fileExists(documentsFile))) {
+    const { data: factsheets } = await get(`/products/${symbol}/factsheets`);
+    const { data: prospectus } = await get(`/products/${symbol}/prospectus`);
+
+    await writeJson(documentsFile, { factsheets, prospectus });
+
+    if (fund.tradeable === 1) {
+      const { data: switchables } = await get(`/products/${symbol}/switchables`);
+
+      await writeJson(path.join(DATA_DIR, 'switchables', `${symbol}.json`), switchables);
+    }
   }
 
   if (fund.aum?.date !== previous?.aum?.date) {
@@ -330,7 +368,7 @@ const writeFundIndex = (funds) => {
 };
 
 const main = async () => {
-  for (const dir of ['funds', 'nav', 'aum', 'dividends']) {
+  for (const dir of ['funds', 'nav', 'aum', 'dividends', 'documents', 'switchables']) {
     await fs.mkdir(path.join(DATA_DIR, dir), { recursive: true });
   }
 

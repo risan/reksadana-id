@@ -8,14 +8,21 @@ Raw data for Indonesian mutual funds (reksa dana), scraped from the public API b
 |---|---|
 | `data/funds.csv` | One row per fund: symbol, name, type, investment manager, currency, latest NAV and AUM. Start here. |
 | `data/funds/<symbol>.json` | Everything Bibit returns for one fund: fees, investment manager, custodian bank, asset allocation, top holdings, returns, drawdown, risk profile, and more. |
-| `data/nav/<symbol>.csv` | Daily NAV per unit from the launch date until today. `nav_adjusted` includes dividends. |
+| `data/nav/<symbol>.csv` | Daily NAV per unit. `nav_adjusted` includes dividends. |
 | `data/aum/<symbol>.csv` | Assets under management over time. |
 | `data/dividends/<symbol>.json` | Dividend history, only for funds that pay dividends. |
+| `data/documents/<symbol>.json` | Links to monthly factsheets and prospectus files (PDF or JPG). |
+| `data/switchables/<symbol>.json` | Funds you can switch to in the app, only for funds you can buy in the app. |
 | `data/types.json` | Fund type codes. |
 
 Fund types (`type` column): `Pasar Uang` (money market), `Obligasi` (fixed income), `Saham` (equity), `Campuran` (balanced), `Terproteksi` (capital protected), and `Reksadana Global` (global).
 
-The `tradeable` column is `1` for funds you can buy in the Bibit app. Bibit only has NAV history for some of the other funds, so not every fund has a file in `data/nav/`.
+### NAV history: buyable vs. other funds
+
+The `tradeable` column is `1` for funds you can buy in the Bibit app.
+
+- **Buyable funds:** `data/nav/` has the full daily history from the launch date.
+- **Other funds:** Bibit does not give their NAV history, even to a logged-in user. The fund list still shows their latest NAV, so every scraper run adds that day's row. These rows have an empty `nav_adjusted`. History for these funds starts on the day this repository started collecting it (2026-10-01).
 
 ## Update the data
 
@@ -39,4 +46,6 @@ The scraper decides what is new by comparing with `data/funds/<symbol>.json` fro
 - `GET https://api.bibit.id/products/filter?tradable=1&currency=all&limit=50&page=1` lists funds. `tradable=1` gives the funds you can buy in the app, and `tradable=0` gives all other funds.
 - `GET /products/<symbol>/chart?period=ALL` gives the NAV history. Other periods: `1D`, `1W`, `1M`, `3M`, `YTD`, `1Y`, `3Y`, `5Y`, `10Y`.
 - `GET /products/<symbol>/chart/aum?period=ALL` gives the AUM history.
+- `GET /products/<symbol>/dividends`, `/factsheets`, `/prospectus`, and `/switchables` give the other per-fund data.
+- Endpoints that need a login (`/products/<symbol>/history`, `/stats`, `/watchlist`) only describe the logged-in user's own account, so the scraper does not use them.
 - Most responses put an encrypted string in `data`. The first 32 hex characters are the IV, the last 32 characters are the AES-256-CBC key, and the rest is the ciphertext. See `decrypt()` in `scrape.js`.

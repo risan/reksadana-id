@@ -1,0 +1,613 @@
+{
+  "factsheets": [
+    {
+      "name": "Bahana MES Syariah Fund_OCTOBER_2017.pdf",
+      "file": "https://assets.bibit.id/factsheets/BahanaMESSyariahFund_OCTOBER_2017.pdf",
+      "date": "2017-10-30"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_JANUARY_2018.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_JANUARY_2018.pdf",
+      "date": "2018-01-30"
+    },
+    {
+      "name": "Bahana MES Syariah Fund_DECEMBER_15_2017.pdf",
+      "file": "https://assets.bibit.id/factsheets/BahanaMESSyariahFund_DECEMBER_15_2017.pdf",
+      "date": "2017-12-30"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_FEBRUARY_2018.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_FEBRUARY_2018.pdf",
+      "date": "2018-02-27"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_APRIL_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_APRIL_2019.pdf",
+      "date": "2019-04-29"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_MEI_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_MEI_2019.pdf",
+      "date": "2019-05-30"
+    },
+    {
+      "name": "Bahana MES Syariah Fund_APRIL_2018.pdf",
+      "file": "https://assets.bibit.id/factsheets/BahanaMESSyariahFund_APRIL_2018.pdf",
+      "date": "2018-04-29"
+    },
+    {
+      "name": "Bahana MES Syariah Fund_MAY_2018.pdf",
+      "file": "https://assets.bibit.id/factsheets/BahanaMESSyariahFund_MAY_2018.pdf",
+      "date": "2018-05-30"
+    },
+    {
+      "name": "Bahana MES Syariah Fund_JUNE_2018.pdf",
+      "file": "https://assets.bibit.id/factsheets/BahanaMESSyariahFund_JUNE_2018.pdf",
+      "date": "2018-06-28"
+    },
+    {
+      "name": "REKSADANA BAHANA MES SYARIAH FUND_JULY_2018.pdf",
+      "file": "https://assets.bibit.id/factsheets/REKSADANABAHANAMESSYARIAHFUND_JULY_2018.pdf",
+      "date": "2018-07-30"
+    },
+    {
+      "name": "Bahana MES Syariah Fund_AUGUST_2018.pdf",
+      "file": "https://assets.bibit.id/factsheets/BahanaMESSyariahFund_AUGUST_2018.pdf",
+      "date": "2018-08-30"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_SEPTEMBER_2018.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_SEPTEMBER_2018.pdf",
+      "date": "2018-09-27"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_OCTOBER_2018.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_OCTOBER_2018.pdf",
+      "date": "2018-10-30"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_NOVEMBER_2018.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_NOVEMBER_2018.pdf",
+      "date": "2018-11-29"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_DESEMBER_2018.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_DESEMBER_2018.pdf",
+      "date": "2018-12-27"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_JANUARI_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_JANUARI_2019.pdf",
+      "date": "2019-01-30"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_FEBRUARI_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_FEBRUARI_2019.pdf",
+      "date": "2019-02-27"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_MARET_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_MARET_2019.pdf",
+      "date": "2019-03-28"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_JUNI_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_JUNI_2019.pdf",
+      "date": "2019-06-27"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_JULI_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_JULI_2019.pdf",
+      "date": "2019-07-30"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_AGUSTUS_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_AGUSTUS_2019.pdf",
+      "date": "2019-08-29"
+    },
+    {
+      "name": "BAHANA MES SYARIAH FUND_SEPTEMBER_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets/BAHANAMESSYARIAHFUND_SEPTEMBER_2019.pdf",
+      "date": "2019-09-29"
+    },
+    {
+      "name": "Syariah_Bahana_MES_Syariah_Fund_October_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FSyariah_Bahana_MES_Syariah_Fund_October_2019.pdf",
+      "date": "2019-10-31"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_November_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund_November_2019.pdf",
+      "date": "2019-11-30"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_December_2019.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund_December_2019.pdf",
+      "date": "2019-12-31"
+    },
+    {
+      "name": "MES 31 Jan 2020.pdf",
+      "file": "https://assets.bibit.id/factsheets/MES%2031%20Jan%202020.pdf",
+      "date": "2020-02-11"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_January_2020.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund_January_2020.pdf",
+      "date": "2020-01-31"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_February_2020.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund_February_2020.pdf",
+      "date": "2020-02-29"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_March_2020.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund_March_2020.pdf",
+      "date": "2020-03-31"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_April_2020.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund_April_2020.pdf",
+      "date": "2020-04-30"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_May_2020.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund_May_2020.pdf",
+      "date": "2020-05-31"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_June_2020.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund_June_2020.pdf",
+      "date": "2020-06-30"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_July_2020.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund_July_2020.pdf",
+      "date": "2020-07-31"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_August_2020.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund_August_2020.pdf",
+      "date": "2020-08-31"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_September_2020.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund_September_2020.pdf",
+      "date": "2020-09-30"
+    },
+    {
+      "name": "PR_BAHANA_MES_SYARIAH_FUND_2019_MARET.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FPR_BAHANA_MES_SYARIAH_FUND_2019_MARET.pdf",
+      "date": "2019-03-30"
+    },
+    {
+      "name": "PR_BAHANA_MES_SYARIAH_FUND_2018_MARET.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FPR_BAHANA_MES_SYARIAH_FUND_2018_MARET.pdf",
+      "date": "2018-03-27"
+    },
+    {
+      "name": "PR_REKSA_DANA_SYARIAH_BAHANA_MES_SYARIAH_FUND_2017_March.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FPR_REKSA_DANA_SYARIAH_BAHANA_MES_SYARIAH_FUND_2017_March.pdf",
+      "date": "2017-03-30"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund.pdf",
+      "file": "https://assets.bibit.id/factsheets%2FBahana_MES_Syariah_Fund.pdf",
+      "date": "2016-10-10"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_October_2020.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBahana_MES_Syariah_Fund_October_2020.pdf",
+      "date": "2020-10-31"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_November_2020.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBahana_MES_Syariah_Fund_November_2020.pdf",
+      "date": "2020-11-30"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_December_2020.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBahana_MES_Syariah_Fund_December_2020.pdf",
+      "date": "2020-12-31"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_January_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBahana_MES_Syariah_Fund_January_2021.pdf",
+      "date": "2021-01-31"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_February_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBahana_MES_Syariah_Fund_Kelas_G_February_2021.pdf",
+      "date": "2021-02-28"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_Kelas_G_MARET_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBAHANA_MES_SYARIAH_FUND_Kelas_G_MARET_2021.pdf",
+      "date": "2021-03-30"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_APRIL_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBAHANA_MES_SYARIAH_FUND_KELAS_G_APRIL_2021.pdf",
+      "date": "2021-04-29"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_MEI_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBAHANA_MES_SYARIAH_FUND_KELAS_G_MEI_2021.pdf",
+      "date": "2021-05-30"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_Kelas_G_JUNI_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBAHANA_MES_SYARIAH_FUND_Kelas_G_JUNI_2021.pdf",
+      "date": "2021-06-29"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_Juli_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_Juli_2021.pdf",
+      "date": "2021-08-09"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_Kelas_G_JULI_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBAHANA_MES_SYARIAH_FUND_Kelas_G_JULI_2021.pdf",
+      "date": "2021-07-29"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_AGUSTUS_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBAHANA_MES_SYARIAH_FUND_KELAS_G_AGUSTUS_2021.pdf",
+      "date": "2021-08-30"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_SEPTEMBER_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBAHANA_MES_SYARIAH_FUND_KELAS_G_SEPTEMBER_2021.pdf",
+      "date": "2021-09-29"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_Kelas_G_OKTOBER_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBAHANA_MES_SYARIAH_FUND_Kelas_G_OKTOBER_2021.pdf",
+      "date": "2021-10-28"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_Kelas_G_NOVEMBER_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/factsheets%2FBAHANA_MES_SYARIAH_FUND_Kelas_G_NOVEMBER_2021.pdf",
+      "date": "2021-11-29"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_DESEMBER_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_DESEMBER_2021.pdf",
+      "date": "2022-01-10"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_JANUARI_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_JANUARI_2022.pdf",
+      "date": "2022-02-16"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_FEBRUARI_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_FEBRUARI_2022.pdf",
+      "date": "2022-03-17"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_MARET_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_MARET_2022.pdf",
+      "date": "2022-04-14"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_APRIL_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_APRIL_2022.pdf",
+      "date": "2022-06-08"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_MEI_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_MEI_2022.pdf",
+      "date": "2022-06-13"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_JUNI_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_JUNI_2022.pdf",
+      "date": "2022-07-20"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_JULI_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_JULI_2022.pdf",
+      "date": "2022-08-09"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_AGUSTUS_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_AGUSTUS_2022.pdf",
+      "date": "2022-09-09"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_SEPTEMBER_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_SEPTEMBER_2022.pdf",
+      "date": "2022-10-07"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_OKTOBER_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_OKTOBER_2022.pdf",
+      "date": "2022-11-08"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_NOVEMBER_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_NOVEMBER_2022.pdf",
+      "date": "2022-12-14"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_DESEMBER_2022.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_DESEMBER_2022.pdf",
+      "date": "2023-01-12"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_JANUARI_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_JANUARI_2023.pdf",
+      "date": "2023-02-14"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_FEBRUARI_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_FEBRUARI_2023.pdf",
+      "date": "2023-03-14"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_MARET_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_MARET_2023.pdf",
+      "date": "2023-04-11"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_APRIL_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_APRIL_2023.pdf",
+      "date": "2023-05-11"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_MEI_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_MEI_2023.pdf",
+      "date": "2023-06-12"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_JUNI_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_JUNI_2023.pdf",
+      "date": "2023-07-10"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_JULI_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_JULI_2023.pdf",
+      "date": "2023-08-08"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_AGUSTUS_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_AGUSTUS_2023.pdf",
+      "date": "2023-09-12"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_SEPTEMBER_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_SEPTEMBER_2023.pdf",
+      "date": "2023-10-16"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_OKTOBER_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_OKTOBER_2023.pdf",
+      "date": "2023-11-09"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_NOVEMBER_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_NOVEMBER_2023.pdf",
+      "date": "2023-12-14"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_DESEMBER_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_DESEMBER_2023.pdf",
+      "date": "2024-01-15"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_JANUARI_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_JANUARI_2024.pdf",
+      "date": "2024-02-15"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_FEBRUARI_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_FEBRUARI_2024.pdf",
+      "date": "2024-03-18"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_MARET_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_MARET_2024.pdf",
+      "date": "2024-04-19"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_APRIL_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_APRIL_2024.pdf",
+      "date": "2024-05-15"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_MEI_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_MEI_2024.pdf",
+      "date": "2024-06-20"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_JUNI_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_JUNI_2024.pdf",
+      "date": "2024-07-15"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_JULI_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_JULI_2024.pdf",
+      "date": "2024-08-16"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_Kelas_G_AGUSTUS_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_Kelas_G_AGUSTUS_2024.pdf",
+      "date": "2024-09-13"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_SEPTEMBER_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_SEPTEMBER_2024.pdf",
+      "date": "2024-10-14"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_OKTOBER_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_OKTOBER_2024.pdf",
+      "date": "2024-11-15"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_NOVEMBER_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_NOVEMBER_2024.pdf",
+      "date": "2024-12-17"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_DESEMBER_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_DESEMBER_2024.pdf",
+      "date": "2025-01-15"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_JANUARI_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_JANUARI_2025.pdf",
+      "date": "2025-02-14"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_FEBRUARY_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_FEBRUARY_2025.pdf",
+      "date": "2025-03-10"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_MARET_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_MARET_2025.pdf",
+      "date": "2025-04-14"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_APRIL_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_APRIL_2025.pdf",
+      "date": "2025-04-30"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_MEI_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_MEI_2025.pdf",
+      "date": "2025-05-28"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_JUNI_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_JUNI_2025.pdf",
+      "date": "2025-06-30"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_JULI_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_JULI_2025.pdf",
+      "date": "2025-07-31"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_AGUSTUS_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_AGUSTUS_2025.pdf",
+      "date": "2025-08-29"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_SEPTEMBER_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_SEPTEMBER_2025.pdf",
+      "date": "2025-09-30"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_OKTOBER_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_OKTOBER_2025.pdf",
+      "date": "2025-10-31"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_NOVEMBER_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_NOVEMBER_2025.pdf",
+      "date": "2025-11-28"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_DESEMBER_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_DESEMBER_2025.pdf",
+      "date": "2025-12-30"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_Januari_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_Januari_2026.pdf",
+      "date": "2026-01-30"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_Februari_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_Februari_2026.pdf",
+      "date": "2026-02-27"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_Maret_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_Maret_2026.pdf",
+      "date": "2026-03-31"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_April_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_April_2026.pdf",
+      "date": "2026-04-30"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_Mei_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_Mei_2026.pdf",
+      "date": "2026-05-29"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_Juni_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_Juni_2026.pdf",
+      "date": "2026-06-30"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_Juli_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_Juli_2026.pdf",
+      "date": "2026-07-31"
+    },
+    {
+      "name": "BAHANA_MES_SYARIAH_FUND_KELAS_G_Agustus_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_MES_SYARIAH_FUND_KELAS_G_Agustus_2026.pdf",
+      "date": "2026-08-31"
+    }
+  ],
+  "prospectus": [
+    {
+      "name": "Bahana MES Syariah Fund.pdf",
+      "file": "https://assets.bibit.id/prospectus/BahanaMESSyariahFund.pdf"
+    },
+    {
+      "name": "PR_REKSA DANA SYARIAH BAHANA MES SYARIAH FUND_2017_March.pdf",
+      "file": "https://assets.bibit.id/prospectus/PR_REKSADANASYARIAHBAHANAMESSYARIAHFUND_2017_March.pdf"
+    },
+    {
+      "name": "PR_BAHANA MES SYARIAH FUND_2018_MARET.pdf",
+      "file": "https://assets.bibit.id/prospectus/PR_BAHANAMESSYARIAHFUND_2018_MARET.pdf"
+    },
+    {
+      "name": "PR_BAHANA MES SYARIAH FUND_2019_MARET.pdf",
+      "file": "https://assets.bibit.id/prospectus/PR_BAHANAMESSYARIAHFUND_2019_MARET.pdf"
+    },
+    {
+      "name": "Syariah_Bahana_MES_Syariah_Fund_2019.pdf",
+      "file": "https://assets.bibit.id/prospectus%2FSyariah_Bahana_MES_Syariah_Fund_2019.pdf"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_2020.pdf",
+      "file": "https://assets.bibit.id/prospectus%2FBahana_MES_Syariah_Fund_2020.pdf"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_2021.pdf",
+      "file": "https://bibit.s3-ap-southeast-1.amazonaws.com/prospectus%2FBahana_MES_Syariah_Fund_2021.pdf"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Fund_MultiShare_Class_Maret_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Bahana_MES_Syariah_Fund_MultiShare_Class_Maret_2021.pdf"
+    },
+    {
+      "name": "Prospectus_MES-G_20220524162304.pdf",
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Prospectus_MES-G_20220524162304.pdf"
+    },
+    {
+      "name": "Prospectus_Bahana_MES_Syariah_Fund_Kelas_G_Maret_2023.pdf",
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Prospectus_Bahana_MES_Syariah_Fund_Kelas_G_Maret_2023.pdf"
+    },
+    {
+      "name": "Pembaharuan_Prospektus_RDS_Bahana_MES_Syariah_-_Juni_2024.pdf",
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Pembaharuan_Prospektus_RDS_Bahana_MES_Syariah_-_Juni_2024.pdf"
+    },
+    {
+      "name": "Bahana_MES_Syariah_April_2025.pdf",
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Bahana_MES_Syariah_April_2025.pdf"
+    },
+    {
+      "name": "Bahana_MES_Syariah_Maret_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Bahana_MES_Syariah_Maret_2026.pdf"
+    }
+  ]
+}
