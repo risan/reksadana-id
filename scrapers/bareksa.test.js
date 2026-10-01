@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { CookieError, assertCookieIsValid, parseAllocationRows, parseAumRows, parseFundList, parseFundPage, parseNavRows, parseUnitsRows } from './bareksa.js';
+import { CookieError, assertCookieIsValid, mergeRowsByDate, parseAllocationRows, parseAumRows, parseFundList, parseFundPage, parseNavRows, parseUnitsRows } from './bareksa.js';
 
 // Built from the response shapes Bareksa sends for a logged-in and an anonymous request.
 const LOGGED_IN_NAV = {
@@ -47,9 +47,14 @@ test('parseNavRows checks the login before anything else, even without a status 
 });
 
 test('parseNavRows fails on a response without data, and on a NAV that is not a number', () => {
-  assert.throws(() => parseNavRows({ status: true }), /no data/);
-  assert.throws(() => parseNavRows({ data: { auth: true, datas: [{ nav: [{ date: '2019-12-12', value: 'abc' }] }] } }), /Invalid number/);
-  assert.throws(() => parseNavRows({ data: { auth: true, datas: [{ nav: [{ date: '2019-02-31', value: '1' }] }] } }), /Invalid date/);
+  assert.throws(() => parseNavRows({ status: true }), /no data list/);
+  assert.throws(() => parseNavRows({ status: false, data: {} }), /no data list/);
+  assert.throws(() => parseNavRows({ data: { auth: true, datas: [] } }), /no data list/);
+  assert.throws(() => parseNavRows({ status: true, data: { auth: true } }), /no data list/);
+  assert.throws(() => parseNavRows({ status: true, data: { auth: true, datas: [{ pid: '1' }] } }), /no NAV list/);
+  assert.deepEqual(parseNavRows({ status: true, data: { auth: true, datas: [{ pid: '1', nav: [] }] } }), []);
+  assert.throws(() => parseNavRows({ status: true, data: { auth: true, datas: [{ nav: [{ date: '2019-12-12', value: 'abc' }] }] } }), /Invalid number/);
+  assert.throws(() => parseNavRows({ status: true, data: { auth: true, datas: [{ nav: [{ date: '2019-02-31', value: '1' }] }] } }), /Invalid date/);
 });
 
 test('a cookie with a line break is refused without repeating the cookie', () => {
@@ -126,4 +131,12 @@ test('parseFundPage reads type, manager, and launch date', () => {
     </tbody></table>`;
 
   assert.deepEqual(parseFundPage(html), { type: 'Pendapatan Tetap', manager: 'Korea Investment Management Indonesia, PT', launchDate: '2019-12-02' });
+});
+
+test('mergeRowsByDate corrects a whole row, and keeps a stored value that the new row leaves empty', () => {
+  const stored = [['2026-01-01', '100', ''], ['2026-02-01', '5', '7']];
+
+  assert.deepEqual(mergeRowsByDate(stored, [['2026-01-01', '120', '']]), [['2026-01-01', '120', ''], ['2026-02-01', '5', '7']]);
+  assert.deepEqual(mergeRowsByDate(stored, [['2026-02-01', '6', '']]), [['2026-01-01', '100', ''], ['2026-02-01', '6', '7']]);
+  assert.deepEqual(mergeRowsByDate(stored, [['2026-03-01', '', '']]), [...stored, ['2026-03-01', '', '']]);
 });

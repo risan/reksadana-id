@@ -64,7 +64,7 @@ export const parseFundPage = (html) => {
 
   const { data, routeCategory } = JSON.parse(match[1]).props?.pageProps ?? {};
 
-  if (!data?._id || !data.name || !data.url || !routeCategory) {
+  if (![data?._id, data?.name, data?.url, routeCategory].every((value) => typeof value === 'string' && value !== '')) {
     throw new Error('Fund page has no fund data');
   }
 
@@ -81,7 +81,7 @@ export const toIsoDate = (yyyymmdd) => {
 const toFundRow = (fund, symbol) => [
   fund._id,
   fund.name,
-  fund.manager?.name,
+  typeof fund.manager?.name === 'string' ? fund.manager.name : '',
   fund.category,
   fund.routeCategory,
   fund.url,
@@ -99,9 +99,25 @@ const readStoredFunds = async () => {
   return new Map(rows.map((row) => [row[0], row]));
 };
 
+// The index lists the funds in the sitemap. A stored fund that left the sitemap is dropped (its JSON file stays),
+// but one whose page failed this run is kept, so a bad run does not make funds disappear.
+export const keepFundsOfFailedPages = (refreshedRowsById, storedRowsById, failedPageUrls) => {
+  const rowsById = new Map(refreshedRowsById);
+
+  for (const [id, row] of storedRowsById) {
+    if (!rowsById.has(id) && failedPageUrls.some((pageUrl) => pageUrl.endsWith(`/${row[5]}`))) {
+      rowsById.set(id, row);
+    }
+  }
+
+  return rowsById;
+};
+
 const main = async () => {
   const startedAt = Date.now();
-  const rowsById = await readStoredFunds();
+  const storedRowsById = await readStoredFunds();
+  const rowsById = new Map();
+  const failedPageUrls = [];
   const pageUrls = await fetchFundPageUrls();
 
   console.log(`Sitemap: ${pageUrls.length} fund pages`);
@@ -110,10 +126,16 @@ const main = async () => {
 
   // Every page is fetched every run: the page is the only place the latest price and returns are.
   const scrapeFund = async (pageUrl) => {
-    const fund = parseFundPage(await fetchText(pageUrl));
+    try {
+      const fund = parseFundPage(await fetchText(pageUrl));
 
-    await writeFileAtomic(path.join(DATA_DIR, 'funds', `${fund._id}.json`), `${JSON.stringify(fund, null, 2)}\n`);
-    rowsById.set(fund._id, toFundRow(fund, ''));
+      await writeFileAtomic(path.join(DATA_DIR, 'funds', `${fund._id}.json`), `${JSON.stringify(fund, null, 2)}\n`);
+      rowsById.set(fund._id, toFundRow(fund, ''));
+    } catch (error) {
+      failedPageUrls.push(pageUrl);
+
+      throw error;
+    }
   };
 
   const failures = await runPool({
@@ -125,7 +147,7 @@ const main = async () => {
   });
 
   const bibitRows = await readCsvRows(BIBIT_FUNDS_FILE);
-  const sortedRows = [...rowsById.values()].sort((a, b) => a[1].localeCompare(b[1]) || a[0].localeCompare(b[0]));
+  const sortedRows = [...keepFundsOfFailedPages(rowsById, storedRowsById, failedPageUrls).values()].sort((a, b) => a[1].localeCompare(b[1]) || a[0].localeCompare(b[0]));
   const symbolsById = matchBibitSymbols('makmur', sortedRows.map((row) => [row[0], { name: row[1], manager: row[2] }]), bibitRows);
   const rows = sortedRows.map((row) => [...row.slice(0, -1), symbolsById.get(row[0])]);
 

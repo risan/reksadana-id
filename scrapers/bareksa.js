@@ -172,11 +172,17 @@ export const parseNavRows = (json) => {
     throw new CookieError();
   }
 
-  if (!json.data) {
-    throw new Error('NAV response has no data');
+  if (json.status !== true || !Array.isArray(json.data?.datas)) {
+    throw new Error('NAV response has no data list');
   }
 
-  const points = json.data.datas?.[0]?.nav ?? [];
+  const [fund] = json.data.datas;
+
+  if (fund !== undefined && !Array.isArray(fund.nav)) {
+    throw new Error('NAV response has no NAV list');
+  }
+
+  const points = fund?.nav ?? [];
 
   return points
     .map((point) => [assertDate(point.date), toNumberText(point.value)])
@@ -236,6 +242,20 @@ const writeFundIndex = async (funds, bibitRows) => {
   return symbolsById;
 };
 
+// A new row replaces the stored row of the same date, column by column. A missing value in a new row
+// never erases the stored value of that column.
+export const mergeRowsByDate = (storedRows, newRows) => {
+  const rowsByDate = new Map(storedRows.map((row) => [row[0], row]));
+
+  for (const row of newRows) {
+    const storedRow = rowsByDate.get(row[0]);
+
+    rowsByDate.set(row[0], storedRow ? row.map((value, column) => (value === '' ? storedRow[column] ?? '' : value)) : row);
+  }
+
+  return [...rowsByDate.values()].sort((a, b) => a[0].localeCompare(b[0]));
+};
+
 // New rows replace stored ones on the same date. Returns how many rows the file holds.
 const updateSeries = async (directory, header, id, fetchRows) => {
   const file = path.join(DATA_DIR, directory, `${id}.csv`);
@@ -246,18 +266,7 @@ const updateSeries = async (directory, header, id, fetchRows) => {
     return storedRows.length;
   }
 
-  const rowsByDate = new Map(storedRows.map((row) => [row[0], row]));
-
-  for (const row of newRows) {
-    // A row with a missing value never replaces a stored row.
-    if (row.includes('') && rowsByDate.has(row[0])) {
-      continue;
-    }
-
-    rowsByDate.set(row[0], row);
-  }
-
-  const rows = [...rowsByDate.values()].sort((a, b) => a[0].localeCompare(b[0]));
+  const rows = mergeRowsByDate(storedRows, newRows);
 
   await writeFileAtomic(file, toCsv(header, rows));
 

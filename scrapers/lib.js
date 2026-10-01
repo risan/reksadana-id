@@ -180,7 +180,7 @@ const normalizeName = (name) => name
 
 // Bibit writes "Name, PT" and Kontan writes "PT. Name", so "pt" and "tbk" are dropped wherever they appear.
 const normalizeManager = (manager) => {
-  const normalized = manager
+  const normalized = (manager ?? '')
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, ' ')
     .replace(/\b(pt|tbk|persero)\b/g, ' ')
@@ -201,11 +201,12 @@ const isSameManager = (otherManager, bibitManager) => {
 // A fund matches a Bibit fund only when the normalized name is unique on the source side,
 // exactly one Bibit fund with that name has the same manager, and no alias says otherwise.
 // Makmur adds " Kelas A" to the name of a fund that Bibit lists without a class, so that suffix is dropped
-// when the full name finds nothing. Other classes ("Kelas B") are different funds and never match this way.
+// when no Bibit fund has the full name at all, and the name without it is held by exactly one Bibit fund.
+// Other classes ("Kelas B") are different funds and never match this way.
 export const matchBibitSymbols = (source, funds, bibitRows, aliases = FUND_ALIASES) => {
   const bibitByName = Map.groupBy(bibitRows, (row) => normalizeName(row[BIBIT_NAME_COLUMN]));
   const bibitSymbols = new Set(bibitRows.map((row) => row[BIBIT_SYMBOL_COLUMN]));
-  const fundsByName = Map.groupBy(funds, ([, fund]) => normalizeName(fund.name));
+  const fundsByName = Map.groupBy(funds, ([, fund]) => normalizeName(fund.name ?? ''));
   const symbolsById = new Map();
 
   const findBibitRows = (name, manager) => (bibitByName.get(name) ?? []).filter((row) => isSameManager(manager, row[BIBIT_MANAGER_COLUMN]));
@@ -222,7 +223,7 @@ export const matchBibitSymbols = (source, funds, bibitRows, aliases = FUND_ALIAS
       continue;
     }
 
-    const name = normalizeName(fund.name);
+    const name = normalizeName(fund.name ?? '');
 
     if (name === '' || fundsByName.get(name).length !== 1) {
       continue;
@@ -231,7 +232,7 @@ export const matchBibitSymbols = (source, funds, bibitRows, aliases = FUND_ALIAS
     let rows = findBibitRows(name, fund.manager);
     const nameWithoutClass = name.replace(/ kelas a$/, '');
 
-    if (rows.length === 0 && nameWithoutClass !== name && !fundsByName.has(nameWithoutClass)) {
+    if (!bibitByName.has(name) && nameWithoutClass !== name && !fundsByName.has(nameWithoutClass) && bibitByName.get(nameWithoutClass)?.length === 1) {
       rows = findBibitRows(nameWithoutClass, fund.manager);
     }
 

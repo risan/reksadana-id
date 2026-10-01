@@ -92,3 +92,26 @@ test('an alias to a fund Bibit does not list is ignored, and an alias of null bl
   assert.equal(matchOne(fund, bibitRows, { 'source:1': null }), undefined);
   assert.equal(matchOne(fund, bibitRows, { 'other:1': 'RD404' }), 'RD1');
 });
+
+test('Kelas A is not dropped when a Bibit fund has the full name with another manager', () => {
+  const rows = [
+    ['RD1', 'Alpha Fund', '', 'AAA Asset Management, PT'],
+    ['RD2', 'Alpha Fund Kelas A', '', 'BBB Asset Management, PT'],
+  ];
+
+  assert.equal(matchOne({ name: 'Alpha Fund Kelas A', manager: 'PT AAA Asset Management' }, rows), undefined);
+});
+
+test('Kelas A is not dropped when two Bibit funds have the name without it', () => {
+  const rows = [
+    ['RD1', 'Alpha Fund', '', 'AAA Asset Management, PT'],
+    ['RD2', 'Alpha Fund', '', ''],
+  ];
+
+  assert.equal(matchOne({ name: 'Alpha Fund Kelas A', manager: 'PT AAA Asset Management' }, rows), undefined);
+});
+
+test('a fund without a manager does not match and does not throw', () => {
+  assert.equal(matchOne({ name: 'Alpha Fund', manager: undefined }), undefined);
+  assert.equal(matchOne({ name: 'Alpha Fund Kelas A', manager: null }), undefined);
+});
