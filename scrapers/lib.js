@@ -132,3 +132,68 @@ export const runPool = async ({ items, worker, concurrency, label, describeItem 
 
   return failures;
 };
+
+const BIBIT_SYMBOL_COLUMN = 0;
+const BIBIT_NAME_COLUMN = 1;
+const BIBIT_MANAGER_COLUMN = 3;
+const BIBIT_TRADEABLE_COLUMN = 8;
+const BIBIT_NAV_DATE_COLUMN = 11;
+const RECENT_NAV_DAYS = 30;
+const DAY_IN_MS = 24 * 60 * 60 * 1000;
+
+// Names differ in case, punctuation, and the "reksa dana" prefix. Nothing fuzzier is safe.
+const normalizeName = (name) => name
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, ' ')
+  .replace(/\b(reksa dana|reksadana|rd)\b/g, ' ')
+  .replace(/\s+/g, ' ')
+  .trim();
+
+// Bibit writes "Name, PT" and Kontan writes "PT. Name".
+const normalizeManager = (manager) => manager
+  .toLowerCase()
+  .replace(/[^a-z0-9]+/g, ' ')
+  .replace(/\b(pt|tbk|persero)\b/g, ' ')
+  .replace(/\s+/g, ' ')
+  .trim();
+
+const isSameManager = (otherManager, bibitManager) => {
+  const other = normalizeManager(otherManager);
+  const bibit = normalizeManager(bibitManager);
+
+  if (other === '') {
+    return true;
+  }
+
+  return bibit !== '' && (other.includes(bibit) || bibit.includes(other));
+};
+
+// `funds` is a list of [id, { name, manager }]. A fund matches a Bibit fund only when the
+// normalized name is unique on both sides and the managers are compatible.
+export const matchBibitSymbols = (funds, bibitRows) => {
+  const bibitByName = Map.groupBy(bibitRows, (row) => normalizeName(row[BIBIT_NAME_COLUMN]));
+  const fundsByName = Map.groupBy(funds, ([, fund]) => normalizeName(fund.name));
+  const symbolsById = new Map();
+
+  for (const [id, fund] of funds) {
+    const name = normalizeName(fund.name);
+    const candidates = bibitByName.get(name) ?? [];
+
+    if (name !== '' && candidates.length === 1 && fundsByName.get(name).length === 1 && isSameManager(fund.manager, candidates[0][BIBIT_MANAGER_COLUMN])) {
+      symbolsById.set(id, candidates[0][BIBIT_SYMBOL_COLUMN]);
+    }
+  }
+
+  return symbolsById;
+};
+
+export const reportMatches = (sourceName, fundCount, symbolsById, bibitRows) => {
+  const bibitBySymbol = new Map(bibitRows.map((row) => [row[BIBIT_SYMBOL_COLUMN], row]));
+  const matchedRows = [...symbolsById.values()].map((symbol) => bibitBySymbol.get(symbol));
+  const notTradeable = matchedRows.filter((row) => row[BIBIT_TRADEABLE_COLUMN] !== '1');
+  const recentSince = new Date(Date.now() - RECENT_NAV_DAYS * DAY_IN_MS).toISOString().slice(0, 10);
+  const recent = notTradeable.filter((row) => row[BIBIT_NAV_DATE_COLUMN] >= recentSince);
+
+  console.log(`${sourceName} funds: ${fundCount}, matched to Bibit: ${symbolsById.size}, unmatched: ${fundCount - symbolsById.size}`);
+  console.log(`Bibit funds with a ${sourceName} match: ${matchedRows.length} (${notTradeable.length} not buyable, ${recent.length} of those with a Bibit NAV in the last ${RECENT_NAV_DAYS} days)`);
+};

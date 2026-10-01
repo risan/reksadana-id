@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { HttpError, readCsvRows, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
+import { HttpError, matchBibitSymbols, readCsvRows, reportMatches, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
 
 const BASE_URL = 'https://pusatdata.kontan.co.id';
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'kontan');
@@ -17,14 +17,6 @@ const NAV_HEADER = ['date', 'nav'];
 const FIRST_SCAN_END_ID = 18000;
 const LOOKAHEAD_IDS = 500;
 const SCAN_CHUNK_SIZE = 1000;
-
-const BIBIT_SYMBOL_COLUMN = 0;
-const BIBIT_NAME_COLUMN = 1;
-const BIBIT_MANAGER_COLUMN = 3;
-const BIBIT_TRADEABLE_COLUMN = 8;
-const BIBIT_NAV_DATE_COLUMN = 11;
-const RECENT_NAV_DAYS = 30;
-const DAY_IN_MS = 24 * 60 * 60 * 1000;
 
 let requestCount = 0;
 
@@ -112,51 +104,6 @@ const readStoredFunds = async () => {
   return new Map(rows.map(([id, name, manager, category, navDate, nav]) => [Number(id), { name, manager, category, navDate, nav }]));
 };
 
-// Names differ in case, punctuation, and the "reksa dana" prefix. Nothing fuzzier is safe.
-const normalizeName = (name) => name
-  .toLowerCase()
-  .replace(/[^a-z0-9]+/g, ' ')
-  .replace(/\b(reksa dana|reksadana|rd)\b/g, ' ')
-  .replace(/\s+/g, ' ')
-  .trim();
-
-// Bibit writes "Name, PT" and Kontan writes "PT. Name".
-const normalizeManager = (manager) => manager
-  .toLowerCase()
-  .replace(/[^a-z0-9]+/g, ' ')
-  .replace(/\b(pt|tbk|persero)\b/g, ' ')
-  .replace(/\s+/g, ' ')
-  .trim();
-
-const isSameManager = (kontanManager, bibitManager) => {
-  const kontan = normalizeManager(kontanManager);
-  const bibit = normalizeManager(bibitManager);
-
-  if (kontan === '') {
-    return true;
-  }
-
-  return bibit !== '' && (kontan.includes(bibit) || bibit.includes(kontan));
-};
-
-// A Kontan fund matches a Bibit fund only when the normalized name is unique on both sides.
-const matchBibitSymbols = (funds, bibitRows) => {
-  const bibitByName = Map.groupBy(bibitRows, (row) => normalizeName(row[BIBIT_NAME_COLUMN]));
-  const kontanByName = Map.groupBy(funds, ([, fund]) => normalizeName(fund.name));
-  const symbolsById = new Map();
-
-  for (const [id, fund] of funds) {
-    const name = normalizeName(fund.name);
-    const candidates = bibitByName.get(name) ?? [];
-
-    if (name !== '' && candidates.length === 1 && kontanByName.get(name).length === 1 && isSameManager(fund.manager, candidates[0][BIBIT_MANAGER_COLUMN])) {
-      symbolsById.set(id, candidates[0][BIBIT_SYMBOL_COLUMN]);
-    }
-  }
-
-  return symbolsById;
-};
-
 const writeFundIndex = async (funds, bibitRows) => {
   const sortedFunds = [...funds].sort((a, b) => a[0] - b[0]);
   const symbolsById = matchBibitSymbols(sortedFunds, bibitRows);
@@ -174,17 +121,6 @@ const writeFundIndex = async (funds, bibitRows) => {
   await writeFileAtomic(path.join(DATA_DIR, 'funds.csv'), toCsv(FUND_HEADER, rows));
 
   return symbolsById;
-};
-
-const reportMatches = (funds, symbolsById, bibitRows) => {
-  const bibitBySymbol = new Map(bibitRows.map((row) => [row[BIBIT_SYMBOL_COLUMN], row]));
-  const matchedRows = [...symbolsById.values()].map((symbol) => bibitBySymbol.get(symbol));
-  const notTradeable = matchedRows.filter((row) => row[BIBIT_TRADEABLE_COLUMN] !== '1');
-  const recentSince = new Date(Date.now() - RECENT_NAV_DAYS * DAY_IN_MS).toISOString().slice(0, 10);
-  const recent = notTradeable.filter((row) => row[BIBIT_NAV_DATE_COLUMN] >= recentSince);
-
-  console.log(`Kontan funds: ${funds.size}, matched to Bibit: ${symbolsById.size}, unmatched: ${funds.size - symbolsById.size}`);
-  console.log(`Bibit funds with a Kontan match: ${matchedRows.length} (${notTradeable.length} not buyable, ${recent.length} of those with a Bibit NAV in the last ${RECENT_NAV_DAYS} days)`);
 };
 
 const main = async () => {
@@ -253,7 +189,7 @@ const main = async () => {
   const bibitRows = await readCsvRows(BIBIT_FUNDS_FILE);
   const symbolsById = await writeFundIndex(funds, bibitRows);
 
-  reportMatches(funds, symbolsById, bibitRows);
+  reportMatches('Kontan', funds.size, symbolsById, bibitRows);
 
   if (conflictingIds.length > 0) {
     console.log(`Skipped ${conflictingIds.length} funds with two different NAVs on one date: ${conflictingIds.sort((a, b) => a - b).join(', ')}`);
