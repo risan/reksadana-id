@@ -30,7 +30,7 @@ const endpoints = [
   },
   {
     path: '/api/funds/RD8807.json',
-    description: 'Everything about one fund: the full Bibit record, plus documents, switchables, dividends, nav, aum, and kontan. kontan is the matching fund from Kontan with its daily NAV, or null when there is no confident match. A missing part is null (documents, switchables, dividends, kontan) or an empty list (nav, aum).',
+    description: 'Everything about one fund: the full Bibit record, plus documents, switchables, dividends, nav, aum, kontan, and bareksa. kontan and bareksa are the matching funds from Kontan and Bareksa, or null when there is no confident match. A missing part is null (documents, switchables, dividends, kontan, bareksa) or an empty list (nav, aum).',
     example: `{
   "symbol": "RD8807",
   "name": "Grow Obligasi Optima Dinamis Kelas O",
@@ -48,6 +48,7 @@ const endpoints = [
     "..."
   ],
   "kontan": null,
+  "bareksa": null,
   "documents": { "factsheets": ["..."], "prospectus": ["..."] },
   "switchables": null,
   "dividends": null
@@ -66,6 +67,35 @@ const endpoints = [
     "nav": [
       { "date": "2025-10-02", "nav": 3257.37 },
       { "date": "2025-10-03", "nav": 3258.24 },
+      "..."
+    ]
+  }
+}`,
+  },
+  {
+    path: '/api/funds/RD3420.json',
+    description: 'A fund with a Bareksa match: bareksa holds the Bareksa fund id and name, then four lists. nav is the daily NAV (empty until the owner has run the logged-in backfill described in the README). aum has the monthly AUM in rupiah and US dollars, and units the monthly units outstanding. allocation has the monthly asset allocation in percent: saham (equity), obligasi (bonds), pasar_uang (money market), and lainnya (other). Any list can be empty.',
+    example: `{
+  "symbol": "RD3420",
+  "name": "Aberdeen Standard Indonesia Bond Fund",
+  "...": "...",
+  "bareksa": {
+    "id": 354,
+    "name": "Aberdeen Standard Indonesia Bond Fund",
+    "nav": [
+      { "date": "2007-06-01", "nav": 1000 },
+      "..."
+    ],
+    "aum": [
+      { "date": "2007-06-01", "aum_idr": 80659641807, "aum_usd": 9139902.75 },
+      "..."
+    ],
+    "units": [
+      { "date": "2007-06-01", "units": 80646262 },
+      "..."
+    ],
+    "allocation": [
+      { "date": "2017-11-30", "saham": 0, "obligasi": 89.5, "pasar_uang": 10.5, "lainnya": 0 },
       "..."
     ]
   }
@@ -103,8 +133,8 @@ RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,
 2004-07-30,12837`,
   },
   {
-    path: '/download/bibit-reksadana-data.zip',
-    description: 'The whole data/ folder as one zip file, with both the Bibit (data/bibit/) and the Kontan (data/kontan/) data.',
+    path: '/download/bibit.zip',
+    description: 'The Bibit data (data/bibit/) as one zip file. The other sources have their own zips: kontan.zip, bareksa.zip (without daily NAV), and bareksa-nav-1.zip and up (daily NAV, split by size). See the download page for the list.',
     example: null,
   },
 ];
@@ -114,7 +144,7 @@ RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,
   <h1>API</h1>
   <p>
     A free, read-only API made of static files. No key is needed, and CORS is open
-    (<code>Access-Control-Allow-Origin: *</code>), so you can call it from a browser. The data is rebuilt once a week.
+    (<code>Access-Control-Allow-Origin: *</code>), so you can call it from a browser. The data is rebuilt every time it changes: Bibit and Kontan weekly, Bareksa monthly.
   </p>
   <p>Replace the host below with the one you are visiting.</p>
 

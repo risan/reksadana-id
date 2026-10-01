@@ -5,6 +5,7 @@ export const DATA_DIR = path.resolve('data');
 
 const BIBIT_DIR = path.join(DATA_DIR, 'bibit');
 const KONTAN_DIR = path.join(DATA_DIR, 'kontan');
+const BAREKSA_DIR = path.join(DATA_DIR, 'bareksa');
 
 const BOOLEAN_COLUMNS = ['sharia', 'etf', 'index', 'tradeable'];
 const NUMBER_COLUMNS = ['status', 'nav', 'aum', 'expense_ratio'];
@@ -191,4 +192,47 @@ export function loadKontan(symbol) {
   }));
 
   return { ...fund, nav };
+}
+
+let bareksaFundsBySymbol = null;
+
+function loadBareksaFundsBySymbol() {
+  if (bareksaFundsBySymbol === null) {
+    const matchedRows = readCsvObjects(BAREKSA_DIR, 'funds.csv').filter((row) => row.bibit_symbol !== '');
+
+    bareksaFundsBySymbol = new Map(matchedRows.map((row) => [row.bibit_symbol, { id: Number(row.bareksa_id), name: row.name }]));
+  }
+
+  return bareksaFundsBySymbol;
+}
+
+function toNumberOrNull(value) {
+  const text = emptyToNull(value);
+
+  return text === null ? null : Number(text);
+}
+
+// The Bareksa fund matched to a Bibit symbol, with its NAV, AUM, units, and asset allocation, or null when there is no match.
+export function loadBareksa(symbol) {
+  const fund = loadBareksaFundsBySymbol().get(symbol);
+
+  if (!fund) {
+    return null;
+  }
+
+  const readSeries = (directory, toRecord) => readCsvObjects(BAREKSA_DIR, directory, `${fund.id}.csv`).map(toRecord);
+
+  return {
+    ...fund,
+    nav: readSeries('nav', (row) => ({ date: row.date, nav: toNumberOrNull(row.nav) })),
+    aum: readSeries('aum', (row) => ({ date: row.date, aum_idr: toNumberOrNull(row.aum_idr), aum_usd: toNumberOrNull(row.aum_usd) })),
+    units: readSeries('units', (row) => ({ date: row.date, units: toNumberOrNull(row.units) })),
+    allocation: readSeries('allocation', (row) => ({
+      date: row.date,
+      saham: toNumberOrNull(row.saham),
+      obligasi: toNumberOrNull(row.obligasi),
+      pasar_uang: toNumberOrNull(row.pasar_uang),
+      lainnya: toNumberOrNull(row.lainnya),
+    })),
+  };
 }

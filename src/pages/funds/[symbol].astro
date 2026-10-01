@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { listDataFiles, listFundSymbols, loadFundDetails, loadKontan } from '../../lib/data.js';
+import { listDataFiles, listFundSymbols, loadBareksa, loadFundDetails, loadKontan } from '../../lib/data.js';
 import { formatCompact, formatNumber, formatPercent, signClass } from '../../lib/format.js';
 
 export function getStaticPaths() {
@@ -12,13 +12,14 @@ export function getStaticPaths() {
     props: {
       fund: loadFundDetails(symbol),
       kontan: loadKontan(symbol),
+      bareksa: loadBareksa(symbol),
       hasNavCsv: symbolsWithNav.has(symbol),
       hasAumCsv: symbolsWithAum.has(symbol),
     },
   }));
 }
 
-const { fund, kontan, hasNavCsv, hasAumCsv } = Astro.props;
+const { fund, kontan, bareksa, hasNavCsv, hasAumCsv } = Astro.props;
 const { symbol } = Astro.params;
 
 const RETURN_PERIODS = ['1d', '1m', '3m', 'ytd', '1y', '3y', '5y', '10y', 'all'];
@@ -61,6 +62,9 @@ const latestProspectus = prospectus.at(-1);
 const switchables = fund.switchables ?? [];
 const holdings = fund.holding ?? [];
 const assets = fund.asset ?? [];
+const ALLOCATION_HISTORY_ROWS = 12;
+const allocationHistory = (bareksa?.allocation ?? []).slice(-ALLOCATION_HISTORY_ROWS).reverse();
+const hasBareksaMonthlyData = bareksa && bareksa.aum.length > 0 && bareksa.units.length > 0;
 
 const details = [
   ['Type', fund.type],
@@ -89,6 +93,8 @@ const details = [
         Bibit gives no NAV history for funds you cannot buy in its app. History for this fund starts on 2026-10-01,
         when this repository began collecting it (see the README).
         {kontan && ' The chart also includes daily NAV from Kontan for the last 12 months, and it grows with every update.'}
+        {bareksa && bareksa.nav.length > 0 && ' It also includes the daily NAV history from Bareksa.'}
+        {hasBareksaMonthlyData && ' Bareksa also gives monthly AUM and units. When no source has daily NAV, the chart shows a monthly NAV computed as AUM divided by units.'}
       </p>
     )
   }
@@ -116,6 +122,15 @@ const details = [
           {' and '}
           <a href={`https://pusatdata.kontan.co.id/reksadana/produk/${kontan.id}`}>Kontan</a>
           {' (NAV line "NAV (Kontan)")'}
+        </>
+      )
+    }
+    {
+      bareksa && (
+        <>
+          {kontan ? ', ' : ' and '}
+          <a href={`https://www.bareksa.com/id/data/reksadana/${bareksa.id}/`}>Bareksa</a>
+          {' (NAV line "NAV (Bareksa)", monthly AUM, units, and asset allocation)'}
         </>
       )
     }
@@ -199,6 +214,42 @@ const details = [
                 <tr>
                   <td>{asset.name}</td>
                   <td class="numeric">{asset.percentage}%</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    )
+  }
+
+  {
+    allocationHistory.length > 0 && (
+      <>
+        <h2>Asset allocation history</h2>
+        <p class="muted">
+          From Bareksa, month by month, as a share of the fund's assets. The latest {ALLOCATION_HISTORY_ROWS} entries are
+          shown; the <a href={`/api/funds/${symbol}.json`}>fund JSON</a> has the full history.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th class="numeric">Equity</th>
+                <th class="numeric">Bonds</th>
+                <th class="numeric">Money market</th>
+                <th class="numeric">Other</th>
+              </tr>
+            </thead>
+            <tbody>
+              {allocationHistory.map((row) => (
+                <tr>
+                  <td>{row.date}</td>
+                  <td class="numeric">{formatNumber(row.saham)}%</td>
+                  <td class="numeric">{formatNumber(row.obligasi)}%</td>
+                  <td class="numeric">{formatNumber(row.pasar_uang)}%</td>
+                  <td class="numeric">{formatNumber(row.lainnya)}%</td>
                 </tr>
               ))}
             </tbody>
@@ -337,13 +388,13 @@ const details = [
         width: container.clientWidth,
         height: 320,
         // Sources report on different dates, so draw each line across the dates where it has no value.
-        series: [{}, ...series.map((line) => ({ ...line, width: 2, spanGaps: true }))],
+        series: [{}, ...series.map((line) => ({ width: 2, spanGaps: true, ...line }))],
         axes: [axisStyle, { ...axisStyle, size: 70, values: (_, ticks) => ticks.map((tick) => formatCompact(tick)) }],
         scales: { x: { time: true } },
         // Dates are calendar days stored as UTC midnight; show them as-is in every timezone.
         tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),
       },
-      [rows.map((row) => toSeconds(row.date)), ...series.map((line) => rows.map((row) => row[line.key]))],
+      [rows.map((row) => toSeconds(row.date)), ...series.map((line) => rows.map((row) => row[line.key] ?? null))],
       container,
     );
 
@@ -366,36 +417,67 @@ const details = [
     return lastSeconds - RANGE_DAYS[range] * SECONDS_PER_DAY;
   }
 
-  // Bibit and Kontan report on different dates. Chart every date, and leave a source empty where it has no value.
-  function mergeNavRows(bibitRows, kontanRows) {
+  // Sources report on different dates. Chart every date, and leave a source empty where it has no value.
+  function mergeNavRows(sources) {
     const rowsByDate = new Map();
 
-    for (const row of bibitRows) {
-      rowsByDate.set(row.date, { ...row, kontan_nav: null });
-    }
+    for (const { key, points } of sources) {
+      for (const { date, value } of points) {
+        const merged = rowsByDate.get(date) ?? { date };
 
-    for (const row of kontanRows) {
-      const merged = rowsByDate.get(row.date) ?? { date: row.date, nav: null, nav_adjusted: null };
-
-      rowsByDate.set(row.date, { ...merged, kontan_nav: row.nav });
+        merged[key] = value;
+        rowsByDate.set(date, merged);
+      }
     }
 
     return [...rowsByDate.values()].sort((a, b) => a.date.localeCompare(b.date));
   }
 
+  // Bibit lists a fund you cannot buy with one NAV per update, so only buyable funds have a daily history from Bibit.
+  function hasDailyNav(fund) {
+    return Boolean(fund.tradeable) || (fund.kontan?.nav.length ?? 0) > 1 || (fund.bareksa?.nav.length ?? 0) > 1;
+  }
+
+  // Bareksa reports a USD fund's AUM in both currencies; divide the one that matches the fund's NAV.
+  function computeMonthlyNav(fund) {
+    const unitsByDate = new Map(fund.bareksa.units.map((row) => [row.date, row.units]));
+    const aumKey = fund.currency_exchange?.currency === 'USD' ? 'aum_usd' : 'aum_idr';
+
+    return fund.bareksa.aum
+      .filter((row) => row[aumKey] > 0 && unitsByDate.get(row.date) > 0)
+      .map((row) => ({ date: row.date, value: row[aumKey] / unitsByDate.get(row.date) }));
+  }
+
   const response = await fetch(`/api/funds/${navContainer.dataset.symbol}.json`);
   const fund = await response.json();
+  const formatNav = (_, value) => formatNumber(value, 4);
 
-  const navSeries = [
-    { key: 'nav', label: 'NAV', stroke: cssColor('--accent'), value: (_, v) => formatNumber(v, 4) },
-    { key: 'nav_adjusted', label: 'NAV adjusted', stroke: cssColor('--positive'), value: (_, v) => formatNumber(v, 4) },
+  const navSources = [
+    { key: 'nav', label: 'NAV', stroke: cssColor('--accent'), points: fund.nav.map((row) => ({ date: row.date, value: row.nav })) },
+    { key: 'nav_adjusted', label: 'NAV adjusted', stroke: cssColor('--positive'), points: fund.nav.map((row) => ({ date: row.date, value: row.nav_adjusted })) },
   ];
 
   if (fund.kontan) {
-    navSeries.push({ key: 'kontan_nav', label: 'NAV (Kontan)', stroke: cssColor('--kontan'), value: (_, v) => formatNumber(v, 4) });
+    navSources.push({ key: 'kontan_nav', label: 'NAV (Kontan)', stroke: cssColor('--kontan'), dash: [6, 4], points: fund.kontan.nav.map((row) => ({ date: row.date, value: row.nav })) });
   }
 
-  const navChart = createChart(navContainer, document.getElementById('nav-empty'), mergeNavRows(fund.nav, fund.kontan?.nav ?? []), navSeries);
+  if (fund.bareksa) {
+    navSources.push({ key: 'bareksa_nav', label: 'NAV (Bareksa)', stroke: cssColor('--bareksa'), dash: [2, 3], points: fund.bareksa.nav.map((row) => ({ date: row.date, value: row.nav })) });
+  }
+
+  if (fund.bareksa && !hasDailyNav(fund)) {
+    navSources.push({
+      key: 'bareksa_monthly_nav',
+      label: 'Monthly NAV (Bareksa AUM ÷ units)',
+      stroke: cssColor('--bareksa'),
+      points: computeMonthlyNav(fund),
+    });
+  }
+
+  // A source without any value would only add an empty line to the legend.
+  const drawnSources = navSources.filter((source) => source.points.some((point) => point.value !== null));
+  const navSeries = drawnSources.map(({ key, label, stroke, dash }) => ({ key, label, stroke, dash, value: formatNav }));
+  const navChart = createChart(navContainer, document.getElementById('nav-empty'), mergeNavRows(drawnSources), navSeries);
 
   createChart(aumContainer, document.getElementById('aum-empty'), fund.aum, [
     { key: 'aum', label: 'AUM', stroke: cssColor('--accent'), value: (_, v) => formatNumber(v, 0) },

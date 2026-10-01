@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { listArchives, zipArchive } from '../../lib/archives.js';
 
 const files = [
   ['data/bibit/funds.csv', 'One row per fund: symbol, name, type, investment manager, currency, latest NAV and AUM. Start here.'],
@@ -12,25 +13,57 @@ const files = [
   ['data/bibit/types.json', 'Fund type codes.'],
   ['data/kontan/funds.csv', 'One row per fund on Kontan: Kontan ID, name, manager, category, latest NAV and its date, and bibit_symbol, the matching Bibit fund (empty when there is no confident match).'],
   ['data/kontan/nav/<kontan_id>.csv', 'Daily NAV per unit from Kontan. Kontan serves the last 12 months, and every update adds the new days, so the history grows over time.'],
+  ['data/bareksa/funds.csv', 'One row per fund on Bareksa: bareksa_id, name, slug, type, manager, launch_date, and bibit_symbol, the matching Bibit fund (empty when there is no confident match).'],
+  ['data/bareksa/aum/<bareksa_id>.csv', 'Monthly assets under management in rupiah and US dollars (date, aum_idr, aum_usd).'],
+  ['data/bareksa/units/<bareksa_id>.csv', 'Monthly number of units outstanding (date, units).'],
+  ['data/bareksa/allocation/<bareksa_id>.csv', 'Asset allocation over time, in percent of the fund: saham (equity), obligasi (bonds), pasar_uang (money market), and lainnya (other).'],
+  ['data/bareksa/nav/<bareksa_id>.csv', 'Daily NAV per unit from Bareksa (date, nav), from the day the fund launched. It needs a logged-in Bareksa session to collect, so it only appears after the owner has run the backfill (see the README).'],
 ];
+
+const archives = listArchives().map((archive) => ({ ...archive, megabytes: zipArchive(archive).length / 1e6 }));
 ---
 
 <Base title="Download">
   <h1>Download</h1>
   <p>
-    Pick one file, or take everything. <code>data/bibit/</code> comes from the public API behind
+    Pick one file, or take a whole source. <code>data/bibit/</code> comes from the public API behind
     <a href="https://app.bibit.id/">Bibit</a>. <code>data/kontan/</code> comes from
-    <a href="https://pusatdata.kontan.co.id/reksadana">Kontan</a>.
+    <a href="https://pusatdata.kontan.co.id/reksadana">Kontan</a>. <code>data/bareksa/</code> comes from
+    <a href="https://www.bareksa.com/id/data/reksadana/daftar">Bareksa</a>.
   </p>
 
   <div class="button-row">
-    <a class="button" href="/download/bibit-reksadana-data.zip" download>Everything (zip, about 13 MB)</a>
     <a class="button" href="/csv/funds.csv" download>funds.csv</a>
   </div>
+
+  <h2>Zip files</h2>
   <p class="muted">
-    The zip holds the whole <code>data/</code> folder. For a single fund, use the download buttons on its page, or the
-    <a href="/api/">API</a>.
+    The data is split into one zip per source, and Bareksa's daily NAV into several parts, because a single file
+    cannot be bigger than 25 MiB here. Each zip keeps the paths of the <code>data/</code> folder. For a single fund, use
+    the download buttons on its page, or the <a href="/api/">API</a>.
   </p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Zip</th>
+          <th>What it holds</th>
+          <th class="numeric">Size</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          archives.map((archive) => (
+            <tr>
+              <td><a href={`/download/${archive.name}.zip`} download>{archive.name}.zip</a></td>
+              <td>{archive.description}</td>
+              <td class="numeric">{archive.megabytes.toFixed(1)} MB</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
 
   <h2>What is in the data</h2>
   <div class="table-wrap">
@@ -69,6 +102,8 @@ const files = [
       shows their latest NAV, so every weekly run adds that day's row. These rows have an empty
       <code>nav_adjusted</code>. History for these funds starts on 2026-10-01.
       When Kontan has a matching fund, its daily NAV for the last 12 months (and growing) is in <code>data/kontan/</code>.
+      When Bareksa has a matching fund, its monthly AUM, units, and asset allocation, and its daily NAV history once the
+      backfill has run, are in <code>data/bareksa/</code>.
     </li>
   </ul>
 </Base>

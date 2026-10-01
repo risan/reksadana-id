@@ -1,4 +1,4 @@
-import { listFundSymbols, loadAumSeries, loadFundDetails, loadKontan, loadNavSeries } from '../../../lib/data.js';
+import { listFundSymbols, loadAumSeries, loadBareksa, loadFundDetails, loadKontan, loadNavSeries } from '../../../lib/data.js';
 
 export function getStaticPaths() {
   return listFundSymbols().map((symbol) => ({ params: { symbol } }));
@@ -12,5 +12,6 @@ export function GET({ params }) {
     nav: loadNavSeries(symbol),
     aum: loadAumSeries(symbol),
     kontan: loadKontan(symbol),
+    bareksa: loadBareksa(symbol),
   });
 }
