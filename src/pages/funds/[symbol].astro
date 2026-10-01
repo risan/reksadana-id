@@ -1,0 +1,374 @@
+---
+import Base from '../../layouts/Base.astro';
+import { listDataFiles, listFundSymbols, loadFundDetails } from '../../lib/data.js';
+import { formatCompact, formatNumber, formatPercent, signClass } from '../../lib/format.js';
+
+export function getStaticPaths() {
+  const symbolsWithNav = new Set(listDataFiles('nav').map((file) => file.slice(0, -'.csv'.length)));
+  const symbolsWithAum = new Set(listDataFiles('aum').map((file) => file.slice(0, -'.csv'.length)));
+
+  return listFundSymbols().map((symbol) => ({
+    params: { symbol },
+    props: {
+      fund: loadFundDetails(symbol),
+      hasNavCsv: symbolsWithNav.has(symbol),
+      hasAumCsv: symbolsWithAum.has(symbol),
+    },
+  }));
+}
+
+const { fund, hasNavCsv, hasAumCsv } = Astro.props;
+const { symbol } = Astro.params;
+
+const RETURN_PERIODS = ['1d', '1m', '3m', 'ytd', '1y', '3y', '5y', '10y', 'all'];
+const FEE_LABELS = [
+  ['subscription', 'Subscription'],
+  ['redemption', 'Redemption'],
+  ['switch', 'Switch'],
+];
+
+function formatFee(fee) {
+  if (!fee) {
+    return '-';
+  }
+
+  if (fee.type === 'percent') {
+    return `${fee.value}%`;
+  }
+
+  return `${fee.currency} ${formatNumber(fee.value)}`;
+}
+
+// Dividend dates are midnight in Jakarta (UTC+7), stored as UTC.
+function formatDividendDate(isoTimestamp) {
+  const jakartaTime = new Date(new Date(isoTimestamp).getTime() + 7 * 60 * 60 * 1000);
+
+  return jakartaTime.toISOString().slice(0, 10);
+}
+
+const launchDate = fund.released_date ?? fund.nav?.first_date ?? '-';
+const dividends = fund.dividends ?? [];
+const factsheets = fund.documents?.factsheets ?? [];
+const prospectus = fund.documents?.prospectus ?? [];
+const switchables = fund.switchables ?? [];
+const holdings = fund.holding ?? [];
+const assets = fund.asset ?? [];
+
+const details = [
+  ['Type', fund.type],
+  ['Investment manager', fund.investment_manager?.name],
+  ['Custodian bank', fund.custodian_bank?.name],
+  ['Currency', fund.currency_exchange?.currency],
+  ['Sharia', fund.sharia ? 'Yes' : 'No'],
+  ['Buyable in Bibit app', fund.tradeable ? 'Yes' : 'No'],
+  ['Risk profile', fund.riskprofile],
+  ['Launch date', launchDate],
+  ['Latest NAV', fund.nav ? `${formatNumber(fund.nav.value, 4)} (${fund.nav.date})` : null],
+  ['AUM', fund.aum ? `${formatCompact(fund.aum.value)} (${fund.aum.date})` : null],
+  ['Expense ratio', fund.expenseratio?.percentage ?? null],
+  ['Minimum buy', fund.minbuy ? formatNumber(fund.minbuy) : null],
+];
+---
+
+<Base title={`${fund.name} (${symbol})`} description={`NAV history and data for ${fund.name}.`}>
+  <p><a href="/">&larr; All funds</a></p>
+  <h1>{fund.name}</h1>
+  <p class="muted">{symbol}</p>
+
+  {
+    !fund.tradeable && (
+      <p class="note">
+        Bibit gives no NAV history for funds you cannot buy in its app. History for this fund starts on 2026-10-01,
+        when this repository began collecting it (see the README).
+      </p>
+    )
+  }
+
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        {
+          details.map(([label, value]) => (
+            <tr>
+              <th>{label}</th>
+              <td>{value ?? '-'}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Downloads</h2>
+  <div class="button-row">
+    <a class="button" href={`/api/funds/${symbol}.json`} download>Fund JSON</a>
+    {hasNavCsv && <a class="button" href={`/csv/nav/${symbol}.csv`} download>NAV CSV</a>}
+    {hasAumCsv && <a class="button" href={`/csv/aum/${symbol}.csv`} download>AUM CSV</a>}
+  </div>
+
+  <h2>NAV</h2>
+  <div class="button-row" data-range-buttons>
+    <button class="button" data-range="1M">1M</button>
+    <button class="button" data-range="6M">6M</button>
+    <button class="button" data-range="YTD">YTD</button>
+    <button class="button" data-range="1Y">1Y</button>
+    <button class="button" data-range="3Y">3Y</button>
+    <button class="button" data-range="5Y">5Y</button>
+    <button class="button" data-range="ALL" aria-pressed="true">ALL</button>
+  </div>
+  <div id="nav-chart" data-symbol={symbol}></div>
+  <p id="nav-empty" class="muted" hidden>Not enough NAV history to draw a chart.</p>
+
+  <h2>AUM (IDR)</h2>
+  <div id="aum-chart"></div>
+  <p id="aum-empty" class="muted" hidden>Not enough AUM history to draw a chart.</p>
+
+  <h2>Returns</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Period</th>
+          <th class="numeric">Simple return</th>
+          <th class="numeric">CAGR</th>
+          <th class="numeric">Max drawdown</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          RETURN_PERIODS.map((period) => (
+            <tr>
+              <td>{period.toUpperCase()}</td>
+              <td class={`numeric ${signClass(fund.simplereturn?.[period])}`}>{formatPercent(fund.simplereturn?.[period])}</td>
+              <td class={`numeric ${signClass(fund.cagr?.[period])}`}>{formatPercent(fund.cagr?.[period])}</td>
+              <td class={`numeric ${signClass(fund.maxdrawdown?.[period])}`}>{formatPercent(fund.maxdrawdown?.[period])}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Fees</h2>
+  <div class="table-wrap">
+    <table>
+      <tbody>
+        {
+          FEE_LABELS.map(([key, label]) => (
+            <tr>
+              <th>{label}</th>
+              <td>{formatFee(fund.fee?.[key])}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  {
+    assets.length > 0 && (
+      <>
+        <h2>Asset allocation</h2>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              {assets.map((asset) => (
+                <tr>
+                  <td>{asset.name}</td>
+                  <td class="numeric">{asset.percentage}%</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    )
+  }
+
+  {
+    holdings.length > 0 && (
+      <>
+        <h2>Top holdings</h2>
+        <p class="muted">As of {holdings[0].date}</p>
+        <div class="table-wrap">
+          <table>
+            <tbody>
+              {holdings.map((holding) => (
+                <tr>
+                  <td>{holding.name}</td>
+                  <td class="muted">{holding.symbol}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    )
+  }
+
+  {
+    dividends.length > 0 && (
+      <>
+        <h2>Dividends</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th class="numeric">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              {dividends.map((dividend) => (
+                <tr>
+                  <td>{formatDividendDate(dividend.date)}</td>
+                  <td class="numeric">{formatNumber(dividend.value, 4)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </>
+    )
+  }
+
+  {
+    (factsheets.length > 0 || prospectus.length > 0) && (
+      <>
+        <h2>Documents</h2>
+        <ul>
+          {prospectus.map((document) => (
+            <li>{document.file ? <a href={document.file}>Prospectus: {document.name}</a> : `Prospectus: ${document.name}`}</li>
+          ))}
+          {factsheets.map((document) => (
+            <li>
+              {document.file ? <a href={document.file}>Factsheet: {document.name}</a> : `Factsheet: ${document.name}`}
+              {document.date && <span class="muted"> ({document.date})</span>}
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+
+  {
+    switchables.length > 0 && (
+      <>
+        <h2>Switch to</h2>
+        <ul>
+          {switchables.map((target) => (
+            <li>
+              <a href={`/funds/${target.symbol}/`}>{target.name}</a> <span class="muted">{target.symbol}</span>
+            </li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+
+  {
+    fund.profile && (
+      <>
+        <h2>Profile</h2>
+        <p style="white-space: pre-line">{fund.profile}</p>
+      </>
+    )
+  }
+</Base>
+
+<script>
+  import uPlot from 'uplot';
+  import 'uplot/dist/uPlot.min.css';
+  import { formatCompact, formatNumber } from '../../lib/format.js';
+
+  const SECONDS_PER_DAY = 24 * 60 * 60;
+  const RANGE_DAYS = { '1M': 31, '6M': 183, '1Y': 366, '3Y': 1096, '5Y': 1827 };
+
+  const navContainer = document.getElementById('nav-chart');
+  const aumContainer = document.getElementById('aum-chart');
+  const rangeButtons = document.querySelectorAll('[data-range]');
+
+  function cssColor(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  function toSeconds(date) {
+    return Date.parse(`${date}T00:00:00Z`) / 1000;
+  }
+
+  function createChart(container, emptyMessage, rows, series) {
+    if (rows.length < 2) {
+      emptyMessage.hidden = false;
+
+      return null;
+    }
+
+    const axisStyle = {
+      stroke: cssColor('--muted'),
+      grid: { stroke: cssColor('--border'), width: 1 },
+      ticks: { stroke: cssColor('--border'), width: 1 },
+    };
+
+    const chart = new uPlot(
+      {
+        width: container.clientWidth,
+        height: 320,
+        series: [{}, ...series.map((line) => ({ ...line, width: 2, spanGaps: false }))],
+        axes: [axisStyle, { ...axisStyle, size: 70, values: (_, ticks) => ticks.map((tick) => formatCompact(tick)) }],
+        scales: { x: { time: true } },
+      },
+      [rows.map((row) => toSeconds(row.date)), ...series.map((line) => rows.map((row) => row[line.key]))],
+      container,
+    );
+
+    new ResizeObserver(() => {
+      chart.setSize({ width: container.clientWidth, height: 320 });
+    }).observe(container);
+
+    return chart;
+  }
+
+  function rangeStart(range, lastSeconds) {
+    if (range === 'ALL') {
+      return null;
+    }
+
+    if (range === 'YTD') {
+      return Date.UTC(new Date(lastSeconds * 1000).getUTCFullYear(), 0, 1) / 1000;
+    }
+
+    return lastSeconds - RANGE_DAYS[range] * SECONDS_PER_DAY;
+  }
+
+  const response = await fetch(`/api/funds/${navContainer.dataset.symbol}.json`);
+  const fund = await response.json();
+
+  const navChart = createChart(navContainer, document.getElementById('nav-empty'), fund.nav, [
+    { key: 'nav', label: 'NAV', stroke: cssColor('--accent'), value: (_, v) => formatNumber(v, 4) },
+    { key: 'nav_adjusted', label: 'NAV adjusted', stroke: cssColor('--positive'), value: (_, v) => formatNumber(v, 4) },
+  ]);
+
+  createChart(aumContainer, document.getElementById('aum-empty'), fund.aum, [
+    { key: 'aum', label: 'AUM', stroke: cssColor('--accent'), value: (_, v) => formatNumber(v, 0) },
+  ]);
+
+  for (const button of rangeButtons) {
+    if (!navChart) {
+      button.disabled = true;
+
+      continue;
+    }
+
+    button.addEventListener('click', () => {
+      const dates = navChart.data[0];
+      const lastSeconds = dates[dates.length - 1];
+      const start = rangeStart(button.dataset.range, lastSeconds);
+
+      navChart.setScale('x', { min: start ?? dates[0], max: lastSeconds });
+
+      for (const other of rangeButtons) {
+        other.setAttribute('aria-pressed', String(other === button));
+      }
+    });
+  }
+</script>

@@ -6,6 +6,18 @@
     "node": ">=22"
   },
   "scripts": {
-    "scrape": "node scrape.js"
+    "scrape": "node scrape.js",
+    "dev": "astro dev",
+    "build": "astro build && node scripts/check-dist.js",
+    "preview": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "astro": "^7.3.5",
+    "fflate": "^0.8.3",
+    "uplot": "^1.6.32"
+  },
+  "devDependencies": {
+    "wrangler": "^4.145.0"
   }
 }

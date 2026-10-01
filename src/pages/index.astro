@@ -1,0 +1,183 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Fund Explorer">
+  <h1>Fund explorer</h1>
+  <p class="muted">
+    Every Indonesian mutual fund Bibit lists. Search, filter, and open a fund for its NAV history and downloads.
+  </p>
+
+  <div class="button-row">
+    <input id="search" type="search" placeholder="Search name, symbol, or manager" size="32" />
+    <select id="type-filter" aria-label="Fund type"><option value="">All types</option></select>
+    <select id="currency-filter" aria-label="Currency"><option value="">All currencies</option></select>
+    <label><input id="tradeable-filter" type="checkbox" /> Buyable in Bibit app</label>
+    <label><input id="sharia-filter" type="checkbox" /> Sharia</label>
+  </div>
+
+  <p id="status" class="muted">Loading funds...</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th><button class="button" data-sort="name">Fund</button></th>
+          <th><button class="button" data-sort="type">Type</button></th>
+          <th class="numeric">NAV</th>
+          <th><button class="button" data-sort="nav_date">NAV date</button></th>
+          <th class="numeric"><button class="button" data-sort="aum">AUM (IDR)</button></th>
+          <th class="numeric"><button class="button" data-sort="return_1y">1Y return</button></th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <div class="button-row">
+    <button id="previous-page" class="button">Previous</button>
+    <span id="page-label" class="muted"></span>
+    <button id="next-page" class="button">Next</button>
+  </div>
+</Base>
+
+<script>
+  import { formatCompact, formatNumber, formatPercent, signClass } from '../lib/format.js';
+
+  const PAGE_SIZE = 50;
+
+  const searchInput = document.getElementById('search');
+  const typeFilter = document.getElementById('type-filter');
+  const currencyFilter = document.getElementById('currency-filter');
+  const tradeableFilter = document.getElementById('tradeable-filter');
+  const shariaFilter = document.getElementById('sharia-filter');
+  const status = document.getElementById('status');
+  const rows = document.getElementById('rows');
+  const previousPage = document.getElementById('previous-page');
+  const nextPage = document.getElementById('next-page');
+  const pageLabel = document.getElementById('page-label');
+  const sortButtons = document.querySelectorAll('[data-sort]');
+
+  let funds = [];
+  let filtered = [];
+  let sortKey = 'aum';
+  let sortDirection = -1;
+  let page = 0;
+
+  function escapeHtml(text) {
+    return String(text).replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
+  }
+
+  function fillOptions(select, values) {
+    for (const value of [...new Set(values)].filter(Boolean).sort()) {
+      select.append(new Option(value, value));
+    }
+  }
+
+  function compareBySortKey(a, b) {
+    const left = a[sortKey];
+    const right = b[sortKey];
+
+    // Missing values go last whichever way the column is sorted.
+    if (left === null && right === null) {
+      return 0;
+    }
+
+    if (left === null) {
+      return 1;
+    }
+
+    if (right === null) {
+      return -1;
+    }
+
+    if (typeof left === 'string') {
+      return left.localeCompare(right) * sortDirection;
+    }
+
+    return (left - right) * sortDirection;
+  }
+
+  function applyFilters() {
+    const terms = searchInput.value.toLowerCase().split(/\s+/).filter(Boolean);
+
+    filtered = funds
+      .filter((fund) => terms.every((term) => fund.searchText.includes(term)))
+      .filter((fund) => !typeFilter.value || fund.type === typeFilter.value)
+      .filter((fund) => !currencyFilter.value || fund.currency === currencyFilter.value)
+      .filter((fund) => !tradeableFilter.checked || fund.tradeable)
+      .filter((fund) => !shariaFilter.checked || fund.sharia)
+      .sort(compareBySortKey);
+
+    page = 0;
+    render();
+  }
+
+  function renderRow(fund) {
+    return `<tr>
+      <td><a href="/funds/${escapeHtml(fund.symbol)}/">${escapeHtml(fund.name)}</a><br /><span class="muted">${escapeHtml(fund.symbol)} · ${escapeHtml(fund.investment_manager ?? '-')}</span></td>
+      <td>${escapeHtml(fund.type ?? '-')}</td>
+      <td class="numeric">${formatNumber(fund.nav)}</td>
+      <td>${escapeHtml(fund.nav_date ?? '-')}</td>
+      <td class="numeric">${formatCompact(fund.aum)}</td>
+      <td class="numeric ${signClass(fund.return_1y)}">${formatPercent(fund.return_1y)}</td>
+    </tr>`;
+  }
+
+  function render() {
+    const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+    const visible = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+
+    rows.innerHTML = visible.map(renderRow).join('');
+    status.textContent = `${filtered.length} of ${funds.length} funds`;
+    pageLabel.textContent = `Page ${page + 1} of ${pageCount}`;
+    previousPage.disabled = page === 0;
+    nextPage.disabled = page >= pageCount - 1;
+
+    for (const button of sortButtons) {
+      const isSorted = button.dataset.sort === sortKey;
+      const arrow = sortDirection === 1 ? ' ▲' : ' ▼';
+
+      button.setAttribute('aria-pressed', String(isSorted));
+      button.textContent = button.textContent.replace(/ [▲▼]$/, '') + (isSorted ? arrow : '');
+    }
+  }
+
+  for (const button of sortButtons) {
+    button.addEventListener('click', () => {
+      if (sortKey === button.dataset.sort) {
+        sortDirection = -sortDirection;
+      } else {
+        sortKey = button.dataset.sort;
+        sortDirection = sortKey === 'name' || sortKey === 'type' ? 1 : -1;
+      }
+
+      applyFilters();
+    });
+  }
+
+  previousPage.addEventListener('click', () => {
+    page -= 1;
+    render();
+  });
+
+  nextPage.addEventListener('click', () => {
+    page += 1;
+    render();
+  });
+
+  for (const control of [searchInput, typeFilter, currencyFilter, tradeableFilter, shariaFilter]) {
+    control.addEventListener('input', applyFilters);
+  }
+
+  const response = await fetch('/api/funds.json');
+
+  funds = (await response.json()).map((fund) => ({
+    ...fund,
+    searchText: `${fund.name} ${fund.symbol} ${fund.investment_manager ?? ''}`.toLowerCase(),
+  }));
+
+  fillOptions(typeFilter, funds.map((fund) => fund.type));
+  fillOptions(currencyFilter, funds.map((fund) => fund.currency));
+  applyFilters();
+</script>

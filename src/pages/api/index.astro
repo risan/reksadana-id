@@ -1,0 +1,131 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const ORIGIN = 'https://your-site.example';
+
+const endpoints = [
+  {
+    path: '/api/funds.json',
+    description: 'Index of every fund. The columns of funds.csv, with numbers and booleans typed, plus return_1y (a fraction, so 0.0106 is 1.06%).',
+    example: `[
+  {
+    "symbol": "RD13",
+    "name": "ABF Indonesia Bond Index Fund",
+    "type": "Obligasi",
+    "investment_manager": "PT Bahana TCW Investment Management",
+    "currency": "IDR",
+    "sharia": false,
+    "etf": true,
+    "index": true,
+    "tradeable": true,
+    "status": 1,
+    "nav_first_date": "2007-12-18",
+    "nav_date": "2026-09-30",
+    "nav": 59116.5317,
+    "aum": 7850300000000,
+    "expense_ratio": 0.0021,
+    "return_1y": 0.010580157352288122
+  }
+]`,
+  },
+  {
+    path: '/api/funds/RD8807.json',
+    description: 'Everything about one fund: the full Bibit record, plus documents, switchables, dividends, nav, and aum. A missing part is null (documents, switchables, dividends) or an empty list (nav, aum).',
+    example: `{
+  "symbol": "RD8807",
+  "name": "Grow Obligasi Optima Dinamis Kelas O",
+  "type": "Obligasi",
+  "tradeable": 1,
+  "fee": { "subscription": { "value": 0, "type": "percent", "currency": "IDR" }, "...": "..." },
+  "asset": [{ "name": "Obligasi Negara", "percentage": 81.33 }, "..."],
+  "simplereturn": { "1d": 0.0033, "1y": 0.0111, "...": "..." },
+  "nav": [
+    { "date": "2024-10-02", "nav": 1000, "nav_adjusted": 1000 },
+    "..."
+  ],
+  "aum": [
+    { "date": "2024-10-01", "aum": 42315763006.92 },
+    "..."
+  ],
+  "documents": { "factsheets": ["..."], "prospectus": ["..."] },
+  "switchables": null,
+  "dividends": null
+}`,
+  },
+  {
+    path: '/api/types.json',
+    description: 'Fund type codes and labels.',
+    example: `{
+  "types": [
+    { "code": 3, "label": "Pasar Uang" },
+    { "code": 2, "label": "Obligasi" }
+  ],
+  "show_sharia_tab": true
+}`,
+  },
+  {
+    path: '/csv/funds.csv',
+    description: 'The fund index as CSV. An exact copy of data/funds.csv.',
+    example: `symbol,name,type,investment_manager,currency,sharia,etf,index,tradeable,status,nav_first_date,nav_date,nav,aum,expense_ratio
+RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,IDR,false,true,true,1,1,2007-12-18,2026-09-30,59116.5317,7850300000000,0.0021`,
+  },
+  {
+    path: '/csv/nav/RD216.csv',
+    description: 'Daily NAV of one fund. An exact copy of data/nav/<symbol>.csv. nav_adjusted can be empty.',
+    example: `date,nav,nav_adjusted
+2000-01-05,4336.44,4336.44
+2000-01-06,4386.41,4386.41`,
+  },
+  {
+    path: '/csv/aum/RD216.csv',
+    description: 'AUM history of one fund. An exact copy of data/aum/<symbol>.csv.',
+    example: `date,aum
+2004-06-07,9993.82
+2004-07-30,12837`,
+  },
+  {
+    path: '/download/bibit-reksadana-data.zip',
+    description: 'The whole data/ folder as one zip file.',
+    example: null,
+  },
+];
+---
+
+<Base title="API">
+  <h1>API</h1>
+  <p>
+    A free, read-only API made of static files. No key is needed, and CORS is open
+    (<code>Access-Control-Allow-Origin: *</code>), so you can call it from a browser. The data is rebuilt once a day.
+  </p>
+  <p>Replace the host below with the one you are visiting.</p>
+
+  <pre data-origin><code>curl {ORIGIN}/api/funds/RD216.json
+curl -O {ORIGIN}/csv/nav/RD216.csv
+curl -s {ORIGIN}/api/funds.json | jq 'map(select(.tradeable)) | length'</code></pre>
+
+  <h2>Endpoints</h2>
+  <p>
+    Replace <code>RD8807</code> or <code>RD216</code> with any symbol from <a href="/api/funds.json">funds.json</a>.
+    Everything is a <code>GET</code> request. Unknown paths return 404.
+  </p>
+
+  {
+    endpoints.map((endpoint) => (
+      <section>
+        <h2><code>GET {endpoint.path}</code></h2>
+        <p>{endpoint.description}</p>
+        <p>
+          Example: <a href={endpoint.path}>{ORIGIN}{endpoint.path}</a>
+        </p>
+        {endpoint.example && <pre data-origin><code>{endpoint.example}</code></pre>}
+      </section>
+    ))
+  }
+</Base>
+
+<script>
+  // Show the real host in the examples instead of the placeholder.
+  for (const block of document.querySelectorAll('[data-origin], section a')) {
+    block.textContent = block.textContent.replaceAll('https://your-site.example', location.origin);
+  }
+</script>

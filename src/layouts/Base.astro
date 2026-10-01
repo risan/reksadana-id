@@ -1,0 +1,33 @@
+---
+import '../styles/global.css';
+
+const { title, description = 'Browse and download Indonesian mutual fund (reksa dana) data from Bibit.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="site-title" href="/">Bibit Reksadana</a>
+        <nav class="site-nav">
+          <a href="/">Funds</a>
+          <a href="/download/">Download</a>
+          <a href="/api/">API</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      Data scraped from the public API behind Bibit. Not financial advice.
+    </footer>
+  </body>
+</html>

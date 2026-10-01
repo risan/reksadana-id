@@ -1,0 +1,67 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const files = [
+  ['data/funds.csv', 'One row per fund: symbol, name, type, investment manager, currency, latest NAV and AUM. Start here.'],
+  ['data/funds/<symbol>.json', 'Everything Bibit returns for one fund: fees, investment manager, custodian bank, asset allocation, top holdings, returns, drawdown, risk profile, and more.'],
+  ['data/nav/<symbol>.csv', 'Daily NAV per unit. nav_adjusted includes dividends.'],
+  ['data/aum/<symbol>.csv', 'Assets under management over time.'],
+  ['data/dividends/<symbol>.json', 'Dividend history, only for funds that pay dividends.'],
+  ['data/documents/<symbol>.json', 'Links to monthly factsheets and prospectus files (PDF or JPG).'],
+  ['data/switchables/<symbol>.json', 'Funds you can switch to in the app, only for funds you can buy in the app.'],
+  ['data/types.json', 'Fund type codes.'],
+];
+---
+
+<Base title="Download">
+  <h1>Download</h1>
+  <p>All the data is free to use. Pick one file, or take everything.</p>
+
+  <div class="button-row">
+    <a class="button" href="/download/bibit-reksadana-data.zip" download>Everything (zip, about 11 MB)</a>
+    <a class="button" href="/csv/funds.csv" download>funds.csv</a>
+  </div>
+  <p class="muted">
+    The zip holds the whole <code>data/</code> folder. For a single fund, use the download buttons on its page, or the
+    <a href="/api/">API</a>.
+  </p>
+
+  <h2>What is in the data</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Path</th>
+          <th>What it holds</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          files.map(([file, description]) => (
+            <tr>
+              <td><code>{file}</code></td>
+              <td>{description}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <p>
+    Fund types (<code>type</code> column): <code>Pasar Uang</code> (money market), <code>Obligasi</code> (fixed
+    income), <code>Saham</code> (equity), <code>Campuran</code> (balanced), <code>Terproteksi</code> (capital
+    protected), and <code>Reksadana Global</code> (global).
+  </p>
+
+  <h2>NAV history: buyable vs. other funds</h2>
+  <p>The <code>tradeable</code> column is <code>1</code> for funds you can buy in the Bibit app.</p>
+  <ul>
+    <li><strong>Buyable funds:</strong> the NAV file has the full daily history from the launch date.</li>
+    <li>
+      <strong>Other funds:</strong> Bibit does not give their NAV history, even to a logged-in user. The fund list still
+      shows their latest NAV, so every daily run adds that day's row. These rows have an empty
+      <code>nav_adjusted</code>. History for these funds starts on 2026-10-01.
+    </li>
+  </ul>
+</Base>

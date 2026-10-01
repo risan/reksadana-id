@@ -1,0 +1,14 @@
+/api/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+
+/csv/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+
+/download/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
