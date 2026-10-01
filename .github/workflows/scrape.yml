@@ -2,8 +2,9 @@ name: Scrape
 
 on:
   schedule:
-    # Indonesian funds publish their NAV during the evening (UTC+7), so 23:00 UTC is 06:00 the next day in Jakarta.
-    - cron: '0 23 * * *'
+    # Once a week, on Saturday 23:00 UTC, which is Sunday 06:00 in Jakarta (UTC+7). Kontan serves
+    # 12 months of NAV per fund, so a weekly run keeps every day of the history.
+    - cron: '0 23 * * 6'
   workflow_dispatch:
 
 permissions:
@@ -25,9 +26,9 @@ jobs:
           node-version-file: .node-version
 
       - name: Scrape
-        run: node scrape.js
+        run: npm run scrape
 
-      # The scraper exits non-zero when a few funds fail. Still save the funds that
+      # The scrapers exit non-zero when a few funds fail. Still save the funds that
       # succeeded; the failed ones are retried on the next run.
       - name: Commit and push changes
         if: success() || failure()

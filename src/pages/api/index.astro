@@ -30,7 +30,7 @@ const endpoints = [
   },
   {
     path: '/api/funds/RD8807.json',
-    description: 'Everything about one fund: the full Bibit record, plus documents, switchables, dividends, nav, and aum. A missing part is null (documents, switchables, dividends) or an empty list (nav, aum).',
+    description: 'Everything about one fund: the full Bibit record, plus documents, switchables, dividends, nav, aum, and kontan. kontan is the matching fund from Kontan with its daily NAV, or null when there is no confident match. A missing part is null (documents, switchables, dividends, kontan) or an empty list (nav, aum).',
     example: `{
   "symbol": "RD8807",
   "name": "Grow Obligasi Optima Dinamis Kelas O",
@@ -47,9 +47,28 @@ const endpoints = [
     { "date": "2024-10-01", "aum": 42315763006.92 },
     "..."
   ],
+  "kontan": null,
   "documents": { "factsheets": ["..."], "prospectus": ["..."] },
   "switchables": null,
   "dividends": null
+}`,
+  },
+  {
+    path: '/api/funds/RD1141.json',
+    description: 'A fund with a Kontan match: kontan holds the Kontan fund id, its name, and its daily NAV. Kontan serves the last 12 months, and every update adds the new days.',
+    example: `{
+  "symbol": "RD1141",
+  "name": "Net Dana Gemilang",
+  "...": "...",
+  "kontan": {
+    "id": 378,
+    "name": "Net Dana Gemilang",
+    "nav": [
+      { "date": "2025-10-02", "nav": 3257.37 },
+      { "date": "2025-10-03", "nav": 3258.24 },
+      "..."
+    ]
+  }
 }`,
   },
   {
@@ -65,27 +84,27 @@ const endpoints = [
   },
   {
     path: '/csv/funds.csv',
-    description: 'The fund index as CSV. An exact copy of data/funds.csv.',
+    description: 'The fund index as CSV. An exact copy of data/bibit/funds.csv.',
     example: `symbol,name,type,investment_manager,currency,sharia,etf,index,tradeable,status,nav_first_date,nav_date,nav,aum,expense_ratio
 RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,IDR,false,true,true,1,1,2007-12-18,2026-09-30,59116.5317,7850300000000,0.0021`,
   },
   {
     path: '/csv/nav/RD216.csv',
-    description: 'Daily NAV of one fund. An exact copy of data/nav/<symbol>.csv. nav_adjusted can be empty.',
+    description: 'Daily NAV of one fund. An exact copy of data/bibit/nav/<symbol>.csv. nav_adjusted can be empty.',
     example: `date,nav,nav_adjusted
 2000-01-05,4336.44,4336.44
 2000-01-06,4386.41,4386.41`,
   },
   {
     path: '/csv/aum/RD216.csv',
-    description: 'AUM history of one fund. An exact copy of data/aum/<symbol>.csv.',
+    description: 'AUM history of one fund. An exact copy of data/bibit/aum/<symbol>.csv.',
     example: `date,aum
 2004-06-07,9993.82
 2004-07-30,12837`,
   },
   {
     path: '/download/bibit-reksadana-data.zip',
-    description: 'The whole data/ folder as one zip file.',
+    description: 'The whole data/ folder as one zip file, with both the Bibit (data/bibit/) and the Kontan (data/kontan/) data.',
     example: null,
   },
 ];
@@ -95,7 +114,7 @@ RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,
   <h1>API</h1>
   <p>
     A free, read-only API made of static files. No key is needed, and CORS is open
-    (<code>Access-Control-Allow-Origin: *</code>), so you can call it from a browser. The data is rebuilt once a day.
+    (<code>Access-Control-Allow-Origin: *</code>), so you can call it from a browser. The data is rebuilt once a week.
   </p>
   <p>Replace the host below with the one you are visiting.</p>
 

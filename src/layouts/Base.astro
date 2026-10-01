@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 
-const { title, description = 'Browse and download Indonesian mutual fund (reksa dana) data from Bibit.' } = Astro.props;
+const { title, description = 'Browse and download Indonesian mutual fund (reksa dana) data from Bibit and Kontan.' } = Astro.props;
 ---
 
 <!doctype html>
@@ -27,7 +27,7 @@ const { title, description = 'Browse and download Indonesian mutual fund (reksa 
       <slot />
     </main>
     <footer class="site-footer">
-      Data scraped from the public API behind Bibit. Not affiliated with Bibit. Not financial advice.
+      Data from the public API behind Bibit and from Kontan's pusatdata pages. Not affiliated with Bibit or Kontan. Not financial advice.
     </footer>
   </body>
 </html>

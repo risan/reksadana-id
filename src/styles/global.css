@@ -7,6 +7,7 @@
   --accent: #0b6bcb;
   --positive: #1a7f37;
   --negative: #cf222e;
+  --kontan: #b35900;
   color-scheme: light dark;
 }
 
@@ -20,6 +21,7 @@
     --accent: #58a6ff;
     --positive: #3fb950;
     --negative: #f85149;
+    --kontan: #e3a008;
   }
 }
 
