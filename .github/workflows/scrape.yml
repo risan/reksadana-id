@@ -2,21 +2,22 @@ name: Scrape
 
 on:
   schedule:
-    # Once a week, on Saturday 23:00 UTC, which is Sunday 06:00 in Jakarta (UTC+7). Kontan serves
-    # 12 months of NAV per fund, so a weekly run keeps every day of the history.
-    - cron: '0 23 * * 6'
-    # Once a month, on the 1st at 23:00 UTC. Bareksa's AUM, units, and asset allocation are monthly.
-    - cron: '0 23 1 * *'
+    # Every day at 23:00 UTC, which is 06:00 the next day in Jakarta (UTC+7). One trigger decides from
+    # the date which sources run (see scripts/decide-sources.sh), so two sources never start two runs.
+    - cron: '0 23 * * *'
   workflow_dispatch:
     inputs:
       sources:
-        description: Which sources to scrape
+        description: Which source to scrape
         type: choice
         options:
-          - bibit-kontan
+          - bibit
+          - kontan
+          - kontan-full
+          - makmur
           - bareksa
           - all
-        default: bibit-kontan
+        default: bibit
 
 permissions:
   contents: write
@@ -25,16 +26,11 @@ concurrency:
   group: scrape
   cancel-in-progress: false
 
-env:
-  # `github.event.schedule` is empty on a manual run, and `inputs.sources` is empty on a scheduled run.
-  SCRAPE_BIBIT_KONTAN: ${{ github.event.schedule != '0 23 1 * *' && inputs.sources != 'bareksa' }}
-  SCRAPE_BAREKSA: ${{ github.event.schedule == '0 23 1 * *' || inputs.sources == 'bareksa' || inputs.sources == 'all' }}
-
 jobs:
   scrape:
     runs-on: ubuntu-latest
     # The first full Bareksa run takes more than an hour and a half, so it was done locally and its data committed.
-    # A monthly run only asks for what is new since the last one.
+    # A monthly run only asks for what is new since the last one. A full Kontan rescan takes about 30 minutes.
     timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
@@ -43,19 +39,33 @@ jobs:
         with:
           node-version-file: .node-version
 
+      # `inputs.sources` is empty on a scheduled run.
+      - name: Decide which sources to scrape
+        id: decide
+        run: scripts/decide-sources.sh "${{ inputs.sources }}" | tee -a "$GITHUB_OUTPUT"
+
       - name: Scrape Bibit
-        if: env.SCRAPE_BIBIT_KONTAN == 'true'
+        if: steps.decide.outputs.bibit == 'true'
         run: npm run scrape:bibit
 
-      # Kontan matches against Bibit's fund list, which is still usable when a few Bibit funds fail.
+      # The other sources match against Bibit's fund list, which is still usable when a few Bibit funds fail.
       - name: Scrape Kontan
-        if: (success() || failure()) && env.SCRAPE_BIBIT_KONTAN == 'true'
+        if: (success() || failure()) && steps.decide.outputs.kontan == 'true'
         run: npm run scrape:kontan
 
-      # Bareksa matches against Bibit's fund list too. It has no daily NAV here: that needs a login,
-      # so it is only collected by hand with BAREKSA_COOKIE (see the README).
+      # Finds funds whose ID failed before or lies past a gap in the IDs, which the normal run never asks for.
+      - name: Scrape Kontan (full rescan)
+        if: (success() || failure()) && steps.decide.outputs.kontan_full == 'true'
+        run: npm run scrape:kontan:full
+
+      - name: Scrape Makmur
+        if: (success() || failure()) && steps.decide.outputs.makmur == 'true'
+        run: npm run scrape:makmur
+
+      # Bareksa has no daily NAV here: that needs a login, so it is only collected by hand with
+      # BAREKSA_COOKIE (see the README).
       - name: Scrape Bareksa
-        if: (success() || failure()) && env.SCRAPE_BAREKSA == 'true'
+        if: (success() || failure()) && steps.decide.outputs.bareksa == 'true'
         run: npm run scrape:bareksa
 
       # The scrapers exit non-zero when a few funds fail. Still save the funds that
