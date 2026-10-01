@@ -2,12 +2,15 @@
 # Decides which sources the scrape workflow runs and prints one `name=true|false` line per source.
 # Usage: decide-sources.sh [requested-source] [date]
 #   requested-source: bibit, kontan, kontan-full, makmur, bareksa, or all. Empty means "by the date".
-#   date: any `date -d` value, to try a day other than today (UTC).
+#   date: any `date -d` value, to try another moment than now (UTC).
 set -euo pipefail
 
 requested="${1:-}"
-weekday=$(date -u -d "${2:-now}" +%u)
-day_of_month=$(date -u -d "${2:-now}" +%-d)
+# The cron fires at 23:00 UTC, but a queued run can start after midnight. A run before noon UTC
+# belongs to the previous evening, so the day is taken 12 hours back.
+run_day=$(date -u -d "$(date -u -d "${2:-now}" +%Y-%m-%dT%H:%M:%SZ) - 12 hours" +%Y-%m-%d)
+weekday=$(date -u -d "$run_day" +%u)
+day_of_month=$(date -u -d "$run_day" +%-d)
 
 bibit=false
 kontan=false
