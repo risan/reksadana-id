@@ -5,7 +5,18 @@ on:
     # Once a week, on Saturday 23:00 UTC, which is Sunday 06:00 in Jakarta (UTC+7). Kontan serves
     # 12 months of NAV per fund, so a weekly run keeps every day of the history.
     - cron: '0 23 * * 6'
+    # Once a month, on the 1st at 23:00 UTC. Bareksa's AUM, units, and asset allocation are monthly.
+    - cron: '0 23 1 * *'
   workflow_dispatch:
+    inputs:
+      sources:
+        description: Which sources to scrape
+        type: choice
+        options:
+          - bibit-kontan
+          - bareksa
+          - all
+        default: bibit-kontan
 
 permissions:
   contents: write
@@ -14,10 +25,17 @@ concurrency:
   group: scrape
   cancel-in-progress: false
 
+env:
+  # `github.event.schedule` is empty on a manual run, and `inputs.sources` is empty on a scheduled run.
+  SCRAPE_BIBIT_KONTAN: ${{ github.event.schedule != '0 23 1 * *' && inputs.sources != 'bareksa' }}
+  SCRAPE_BAREKSA: ${{ github.event.schedule == '0 23 1 * *' || inputs.sources == 'bareksa' || inputs.sources == 'all' }}
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    # The first full Bareksa run takes more than an hour and a half, so it was done locally and its data committed.
+    # A monthly run only asks for what is new since the last one.
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
 
@@ -26,12 +44,19 @@ jobs:
           node-version-file: .node-version
 
       - name: Scrape Bibit
+        if: env.SCRAPE_BIBIT_KONTAN == 'true'
         run: npm run scrape:bibit
 
       # Kontan matches against Bibit's fund list, which is still usable when a few Bibit funds fail.
       - name: Scrape Kontan
-        if: success() || failure()
+        if: (success() || failure()) && env.SCRAPE_BIBIT_KONTAN == 'true'
         run: npm run scrape:kontan
+
+      # Bareksa matches against Bibit's fund list too. It has no daily NAV here: that needs a login,
+      # so it is only collected by hand with BAREKSA_COOKIE (see the README).
+      - name: Scrape Bareksa
+        if: (success() || failure()) && env.SCRAPE_BAREKSA == 'true'
+        run: npm run scrape:bareksa
 
       # The scrapers exit non-zero when a few funds fail. Still save the funds that
       # succeeded; the failed ones are retried on the next run.
