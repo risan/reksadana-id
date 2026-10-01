@@ -27,7 +27,10 @@ jobs:
       - name: Scrape
         run: node scrape.js
 
+      # The scraper exits non-zero when a few funds fail. Still save the funds that
+      # succeeded; the failed ones are retried on the next run.
       - name: Commit and push changes
+        if: success() || failure()
         run: |
           if [ -z "$(git status --porcelain data)" ]; then
             echo "No data changes."

@@ -65,7 +65,7 @@ const details = [
   ['Launch date', launchDate],
   ['Latest NAV', fund.nav ? `${formatNumber(fund.nav.value, 4)} (${fund.nav.date})` : null],
   ['AUM', fund.aum ? `${formatCompact(fund.aum.value)} (${fund.aum.date})` : null],
-  ['Expense ratio', fund.expenseratio?.percentage ?? null],
+  ['Expense ratio', fund.expenseratio?.percentage == null ? null : formatPercent(fund.expenseratio.percentage)],
   ['Minimum buy', fund.minbuy ? formatNumber(fund.minbuy) : null],
 ];
 ---
