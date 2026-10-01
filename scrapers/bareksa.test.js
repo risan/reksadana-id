@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { CookieError, parseAllocationRows, parseAumRows, parseFundList, parseFundPage, parseNavRows, parseUnitsRows } from './bareksa.js';
+import { CookieError, assertCookieIsValid, parseAllocationRows, parseAumRows, parseFundList, parseFundPage, parseNavRows, parseUnitsRows } from './bareksa.js';
 
 // Built from the response shapes Bareksa sends for a logged-in and an anonymous request.
 const LOGGED_IN_NAV = {
@@ -41,6 +41,24 @@ test('parseNavRows stops with a cookie error for an anonymous response', () => {
   assert.throws(() => parseNavRows(anonymous), CookieError);
 });
 
+test('parseNavRows checks the login before anything else, even without a status or datas', () => {
+  assert.throws(() => parseNavRows({ data: { auth: false } }), CookieError);
+  assert.throws(() => parseNavRows({ status: false, data: { auth: false } }), CookieError);
+});
+
+test('parseNavRows fails on a response without data, and on a NAV that is not a number', () => {
+  assert.throws(() => parseNavRows({ status: true }), /no data/);
+  assert.throws(() => parseNavRows({ data: { auth: true, datas: [{ nav: [{ date: '2019-12-12', value: 'abc' }] }] } }), /Invalid number/);
+  assert.throws(() => parseNavRows({ data: { auth: true, datas: [{ nav: [{ date: '2019-02-31', value: '1' }] }] } }), /Invalid date/);
+});
+
+test('a cookie with a line break is refused without repeating the cookie', () => {
+  const cookie = 'session=secret-value\nsecond-line=more';
+
+  assert.throws(() => assertCookieIsValid(cookie), (error) => error.message === 'BAREKSA_COOKIE has a line break or invalid characters; copy it again');
+  assert.doesNotThrow(() => assertCookieIsValid('session=abc; token=def%3D'));
+});
+
 test('parseAumRows and parseUnitsRows read the monthly rows and the empty answer', () => {
   const aum = { status: true, data: [{ id: '145876', date: '2019-12-01', value: '241287219502', value_idr: '241287219502.00', value_usd: '17142964.09' }] };
   const units = { status: true, data: [{ id: '145876', date: '2019-12-01', value: '41930724' }] };
@@ -48,6 +66,17 @@ test('parseAumRows and parseUnitsRows read the monthly rows and the empty answer
   assert.deepEqual(parseAumRows(aum), [['2019-12-01', '241287219502', '17142964.09']]);
   assert.deepEqual(parseUnitsRows(units), [['2019-12-01', '41930724']]);
   assert.deepEqual(parseAumRows({ status: false, msg: 'Empty' }), []);
+});
+
+test('rows with a value that is not a number fail instead of becoming NaN', () => {
+  assert.throws(() => parseAumRows({ data: [{ date: '2019-12-01', value_idr: 'abc', value_usd: '1' }] }), /Invalid number/);
+  assert.throws(() => parseUnitsRows({ data: [{ date: '2019-12-01', value: 'NaN' }] }), /Invalid number/);
+  assert.throws(() => parseUnitsRows({ data: [{ date: 'not a date', value: '1' }] }), /Invalid date/);
+  assert.throws(() => parseAllocationRows({ data: [['2021-02-25', '0.00', '95.94', '4.06']] }), /expected 4/);
+});
+
+test('a missing value stays empty', () => {
+  assert.deepEqual(parseUnitsRows({ data: [{ date: '2009-02-01', value: null }] }), [['2009-02-01', '']]);
 });
 
 test('parseAllocationRows keeps the four shares in order', () => {
@@ -68,6 +97,25 @@ test('parseFundList reads ids, slugs, and names', () => {
     { id: 2904, slug: 'aberdeen-proteksi-income-reguler', name: 'Aberdeen Proteksi Income Reguler' },
     { id: 9, slug: 'a-b', name: 'A & B Fund' },
   ]);
+});
+
+test('parseFundList tolerates line breaks and spaces between tags', () => {
+  const html = `<table id="nav-table"><tbody>
+    <tr><td><input type="checkbox" name="idc[]" value="7" /></td>
+    <td
+      class="left" >
+      <a
+        href="https://www.bareksa.com/id/data/mutualfund/7/some-fund" >
+        Some Fund
+      </a></td></tr>
+  </tbody></table>`;
+
+  assert.deepEqual(parseFundList(html), [{ id: 7, slug: 'some-fund', name: 'Some Fund' }]);
+});
+
+test('parseFundList stops on an empty page but fails when rows cannot be read', () => {
+  assert.deepEqual(parseFundList('<table id="nav-table"><tbody></tbody></table>'), []);
+  assert.throws(() => parseFundList('<table id="nav-table"><tr><td><input name="idc[]" value="7" /></td><td class="new-layout">x</td></tr></table>'), /none could be read/);
 });
 
 test('parseFundPage reads type, manager, and launch date', () => {

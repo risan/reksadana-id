@@ -21,7 +21,7 @@ const NAV_HEADER = ['date', 'nav'];
 const INDONESIAN_MONTHS = ['januari', 'februari', 'maret', 'april', 'mei', 'juni', 'juli', 'agustus', 'september', 'oktober', 'november', 'desember'];
 
 // The NAV history needs a logged-in session, copied from the browser by the owner.
-const cookie = process.env.BAREKSA_COOKIE;
+const cookie = process.env.BAREKSA_COOKIE?.trim();
 
 let requestCount = 0;
 
@@ -30,6 +30,13 @@ export class CookieError extends Error {
     super('BAREKSA_COOKIE missing or expired: Bareksa did not accept the login for the NAV history');
   }
 }
+
+// A header value holds visible ASCII only. The message never repeats the cookie, which is a secret.
+export const assertCookieIsValid = (value) => {
+  if (/[^\t\x20-\x7e]/.test(value)) {
+    throw new Error('BAREKSA_COOKIE has a line break or invalid characters; copy it again');
+  }
+};
 
 const fetchText = (url, { sendCookie = false, acceptDatabaseError = false } = {}) => withRetries(async () => {
   requestCount++;
@@ -56,15 +63,34 @@ const fetchText = (url, { sendCookie = false, acceptDatabaseError = false } = {}
     }
 
     return text;
+  } catch (error) {
+    // The error message of an invalid header repeats the whole cookie.
+    if (sendCookie && !(error instanceof HttpError)) {
+      throw new Error(`GET ${url} failed (${error.name}); the details are hidden because the request carries the cookie`);
+    }
+
+    throw error;
   } finally {
     await sleep(REQUEST_DELAY_MS);
   }
 });
 
-const toNumberText = (value) => (value === null || value === undefined || value === '' ? '' : String(Number(value)));
+// A missing value stays empty. A value that is not a finite number fails the fund, so it never replaces stored data.
+const toNumberText = (value) => {
+  if (value === null || value === undefined || value === '') {
+    return '';
+  }
+
+  if (!Number.isFinite(Number(value))) {
+    throw new Error(`Invalid number: "${value}"`);
+  }
+
+  return String(Number(value));
+};
 
 const assertDate = (date) => {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+  // Date.parse accepts 2019-02-31 and moves it to March, so the date must survive the round trip.
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(Date.parse(date)) || new Date(date).toISOString().slice(0, 10) !== date) {
     throw new Error(`Invalid date: "${date}"`);
   }
 
@@ -88,9 +114,15 @@ export const parseFundList = (html) => {
     throw new Error('Fund list has no table');
   }
 
-  const rows = html.matchAll(/<td class="left"><a href="[^"]*\/mutualfund\/(\d+)\/([^"/]*)">([^<]*)<\/a>/g);
+  const rows = html.matchAll(/<td\s+class="left"\s*>\s*<a\s+href="[^"]*\/mutualfund\/(\d+)\/([^"/]*)"\s*>([^<]*)<\/a>/g);
+  const funds = [...rows].map(([, id, slug, name]) => ({ id: Number(id), slug, name: decodeHtml(name) }));
 
-  return [...rows].map(([, id, slug, name]) => ({ id: Number(id), slug, name: decodeHtml(name) }));
+  // A page past the last one has the table and no rows. A page with rows that do not parse is a changed layout.
+  if (funds.length === 0 && html.includes('name="idc[]"')) {
+    throw new Error('Fund list has rows but none could be read');
+  }
+
+  return funds;
 };
 
 export const parseFundPage = (html) => {
@@ -127,22 +159,28 @@ export const parseAumRows = (json) => readDataRows(json, (row) => [assertDate(ro
 
 export const parseUnitsRows = (json) => readDataRows(json, (row) => [assertDate(row.date), toNumberText(row.value)]);
 
-export const parseAllocationRows = (json) => readDataRows(json, ([date, ...shares]) => [assertDate(date), ...shares.map(toNumberText)]);
-
-export const parseNavRows = (json) => {
-  if (!json.status || !json.data) {
-    throw new Error('NAV response has no data');
+export const parseAllocationRows = (json) => readDataRows(json, ([date, ...shares]) => {
+  if (shares.length !== ALLOCATION_HEADER.length - 1) {
+    throw new Error(`Allocation row has ${shares.length} shares, expected ${ALLOCATION_HEADER.length - 1}`);
   }
 
-  if (json.data.auth === false) {
+  return [assertDate(date), ...shares.map(toNumberText)];
+});
+
+export const parseNavRows = (json) => {
+  if (json.data?.auth === false) {
     throw new CookieError();
+  }
+
+  if (!json.data) {
+    throw new Error('NAV response has no data');
   }
 
   const points = json.data.datas?.[0]?.nav ?? [];
 
   return points
-    .filter((point) => Number(point.value) > 0)
-    .map((point) => [assertDate(point.date), toNumberText(point.value)]);
+    .map((point) => [assertDate(point.date), toNumberText(point.value)])
+    .filter(([, nav]) => Number(nav) > 0);
 };
 
 // The list page of "all funds" shows every fund, not only the ones sold on Bareksa (`ba=no`).
@@ -155,6 +193,10 @@ const fetchFundList = async () => {
 
     if (pageFunds.length === 0) {
       break;
+    }
+
+    if (pageFunds.every(({ id }) => funds.has(id))) {
+      throw new Error(`Fund list page ${page} has no new funds; the paging may be broken`);
     }
 
     for (const { id, slug, name } of pageFunds) {
@@ -204,7 +246,17 @@ const updateSeries = async (directory, header, id, fetchRows) => {
     return storedRows.length;
   }
 
-  const rowsByDate = new Map([...storedRows, ...newRows].map((row) => [row[0], row]));
+  const rowsByDate = new Map(storedRows.map((row) => [row[0], row]));
+
+  for (const row of newRows) {
+    // A row with a missing value never replaces a stored row.
+    if (row.includes('') && rowsByDate.has(row[0])) {
+      continue;
+    }
+
+    rowsByDate.set(row[0], row);
+  }
+
   const rows = [...rowsByDate.values()].sort((a, b) => a[0].localeCompare(b[0]));
 
   await writeFileAtomic(file, toCsv(header, rows));
@@ -226,7 +278,8 @@ const fetchAllocationRows = async (id, lastDate) => {
   const range = lastDate === undefined
     ? 'cperiod=all&startdate=&enddate='
     : `cperiod=custom&startdate=${lastDate}&enddate=${new Date().toISOString().slice(0, 10)}`;
-  const json = await fetchJson(`/ajax/mutualfund/alokasidana/?id=${id}&${range}`, { acceptDatabaseError: true });
+  // A fund with allocation history that answers "Database Error" is a failure, not a fund without data.
+  const json = await fetchJson(`/ajax/mutualfund/alokasidana/?id=${id}&${range}`, { acceptDatabaseError: lastDate === undefined });
 
   return json === null ? [] : parseAllocationRows(json);
 };
@@ -238,6 +291,16 @@ const fetchNavRows = async (id) => parseNavRows(await fetchJson(
 
 const main = async () => {
   const startedAt = Date.now();
+
+  if (cookie) {
+    try {
+      assertCookieIsValid(cookie);
+    } catch (error) {
+      console.error(error.message);
+      process.exit(1);
+    }
+  }
+
   const storedFunds = await readStoredFunds();
   const listedFunds = await fetchFundList();
   const funds = new Map(storedFunds);
@@ -269,7 +332,7 @@ const main = async () => {
     }
 
     // The profile page is fetched once per fund. It is saved only after the data, so a failed page is retried next run.
-    if (funds.get(id).type === '') {
+    if (funds.get(id).type === '' || funds.get(id).manager === '') {
       funds.set(id, { ...funds.get(id), ...parseFundPage(await fetchText(`${BASE_URL}/id/data/reksadana/${id}/${funds.get(id).slug}`)) });
     }
   };
