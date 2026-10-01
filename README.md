@@ -28,7 +28,7 @@ The `tradeable` column is `1` for funds you can buy in the Bibit app.
 
 An [Astro](https://astro.build/) site builds from `data/` into static files. It has a fund explorer, a page with charts for every fund, bulk downloads, and a read-only JSON API (see `/api/` on the site). It is served by Cloudflare Workers as static assets, so there is no server code.
 
-You need Node.js 22.12 or newer.
+You need Node.js 22.12 or newer. Cloudflare builds with Node 24 (see `.node-version`).
 
 ```bash
 npm ci
@@ -48,10 +48,11 @@ Cloudflare Workers Builds deploys the site from GitHub. In the Cloudflare dashbo
 | Root directory | `/` |
 | Build command | `npm run build` |
 | Deploy command | `npx wrangler deploy` |
+| Non-production branch deploy command | `npx wrangler versions upload` (the default) |
 
 The Worker name must match `name` in `wrangler.toml`. If you use another name, change the file, or the build fails with a name mismatch warning.
 
-The build image's default Node.js is already new enough. `.node-version` pins Node 22 so builds do not change when the default changes. Every push to `main` then deploys, including the daily data commit.
+The build image's default Node.js is already new enough. `.node-version` pins Node 24, so no build variables are needed. Every push to `main` then deploys, including the daily data commit.
 
 Cloudflare's own docs: [Workers Builds](https://developers.cloudflare.com/workers/ci-cd/builds/).
 
