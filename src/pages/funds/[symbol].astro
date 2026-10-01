@@ -39,6 +39,11 @@ function formatFee(fee) {
   return `${fee.currency} ${formatNumber(fee.value)}`;
 }
 
+// Document URLs come from scraped data, so never link anything but http(s), such as a javascript: URL.
+function isWebUrl(url) {
+  return typeof url === 'string' && /^https?:\/\//i.test(url);
+}
+
 // Dividend dates are midnight in Jakarta (UTC+7), stored as UTC.
 function formatDividendDate(isoTimestamp) {
   const jakartaTime = new Date(new Date(isoTimestamp).getTime() + 7 * 60 * 60 * 1000);
@@ -238,11 +243,11 @@ const details = [
         <h2>Documents</h2>
         <ul>
           {prospectus.map((document) => (
-            <li>{document.file ? <a href={document.file}>Prospectus: {document.name}</a> : `Prospectus: ${document.name}`}</li>
+            <li>{isWebUrl(document.file) ? <a href={document.file}>Prospectus: {document.name}</a> : `Prospectus: ${document.name}`}</li>
           ))}
           {factsheets.map((document) => (
             <li>
-              {document.file ? <a href={document.file}>Factsheet: {document.name}</a> : `Factsheet: ${document.name}`}
+              {isWebUrl(document.file) ? <a href={document.file}>Factsheet: {document.name}</a> : `Factsheet: ${document.name}`}
               {document.date && <span class="muted"> ({document.date})</span>}
             </li>
           ))}
@@ -316,6 +321,8 @@ const details = [
         series: [{}, ...series.map((line) => ({ ...line, width: 2, spanGaps: false }))],
         axes: [axisStyle, { ...axisStyle, size: 70, values: (_, ticks) => ticks.map((tick) => formatCompact(tick)) }],
         scales: { x: { time: true } },
+        // Dates are calendar days stored as UTC midnight; show them as-is in every timezone.
+        tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),
       },
       [rows.map((row) => toSeconds(row.date)), ...series.map((line) => rows.map((row) => row[line.key]))],
       container,
