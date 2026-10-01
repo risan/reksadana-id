@@ -9,8 +9,7 @@
     "scrape": "node scrape.js",
     "dev": "astro dev",
     "build": "astro build && node scripts/check-dist.js",
-    "preview": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "preview": "wrangler dev"
   },
   "dependencies": {
     "astro": "^7.3.5",

@@ -37,10 +37,23 @@ npm run build     # writes dist/ and checks Cloudflare's free plan limits
 npm run preview   # serves dist/ locally with wrangler
 ```
 
-To deploy, either:
+### Deploy
 
-- Run `npx wrangler login` once, then `npm run deploy`.
-- Or connect this repository in the Cloudflare dashboard (Workers & Pages, then Workers Builds). Use `npm run build` as the build command and `npx wrangler deploy` as the deploy command. Every push then deploys.
+Cloudflare Workers Builds deploys the site from GitHub. In the Cloudflare dashboard, create a Worker from this repository (Workers & Pages, Create, Import a repository). Then check these settings under the Worker's Settings, Build:
+
+| Setting | Value |
+|---|---|
+| Worker name | `bibit-reksadana` |
+| Production branch | `main` |
+| Root directory | `/` |
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` |
+
+The Worker name must match `name` in `wrangler.toml`. If you use another name, change the file, or the build fails with a name mismatch warning.
+
+The build image's default Node.js is already new enough. `.node-version` pins Node 22 so builds do not change when the default changes. Every push to `main` then deploys, including the daily data commit.
+
+Cloudflare's own docs: [Workers Builds](https://developers.cloudflare.com/workers/ci-cd/builds/).
 
 The build fails if `dist/` has more than 19,000 files or a file over 24 MiB, because the free plan allows 20,000 files and 25 MiB per file.
 
