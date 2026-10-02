@@ -252,6 +252,16 @@ test('dividendEvents skips a listed payout whose scale is off, or whose ex-date 
   assert.deepEqual(dividendEvents({ nav, dividends: [{ value: 2, date: '2026-02-01T17:00:00.000Z' }] }, pickNavHistory({ nav })), []);
 });
 
+test('dividendEvents skips a listed payout when the history has no NAV on its ex-date', () => {
+  const nav = [
+    { date: '2026-01-01', nav: 100, nav_adjusted: null },
+    { date: '2026-01-05', nav: 80, nav_adjusted: null },
+  ];
+  const fund = { nav, dividends: [{ value: 10, date: '2026-01-02T17:00:00.000Z' }] };
+
+  assert.deepEqual(dividendEvents(fund, pickNavHistory(fund)), []);
+});
+
 test('withDividendsReinvested lowers the points before an event so the series ends at the latest NAV', () => {
   const history = pickNavHistory({ nav: dailyRows('2026-01-01', [100, 100, 99, 99]) });
   const total = withDividendsReinvested(history, [{ date: '2026-01-03', factor: 1.01 }]);

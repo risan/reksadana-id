@@ -418,9 +418,10 @@ export function dividendEvents(fund, history) {
   for (const payout of fund.dividends ?? []) {
     const date = jakartaDate(payout.date);
     const isCovered = events.some((event) => Math.abs(daysBetween(event.date, date)) <= LISTED_MATCH_DAYS);
-    const exDatePoint = history.points[indexAtOrBefore(history.points, toDate(toTime(date) - DAY_MS)) + 1];
+    const exDatePoint = history.points[indexAtOrBefore(history.points, date)];
 
-    if (isCovered || !exDatePoint) {
+    // A NAV from another day would reinvest at the wrong price, so a payout without its ex-date NAV is left out.
+    if (isCovered || exDatePoint?.date !== date) {
       continue;
     }
 
