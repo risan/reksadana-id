@@ -11,7 +11,19 @@ const REQUEST_DELAY_MS = 100;
 const REQUEST_TIMEOUT_MS = 90 * 1000;
 const LIST_PAGE_SIZE = 100;
 const FIRST_DATE = '2000-01-01';
-const FUND_HEADER = ['bareksa_id', 'name', 'slug', 'type', 'manager', 'launch_date', 'bibit_symbol'];
+const PROFILES_PER_RUN = 400;
+const FUND_HEADER = [
+  'bareksa_id', 'name', 'slug', 'type', 'manager', 'launch_date', 'bibit_symbol',
+  'currency', 'custodian', 'min_purchase', 'min_topup', 'min_redemption', 'fee_purchase', 'fee_redemption', 'fee_switch', 'profile_date',
+];
+// The order of the columns after bibit_symbol in funds.csv.
+const STORED_PROFILE_FIELDS = ['currency', 'custodian', 'minPurchase', 'minTopup', 'minRedemption', 'feePurchase', 'feeRedemption', 'feeSwitch', 'profileDate'];
+const EMPTY_PROFILE = {
+  type: '',
+  manager: '',
+  launchDate: '',
+  ...Object.fromEntries(STORED_PROFILE_FIELDS.map((field) => [field, ''])),
+};
 const AUM_HEADER = ['date', 'aum_idr', 'aum_usd'];
 const UNITS_HEADER = ['date', 'units'];
 // Bareksa's allocation chart (drawAlokasiDana in its chart.js) names these columns in this order.
@@ -125,9 +137,38 @@ export const parseFundList = (html) => {
   return funds;
 };
 
+const PROFILE_AMOUNT = /(IDR|USD)\s*(\d+(?:\.\d{3})*)(?:,(\d+))?/;
+
+// "IDR 100.000,00" becomes "100000". A text without a currency amount, such as "100 UP" or "-", is left empty.
+// The amount is kept even when its currency differs from the fund's.
+const toAmount = (text) => {
+  const match = text.match(PROFILE_AMOUNT);
+
+  return match ? String(Number(`${match[2].replaceAll('.', '')}.${match[3] ?? '0'}`)) : '';
+};
+
+const toFraction = (percentText) => String(Number((Number(percentText.replace(',', '.')) / 100).toFixed(8)));
+
+// "Min. 0,5%, Maks. 3%" becomes "0.005-0.03", "Maks. 2%" becomes "-0.02", and a bare "0%" becomes "0".
+// Anything else, such as "-" or an empty cell, is unknown and stays empty.
+const toFeeRange = (text) => {
+  const min = text.match(/Min\.?\s*(\d+(?:,\d+)?)\s*%/i)?.[1];
+  const max = text.match(/Maks\.?\s*(\d+(?:,\d+)?)\s*%/i)?.[1];
+
+  if (min !== undefined || max !== undefined) {
+    return `${min === undefined ? '' : toFraction(min)}-${max === undefined ? '' : toFraction(max)}`;
+  }
+
+  const bare = text.match(/^(\d+(?:,\d+)?)\s*%$/)?.[1];
+
+  return bare === undefined ? '' : toFraction(bare);
+};
+
 export const parseFundPage = (html) => {
-  const profileValue = (label) => html.match(new RegExp(`<td>${label}</td>\\s*<td[^>]*>([^<]*)</td>`))?.[1];
-  const type = profileValue('Jenis Reksa Dana');
+  // A fee cell can hold a raw "<" ("Maks. 1% < 1 tahun"), and the fee rows have an HTML comment between the cells.
+  const cellValue = (label) => html.match(new RegExp(`<td>${label}</td>\\s*(?:<!--.*?-->\\s*)?<td[^>]*>(.*?)</td>`, 's'))?.[1];
+  const profileValue = (label) => decodeHtml(cellValue(label) ?? '');
+  const type = cellValue('Jenis Reksa Dana');
 
   if (type === undefined) {
     throw new Error('Fund page has no profile table');
@@ -138,7 +179,15 @@ export const parseFundPage = (html) => {
   return {
     type: decodeHtml(type),
     manager: decodeHtml(manager),
-    launchDate: toIsoDate(decodeHtml(profileValue('Tanggal Peluncuran') ?? '')),
+    launchDate: toIsoDate(profileValue('Tanggal Peluncuran')),
+    currency: profileValue('Dana Kelolaan').match(PROFILE_AMOUNT)?.[1] ?? '',
+    custodian: profileValue('Bank Kustodian').replace(/\s+/g, ' '),
+    minPurchase: toAmount(profileValue('Min. Pembelian Awal')),
+    minTopup: toAmount(profileValue('Pembelian Selanjutnya')),
+    minRedemption: toAmount(profileValue('Min. Penjualan Kembali')),
+    feePurchase: toFeeRange(profileValue('Biaya Pembelian')),
+    feeRedemption: toFeeRange(profileValue('Biaya Penjualan Kembali')),
+    feeSwitch: toFeeRange(profileValue('Biaya Switching')),
   };
 };
 
@@ -220,7 +269,10 @@ const fetchFundList = async () => {
 const readStoredFunds = async () => {
   const rows = await readCsvRows(path.join(DATA_DIR, 'funds.csv'));
 
-  return new Map(rows.map(([id, name, slug, type, manager, launchDate]) => [Number(id), { name, slug, type, manager, launchDate }]));
+  return new Map(rows.map(([id, name, slug, type, manager, launchDate, , ...profile]) => [
+    Number(id),
+    { name, slug, type, manager, launchDate, ...Object.fromEntries(STORED_PROFILE_FIELDS.map((field, index) => [field, profile[index] ?? ''])) },
+  ]));
 };
 
 const writeFundIndex = async (funds, bibitRows) => {
@@ -235,6 +287,7 @@ const writeFundIndex = async (funds, bibitRows) => {
     fund.manager,
     fund.launchDate,
     symbolsById.get(id),
+    ...STORED_PROFILE_FIELDS.map((field) => fund[field]),
   ]);
 
   await writeFileAtomic(path.join(DATA_DIR, 'funds.csv'), toCsv(FUND_HEADER, rows));
@@ -298,6 +351,53 @@ const fetchNavRows = async (id) => parseNavRows(await fetchJson(
   { sendCookie: true },
 ));
 
+const today = () => new Date().toISOString().slice(0, 10);
+
+const fetchProfile = async ({ id, slug }) => ({
+  ...parseFundPage(await fetchText(`${BASE_URL}/id/data/reksadana/${id}/${slug}`)),
+  profileDate: today(),
+});
+
+// Never-fetched funds first, then the oldest profile.
+const byOldestProfile = ([idA, a], [idB, b]) => a.profileDate.localeCompare(b.profileDate) || idA - idB;
+
+// Fund pages only, for the costs and minimums. A failed page gets today's date and keeps its old values,
+// so it moves to the back of the queue and cannot starve the funds behind it.
+const mainProfiles = async ({ all }) => {
+  const startedAt = Date.now();
+  const funds = await readStoredFunds();
+  const queue = [...funds].sort(byOldestProfile).slice(0, all ? Infinity : PROFILES_PER_RUN);
+
+  console.log(`Profiles: ${queue.length} of ${funds.size} funds`);
+
+  const failures = await runPool({
+    items: queue.map(([id]) => id),
+    worker: async (id) => {
+      try {
+        funds.set(id, { ...funds.get(id), ...await fetchProfile({ id, slug: funds.get(id).slug }) });
+      } catch (error) {
+        funds.set(id, { ...funds.get(id), profileDate: today() });
+
+        throw error;
+      }
+    },
+    concurrency: CONCURRENCY,
+    label: 'Profiles fetched',
+    describeItem: (id) => `Bareksa ${id}`,
+  });
+
+  const bibitRows = await readCsvRows(BIBIT_FUNDS_FILE);
+  const symbolsById = await writeFundIndex(funds, bibitRows);
+
+  reportMatches('Bareksa', funds.size, symbolsById, bibitRows);
+  console.log(`${requestCount} requests in ${Math.round((Date.now() - startedAt) / 1000)} seconds`);
+
+  if (failures.length > 0) {
+    console.error(`${failures.length} funds failed:\n${failures.join('\n')}`);
+    process.exitCode = 1;
+  }
+};
+
 const main = async () => {
   const startedAt = Date.now();
 
@@ -318,7 +418,7 @@ const main = async () => {
   let fundsWithData = 0;
 
   for (const [id, { name, slug }] of listedFunds) {
-    funds.set(id, { type: '', manager: '', launchDate: '', ...funds.get(id), name, slug });
+    funds.set(id, { ...EMPTY_PROFILE, ...funds.get(id), name, slug });
   }
 
   console.log(`Fund list: ${listedFunds.size} funds, ${funds.size - storedFunds.size} new`);
@@ -341,8 +441,8 @@ const main = async () => {
     }
 
     // The profile page is fetched once per fund. It is saved only after the data, so a failed page is retried next run.
-    if (funds.get(id).type === '' || funds.get(id).manager === '') {
-      funds.set(id, { ...funds.get(id), ...parseFundPage(await fetchText(`${BASE_URL}/id/data/reksadana/${id}/${funds.get(id).slug}`)) });
+    if (funds.get(id).profileDate === '' || funds.get(id).type === '' || funds.get(id).manager === '') {
+      funds.set(id, { ...funds.get(id), ...await fetchProfile({ id, slug: funds.get(id).slug }) });
     }
   };
 
@@ -390,5 +490,9 @@ const main = async () => {
 };
 
 if (process.argv[1] === import.meta.filename) {
-  await main();
+  if (process.argv.includes('--profiles') || process.argv.includes('--profiles-all')) {
+    await mainProfiles({ all: process.argv.includes('--profiles-all') });
+  } else {
+    await main();
+  }
 }

@@ -12,6 +12,7 @@
     "scrape:kontan:full": "node scrapers/kontan.js --full",
     "scrape:makmur": "node scrapers/makmur.js",
     "scrape:bareksa": "node scrapers/bareksa.js",
+    "scrape:bareksa:profiles": "node scrapers/bareksa.js --profiles",
     "link": "node scripts/link-funds.js",
     "test": "node --test scrapers/*.test.js scripts/*.test.js src/*.test.js src/lib/*.test.js",
     "dev": "astro dev",

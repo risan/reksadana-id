@@ -1,4 +1,6 @@
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
 import test from 'node:test';
 import { CookieError, assertCookieIsValid, mergeRowsByDate, parseAllocationRows, parseAumRows, parseFundList, parseFundPage, parseNavRows, parseUnitsRows } from './bareksa.js';
 
@@ -130,7 +132,87 @@ test('parseFundPage reads type, manager, and launch date', () => {
       <tr><td>Tanggal Peluncuran</td><td class="fr" style="text-align:right;">2 Desember 2019</td></tr>
     </tbody></table>`;
 
-  assert.deepEqual(parseFundPage(html), { type: 'Pendapatan Tetap', manager: 'Korea Investment Management Indonesia, PT', launchDate: '2019-12-02' });
+  assert.deepEqual(parseFundPage(html), {
+    type: 'Pendapatan Tetap',
+    manager: 'Korea Investment Management Indonesia, PT',
+    launchDate: '2019-12-02',
+    currency: '',
+    custodian: '',
+    minPurchase: '',
+    minTopup: '',
+    minRedemption: '',
+    feePurchase: '',
+    feeRedemption: '',
+    feeSwitch: '',
+  });
+});
+
+const readFixture = (name) => fs.readFileSync(path.join(import.meta.dirname, 'fixtures', name), 'utf8');
+
+test('parseFundPage reads the costs of a typical fund (440)', () => {
+  assert.deepEqual(parseFundPage(readFixture('fund-440.html')), {
+    type: 'Pendapatan Tetap',
+    manager: 'Insight Investments Management, PT',
+    launchDate: '2011-06-23',
+    currency: 'IDR',
+    custodian: 'PT Bank Negara Indonesia (Persero) Tbk',
+    minPurchase: '100000',
+    minTopup: '',
+    minRedemption: '100000',
+    feePurchase: '-0.02',
+    feeRedemption: '-0.02',
+    feeSwitch: '-0.02',
+  });
+});
+
+test('parseFundPage reads a minimum and a maximum fee, and collapses the double space in a custodian name (75)', () => {
+  const fund = parseFundPage(readFixture('fund-75.html'));
+
+  assert.equal(fund.custodian, 'The Hongkong And Shanghai Banking Corporation');
+  assert.equal(fund.minPurchase, '250000000');
+  assert.equal(fund.minRedemption, '10000');
+  assert.equal(fund.feePurchase, '0.005-0.03');
+  assert.equal(fund.feeRedemption, '-0.02');
+});
+
+test('parseFundPage leaves empty cells, dashes, and an unlaunched fund empty (1217, 5298)', () => {
+  const { currency, custodian, ...costs } = parseFundPage(readFixture('fund-1217.html'));
+
+  assert.equal(currency, 'IDR');
+  assert.equal(custodian, 'Standard Chartered Bank');
+  assert.deepEqual(Object.values(costs).slice(3), ['', '', '', '', '', '']);
+  assert.equal(parseFundPage(readFixture('fund-5298.html')).currency, '');
+});
+
+test('parseFundPage handles a fee without a dot, a mixed fee cell, and a unit minimum (3148, 484)', () => {
+  const protectedFund = parseFundPage(readFixture('fund-3148.html'));
+
+  assert.equal(protectedFund.feePurchase, '-0.01');
+  assert.equal(protectedFund.feeRedemption, '-0.1');
+  assert.equal(protectedFund.feeSwitch, '');
+
+  const mixedFund = parseFundPage(readFixture('fund-484.html'));
+
+  assert.equal(mixedFund.minPurchase, '500000');
+  assert.equal(mixedFund.minRedemption, '');
+  assert.equal(mixedFund.feeRedemption, '-0.01');
+  assert.equal(mixedFund.feeSwitch, '-0.005');
+});
+
+test('parseFundPage keeps an explicit zero fee, and an amount in another currency than the fund', () => {
+  const html = `<table class="profiletable"><tr><td>Jenis Reksa Dana</td><td>Saham</td></tr>
+    <tr><td>Dana Kelolaan</td><td>USD 1.250.000,50</td></tr>
+    <tr><td>Min. Pembelian Awal</td><td>IDR 1.000.000,00</td></tr>
+    <tr><td>Pembelian Selanjutnya</td><td>USD 100,25</td></tr></table>
+    <table class="profiletable2"><tr><td>Biaya Pembelian</td><!--<td>0</td>--><td>0%</td></tr>
+    <tr><td>Biaya Penjualan Kembali</td><td>-</td></tr></table>`;
+  const fund = parseFundPage(html);
+
+  assert.equal(fund.currency, 'USD');
+  assert.equal(fund.minPurchase, '1000000');
+  assert.equal(fund.minTopup, '100.25');
+  assert.equal(fund.feePurchase, '0');
+  assert.equal(fund.feeRedemption, '');
 });
 
 test('mergeRowsByDate corrects a whole row, and keeps a stored value that the new row leaves empty', () => {
