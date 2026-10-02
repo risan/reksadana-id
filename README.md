@@ -17,9 +17,9 @@ Raw data for Indonesian mutual funds (reksa dana). It comes from four sources: t
 |---|---|
 | `data/bibit/funds.csv` | One row per fund: symbol, name, type, investment manager, currency, latest NAV and AUM. Start here. |
 | `data/bibit/funds/<symbol>.json` | Everything Bibit returns for one fund: fees, investment manager, custodian bank, asset allocation, top holdings, returns, drawdown, risk profile, and more. |
-| `data/bibit/nav/<symbol>.csv` | Daily NAV per unit. `nav_adjusted` includes dividends. |
+| `data/bibit/nav/<symbol>.csv` | Daily NAV per unit. `nav_adjusted` is Bibit's dividend-adjusted NAV; its base can change between scrapes, so compare it only within one download. |
 | `data/bibit/aum/<symbol>.csv` | Assets under management over time. |
-| `data/bibit/dividends/<symbol>.json` | Dividend history, only for funds that pay dividends. |
+| `data/bibit/dividends/<symbol>.json` | The latest dividend payouts (Bibit keeps up to five), only for funds that pay dividends. |
 | `data/bibit/documents/<symbol>.json` | Links to monthly factsheets and prospectus files (PDF or JPG). |
 | `data/bibit/switchables/<symbol>.json` | Funds you can switch to in the app, only for funds you can buy in the app. |
 | `data/bibit/types.json` | Fund type codes. |
@@ -82,11 +82,21 @@ In `funds.csv` the dates are ISO dates, and the other values are as in the JSON.
 The `tradeable` column is `1` for funds you can buy in the Bibit app.
 
 - **Buyable funds:** `data/nav/` has the full daily history from the launch date.
-- **Other funds:** Bibit does not give their NAV history, even to a logged-in user. The fund list still shows their latest NAV, so every daily Bibit run adds that day's row. These rows have an empty `nav_adjusted`. History for these funds starts on the day this repository started collecting it (2026-10-01). When Kontan has a matching fund, its daily NAV for the last 12 months (and growing) is in `data/kontan/`, and the fund page charts it too. When Bareksa has a matching fund, the page also charts its daily NAV (once loaded, see below). Makmur has no NAV history, only the latest price. If no source has a daily NAV for a fund, the page draws a monthly NAV that it computes as Bareksa's AUM divided by its units. That line is computed in the browser and is not stored.
+- **Other funds:** Bibit does not give their NAV history, even to a logged-in user. The fund list still shows their latest NAV, so every daily Bibit run adds that day's row. These rows have an empty `nav_adjusted`. History for these funds starts on the day this repository started collecting it (2026-10-01). When Kontan has a matching fund, its daily NAV for the last 12 months (and growing) is in `data/kontan/`. When Bareksa has a matching fund, its daily NAV is in `data/bareksa/nav/` (once loaded, see below). Makmur has no NAV history, only the latest price.
 
 ## Website
 
-An [Astro](https://astro.build/) site builds from `data/` into static files. It has a fund explorer, a page with charts and a "Where to buy" block for every fund, bulk downloads, and a read-only JSON API (see `/api/` on the site). It is served by Cloudflare Workers as static assets, so there is no server code. The fund page has one NAV chart with up to five lines: Bibit, Bibit adjusted, Kontan, Bareksa, and the computed monthly NAV. Click a name in the chart legend to hide or show a line.
+An [Astro](https://astro.build/) site builds from `data/` into static files. It has a fund explorer, a page with charts and a "Buy this fund" block for every fund, bulk downloads, and a read-only JSON API (see `/api/` on the site). It is served by Cloudflare Workers as static assets, so there is no server code.
+
+The site draws one NAV history per fund (`src/lib/series.js`, which runs at build time and in the browser):
+
+- **Source.** Bibit's daily history for funds buyable on Bibit, else Bareksa's daily NAV, else Kontan's, else a monthly NAV computed as Bareksa's AUM divided by its units. Newer days from the other sources extend it. Where two sources overlap, they agree.
+- **Clean-up.** A one-day spike that reverses the next day is dropped as a source error. A NAV that stops changing for more than a month is treated as the end of the fund: some sources keep listing a closed fund's last NAV every day.
+- **Returns.** Every return, drawdown, and sparkline is computed from that history, so the list, the fund page, and its chart agree. Bibit's own return figures are not used: they can lag its NAV history. Its `nav_adjusted` is not used either: its base changes from one scrape to the next, and the dividend list only keeps the latest five payouts, so a total return cannot be rebuilt. Returns are therefore the change in NAV; funds that pay dividends are tagged.
+- **Flags.** A fund with no NAV change in the last 31 days is inactive and hidden by default. A one-day move over 20% is shown on the fund page, since it can be a real event or a source error.
+- **Fund size.** Bibit's AUM, unless Bareksa's figure for the same month differs more than tenfold (a unit error), then Bareksa's.
+
+The home page reads `/explorer.json`, a compact summary built by `loadFundSummaries()` in `src/lib/data.js`. It is not part of the public API.
 
 You need Node.js 22.12 or newer. Cloudflare builds with Node 24 (see `.node-version`).
 
@@ -120,7 +130,7 @@ The build fails if `dist/` has more than 19,000 files or a file over 24 MiB, bec
 
 ## Referral codes
 
-The "Where to buy" block on a fund page links to the fund on Bibit (only when it is buyable there) and on Makmur (only when it is matched), and shows the owner's referral code with a copy button. Neither app has a working referral link, so the code is shown, not linked. The codes and the link builders are in `src/lib/referrals.js`. Change the codes there. The site footer says that some links include the owner's referral codes.
+The "Buy this fund" block on a fund page links to the fund on Bibit (only when it is buyable there) and on Makmur (only when it is matched), and shows the owner's referral code with a copy button. Neither app has a working referral link, so the code is shown, not linked. The codes and the link builders are in `src/lib/referrals.js`. Change the codes there. The site footer says that some links include the owner's referral codes.
 
 ## Update the data
 

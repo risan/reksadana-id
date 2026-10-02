@@ -12,12 +12,15 @@
     "scrape:kontan:full": "node scrapers/kontan.js --full",
     "scrape:makmur": "node scrapers/makmur.js",
     "scrape:bareksa": "node scrapers/bareksa.js",
-    "test": "node --test scrapers/*.test.js",
+    "test": "node --test scrapers/*.test.js src/lib/*.test.js",
     "dev": "astro dev",
     "build": "astro build && node scripts/check-dist.js",
     "preview": "wrangler dev"
   },
   "dependencies": {
+    "@fontsource-variable/newsreader": "^5.3.0",
+    "@fontsource-variable/schibsted-grotesk": "^5.3.0",
+    "@fontsource/spline-sans-mono": "^5.3.0",
     "astro": "^7.3.5",
     "fflate": "^0.8.3",
     "uplot": "^1.6.32"

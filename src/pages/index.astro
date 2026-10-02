@@ -1,188 +1,669 @@
 ---
 import Base from '../layouts/Base.astro';
+import { loadFundSummaries } from '../lib/data.js';
+import { DEFAULT_STATE, PAGE_SIZE, filterFunds, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../lib/explorer.js';
+
+const data = loadFundSummaries();
+const funds = prepareFunds(data);
+const initial = sortFunds(filterFunds(funds, DEFAULT_STATE), DEFAULT_STATE.sort, DEFAULT_STATE.dir);
+const inactiveCount = funds.filter((fund) => !fund.active).length;
+
+const COLUMNS = [
+  { key: 'name', label: 'Fund', className: 'c-fund' },
+  { key: null, label: 'NAV', className: 'num c-nav' },
+  { key: 'return_1m', label: '1M', className: 'num c-1m', title: 'Return over 1 month' },
+  { key: 'return_ytd', label: 'YTD', className: 'num c-ytd', title: 'Return since the end of last year' },
+  { key: 'return_1y', label: '1Y', className: 'num c-1y', title: 'Return over 1 year' },
+  { key: null, label: 'Last 12 months', className: 'c-spark' },
+  { key: 'return_3y', label: '3Y', className: 'num c-3y', title: 'Return over 3 years, not annualised' },
+  { key: 'aum', label: 'Fund size', className: 'num c-aum', title: 'Assets under management, in the fund currency' },
+  { key: null, label: 'Buy on', className: 'c-buy' },
+];
 ---
 
-<Base title="Fund Explorer">
-  <h1>Fund explorer</h1>
-  <p class="muted">
-    Every Indonesian mutual fund Bibit lists. Search, filter, and open a fund for its NAV history and downloads.
-  </p>
-
-  <div class="button-row">
-    <input id="search" type="search" placeholder="Search name, symbol, or manager" size="32" />
-    <select id="type-filter" aria-label="Fund type"><option value="">All types</option></select>
-    <select id="currency-filter" aria-label="Currency"><option value="">All currencies</option></select>
-    <label><input id="tradeable-filter" type="checkbox" /> Buyable in Bibit app</label>
-    <label><input id="makmur-filter" type="checkbox" /> Buyable on Makmur</label>
-    <label><input id="sharia-filter" type="checkbox" /> Sharia</label>
+<Base title="Reksadana ID" section="funds">
+  <div class="intro">
+    <h1 class="page-title">Every Indonesian mutual fund, in one table</h1>
+    <p class="lede">
+      NAV, returns, and fund size for {funds.length.toLocaleString('en-US')} reksa dana, collected daily from Bibit,
+      Bareksa, Kontan, and Makmur. Open a fund for its full price history, or <a href="/download/">download all of it</a>.
+    </p>
   </div>
 
-  <p id="status" class="muted">Loading funds...</p>
+  <div class="type-strip" id="type-strip" role="group" aria-label="Fund type" set:html={renderTypeStrip(funds, DEFAULT_STATE)} />
 
-  <div class="table-wrap">
-    <table>
+  <form class="controls" id="controls" onsubmit="return false">
+    <label class="search">
+      <span class="visually-hidden">Search funds</span>
+      <input id="q" name="q" type="search" placeholder="Search name, manager, or symbol" autocomplete="off" spellcheck="false" />
+      <kbd aria-hidden="true">/</kbd>
+    </label>
+    <div class="seg" role="group" aria-label="Currency">
+      <button type="button" data-currency="" aria-pressed="true">All</button>
+      <button type="button" data-currency="IDR" aria-pressed="false">IDR</button>
+      <button type="button" data-currency="USD" aria-pressed="false">USD</button>
+    </div>
+    <label class="check"><input type="checkbox" name="sharia" /> Sharia</label>
+    <label class="check"><input type="checkbox" name="bibit" /> On Bibit</label>
+    <label class="check"><input type="checkbox" name="makmur" /> On Makmur</label>
+    <label class="check" title="Funds with no NAV in the last month: most are closed or merged"><input type="checkbox" name="inactive" /> Include {inactiveCount.toLocaleString('en-US')} inactive</label>
+    <span class="result-count" id="count" aria-live="polite">{initial.length.toLocaleString('en-US')} funds</span>
+  </form>
+
+  <div class="table-scroll">
+    <table class="tbl funds-table">
       <thead>
         <tr>
-          <th><button class="button" data-sort="name">Fund</button></th>
-          <th><button class="button" data-sort="type">Type</button></th>
-          <th class="numeric">NAV</th>
-          <th><button class="button" data-sort="nav_date">NAV date</button></th>
-          <th class="numeric"><button class="button" data-sort="aum">AUM (IDR)</button></th>
-          <th class="numeric"><button class="button" data-sort="return_1y">1Y return</button></th>
-          <th>Buy on</th>
+          {COLUMNS.map((column) => (
+            <th class={column.className} title={column.title} aria-sort={column.key === DEFAULT_STATE.sort ? 'descending' : undefined}>
+              {column.key ? <button type="button" class="sort" data-sort={column.key}>{column.label}</button> : column.label}
+            </th>
+          ))}
         </tr>
       </thead>
-      <tbody id="rows"></tbody>
+      <tbody id="rows" set:html={renderRows(initial, DEFAULT_STATE, data.date)} />
     </table>
   </div>
 
-  <div class="button-row">
-    <button id="previous-page" class="button">Previous</button>
-    <span id="page-label" class="muted"></span>
-    <button id="next-page" class="button">Next</button>
+  <div class="pager">
+    <span class="muted" id="page-label">1–{Math.min(PAGE_SIZE, initial.length)} of {initial.length.toLocaleString('en-US')}</span>
+    <button class="btn" type="button" id="previous-page" disabled>&larr; Previous</button>
+    <button class="btn" type="button" id="next-page" disabled={initial.length <= PAGE_SIZE}>Next &rarr;</button>
   </div>
+
+  <details class="method">
+    <summary>How to read this table</summary>
+    <ul>
+      <li><strong>NAV</strong> is the price of one unit, in the fund's currency, on the date below it.</li>
+      <li>
+        <strong>Returns</strong> are the change in NAV over the period, not annualised, computed from the daily NAV
+        history. Funds tagged <span class="tag">Dividend</span> also pay cash out, so their total return is higher than
+        shown.
+      </li>
+      <li><strong>Median 1Y</strong> in each type is the middle 1-year return of the funds that match your other filters.</li>
+      <li><strong>Fund size</strong> (AUM) is the latest monthly figure. US$ marks a fund that reports in dollars; sorting converts it to rupiah.</li>
+      <li><strong>Inactive</strong> funds have no NAV in the last month. Most are closed, merged, or no longer reported, so they are hidden by default.</li>
+      <li><span class="flag">!</span> marks a fund whose NAV moved more than 20% in one day in the last year: a real event or a data error. The fund page shows when.</li>
+    </ul>
+  </details>
 </Base>
 
+<style is:global>
+  .intro {
+    display: grid;
+    gap: 4px;
+    margin-bottom: 18px;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .type-strip {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(118px, 1fr));
+    overflow-x: auto;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .type-cell {
+    display: grid;
+    gap: 1px;
+    padding: 8px 10px 9px;
+    border: 0;
+    border-left: 1px solid var(--rule);
+    background: none;
+    color: var(--ink);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .type-cell:first-child {
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .type-cell:hover {
+    background: var(--panel);
+  }
+
+  .type-cell[aria-pressed='true'] {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .type-cell:first-child[aria-pressed='true'] {
+    padding-left: 10px;
+  }
+
+  .type-name {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .type-count {
+    margin-left: auto;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .type-en {
+    color: var(--muted);
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .type-median {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .type-median small {
+    margin-left: 5px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 400;
+  }
+
+  .type-cell[aria-pressed='true'] .type-count,
+  .type-cell[aria-pressed='true'] .type-en,
+  .type-cell[aria-pressed='true'] .type-median small {
+    color: inherit;
+    opacity: 0.7;
+  }
+
+  .type-cell[aria-pressed='true'] .type-median {
+    color: inherit;
+  }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+    padding: 12px 0;
+  }
+
+  .search {
+    position: relative;
+    flex: 0 1 340px;
+  }
+
+  .search input {
+    width: 100%;
+    padding-right: 30px;
+  }
+
+  .search kbd {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+  }
+
+  .search input:focus + kbd,
+  .search input:not(:placeholder-shown) + kbd {
+    display: none;
+  }
+
+  .check {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--ink-2);
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .check input {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    accent-color: var(--ink);
+  }
+
+  .result-count {
+    margin-left: auto;
+    color: var(--muted);
+  }
+
+  .funds-table {
+    min-width: 860px;
+  }
+
+  .funds-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--paper);
+  }
+
+  .funds-table .sort {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .funds-table .sort:hover {
+    color: var(--ink);
+  }
+
+  .funds-table th[aria-sort] {
+    color: var(--ink);
+    font-weight: 650;
+  }
+
+  .funds-table th[aria-sort='descending'] .sort::after {
+    content: ' \2193';
+  }
+
+  .funds-table th[aria-sort='ascending'] .sort::after {
+    content: ' \2191';
+  }
+
+  .funds-table tbody tr {
+    cursor: pointer;
+  }
+
+  .funds-table tbody tr:hover {
+    background: var(--panel);
+  }
+
+  .funds-table td {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  .funds-table .c-fund {
+    min-width: 260px;
+  }
+
+  .funds-table .c-fund a {
+    color: var(--ink);
+    font-weight: 550;
+  }
+
+  .funds-table .sub {
+    margin-top: 1px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .funds-table .c-fund .sub .mono {
+    color: var(--faint);
+    font-size: 11px;
+  }
+
+  .funds-table .c-1y {
+    font-weight: 650;
+  }
+
+  .funds-table .c-spark {
+    width: 84px;
+    padding-top: 6px;
+  }
+
+  .funds-table .c-buy {
+    white-space: nowrap;
+  }
+
+  .funds-table .tag {
+    font-size: 11px;
+    line-height: 15px;
+  }
+
+  .tag-quiet {
+    border-color: var(--rule);
+    color: var(--muted);
+  }
+
+  .tag-stale {
+    border-color: var(--warn);
+    color: var(--warn);
+  }
+
+  .flag {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-left: 4px;
+    border-radius: 50%;
+    background: var(--warn);
+    color: var(--paper);
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 13px;
+    text-align: center;
+    vertical-align: 1px;
+  }
+
+  .spark {
+    display: block;
+    overflow: visible;
+  }
+
+  .spark polyline {
+    fill: none;
+    stroke-width: 1.4;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+  .spark line {
+    stroke: var(--rule-strong);
+    stroke-width: 1;
+  }
+
+  .spark.up polyline {
+    stroke: var(--up);
+  }
+
+  .spark.down polyline {
+    stroke: var(--down);
+  }
+
+  .spark.flat polyline {
+    stroke: var(--muted);
+  }
+
+  .empty-row td {
+    padding: 28px 0;
+    color: var(--muted);
+    text-align: center;
+    cursor: default;
+  }
+
+  .pager {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 12px 0;
+  }
+
+  .pager .muted {
+    margin-right: 8px;
+  }
+
+  .method {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-2);
+    font-size: 13.5px;
+  }
+
+  .method summary {
+    color: var(--ink);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .method ul {
+    max-width: 80ch;
+    margin: 8px 0 0;
+    padding-left: 18px;
+    line-height: 1.55;
+  }
+
+  .method li + li {
+    margin-top: 4px;
+  }
+
+  @media (max-width: 960px) {
+    .funds-table {
+      min-width: 0;
+    }
+
+    .funds-table .c-1m,
+    .funds-table .c-3y,
+    .funds-table .c-buy {
+      display: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .funds-table .c-nav,
+    .funds-table .c-ytd,
+    .funds-table .c-aum {
+      display: none;
+    }
+
+    .funds-table .c-fund {
+      min-width: 0;
+    }
+
+    .result-count {
+      margin-left: 0;
+    }
+
+    .search {
+      flex-basis: 100%;
+    }
+  }
+</style>
+
 <script>
-  import { formatCompact, formatNumber, formatPercent, signClass } from '../lib/format.js';
+  import { DEFAULT_STATE, PAGE_SIZE, filterFunds, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../lib/explorer.js';
 
-  const PAGE_SIZE = 50;
-
-  const searchInput = document.getElementById('search');
-  const typeFilter = document.getElementById('type-filter');
-  const currencyFilter = document.getElementById('currency-filter');
-  const tradeableFilter = document.getElementById('tradeable-filter');
-  const makmurFilter = document.getElementById('makmur-filter');
-  const shariaFilter = document.getElementById('sharia-filter');
-  const status = document.getElementById('status');
+  const typeStrip = document.getElementById('type-strip');
+  const controls = document.getElementById('controls');
+  const searchInput = document.getElementById('q');
   const rows = document.getElementById('rows');
+  const count = document.getElementById('count');
+  const pageLabel = document.getElementById('page-label');
   const previousPage = document.getElementById('previous-page');
   const nextPage = document.getElementById('next-page');
-  const pageLabel = document.getElementById('page-label');
+  const currencyButtons = controls.querySelectorAll('[data-currency]');
   const sortButtons = document.querySelectorAll('[data-sort]');
+  const checkboxes = controls.querySelectorAll('input[type="checkbox"]');
 
+  const TEXT_SORTS = new Set(['name']);
+  const BOOLEAN_KEYS = ['sharia', 'bibit', 'makmur', 'inactive'];
+
+  let state = readStateFromUrl();
   let funds = [];
-  let filtered = [];
-  let sortKey = 'aum';
-  let sortDirection = -1;
-  let page = 0;
+  let dataDate = '';
 
-  function escapeHtml(text) {
-    return String(text).replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
+  function readStateFromUrl() {
+    const params = new URLSearchParams(location.search);
+    const next = { ...DEFAULT_STATE };
+
+    next.q = params.get('q') ?? '';
+    next.type = params.get('type') ?? '';
+    next.currency = params.get('currency') ?? '';
+    next.sort = params.get('sort') ?? DEFAULT_STATE.sort;
+    next.dir = params.get('dir') === 'asc' ? 1 : params.get('dir') === 'desc' ? -1 : TEXT_SORTS.has(next.sort) ? 1 : -1;
+    next.page = Math.max(0, Number(params.get('page') ?? 1) - 1) || 0;
+
+    for (const key of BOOLEAN_KEYS) {
+      next[key] = params.get(key) === '1';
+    }
+
+    return next;
   }
 
-  function fillOptions(select, values) {
-    for (const value of [...new Set(values)].filter(Boolean).sort()) {
-      select.append(new Option(value, value));
+  function writeStateToUrl() {
+    const params = new URLSearchParams();
+
+    for (const key of ['q', 'type', 'currency']) {
+      if (state[key]) {
+        params.set(key, state[key]);
+      }
+    }
+
+    for (const key of BOOLEAN_KEYS) {
+      if (state[key]) {
+        params.set(key, '1');
+      }
+    }
+
+    if (state.sort !== DEFAULT_STATE.sort || state.dir !== DEFAULT_STATE.dir) {
+      params.set('sort', state.sort);
+      params.set('dir', state.dir === 1 ? 'asc' : 'desc');
+    }
+
+    if (state.page > 0) {
+      params.set('page', String(state.page + 1));
+    }
+
+    const query = params.toString();
+
+    history.replaceState(null, '', query ? `?${query}` : location.pathname);
+  }
+
+  function syncControls() {
+    searchInput.value = state.q;
+
+    for (const button of currencyButtons) {
+      button.setAttribute('aria-pressed', String(button.dataset.currency === state.currency));
+    }
+
+    for (const checkbox of checkboxes) {
+      checkbox.checked = state[checkbox.name];
+    }
+
+    for (const button of sortButtons) {
+      const th = button.closest('th');
+
+      if (button.dataset.sort === state.sort) {
+        th.setAttribute('aria-sort', state.dir === 1 ? 'ascending' : 'descending');
+      } else {
+        th.removeAttribute('aria-sort');
+      }
     }
   }
 
-  function compareBySortKey(a, b) {
-    const left = a[sortKey];
-    const right = b[sortKey];
+  // On a narrow screen the strip scrolls sideways, and the selected type may start out of view.
+  function revealSelectedType() {
+    const selected = typeStrip.querySelector('[aria-pressed="true"]');
 
-    // Missing values go last whichever way the column is sorted.
-    if (left === null && right === null) {
-      return 0;
+    if (!selected) {
+      return;
     }
 
-    if (left === null) {
-      return 1;
+    const left = selected.offsetLeft - typeStrip.offsetLeft;
+    const right = left + selected.offsetWidth;
+
+    if (left < typeStrip.scrollLeft || right > typeStrip.scrollLeft + typeStrip.clientWidth) {
+      typeStrip.scrollLeft = left;
     }
-
-    if (right === null) {
-      return -1;
-    }
-
-    if (typeof left === 'string') {
-      return left.localeCompare(right) * sortDirection;
-    }
-
-    return (left - right) * sortDirection;
-  }
-
-  function applyFilters() {
-    const terms = searchInput.value.toLowerCase().split(/\s+/).filter(Boolean);
-
-    filtered = funds
-      .filter((fund) => terms.every((term) => fund.searchText.includes(term)))
-      .filter((fund) => !typeFilter.value || fund.type === typeFilter.value)
-      .filter((fund) => !currencyFilter.value || fund.currency === currencyFilter.value)
-      .filter((fund) => !tradeableFilter.checked || fund.tradeable)
-      .filter((fund) => !makmurFilter.checked || fund.makmur_url)
-      .filter((fund) => !shariaFilter.checked || fund.sharia)
-      .sort(compareBySortKey);
-
-    page = 0;
-    render();
-  }
-
-  function renderRow(fund) {
-    return `<tr>
-      <td><a href="/funds/${escapeHtml(fund.symbol)}/">${escapeHtml(fund.name)}</a><br /><span class="muted">${escapeHtml(fund.symbol)} · ${escapeHtml(fund.investment_manager ?? '-')}</span></td>
-      <td>${escapeHtml(fund.type ?? '-')}</td>
-      <td class="numeric">${formatNumber(fund.nav)}</td>
-      <td>${escapeHtml(fund.nav_date ?? '-')}</td>
-      <td class="numeric">${formatCompact(fund.aum)}</td>
-      <td class="numeric ${signClass(fund.return_1y)}">${formatPercent(fund.return_1y)}</td>
-      <td>${fund.tradeable ? '<span class="badge">Bibit</span> ' : ''}${fund.makmur_url ? '<span class="badge">Makmur</span>' : ''}</td>
-    </tr>`;
   }
 
   function render() {
-    const pageCount = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
-    const visible = filtered.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+    const matching = sortFunds(filterFunds(funds, state), state.sort, state.dir);
+    const pageCount = Math.max(1, Math.ceil(matching.length / PAGE_SIZE));
 
-    rows.innerHTML = visible.map(renderRow).join('');
-    status.textContent = `${filtered.length} of ${funds.length} funds`;
-    pageLabel.textContent = `Page ${page + 1} of ${pageCount}`;
-    previousPage.disabled = page === 0;
-    nextPage.disabled = page >= pageCount - 1;
+    state.page = Math.min(state.page, pageCount - 1);
 
-    for (const button of sortButtons) {
-      const isSorted = button.dataset.sort === sortKey;
-      const arrow = sortDirection === 1 ? ' ▲' : ' ▼';
+    const first = matching.length === 0 ? 0 : state.page * PAGE_SIZE + 1;
+    const last = Math.min(matching.length, (state.page + 1) * PAGE_SIZE);
 
-      button.setAttribute('aria-pressed', String(isSorted));
-      button.textContent = button.textContent.replace(/ [▲▼]$/, '') + (isSorted ? arrow : '');
+    typeStrip.innerHTML = renderTypeStrip(funds, state);
+    revealSelectedType();
+    rows.innerHTML = renderRows(matching, state, dataDate);
+    count.textContent = `${matching.length.toLocaleString('en-US')} ${matching.length === 1 ? 'fund' : 'funds'}`;
+    pageLabel.textContent = `${first.toLocaleString('en-US')}–${last.toLocaleString('en-US')} of ${matching.length.toLocaleString('en-US')}`;
+    previousPage.disabled = state.page === 0;
+    nextPage.disabled = state.page >= pageCount - 1;
+    syncControls();
+    writeStateToUrl();
+  }
+
+  function update(changes) {
+    state = { ...state, page: 0, ...changes };
+
+    // Until the data arrives, the build-time rows stay, and the first render applies these changes.
+    if (funds.length > 0) {
+      render();
     }
+  }
+
+  typeStrip.addEventListener('click', (event) => {
+    const cell = event.target.closest('[data-type]');
+
+    if (cell) {
+      update({ type: cell.dataset.type });
+    }
+  });
+
+  searchInput.addEventListener('input', () => update({ q: searchInput.value }));
+
+  for (const button of currencyButtons) {
+    button.addEventListener('click', () => update({ currency: button.dataset.currency }));
+  }
+
+  for (const checkbox of checkboxes) {
+    checkbox.addEventListener('change', () => update({ [checkbox.name]: checkbox.checked }));
   }
 
   for (const button of sortButtons) {
     button.addEventListener('click', () => {
-      if (sortKey === button.dataset.sort) {
-        sortDirection = -sortDirection;
-      } else {
-        sortKey = button.dataset.sort;
-        sortDirection = sortKey === 'name' || sortKey === 'type' ? 1 : -1;
-      }
+      const key = button.dataset.sort;
+      const dir = key === state.sort ? -state.dir : TEXT_SORTS.has(key) ? 1 : -1;
 
-      applyFilters();
+      update({ sort: key, dir });
     });
   }
 
-  previousPage.addEventListener('click', () => {
-    page -= 1;
-    render();
-  });
+  function turnPage(step) {
+    // The build-time page has no data behind it yet; turning it would render an empty table.
+    if (funds.length === 0) {
+      return;
+    }
 
-  nextPage.addEventListener('click', () => {
-    page += 1;
+    state.page += step;
     render();
-  });
-
-  for (const control of [searchInput, typeFilter, currencyFilter, tradeableFilter, makmurFilter, shariaFilter]) {
-    control.addEventListener('input', applyFilters);
+    rows.closest('table').scrollIntoView({ block: 'start' });
   }
 
-  const response = await fetch('/api/funds.json');
+  previousPage.addEventListener('click', () => turnPage(-1));
+  nextPage.addEventListener('click', () => turnPage(1));
 
-  funds = (await response.json()).map((fund) => ({
-    ...fund,
-    searchText: `${fund.name} ${fund.symbol} ${fund.investment_manager ?? ''}`.toLowerCase(),
-  }));
+  rows.addEventListener('click', (event) => {
+    const row = event.target.closest('tr[data-href]');
 
-  fillOptions(typeFilter, funds.map((fund) => fund.type));
-  fillOptions(currencyFilter, funds.map((fund) => fund.currency));
-  applyFilters();
+    // A click on the link itself, or one that ends a text selection, keeps its normal behaviour.
+    if (!row || event.target.closest('a') || getSelection().toString()) {
+      return;
+    }
+
+    if (event.metaKey || event.ctrlKey) {
+      window.open(row.dataset.href, '_blank');
+    } else {
+      location.href = row.dataset.href;
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === '/' && document.activeElement !== searchInput && !event.target.closest('input, textarea, select')) {
+      event.preventDefault();
+      searchInput.focus();
+    }
+  });
+
+  syncControls();
+
+  const response = await fetch('/explorer.json');
+  const data = await response.json();
+
+  funds = prepareFunds(data);
+  dataDate = data.date;
+  render();
 </script>
