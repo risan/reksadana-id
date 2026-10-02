@@ -397,7 +397,7 @@ export async function mountComparePage() {
       return;
     }
 
-    const analysis = settled ? analyzeFunds(ids.filter((id) => loaded.get(id).status === 'ready').map((id) => ({ id, history: shownHistory(loaded.get(id)) }))) : null;
+    const analysis = settled ? analyzeFunds(ids.filter((id) => loaded.get(id).status === 'ready').map((id) => ({ id, history: (includeDividends.checked && loaded.get(id).totalHistory) || loaded.get(id).history }))) : null;
 
     if (analysis) {
       noticeLines.push(...analysis.excluded.map(exclusionNotice));
@@ -410,10 +410,6 @@ export async function mountComparePage() {
 
     notices.innerHTML = noticeLines.map((line) => `<p class="notice">${escapeHtml(line)}</p>`).join('');
     renderTable(analysis);
-  }
-
-  function shownHistory(entry) {
-    return includeDividends.checked && entry.totalHistory ? entry.totalHistory : entry.history;
   }
 
   function addFund(id) {

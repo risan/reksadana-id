@@ -76,7 +76,7 @@
   "flag_large_move": "NAB bergerak lebih dari 20% dalam satu hari pada setahun terakhir. Lihat halaman reksa dana ini.",
   "method_title": "Cara membaca tabel ini",
   "method_nav": "<strong>NAB</strong> (nilai aktiva bersih) adalah harga satu unit, dalam mata uang dana, pada tanggal di bawahnya.",
-  "method_returns": "<strong>Imbal hasil</strong> adalah perubahan NAB selama periode itu, tidak disetahunkan, dihitung dari riwayat NAB harian. Dana berlabel <span class=\"tag\">Dividen</span> juga membayar tunai, jadi total imbal hasilnya lebih tinggi dari perubahan NAB; centang <strong>Termasuk dividen</strong> untuk menginvestasikan kembali pembayaran yang diketahui data dan menampilkan total imbal hasilnya.",
+  "method_returns": "<strong>Imbal hasil</strong> secara bawaan adalah perubahan NAB selama periode itu, tidak disetahunkan, dihitung dari riwayat NAB harian. Dana berlabel <span class=\"tag\">Dividen</span> juga membayar tunai, jadi total imbal hasilnya lebih tinggi dari perubahan NAB; centang <strong>Termasuk dividen</strong> untuk menginvestasikan kembali pembayaran yang diketahui data dan menampilkan total imbal hasilnya.",
   "method_median": "<strong>Median 1 th</strong> pada tiap jenis adalah imbal hasil 1 tahun di tengah-tengah dana yang sesuai dengan filter lain Anda.",
   "method_aum": "<strong>Dana kelolaan</strong> (AUM) adalah angka bulanan terbaru. US$ menandai dana yang berlaporan dalam dolar; saat diurutkan, nilainya dikonversi ke rupiah.",
   "method_inactive": "Dana <strong>tidak aktif</strong> tidak punya NAB dalam sebulan terakhir. Sebagian besar sudah ditutup, digabung, atau tidak lagi dilaporkan, jadi disembunyikan secara bawaan.",
@@ -385,6 +385,6 @@
   "figure_worst_fall_total": "Penurunan terdalam, 1 tahun, dengan dividen",
   "returns_note_total": "Total imbal hasil: setiap dividen diinvestasikan kembali pada tanggal ex-dividen. Dihitung dari riwayat {source}.",
   "chart_total": "NAB yang disesuaikan: harga masa lalu diturunkan oleh dividen setelahnya, seolah diinvestasikan kembali, sehingga berakhir di NAB hari ini.",
-  "dividends_toggle_here": "Dividen diinvestasikan kembali pada tanggal ex-dividen, jadi imbal hasil, penurunan terdalam, dan grafik dana ini sudah memuatnya.",
+  "dividends_toggle_here": "Jika dicentang, setiap dividen diinvestasikan kembali pada tanggal ex-dividennya, dan imbal hasil, penurunan terdalam, serta grafik dana ini memuatnya. Jika tidak, yang tampil hanya perubahan NAB.",
   "compare_chart_caption_total": "Pertumbuhan dalam mata uang masing-masing dana. Dana dengan dividen yang diketahui menginvestasikannya kembali pada tanggal ex-dividen; dana lain menampilkan perubahan NAB."
 }
