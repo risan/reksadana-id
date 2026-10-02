@@ -3,7 +3,7 @@ import 'uplot/dist/uPlot.min.css';
 import * as m from '../paraglide/messages.js';
 import { setLocale } from '../paraglide/runtime.js';
 import { changeClass, formatChange, formatCompact, formatDate, formatMoney, formatMonth, formatMonthName, formatNav, formatNumber } from './format.js';
-import { periodStartIndex, pickAumHistory, pickNavHistory } from './series.js';
+import { dividendEvents, periodStartIndex, pickAumHistory, pickNavHistory, withDividendsReinvested } from './series.js';
 
 const RANGE_PERIODS = { '1M': '1m', '3M': '3m', '6M': '6m', YTD: 'ytd', '1Y': '1y', '3Y': '3y', '5Y': '5y', All: 'all' };
 const DEFAULT_RANGE = '1Y';
@@ -116,7 +116,8 @@ export function observeWidth(chart, container, baseHeight) {
   }).observe(container);
 }
 
-export async function mountFundCharts(symbol) {
+// `includeToggle` is the page's "Include dividends" checkbox, present only for a fund with dividends.
+export async function mountFundCharts(symbol, includeToggle) {
   const locale = document.documentElement.lang;
 
   setLocale(locale, { reload: false });
@@ -127,11 +128,17 @@ export async function mountFundCharts(symbol) {
   const readout = document.getElementById('range-readout');
 
   const fund = await (await fetch(`/api/funds/${encodeURIComponent(symbol)}.json`)).json();
-  const history = pickNavHistory(fund);
+  const navHistory = pickNavHistory(fund);
+  const events = dividendEvents(fund, navHistory);
+  const totalHistory = includeToggle && events.length > 0 ? withDividendsReinvested(navHistory, events) : null;
   const aumHistory = pickAumHistory(fund);
   const aumCurrency = aumHistory.points.at(-1)?.currency ?? null;
-  const points = history.points;
+  const chosenHistory = () => (totalHistory && includeToggle.checked ? totalHistory : navHistory);
   const sync = { key: `fund-${symbol}` };
+  let history = chosenHistory();
+  let points = history.points;
+  let data = null;
+  let range = DEFAULT_RANGE;
   let startIndex = 0;
   let navChart = null;
   let aumChart = null;
@@ -144,7 +151,7 @@ export async function mountFundCharts(symbol) {
       button.setAttribute('aria-pressed', 'false');
     }
   } else {
-    const data = [points.map((point) => toSeconds(point.date)), points.map((point) => point.value)];
+    data = [points.map((point) => toSeconds(point.date)), points.map((point) => point.value)];
 
     navChart = new uPlot(
       {
@@ -235,10 +242,12 @@ export async function mountFundCharts(symbol) {
     observeWidth(aumChart, aumContainer, 130);
   }
 
-  function applyRange(range) {
+  function applyRange(chosenRange) {
     if (!navChart) {
       return;
     }
+
+    range = chosenRange;
 
     startIndex = periodStartIndex(history, RANGE_PERIODS[range]);
 
@@ -270,6 +279,15 @@ export async function mountFundCharts(symbol) {
     }
 
     applyRange(periodStartIndex(history, RANGE_PERIODS[DEFAULT_RANGE]) < 0 ? 'All' : DEFAULT_RANGE);
+
+    // Both histories share their dates, so the range buttons and the x axis stay as they are.
+    includeToggle?.addEventListener('change', () => {
+      history = chosenHistory();
+      points = history.points;
+      data[1] = points.map((point) => point.value);
+      navChart.setData(data);
+      applyRange(range);
+    });
   }
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {

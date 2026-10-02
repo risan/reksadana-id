@@ -7,7 +7,7 @@ import { shariaText, typeName } from '../../../lib/fund-types.js';
 import { localePaths, localizeHref } from '../../../lib/i18n.js';
 import { REFERRALS, bibitFundUrl } from '../../../lib/referrals.js';
 import * as m from '../../../paraglide/messages.js';
-import { RETURN_PERIODS, SOURCE_LABELS, fundCurrency, largeMoves, pickAumHistory, pickNavHistory } from '../../../lib/series.js';
+import { RETURN_PERIODS, SOURCE_LABELS, fundCurrency, jakartaDate, largeMoves, pickAumHistory, pickNavHistory } from '../../../lib/series.js';
 
 export function getStaticPaths() {
   return localePaths(listFundIds().map((id) => ({ id })));
@@ -49,16 +49,12 @@ const PERIOD_LABELS = {
   all: m.period_all(),
 };
 const TABLE_PERIODS = RETURN_PERIODS.filter((period) => period !== '1d');
-const ret = (period) => performance.simplereturn?.[period] ?? null;
+const ret = (period, returns = performance) => returns?.simplereturn?.[period] ?? null;
+const total = performance.total;
 
 // Document URLs come from scraped data, so never link anything but http(s), such as a javascript: URL.
 function isWebUrl(url) {
   return typeof url === 'string' && /^https?:\/\//i.test(url);
-}
-
-// Dividend dates are midnight in Jakarta (UTC+7), stored as UTC.
-function jakartaDate(isoTimestamp) {
-  return new Date(new Date(isoTimestamp).getTime() + 7 * 60 * 60 * 1000).toISOString().slice(0, 10);
 }
 
 const ASSET_CLASSES = [
@@ -132,9 +128,14 @@ const launchDate = info.launch_date ?? fund.released_date ?? null;
 const manager = shortManagerName(info.manager);
 const RISK_LEVELS = { Low: m.risk_low(), Moderate: m.risk_moderate(), High: m.risk_high() };
 const riskProfile = Object.hasOwn(RISK_LEVELS, fund.riskprofile) ? RISK_LEVELS[fund.riskprofile] : null;
-const returnsNote = performance.source
-  ? [m.returns_note({ source: sourceLabel(history.primary) }), dividends.length > 0 && m.returns_note_dividends(), m.returns_note_per_year()].filter(Boolean).join(' ')
-  : null;
+const returnsNote = (isTotal) =>
+  [
+    isTotal ? m.returns_note_total({ source: sourceLabel(history.primary) }) : m.returns_note({ source: sourceLabel(history.primary) }),
+    !isTotal && dividends.length > 0 && m.returns_note_dividends(),
+    m.returns_note_per_year(),
+  ]
+    .filter(Boolean)
+    .join(' ');
 
 const details = [
   [m.detail_type(), typeLabel === null ? null : `${typeLabel}${typeNote ? ` (${typeNote})` : ''}`],
@@ -145,15 +146,18 @@ const details = [
   [m.detail_risk(), riskProfile],
 ].filter(([, value]) => value !== null && value !== undefined && value !== '');
 
-function threeYearSub() {
-  const threeYearsPerYear = performance.cagr?.['3y'] ?? null;
+function threeYearSub(returns) {
+  const threeYearsPerYear = returns.cagr?.['3y'] ?? null;
 
   if (threeYearsPerYear !== null) {
     return m.figure_three_year_sub({ change: formatChange(threeYearsPerYear, locale) });
   }
 
-  return ret('ytd') === null ? '' : m.figure_ytd_sub({ change: formatChange(ret('ytd'), locale) });
+  return ret('ytd', returns) === null ? '' : m.figure_ytd_sub({ change: formatChange(ret('ytd', returns), locale) });
 }
+
+const returnFigure = (returns, label) => ({ label, value: formatChange(ret('1y', returns), locale), className: changeClass(ret('1y', returns)), sub: threeYearSub(returns) });
+const worstFallFigure = (returns, label) => ({ label, value: formatPercent(returns.maxdrawdown?.['1y'] ?? null, locale), sub: m.figure_worst_fall_sub() });
 
 const figures = [
   {
@@ -163,10 +167,13 @@ const figures = [
     sub: navDate ? formatDate(navDate, locale) : m.figure_no_nav(),
     change: active ? ret('1d') : null,
   },
-  { label: m.figure_return_1y(), value: formatChange(ret('1y'), locale), className: changeClass(ret('1y')), sub: threeYearSub() },
-  { label: m.figure_worst_fall(), value: formatPercent(performance.maxdrawdown?.['1y'] ?? null, locale), sub: m.figure_worst_fall_sub() },
+  { ...returnFigure(performance, m.figure_return_1y()), total: total && returnFigure(total, m.figure_return_1y_total()) },
+  { ...worstFallFigure(performance, m.figure_worst_fall()), total: total && worstFallFigure(total, m.figure_worst_fall_total()) },
   { label: m.figure_aum(), value: formatMoney(aum?.value ?? null, locale, aum?.currency), sub: aum ? formatMonth(aum.date, locale) : '' },
 ].filter((figure, index) => index === 0 || figure.value !== '—');
+
+// A figure with dividends included has two views, which the page switches between.
+const figureViews = (figure) => (figure.total ? [{ view: 'nav', ...figure }, { view: 'total', ...figure.total }] : [figure]);
 
 const costs = describeCosts(fund.costs, locale);
 const listOf = (value) => (value === null ? [] : [value]);
@@ -240,15 +247,24 @@ const sources = [
   <dl class="figures">
     {figures.map((figure) => (
       <div>
-        <dt>{figure.label}</dt>
-        <dd class={`figure-value ${figure.className ?? ''}`}>{figure.value}{figure.unit && figure.value !== '—' && <span class="unit">{figure.unit}</span>}</dd>
+        <dt>{figureViews(figure).map((shown) => <span data-view={shown.view}>{shown.label}</span>)}</dt>
+        <dd class="figure-value">{figureViews(figure).map((shown) => <span data-view={shown.view} class={shown.className ?? ''}>{shown.value}{shown.unit && shown.value !== '—' && <span class="unit">{shown.unit}</span>}</span>)}</dd>
         <dd class="figure-sub">
-          {figure.sub}
+          {figureViews(figure).map((shown) => <span data-view={shown.view}>{shown.sub}</span>)}
           {figure.change !== null && figure.change !== undefined && <span class={changeClass(figure.change)}> · {m.figure_one_day({ change: formatChange(figure.change, locale) })}</span>}
         </dd>
       </div>
     ))}
   </dl>
+
+  {
+    total && (
+      <label class="dividend-toggle">
+        <input type="checkbox" id="include-dividends" /> {m.dividends_toggle()}
+        <span class="muted small">{m.dividends_toggle_here()}</span>
+      </label>
+    )
+  }
 
   {
     moves.length > 0 && (
@@ -280,7 +296,14 @@ const sources = [
               <button type="button" data-range={range} aria-pressed={range === '1Y' ? 'true' : 'false'}>{PERIOD_LABELS[period]}</button>
             ))}
           </div>
-          {dividends.length > 0 && <span class="chart-legend">{m.chart_nav_only()}</span>}
+          {
+            dividends.length > 0 && (
+              <span class="chart-legend">
+                {total ? <span data-view="nav">{m.chart_nav_only()}</span> : m.chart_nav_only()}
+                {total && <span data-view="total">{m.chart_total()}</span>}
+              </span>
+            )
+          }
         </div>
         <div class="chart" id="nav-chart" data-fund-id={id}></div>
         <p class="chart-empty" id="nav-empty" hidden>{m.chart_nav_empty()}</p>
@@ -303,31 +326,40 @@ const sources = [
                 {TABLE_PERIODS.map((period) => <th class="num">{PERIOD_LABELS[period]}</th>)}
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">{m.returns_row_return()}</th>
-                {TABLE_PERIODS.map((period) => <td class={`num ${changeClass(ret(period))}`}>{formatChange(ret(period), locale)}</td>)}
-              </tr>
-              <tr>
-                <th scope="row" title={m.returns_row_per_year_title()}>{m.returns_row_per_year()}</th>
-                {TABLE_PERIODS.map((period) => {
-                  const value = performance.cagr?.[period] ?? null;
+            {[{ view: 'nav', returns: performance }, ...(total ? [{ view: 'total', returns: total }] : [])].map(({ view, returns }) => (
+              <tbody data-view={total ? view : undefined}>
+                <tr>
+                  <th scope="row">{m.returns_row_return()}</th>
+                  {TABLE_PERIODS.map((period) => <td class={`num ${changeClass(ret(period, returns))}`}>{formatChange(ret(period, returns), locale)}</td>)}
+                </tr>
+                <tr>
+                  <th scope="row" title={m.returns_row_per_year_title()}>{m.returns_row_per_year()}</th>
+                  {TABLE_PERIODS.map((period) => {
+                    const value = returns.cagr?.[period] ?? null;
 
-                  return <td class={`num ${changeClass(value)}`}>{formatChange(value, locale)}</td>;
-                })}
-              </tr>
-              <tr>
-                <th scope="row" title={m.returns_row_worst_fall_title()}>{m.returns_row_worst_fall()}</th>
-                {TABLE_PERIODS.map((period) => {
-                  const value = performance.maxdrawdown?.[period] ?? null;
+                    return <td class={`num ${changeClass(value)}`}>{formatChange(value, locale)}</td>;
+                  })}
+                </tr>
+                <tr>
+                  <th scope="row" title={m.returns_row_worst_fall_title()}>{m.returns_row_worst_fall()}</th>
+                  {TABLE_PERIODS.map((period) => {
+                    const value = returns.maxdrawdown?.[period] ?? null;
 
-                  return <td class="num">{formatPercent(value, locale)}</td>;
-                })}
-              </tr>
-            </tbody>
+                    return <td class="num">{formatPercent(value, locale)}</td>;
+                  })}
+                </tr>
+              </tbody>
+            ))}
           </table>
         </div>
-        {returnsNote && <p class="muted small table-note">{returnsNote}</p>}
+        {
+          performance.source && (
+            <p class="muted small table-note">
+              {total ? <span data-view="nav">{returnsNote(false)}</span> : returnsNote(false)}
+              {total && <span data-view="total">{returnsNote(true)}</span>}
+            </p>
+          )
+        }
       </section>
 
       {
@@ -681,6 +713,35 @@ const sources = [
     margin-bottom: 8px;
   }
 
+  [data-view='total'] {
+    display: none;
+  }
+
+  :root[data-dividends='on'] [data-view='total'] {
+    display: revert;
+  }
+
+  :root[data-dividends='on'] [data-view='nav'] {
+    display: none;
+  }
+
+  .dividend-toggle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 8px;
+    margin-top: 12px;
+    color: var(--ink-2);
+    cursor: pointer;
+  }
+
+  .dividend-toggle input {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    accent-color: var(--ink);
+  }
+
   .chart-legend {
     display: flex;
     gap: 14px;
@@ -924,9 +985,22 @@ const sources = [
 </script>
 
 <script>
+  import { readIncludeDividends, writeIncludeDividends } from '../../../lib/dividend-setting.js';
   import { mountFundCharts } from '../../../lib/fund-charts.js';
 
-  mountFundCharts(document.getElementById('nav-chart').dataset.fundId);
+  const includeDividends = document.getElementById('include-dividends');
+
+  // The page has a toggle only for a fund with dividends, but the setting is shared, so the charts read it either way.
+  if (includeDividends) {
+    includeDividends.checked = readIncludeDividends();
+    document.documentElement.dataset.dividends = includeDividends.checked ? 'on' : 'off';
+    includeDividends.addEventListener('change', () => {
+      writeIncludeDividends(includeDividends.checked);
+      document.documentElement.dataset.dividends = includeDividends.checked ? 'on' : 'off';
+    });
+  }
+
+  mountFundCharts(document.getElementById('nav-chart').dataset.fundId, includeDividends);
 </script>
 
 <script>

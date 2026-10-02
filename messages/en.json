@@ -70,13 +70,13 @@
   "tag_inactive": "Inactive",
   "tag_inactive_title": "No NAV in the last month",
   "tag_dividend": "Dividend",
-  "tag_dividend_title": "Pays cash dividends. Returns here count the NAV only, so its total return is higher.",
+  "tag_dividend_title": "Pays cash dividends. Returns here count the NAV only, so its total return is higher. Tick \"Include dividends\" to count them.",
   "tag_pays_dividends": "Pays dividends",
   "tag_risk": "{level} risk",
   "flag_large_move": "The NAV moved more than 20% in one day in the last year. See the fund page.",
   "method_title": "How to read this table",
   "method_nav": "<strong>NAV</strong> is the price of one unit, in the fund's currency, on the date below it.",
-  "method_returns": "<strong>Returns</strong> are the change in NAV over the period, not annualised, computed from the daily NAV history. Funds tagged <span class=\"tag\">Dividend</span> also pay cash out, so their total return is higher than shown.",
+  "method_returns": "<strong>Returns</strong> are the change in NAV over the period, not annualised, computed from the daily NAV history. Funds tagged <span class=\"tag\">Dividend</span> also pay cash out, so their total return is higher than shown; tick <strong>Include dividends</strong> to reinvest the payouts the data knows about.",
   "method_median": "<strong>Median 1Y</strong> in each type is the middle 1-year return of the funds that match your other filters.",
   "method_aum": "<strong>Fund size</strong> (AUM) is the latest monthly figure. US$ marks a fund that reports in dollars; sorting converts it to rupiah.",
   "method_inactive": "<strong>Inactive</strong> funds have no NAV in the last month. Most are closed, merged, or no longer reported, so they are hidden by default.",
@@ -114,7 +114,7 @@
 
   "chart_nav_title": "Price (NAV)",
   "chart_range_label": "Time range",
-  "chart_nav_only": "NAV only: this fund also pays dividends.",
+  "chart_nav_only": "NAV only: this fund also pays dividends. Tick \"Include dividends\" to count them.",
   "chart_nav_empty": "Not enough NAV history to draw a chart.",
   "chart_aum_monthly": "monthly",
   "chart_aum_currency_monthly": "{currency}, monthly",
@@ -130,7 +130,7 @@
   "returns_row_worst_fall": "Worst fall",
   "returns_row_worst_fall_title": "Largest fall from a peak within the period",
   "returns_note": "Change in NAV, computed from the {source} history.",
-  "returns_note_dividends": "This fund pays dividends, which these figures leave out, so its total return is higher.",
+  "returns_note_dividends": "This fund pays dividends, which these figures leave out, so its total return is higher. Tick \"Include dividends\" to count them.",
   "returns_note_per_year": "\"Per year\" is shown for periods of a year or more.",
 
   "asset_equity": "Equity",
@@ -380,5 +380,10 @@
   "cost_fee_from": "From {value}",
   "cost_fees_note": "Fees are the maximum per prospectus; the fee you pay can be lower.",
   "dividends_toggle": "Include dividends",
-  "dividends_toggle_help": "Dividends are reinvested on the ex-date. Known only for funds whose payouts the data has ({count} funds); other funds show the NAV change only."
+  "dividends_toggle_help": "Dividends are reinvested on the ex-date. Known only for funds whose payouts the data has ({count} funds); other funds show the NAV change only.",
+  "figure_return_1y_total": "1-year return with dividends",
+  "figure_worst_fall_total": "Worst fall, 1 year, with dividends",
+  "returns_note_total": "Total return: each dividend is reinvested on its ex-date. Computed from the {source} history.",
+  "chart_total": "Total return: dividends reinvested on the ex-date, drawn on the NAV scale.",
+  "dividends_toggle_here": "Dividends are reinvested on the ex-date, so the returns, worst fall, and chart of this fund include them."
 }
