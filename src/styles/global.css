@@ -765,3 +765,17 @@ select:focus {
   margin: 0;
   accent-color: var(--ink);
 }
+
+/* Text with a NAV and a total-return version; the "Include dividends" setting picks one. */
+
+[data-view='total'] {
+  display: none;
+}
+
+:root[data-dividends='on'] [data-view='total'] {
+  display: revert;
+}
+
+:root[data-dividends='on'] [data-view='nav'] {
+  display: none;
+}

@@ -17,3 +17,8 @@ export function writeIncludeDividends(include) {
     // The choice still applies to this page view; it just is not remembered.
   }
 }
+
+// The pages switch between their NAV and total-return text with this attribute: see `[data-view]` in global.css.
+export function showIncludeDividends(include) {
+  document.documentElement.dataset.dividends = include ? 'on' : 'off';
+}

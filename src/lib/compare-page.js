@@ -11,7 +11,7 @@ import { attachTooltip, axes, chartHeight, cssColor, toSeconds } from './fund-ch
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from './format.js';
 import { shariaText, typeName } from './fund-types.js';
 import { anchor, localizeHref } from './i18n.js';
-import { readIncludeDividends, writeIncludeDividends } from './dividend-setting.js';
+import { readIncludeDividends, showIncludeDividends, writeIncludeDividends } from './dividend-setting.js';
 import { dividendEvents, indexAtOrBefore, pickNavHistory, withDividendsReinvested } from './series.js';
 
 const PICKER_RESULT_LIMIT = 8;
@@ -448,8 +448,10 @@ export async function mountComparePage() {
   }
 
   includeDividends.checked = readIncludeDividends();
+  showIncludeDividends(includeDividends.checked);
   includeDividends.addEventListener('change', () => {
     writeIncludeDividends(includeDividends.checked);
+    showIncludeDividends(includeDividends.checked);
     render();
   });
 

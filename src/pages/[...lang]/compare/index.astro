@@ -47,7 +47,10 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     <ul class="compare-legend" id="compare-legend"></ul>
     <div class="chart" id="compare-chart"></div>
     <p class="chart-empty" id="chart-message" hidden></p>
-    <p class="muted small">{m.compare_chart_caption()}</p>
+    <p class="muted small">
+      <span data-view="nav">{m.compare_chart_caption()}</span>
+      <span data-view="total">{m.compare_chart_caption_total()}</span>
+    </p>
   </section>
 
   <section class="section" id="compare-table-section" hidden>

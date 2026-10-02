@@ -721,18 +721,6 @@ const sources = [
     margin-bottom: 8px;
   }
 
-  [data-view='total'] {
-    display: none;
-  }
-
-  :root[data-dividends='on'] [data-view='total'] {
-    display: revert;
-  }
-
-  :root[data-dividends='on'] [data-view='nav'] {
-    display: none;
-  }
-
   .chart-legend {
     display: flex;
     gap: 14px;
@@ -976,7 +964,7 @@ const sources = [
 </script>
 
 <script>
-  import { readIncludeDividends, writeIncludeDividends } from '../../../lib/dividend-setting.js';
+  import { readIncludeDividends, showIncludeDividends, writeIncludeDividends } from '../../../lib/dividend-setting.js';
   import { mountFundCharts } from '../../../lib/fund-charts.js';
 
   const includeDividends = document.getElementById('include-dividends');
@@ -984,10 +972,10 @@ const sources = [
   // The page has a toggle only for a fund with dividends, but the setting is shared, so the charts read it either way.
   if (includeDividends) {
     includeDividends.checked = readIncludeDividends();
-    document.documentElement.dataset.dividends = includeDividends.checked ? 'on' : 'off';
+    showIncludeDividends(includeDividends.checked);
     includeDividends.addEventListener('change', () => {
       writeIncludeDividends(includeDividends.checked);
-      document.documentElement.dataset.dividends = includeDividends.checked ? 'on' : 'off';
+      showIncludeDividends(includeDividends.checked);
     });
   }
 
