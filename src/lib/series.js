@@ -53,7 +53,7 @@ function sourceRuns(points) {
   return [...runs.values()];
 }
 
-function daysBetween(fromDate, toDateText) {
+export function daysBetween(fromDate, toDateText) {
   return (toTime(toDateText) - toTime(fromDate)) / DAY_MS;
 }
 
@@ -336,13 +336,14 @@ function maxDrawdown(points, fromIndex) {
 }
 
 // A start point further than this from the period's start date means the history has a gap there.
-function maxStartGapDays(primary) {
+export function maxStartGapDays(primary) {
   return primary === 'bareksa-monthly' ? 40 : 10;
 }
 
 // Index of the NAV a period is measured from, or -1 when the history does not cover the period's start.
 // The returns table and the chart's range buttons both use it, so they never disagree.
-export function periodStartIndex(history, period) {
+// `endDate` measures the period back from that date instead of the history's last NAV; the caller cuts the history there.
+export function periodStartIndex(history, period, endDate) {
   const { points, primary } = history;
   const end = points.at(-1);
 
@@ -358,7 +359,7 @@ export function periodStartIndex(history, period) {
     return areNeighbours(points.at(-2), end) ? points.length - 2 : -1;
   }
 
-  const targetDate = periodStartDate(period, end.date);
+  const targetDate = periodStartDate(period, endDate ?? end.date);
   const index = indexAtOrBefore(points, targetDate);
 
   if (index < 0 || index >= points.length - 1 || daysBetween(points[index].date, targetDate) > maxStartGapDays(primary)) {
@@ -370,13 +371,15 @@ export function periodStartIndex(history, period) {
 
 const PERIOD_YEARS = { '1y': 1, '3y': 3, '5y': 5, '10y': 10 };
 
-// Simple return, annualised return (CAGR), and max drawdown for each period, ending at the latest NAV.
-export function computeReturns(history) {
+// Simple return, annualised return (CAGR), and max drawdown for each period, ending at the latest NAV,
+// or at the last NAV on or before `endDate` when one is given.
+export function computeReturns(fullHistory, endDate) {
+  const history = endDate ? { ...fullHistory, points: fullHistory.points.slice(0, indexAtOrBefore(fullHistory.points, endDate) + 1) } : fullHistory;
   const { points } = history;
   const result = { simplereturn: {}, cagr: {}, maxdrawdown: {} };
 
   for (const period of RETURN_PERIODS) {
-    const startIndex = periodStartIndex(history, period);
+    const startIndex = periodStartIndex(history, period, endDate);
 
     if (startIndex < 0) {
       continue;

@@ -97,6 +97,21 @@ test('computeReturns measures from the last NAV on or before the period start', 
   assert.equal(result.simplereturn['3y'], undefined);
 });
 
+test('computeReturns with an end date measures back from that date and ignores later NAVs', () => {
+  const points = [
+    { date: '2025-09-30', value: 90 },
+    { date: '2025-10-01', value: 100 },
+    { date: '2026-03-01', value: 70 },
+    { date: '2026-09-30', value: 109 },
+    { date: '2026-10-01', value: 110 },
+  ];
+  const result = computeReturns({ points, primary: 'bibit' }, '2026-09-30');
+
+  assert.ok(Math.abs(result.simplereturn['1y'] - (109 / 90 - 1)) < 1e-12);
+  assert.ok(Math.abs(result.maxdrawdown['1y'] - (70 / 100 - 1)) < 1e-12);
+  assert.equal(result.simplereturn['1d'], undefined);
+});
+
 test('computeReturns skips a period whose start falls in a gap in the history', () => {
   const points = [
     { date: '2025-06-01', value: 100 },
