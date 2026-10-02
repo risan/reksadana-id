@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import ALIASES from '../scrapers/fund-aliases.json' with { type: 'json' };
-import { isSameManager, normalizeName, readCsvRecords, toCsv, writeFileAtomic } from '../scrapers/lib.js';
+import { isSameManager, normalizeManager, normalizeName, readCsvRecords, toCsv, writeFileAtomic } from '../scrapers/lib.js';
 
 const DATA_DIR = 'data';
 const FUNDS_FILE = `${DATA_DIR}/funds.csv`;
@@ -22,6 +22,12 @@ const ACTIVE_DAYS = 31;
 const MIN_SHARED_EQUAL_DATES = 3;
 const MIN_DISTINCTIVE_DIGITS = 5;
 const MIN_SHORT_HISTORY_DIGITS = 7;
+// Sources keep a manager's old name for years after it changed (Kontan still lists Danapathi funds under Shinhan),
+// so a long equal history links two records under different managers when their names agree apart from the
+// managers' own words. A fund renamed with its manager ("Demina Money Market Fund" to "Danapathi Money Market
+// Fund") links only when the same two managers have such a pair at least twice.
+const MIN_RENAMED_MANAGER_DATES = 10;
+const MIN_RENAMED_FUNDS_PER_MANAGER_PAIR = 2;
 const MIN_AGREEMENT = 0.95;
 const MAX_LATEST_DIFFERENCE = 0.005;
 const ROUND_NAV_TOLERANCE = 0.001;
@@ -254,6 +260,18 @@ const hasSameKnownManager = (a, b) => isSameManager(a.manager, b.manager);
 
 const hasCompatibleManager = (a, b) => a.manager === '' || b.manager === '' || hasSameKnownManager(a, b);
 
+const words = (text) => normalizeName(text).split(' ').filter((word) => word !== '');
+
+// The name without the words of either manager: "CIMB Islamic Equity Growth Syariah" under CIMB Principal and
+// "Principal Islamic Equity Growth Syariah" under Principal both leave "islamic equity growth syariah".
+const nameWithoutManagers = (record, other) => {
+  const managerWords = new Set([...words(record.manager), ...words(other.manager)]);
+
+  return words(record.name).filter((word) => !managerWords.has(word)).join(' ');
+};
+
+const managerPairOf = (a, b) => [normalizeManager(a.manager), normalizeManager(b.manager)].sort().join(' | ');
+
 const lastDateOf = (record) => record.nav.dates.at(-1) ?? 0;
 
 // Newest NAV first, then the longest history, then the key, so the choice never depends on file order.
@@ -425,17 +443,43 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
     }
   }
 
+  // Bibit gives a fund a new symbol when it lists it again (RD846 and RD3820 are both Mandiri Dana Optima).
+  // A manager never runs two funds of one name, so these merge unless their NAVs disagree.
+  const namedBibitRecords = records.filter((record) => isFree(record) && record.source === 'bibit' && normalizeName(record.name) !== '');
+
+  for (const sameName of Map.groupBy(namedBibitRecords, (record) => normalizeName(record.name)).values()) {
+    for (let first = 0; first < sameName.length; first++) {
+      for (let second = first + 1; second < sameName.length; second++) {
+        if (hasSameKnownManager(sameName[first], sameName[second])) {
+          tryMerge(sameName[first], sameName[second], 'bibit-relisted');
+        }
+      }
+    }
+  }
+
   const candidates = findEqualNavPairs(records)
-    .filter(({ a, b }) => isFree(a) && isFree(b) && hasCompatibleManager(a, b) && hasCompatibleCurrency(a, b))
+    .filter(({ a, b }) => isFree(a) && isFree(b) && hasCompatibleCurrency(a, b))
     .sort((x, y) => y.equalDates - x.equalDates || (x.a.key + x.b.key < y.a.key + y.b.key ? -1 : 1));
 
   const shortCandidates = [];
+  const renamedManagerCandidates = [];
+  const otherManagerMatches = [];
 
   for (const { a, b } of candidates) {
     const comparison = compareNav(a, b);
     const agrees = comparison.close / comparison.shared >= MIN_AGREEMENT && comparison.latestDifference <= MAX_LATEST_DIFFERENCE;
 
-    if (comparison.distinctive >= MIN_SHARED_EQUAL_DATES && agrees) {
+    if (!hasCompatibleManager(a, b)) {
+      if (comparison.distinctive >= MIN_RENAMED_MANAGER_DATES && agrees) {
+        const remainder = nameWithoutManagers(a, b);
+
+        if (remainder !== '' && remainder === nameWithoutManagers(b, a)) {
+          renamedManagerCandidates.push({ a, b, sameName: normalizeName(a.name) === normalizeName(b.name) });
+        } else {
+          otherManagerMatches.push({ a, b });
+        }
+      }
+    } else if (comparison.distinctive >= MIN_SHARED_EQUAL_DATES && agrees) {
       tryMerge(a, b, 'nav');
     } else if (comparison.shared < MIN_SHARED_EQUAL_DATES && comparison.strong === comparison.shared && agrees && a.manager !== '' && b.manager !== '') {
       shortCandidates.push({ a, b });
@@ -451,7 +495,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
       .filter(({ date }) => valueOn(alignedOther, date) !== undefined);
 
     return records.some((candidate) => {
-      if (candidate.source !== record.source || candidate.key === record.key || !hasCompatibleManager(candidate, other) || !hasCompatibleCurrency(candidate, other)) {
+      if (candidate.source !== record.source || rootOf(candidate.key) === rootOf(record.key) || !hasCompatibleManager(candidate, other) || !hasCompatibleCurrency(candidate, other)) {
         return false;
       }
 
@@ -468,20 +512,36 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
 
   // One or two equal dates are a coincidence unless the values are long, the managers are known and the same,
   // and nothing else in the other source could be the match. The conflict checks of tryMerge still apply.
-  const partnersOf = new Map();
+  const renamedFundsPerManagerPair = Map.groupBy(renamedManagerCandidates, ({ a, b }) => managerPairOf(a, b));
 
-  for (const { a, b } of shortCandidates) {
-    for (const [record, other] of [[a, b], [b, a]]) {
-      const partnerKey = `${record.key}>${other.source}`;
-
-      partnersOf.set(partnerKey, [...(partnersOf.get(partnerKey) ?? []), other]);
+  for (const { a, b, sameName } of renamedManagerCandidates) {
+    if (sameName || renamedFundsPerManagerPair.get(managerPairOf(a, b)).length >= MIN_RENAMED_FUNDS_PER_MANAGER_PAIR) {
+      tryMerge(a, b, 'nav-renamed-manager');
+    } else {
+      otherManagerMatches.push({ a, b });
     }
   }
+
+  // Partners are counted as funds when the pair is decided, since earlier merges (a relisted Bibit fund's old and
+  // new symbol, or a link made in this loop) can turn two candidates into one fund.
+  const partnerFundsOf = (record, otherSource) => {
+    const partners = new Set();
+
+    for (const { a, b } of shortCandidates) {
+      for (const [side, other] of [[a, b], [b, a]]) {
+        if (rootOf(side.key) === rootOf(record.key) && other.source === otherSource) {
+          partners.add(rootOf(other.key));
+        }
+      }
+    }
+
+    return partners;
+  };
 
   const unlinkedShortCandidates = [];
 
   for (const { a, b } of shortCandidates) {
-    if (partnersOf.get(`${a.key}>${b.source}`).length === 1 && partnersOf.get(`${b.key}>${a.source}`).length === 1 && !hasLookalike(a, b) && !hasLookalike(b, a)) {
+    if (partnerFundsOf(a, b.source).size === 1 && partnerFundsOf(b, a.source).size === 1 && !hasLookalike(a, b) && !hasLookalike(b, a)) {
       tryMerge(a, b, 'nav-short');
     } else {
       unlinkedShortCandidates.push(`${a.key} ~ ${b.key}`);
@@ -633,6 +693,10 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
       activeWithoutBibit: funds.filter((fund) => fund.sources.bibit.length === 0 && toDayNumber(newestDate) - toDayNumber(fund.lastDate) <= ACTIVE_DAYS && fund.lastDate > 0).map((fund) => fund.id),
       unmappedTypes,
       unlinkedShortCandidates,
+      // A long equal history under different managers whose names disagree: a mislabelled record or a renamed fund, for a person to settle with an alias.
+      unlinkedOtherManagerMatches: otherManagerMatches
+        .filter(({ a, b }) => rootOf(a.key) !== rootOf(b.key))
+        .map(({ a, b }) => `${a.key} ${a.name} (${a.manager}) ~ ${b.key} ${b.name} (${b.manager})`),
       nameDuplicates,
     },
   };
@@ -744,7 +808,7 @@ const loadRecords = async () => {
   ];
 };
 
-const printReport = ({ groups, withBibit, withoutBibit, linksByRule, refused, retiredIds, activeWithoutBibit, unmappedTypes, unlinkedShortCandidates, nameDuplicates }) => {
+const printReport = ({ groups, withBibit, withoutBibit, linksByRule, refused, retiredIds, activeWithoutBibit, unmappedTypes, unlinkedShortCandidates, unlinkedOtherManagerMatches, nameDuplicates }) => {
   console.log(`Funds: ${groups} (${withBibit} with Bibit, ${withoutBibit} without)`);
   console.log(`Links by rule: ${JSON.stringify(linksByRule)}`);
   console.log(`Retired IDs: ${retiredIds}`);
@@ -759,6 +823,12 @@ const printReport = ({ groups, withBibit, withoutBibit, linksByRule, refused, re
 
   for (const candidate of unlinkedShortCandidates.slice(0, 20)) {
     console.log(`  ${candidate}`);
+  }
+
+  console.log(`Long NAV matches not linked because both the names and the managers differ: ${unlinkedOtherManagerMatches.length}`);
+
+  for (const match of unlinkedOtherManagerMatches) {
+    console.log(`  ${match}`);
   }
 
   console.log(`Funds that share a name and manager but were not merged: ${nameDuplicates.length}`);

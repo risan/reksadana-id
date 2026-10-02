@@ -194,7 +194,7 @@ export const normalizeName = (name) => name
   .trim();
 
 // Bibit writes "Name, PT" and Kontan writes "PT. Name", so "pt" and "tbk" are dropped wherever they appear.
-const normalizeManager = (manager) => {
+export const normalizeManager = (manager) => {
   const normalized = (manager ?? '')
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, ' ')
