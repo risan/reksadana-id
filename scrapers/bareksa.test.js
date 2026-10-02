@@ -139,8 +139,11 @@ test('parseFundPage reads type, manager, and launch date', () => {
     currency: '',
     custodian: '',
     minPurchase: '',
+    minPurchaseCurrency: '',
     minTopup: '',
+    minTopupCurrency: '',
     minRedemption: '',
+    minRedemptionCurrency: '',
     feePurchase: '',
     feeRedemption: '',
     feeSwitch: '',
@@ -157,8 +160,11 @@ test('parseFundPage reads the costs of a typical fund (440)', () => {
     currency: 'IDR',
     custodian: 'PT Bank Negara Indonesia (Persero) Tbk',
     minPurchase: '100000',
+    minPurchaseCurrency: 'IDR',
     minTopup: '',
+    minTopupCurrency: '',
     minRedemption: '100000',
+    minRedemptionCurrency: 'IDR',
     feePurchase: '-0.02',
     feeRedemption: '-0.02',
     feeSwitch: '-0.02',
@@ -180,7 +186,7 @@ test('parseFundPage leaves empty cells, dashes, and an unlaunched fund empty (12
 
   assert.equal(currency, 'IDR');
   assert.equal(custodian, 'Standard Chartered Bank');
-  assert.deepEqual(Object.values(costs).slice(3), ['', '', '', '', '', '']);
+  assert.deepEqual(Object.values(costs).slice(3), Array(9).fill(''));
   assert.equal(parseFundPage(readFixture('fund-5298.html')).currency, '');
 });
 
@@ -210,7 +216,9 @@ test('parseFundPage keeps an explicit zero fee, and an amount in another currenc
 
   assert.equal(fund.currency, 'USD');
   assert.equal(fund.minPurchase, '1000000');
+  assert.equal(fund.minPurchaseCurrency, 'IDR');
   assert.equal(fund.minTopup, '100.25');
+  assert.equal(fund.minTopupCurrency, 'USD');
   assert.equal(fund.feePurchase, '0');
   assert.equal(fund.feeRedemption, '');
 });

@@ -30,8 +30,8 @@ function expenseRatioOf({ bibit, makmur }) {
   return null;
 }
 
-function amountOf(amount, source) {
-  return isPositiveAmount(amount) ? { amount, source } : null;
+function amountOf(amount, source, currency) {
+  return isPositiveAmount(amount) ? { amount, currency, source } : null;
 }
 
 // Bareksa writes a fee as "min-max" fractions: "-0.02" is at most 2%, "0.005-0.03" is 0.5% to 3%, "0" is free.
@@ -56,6 +56,16 @@ function toNumberOrNull(text) {
   return text ? Number(text) : null;
 }
 
+// Bibit and Makmur sell in rupiah, also for the funds that are in USD (their minimums for those are of the
+// same size as for rupiah funds). Bareksa states the currency of each amount. Rows scraped before it did have
+// none, and then a rupiah fund's amount is rupiah: for any other fund the currency stays unknown.
+function bareksaAmountOf(bareksa, field, fundCurrency) {
+  const amount = toNumberOrNull(bareksa[field]);
+  const currency = bareksa[`${field}_currency`] ?? (fundCurrency === 'IDR' ? 'IDR' : null);
+
+  return amountOf(amount, 'bareksa', currency);
+}
+
 function custodianOf({ bibit, bareksa }) {
   if (bareksa.custodian) {
     return { name: bareksa.custodian, source: 'bareksa' };
@@ -77,12 +87,12 @@ export function buildCosts({ bibit, makmur, bareksa, currency }) {
     currency,
     expense_ratio: expenseRatioOf({ bibit, makmur }),
     min_purchase: [
-      buyableOnBibit ? amountOf(bibit.minbuy, 'bibit') : null,
-      amountOf(makmur?.minFirstBuy, 'makmur'),
-      amountOf(toNumberOrNull(bareksa.min_purchase), 'bareksa'),
+      buyableOnBibit ? amountOf(bibit.minbuy, 'bibit', 'IDR') : null,
+      amountOf(makmur?.minFirstBuy, 'makmur', 'IDR'),
+      bareksaAmountOf(bareksa, 'min_purchase', currency),
     ].filter(Boolean),
-    min_topup: amountOf(toNumberOrNull(bareksa.min_topup), 'bareksa'),
-    min_redemption: amountOf(toNumberOrNull(bareksa.min_redemption), 'bareksa'),
+    min_topup: bareksaAmountOf(bareksa, 'min_topup', currency),
+    min_redemption: bareksaAmountOf(bareksa, 'min_redemption', currency),
     max_fees: {
       subscription: parseFeeRange(bareksa.fee_purchase),
       redemption: parseFeeRange(bareksa.fee_redemption),

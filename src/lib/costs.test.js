@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
+import { describeCosts } from './costs-text.js';
 import { buildCosts, formatFeeRange, parseFeeRange } from './costs.js';
 
 const noProfile = {};
@@ -18,9 +19,9 @@ test('the minimum purchase is listed per distributor, and Bibit counts only when
   const costs = build({ bibit: { tradeable: 1, minbuy: 10000 }, makmur: { minFirstBuy: 100000 }, bareksa: { min_purchase: '250000' } });
 
   assert.deepEqual(costs.min_purchase, [
-    { amount: 10000, source: 'bibit' },
-    { amount: 100000, source: 'makmur' },
-    { amount: 250000, source: 'bareksa' },
+    { amount: 10000, currency: 'IDR', source: 'bibit' },
+    { amount: 100000, currency: 'IDR', source: 'makmur' },
+    { amount: 250000, currency: 'IDR', source: 'bareksa' },
   ]);
   assert.deepEqual(build({ bibit: { tradeable: 0, minbuy: 10000 } }).min_purchase, []);
   assert.deepEqual(build({ bibit: { tradeable: 1, minbuy: 0 }, bareksa: { min_purchase: '' } }).min_purchase, []);
@@ -29,8 +30,8 @@ test('the minimum purchase is listed per distributor, and Bibit counts only when
 test('the next purchase and the redemption minimum come from Bareksa', () => {
   const costs = build({ bareksa: { min_topup: '10000', min_redemption: '50000' } });
 
-  assert.deepEqual(costs.min_topup, { amount: 10000, source: 'bareksa' });
-  assert.deepEqual(costs.min_redemption, { amount: 50000, source: 'bareksa' });
+  assert.deepEqual(costs.min_topup, { amount: 10000, currency: 'IDR', source: 'bareksa' });
+  assert.deepEqual(costs.min_redemption, { amount: 50000, currency: 'IDR', source: 'bareksa' });
   assert.equal(build({}).min_topup, null);
 });
 
@@ -67,4 +68,28 @@ test('a fee range reads as text', () => {
   assert.equal(formatFeeRange({ min: 0.01, max: null }, 'en', words), 'From 1%');
   assert.equal(formatFeeRange({ min: 0.01, max: 0.01 }, 'en', words), '1%');
   assert.equal(formatFeeRange({ min: 0, max: 0 }, 'en', words), 'Free');
+});
+
+test('every minimum keeps its own currency, also on a fund in another currency', () => {
+  const costs = build({
+    currency: 'USD',
+    bibit: { tradeable: 1, minbuy: 10000 },
+    bareksa: { min_purchase: '1000000', min_purchase_currency: 'IDR', min_topup: '100.25', min_topup_currency: 'USD' },
+  });
+
+  assert.deepEqual(costs.min_purchase.map(({ source, currency }) => [source, currency]), [['bibit', 'IDR'], ['bareksa', 'IDR']]);
+  assert.equal(costs.min_topup.currency, 'USD');
+});
+
+test('a Bareksa amount stored without a currency is rupiah on a rupiah fund and unknown on any other', () => {
+  assert.equal(build({ currency: 'IDR', bareksa: { min_purchase: '100000' } }).min_purchase[0].currency, 'IDR');
+  assert.equal(build({ currency: 'USD', bareksa: { min_purchase: '100' } }).min_purchase[0].currency, null);
+  assert.equal(build({ currency: null, bareksa: { min_purchase: '100' } }).min_purchase[0].currency, null);
+});
+
+test('minimums read as text with their own currency, and without one when it is unknown', () => {
+  const costs = describeCosts(build({ currency: 'USD', bareksa: { min_purchase: '1000000', min_purchase_currency: 'IDR', min_topup: '100' } }), 'en');
+
+  assert.equal(costs.minPurchases[0].text, 'Rp 1,000,000');
+  assert.equal(costs.minTopup.text, '100');
 });

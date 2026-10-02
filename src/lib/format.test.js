@@ -27,7 +27,9 @@ test('a change shows its sign, and a rounded zero shows none', () => {
 test('compact amounts use the short words of each language', () => {
   assert.equal(formatCompact(194240467107.88, 'id'), '194,2\u00a0M');
   assert.equal(formatCompact(194240467107.88, 'en'), '194.2B');
-  assert.equal(formatMoney(1234567, 'id'), 'Rp 1,2\u00a0jt');
+  assert.equal(formatMoney(1234567, 'id', 'IDR'), 'Rp 1,2\u00a0jt');
+  assert.equal(formatMoney(1234567, 'en', null), '1.2M');
+  assert.equal(formatMoney(1234567, 'en'), '1.2M');
   assert.equal(formatMoney(1234567, 'en', 'USD'), 'US$ 1.2M');
 });
 

@@ -61,16 +61,23 @@ export function formatCompact(value, locale) {
   return new Intl.NumberFormat(intlLocale(locale), { notation: 'compact', maximumFractionDigits: 1 }).format(value);
 }
 
+// An unknown currency has no prefix: showing "Rp" for it would state a currency nobody gave.
 export function currencyPrefix(currency) {
-  return currency === 'USD' ? 'US$' : 'Rp';
+  return { IDR: 'Rp', USD: 'US$' }[currency] ?? '';
 }
 
-export function formatMoney(value, locale, currency = 'IDR') {
+export function withCurrency(text, currency) {
+  const prefix = currencyPrefix(currency);
+
+  return prefix === '' ? text : `${prefix} ${text}`;
+}
+
+export function formatMoney(value, locale, currency) {
   if (isMissing(value)) {
     return DASH;
   }
 
-  return `${currencyPrefix(currency)} ${formatCompact(value, locale)}`;
+  return withCurrency(formatCompact(value, locale), currency);
 }
 
 export function changeClass(value) {

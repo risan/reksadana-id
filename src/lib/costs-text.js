@@ -2,7 +2,7 @@
 // The costs of a fund (see costs.js) as text for the fund page and the compare table.
 import * as m from '../paraglide/messages.js';
 import { formatFeeRange } from './costs.js';
-import { currencyPrefix, formatNumber, formatPercent } from './format.js';
+import { formatNumber, formatPercent, withCurrency } from './format.js';
 
 const FEE_LABELS = {
   subscription: () => m.detail_fee_subscription(),
@@ -20,7 +20,7 @@ function sourceLabel(source) {
 // Missing parts stay null or empty, so a caller shows "not in our sources", never zero.
 export function describeCosts(costs, locale) {
   const feeWords = { free: m.cost_fee_free(), upTo: (value) => m.cost_fee_up_to({ value }), from: (value) => m.cost_fee_from({ value }) };
-  const money = ({ amount }) => `${currencyPrefix(costs.currency)} ${formatNumber(amount, locale)}`;
+  const money = ({ amount, currency }) => withCurrency(formatNumber(amount, locale), currency);
   const withSource = (item, text) => (item === null ? null : { text, source: sourceLabel(item.source) });
 
   return {

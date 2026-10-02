@@ -15,9 +15,10 @@ const PROFILES_PER_RUN = 400;
 const FUND_HEADER = [
   'bareksa_id', 'name', 'slug', 'type', 'manager', 'launch_date', 'bibit_symbol',
   'currency', 'custodian', 'min_purchase', 'min_topup', 'min_redemption', 'fee_purchase', 'fee_redemption', 'fee_switch', 'profile_date',
+  'min_purchase_currency', 'min_topup_currency', 'min_redemption_currency',
 ];
 // The order of the columns after bibit_symbol in funds.csv.
-const STORED_PROFILE_FIELDS = ['currency', 'custodian', 'minPurchase', 'minTopup', 'minRedemption', 'feePurchase', 'feeRedemption', 'feeSwitch', 'profileDate'];
+const STORED_PROFILE_FIELDS = ['currency', 'custodian', 'minPurchase', 'minTopup', 'minRedemption', 'feePurchase', 'feeRedemption', 'feeSwitch', 'profileDate', 'minPurchaseCurrency', 'minTopupCurrency', 'minRedemptionCurrency'];
 const EMPTY_PROFILE = {
   type: '',
   manager: '',
@@ -140,12 +141,14 @@ export const parseFundList = (html) => {
 const PROFILE_AMOUNT = /(IDR|USD)\s*(\d+(?:\.\d{3})*)(?:,(\d+))?/;
 
 // "IDR 100.000,00" becomes "100000". A text without a currency amount, such as "100 UP" or "-", is left empty.
-// The amount is kept even when its currency differs from the fund's.
 const toAmount = (text) => {
   const match = text.match(PROFILE_AMOUNT);
 
   return match ? String(Number(`${match[2].replaceAll('.', '')}.${match[3] ?? '0'}`)) : '';
 };
+
+// Each amount keeps its own currency, which can differ from the fund's (an IDR minimum on a USD fund).
+const toAmountCurrency = (text) => text.match(PROFILE_AMOUNT)?.[1] ?? '';
 
 const toFraction = (percentText) => String(Number((Number(percentText.replace(',', '.')) / 100).toFixed(8)));
 
@@ -183,8 +186,11 @@ export const parseFundPage = (html) => {
     currency: profileValue('Dana Kelolaan').match(PROFILE_AMOUNT)?.[1] ?? '',
     custodian: profileValue('Bank Kustodian').replace(/\s+/g, ' '),
     minPurchase: toAmount(profileValue('Min. Pembelian Awal')),
+    minPurchaseCurrency: toAmountCurrency(profileValue('Min. Pembelian Awal')),
     minTopup: toAmount(profileValue('Pembelian Selanjutnya')),
+    minTopupCurrency: toAmountCurrency(profileValue('Pembelian Selanjutnya')),
     minRedemption: toAmount(profileValue('Min. Penjualan Kembali')),
+    minRedemptionCurrency: toAmountCurrency(profileValue('Min. Penjualan Kembali')),
     feePurchase: toFeeRange(profileValue('Biaya Pembelian')),
     feeRedemption: toFeeRange(profileValue('Biaya Penjualan Kembali')),
     feeSwitch: toFeeRange(profileValue('Biaya Switching')),
