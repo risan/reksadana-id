@@ -246,6 +246,32 @@ main.wrap {
   vertical-align: 1px;
 }
 
+.lang-switch {
+  display: flex;
+  border: 1px solid var(--rule-strong);
+}
+
+.lang-switch a {
+  padding: 2px 7px;
+  color: var(--ink-2);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.lang-switch a + a {
+  border-left: 1px solid var(--rule-strong);
+}
+
+.lang-switch a[aria-current='true'] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.lang-switch a:hover {
+  text-decoration: none;
+}
+
 .site-footer {
   border-top: 1px solid var(--rule);
   color: var(--muted);
@@ -659,6 +685,10 @@ select:focus {
 
   .site-freshness {
     display: none;
+  }
+
+  .lang-switch {
+    margin-left: auto;
   }
 
   .page-title {

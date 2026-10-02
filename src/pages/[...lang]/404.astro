@@ -1,8 +1,14 @@
 ---
-import Base from '../layouts/Base.astro';
+import Base from '../../layouts/Base.astro';
+import { anchor, localePaths, localizeHref } from '../../lib/i18n.js';
+import * as m from '../../paraglide/messages.js';
+
+export const getStaticPaths = () => localePaths();
+
+const locale = Astro.currentLocale ?? 'id';
 ---
 
-<Base title="Page not found">
-  <h1 class="page-title">Page not found</h1>
-  <p class="lede">This page does not exist. Try the <a href="/">fund list</a> or the <a href="/download/">download page</a>.</p>
+<Base title={m.not_found_title()} indexable={false}>
+  <h1 class="page-title">{m.not_found_title()}</h1>
+  <p class="lede" set:html={m.not_found_text({ fundList: anchor(localizeHref('/', locale), m.not_found_fund_list()), downloadPage: anchor(localizeHref('/download/', locale), m.not_found_download_page()) })} />
 </Base>

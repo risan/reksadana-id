@@ -1,53 +1,56 @@
 ---
-import Base from '../layouts/Base.astro';
-import { loadFundSummaries } from '../lib/data.js';
-import { DEFAULT_STATE, PAGE_SIZE, filterFunds, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../lib/explorer.js';
+import Base from '../../layouts/Base.astro';
+import { loadFundSummaries } from '../../lib/data.js';
+import { DEFAULT_STATE, PAGE_SIZE, filterFunds, fundCountLabel, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../../lib/explorer.js';
+import { formatCount } from '../../lib/format.js';
+import { anchor, localePaths, localizeHref } from '../../lib/i18n.js';
+import * as m from '../../paraglide/messages.js';
 
+export const getStaticPaths = () => localePaths();
+
+const locale = Astro.currentLocale ?? 'id';
 const data = loadFundSummaries();
 const funds = prepareFunds(data);
 const initial = sortFunds(filterFunds(funds, DEFAULT_STATE), DEFAULT_STATE.sort, DEFAULT_STATE.dir);
 const inactiveCount = funds.filter((fund) => !fund.active).length;
 
 const COLUMNS = [
-  { key: 'name', label: 'Fund', className: 'c-fund' },
-  { key: null, label: 'NAV', className: 'num c-nav' },
-  { key: 'return_1m', label: '1M', className: 'num c-1m', title: 'Return over 1 month' },
-  { key: 'return_ytd', label: 'YTD', className: 'num c-ytd', title: 'Return since the end of last year' },
-  { key: 'return_1y', label: '1Y', className: 'num c-1y', title: 'Return over 1 year' },
-  { key: null, label: 'Last 12 months', className: 'c-spark' },
-  { key: 'return_3y', label: '3Y', className: 'num c-3y', title: 'Return over 3 years, not annualised' },
-  { key: 'aum', label: 'Fund size', className: 'num c-aum', title: 'Assets under management, in the fund currency' },
-  { key: null, label: 'Buy on', className: 'c-buy' },
+  { key: 'name', label: m.col_fund(), className: 'c-fund' },
+  { key: null, label: m.col_nav(), className: 'num c-nav' },
+  { key: 'return_1m', label: m.period_1m(), className: 'num c-1m', title: m.col_1m_title() },
+  { key: 'return_ytd', label: m.period_ytd(), className: 'num c-ytd', title: m.col_ytd_title() },
+  { key: 'return_1y', label: m.period_1y(), className: 'num c-1y', title: m.col_1y_title() },
+  { key: null, label: m.col_spark(), className: 'c-spark' },
+  { key: 'return_3y', label: m.period_3y(), className: 'num c-3y', title: m.col_3y_title() },
+  { key: 'aum', label: m.col_aum(), className: 'num c-aum', title: m.col_aum_title() },
+  { key: null, label: m.col_buy(), className: 'c-buy' },
 ];
 ---
 
 <Base title="Reksadana ID" section="funds">
   <div class="intro">
-    <h1 class="page-title">Every Indonesian mutual fund, in one table</h1>
-    <p class="lede">
-      NAV, returns, and fund size for {funds.length.toLocaleString('en-US')} reksa dana, collected daily from Bibit,
-      Bareksa, Kontan, and Makmur. Open a fund for its full price history, or <a href="/download/">download all of it</a>.
-    </p>
+    <h1 class="page-title">{m.home_title()}</h1>
+    <p class="lede" set:html={m.home_lede({ count: formatCount(funds.length, locale), downloadLink: anchor(localizeHref('/download/', locale), m.home_lede_download()) })} />
   </div>
 
-  <div class="type-strip" id="type-strip" role="group" aria-label="Fund type" set:html={renderTypeStrip(funds, DEFAULT_STATE)} />
+  <div class="type-strip" id="type-strip" role="group" aria-label={m.type_strip_label()} set:html={renderTypeStrip(funds, DEFAULT_STATE, locale)} />
 
   <form class="controls" id="controls" onsubmit="return false">
     <label class="search">
-      <span class="visually-hidden">Search funds</span>
-      <input id="q" name="q" type="search" placeholder="Search any name, manager, or ID" autocomplete="off" spellcheck="false" />
+      <span class="visually-hidden">{m.search_label()}</span>
+      <input id="q" name="q" type="search" placeholder={m.search_placeholder()} autocomplete="off" spellcheck="false" />
       <kbd aria-hidden="true">/</kbd>
     </label>
-    <div class="seg" role="group" aria-label="Currency">
-      <button type="button" data-currency="" aria-pressed="true">All</button>
+    <div class="seg" role="group" aria-label={m.currency_label()}>
+      <button type="button" data-currency="" aria-pressed="true">{m.currency_all()}</button>
       <button type="button" data-currency="IDR" aria-pressed="false">IDR</button>
       <button type="button" data-currency="USD" aria-pressed="false">USD</button>
     </div>
-    <label class="check"><input type="checkbox" name="sharia" /> Sharia</label>
-    <label class="check"><input type="checkbox" name="bibit" /> On Bibit</label>
-    <label class="check"><input type="checkbox" name="makmur" /> On Makmur</label>
-    <label class="check" title="Funds with no NAV in the last month: most are closed or merged"><input type="checkbox" name="inactive" /> Include {inactiveCount.toLocaleString('en-US')} inactive</label>
-    <span class="result-count" id="count" aria-live="polite">{initial.length.toLocaleString('en-US')} funds</span>
+    <label class="check"><input type="checkbox" name="sharia" /> {m.filter_sharia()}</label>
+    <label class="check"><input type="checkbox" name="bibit" /> {m.filter_bibit()}</label>
+    <label class="check"><input type="checkbox" name="makmur" /> {m.filter_makmur()}</label>
+    <label class="check" title={m.filter_inactive_title()}><input type="checkbox" name="inactive" /> {m.filter_inactive({ count: formatCount(inactiveCount, locale) })}</label>
+    <span class="result-count" id="count" aria-live="polite">{fundCountLabel(initial.length, locale)}</span>
   </form>
 
   <div class="table-scroll">
@@ -61,29 +64,25 @@ const COLUMNS = [
           ))}
         </tr>
       </thead>
-      <tbody id="rows" set:html={renderRows(initial, DEFAULT_STATE, data.date)} />
+      <tbody id="rows" set:html={renderRows(initial, DEFAULT_STATE, data.date, locale)} />
     </table>
   </div>
 
   <div class="pager">
-    <span class="muted" id="page-label">1–{Math.min(PAGE_SIZE, initial.length)} of {initial.length.toLocaleString('en-US')}</span>
-    <button class="btn" type="button" id="previous-page" disabled>&larr; Previous</button>
-    <button class="btn" type="button" id="next-page" disabled={initial.length <= PAGE_SIZE}>Next &rarr;</button>
+    <span class="muted" id="page-label">{m.pager_range({ first: formatCount(Math.min(1, initial.length), locale), last: formatCount(Math.min(PAGE_SIZE, initial.length), locale), total: formatCount(initial.length, locale) })}</span>
+    <button class="btn" type="button" id="previous-page" disabled>&larr; {m.pager_previous()}</button>
+    <button class="btn" type="button" id="next-page" disabled={initial.length <= PAGE_SIZE}>{m.pager_next()} &rarr;</button>
   </div>
 
   <details class="method">
-    <summary>How to read this table</summary>
+    <summary>{m.method_title()}</summary>
     <ul>
-      <li><strong>NAV</strong> is the price of one unit, in the fund's currency, on the date below it.</li>
-      <li>
-        <strong>Returns</strong> are the change in NAV over the period, not annualised, computed from the daily NAV
-        history. Funds tagged <span class="tag">Dividend</span> also pay cash out, so their total return is higher than
-        shown.
-      </li>
-      <li><strong>Median 1Y</strong> in each type is the middle 1-year return of the funds that match your other filters.</li>
-      <li><strong>Fund size</strong> (AUM) is the latest monthly figure. US$ marks a fund that reports in dollars; sorting converts it to rupiah.</li>
-      <li><strong>Inactive</strong> funds have no NAV in the last month. Most are closed, merged, or no longer reported, so they are hidden by default.</li>
-      <li><span class="flag">!</span> marks a fund whose NAV moved more than 20% in one day in the last year: a real event or a data error. The fund page shows when.</li>
+      <li set:html={m.method_nav()} />
+      <li set:html={m.method_returns()} />
+      <li set:html={m.method_median()} />
+      <li set:html={m.method_aum()} />
+      <li set:html={m.method_inactive()} />
+      <li set:html={m.method_flag()} />
     </ul>
   </details>
 </Base>
@@ -460,7 +459,14 @@ const COLUMNS = [
 </style>
 
 <script>
-  import { DEFAULT_STATE, PAGE_SIZE, filterFunds, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../lib/explorer.js';
+  import { DEFAULT_STATE, PAGE_SIZE, filterFunds, fundCountLabel, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../../lib/explorer.js';
+  import { formatCount } from '../../lib/format.js';
+  import * as m from '../../paraglide/messages.js';
+  import { setLocale } from '../../paraglide/runtime.js';
+
+  const locale = document.documentElement.lang;
+
+  setLocale(locale, { reload: false });
 
   const typeStrip = document.getElementById('type-strip');
   const controls = document.getElementById('controls');
@@ -575,11 +581,11 @@ const COLUMNS = [
     const first = matching.length === 0 ? 0 : state.page * PAGE_SIZE + 1;
     const last = Math.min(matching.length, (state.page + 1) * PAGE_SIZE);
 
-    typeStrip.innerHTML = renderTypeStrip(funds, state);
+    typeStrip.innerHTML = renderTypeStrip(funds, state, locale);
     revealSelectedType();
-    rows.innerHTML = renderRows(matching, state, dataDate);
-    count.textContent = `${matching.length.toLocaleString('en-US')} ${matching.length === 1 ? 'fund' : 'funds'}`;
-    pageLabel.textContent = `${first.toLocaleString('en-US')}–${last.toLocaleString('en-US')} of ${matching.length.toLocaleString('en-US')}`;
+    rows.innerHTML = renderRows(matching, state, dataDate, locale);
+    count.textContent = fundCountLabel(matching.length, locale);
+    pageLabel.textContent = m.pager_range({ first: formatCount(first, locale), last: formatCount(last, locale), total: formatCount(matching.length, locale) });
     previousPage.disabled = state.page === 0;
     nextPage.disabled = state.page >= pageCount - 1;
     syncControls();

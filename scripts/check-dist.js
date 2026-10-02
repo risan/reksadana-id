@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
 
 // Cloudflare's free plan allows 20,000 files per deployment and 25 MiB per file.
@@ -41,6 +41,14 @@ console.log(`${DIST_DIR}/_redirects has ${redirectCount} redirects (limit ${MAX_
 if (redirectCount > MAX_REDIRECTS) {
   console.error(`Too many redirects: ${redirectCount} > ${MAX_REDIRECTS}. Drop the no-slash form first.`);
   process.exit(1);
+}
+
+// Cloudflare serves the nearest 404.html up the path, one per language.
+for (const notFoundPage of ['404.html', 'en/404.html']) {
+  if (!existsSync(path.join(DIST_DIR, notFoundPage))) {
+    console.error(`${DIST_DIR}/${notFoundPage} is missing.`);
+    process.exit(1);
+  }
 }
 
 if (oversized.length > 0) {

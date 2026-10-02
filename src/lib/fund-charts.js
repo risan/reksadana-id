@@ -1,9 +1,10 @@
 import uPlot from 'uplot';
 import 'uplot/dist/uPlot.min.css';
-import { changeClass, formatChange, formatCompact, formatDate, formatMoney, formatMonth, formatNav } from './format.js';
+import * as m from '../paraglide/messages.js';
+import { setLocale } from '../paraglide/runtime.js';
+import { changeClass, formatChange, formatCompact, formatDate, formatMoney, formatMonth, formatMonthName, formatNav, formatNumber } from './format.js';
 import { fundCurrency, periodStartIndex, pickAumHistory, pickNavHistory } from './series.js';
 
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const RANGE_PERIODS = { '1M': '1m', '3M': '3m', '6M': '6m', YTD: 'ytd', '1Y': '1y', '3Y': '3y', '5Y': '5y', All: 'all' };
 const DEFAULT_RANGE = '1Y';
 const DAY_SECONDS = 24 * 60 * 60;
@@ -31,36 +32,38 @@ function escapeHtml(text) {
   return String(text).replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
 }
 
-function dateTicks(_, ticks) {
-  if (ticks.length === 0) {
-    return [];
-  }
-
-  const spanDays = (ticks.at(-1) - ticks[0]) / DAY_SECONDS;
-
-  return ticks.map((tick) => {
-    const date = new Date(tick * 1000);
-    const month = MONTHS[date.getUTCMonth()];
-
-    if (spanDays > 3 * 365) {
-      return String(date.getUTCFullYear());
+function dateTicks(locale) {
+  return (_, ticks) => {
+    if (ticks.length === 0) {
+      return [];
     }
 
-    if (spanDays > 75) {
-      return date.getUTCMonth() === 0 ? `${month} ${date.getUTCFullYear()}` : month;
-    }
+    const spanDays = (ticks.at(-1) - ticks[0]) / DAY_SECONDS;
 
-    return `${date.getUTCDate()} ${month}`;
-  });
+    return ticks.map((tick) => {
+      const date = new Date(tick * 1000);
+      const month = formatMonthName(date.getUTCFullYear(), date.getUTCMonth() + 1, locale);
+
+      if (spanDays > 3 * 365) {
+        return String(date.getUTCFullYear());
+      }
+
+      if (spanDays > 75) {
+        return date.getUTCMonth() === 0 ? `${month} ${date.getUTCFullYear()}` : month;
+      }
+
+      return `${date.getUTCDate()} ${month}`;
+    });
+  };
 }
 
-function axes(valueFormatter) {
+function axes(valueFormatter, locale) {
   const grid = { stroke: () => cssColor('--rule'), width: 1 };
   const ticks = { show: false };
   const font = '11.5px "Schibsted Grotesk Variable", sans-serif';
 
   return [
-    { stroke: () => cssColor('--muted'), grid: { show: false }, ticks: { show: true, stroke: () => cssColor('--rule-strong'), width: 1, size: 4 }, font, values: dateTicks, space: 64, gap: 4 },
+    { stroke: () => cssColor('--muted'), grid: { show: false }, ticks: { show: true, stroke: () => cssColor('--rule-strong'), width: 1, size: 4 }, font, values: dateTicks(locale), space: 64, gap: 4 },
     { side: 1, stroke: () => cssColor('--muted'), grid, ticks, font, size: 64, gap: 6, values: (_, values) => values.map(valueFormatter) },
   ];
 }
@@ -114,6 +117,10 @@ function observeWidth(chart, container, baseHeight) {
 }
 
 export async function mountFundCharts(symbol) {
+  const locale = document.documentElement.lang;
+
+  setLocale(locale, { reload: false });
+
   const navContainer = document.getElementById('nav-chart');
   const aumContainer = document.getElementById('aum-chart');
   const rangeButtons = [...document.querySelectorAll('[data-range]')];
@@ -149,9 +156,9 @@ export async function mountFundCharts(symbol) {
         scales: { x: { time: true } },
         series: [
           {},
-          { label: 'NAV', stroke: () => cssColor('--ink'), width: 1.6, fill: () => withAlpha(cssColor('--ink'), 0.05) },
+          { label: m.chart_series_nav(), stroke: () => cssColor('--ink'), width: 1.6, fill: () => withAlpha(cssColor('--ink'), 0.05) },
         ],
-        axes: axes((value) => (value >= 100000 ? formatCompact(value) : value.toLocaleString('en-US', { maximumFractionDigits: value < 10 ? 4 : 2 }))),
+        axes: axes((value) => (value >= 100000 ? formatCompact(value, locale) : formatNumber(value, locale, value < 10 ? 4 : 2)), locale),
         tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),
         hooks: {
           // A hairline at the range's starting NAV shows at a glance whether the fund is above or below it.
@@ -187,9 +194,9 @@ export async function mountFundCharts(symbol) {
       const value = data[1][index];
       const change = value / points[startIndex].value - 1;
 
-      return `<div class="tip-date">${formatDate(toDate(data[0][index]))}</div>
-        <div class="tip-row"><b>${formatNav(value)}</b><span class="${changeClass(change)}">${formatChange(change)}</span></div>
-        <div class="tip-note">since ${formatDate(points[startIndex].date)}</div>`;
+      return `<div class="tip-date">${formatDate(toDate(data[0][index]), locale)}</div>
+        <div class="tip-row"><b>${formatNav(value, locale)}</b><span class="${changeClass(change)}">${formatChange(change, locale)}</span></div>
+        <div class="tip-note">${escapeHtml(m.chart_tip_since({ date: formatDate(points[startIndex].date, locale) }))}</div>`;
     });
 
     navChart.hooks.setCursor.push(updateNavTip);
@@ -211,9 +218,9 @@ export async function mountFundCharts(symbol) {
         scales: { x: { time: true }, y: { range: (_, __, max) => [0, max * 1.05] } },
         series: [
           {},
-          { label: 'Fund size', stroke: () => cssColor('--ink-2'), fill: () => withAlpha(cssColor('--ink-2'), 0.1), width: 1.4, points: { show: false } },
+          { label: m.figure_aum(), stroke: () => cssColor('--ink-2'), fill: () => withAlpha(cssColor('--ink-2'), 0.1), width: 1.4, points: { show: false } },
         ],
-        axes: axes((value) => formatCompact(value)),
+        axes: axes((value) => formatCompact(value, locale), locale),
         tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),
         hooks: { setCursor: [] },
       },
@@ -221,8 +228,8 @@ export async function mountFundCharts(symbol) {
       aumContainer,
     );
 
-    const updateAumTip = attachTooltip(aumChart, aumContainer, (index) => `<div class="tip-date">${formatMonth(toDate(aumData[0][index]))}</div>
-      <div class="tip-row"><b>${escapeHtml(formatMoney(aumData[1][index], currency))}</b></div>`);
+    const updateAumTip = attachTooltip(aumChart, aumContainer, (index) => `<div class="tip-date">${formatMonth(toDate(aumData[0][index]), locale)}</div>
+      <div class="tip-row"><b>${escapeHtml(formatMoney(aumData[1][index], locale, currency))}</b></div>`);
 
     aumChart.hooks.setCursor.push(updateAumTip);
     observeWidth(aumChart, aumContainer, 130);
@@ -241,7 +248,7 @@ export async function mountFundCharts(symbol) {
     const max = toSeconds(end.date);
     const change = end.value / start.value - 1;
 
-    readout.innerHTML = `<b class="${changeClass(change)}">${formatChange(change)}</b> <span class="muted">${formatDate(start.date)} – ${formatDate(end.date)}</span>`;
+    readout.innerHTML = `<b class="${changeClass(change)}">${formatChange(change, locale)}</b> <span class="muted">${formatDate(start.date, locale)} – ${formatDate(end.date, locale)}</span>`;
     navChart.setScale('x', { min, max });
 
     if (aumChart) {

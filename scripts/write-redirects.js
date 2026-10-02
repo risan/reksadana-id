@@ -3,7 +3,7 @@ import { pathToFileURL } from 'node:url';
 import { readCsvRecords } from '../scrapers/lib.js';
 
 // URL prefixes of the HTML pages, one per language. The default language has none.
-const PAGE_PREFIXES = [''];
+const PAGE_PREFIXES = ['', '/en'];
 
 export const buildRedirects = (retiredIds) => retiredIds.flatMap(({ id, current_id }) => [
   ...PAGE_PREFIXES.flatMap((prefix) => [

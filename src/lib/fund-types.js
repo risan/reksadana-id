@@ -14,3 +14,8 @@ export const FUND_TYPES = [
 export function englishTypeName(label) {
   return FUND_TYPES.find((type) => type.label === label)?.english ?? null;
 }
+
+// Indonesian pages show Bibit's label; English pages show the English name, and the label when there is none.
+export function typeName(label, locale) {
+  return locale === 'en' ? (englishTypeName(label) ?? label) : label;
+}

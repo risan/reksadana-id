@@ -124,9 +124,20 @@ Public endpoints use the fund IDs of `data/funds.csv`:
 | `/csv/nav/<id>.csv`, `/csv/aum/<id>.csv` | **Changed:** the chosen history, with columns `date,nav,source` and `date,aum,source` (they were copies of the Bibit files, with `nav_adjusted`). The raw source files are in the zip files. |
 | `/fund-ids.json` | Retired IDs and the fund that replaced each. |
 
-The per-fund CSV files are not built: they would add two files per fund, and Cloudflare's free plan allows 20,000 files per deployment. `src/worker.js` runs only for `/csv/nav/*` and `/csv/aum/*` (`run_worker_first` in `wrangler.toml`; the free plan allows 100,000 Worker requests a day, and static assets are free). It reads `/api/funds/<id>.json` through the `ASSETS` binding, resolves a retired ID with `/fund-ids.json`, converts `history` to CSV, and sends the same headers `public/_headers` gives the other CSV files. It answers `GET` and `HEAD` only, and 404 as text. `src/worker.test.js` tests it with a fake `ASSETS` binding.
+The per-fund CSV files are not built: they would add two files per fund, and Cloudflare's free plan allows 20,000 files per deployment. `src/worker.js` runs only for `/`, `/csv/nav/*` and `/csv/aum/*` (`run_worker_first` in `wrangler.toml`; the free plan allows 100,000 Worker requests a day, and static assets are free). It reads `/api/funds/<id>.json` through the `ASSETS` binding, resolves a retired ID with `/fund-ids.json`, converts `history` to CSV, and sends the same headers `public/_headers` gives the other CSV files. It answers `GET` and `HEAD` only, and 404 as text. `src/worker.test.js` tests it with a fake `ASSETS` binding.
 
-A retired fund ID redirects to the fund that holds its record: `npm run build` writes `dist/_redirects` (`scripts/write-redirects.js`) with the page with and without the trailing slash, and the JSON file. The build fails above 2,000 lines, Cloudflare's limit for static redirects.
+A retired fund ID redirects to the fund that holds its record: `npm run build` writes `dist/_redirects` (`scripts/write-redirects.js`) with the page with and without the trailing slash, in both languages, and the JSON file. The build fails above 2,000 lines, Cloudflare's limit for static redirects.
+
+### Languages
+
+The site is in Indonesian (at `/`) and English (at `/en/`). The pages live in `src/pages/[...lang]/`, and Astro's `i18n` routing (`astro.config.mjs`) leaves the Indonesian ones unprefixed. Texts are in `messages/id.json` and `messages/en.json`, compiled by [Paraglide JS](https://inlang.com/m/gerre34r/library-inlang-paraglideJs) into `src/paraglide/` when Vite starts (`astro build`, `astro dev`). That folder is generated and ignored by Git; do not edit it. To add a text, add the same key to both files and call it as `m.the_key()` (`import * as m from '../paraglide/messages.js'`). `npm test` fails when the two files differ, or when a key is unused or missing. The locale of a page is set at build time in `src/middleware.js`, and in the browser from `<html lang>`.
+
+- Numbers and dates come from `src/lib/format.js`, which takes the locale: Indonesian `1.234,56` and `2 Okt 2026`, English `1,234.56` and `2 Oct 2026`.
+- Links to pages go through `localizeHref` in `src/lib/i18n.js`, in the browser too. JSON, CSV, and zip URLs are the same in both languages.
+- Each page has a self-canonical URL and `hreflang` links for `id`, `en`, and `x-default` (Indonesian). The header switcher keeps the query and hash, and sets a `lang` cookie (one year).
+- `/` runs the Worker: crawlers get the Indonesian page; otherwise the `lang` cookie decides; with no cookie, a visitor whose `request.cf.country` is set and not `ID` gets a 302 to `/en/`, and everyone else the Indonesian page.
+- `astro.config.mjs` moves `dist/en/404/index.html` to `dist/en/404.html`, so Cloudflare finds a 404 page in each language.
+
 
 A fund is active when its latest NAV is within 31 days of the newest date of the source that supplied that NAV (for Bareksa, the newest date in all of `data/bareksa/nav`). Bareksa's daily NAV is loaded by hand and Kontan's and Makmur's rarely update, so the fund page says how far that source's data runs when it is not Bibit.
 

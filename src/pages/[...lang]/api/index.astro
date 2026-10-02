@@ -1,116 +1,119 @@
 ---
-import Base from '../../layouts/Base.astro';
+import Base from '../../../layouts/Base.astro';
+import { anchor, localePaths, localizeHref } from '../../../lib/i18n.js';
+import * as m from '../../../paraglide/messages.js';
+
+export const getStaticPaths = () => localePaths();
+
+const locale = Astro.currentLocale ?? 'id';
+const downloadLink = (text) => anchor(localizeHref('/download/', locale), text);
 
 const ORIGIN = 'https://your-site.example';
 
+// The types are JSON types, left as they are. Only the word "or" follows the page language.
+const typeLabel = (type) => type.replaceAll(' or ', ` ${m.api_type_or()} `);
+
 const FUNDS_JSON_FIELDS = [
-  ['id', 'string', 'The fund ID, e.g. RD1983. A Bibit symbol, or BRK, KTN or MKR plus a source ID for a fund Bibit does not list.'],
-  ['name', 'string', 'The current name of the fund.'],
-  ['other_names', 'array', 'Other names the sources use for it, for example before a rename.'],
-  ['manager', 'string or null', 'The manager running the fund.'],
-  ['type', 'string or null', "Indonesian fund type, in Bibit's labels, e.g. Obligasi. Null for index funds, ETFs and DPLK."],
-  ['currency', 'string or null', 'IDR or USD. Null when no source says.'],
-  ['sharia', 'boolean or null', 'Sharia-compliant fund. Null when no source says.'],
-  ['etf', 'boolean', 'Traded as an ETF.'],
-  ['index', 'boolean', 'Tracks an index.'],
-  ['launch_date', 'date or null', 'First NAV date known to any source.'],
-  ['sources', 'object', 'The IDs of the fund in each source: { bibit, bareksa, kontan, makmur }, each a list, the best record first.'],
-  ['active', 'boolean', 'The latest NAV is within a month of the newest data of its source.'],
-  ['nav', 'number or null', 'Latest NAV per unit.'],
-  ['nav_date', 'date or null', 'Date of the latest NAV.'],
-  ['aum', 'number or null', 'Latest fund size, in the fund currency.'],
-  ['aum_date', 'date or null', 'Date of the latest fund size.'],
-  ['return_1y', 'number or null', 'Change in NAV over 1 year, as a fraction, computed from the NAV history.'],
+  ['id', 'string', m.api_funds_id()],
+  ['name', 'string', m.api_funds_name()],
+  ['other_names', 'array', m.api_funds_other_names()],
+  ['manager', 'string or null', m.api_funds_manager()],
+  ['type', 'string or null', m.api_funds_type()],
+  ['currency', 'string or null', m.api_funds_currency()],
+  ['sharia', 'boolean or null', m.api_funds_sharia()],
+  ['etf', 'boolean', m.api_funds_etf()],
+  ['index', 'boolean', m.api_funds_index()],
+  ['launch_date', 'date or null', m.api_funds_launch_date()],
+  ['sources', 'object', m.api_funds_sources()],
+  ['active', 'boolean', m.api_funds_active()],
+  ['nav', 'number or null', m.api_funds_nav()],
+  ['nav_date', 'date or null', m.api_funds_nav_date()],
+  ['aum', 'number or null', m.api_funds_aum()],
+  ['aum_date', 'date or null', m.api_funds_aum_date()],
+  ['return_1y', 'number or null', m.api_funds_return_1y()],
 ];
 
 const ONE_FUND_FIELDS = [
-  ['fund', 'object', 'The fund as in the fund list above, with all its source IDs.'],
-  ['history', 'object', 'The NAV and fund size the site draws: { nav, aum }, each a list of { date, value, source }. The CSV files are made from it.'],
-  ['symbol', 'string', 'Bibit ticker. Missing for a fund Bibit does not list, like every other Bibit field.'],
-  ['tradeable', '0 or 1', 'You can buy it in the Bibit app.'],
-  ['nav', 'array', 'Daily Bibit NAV: { date, nav, nav_adjusted }. Joins the records of a fund that Bibit lists under more than one symbol.'],
-  ['aum', 'array', 'Bibit fund size over time: { date, aum }.'],
-  ['documents', 'object or null', 'Links to factsheets and prospectus files.'],
-  ['switchables', 'array or null', 'Funds you can switch to in the app.'],
-  ['dividends', 'array or null', 'Dividend history.'],
-  ['kontan', 'object or null', 'The matching Kontan fund, see below.'],
-  ['bareksa', 'object or null', 'The matching Bareksa fund, see below.'],
-  ['makmur', 'object or null', 'The matching Makmur fund, see below.'],
+  ['fund', 'object', m.api_fund_fund()],
+  ['history', 'object', m.api_fund_history()],
+  ['symbol', 'string', m.api_fund_symbol()],
+  ['tradeable', '0 or 1', m.api_fund_tradeable()],
+  ['nav', 'array', m.api_fund_nav()],
+  ['aum', 'array', m.api_fund_aum()],
+  ['documents', 'object or null', m.api_fund_documents()],
+  ['switchables', 'array or null', m.api_fund_switchables()],
+  ['dividends', 'array or null', m.api_fund_dividends()],
+  ['kontan', 'object or null', m.api_fund_kontan()],
+  ['bareksa', 'object or null', m.api_fund_bareksa()],
+  ['makmur', 'object or null', m.api_fund_makmur()],
+];
+
+const TOC = [
+  ['funds-json', m.api_toc_funds()],
+  ['one-fund', m.api_toc_fund()],
+  ['types-json', m.api_toc_types()],
+  ['csv-funds', m.api_toc_csv_funds()],
+  ['csv-nav', m.api_toc_csv_nav()],
+  ['csv-aum', m.api_toc_csv_aum()],
+  ['zip', m.api_toc_zip()],
 ];
 ---
 
-<Base
-  title="API"
-  description="A free, read-only JSON and CSV API for Indonesian mutual fund data. No key, open CORS."
-  section="api"
->
+<Base title="API" description={m.api_description()} section="api">
   <h1 class="page-title">API</h1>
-  <p class="lede">
-    Free, read-only, static JSON and CSV files. No key, open CORS, rebuilt whenever the data changes.
-  </p>
+  <p class="lede">{m.api_lede()}</p>
 
   <div class="api-layout">
-    <nav class="api-toc" aria-label="Endpoints on this page">
-      <p class="small muted">On this page</p>
+    <nav class="api-toc" aria-label={m.api_toc_label()}>
+      <p class="small muted">{m.api_toc_title()}</p>
       <ul>
-        <li><a href="#funds-json">Fund list</a></li>
-        <li><a href="#one-fund">One fund</a></li>
-        <li><a href="#types-json">Fund types</a></li>
-        <li><a href="#csv-funds">CSV: fund list</a></li>
-        <li><a href="#csv-nav">CSV: NAV</a></li>
-        <li><a href="#csv-aum">CSV: AUM</a></li>
-        <li><a href="#zip">Zip files</a></li>
+        {TOC.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}
       </ul>
     </nav>
 
     <div class="api-content">
       <div class="section">
-        <h2 class="section-title">Quick start</h2>
-        <p>
-          No key is needed, and <code>Access-Control-Allow-Origin: *</code> lets you call this from a browser. Every
-          path below is a <code>GET</code> request. An unknown path answers 404.
-        </p>
+        <h2 class="section-title">{m.api_quickstart_title()}</h2>
+        <p set:html={m.api_quickstart_text()} />
         <pre data-origin><code>curl {ORIGIN}/api/funds/RD216.json
 curl -O {ORIGIN}/csv/nav/RD216.csv
 curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre>
       </div>
 
       <div class="section">
-        <h2 class="section-title">Endpoints</h2>
-        <p>
-          Replace <code>RD216</code> with any <code>id</code> from <a href="/api/funds.json">funds.json</a>. An old ID of a fund that was merged into another redirects (301) to the new one.
-        </p>
+        <h2 class="section-title">{m.api_endpoints_title()}</h2>
+        <p set:html={m.api_endpoints_text({ listLink: anchor('/api/funds.json', 'funds.json') })} />
         <table class="tbl">
           <thead>
             <tr>
-              <th>Group</th>
-              <th>Path</th>
-              <th>Format</th>
-              <th>Purpose</th>
+              <th>{m.api_col_group()}</th>
+              <th>{m.api_col_path()}</th>
+              <th>{m.api_col_format()}</th>
+              <th>{m.api_col_purpose()}</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th rowspan="1">Fund list</th>
+              <th rowspan="1">{m.api_group_list()}</th>
               <td><a href="#funds-json"><code>/api/funds.json</code></a></td>
               <td>JSON</td>
-              <td>Index of every fund.</td>
+              <td>{m.api_purpose_list()}</td>
             </tr>
           </tbody>
           <tbody>
             <tr>
-              <th rowspan="1">One fund</th>
+              <th rowspan="1">{m.api_group_fund()}</th>
               <td><a href="#one-fund"><code>/api/funds/&lt;id&gt;.json</code></a></td>
               <td>JSON</td>
-              <td>Everything about one fund.</td>
+              <td>{m.api_purpose_fund()}</td>
             </tr>
           </tbody>
           <tbody>
             <tr>
-              <th rowspan="1">Fund types</th>
+              <th rowspan="1">{m.api_group_types()}</th>
               <td><a href="#types-json"><code>/api/types.json</code></a></td>
               <td>JSON</td>
-              <td>Fund type codes and labels.</td>
+              <td>{m.api_purpose_types()}</td>
             </tr>
           </tbody>
           <tbody>
@@ -118,17 +121,17 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
               <th rowspan="3">CSV</th>
               <td><a href="#csv-funds"><code>/csv/funds.csv</code></a></td>
               <td>CSV</td>
-              <td>The fund index as CSV.</td>
+              <td>{m.api_purpose_csv_funds()}</td>
             </tr>
             <tr>
               <td><a href="#csv-nav"><code>/csv/nav/&lt;id&gt;.csv</code></a></td>
               <td>CSV</td>
-              <td>Daily NAV of one fund.</td>
+              <td>{m.api_purpose_csv_nav()}</td>
             </tr>
             <tr>
               <td><a href="#csv-aum"><code>/csv/aum/&lt;id&gt;.csv</code></a></td>
               <td>CSV</td>
-              <td>AUM history of one fund.</td>
+              <td>{m.api_purpose_csv_aum()}</td>
             </tr>
           </tbody>
           <tbody>
@@ -136,43 +139,39 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
               <th rowspan="1">Zip</th>
               <td><a href="#zip"><code>/download/&lt;name&gt;.zip</code></a></td>
               <td>ZIP</td>
-              <td>One source's data, or one part of it.</td>
+              <td>{m.api_purpose_zip()}</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div class="section">
-        <h2 class="section-title">Conventions</h2>
+        <h2 class="section-title">{m.api_conventions_title()}</h2>
         <dl class="kv">
-          <dt>Numbers</dt>
-          <dd>Returns and ratios are fractions: <code>0.0106</code> is 1.06%.</dd>
-          <dt>Dates</dt>
-          <dd>ISO, <code>YYYY-MM-DD</code>.</dd>
-          <dt>Currency</dt>
-          <dd>AUM and NAV are in the fund's own currency. It is <code>null</code> when no source states it.</dd>
-          <dt>Missing data</dt>
-          <dd>A missing part is <code>null</code>, or an empty list.</dd>
-          <dt>Unknown paths</dt>
+          <dt>{m.api_conv_numbers()}</dt>
+          <dd set:html={m.api_conv_numbers_text()} />
+          <dt>{m.api_conv_dates()}</dt>
+          <dd set:html={m.api_conv_dates_text()} />
+          <dt>{m.api_conv_currency()}</dt>
+          <dd set:html={m.api_conv_currency_text()} />
+          <dt>{m.api_conv_missing()}</dt>
+          <dd set:html={m.api_conv_missing_text()} />
+          <dt>{m.api_conv_unknown()}</dt>
           <dd>404.</dd>
-          <dt>Makmur fields</dt>
-          <dd>Scaled — see <a href="#one-fund">one fund</a> below.</dd>
+          <dt>{m.api_conv_makmur()}</dt>
+          <dd set:html={m.api_conv_makmur_text({ oneFundLink: anchor('#one-fund', m.api_conv_makmur_link()) })} />
         </dl>
       </div>
 
       <div class="section" id="funds-json">
         <h2 class="section-title"><code>GET /api/funds.json</code></h2>
-        <p>
-          An index of every fund, one per real fund: the records of Bibit, Bareksa, Kontan, and Makmur that belong to
-          one fund are joined into it. The columns of <a href="#csv-funds">funds.csv</a>, typed, plus the latest NAV
-          and fund size.
-        </p>
+        <p set:html={m.api_funds_text({ csvLink: anchor('#csv-funds', 'funds.csv') })} />
         <table class="tbl">
           <thead>
             <tr>
-              <th>Field</th>
-              <th>Type</th>
-              <th>Meaning</th>
+              <th>{m.api_col_field()}</th>
+              <th>{m.api_col_type()}</th>
+              <th>{m.api_col_meaning()}</th>
             </tr>
           </thead>
           <tbody>
@@ -180,7 +179,7 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
               FUNDS_JSON_FIELDS.map(([field, type, meaning]) => (
                 <tr>
                   <td><code>{field}</code></td>
-                  <td class="muted">{type}</td>
+                  <td class="muted">{typeLabel(type)}</td>
                   <td>{meaning}</td>
                 </tr>
               ))
@@ -188,7 +187,7 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
           </tbody>
         </table>
         <details>
-          <summary>Example response</summary>
+          <summary>{m.api_example_response()}</summary>
           <pre><code>{`[
   {
     "id": "RD1983",
@@ -215,18 +214,13 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
 
       <div class="section" id="one-fund">
         <h2 class="section-title"><code>GET /api/funds/&lt;id&gt;.json</code></h2>
-        <p>
-          Everything about one fund: the full Bibit record (when Bibit lists it), plus <code>fund</code>,
-          <code>history</code>, <code>documents</code>, <code>switchables</code>, <code>dividends</code>,
-          <code>nav</code>, <code>aum</code>, and the matching funds from Kontan, Bareksa, and Makmur. A missing part
-          is <code>null</code>, or an empty list for <code>nav</code> and <code>aum</code>.
-        </p>
+        <p set:html={m.api_fund_text()} />
         <table class="tbl">
           <thead>
             <tr>
-              <th>Field</th>
-              <th>Type</th>
-              <th>Meaning</th>
+              <th>{m.api_col_field()}</th>
+              <th>{m.api_col_type()}</th>
+              <th>{m.api_col_meaning()}</th>
             </tr>
           </thead>
           <tbody>
@@ -234,17 +228,17 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
               ONE_FUND_FIELDS.map(([field, type, meaning]) => (
                 <tr>
                   <td><code>{field}</code></td>
-                  <td class="muted">{type}</td>
+                  <td class="muted">{typeLabel(type)}</td>
                   <td>{meaning}</td>
                 </tr>
               ))
             }
           </tbody>
         </table>
-        <p class="muted small">Plus every other field Bibit returns: fees, asset allocation, returns, drawdown, and more.</p>
+        <p class="muted small">{m.api_fund_more()}</p>
 
         <details>
-          <summary>Example response</summary>
+          <summary>{m.api_example_response()}</summary>
           <pre><code>{`{
   "fund": { "id": "RD8807", "name": "Grow Obligasi Optima Dinamis Kelas O", "...": "..." },
   "history": { "nav": [{ "date": "2024-10-02", "value": 1000, "source": "bibit" }, "..."], "aum": ["..."] },
@@ -267,11 +261,8 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
         </details>
 
         <details>
-          <summary>Example with a Kontan match</summary>
-          <p class="small muted">
-            <code>kontan</code> holds the Kontan fund id, its name, and its daily NAV. Kontan serves the last 12
-            months, and every update adds the new days.
-          </p>
+          <summary>{m.api_example_kontan()}</summary>
+          <p class="small muted" set:html={m.api_kontan_text()} />
           <pre><code>{`"kontan": {
   "id": 378,
   "name": "Net Dana Gemilang",
@@ -284,15 +275,8 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
         </details>
 
         <details>
-          <summary>Example with a Bareksa match</summary>
-          <p class="small muted">
-            <code>bareksa</code> holds the Bareksa fund id and name, then four lists. <code>nav</code> is the daily
-            NAV, empty until the owner has run the logged-in backfill described in the README. <code>aum</code> is
-            the monthly fund size in rupiah and US dollars, and <code>units</code> the monthly units outstanding.
-            <code>allocation</code> is the monthly asset allocation in percent: <code>saham</code> (equity),
-            <code>obligasi</code> (bonds), <code>pasar_uang</code> (money market), and <code>lainnya</code> (other).
-            Any list can be empty.
-          </p>
+          <summary>{m.api_example_bareksa()}</summary>
+          <p class="small muted" set:html={m.api_bareksa_text()} />
           <pre><code>{`"bareksa": {
   "id": 354,
   "name": "Aberdeen Standard Indonesia Bond Fund",
@@ -307,15 +291,8 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
         </details>
 
         <details>
-          <summary>Example with a Makmur match</summary>
-          <p class="small muted">
-            <code>makmur</code> holds the Makmur fund id, its name, its page address (<code>url</code>), and
-            <code>data</code>, the fund record from Makmur as it is. Makmur scales its numbers: returns, drawdown,
-            CAGR, the expense ratio, and the asset allocation weights are in hundredths of a percent
-            (<code>2162</code> is 21.62%), and <code>lastPrice</code> is the NAV times 100 (<code>156</code> is
-            1.56). <code>lastAum</code> and the minimum buy are plain amounts. Dates are numbers like
-            <code>20260930</code>.
-          </p>
+          <summary>{m.api_example_makmur()}</summary>
+          <p class="small muted" set:html={m.api_makmur_text()} />
           <pre><code>{`"makmur": {
   "id": "67f4d3dbc5988e812e4e9d59",
   "name": "Bahana Liquid USD",
@@ -334,9 +311,9 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
 
       <div class="section" id="types-json">
         <h2 class="section-title"><code>GET /api/types.json</code></h2>
-        <p>Fund type codes and their Indonesian labels, as used in the Bibit app's filter.</p>
+        <p>{m.api_types_text()}</p>
         <details>
-          <summary>Example response</summary>
+          <summary>{m.api_example_response()}</summary>
           <pre><code>{`{
   "types": [
     { "code": 3, "label": "Pasar Uang" },
@@ -349,13 +326,9 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
 
       <div class="section" id="csv-funds">
         <h2 class="section-title"><code>GET /csv/funds.csv</code></h2>
-        <p>
-          The fund list as CSV, an exact copy of <code>data/funds.csv</code>: one row per fund. <code>other_names</code>
-          are separated by <code>|</code>, and each source column holds the source's IDs for the fund, separated by
-          spaces, the best record first. <code>currency</code> and <code>sharia</code> are empty when no source says.
-        </p>
+        <p set:html={m.api_csv_funds_text()} />
         <details>
-          <summary>Example response</summary>
+          <summary>{m.api_example_response()}</summary>
           <pre><code>{`id,name,other_names,manager,type,currency,sharia,launch_date,bibit,bareksa,kontan,makmur
 RD1983,Insight Renewable Energy Fund,Insight-meti Renewable Energy Fund,"Insight Investments Management, PT",Obligasi,IDR,false,2011-06-23,RD1983 RD1352 RD2280 RD2348,440,15297 615,64367a1f792d78750b0a3465`}</code></pre>
         </details>
@@ -363,17 +336,9 @@ RD1983,Insight Renewable Energy Fund,Insight-meti Renewable Energy Fund,"Insight
 
       <div class="section" id="csv-nav">
         <h2 class="section-title"><code>GET /csv/nav/&lt;id&gt;.csv</code></h2>
-        <p>
-          The NAV history the fund page draws, one row per date. <code>source</code> says where each row came from:
-          <code>bibit</code>, <code>bareksa</code>, <code>kontan</code>, or <code>bareksa-monthly</code> (monthly
-          AUM divided by units, for funds with nothing better). A Worker builds it on request from the fund's JSON,
-          so the files do not count against the deployment's file limit. Before this change it was a copy of the
-          Bibit file with <code>nav_adjusted</code>; the raw source files are in the <a href="/download/">zip files</a>.
-          Unknown IDs and funds without a NAV history answer 404, and only <code>GET</code> and <code>HEAD</code>
-          are allowed.
-        </p>
+        <p set:html={m.api_csv_nav_text({ downloadLink: downloadLink(m.api_zip_files_link()) })} />
         <details>
-          <summary>Example response</summary>
+          <summary>{m.api_example_response()}</summary>
           <pre><code>{`date,nav,source
 2011-06-22,1000,bareksa
 2011-06-23,1000.02,bareksa`}</code></pre>
@@ -382,9 +347,9 @@ RD1983,Insight Renewable Energy Fund,Insight-meti Renewable Energy Fund,"Insight
 
       <div class="section" id="csv-aum">
         <h2 class="section-title"><code>GET /csv/aum/&lt;id&gt;.csv</code></h2>
-        <p>The fund size history the fund page draws, from the same Worker. <code>source</code> is <code>bibit</code> or <code>bareksa</code>.</p>
+        <p set:html={m.api_csv_aum_text()} />
         <details>
-          <summary>Example response</summary>
+          <summary>{m.api_example_response()}</summary>
           <pre><code>{`date,aum,source
 2017-11-01,95394470734.7,bibit
 2017-12-01,113696742211.41,bibit`}</code></pre>
@@ -393,12 +358,7 @@ RD1983,Insight Renewable Energy Fund,Insight-meti Renewable Energy Fund,"Insight
 
       <div class="section" id="zip">
         <h2 class="section-title"><code>GET /download/&lt;name&gt;.zip</code></h2>
-        <p>
-          One source's data as a zip file: <code>bibit.zip</code>, <code>kontan.zip</code>, <code>makmur.zip</code>,
-          or <code>bareksa.zip</code> (without the daily NAV). Bareksa's daily NAV is split further, into
-          <code>bareksa-nav-1.zip</code> and up, because a single file here cannot be bigger than 25 MiB. See the
-          full list, with sizes, on the <a href="/download/">download page</a>.
-        </p>
+        <p set:html={m.api_zip_text({ downloadPageLink: downloadLink(m.api_zip_page_link()) })} />
       </div>
     </div>
   </div>
