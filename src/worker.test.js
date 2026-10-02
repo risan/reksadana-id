@@ -15,7 +15,7 @@ const ASSETS = {
 
 const fakeAssets = (files, status = 200) => ({
   fetch: async (url) => {
-    const file = files[new URL(url).pathname];
+    const file = files[new URL(url.url ?? url).pathname];
 
     if (!file) {
       return new Response('Not found', { status: 404, headers: { 'Content-Type': 'text/html' } });
@@ -25,7 +25,17 @@ const fakeAssets = (files, status = 200) => ({
   },
 });
 
-const call = (path, { method = 'GET', files = ASSETS } = {}) => worker.fetch(new Request(`https://example.test${path}`, { method }), { ASSETS: fakeAssets(files) });
+const call = (path, { method = 'GET', files = ASSETS, headers = {}, country } = {}) => {
+  const request = new Request(`https://example.test${path}`, { method, headers });
+
+  if (country) {
+    Object.defineProperty(request, 'cf', { value: { country } });
+  }
+
+  return worker.fetch(request, { ASSETS: fakeAssets(files) });
+};
+
+const HOME_ASSETS = { ...ASSETS, '/': { home: 'id' } };
 
 test('serves a fund NAV history as CSV with the source of each point', async () => {
   const response = await call('/csv/nav/RD1983.csv');
@@ -84,4 +94,46 @@ test('an unusable asset answer is a 502, not a 404', async () => {
   });
 
   assert.equal(response.status, 502);
+});
+
+test('a visitor from outside Indonesia is sent to the English home page, keeping the query', async () => {
+  const response = await call('/?type=Saham', { files: HOME_ASSETS, country: 'US' });
+
+  assert.equal(response.status, 302);
+  assert.equal(response.headers.get('Location'), '/en/?type=Saham');
+  assert.equal(response.headers.get('Cache-Control'), 'private, no-store');
+  assert.equal(response.headers.get('Vary'), 'Cookie');
+});
+
+test('a visitor from Indonesia, or from an unknown country, gets the Indonesian home page', async () => {
+  for (const country of ['ID', undefined]) {
+    const response = await call('/', { files: HOME_ASSETS, country });
+
+    assert.equal(response.status, 200, String(country));
+    assert.deepEqual(await response.json(), { home: 'id' });
+    assert.equal(response.headers.get('Vary'), 'Cookie');
+  }
+});
+
+test('the language cookie beats the country', async () => {
+  const english = await call('/', { files: HOME_ASSETS, country: 'ID', headers: { Cookie: 'a=1; lang=en' } });
+  const indonesian = await call('/', { files: HOME_ASSETS, country: 'US', headers: { Cookie: 'lang=id' } });
+
+  assert.equal(english.status, 302);
+  assert.equal(english.headers.get('Location'), '/en/');
+  assert.equal(indonesian.status, 200);
+});
+
+test('a cookie with any other language is ignored', async () => {
+  const response = await call('/', { files: HOME_ASSETS, country: 'US', headers: { Cookie: 'lang=fr' } });
+
+  assert.equal(response.status, 302);
+});
+
+test('crawlers always get the Indonesian home page', async () => {
+  for (const userAgent of ['Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)', 'Bingbot', 'facebookexternalhit/1.1']) {
+    const response = await call('/', { files: HOME_ASSETS, country: 'US', headers: { 'User-Agent': userAgent } });
+
+    assert.equal(response.status, 200, userAgent);
+  }
 });

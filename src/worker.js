@@ -1,7 +1,9 @@
-// Serves the per-fund CSV files. They are not built as files (that would be two more files per fund, and
-// Cloudflare's free plan allows 20,000 per deployment). Each one is made from the fund's JSON record,
-// whose `history` holds the series the site draws. Everything else is served as a static asset without
-// running this Worker (see `run_worker_first` in wrangler.toml).
+// Does two jobs, and everything else is served as a static asset without running this Worker (see
+// `run_worker_first` in wrangler.toml).
+// 1. Sends a first-time visitor of "/" to the English page when Cloudflare says they are outside Indonesia.
+// 2. Serves the per-fund CSV files. They are not built as files (that would be two more files per fund, and
+//    Cloudflare's free plan allows 20,000 per deployment). Each one is made from the fund's JSON record,
+//    whose `history` holds the series the site draws.
 
 const CSV_PATH = /^\/csv\/(nav|aum)\/([A-Za-z0-9_-]+)\.csv$/;
 
@@ -16,6 +18,45 @@ const TEXT_HEADERS = {
   'Content-Type': 'text/plain; charset=utf-8',
   'Access-Control-Allow-Origin': '*',
 };
+
+const CRAWLER_USER_AGENT = /bot|crawl|spider|slurp|preview|facebookexternalhit|lighthouse/i;
+
+// The language the visitor chose with the switcher, if any. Only the two languages of the site count.
+function chosenLanguage(request) {
+  const cookie = /(?:^|;\s*)lang=(id|en)(?:;|$)/.exec(request.headers.get('Cookie') ?? '');
+
+  return cookie ? cookie[1] : null;
+}
+
+function prefersEnglish(request) {
+  const language = chosenLanguage(request);
+
+  if (language) {
+    return language === 'en';
+  }
+
+  const country = request.cf?.country;
+
+  return Boolean(country) && country !== 'ID';
+}
+
+async function serveHome(request, env) {
+  const userAgent = request.headers.get('User-Agent') ?? '';
+
+  if (!CRAWLER_USER_AGENT.test(userAgent) && prefersEnglish(request)) {
+    return new Response(null, {
+      status: 302,
+      headers: { Location: `/en/${new URL(request.url).search}`, 'Cache-Control': 'private, no-store', Vary: 'Cookie' },
+    });
+  }
+
+  const response = await env.ASSETS.fetch(request);
+  const home = new Response(response.body, response);
+
+  home.headers.append('Vary', 'Cookie');
+
+  return home;
+}
 
 const textResponse = (message, status, method) => new Response(method === 'HEAD' ? null : `${message}\n`, { status, headers: TEXT_HEADERS });
 
@@ -58,7 +99,13 @@ export default {
       return new Response('Method not allowed\n', { status: 405, headers: { ...TEXT_HEADERS, Allow: 'GET, HEAD' } });
     }
 
-    const match = CSV_PATH.exec(new URL(request.url).pathname);
+    const { pathname } = new URL(request.url);
+
+    if (pathname === '/') {
+      return serveHome(request, env);
+    }
+
+    const match = CSV_PATH.exec(pathname);
 
     if (!match) {
       return textResponse('Not found', 404, request.method);
