@@ -4,32 +4,32 @@ import Base from '../../layouts/Base.astro';
 const ORIGIN = 'https://your-site.example';
 
 const FUNDS_JSON_FIELDS = [
-  ['symbol', 'string', 'Bibit ticker, e.g. RD13.'],
-  ['name', 'string', 'Fund name.'],
-  ['type', 'string', 'Indonesian fund type, e.g. Obligasi.'],
-  ['investment_manager', 'string', 'The manager running the fund.'],
-  ['currency', 'string', 'IDR or USD.'],
-  ['sharia', 'boolean', 'Sharia-compliant fund.'],
+  ['id', 'string', 'The fund ID, e.g. RD1983. A Bibit symbol, or BRK, KTN or MKR plus a source ID for a fund Bibit does not list.'],
+  ['name', 'string', 'The current name of the fund.'],
+  ['other_names', 'array', 'Other names the sources use for it, for example before a rename.'],
+  ['manager', 'string or null', 'The manager running the fund.'],
+  ['type', 'string or null', "Indonesian fund type, in Bibit's labels, e.g. Obligasi. Null for index funds, ETFs and DPLK."],
+  ['currency', 'string or null', 'IDR or USD. Null when no source says.'],
+  ['sharia', 'boolean or null', 'Sharia-compliant fund. Null when no source says.'],
   ['etf', 'boolean', 'Traded as an ETF.'],
   ['index', 'boolean', 'Tracks an index.'],
-  ['tradeable', 'boolean', 'You can buy it in the Bibit app.'],
-  ['status', 'number', "Bibit's own status code."],
-  ['nav_first_date', 'date', 'First date with a stored NAV.'],
-  ['nav_date', 'date', 'Date of the latest NAV below.'],
-  ['nav', 'number', 'Latest NAV per unit.'],
-  ['aum', 'number', 'Latest fund size, in the fund currency.'],
-  ['expense_ratio', 'number', 'Yearly fee, as a fraction.'],
-  ['return_1y', 'number or null', "Bibit's own 1-year return, as a fraction. Only for funds Bibit computes it for, and it can lag the NAV history."],
-  ['makmur_url', 'string or null', "The fund's Makmur page, or null when there is no match."],
+  ['launch_date', 'date or null', 'First NAV date known to any source.'],
+  ['sources', 'object', 'The IDs of the fund in each source: { bibit, bareksa, kontan, makmur }, each a list, the best record first.'],
+  ['active', 'boolean', 'The latest NAV is within a month of the newest data of its source.'],
+  ['nav', 'number or null', 'Latest NAV per unit.'],
+  ['nav_date', 'date or null', 'Date of the latest NAV.'],
+  ['aum', 'number or null', 'Latest fund size, in the fund currency.'],
+  ['aum_date', 'date or null', 'Date of the latest fund size.'],
+  ['return_1y', 'number or null', 'Change in NAV over 1 year, as a fraction, computed from the NAV history.'],
 ];
 
 const ONE_FUND_FIELDS = [
-  ['symbol', 'string', 'Bibit ticker.'],
-  ['name', 'string', 'Fund name.'],
-  ['type', 'string', 'Indonesian fund type.'],
+  ['fund', 'object', 'The fund as in the fund list above, with all its source IDs.'],
+  ['history', 'object', 'The NAV and fund size the site draws: { nav, aum }, each a list of { date, value, source }. The CSV files are made from it.'],
+  ['symbol', 'string', 'Bibit ticker. Missing for a fund Bibit does not list, like every other Bibit field.'],
   ['tradeable', '0 or 1', 'You can buy it in the Bibit app.'],
-  ['nav', 'array', 'Daily NAV: { date, nav, nav_adjusted }.'],
-  ['aum', 'array', 'Fund size over time: { date, aum }.'],
+  ['nav', 'array', 'Daily Bibit NAV: { date, nav, nav_adjusted }. Joins the records of a fund that Bibit lists under more than one symbol.'],
+  ['aum', 'array', 'Bibit fund size over time: { date, aum }.'],
   ['documents', 'object or null', 'Links to factsheets and prospectus files.'],
   ['switchables', 'array or null', 'Funds you can switch to in the app.'],
   ['dividends', 'array or null', 'Dividend history.'],
@@ -72,13 +72,13 @@ const ONE_FUND_FIELDS = [
         </p>
         <pre data-origin><code>curl {ORIGIN}/api/funds/RD216.json
 curl -O {ORIGIN}/csv/nav/RD216.csv
-curl -s {ORIGIN}/api/funds.json | jq 'map(select(.tradeable)) | length'</code></pre>
+curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre>
       </div>
 
       <div class="section">
         <h2 class="section-title">Endpoints</h2>
         <p>
-          Replace <code>RD216</code> with any symbol from <a href="/api/funds.json">funds.json</a>.
+          Replace <code>RD216</code> with any <code>id</code> from <a href="/api/funds.json">funds.json</a>. An old ID of a fund that was merged into another redirects (301) to the new one.
         </p>
         <table class="tbl">
           <thead>
@@ -100,7 +100,7 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.tradeable)) | length'</code></
           <tbody>
             <tr>
               <th rowspan="1">One fund</th>
-              <td><a href="#one-fund"><code>/api/funds/&lt;symbol&gt;.json</code></a></td>
+              <td><a href="#one-fund"><code>/api/funds/&lt;id&gt;.json</code></a></td>
               <td>JSON</td>
               <td>Everything about one fund.</td>
             </tr>
@@ -121,12 +121,12 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.tradeable)) | length'</code></
               <td>The fund index as CSV.</td>
             </tr>
             <tr>
-              <td><a href="#csv-nav"><code>/csv/nav/&lt;symbol&gt;.csv</code></a></td>
+              <td><a href="#csv-nav"><code>/csv/nav/&lt;id&gt;.csv</code></a></td>
               <td>CSV</td>
               <td>Daily NAV of one fund.</td>
             </tr>
             <tr>
-              <td><a href="#csv-aum"><code>/csv/aum/&lt;symbol&gt;.csv</code></a></td>
+              <td><a href="#csv-aum"><code>/csv/aum/&lt;id&gt;.csv</code></a></td>
               <td>CSV</td>
               <td>AUM history of one fund.</td>
             </tr>
@@ -150,7 +150,7 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.tradeable)) | length'</code></
           <dt>Dates</dt>
           <dd>ISO, <code>YYYY-MM-DD</code>.</dd>
           <dt>Currency</dt>
-          <dd>AUM and NAV are in the fund's own currency.</dd>
+          <dd>AUM and NAV are in the fund's own currency. It is <code>null</code> when no source states it.</dd>
           <dt>Missing data</dt>
           <dd>A missing part is <code>null</code>, or an empty list.</dd>
           <dt>Unknown paths</dt>
@@ -163,8 +163,9 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.tradeable)) | length'</code></
       <div class="section" id="funds-json">
         <h2 class="section-title"><code>GET /api/funds.json</code></h2>
         <p>
-          An index of every fund: the same columns as <a href="#csv-funds">funds.csv</a>, with numbers and booleans
-          typed, plus <code>return_1y</code> and <code>makmur_url</code>.
+          An index of every fund, one per real fund: the records of Bibit, Bareksa, Kontan, and Makmur that belong to
+          one fund are joined into it. The columns of <a href="#csv-funds">funds.csv</a>, typed, plus the latest NAV
+          and fund size.
         </p>
         <table class="tbl">
           <thead>
@@ -190,34 +191,35 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.tradeable)) | length'</code></
           <summary>Example response</summary>
           <pre><code>{`[
   {
-    "symbol": "RD13",
-    "name": "ABF Indonesia Bond Index Fund",
+    "id": "RD1983",
+    "name": "Insight Renewable Energy Fund",
+    "other_names": ["Insight-meti Renewable Energy Fund"],
+    "manager": "Insight Investments Management, PT",
     "type": "Obligasi",
-    "investment_manager": "PT Bahana TCW Investment Management",
     "currency": "IDR",
     "sharia": false,
-    "etf": true,
-    "index": true,
-    "tradeable": true,
-    "status": 1,
-    "nav_first_date": "2007-12-18",
-    "nav_date": "2026-09-30",
-    "nav": 59116.5317,
-    "aum": 7850300000000,
-    "expense_ratio": 0.0021,
-    "return_1y": 0.010580157352288122,
-    "makmur_url": null
+    "etf": false,
+    "index": false,
+    "launch_date": "2011-06-23",
+    "sources": { "bibit": ["RD1983", "RD1352"], "bareksa": ["440"], "kontan": ["15297"], "makmur": [] },
+    "active": true,
+    "nav": 2587.7419,
+    "nav_date": "2026-10-01",
+    "aum": 194240467107.88,
+    "aum_date": "2026-09-01",
+    "return_1y": 0.0632
   }
 ]`}</code></pre>
         </details>
       </div>
 
       <div class="section" id="one-fund">
-        <h2 class="section-title"><code>GET /api/funds/&lt;symbol&gt;.json</code></h2>
+        <h2 class="section-title"><code>GET /api/funds/&lt;id&gt;.json</code></h2>
         <p>
-          Everything about one fund: the full Bibit record, plus <code>documents</code>, <code>switchables</code>,
-          <code>dividends</code>, <code>nav</code>, <code>aum</code>, and the matching funds from Kontan, Bareksa, and
-          Makmur. A missing part is <code>null</code>, or an empty list for <code>nav</code> and <code>aum</code>.
+          Everything about one fund: the full Bibit record (when Bibit lists it), plus <code>fund</code>,
+          <code>history</code>, <code>documents</code>, <code>switchables</code>, <code>dividends</code>,
+          <code>nav</code>, <code>aum</code>, and the matching funds from Kontan, Bareksa, and Makmur. A missing part
+          is <code>null</code>, or an empty list for <code>nav</code> and <code>aum</code>.
         </p>
         <table class="tbl">
           <thead>
@@ -244,6 +246,8 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.tradeable)) | length'</code></
         <details>
           <summary>Example response</summary>
           <pre><code>{`{
+  "fund": { "id": "RD8807", "name": "Grow Obligasi Optima Dinamis Kelas O", "...": "..." },
+  "history": { "nav": [{ "date": "2024-10-02", "value": 1000, "source": "bibit" }, "..."], "aum": ["..."] },
   "symbol": "RD8807",
   "name": "Grow Obligasi Optima Dinamis Kelas O",
   "type": "Obligasi",
@@ -345,37 +349,45 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.tradeable)) | length'</code></
 
       <div class="section" id="csv-funds">
         <h2 class="section-title"><code>GET /csv/funds.csv</code></h2>
-        <p>The fund index as CSV. An exact copy of <code>data/bibit/funds.csv</code>.</p>
+        <p>
+          The fund list as CSV, an exact copy of <code>data/funds.csv</code>: one row per fund. <code>other_names</code>
+          are separated by <code>|</code>, and each source column holds the source's IDs for the fund, separated by
+          spaces, the best record first. <code>currency</code> and <code>sharia</code> are empty when no source says.
+        </p>
         <details>
           <summary>Example response</summary>
-          <pre><code>{`symbol,name,type,investment_manager,currency,sharia,etf,index,tradeable,status,nav_first_date,nav_date,nav,aum,expense_ratio
-RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,IDR,false,true,true,1,1,2007-12-18,2026-09-30,59116.5317,7850300000000,0.0021`}</code></pre>
+          <pre><code>{`id,name,other_names,manager,type,currency,sharia,launch_date,bibit,bareksa,kontan,makmur
+RD1983,Insight Renewable Energy Fund,Insight-meti Renewable Energy Fund,"Insight Investments Management, PT",Obligasi,IDR,false,2011-06-23,RD1983 RD1352 RD2280 RD2348,440,15297 615,64367a1f792d78750b0a3465`}</code></pre>
         </details>
       </div>
 
       <div class="section" id="csv-nav">
-        <h2 class="section-title"><code>GET /csv/nav/&lt;symbol&gt;.csv</code></h2>
+        <h2 class="section-title"><code>GET /csv/nav/&lt;id&gt;.csv</code></h2>
         <p>
-          Daily NAV of one fund. An exact copy of <code>data/bibit/nav/&lt;symbol&gt;.csv</code>.
-          <code>nav_adjusted</code> is Bibit's dividend-adjusted NAV, or empty. Its base can change between updates, so
-          compare it only within one download.
+          The NAV history the fund page draws, one row per date. <code>source</code> says where each row came from:
+          <code>bibit</code>, <code>bareksa</code>, <code>kontan</code>, or <code>bareksa-monthly</code> (monthly
+          AUM divided by units, for funds with nothing better). A Worker builds it on request from the fund's JSON,
+          so the files do not count against the deployment's file limit. Before this change it was a copy of the
+          Bibit file with <code>nav_adjusted</code>; the raw source files are in the <a href="/download/">zip files</a>.
+          Unknown IDs and funds without a NAV history answer 404, and only <code>GET</code> and <code>HEAD</code>
+          are allowed.
         </p>
         <details>
           <summary>Example response</summary>
-          <pre><code>{`date,nav,nav_adjusted
-2000-01-05,4336.44,4336.44
-2000-01-06,4386.41,4386.41`}</code></pre>
+          <pre><code>{`date,nav,source
+2011-06-22,1000,bareksa
+2011-06-23,1000.02,bareksa`}</code></pre>
         </details>
       </div>
 
       <div class="section" id="csv-aum">
-        <h2 class="section-title"><code>GET /csv/aum/&lt;symbol&gt;.csv</code></h2>
-        <p>AUM history of one fund. An exact copy of <code>data/bibit/aum/&lt;symbol&gt;.csv</code>.</p>
+        <h2 class="section-title"><code>GET /csv/aum/&lt;id&gt;.csv</code></h2>
+        <p>The fund size history the fund page draws, from the same Worker. <code>source</code> is <code>bibit</code> or <code>bareksa</code>.</p>
         <details>
           <summary>Example response</summary>
-          <pre><code>{`date,aum
-2004-06-07,9993.82
-2004-07-30,12837`}</code></pre>
+          <pre><code>{`date,aum,source
+2017-11-01,95394470734.7,bibit
+2017-12-01,113696742211.41,bibit`}</code></pre>
         </details>
       </div>
 
