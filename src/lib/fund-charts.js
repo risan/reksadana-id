@@ -9,7 +9,7 @@ const RANGE_PERIODS = { '1M': '1m', '3M': '3m', '6M': '6m', YTD: 'ytd', '1Y': '1
 const DEFAULT_RANGE = '1Y';
 const DAY_SECONDS = 24 * 60 * 60;
 
-function cssColor(name) {
+export function cssColor(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
 }
 
@@ -20,11 +20,11 @@ function withAlpha(hexColor, alpha) {
   return `rgba(${red}, ${green}, ${blue}, ${alpha})`;
 }
 
-function toSeconds(date) {
+export function toSeconds(date) {
   return Date.parse(`${date}T00:00:00Z`) / 1000;
 }
 
-function toDate(seconds) {
+export function toDate(seconds) {
   return new Date(seconds * 1000).toISOString().slice(0, 10);
 }
 
@@ -57,7 +57,7 @@ function dateTicks(locale) {
   };
 }
 
-function axes(valueFormatter, locale) {
+export function axes(valueFormatter, locale) {
   const grid = { stroke: () => cssColor('--rule'), width: 1 };
   const ticks = { show: false };
   const font = '11.5px "Schibsted Grotesk Variable", sans-serif';
@@ -68,12 +68,12 @@ function axes(valueFormatter, locale) {
   ];
 }
 
-function chartHeight(base) {
+export function chartHeight(base) {
   return window.matchMedia('(max-width: 640px)').matches ? Math.round(base * 0.72) : base;
 }
 
 // The tooltip belongs to the chart under the pointer; the other chart only shows its synced crosshair.
-function attachTooltip(chart, container, renderTooltip) {
+export function attachTooltip(chart, container, renderTooltip) {
   const tip = document.createElement('div');
   let hovering = false;
 
@@ -110,7 +110,7 @@ function attachTooltip(chart, container, renderTooltip) {
   };
 }
 
-function observeWidth(chart, container, baseHeight) {
+export function observeWidth(chart, container, baseHeight) {
   new ResizeObserver(() => {
     chart.setSize({ width: container.clientWidth, height: chartHeight(baseHeight) });
   }).observe(container);

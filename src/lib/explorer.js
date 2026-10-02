@@ -1,6 +1,7 @@
 // Shared by the home page's build-time render and its browser script, so both draw the same markup.
 import * as m from '../paraglide/messages.js';
 import { changeClass, formatChange, formatCount, formatMoney, formatNav, formatShortDate, formatMonth } from './format.js';
+import { MAX_FUNDS } from './compare.js';
 import { localizeHref } from './i18n.js';
 
 export const PAGE_SIZE = 50;
@@ -183,7 +184,7 @@ function returnCell(value, className, locale, extra = '') {
   return `<td class="num ${className} ${changeClass(value)}">${value === null ? '<span class="nil">&mdash;</span>' : formatChange(value, locale, 1)}${extra}</td>`;
 }
 
-export function renderRow(fund, { terms, dataDate, locale }) {
+export function renderRow(fund, { terms, dataDate, locale, comparedIds }) {
   const href = localizeHref(`/funds/${encodeURIComponent(fund.id)}/`, locale);
   const tag = (label, title, extraClass = 'tag-quiet') => ` <span class="tag ${extraClass}"${title ? ` title="${escapeHtml(title)}"` : ''}>${escapeHtml(label)}</span>`;
   const sharia = fund.sharia ? tag(m.tag_sharia(), m.tag_sharia_title()) : '';
@@ -194,7 +195,11 @@ export function renderRow(fund, { terms, dataDate, locale }) {
   const buy = [fund.bibit && '<span class="tag">Bibit</span>', fund.makmur && '<span class="tag">Makmur</span>'].filter(Boolean).join(' ');
   const navDate = fund.nav_date ? formatShortDate(fund.nav_date, dataDate, locale) : '';
 
+  const isCompared = comparedIds.has(fund.id);
+  const compareDisabled = !isCompared && comparedIds.size >= MAX_FUNDS;
+
   return `<tr data-href="${href}">
+    <td class="c-compare"><input type="checkbox" data-compare="${escapeHtml(fund.id)}" aria-label="${escapeHtml(m.compare_checkbox_label({ name: fund.name }))}"${compareDisabled ? ` disabled title="${escapeHtml(m.compare_full({ count: MAX_FUNDS }))}"` : ''}${isCompared ? ' checked' : ''} /></td>
     <td class="c-fund"><a href="${href}">${highlight(fund.name, terms)}</a>${sharia}${kind}${dividends}${stale}<div class="sub">${highlight(fund.manager ?? m.unknown_manager(), terms)} · <span class="mono">${highlight(fund.id, terms)}</span></div></td>
     <td class="num c-nav">${formatNav(fund.nav, locale)}<div class="sub">${fund.currency === 'USD' ? 'USD · ' : ''}${navDate}</div></td>
     ${returnCell(fund.return_1m, 'c-1m', locale)}
@@ -207,15 +212,15 @@ export function renderRow(fund, { terms, dataDate, locale }) {
   </tr>`;
 }
 
-export function renderRows(funds, state, dataDate, locale) {
+export function renderRows(funds, state, dataDate, locale, comparedIds = new Set()) {
   const terms = searchTerms(state.q);
   const visible = funds.slice(state.page * PAGE_SIZE, (state.page + 1) * PAGE_SIZE);
 
   if (visible.length === 0) {
     const hint = state.inactive ? m.empty_hint() : m.empty_hint_inactive();
 
-    return `<tr class="empty-row"><td colspan="9">${escapeHtml(m.empty_text({ hint }))}</td></tr>`;
+    return `<tr class="empty-row"><td colspan="10">${escapeHtml(m.empty_text({ hint }))}</td></tr>`;
   }
 
-  return visible.map((fund) => renderRow(fund, { terms, dataDate, locale })).join('');
+  return visible.map((fund) => renderRow(fund, { terms, dataDate, locale, comparedIds })).join('');
 }

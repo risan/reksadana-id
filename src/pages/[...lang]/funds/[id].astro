@@ -215,6 +215,10 @@ const sources = [
       {dividends.length > 0 && <span class="tag">{m.tag_pays_dividends()}</span>}
       {riskProfile && <span class="tag">{m.tag_risk({ level: riskProfile })}</span>}
     </p>
+    <p class="fund-compare">
+      <button class="btn" type="button" id="compare-toggle" data-fund-id={id} hidden></button>
+      <a class="btn btn-ink" id="compare-open" href={href('/compare/')} hidden></a>
+    </p>
   </header>
 
   {
@@ -597,6 +601,12 @@ const sources = [
     margin-right: -6px;
   }
 
+  .fund-compare {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
   .notice + .figures,
   .fund-head + .notice {
     margin-top: 14px;
@@ -909,4 +919,39 @@ const sources = [
   import { mountFundCharts } from '../../../lib/fund-charts.js';
 
   mountFundCharts(document.getElementById('nav-chart').dataset.fundId);
+</script>
+
+<script>
+  import { MAX_FUNDS, selectionQuery } from '../../../lib/compare.js';
+  import { readTray, toggleInTray } from '../../../lib/compare-tray.js';
+  import { localizeHref } from '../../../lib/i18n.js';
+  import * as m from '../../../paraglide/messages.js';
+  import { setLocale } from '../../../paraglide/runtime.js';
+
+  const locale = document.documentElement.lang;
+
+  setLocale(locale, { reload: false });
+
+  const toggle = document.getElementById('compare-toggle');
+  const open = document.getElementById('compare-open');
+
+  function sync() {
+    const tray = readTray();
+    const isCompared = tray.includes(toggle.dataset.fundId);
+
+    toggle.hidden = false;
+    toggle.textContent = isCompared ? m.compare_button_remove() : m.compare_button_add();
+    toggle.disabled = !isCompared && tray.length >= MAX_FUNDS;
+    toggle.title = toggle.disabled ? m.compare_full({ count: MAX_FUNDS }) : '';
+    open.hidden = tray.length === 0;
+    open.textContent = m.compare_open({ count: tray.length });
+    open.href = localizeHref(`/compare/${selectionQuery(tray)}`, locale);
+  }
+
+  toggle.addEventListener('click', () => {
+    toggleInTray(toggle.dataset.fundId);
+    sync();
+  });
+
+  sync();
 </script>

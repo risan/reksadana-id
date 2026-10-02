@@ -15,6 +15,7 @@ const initial = sortFunds(filterFunds(funds, DEFAULT_STATE), DEFAULT_STATE.sort,
 const inactiveCount = funds.filter((fund) => !fund.active).length;
 
 const COLUMNS = [
+  { key: null, label: m.compare_col_header(), className: 'c-compare', hidden: true },
   { key: 'name', label: m.col_fund(), className: 'c-fund' },
   { key: null, label: m.col_nav(), className: 'num c-nav' },
   { key: 'return_1m', label: m.period_1m(), className: 'num c-1m', title: m.col_1m_title() },
@@ -59,7 +60,7 @@ const COLUMNS = [
         <tr>
           {COLUMNS.map((column) => (
             <th class={column.className} title={column.title} aria-sort={column.key === DEFAULT_STATE.sort ? 'descending' : undefined}>
-              {column.key ? <button type="button" class="sort" data-sort={column.key}>{column.label}</button> : column.label}
+              {column.key ? <button type="button" class="sort" data-sort={column.key}>{column.label}</button> : column.hidden ? <span class="visually-hidden">{column.label}</span> : column.label}
             </th>
           ))}
         </tr>
@@ -72,6 +73,11 @@ const COLUMNS = [
     <span class="muted" id="page-label">{m.pager_range({ first: formatCount(Math.min(1, initial.length), locale), last: formatCount(Math.min(PAGE_SIZE, initial.length), locale), total: formatCount(initial.length, locale) })}</span>
     <button class="btn" type="button" id="previous-page" disabled>&larr; {m.pager_previous()}</button>
     <button class="btn" type="button" id="next-page" disabled={initial.length <= PAGE_SIZE}>{m.pager_next()} &rarr;</button>
+  </div>
+
+  <div class="compare-bar" id="compare-bar" hidden>
+    <a class="btn btn-ink" id="compare-link" href={localizeHref('/compare/', locale)}></a>
+    <button class="btn" type="button" id="compare-clear">{m.compare_clear()}</button>
   </div>
 
   <details class="method">
@@ -88,21 +94,6 @@ const COLUMNS = [
 </Base>
 
 <style is:global>
-  .intro {
-    display: grid;
-    gap: 4px;
-    margin-bottom: 18px;
-  }
-
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    white-space: nowrap;
-  }
-
   .type-strip {
     display: grid;
     grid-template-columns: repeat(8, minmax(118px, 1fr));
@@ -279,6 +270,36 @@ const COLUMNS = [
     cursor: pointer;
   }
 
+  .funds-table .c-compare {
+    width: 24px;
+    padding-right: 4px;
+    cursor: default;
+  }
+
+  .funds-table .c-compare input {
+    width: 14px;
+    height: 14px;
+    margin: 2px 0 0;
+    accent-color: var(--ink);
+    cursor: pointer;
+  }
+
+  .funds-table .c-compare input:disabled {
+    cursor: default;
+  }
+
+  .compare-bar {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    border-top: 1px solid var(--rule-strong);
+    background: var(--paper);
+  }
+
   .funds-table tbody tr:hover {
     background: var(--panel);
   }
@@ -325,11 +346,6 @@ const COLUMNS = [
   .funds-table .tag {
     font-size: 11px;
     line-height: 15px;
-  }
-
-  .tag-quiet {
-    border-color: var(--rule);
-    color: var(--muted);
   }
 
   .tag-stale {
@@ -460,7 +476,10 @@ const COLUMNS = [
 
 <script>
   import { DEFAULT_STATE, PAGE_SIZE, filterFunds, fundCountLabel, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../../lib/explorer.js';
+  import { MAX_FUNDS, selectionQuery } from '../../lib/compare.js';
+  import { readTray, toggleInTray, writeTray } from '../../lib/compare-tray.js';
   import { formatCount } from '../../lib/format.js';
+  import { localizeHref } from '../../lib/i18n.js';
   import * as m from '../../paraglide/messages.js';
   import { setLocale } from '../../paraglide/runtime.js';
 
@@ -479,11 +498,15 @@ const COLUMNS = [
   const currencyButtons = controls.querySelectorAll('[data-currency]');
   const sortButtons = document.querySelectorAll('[data-sort]');
   const checkboxes = controls.querySelectorAll('input[type="checkbox"]');
+  const compareBar = document.getElementById('compare-bar');
+  const compareLink = document.getElementById('compare-link');
+  const compareClear = document.getElementById('compare-clear');
 
   const TEXT_SORTS = new Set(['name']);
   const BOOLEAN_KEYS = ['sharia', 'bibit', 'makmur', 'inactive'];
 
   let state = readStateFromUrl();
+  let compared = readTray();
   let funds = [];
   let dataDate = '';
 
@@ -572,6 +595,20 @@ const COLUMNS = [
     }
   }
 
+  function syncCompare() {
+    compareBar.hidden = compared.length === 0;
+    compareLink.textContent = m.compare_open({ count: compared.length });
+    compareLink.href = localizeHref(`/compare/${selectionQuery(compared)}`, locale);
+
+    for (const box of rows.querySelectorAll('[data-compare]')) {
+      const isCompared = compared.includes(box.dataset.compare);
+
+      box.checked = isCompared;
+      box.disabled = !isCompared && compared.length >= MAX_FUNDS;
+      box.title = box.disabled ? m.compare_full({ count: MAX_FUNDS }) : '';
+    }
+  }
+
   function render() {
     const matching = sortFunds(filterFunds(funds, state), state.sort, state.dir);
     const pageCount = Math.max(1, Math.ceil(matching.length / PAGE_SIZE));
@@ -583,12 +620,13 @@ const COLUMNS = [
 
     typeStrip.innerHTML = renderTypeStrip(funds, state, locale);
     revealSelectedType();
-    rows.innerHTML = renderRows(matching, state, dataDate, locale);
+    rows.innerHTML = renderRows(matching, state, dataDate, locale, new Set(compared));
     count.textContent = fundCountLabel(matching.length, locale);
     pageLabel.textContent = m.pager_range({ first: formatCount(first, locale), last: formatCount(last, locale), total: formatCount(matching.length, locale) });
     previousPage.disabled = state.page === 0;
     nextPage.disabled = state.page >= pageCount - 1;
     syncControls();
+    syncCompare();
     writeStateToUrl();
   }
 
@@ -645,8 +683,8 @@ const COLUMNS = [
   rows.addEventListener('click', (event) => {
     const row = event.target.closest('tr[data-href]');
 
-    // A click on the link itself, or one that ends a text selection, keeps its normal behaviour.
-    if (!row || event.target.closest('a') || getSelection().toString()) {
+    // A click on the link or the compare checkbox, or one that ends a text selection, keeps its normal behaviour.
+    if (!row || event.target.closest('a, .c-compare') || getSelection().toString()) {
       return;
     }
 
@@ -657,6 +695,21 @@ const COLUMNS = [
     }
   });
 
+  rows.addEventListener('change', (event) => {
+    const box = event.target.closest('[data-compare]');
+
+    if (box) {
+      compared = toggleInTray(box.dataset.compare);
+      syncCompare();
+    }
+  });
+
+  compareClear.addEventListener('click', () => {
+    writeTray([]);
+    compared = [];
+    syncCompare();
+  });
+
   document.addEventListener('keydown', (event) => {
     if (event.key === '/' && document.activeElement !== searchInput && !event.target.closest('input, textarea, select')) {
       event.preventDefault();
@@ -665,6 +718,7 @@ const COLUMNS = [
   });
 
   syncControls();
+  syncCompare();
 
   const response = await fetch('/explorer.json');
   const data = await response.json();

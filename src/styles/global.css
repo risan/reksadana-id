@@ -18,6 +18,11 @@
   --alloc-bonds: #14917f;
   --alloc-money: #d99a1e;
   --alloc-other: #b4508f;
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+  --series-5: #e87ba4;
 
   --sans: 'Schibsted Grotesk Variable', 'Helvetica Neue', Arial, sans-serif;
   --serif: 'Newsreader Variable', Georgia, serif;
@@ -47,6 +52,11 @@
     --alloc-bonds: #22a08e;
     --alloc-money: #b8801c;
     --alloc-other: #c0609f;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --series-5: #d55181;
 
     color-scheme: dark;
   }
@@ -150,6 +160,15 @@ kbd {
   font-size: 11px;
   line-height: 16px;
   text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 /* Layout */
@@ -308,6 +327,12 @@ main.wrap {
   font-weight: 450;
   line-height: 1.1;
   letter-spacing: -0.015em;
+}
+
+.intro {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 18px;
 }
 
 .lede {
@@ -542,6 +567,11 @@ select:focus {
   font-weight: 500;
   line-height: 17px;
   white-space: nowrap;
+}
+
+.tag-quiet {
+  border-color: var(--rule);
+  color: var(--muted);
 }
 
 .tag-ink {
