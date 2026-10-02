@@ -386,7 +386,7 @@ test('a short NAV match is no link when another record of the same source holds 
   const result = link([
     record('bibit', 'RD1', { name: 'Alpha Satu', nav: recent }),
     record('bareksa', '2', { name: 'Alpha Dua', nav: recent }),
-    record('bareksa', '3', { name: 'Alpha Tiga', manager: 'Beta Asset Management, PT', nav: recent }),
+    record('bareksa', '3', { name: 'Alpha Tiga', manager: '', nav: recent }),
   ]);
 
   assert.equal(result.funds.length, 3);
