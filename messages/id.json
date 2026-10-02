@@ -378,5 +378,7 @@
   "cost_fee_free": "Gratis",
   "cost_fee_up_to": "Maks. {value}",
   "cost_fee_from": "Min. {value}",
-  "cost_fees_note": "Biaya adalah batas maksimum menurut prospektus; biaya yang berlaku bisa lebih rendah."
+  "cost_fees_note": "Biaya adalah batas maksimum menurut prospektus; biaya yang berlaku bisa lebih rendah.",
+  "dividends_toggle": "Termasuk dividen",
+  "dividends_toggle_help": "Dividen diinvestasikan kembali pada tanggal ex-dividen. Hanya diketahui untuk dana yang pembayarannya ada di data ({count} dana); dana lain hanya menampilkan perubahan NAB."
 }

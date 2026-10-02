@@ -2,7 +2,7 @@ import { closeSync, existsSync, fstatSync, openSync, readFileSync, readSync, rea
 import path from 'node:path';
 import { buildCosts } from './costs.js';
 import { makmurFundUrl } from './referrals.js';
-import { computeReturns, fundCurrency, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, sparkline } from './series.js';
+import { computeReturns, dividendEvents, fundCurrency, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, sparkline, withDividendsReinvested } from './series.js';
 
 export const DATA_DIR = path.resolve('data');
 
@@ -411,11 +411,14 @@ export function shortManagerName(name) {
   return name?.replace(/^PT\.?\s+/i, '').replace(/,?\s+PT\.?$/i, '').trim() ?? null;
 }
 
-// Every return is the change in NAV, computed here so the chart, the table, and the fund list agree.
-// Bibit's own figures lag its NAV history, and its nav_adjusted changes base between scrapes. Its dividend
-// list only keeps the latest five payouts, which is too short to rebuild a total return.
+// Every return is computed here from one NAV history so the chart, the table, and the fund list agree.
+// Bibit's own figures lag its NAV history. The returns are the change in NAV; for a fund with dividends
+// `total` holds the same returns with each dividend reinvested on its ex-date, and is null for the others.
 export function fundPerformance(record, history = pickNavHistory(record)) {
-  return { source: history.primary, ...computeReturns(history) };
+  const events = dividendEvents(record, history);
+  const totalHistory = events.length > 0 ? withDividendsReinvested(history, events) : null;
+
+  return { source: history.primary, ...computeReturns(history), events, total: totalHistory && computeReturns(totalHistory), totalHistory };
 }
 
 // Some funds have a latest AUM in their Bibit fund file but no AUM history.
@@ -480,6 +483,7 @@ function buildFundSummaries() {
     const performance = fundPerformance(record, history);
     const aum = latestAum(record);
     const periodReturn = (period) => (active ? roundTo(performance.simplereturn[period], 5) : null);
+    const totalReturn = (period) => (active ? roundTo(performance.total.simplereturn[period], 5) : null);
 
     if (fund.currency === 'USD' && record.currency_exchange?.exchange_rate > 1) {
       usdToIdr = record.currency_exchange.exchange_rate;
@@ -507,6 +511,13 @@ function buildFundSummaries() {
       return_1y: periodReturn('1y'),
       return_3y: periodReturn('3y'),
       spark: active ? sparkline(history.points) : null,
+      total: performance.total && {
+        return_1m: totalReturn('1m'),
+        return_ytd: totalReturn('ytd'),
+        return_1y: totalReturn('1y'),
+        return_3y: totalReturn('3y'),
+        spark: active ? sparkline(performance.totalHistory.points) : null,
+      },
       large_move: active && hasLargeMoveInLastYear(history.points),
       dividends: (record.dividends?.length ?? 0) > 0,
       active,

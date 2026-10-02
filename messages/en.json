@@ -378,5 +378,7 @@
   "cost_fee_free": "Free",
   "cost_fee_up_to": "Up to {value}",
   "cost_fee_from": "From {value}",
-  "cost_fees_note": "Fees are the maximum per prospectus; the fee you pay can be lower."
+  "cost_fees_note": "Fees are the maximum per prospectus; the fee you pay can be lower.",
+  "dividends_toggle": "Include dividends",
+  "dividends_toggle_help": "Dividends are reinvested on the ex-date. Known only for funds whose payouts the data has ({count} funds); other funds show the NAV change only."
 }
