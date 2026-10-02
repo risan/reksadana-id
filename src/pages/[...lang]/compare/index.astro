@@ -184,6 +184,11 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     max-width: 240px;
   }
 
+  /* Funds are columns, so every value lines up under its fund name. */
+  .compare-table td.num {
+    text-align: left;
+  }
+
   .compare-table thead th {
     border-bottom: 1px solid var(--rule-strong);
     color: var(--ink);

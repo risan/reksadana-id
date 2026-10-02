@@ -231,6 +231,7 @@ main.wrap {
   position: relative;
   color: var(--ink-2);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .site-nav a[aria-current='page'] {
@@ -723,5 +724,25 @@ select:focus {
 
   .page-title {
     font-size: 26px;
+  }
+}
+
+/* Wordmark, menu, and language switch no longer fit on one line. */
+@media (max-width: 560px) {
+  .site-header .wrap {
+    flex-wrap: wrap;
+    height: auto;
+    row-gap: 0;
+    padding-top: 10px;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+    padding: 8px 0 10px;
+  }
+
+  .site-nav a[aria-current='page']::after {
+    bottom: -10px;
   }
 }
