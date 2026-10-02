@@ -165,8 +165,9 @@ function continues(lastPoint, firstNewPoint) {
   return !areNeighbours(lastPoint, firstNewPoint) || Math.abs(ratio - 1) <= NEXT_DAY_MISMATCH;
 }
 
+// The canonical currency of data/funds.csv: 'IDR', 'USD', or null when no source says.
 export function fundCurrency(fund) {
-  return fund.currency_exchange?.currency ?? 'IDR';
+  return fund.fund?.currency || null;
 }
 
 // Bibit only gives a daily history (with nav_adjusted) for funds you can buy in its app. For the others it
@@ -251,9 +252,9 @@ function hasUnitError(bibitPoint, bareksaByMonth) {
 
 export function pickAumHistory(fund) {
   const key = fundCurrency(fund) === 'USD' ? 'aum_usd' : 'aum_idr';
-  const bareksa = cleanPoints(fund.bareksa?.aum ?? [], key);
+  const bareksa = cleanPoints(fund.bareksa?.aum ?? [], key, 'bareksa');
   const bareksaByMonth = new Map(bareksa.map((point) => [point.date.slice(0, 7), point.value]));
-  const bibitAll = cleanPoints(fund.aum ?? [], 'aum');
+  const bibitAll = cleanPoints(fund.aum ?? [], 'aum', 'bibit');
   const bibit = bibitAll.filter((point) => !hasUnitError(point, bareksaByMonth));
   const latestIsWrong = bibitAll.length > 0 && hasUnitError(bibitAll.at(-1), bareksaByMonth);
 

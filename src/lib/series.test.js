@@ -163,7 +163,7 @@ test('pickAumHistory drops single Bibit figures that are far off Bareksa for the
 
 test('pickAumHistory switches to Bareksa when Bibit is off by more than tenfold for the same month', () => {
   const fund = {
-    currency_exchange: { currency: 'USD' },
+    fund: { currency: 'USD' },
     aum: [{ date: '2026-07-01', aum: 330_000_000_000 }, { date: '2026-08-01', aum: 337_400_000_000 }],
     bareksa: { aum: [{ date: '2026-08-01', aum_idr: 6_114_335_031_558, aum_usd: 338_219_661 }], units: [], nav: [] },
   };
