@@ -159,14 +159,16 @@ function threeYearSub(returns) {
 const returnFigure = (returns, label) => ({ label, value: formatChange(ret('1y', returns), locale), className: changeClass(ret('1y', returns)), sub: threeYearSub(returns) });
 const worstFallFigure = (returns, label) => ({ label, value: formatPercent(returns.maxdrawdown?.['1y'] ?? null, locale), sub: m.figure_worst_fall_sub() });
 
+const navFigure = (returns) => ({
+  label: active ? m.figure_nav() : m.figure_last_nav(),
+  value: navValue === null ? '—' : formatNav(navValue, locale),
+  unit: currency,
+  sub: navDate ? formatDate(navDate, locale) : m.figure_no_nav(),
+  change: active ? ret('1d', returns) : null,
+});
+
 const figures = [
-  {
-    label: active ? m.figure_nav() : m.figure_last_nav(),
-    value: navValue === null ? '—' : formatNav(navValue, locale),
-    unit: currency,
-    sub: navDate ? formatDate(navDate, locale) : m.figure_no_nav(),
-    change: active ? ret('1d') : null,
-  },
+  { ...navFigure(performance), total: total && navFigure(total) },
   { ...returnFigure(performance, m.figure_return_1y()), total: total && returnFigure(total, m.figure_return_1y_total()) },
   { ...worstFallFigure(performance, m.figure_worst_fall()), total: total && worstFallFigure(total, m.figure_worst_fall_total()) },
   { label: m.figure_aum(), value: formatMoney(aum?.value ?? null, locale, aum?.currency), sub: aum ? formatMonth(aum.date, locale) : '' },
@@ -250,8 +252,14 @@ const sources = [
         <dt>{figureViews(figure).map((shown) => <span data-view={shown.view}>{shown.label}</span>)}</dt>
         <dd class="figure-value">{figureViews(figure).map((shown) => <span data-view={shown.view} class={shown.className ?? ''}>{shown.value}{shown.unit && shown.value !== '—' && <span class="unit">{shown.unit}</span>}</span>)}</dd>
         <dd class="figure-sub">
-          {figureViews(figure).map((shown) => <span data-view={shown.view}>{shown.sub}</span>)}
-          {figure.change !== null && figure.change !== undefined && <span class={changeClass(figure.change)}> · {m.figure_one_day({ change: formatChange(figure.change, locale) })}</span>}
+          {
+            figureViews(figure).map((shown) => (
+              <span data-view={shown.view}>
+                {shown.sub}
+                {shown.change !== null && shown.change !== undefined && <span class={changeClass(shown.change)}> · {m.figure_one_day({ change: formatChange(shown.change, locale) })}</span>}
+              </span>
+            ))
+          }
         </dd>
       </div>
     ))}
