@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { fundIdOfBibitSymbol, fundPerformance, isActive, latestAum, listFundIds, loadFundRecord, shortManagerName, staleSourceDate } from '../../../lib/data.js';
+import { describeCosts } from '../../../lib/costs-text.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from '../../../lib/format.js';
 import { typeName } from '../../../lib/fund-types.js';
 import { localePaths, localizeHref } from '../../../lib/i18n.js';
@@ -47,22 +48,6 @@ const PERIOD_LABELS = {
 };
 const TABLE_PERIODS = RETURN_PERIODS.filter((period) => period !== '1d');
 const ret = (period) => performance.simplereturn?.[period] ?? null;
-
-// Bibit stores a fraction; a few funds carry a raw number that cannot be a ratio, so those show as missing.
-const expenseRatio = fund.expenseratio?.percentage;
-const validExpenseRatio = typeof expenseRatio === 'number' && expenseRatio >= 0 && expenseRatio < 1 ? expenseRatio : null;
-
-function formatFee(fee) {
-  if (!fee) {
-    return '—';
-  }
-
-  if (fee.type === 'percent') {
-    return `${formatNumber(fee.value, locale, 2)}%`;
-  }
-
-  return `${fee.currency ?? ''} ${formatNumber(fee.value, locale)}`.trim();
-}
 
 // Document URLs come from scraped data, so never link anything but http(s), such as a javascript: URL.
 function isWebUrl(url) {
@@ -152,15 +137,9 @@ const returnsNote = performance.source
 const details = [
   [m.detail_type(), typeLabel === null ? null : `${typeLabel}${typeNote ? ` (${typeNote})` : ''}`],
   [m.detail_manager(), info.manager],
-  [m.detail_custodian(), fund.custodian_bank?.name],
   [m.detail_currency(), currency ?? m.detail_not_stated()],
   [m.detail_launched(), launchDate ? formatDate(launchDate, locale) : null],
   [m.detail_risk(), riskProfile],
-  [m.detail_min_buy(), fund.minbuy ? `${currency ?? ''} ${formatNumber(fund.minbuy, locale)}`.trim() : null],
-  [m.detail_expense_ratio(), validExpenseRatio === null ? null : formatPercent(validExpenseRatio, locale)],
-  [m.detail_fee_subscription(), fund.fee ? formatFee(fund.fee.subscription) : null],
-  [m.detail_fee_redemption(), fund.fee ? formatFee(fund.fee.redemption) : null],
-  [m.detail_fee_switch(), fund.fee ? formatFee(fund.fee.switch) : null],
 ].filter(([, value]) => value !== null && value !== undefined && value !== '');
 
 function threeYearSub() {
@@ -184,8 +163,18 @@ const figures = [
   { label: m.figure_return_1y(), value: formatChange(ret('1y'), locale), className: changeClass(ret('1y')), sub: threeYearSub() },
   { label: m.figure_worst_fall(), value: formatPercent(performance.maxdrawdown?.['1y'] ?? null, locale), sub: m.figure_worst_fall_sub() },
   { label: m.figure_aum(), value: formatMoney(aum?.value ?? null, locale, currency), sub: aum ? formatMonth(aum.date, locale) : '' },
-  { label: m.detail_expense_ratio(), value: validExpenseRatio === null ? '—' : formatPercent(validExpenseRatio, locale), sub: m.figure_expense_ratio_sub() },
 ].filter((figure, index) => index === 0 || figure.value !== '—');
+
+const costs = describeCosts(fund.costs, locale);
+const listOf = (value) => (value === null ? [] : [value]);
+const costRows = [
+  [m.detail_expense_ratio(), listOf(costs.expenseRatio)],
+  [m.compare_row_min_purchase(), costs.minPurchases],
+  [m.cost_row_min_topup(), listOf(costs.minTopup)],
+  [m.cost_row_min_redemption(), listOf(costs.minRedemption)],
+  ...(costs.fees.length === 0 ? [[m.compare_row_max_fees(), []]] : costs.fees.map((fee) => [fee.label, [fee]])),
+  [m.detail_custodian(), listOf(costs.custodian)],
+];
 
 const sources = [
   hasBibit && { name: 'Bibit', url: 'https://app.bibit.id/', what: m.source_bibit(), ids: info.sources.bibit },
@@ -474,6 +463,22 @@ const sources = [
           </section>
         )
       }
+
+      <section class="side-block">
+        <h2 class="section-title">{m.compare_group_costs()}</h2>
+        <dl class="kv">
+          {costRows.map(([label, values]) => (
+            <>
+              <dt>{label}</dt>
+              <dd>
+                {values.length === 0 && <span class="muted">{m.compare_not_in_sources()}</span>}
+                {values.map((value) => <div>{value.text} <span class="muted small">{value.source}</span></div>)}
+              </dd>
+            </>
+          ))}
+        </dl>
+        {costs.fees.length > 0 && <p class="small muted">{m.cost_fees_note()}</p>}
+      </section>
 
       <section class="side-block">
         <h2 class="section-title">{m.details_title()}</h2>

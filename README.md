@@ -45,11 +45,13 @@ Fund types (`type` column): `Pasar Uang` (money market), `Obligasi` (fixed incom
 
 | Path | What it holds |
 |---|---|
-| `data/bareksa/funds.csv` | One row per fund in Bareksa's list of all funds: `bareksa_id`, name, `slug` (the end of its Bareksa URL), type, manager, launch date, and `bibit_symbol`. `bibit_symbol` is the matching Bibit fund, or empty when there is no confident match. |
+| `data/bareksa/funds.csv` | One row per fund in Bareksa's list of all funds: `bareksa_id`, name, `slug` (the end of its Bareksa URL), type, manager, launch date, and `bibit_symbol`. `bibit_symbol` is the matching Bibit fund, or empty when there is no confident match. The page columns are described below the table. |
 | `data/bareksa/aum/<bareksa_id>.csv` | Monthly assets under management: `date,aum_idr,aum_usd`. |
 | `data/bareksa/units/<bareksa_id>.csv` | Monthly units outstanding: `date,units`. |
 | `data/bareksa/allocation/<bareksa_id>.csv` | Asset allocation in percent: `date,saham,obligasi,pasar_uang,lainnya` (equity, bonds, money market, other). Bareksa's own chart uses these four names in this order. Only some funds have it. |
 | `data/bareksa/nav/<bareksa_id>.csv` | Daily NAV per unit: `date,nav`. See "Load the Bareksa daily NAV" below. |
+
+`data/bareksa/funds.csv` also holds, from each fund's public Bareksa page: `currency`, `custodian`, `min_purchase`, `min_topup`, `min_redemption` (plain numbers, in the fund currency), `fee_purchase`, `fee_redemption`, `fee_switch` (maximum per prospectus, as `min-max` fractions: `-0.02` is at most 2%, `0.005-0.03` is 0.5% to 3%, `0` is free, empty is unknown) and `profile_date` (when the page was last fetched). `npm run scrape:bareksa:profiles` refreshes up to 400 fund pages per run, never-fetched first, then the oldest; `node scrapers/bareksa.js --profiles-all` fetches every page. The full Bareksa run also fills these fields when it fetches a profile.
 
 The matching rules are the same as for Kontan. Bareksa shows the manager on each fund's page, so the managers are compared too.
 
@@ -120,7 +122,7 @@ Public endpoints use the fund IDs of `data/funds.csv`:
 |---|---|
 | `/api/funds.json` | One entry per fund: the row of `funds.csv` (source IDs as lists), the latest NAV and AUM, and the 1-year return. |
 | `/csv/funds.csv` | A copy of `data/funds.csv`. |
-| `/api/funds/<id>.json` | The record of `loadFundRecord`: the Bibit fields, the per-source `nav`, `aum`, `kontan`, `bareksa`, `makmur`, the new `fund` row, and `history`, the NAV and AUM series the site draws, with the source of each point. |
+| `/api/funds/<id>.json` | The record of `loadFundRecord`: the Bibit fields, the per-source `nav`, `aum`, `kontan`, `bareksa`, `makmur`, the new `fund` row, `history`, the NAV and AUM series the site draws, with the source of each point, and `costs`, the merged costs and minimums (below). |
 | `/csv/nav/<id>.csv`, `/csv/aum/<id>.csv` | **Changed:** the chosen history, with columns `date,nav,source` and `date,aum,source` (they were copies of the Bibit files, with `nav_adjusted`). The raw source files are in the zip files. |
 | `/fund-ids.json` | Retired IDs and the fund that replaced each. |
 
@@ -183,6 +185,8 @@ The build fails if `dist/` has more than 19,000 files or a file over 24 MiB, bec
 
 ## Referral codes
 
+**Costs and minimums.** `loadFundRecord` merges them into `costs`, and every value keeps its `source`. The expense ratio is Bibit's `expenseratio.percentage` when it is a fraction between 0 and 0.1 (a few funds carry a raw number such as 4343.1, which is rejected), else Makmur's `expenseRatio` divided by 10,000, else unknown. The minimum purchase is listed per distributor: Bibit's `minbuy` only when the fund is buyable on Bibit, Makmur's `minFirstBuy`, and Bareksa's `min_purchase` (the prospectus value). The next purchase and the redemption minimum are Bareksa's. The maximum fees are Bareksa's, as `{ min, max }` fractions; Bibit's `fee` values are placeholders and are ignored. The custodian is Bareksa's, else Bibit's `custodian_bank`. A value no source has is `null` or an empty list, never 0, and the pages say "Not in our sources".
+
 The "Buy this fund" block on a fund page links to the fund on Bibit (only when it is buyable there) and on Makmur (only when it is matched), and shows the owner's referral code with a copy button. Neither app has a working referral link, so the code is shown, not linked. The codes and the link builders are in `src/lib/referrals.js`. Change the codes there. The site footer says that some links include the owner's referral codes.
 
 ## Update the data
@@ -194,9 +198,10 @@ The GitHub Actions workflow `.github/workflows/scrape.yml` runs once a day at 23
 | Every day | Bibit |
 | Every Saturday (Sunday morning in Jakarta) | Kontan and Makmur |
 | The first Saturday of the month (day 1 to 7) | Kontan as a full rescan, instead of the normal Kontan run |
+| Every day | Bareksa fund pages (`scrape:bareksa:profiles`, up to 400 pages) |
 | The 1st of every month | Bareksa (without the daily NAV) |
 
-You can also start it by hand from the Actions tab. The `sources` input picks one of `bibit` (the default), `kontan`, `kontan-full`, `makmur`, `bareksa`, or `all` (everything except the Kontan full rescan).
+You can also start it by hand from the Actions tab. The `sources` input picks one of `bibit` (the default), `kontan`, `kontan-full`, `makmur`, `bareksa`, `bareksa-profiles`, or `all` (everything except the Kontan full rescan).
 
 To run the scrapers yourself, you need Node.js 22 or newer. They have no dependencies to install.
 
@@ -211,6 +216,7 @@ npm run scrape:kontan
 npm run scrape:kontan:full   # scan every Kontan ID again (about 30 minutes)
 npm run scrape:makmur
 npm run scrape:bareksa
+npm run scrape:bareksa:profiles   # up to 400 Bareksa fund pages: custodian, minimums, fees
 
 # Join the records of all sources into data/funds.csv (npm run scrape does this last)
 npm run link

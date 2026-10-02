@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { analyzeFunds, chartRange, costsOf, indexedSeries, resolveSelection, returnsAtCommonEnd, selectionQuery, selectionText } from './compare.js';
+import { analyzeFunds, chartRange, indexedSeries, resolveSelection, returnsAtCommonEnd, selectionQuery, selectionText } from './compare.js';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -169,13 +169,4 @@ test('returns are measured back from the common end, not from each fund\'s own e
 
   assert.equal(analysis.commonEnd, '2026-09-30');
   assert.ok(Math.abs(result.simplereturn['1m'] - (494 / 463 - 1)) < 1e-12);
-});
-
-test('costs read from record.costs, and a missing part stays missing', () => {
-  assert.deepEqual(costsOf({}), { expenseRatio: null, minPurchases: [], maxFees: [], custodian: null });
-
-  const costs = costsOf({ costs: { expense_ratio: 0.012, min_purchase: [{ distributor: 'Bibit', amount: 10000 }], max_fees: { subscription: 0.01, redemption: 0 }, custodian: 'Bank X' } });
-
-  assert.equal(costs.expenseRatio, 0.012);
-  assert.deepEqual(costs.maxFees, [['subscription', 0.01], ['redemption', 0]]);
 });

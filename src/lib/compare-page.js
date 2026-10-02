@@ -3,11 +3,12 @@ import uPlot from 'uplot';
 import 'uplot/dist/uPlot.min.css';
 import * as m from '../paraglide/messages.js';
 import { setLocale } from '../paraglide/runtime.js';
-import { CHART_RANGES, MAX_FUNDS, MIN_FUNDS, analyzeFunds, chartRange, costsOf, indexedSeries, resolveSelection, returnsAtCommonEnd, selectionQuery, selectionText } from './compare.js';
+import { CHART_RANGES, MAX_FUNDS, MIN_FUNDS, analyzeFunds, chartRange, indexedSeries, resolveSelection, returnsAtCommonEnd, selectionQuery, selectionText } from './compare.js';
+import { describeCosts } from './costs-text.js';
 import { readTrayText, writeTray } from './compare-tray.js';
 import { DEFAULT_STATE, escapeHtml, filterFunds, prepareFunds, sortFunds } from './explorer.js';
 import { attachTooltip, axes, chartHeight, cssColor, toSeconds } from './fund-charts.js';
-import { changeClass, currencyPrefix, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from './format.js';
+import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from './format.js';
 import { typeName } from './fund-types.js';
 import { anchor, localizeHref } from './i18n.js';
 import { indexAtOrBefore, pickNavHistory } from './series.js';
@@ -18,12 +19,6 @@ const CAGR_PERIODS = ['3y', '5y'];
 const DRAWDOWN_PERIODS = ['1y', '3y'];
 const DEFAULT_RANGE = '1y';
 const CHART_HEIGHT = 320;
-
-const FEE_LABELS = {
-  subscription: () => m.detail_fee_subscription(),
-  redemption: () => m.detail_fee_redemption(),
-  switch: () => m.detail_fee_switch(),
-};
 
 async function getJson(url) {
   try {
@@ -280,15 +275,15 @@ export async function mountComparePage() {
       return { expense: missing, minimum: missing, fees: missing, custodian: missing };
     }
 
-    const costs = costsOf(column.record);
-    const currency = column.fund.currency;
-    const lines = (items) => (items.length === 0 ? notInSources : items.map((item) => `<div>${item}</div>`).join(''));
+    const costs = describeCosts(column.record.costs, locale);
+    const line = (item) => `<div>${escapeHtml(item.label ?? '')} ${escapeHtml(item.text)} <span class="sub">${escapeHtml(item.source)}</span></div>`;
+    const lines = (items) => (items.length === 0 ? notInSources : items.map(line).join(''));
 
     return {
-      expense: costs.expenseRatio === null ? notInSources : formatPercent(costs.expenseRatio, locale),
-      minimum: lines(costs.minPurchases.map((purchase) => `${escapeHtml(purchase.distributor)} <span class="mono">${currencyPrefix(currency)} ${formatNumber(purchase.amount, locale)}</span>`)),
-      fees: lines(costs.maxFees.map(([kind, value]) => `${escapeHtml(FEE_LABELS[kind]())} ${formatPercent(value, locale)}`)),
-      custodian: costs.custodian === null ? notInSources : escapeHtml(costs.custodian),
+      expense: lines(costs.expenseRatio === null ? [] : [costs.expenseRatio]),
+      minimum: lines(costs.minPurchases),
+      fees: lines(costs.fees),
+      custodian: lines(costs.custodian === null ? [] : [costs.custodian]),
     };
   }
 

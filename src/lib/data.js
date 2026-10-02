@@ -1,5 +1,6 @@
 import { closeSync, existsSync, fstatSync, openSync, readFileSync, readSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import { buildCosts } from './costs.js';
 import { makmurFundUrl } from './referrals.js';
 import { computeReturns, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, sparkline } from './series.js';
 
@@ -276,6 +277,13 @@ function loadBareksa(ids) {
   };
 }
 
+// The Bareksa row columns of a fund's Bareksa funds (custodian, minimums, fees), the first value found winning.
+function loadBareksaProfile(ids) {
+  const rows = ids.map((id) => Object.fromEntries(Object.entries(sourceRows('bareksa').get(id)).map(([column, value]) => [column, emptyToNull(value)])));
+
+  return mergeFirstValues(rows);
+}
+
 // The first Makmur fund of one fund, with its raw Makmur record, or null when there is none.
 // The record's numbers are scaled: see "Makmur" in the README.
 function loadMakmur(ids) {
@@ -299,9 +307,12 @@ function loadMakmur(ids) {
 export function loadFundRecord(id) {
   const fund = loadFundsById().get(id);
   const { bibit, bareksa, kontan, makmur } = fund.sources;
+  const bibitRecord = mergeFirstValues(bibit.map((symbol) => readJson(null, 'funds', `${symbol}.json`)));
+  const makmurFund = loadMakmur(makmur);
 
   return {
-    ...mergeFirstValues(bibit.map((symbol) => readJson(null, 'funds', `${symbol}.json`))),
+    ...bibitRecord,
+    costs: buildCosts({ bibit: bibitRecord, makmur: makmurFund?.data, bareksa: loadBareksaProfile(bareksa), currency: fund.currency }),
     documents: firstBibitJson(bibit, 'documents'),
     switchables: firstBibitJson(bibit, 'switchables'),
     dividends: firstBibitJson(bibit, 'dividends'),
@@ -310,7 +321,7 @@ export function loadFundRecord(id) {
     aum: readUnion(BIBIT_DIR, 'aum', bibit, (row) => ({ date: row.date, aum: Number(row.aum) })),
     kontan: loadKontan(kontan),
     bareksa: loadBareksa(bareksa),
-    makmur: loadMakmur(makmur),
+    makmur: makmurFund,
   };
 }
 

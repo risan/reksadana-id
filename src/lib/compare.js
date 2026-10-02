@@ -160,22 +160,3 @@ export function indexedSeries(analysis, range) {
 
   return { dates: sortedDates, series };
 }
-
-// The cost figures of a fund. Step 3 puts them in record.costs; this is the one place that reads that shape:
-// { expense_ratio: fraction, min_purchase: [{ distributor, amount }], max_fees: { subscription, redemption, switch }
-// as fractions, custodian: text }. Any part may be missing, and missing means "not in our sources", never zero.
-export function costsOf(record) {
-  const costs = record?.costs ?? {};
-  const fees = costs.max_fees ?? {};
-
-  return {
-    expenseRatio: costs.expense_ratio ?? null,
-    minPurchases: costs.min_purchase ?? [],
-    maxFees: [
-      ['subscription', fees.subscription ?? null],
-      ['redemption', fees.redemption ?? null],
-      ['switch', fees.switch ?? null],
-    ].filter(([, value]) => value !== null),
-    custodian: costs.custodian ?? null,
-  };
-}

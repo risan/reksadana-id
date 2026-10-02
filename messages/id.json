@@ -105,7 +105,6 @@
   "figure_worst_fall": "Penurunan terdalam, 1 tahun",
   "figure_worst_fall_sub": "Dari puncak ke dasar",
   "figure_aum": "Dana kelolaan",
-  "figure_expense_ratio_sub": "Biaya per tahun",
   "moves_title_one": "Pergerakan NAB satu hari yang besar:",
   "moves_title_many": "Pergerakan NAB satu hari yang besar:",
   "moves_item": "{change} pada {date}",
@@ -166,7 +165,6 @@
   "detail_not_stated": "Tidak disebutkan",
   "detail_launched": "Tanggal peluncuran",
   "detail_risk": "Profil risiko",
-  "detail_min_buy": "Minimum pembelian",
   "detail_expense_ratio": "Expense ratio",
   "detail_fee_subscription": "Biaya pembelian",
   "detail_fee_redemption": "Biaya penjualan kembali",
@@ -261,6 +259,7 @@
   "api_fund_text": "Semua tentang satu reksa dana: catatan lengkap Bibit (bila Bibit mencantumkannya), ditambah <code>fund</code>, <code>history</code>, <code>documents</code>, <code>switchables</code>, <code>dividends</code>, <code>nav</code>, <code>aum</code>, dan reksa dana yang cocok dari Kontan, Bareksa, dan Makmur. Bagian yang tidak ada berisi <code>null</code>, atau daftar kosong untuk <code>nav</code> dan <code>aum</code>.",
   "api_fund_fund": "Reksa dana seperti pada daftar di atas, dengan semua ID sumbernya.",
   "api_fund_history": "NAB dan dana kelolaan yang digambar situs ini: \\{ nav, aum \\}, masing-masing daftar berisi \\{ date, value, source \\}. File CSV dibuat darinya.",
+  "api_fund_costs": "Biaya dan minimum, tiap nilai dengan sumbernya (<code>bibit</code>, <code>makmur</code>, atau <code>bareksa</code>): <code>expense_ratio</code> \\{ value, source \\} sebagai pecahan, <code>min_purchase</code> daftar \\{ amount, source \\} per distributor, <code>min_topup</code> dan <code>min_redemption</code> \\{ amount, source \\}, <code>max_fees</code> \\{ subscription, redemption, switch \\} masing-masing \\{ min, max, source \\} sebagai pecahan (<code>min</code> kosong berarti hanya batas atas, <code>max</code> 0 berarti gratis; angka dari Bareksa adalah batas maksimum menurut prospektus), dan <code>custodian</code> \\{ name, source \\}. Jumlah dalam mata uang reksa dana (<code>currency</code>). Nilai yang tidak ada di sumber kami berisi null atau daftar kosong, bukan 0.",
   "api_fund_symbol": "Ticker Bibit. Tidak ada untuk reksa dana yang tidak dicantumkan Bibit, begitu pula kolom Bibit lainnya.",
   "api_fund_tradeable": "Bisa dibeli di aplikasi Bibit.",
   "api_fund_nav": "NAB harian Bibit: \\{ date, nav, nav_adjusted \\}. Menggabungkan catatan reksa dana yang dicantumkan Bibit dengan lebih dari satu simbol.",
@@ -372,5 +371,12 @@
   "compare_row_min_purchase": "Minimum pembelian",
   "compare_row_max_fees": "Biaya maksimum",
   "compare_not_in_sources": "Tidak ada di sumber kami",
-  "compare_returns_note": "Semua angka sampai {date}, NAB terakhir yang dimiliki bersama dana yang ada di grafik."
+  "compare_returns_note": "Semua angka sampai {date}, NAB terakhir yang dimiliki bersama dana yang ada di grafik.",
+  "cost_source_bareksa": "Bareksa, menurut prospektus",
+  "cost_row_min_topup": "Minimum pembelian berikutnya",
+  "cost_row_min_redemption": "Minimum penjualan kembali",
+  "cost_fee_free": "Gratis",
+  "cost_fee_up_to": "Maks. {value}",
+  "cost_fee_from": "Min. {value}",
+  "cost_fees_note": "Biaya adalah batas maksimum menurut prospektus; biaya yang berlaku bisa lebih rendah."
 }
