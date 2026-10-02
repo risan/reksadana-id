@@ -67,6 +67,8 @@ assert.equal(fundHolding('bareksa', '6'), fundHolding('kontan', '16626'), 'Danap
 assert.equal(fundHolding('bareksa', '2733'), fundHolding('kontan', '17042'), 'Danapathi Money Market Fund must hold the Demina Kontan record');
 assert.equal(fundHolding('bareksa', '37'), fundHolding('kontan', '160'), 'Principal Islamic Equity Growth Syariah must hold the CIMB Kontan record');
 
+assert.equal(fundHolding('bareksa', '3332'), fundHolding('bibit', 'RD3769'), 'Ashmore IDX30 Index Equity Fund must hold the Fwd Asset Bibit record');
+
 // These Kontan records carry another fund's NAV under their own name.
 assert.notEqual(fundHolding('bareksa', '3355'), fundHolding('kontan', '15637'), 'BRI MI Proteksi 60 and the Pinnacle Kontan record are different funds');
 assert.notEqual(fundHolding('bareksa', '3728'), fundHolding('kontan', '15950'), 'Avrist Bond Fund and the Batavia Kontan record are different funds');

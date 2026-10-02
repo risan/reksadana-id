@@ -139,15 +139,18 @@ test('equal NAVs from different managers are not linked', () => {
   assert.equal(result.funds.length, 2);
 });
 
-test('a long equal history links across a renamed manager when the names mostly agree', () => {
+const DANAPATHI = 'Danapathi Asset Management, PT';
+const SHINHAN = 'PT Shinhan Asset Management Indonesia.';
+
+test('a long equal history links one name across a renamed manager, but not a short one', () => {
   const nav = fourDecimalNav(12);
   const renamed = link([
-    record('bareksa', '6', { name: 'Danapathi Equity Growth', manager: 'Danapathi Asset Management, PT', nav }),
-    record('kontan', '16626', { name: 'DEMINA EQUITY GROWTH', manager: 'PT Shinhan Asset Management Indonesia.', nav }),
+    record('bareksa', '6', { name: 'Danapathi Equity Growth', manager: DANAPATHI, nav }),
+    record('kontan', '16626', { name: 'DANAPATHI EQUITY GROWTH', manager: SHINHAN, nav }),
   ]);
   const shortHistory = link([
-    record('bareksa', '6', { name: 'Danapathi Equity Growth', manager: 'Danapathi Asset Management, PT', nav: nav.slice(0, 9) }),
-    record('kontan', '16626', { name: 'DEMINA EQUITY GROWTH', manager: 'PT Shinhan Asset Management Indonesia.', nav: nav.slice(0, 9) }),
+    record('bareksa', '6', { name: 'Danapathi Equity Growth', manager: DANAPATHI, nav: nav.slice(0, 9) }),
+    record('kontan', '16626', { name: 'DANAPATHI EQUITY GROWTH', manager: SHINHAN, nav: nav.slice(0, 9) }),
   ]);
 
   assert.equal(renamed.funds.length, 1);
@@ -155,15 +158,56 @@ test('a long equal history links across a renamed manager when the names mostly 
   assert.equal(shortHistory.funds.length, 2);
 });
 
-test('a long equal history under a different name and manager is reported, not linked', () => {
+test('funds renamed with their manager link only when the same two managers have two such funds', () => {
+  const equityNav = fourDecimalNav(12);
+  const moneyMarketNav = fourDecimalNav(12, 3100.4321);
+  const demina = 'PT Demina Capital Asset Management';
+  const equity = [
+    record('bareksa', '1', { name: 'Danapathi Equity Fund', manager: DANAPATHI, nav: equityNav }),
+    record('kontan', '2', { name: 'Demina Equity Fund', manager: demina, nav: equityNav }),
+  ];
+  const moneyMarket = [
+    record('bareksa', '3', { name: 'Danapathi Money Market', manager: DANAPATHI, nav: moneyMarketNav }),
+    record('kontan', '4', { name: 'Demina Money Market', manager: demina, nav: moneyMarketNav }),
+  ];
+  const once = link(moneyMarket);
+  const twice = link([...equity, ...moneyMarket]);
+
+  assert.equal(once.funds.length, 2);
+  assert.equal(once.report.unlinkedOtherManagerMatches.length, 1);
+  assert.equal(twice.funds.length, 2);
+  assert.equal(twice.report.linksByRule['nav-renamed-manager'], 2);
+});
+
+test('a long equal history under different managers stays apart when the names differ beyond the managers', () => {
   const nav = fourDecimalNav(12);
+  const pairs = [
+    ['Avrist Bond Fund', 'Avrist Asset Management, PT', 'Batavia Obligasi Negara 2', 'PT. Batavia Prosperindo Aset Manajemen'],
+    ['Uobam Sustainable Equity Indonesia A', 'UOB Asset Management Indonesia, PT', 'Uobam Sustainable Equity Indonesia D', 'PT. Other Asset Management'],
+    ['Alpha Equity Fund', MANAGER, 'Alpha Equity Fund ETF', 'PT. Other Asset Management'],
+  ];
+
+  for (const [nameA, managerA, nameB, managerB] of pairs) {
+    const result = link([
+      record('bareksa', '1', { name: nameA, manager: managerA, nav }),
+      record('kontan', '2', { name: nameB, manager: managerB, nav }),
+    ]);
+
+    assert.equal(result.funds.length, 2, `${nameA} and ${nameB}`);
+    assert.equal(result.report.unlinkedOtherManagerMatches.length, 1);
+  }
+});
+
+test('two records that each match one symbol of a relisted Bibit fund are two candidates for one fund', () => {
   const result = link([
-    record('bareksa', '3728', { name: 'Avrist Bond Fund', manager: 'Avrist Asset Management, PT', nav }),
-    record('kontan', '15950', { name: 'Batavia Obligasi Negara 2', manager: 'PT. Batavia Prosperindo Aset Manajemen', nav }),
+    record('bibit', 'RD1', { name: 'Alpha Fund', nav: [['2026-09-01', 1500.1234]] }),
+    record('bibit', 'RD2', { name: 'Alpha Fund', nav: [['2026-09-02', 1700.1234]] }),
+    record('bareksa', '3', { name: 'Alpha Other Fund', nav: [['2026-09-01', 1500.1234]] }),
+    record('bareksa', '4', { name: 'Alpha Another Fund', nav: [['2026-09-02', 1700.1234]] }),
   ]);
 
-  assert.equal(result.funds.length, 2);
-  assert.equal(result.report.unlinkedOtherManagerMatches.length, 1);
+  assert.equal(result.funds.length, 3);
+  assert.equal(result.report.linksByRule['nav-short'], undefined);
 });
 
 test('a fund Bibit listed again under a new symbol is one fund', () => {
