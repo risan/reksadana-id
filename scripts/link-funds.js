@@ -11,7 +11,7 @@ const FUND_IDS_HEADER = ['id', 'first_published', 'current_id'];
 
 const SOURCES = ['bibit', 'bareksa', 'kontan', 'makmur'];
 const ID_PREFIXES = { bibit: '', bareksa: 'BRK', kontan: 'KTN', makmur: 'MKR' };
-const NAME_PRIORITY = ['makmur', 'bibit', 'kontan'];
+const NAME_PRIORITY = ['makmur', 'bibit'];
 const MANAGER_PRIORITY = ['bareksa', 'bibit', 'kontan', 'makmur'];
 const TYPE_PRIORITY = ['bibit', 'bareksa', 'kontan', 'makmur'];
 const CURRENCY_PRIORITY = ['bibit', 'makmur', 'bareksa'];
@@ -516,6 +516,8 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
       ...bareksaMembers.filter(isActiveInBareksa),
       ...NAME_PRIORITY.flatMap((source) => ordered.filter((member) => member.source === source)),
       ...bareksaMembers.filter((member) => !isActiveInBareksa(member)),
+      // Kontan often writes names in capitals, so it names a fund only when no other source does.
+      ...ordered.filter((member) => member.source === 'kontan'),
     ];
     const names = nameOrder.map((member) => member.name).filter((name) => name !== '');
     const knownNames = new Set([normalizeName(names[0] ?? '')]);
