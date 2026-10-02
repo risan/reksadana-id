@@ -80,14 +80,6 @@ export async function mountComparePage() {
   const missing = '<span class="nil">&mdash;</span>';
   const notInSources = `<span class="nil">${escapeHtml(m.compare_not_in_sources())}</span>`;
 
-  // The NAV history, and the one with dividends reinvested for a fund that pays them.
-  function histories(record) {
-    const history = pickNavHistory(record);
-    const events = dividendEvents(record, history);
-
-    return { history, totalHistory: events.length > 0 ? withDividendsReinvested(history, events) : null };
-  }
-
   async function load(id) {
     if (loaded.has(id)) {
       return;
@@ -103,7 +95,15 @@ export async function mountComparePage() {
       record = await getJson(url, { cache: 'reload' });
     }
 
-    loaded.set(id, hasCurrentShape(record) ? { status: 'ready', record, ...histories(record) } : { status: 'failed' });
+    if (hasCurrentShape(record)) {
+      const history = pickNavHistory(record);
+      const events = dividendEvents(record, history);
+
+      loaded.set(id, { status: 'ready', record, history, totalHistory: events.length > 0 ? withDividendsReinvested(history, events) : null });
+    } else {
+      loaded.set(id, { status: 'failed' });
+    }
+
     render();
   }
 
