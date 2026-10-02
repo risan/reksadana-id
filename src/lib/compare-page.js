@@ -11,7 +11,8 @@ import { attachTooltip, axes, chartHeight, cssColor, toSeconds } from './fund-ch
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from './format.js';
 import { shariaText, typeName } from './fund-types.js';
 import { anchor, localizeHref } from './i18n.js';
-import { indexAtOrBefore, pickNavHistory } from './series.js';
+import { readIncludeDividends, writeIncludeDividends } from './dividend-setting.js';
+import { dividendEvents, indexAtOrBefore, pickNavHistory, withDividendsReinvested } from './series.js';
 
 const PICKER_RESULT_LIMIT = 8;
 const RETURN_PERIODS = ['1m', 'ytd', '1y', '3y', '5y'];
@@ -52,6 +53,7 @@ export async function mountComparePage() {
   const tableSection = document.getElementById('compare-table-section');
   const table = document.getElementById('compare-table');
   const tableEnd = document.getElementById('table-end');
+  const includeDividends = document.getElementById('include-dividends');
 
   const explorerData = await getJson('/explorer.json');
 
@@ -78,6 +80,14 @@ export async function mountComparePage() {
   const missing = '<span class="nil">&mdash;</span>';
   const notInSources = `<span class="nil">${escapeHtml(m.compare_not_in_sources())}</span>`;
 
+  // The NAV history, and the one with dividends reinvested for a fund that pays them.
+  function histories(record) {
+    const history = pickNavHistory(record);
+    const events = dividendEvents(record, history);
+
+    return { history, totalHistory: events.length > 0 ? withDividendsReinvested(history, events) : null };
+  }
+
   async function load(id) {
     if (loaded.has(id)) {
       return;
@@ -93,7 +103,7 @@ export async function mountComparePage() {
       record = await getJson(url, { cache: 'reload' });
     }
 
-    loaded.set(id, hasCurrentShape(record) ? { status: 'ready', record, history: pickNavHistory(record) } : { status: 'failed' });
+    loaded.set(id, hasCurrentShape(record) ? { status: 'ready', record, ...histories(record) } : { status: 'failed' });
     render();
   }
 
@@ -387,7 +397,7 @@ export async function mountComparePage() {
       return;
     }
 
-    const analysis = settled ? analyzeFunds(ids.filter((id) => loaded.get(id).status === 'ready').map((id) => ({ id, history: loaded.get(id).history }))) : null;
+    const analysis = settled ? analyzeFunds(ids.filter((id) => loaded.get(id).status === 'ready').map((id) => ({ id, history: shownHistory(loaded.get(id)) }))) : null;
 
     if (analysis) {
       noticeLines.push(...analysis.excluded.map(exclusionNotice));
@@ -400,6 +410,10 @@ export async function mountComparePage() {
 
     notices.innerHTML = noticeLines.map((line) => `<p class="notice">${escapeHtml(line)}</p>`).join('');
     renderTable(analysis);
+  }
+
+  function shownHistory(entry) {
+    return includeDividends.checked && entry.totalHistory ? entry.totalHistory : entry.history;
   }
 
   function addFund(id) {
@@ -432,6 +446,12 @@ export async function mountComparePage() {
       }
     });
   }
+
+  includeDividends.checked = readIncludeDividends();
+  includeDividends.addEventListener('change', () => {
+    writeIncludeDividends(includeDividends.checked);
+    render();
+  });
 
   for (const button of rangeButtons) {
     button.addEventListener('click', () => {

@@ -1,11 +1,15 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import { loadFundSummaries } from '../../../lib/data.js';
+import { formatCount } from '../../../lib/format.js';
 import { CHART_RANGES } from '../../../lib/compare.js';
 import { localePaths } from '../../../lib/i18n.js';
 import * as m from '../../../paraglide/messages.js';
 
 export const getStaticPaths = () => localePaths();
 
+const locale = Astro.currentLocale ?? 'id';
+const dividendFundCount = loadFundSummaries().funds.filter((fund) => fund.total).length;
 const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_ytd(), '1y': m.period_1y(), '3y': m.period_3y(), '5y': m.period_5y(), all: m.period_all() };
 ---
 
@@ -23,6 +27,11 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     <p class="muted small" id="picker-note" aria-live="polite"></p>
     <ul class="picker-results" id="picker-results" hidden></ul>
   </div>
+
+  <label class="dividend-toggle">
+    <input type="checkbox" id="include-dividends" /> {m.dividends_toggle()}
+    <span class="muted small">{m.dividends_toggle_help({ count: formatCount(dividendFundCount, locale) })}</span>
+  </label>
 
   <div id="compare-notices"></div>
   <p class="compare-empty" id="compare-empty">{m.compare_loading()}</p>
