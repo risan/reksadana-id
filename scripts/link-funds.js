@@ -455,13 +455,14 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
         return false;
       }
 
-      const [alignedCandidate] = alignNav(candidate, other).pair;
+      // Both alignments count: the one that agrees best overall can hide an equal value on the other.
+      const candidateAlignments = candidate.source === 'kontan' && other.source !== 'kontan' ? [candidate, movedBack(candidate)] : [candidate];
 
-      return sharedValues.some(({ date, value }) => {
+      return candidateAlignments.some((alignedCandidate) => sharedValues.some(({ date, value }) => {
         const candidateValue = valueOn(alignedCandidate, date);
 
         return candidateValue !== undefined && valuesAgree(candidateValue, value) && sharedDigits(candidateValue, value) >= MIN_DISTINCTIVE_DIGITS;
-      });
+      }));
     });
   };
 

@@ -475,6 +475,16 @@ test('a short NAV match is no link when a Kontan record matches the same Bibit v
   assert.equal(result.funds.length, 3);
 });
 
+test('a short NAV match is no link when a Kontan record matches on raw dates but agrees better shifted', () => {
+  const result = link([
+    record('bibit', 'RD1', { name: 'Alpha Satu', nav: [['2026-09-30', 25888.12], ['2026-10-01', 25889.56]] }),
+    record('kontan', '2', { name: 'Alpha Dua', nav: [['2026-09-30', 25888.12], ['2026-10-01', 25889.56]] }),
+    record('kontan', '3', { name: 'Alpha Tiga', nav: [['2026-09-30', 25888.12], ['2026-10-01', 25888.11], ['2026-10-02', 25889.55]] }),
+  ]);
+
+  assert.equal(result.funds.length, 3);
+});
+
 test('a short NAV match between records of one manager with no number conflict stays linked (accepted risk)', () => {
   const recent = [['2026-10-01', 2588.1234]];
   const result = link([
