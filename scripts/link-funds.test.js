@@ -139,6 +139,65 @@ test('equal NAVs from different managers are not linked', () => {
   assert.equal(result.funds.length, 2);
 });
 
+test('a long equal history links across a renamed manager when the names mostly agree', () => {
+  const nav = fourDecimalNav(12);
+  const renamed = link([
+    record('bareksa', '6', { name: 'Danapathi Equity Growth', manager: 'Danapathi Asset Management, PT', nav }),
+    record('kontan', '16626', { name: 'DEMINA EQUITY GROWTH', manager: 'PT Shinhan Asset Management Indonesia.', nav }),
+  ]);
+  const shortHistory = link([
+    record('bareksa', '6', { name: 'Danapathi Equity Growth', manager: 'Danapathi Asset Management, PT', nav: nav.slice(0, 9) }),
+    record('kontan', '16626', { name: 'DEMINA EQUITY GROWTH', manager: 'PT Shinhan Asset Management Indonesia.', nav: nav.slice(0, 9) }),
+  ]);
+
+  assert.equal(renamed.funds.length, 1);
+  assert.equal(renamed.report.linksByRule['nav-renamed-manager'], 1);
+  assert.equal(shortHistory.funds.length, 2);
+});
+
+test('a long equal history under a different name and manager is reported, not linked', () => {
+  const nav = fourDecimalNav(12);
+  const result = link([
+    record('bareksa', '3728', { name: 'Avrist Bond Fund', manager: 'Avrist Asset Management, PT', nav }),
+    record('kontan', '15950', { name: 'Batavia Obligasi Negara 2', manager: 'PT. Batavia Prosperindo Aset Manajemen', nav }),
+  ]);
+
+  assert.equal(result.funds.length, 2);
+  assert.equal(result.report.unlinkedOtherManagerMatches.length, 1);
+});
+
+test('a fund Bibit listed again under a new symbol is one fund', () => {
+  const result = link([
+    record('bibit', 'RD846', { name: 'Mandiri Dana Optima', manager: 'Mandiri Manajemen Investasi, PT', nav: [['2020-03-23', 1465.887]] }),
+    record('bibit', 'RD3820', { name: 'Mandiri Dana Optima', manager: 'PT Mandiri Manajemen Investasi', nav: [['2021-02-15', 1483.5541]] }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+  assert.equal(result.funds[0].id, 'RD3820');
+  assert.equal(result.report.linksByRule['bibit-relisted'], 1);
+});
+
+test('Bibit records of one name stay apart when their NAVs differ or their managers are unknown', () => {
+  const result = link([
+    record('bibit', 'RD1', { name: 'Same Name Fund', nav: [['2026-09-30', 1500.1234]] }),
+    record('bibit', 'RD2', { name: 'Same Name Fund', nav: [['2026-09-30', 1700.1234]] }),
+    record('bibit', 'RD3', { name: 'Same Name Fund', manager: '' }),
+  ]);
+
+  assert.equal(result.funds.length, 3);
+});
+
+test('a short NAV match links when the other side is one relisted Bibit fund under two symbols', () => {
+  const result = link([
+    record('bibit', 'RD1961', { name: 'Minna Padi Hastinapura Saham', nav: [['2019-12-20', 812.3456]] }),
+    record('bibit', 'RD10162', { name: 'Minna Padi Hastinapura Saham', nav: [['2026-09-30', 1587.7419], ['2026-10-01', 1588.1234]] }),
+    record('bareksa', '3665', { name: 'Minna Padi Hastinapura Saham Baru', nav: [['2019-12-20', 812.3456], ['2026-09-30', 1587.7419], ['2026-10-01', 1588.1234]] }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+  assert.equal(result.report.linksByRule['nav-short'], 1);
+});
+
 test('equal NAVs in different currencies are not linked', () => {
   const nav = fourDecimalNav(5);
   const result = link([

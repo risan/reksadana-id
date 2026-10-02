@@ -14,6 +14,7 @@
     "scrape:bareksa": "node scrapers/bareksa.js",
     "scrape:bareksa:profiles": "node scrapers/bareksa.js --profiles",
     "link": "node scripts/link-funds.js",
+    "pretest": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide --strategy globalVariable baseLocale --silent",
     "test": "node --test scrapers/*.test.js scripts/*.test.js src/*.test.js src/lib/*.test.js",
     "dev": "astro dev",
     "build": "astro build && node scripts/write-redirects.js && node scripts/check-dist.js && node scripts/check-funds.js",

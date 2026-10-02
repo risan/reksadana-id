@@ -62,4 +62,16 @@ const gemilangOneLastDate = fs.readFileSync('data/bareksa/nav/3569.csv', 'utf8')
 assert.ok(gemilangOne.kontan === '', 'Gemilang I must not hold the Kontan record of Gemilang II');
 assert.ok(gemilangOneLastDate.startsWith('2019-'), `BRK3569 latest NAV must be in 2019, it is ${gemilangOneLastDate}`);
 
+// Kontan still lists these under the managers' old names (Shinhan, Demina, CIMB Principal).
+assert.equal(fundHolding('bareksa', '6'), fundHolding('kontan', '16626'), 'Danapathi Equity Growth must hold its Kontan record');
+assert.equal(fundHolding('bareksa', '2733'), fundHolding('kontan', '17042'), 'Danapathi Money Market Fund must hold the Demina Kontan record');
+assert.equal(fundHolding('bareksa', '37'), fundHolding('kontan', '160'), 'Principal Islamic Equity Growth Syariah must hold the CIMB Kontan record');
+
+// These Kontan records carry another fund's NAV under their own name.
+assert.notEqual(fundHolding('bareksa', '3355'), fundHolding('kontan', '15637'), 'BRI MI Proteksi 60 and the Pinnacle Kontan record are different funds');
+assert.notEqual(fundHolding('bareksa', '3728'), fundHolding('kontan', '15950'), 'Avrist Bond Fund and the Batavia Kontan record are different funds');
+
+assert.equal(fundHolding('bibit', 'RD846'), fundHolding('bibit', 'RD3820'), 'RD846 and RD3820 are both Mandiri Dana Optima');
+assert.equal(fundHolding('bibit', 'RD630'), fundHolding('bibit', 'RD3508'), 'RD630 and RD3508 are both Eastspring IDR High Grade Kelas A');
+
 console.log(`data/funds.csv: ${funds.length} funds, ${registry.length} published IDs, checks passed.`);
