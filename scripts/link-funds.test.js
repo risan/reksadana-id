@@ -287,6 +287,16 @@ test('types map to the Bibit vocabulary and the first source with a known type w
   assert.deepEqual([...result.report.unmappedTypes.keys()], ['Indeks & ETF']);
 });
 
+test('the Bibit type wins over the Bareksa type of the same fund', () => {
+  const nav = fourDecimalNav(5);
+  const result = link([
+    record('bibit', 'RD7', { type: 'Reksadana Global', nav }),
+    record('bareksa', '7', { type: 'Saham', nav }),
+  ]);
+
+  assert.equal(result.funds[0].type, 'Reksadana Global');
+});
+
 test('currency and sharia fall back to the name when no source states them', () => {
   const result = link([
     record('kontan', '1', { name: 'Schroder Dollar Syariah Fund' }),
