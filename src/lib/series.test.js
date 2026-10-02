@@ -207,12 +207,13 @@ function adjustedRows(startDate, navs, factors) {
 }
 
 test('dividendEvents reads a dividend from a step up in nav_adjusted over nav', () => {
+  // The payout is the step times the previous NAV: 100 * 0.01 = 1, reinvested at the ex-date NAV of 99.
   const fund = { nav: adjustedRows('2026-01-01', [100, 100, 99, 99], [1, 1, 1.01, 1.01]) };
   const events = dividendEvents(fund, pickNavHistory(fund));
 
   assert.equal(events.length, 1);
   assert.equal(events[0].date, '2026-01-03');
-  assert.ok(Math.abs(events[0].factor - 1.01) < 1e-9);
+  assert.ok(Math.abs(events[0].factor - (1 + 1 / 99)) < 1e-9);
 });
 
 test('dividendEvents ignores a re-anchored nav_adjusted, which steps down, and rows without nav_adjusted', () => {
@@ -225,14 +226,14 @@ test('dividendEvents ignores a re-anchored nav_adjusted, which steps down, and r
   assert.deepEqual(dividendEvents(fund, pickNavHistory(fund)), []);
 });
 
-test('dividendEvents adds a listed payout the nav_adjusted steps do not cover', () => {
+test('dividendEvents adds a listed payout the nav_adjusted steps do not cover, reinvested at the ex-date NAV', () => {
   const fund = {
-    nav: adjustedRows('2026-01-01', [100, 100, 100, 100], [1, 1, 1, 1]),
+    nav: adjustedRows('2026-01-01', [100, 100, 98, 98], [1, 1, 1, 1]),
     dividends: [{ value: 2, date: '2026-01-02T17:00:00.000Z' }],
   };
   const events = dividendEvents(fund, pickNavHistory(fund));
 
-  assert.deepEqual(events, [{ date: '2026-01-03', factor: 1.02 }]);
+  assert.deepEqual(events, [{ date: '2026-01-03', factor: 1 + 2 / 98 }]);
 });
 
 test('dividendEvents counts a payout once when a step already covers it', () => {
@@ -244,30 +245,45 @@ test('dividendEvents counts a payout once when a step already covers it', () => 
   assert.equal(dividendEvents(fund, pickNavHistory(fund)).length, 1);
 });
 
-test('dividendEvents skips a listed payout whose scale is off', () => {
-  const fund = {
-    nav: adjustedRows('2026-01-01', [100, 100, 100], [1, 1, 1]),
-    dividends: [{ value: 50, date: '2026-01-02T17:00:00.000Z' }],
-  };
+test('dividendEvents skips a listed payout whose scale is off, or whose ex-date has no NAV yet', () => {
+  const nav = adjustedRows('2026-01-01', [100, 100, 100], [1, 1, 1]);
 
-  assert.deepEqual(dividendEvents(fund, pickNavHistory(fund)), []);
+  assert.deepEqual(dividendEvents({ nav, dividends: [{ value: 50, date: '2026-01-02T17:00:00.000Z' }] }, pickNavHistory({ nav })), []);
+  assert.deepEqual(dividendEvents({ nav, dividends: [{ value: 2, date: '2026-02-01T17:00:00.000Z' }] }, pickNavHistory({ nav })), []);
 });
 
-test('withDividendsReinvested multiplies each point by the factors of the events up to its date', () => {
+test('withDividendsReinvested lowers the points before an event so the series ends at the latest NAV', () => {
   const history = pickNavHistory({ nav: dailyRows('2026-01-01', [100, 100, 99, 99]) });
   const total = withDividendsReinvested(history, [{ date: '2026-01-03', factor: 1.01 }]);
 
   assert.equal(total.primary, 'bibit');
   assert.deepEqual(total.used, history.used);
-  assert.deepEqual(total.points.map((point) => point.value), [100, 100, 99 * 1.01, 99 * 1.01]);
+  assert.deepEqual(total.points.map((point) => point.value), [100 / 1.01, 100 / 1.01, 99, 99]);
   assert.deepEqual(history.points.map((point) => point.value), [100, 100, 99, 99]);
 });
 
-test('the returns of a reinvested history include the dividend that the NAV change loses', () => {
-  const fund = { nav: adjustedRows('2026-01-01', [100, 100, 99, 99], [1, 1, 1.01, 1.01]) };
+test('a dividend that drops the NAV from 100 to 90 for a payout of 10 leaves the total return at zero', () => {
+  const fund = { nav: adjustedRows('2026-01-01', [100, 100, 90, 90], [1, 1, 1.1, 1.1]) };
   const history = pickNavHistory(fund);
   const total = withDividendsReinvested(history, dividendEvents(fund, history));
 
-  assert.ok(Math.abs(computeReturns(history).simplereturn.all - -0.01) < 1e-9);
-  assert.ok(Math.abs(computeReturns(total).simplereturn.all - (99 * 1.01 / 100 - 1)) < 1e-9);
+  assert.ok(Math.abs(computeReturns(history).simplereturn.all - -0.1) < 1e-9);
+  assert.ok(Math.abs(computeReturns(total).simplereturn.all) < 1e-9);
+});
+
+test('a real step (RD1544, 2026-03-27) gives the same total-return day as its listed payout', () => {
+  const nav = [
+    { date: '2026-03-25', nav: 2882.72, nav_adjusted: 3624.608700379537 },
+    { date: '2026-03-26', nav: 2884.22, nav_adjusted: 3626.494736154974 },
+    { date: '2026-03-27', nav: 2816.05, nav_adjusted: 3629.354844300881 },
+  ];
+  const dividends = [{ value: 72.15, date: '2026-03-26T17:00:00.000Z' }];
+  const fromStep = dividendEvents({ nav }, pickNavHistory({ nav }));
+  const fromList = dividendEvents({ nav: nav.map((row) => ({ ...row, nav_adjusted: null })), dividends }, pickNavHistory({ nav }));
+
+  assert.equal(fromStep.length, 1);
+  assert.deepEqual(fromList.map((event) => event.date), ['2026-03-27']);
+  assert.ok(Math.abs(fromStep[0].factor - fromList[0].factor) < 1e-4);
+  // The total return of that day is about the NAV change plus the payout over the previous NAV, not a loss of 2.4%.
+  assert.ok(Math.abs(2816.05 * fromList[0].factor / 2884.22 - 1) < 5e-3);
 });

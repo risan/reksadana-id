@@ -383,6 +383,11 @@ const STEP_MIN = 1 + 1e-6;
 const DIVIDEND_FACTOR_MAX = 1.2;
 const LISTED_MATCH_DAYS = 3;
 
+// A payout reinvested on the ex-date buys payout / ex-date NAV more units per unit held.
+function reinvestmentFactor(payout, exDateNav) {
+  return 1 + payout / exDateNav;
+}
+
 function adjustmentSteps(rows) {
   const steps = [];
 
@@ -394,10 +399,10 @@ function adjustmentSteps(rows) {
       continue;
     }
 
-    const factor = row.nav_adjusted / row.nav / (previous.nav_adjusted / previous.nav);
+    const step = row.nav_adjusted / row.nav / (previous.nav_adjusted / previous.nav);
 
-    if (factor > STEP_MIN && factor < DIVIDEND_FACTOR_MAX) {
-      steps.push({ date: row.date, factor });
+    if (step > STEP_MIN && step < DIVIDEND_FACTOR_MAX) {
+      steps.push({ date: row.date, factor: reinvestmentFactor(previous.nav * (step - 1), row.nav) });
     }
   }
 
@@ -413,13 +418,13 @@ export function dividendEvents(fund, history) {
   for (const payout of fund.dividends ?? []) {
     const date = jakartaDate(payout.date);
     const isCovered = events.some((event) => Math.abs(daysBetween(event.date, date)) <= LISTED_MATCH_DAYS);
-    const before = history.points[indexAtOrBefore(history.points, toDate(toTime(date) - DAY_MS))];
+    const exDatePoint = history.points[indexAtOrBefore(history.points, toDate(toTime(date) - DAY_MS)) + 1];
 
-    if (isCovered || !before) {
+    if (isCovered || !exDatePoint) {
       continue;
     }
 
-    const factor = 1 + payout.value / before.value;
+    const factor = reinvestmentFactor(payout.value, exDatePoint.value);
 
     if (factor < DIVIDEND_FACTOR_MAX) {
       events.push({ date, factor });
@@ -429,19 +434,13 @@ export function dividendEvents(fund, history) {
   return events.sort((a, b) => a.date.localeCompare(b.date));
 }
 
-// The same history with every dividend reinvested on its ex-date: a total-return series.
+// The same history with every dividend reinvested on its ex-date, scaled like an adjusted close: it ends at
+// the latest NAV and every earlier point is lowered by the dividends paid after it. Returns are ratios,
+// so the scale does not change them.
 export function withDividendsReinvested(history, events) {
-  let eventIndex = 0;
-  let growth = 1;
-
-  const points = history.points.map((point) => {
-    while (eventIndex < events.length && events[eventIndex].date <= point.date) {
-      growth *= events[eventIndex].factor;
-      eventIndex++;
-    }
-
-    return { ...point, value: point.value * growth };
-  });
+  const growthAt = (date) => events.filter((event) => event.date <= date).reduce((growth, event) => growth * event.factor, 1);
+  const latestGrowth = growthAt(history.points.at(-1)?.date);
+  const points = history.points.map((point) => ({ ...point, value: (point.value * growthAt(point.date)) / latestGrowth }));
 
   return { ...history, points };
 }
