@@ -20,15 +20,17 @@ const DRAWDOWN_PERIODS = ['1y', '3y'];
 const DEFAULT_RANGE = '1y';
 const CHART_HEIGHT = 320;
 
-async function getJson(url) {
+async function getJson(url, options) {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, options);
 
     return response.ok ? await response.json() : null;
   } catch {
     return null;
   }
 }
+
+const hasCurrentShape = (record) => Boolean(record?.fund && record.costs);
 
 export async function mountComparePage() {
   const locale = document.documentElement.lang;
@@ -83,15 +85,21 @@ export async function mountComparePage() {
 
     loaded.set(id, { status: 'loading' });
 
-    const record = await getJson(`/api/funds/${encodeURIComponent(id)}.json`);
+    const url = `/api/funds/${encodeURIComponent(id)}.json`;
+    let record = await getJson(url);
 
-    loaded.set(id, record === null ? { status: 'failed' } : { status: 'ready', record, history: pickNavHistory(record) });
+    // The browser may hold a record from before a deploy for an hour; it lacks the fields added since.
+    if (record !== null && !hasCurrentShape(record)) {
+      record = await getJson(url, { cache: 'reload' });
+    }
+
+    loaded.set(id, hasCurrentShape(record) ? { status: 'ready', record, history: pickNavHistory(record) } : { status: 'failed' });
     render();
   }
 
   function commit() {
     writeTray(ids);
-    history.replaceState(null, '', `${location.pathname}${selectionQuery(ids)}`);
+    history.replaceState(null, '', `${location.pathname}${selectionQuery(ids)}${location.hash}`);
 
     for (const id of ids) {
       load(id);
@@ -275,11 +283,6 @@ export async function mountComparePage() {
       return { expense: missing, minimum: missing, fees: missing, custodian: missing };
     }
 
-    // A fund record cached by the browser from before a deploy can lack fields added since.
-    if (!column.record.costs) {
-      return { expense: notInSources, minimum: notInSources, fees: notInSources, custodian: notInSources };
-    }
-
     const costs = describeCosts(column.record.costs, locale);
     const line = (item) => `<div>${escapeHtml(item.label ?? '')} ${escapeHtml(item.text)} <span class="sub">${escapeHtml(item.source)}</span></div>`;
     const lines = (items) => (items.length === 0 ? notInSources : items.map(line).join(''));
@@ -318,13 +321,20 @@ export async function mountComparePage() {
     };
 
     const group = (label) => `<tr class="group"><th colspan="${columns.length + 1}" scope="colgroup">${escapeHtml(label)}</th></tr>`;
-    const row = (label, cell, { title = '', className = '' } = {}) => `<tr><th scope="row"${title ? ` title="${escapeHtml(title)}"` : ''}>${escapeHtml(label)}</th>${columns.map((column) => `<td class="${className}">${cell(column)}</td>`).join('')}</tr>`;
+    // One record that cannot be shown must not take the whole table with it.
+    const safeCell = (cell, column) => {
+      try {
+        return cell(column);
+      } catch {
+        return missing;
+      }
+    };
+    const row = (label, cell, { title = '', className = '' } = {}) => `<tr><th scope="row"${title ? ` title="${escapeHtml(title)}"` : ''}>${escapeHtml(label)}</th>${columns.map((column) => `<td class="${className}">${safeCell(cell, column)}</td>`).join('')}</tr>`;
     const returnCell = (read, format, colored) => (column) => {
       const value = column.returns ? (read(column.returns) ?? null) : null;
 
       return value === null ? missing : `<span class="${colored ? changeClass(value) : ''}">${format(value, locale, 1)}</span>`;
     };
-    const costs = new Map(columns.map((column) => [column.id, costRows(column)]));
     const buyOn = (column) =>
       [column.fund.bibit && '<span class="tag">Bibit</span>', column.fund.makmur && '<span class="tag">Makmur</span>'].filter(Boolean).join(' ') || missing;
 
@@ -343,10 +353,10 @@ export async function mountComparePage() {
         ${analysis ? CAGR_PERIODS.map((period) => row(`${m.returns_row_per_year()} ${periodLabels[period]}`, returnCell((returns) => returns.cagr[period], formatChange, true), { title: m.returns_row_per_year_title(), className: 'num' })).join('') : ''}
         ${analysis ? DRAWDOWN_PERIODS.map((period) => row(`${m.returns_row_worst_fall()} ${periodLabels[period]}`, returnCell((returns) => returns.maxdrawdown[period], formatPercent, false), { title: m.returns_row_worst_fall_title(), className: 'num' })).join('') : ''}
         ${group(m.compare_group_costs())}
-        ${row(m.detail_expense_ratio(), (column) => costs.get(column.id).expense)}
-        ${row(m.compare_row_min_purchase(), (column) => costs.get(column.id).minimum)}
-        ${row(m.compare_row_max_fees(), (column) => costs.get(column.id).fees)}
-        ${row(m.detail_custodian(), (column) => costs.get(column.id).custodian)}
+        ${row(m.detail_expense_ratio(), (column) => costRows(column).expense)}
+        ${row(m.compare_row_min_purchase(), (column) => costRows(column).minimum)}
+        ${row(m.compare_row_max_fees(), (column) => costRows(column).fees)}
+        ${row(m.detail_custodian(), (column) => costRows(column).custodian)}
         ${row(m.col_buy(), buyOn)}
       </tbody>`;
 
