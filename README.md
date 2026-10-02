@@ -37,7 +37,7 @@ A Kontan fund is matched to a Bibit fund only when its name, after lowercasing a
 
 - A trailing "Kelas A" is dropped when the full name finds nothing, because Bibit often lists that class without it. Other classes ("Kelas B") never match this way.
 - A few managers are known by two names, for example after a rename (`MANAGER_ALIASES` in `scrapers/lib.js`). Each pair is the same company, with the same fund names under both names.
-- `scrapers/fund-aliases.json` maps a fund to a Bibit symbol by hand (`"makmur:<makmur_id>": "RD123"`, also `kontan:` and `bareksa:`). It is for renamed funds. An alias wins over the automatic match, and `null` blocks a wrong automatic match. Each alias has the same manager, type, and currency, and a NAV (or one-day return) that agrees with Bibit.
+- `scrapers/fund-aliases.json` maps a fund to a Bibit symbol by hand (`"makmur:<makmur_id>": "RD123"`, also `kontan:` and `bareksa:`; `"bibit:RD2280": "RD1983"` joins a duplicate Bibit symbol to the fund it repeats). The target can also be any record (`"kontan:15447": "bareksa:3727"` moves a Kontan record that carries another fund's NAV to that fund). It is for renamed funds and mislabelled records. An alias wins over the automatic match, and `null` blocks a wrong automatic match. Each alias has the same manager, type, and currency, and a NAV (or one-day return) that agrees with Bibit.
 
 Fund types (`type` column): `Pasar Uang` (money market), `Obligasi` (fixed income), `Saham` (equity), `Campuran` (balanced), `Terproteksi` (capital protected), and `Reksadana Global` (global).
 
@@ -45,11 +45,13 @@ Fund types (`type` column): `Pasar Uang` (money market), `Obligasi` (fixed incom
 
 | Path | What it holds |
 |---|---|
-| `data/bareksa/funds.csv` | One row per fund in Bareksa's list of all funds: `bareksa_id`, name, `slug` (the end of its Bareksa URL), type, manager, launch date, and `bibit_symbol`. `bibit_symbol` is the matching Bibit fund, or empty when there is no confident match. |
+| `data/bareksa/funds.csv` | One row per fund in Bareksa's list of all funds: `bareksa_id`, name, `slug` (the end of its Bareksa URL), type, manager, launch date, and `bibit_symbol`. `bibit_symbol` is the matching Bibit fund, or empty when there is no confident match. The page columns are described below the table. |
 | `data/bareksa/aum/<bareksa_id>.csv` | Monthly assets under management: `date,aum_idr,aum_usd`. |
 | `data/bareksa/units/<bareksa_id>.csv` | Monthly units outstanding: `date,units`. |
 | `data/bareksa/allocation/<bareksa_id>.csv` | Asset allocation in percent: `date,saham,obligasi,pasar_uang,lainnya` (equity, bonds, money market, other). Bareksa's own chart uses these four names in this order. Only some funds have it. |
 | `data/bareksa/nav/<bareksa_id>.csv` | Daily NAV per unit: `date,nav`. See "Load the Bareksa daily NAV" below. |
+
+`data/bareksa/funds.csv` also holds, from each fund's public Bareksa page: `currency`, `custodian`, `min_purchase`, `min_topup`, `min_redemption` (plain numbers) with `min_purchase_currency`, `min_topup_currency`, `min_redemption_currency` (the currency of each amount, which can differ from the fund's), `fee_purchase`, `fee_redemption`, `fee_switch` (maximum per prospectus, as `min-max` fractions: `-0.02` is at most 2%, `0.005-0.03` is 0.5% to 3%, `0` is free, empty is unknown) and `profile_date` (when the page was last fetched). Rows fetched before the amount currencies were stored have them empty until the next fetch; until then a rupiah fund's amounts count as rupiah and any other fund's have no currency. `npm run scrape:bareksa:profiles` refreshes up to 400 fund pages per run, never-fetched first, then the oldest; `node scrapers/bareksa.js --profiles-all` fetches every page. The full Bareksa run also fills these fields when it fetches a profile.
 
 The matching rules are the same as for Kontan. Bareksa shows the manager on each fund's page, so the managers are compared too.
 
@@ -77,6 +79,34 @@ The scraper reads only Makmur's public website. The page of a fund holds the who
 
 In `funds.csv` the dates are ISO dates, and the other values are as in the JSON. `last_price` is a whole number, so it is rounded to 0.01 of the NAV. 128 of the 141 funds are matched to a Bibit fund. The matching rules are the same as for Kontan. The rest are not in Bibit under a name or NAV that matches.
 
+### One record per fund (`data/funds.csv`)
+
+The same fund appears in several sources, and Bibit lists some funds under more than one symbol or under a stale name. `scripts/link-funds.js` joins the records of all four sources into one fund each. It writes:
+
+| File | Content |
+|---|---|
+| `data/funds.csv` | One row per fund: `id`, `name`, `other_names` (separated by `\|`), `manager`, `type` (Bibit's labels), `currency` and `sharia` (empty when no source says), `launch_date`, and the source IDs of `bibit`, `bareksa`, `kontan`, and `makmur` (space-separated, the best record first). |
+| `data/fund-ids.csv` | Every fund ID ever published: `id`, `first_published`, `current_id`. A retired ID points at the fund that now holds its record (never at another retired ID: the linker follows chains to the live fund). IDs are only added, never removed. |
+
+Records are joined by these rules, in this order. A merge is refused when two members of the joined group disagree (different currency, Kelas or series number, NAV far apart on the latest shared date, and for NAV evidence a NAV that differs on more than 5% of the shared dates). Refusals are listed in the report.
+
+1. `scrapers/fund-aliases.json` (see above).
+2. The `bibit_symbol` columns of the other sources.
+3. The same normalized name and manager in two sources without Bibit (each name used once per source).
+4. NAV evidence: equal NAV (to the precision of the coarser source) on at least 3 shared dates, with distinctive values (at least 5 digits, not 1, 10, 100, 1000 or 10000), the same manager, and a compatible currency. Kontan's NAV is also tried one day earlier, because it often carries the next day's date. Bibit keeps NAV history only for funds it sells, so a Bibit fund with one or two rows links this way only when those values have at least 7 digits, the manager is known and the same, and each side has no other candidate. Candidates that miss this are printed in the report.
+
+The series number is the last word of the name when it is a Roman numeral (I to MMMCMXCIX) or an Arabic one of up to three digits ("Gemilang I" and "Gemilang II", "Proteksi LXIX" and "Proteksi 69"). A lone C, D or M is a share class, not a number. Roman and Arabic are the same number, a name without one conflicts with nothing, and "LQ45", "IDX30" or a year are not numbers. Different numbers refuse every automatic rule, checked across the whole merged group, so a third source cannot bridge two series. Aliases are not checked.
+
+The short-history rule (`nav-short`) exists because Bibit keeps almost no NAV history for funds it does not sell, and about 200 renamed funds (for example Kisi to KIM Fixed Income Fund Plus) have only the latest few NAV values in common. Besides the conditions above, it needs that the two names do not conflict in series number or Kelas, and that neither record has a look-alike: another record of the same source, from a compatible manager and currency, with an equal value on the same date (Kontan dates aligned as in the match). Two unrelated funds of one manager that report the same long NAV on their only shared date, with names that carry no conflicting number, are still linked. That is an accepted risk; block such a pair with a `null` alias.
+
+A fund keeps its ID: the Bibit symbol of the group, or `BRK<id>`, `KTN<id>`, `MKR<id>` for a fund Bibit does not list. When two published IDs end up in one fund, the one that was already live stays and the other becomes a redirect. The name is the current Bareksa name, then Makmur, Bibit, Kontan; the other names go to `other_names`. The type is Bibit's label (the explorer groups by it; Bareksa calls global funds "Saham"), then Bareksa's, Kontan's, and Makmur's mapped to the same labels. Types with no Bibit label (index funds, ETFs, DPLK) stay empty; the site marks such funds with `etf` and `index` flags, taken from Bibit, else from the name and the other sources' types.
+
+```bash
+npm run link   # rewrites both files and prints the report (about 10 seconds); the scheduled workflow runs it after the scrapers
+```
+
+`scripts/check-funds.js` checks the result in `npm run build`.
+
 ### NAV history: buyable vs. other funds
 
 The `tradeable` column is `1` for funds you can buy in the Bibit app.
@@ -86,14 +116,43 @@ The `tradeable` column is `1` for funds you can buy in the Bibit app.
 
 ## Website
 
-An [Astro](https://astro.build/) site builds from `data/` into static files. It has a fund explorer, a page with charts and a "Buy this fund" block for every fund, bulk downloads, and a read-only JSON API (see `/api/` on the site). It is served by Cloudflare Workers as static assets, so there is no server code.
+An [Astro](https://astro.build/) site builds from `data/` into static files. It has a fund explorer, a page with charts and a "Buy this fund" block for every fund, bulk downloads, and a read-only JSON API (see `/api/` on the site). It is served by Cloudflare Workers as static assets, plus one small Worker (`src/worker.js`) for the per-fund CSV files.
+
+The site has one page per fund of `data/funds.csv` (see "One record per fund"), 4,781 of them. `loadFundRecord(id)` in `src/lib/data.js` loads every record of every source that belongs to the fund. For each source the records are joined by date, and on a date two records share, the one with the newest NAV wins. Bibit's detail files (documents, holdings, dividends, switchable funds, fees) come from the fund's first Bibit record, and fill any gap from its other Bibit records. A fund Bibit does not list has no such details, but still gets its profile data, charts, returns, sources, and a Makmur buy link when it has one. The explorer finds a fund by any of its names, and the fund page lists the other names.
+
+Public endpoints use the fund IDs of `data/funds.csv`:
+
+| Path | Content |
+|---|---|
+| `/api/funds.json` | One entry per fund: the row of `funds.csv` (source IDs as lists), the latest NAV and AUM, and the 1-year return. |
+| `/csv/funds.csv` | A copy of `data/funds.csv`. |
+| `/api/funds/<id>.json` | The record of `loadFundRecord`: the Bibit fields, the per-source `nav`, `aum`, `kontan`, `bareksa`, `makmur`, the new `fund` row, `history`, the NAV and AUM series the site draws, with the source of each point, and `costs`, the merged costs and minimums (below). |
+| `/csv/nav/<id>.csv`, `/csv/aum/<id>.csv` | **Changed:** the chosen history, with columns `date,nav,source` and `date,aum,source` (they were copies of the Bibit files, with `nav_adjusted`). The raw source files are in the zip files. |
+| `/fund-ids.json` | Retired IDs and the fund that replaced each. |
+
+The per-fund CSV files are not built: they would add two files per fund, and Cloudflare's free plan allows 20,000 files per deployment. `src/worker.js` runs only for `/`, `/csv/nav/*` and `/csv/aum/*` (`run_worker_first` in `wrangler.toml`; the free plan allows 100,000 Worker requests a day, and static assets are free). It reads `/api/funds/<id>.json` through the `ASSETS` binding, resolves a retired ID with `/fund-ids.json`, converts `history` to CSV, and sends the same headers `public/_headers` gives the other CSV files. It answers `GET` and `HEAD` only, and 404 as text. `src/worker.test.js` tests it with a fake `ASSETS` binding.
+
+A retired fund ID redirects to the fund that holds its record: `npm run build` writes `dist/_redirects` (`scripts/write-redirects.js`) with the page with and without the trailing slash, in both languages, and the JSON file. The build fails above 2,000 lines, Cloudflare's limit for static redirects.
+
+### Languages
+
+The site is in Indonesian (at `/`) and English (at `/en/`). The pages live in `src/pages/[...lang]/`, and Astro's `i18n` routing (`astro.config.mjs`) leaves the Indonesian ones unprefixed. Texts are in `messages/id.json` and `messages/en.json`, compiled by [Paraglide JS](https://inlang.com/m/gerre34r/library-inlang-paraglideJs) into `src/paraglide/` when Vite starts (`astro build`, `astro dev`). That folder is generated and ignored by Git; do not edit it. To add a text, add the same key to both files and call it as `m.the_key()` (`import * as m from '../paraglide/messages.js'`). `npm test` fails when the two files differ, or when a key is unused or missing. The locale of a page is set at build time in `src/middleware.js`, and in the browser from `<html lang>`.
+
+- Numbers and dates come from `src/lib/format.js`, which takes the locale: Indonesian `1.234,56` and `2 Okt 2026`, English `1,234.56` and `2 Oct 2026`.
+- Links to pages go through `localizeHref` in `src/lib/i18n.js`, in the browser too. JSON, CSV, and zip URLs are the same in both languages.
+- Each page has a self-canonical URL and `hreflang` links for `id`, `en`, and `x-default` (Indonesian). The header switcher keeps the query and hash, and sets a `lang` cookie (one year).
+- `/` runs the Worker: crawlers get the Indonesian page; otherwise the `lang` cookie decides; with no cookie, a visitor whose `request.cf.country` is set and not `ID` gets a 302 to `/en/`, and everyone else the Indonesian page.
+- `astro.config.mjs` moves `dist/en/404/index.html` to `dist/en/404.html`, so Cloudflare finds a 404 page in each language.
+
+
+A fund is active when its latest NAV is within 31 days of the newest date of the source that supplied that NAV (for Bareksa, the newest date in all of `data/bareksa/nav`). Bareksa's daily NAV is loaded by hand and Kontan's and Makmur's rarely update, so the fund page says how far that source's data runs when it is not Bibit.
 
 The site draws one NAV history per fund (`src/lib/series.js`, which runs at build time and in the browser):
 
 - **Source.** Bibit's daily history for funds buyable on Bibit, else Bareksa's daily NAV, else Kontan's, else a monthly NAV computed as Bareksa's AUM divided by its units. Newer days from the other sources extend it. Where two sources overlap, they agree.
 - **Clean-up.** A one-day spike that reverses the next day is dropped as a source error. A NAV that stops changing for more than a month is treated as the end of the fund: some sources keep listing a closed fund's last NAV every day.
 - **Returns.** Every return, drawdown, and sparkline is computed from that history, so the list, the fund page, and its chart agree. Bibit's own return figures are not used: they can lag its NAV history. Its `nav_adjusted` is not used either: its base changes from one scrape to the next, and the dividend list only keeps the latest five payouts, so a total return cannot be rebuilt. Returns are therefore the change in NAV; funds that pay dividends are tagged.
-- **Flags.** A fund with no NAV change in the last 31 days is inactive and hidden by default. A one-day move over 20% is shown on the fund page, since it can be a real event or a source error.
+- **Flags.** A fund with no NAV in the 31 days before its source's newest date is inactive and hidden by default. A one-day move over 20% is shown on the fund page, since it can be a real event or a source error.
 - **Fund size.** Bibit's AUM, unless Bareksa's figure for the same month differs more than tenfold (a unit error), then Bareksa's.
 
 The home page reads `/explorer.json`, a compact summary built by `loadFundSummaries()` in `src/lib/data.js`. It is not part of the public API.
@@ -104,7 +163,7 @@ You need Node.js 22.12 or newer. Cloudflare builds with Node 24 (see `.node-vers
 npm ci
 npm run dev       # dev server at http://localhost:4321
 npm run build     # writes dist/ and checks Cloudflare's free plan limits
-npm run preview   # serves dist/ locally with wrangler
+npm run preview   # serves dist/ locally with wrangler, including the CSV Worker
 ```
 
 ### Deploy
@@ -130,6 +189,8 @@ The build fails if `dist/` has more than 19,000 files or a file over 24 MiB, bec
 
 ## Referral codes
 
+**Costs and minimums.** `loadFundRecord` merges them into `costs`, and every value keeps its `source`. The expense ratio is Bibit's `expenseratio.percentage` when it is a fraction between 0 and 0.1 (a few funds carry a raw number such as 4343.1, which is rejected), else Makmur's `expenseRatio` divided by 10,000, else unknown. The minimum purchase is listed per distributor: Bibit's `minbuy` only when the fund is buyable on Bibit, Makmur's `minFirstBuy` (both are rupiah amounts, also for USD funds, whose minimums there are of the size of rupiah ones), and Bareksa's `min_purchase` (the prospectus value). Each amount carries its own `currency`. The next purchase and the redemption minimum are Bareksa's. The maximum fees are Bareksa's, as `{ min, max }` fractions; Bibit's `fee` values are placeholders and are ignored. The custodian is Bareksa's, else Bibit's `custodian_bank`. A value no source has is `null` or an empty list, never 0, and the pages say "Not in our sources".
+
 The "Buy this fund" block on a fund page links to the fund on Bibit (only when it is buyable there) and on Makmur (only when it is matched), and shows the owner's referral code with a copy button. Neither app has a working referral link, so the code is shown, not linked. The codes and the link builders are in `src/lib/referrals.js`. Change the codes there. The site footer says that some links include the owner's referral codes.
 
 ## Update the data
@@ -141,9 +202,10 @@ The GitHub Actions workflow `.github/workflows/scrape.yml` runs once a day at 23
 | Every day | Bibit |
 | Every Saturday (Sunday morning in Jakarta) | Kontan and Makmur |
 | The first Saturday of the month (day 1 to 7) | Kontan as a full rescan, instead of the normal Kontan run |
+| Every day | Bareksa fund pages (`scrape:bareksa:profiles`, up to 400 pages) |
 | The 1st of every month | Bareksa (without the daily NAV) |
 
-You can also start it by hand from the Actions tab. The `sources` input picks one of `bibit` (the default), `kontan`, `kontan-full`, `makmur`, `bareksa`, or `all` (everything except the Kontan full rescan).
+You can also start it by hand from the Actions tab. The `sources` input picks one of `bibit` (the default), `kontan`, `kontan-full`, `makmur`, `bareksa`, `bareksa-profiles`, or `all` (everything except the Kontan full rescan).
 
 To run the scrapers yourself, you need Node.js 22 or newer. They have no dependencies to install.
 
@@ -158,6 +220,10 @@ npm run scrape:kontan
 npm run scrape:kontan:full   # scan every Kontan ID again (about 30 minutes)
 npm run scrape:makmur
 npm run scrape:bareksa
+npm run scrape:bareksa:profiles   # up to 400 Bareksa fund pages: custodian, minimums, fees
+
+# Join the records of all sources into data/funds.csv (npm run scrape does this last)
+npm run link
 
 # Check the Bareksa parsers
 npm test

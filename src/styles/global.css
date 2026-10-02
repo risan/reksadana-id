@@ -18,6 +18,11 @@
   --alloc-bonds: #14917f;
   --alloc-money: #d99a1e;
   --alloc-other: #b4508f;
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-3: #1baf7a;
+  --series-4: #eda100;
+  --series-5: #e87ba4;
 
   --sans: 'Schibsted Grotesk Variable', 'Helvetica Neue', Arial, sans-serif;
   --serif: 'Newsreader Variable', Georgia, serif;
@@ -47,6 +52,11 @@
     --alloc-bonds: #22a08e;
     --alloc-money: #b8801c;
     --alloc-other: #c0609f;
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-3: #199e70;
+    --series-4: #c98500;
+    --series-5: #d55181;
 
     color-scheme: dark;
   }
@@ -152,6 +162,15 @@ kbd {
   text-align: center;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 /* Layout */
 
 .wrap {
@@ -212,6 +231,7 @@ main.wrap {
   position: relative;
   color: var(--ink-2);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .site-nav a[aria-current='page'] {
@@ -244,6 +264,32 @@ main.wrap {
   border-radius: 50%;
   background: var(--up);
   vertical-align: 1px;
+}
+
+.lang-switch {
+  display: flex;
+  border: 1px solid var(--rule-strong);
+}
+
+.lang-switch a {
+  padding: 2px 7px;
+  color: var(--ink-2);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.lang-switch a + a {
+  border-left: 1px solid var(--rule-strong);
+}
+
+.lang-switch a[aria-current='true'] {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.lang-switch a:hover {
+  text-decoration: none;
 }
 
 .site-footer {
@@ -282,6 +328,12 @@ main.wrap {
   font-weight: 450;
   line-height: 1.1;
   letter-spacing: -0.015em;
+}
+
+.intro {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 18px;
 }
 
 .lede {
@@ -518,6 +570,11 @@ select:focus {
   white-space: nowrap;
 }
 
+.tag-quiet {
+  border-color: var(--rule);
+  color: var(--muted);
+}
+
 .tag-ink {
   border-color: var(--ink);
   background: var(--ink);
@@ -661,7 +718,31 @@ select:focus {
     display: none;
   }
 
+  .lang-switch {
+    margin-left: auto;
+  }
+
   .page-title {
     font-size: 26px;
+  }
+}
+
+/* Wordmark, menu, and language switch no longer fit on one line. */
+@media (max-width: 560px) {
+  .site-header .wrap {
+    flex-wrap: wrap;
+    height: auto;
+    row-gap: 0;
+    padding-top: 10px;
+  }
+
+  .site-nav {
+    order: 3;
+    width: 100%;
+    padding: 8px 0 10px;
+  }
+
+  .site-nav a[aria-current='page']::after {
+    bottom: -10px;
   }
 }

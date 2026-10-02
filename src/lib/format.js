@@ -1,72 +1,83 @@
+import { intlLocale } from './i18n.js';
+
+// Every formatter takes the page locale ('id' or 'en') and stays pure.
 const MINUS = '−';
 const DASH = '—';
-const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-const compactNumber = new Intl.NumberFormat('en', { notation: 'compact', maximumFractionDigits: 1 });
 
 function isMissing(value) {
   return value === null || value === undefined || Number.isNaN(value);
 }
 
-export function formatPercent(fraction, digits = 2) {
-  if (isMissing(fraction)) {
-    return DASH;
-  }
-
-  const text = Math.abs(fraction * 100).toFixed(digits);
-
-  return `${fraction < 0 && Number(text) !== 0 ? MINUS : ''}${text}%`;
+function formatDecimal(value, locale, maximumFractionDigits, minimumFractionDigits = 0) {
+  return value.toLocaleString(intlLocale(locale), { maximumFractionDigits, minimumFractionDigits });
 }
 
-export function formatChange(fraction, digits = 2) {
+export function formatPercent(fraction, locale, digits = 2) {
   if (isMissing(fraction)) {
     return DASH;
   }
 
-  const text = Math.abs(fraction * 100).toFixed(digits);
+  const text = formatDecimal(Math.abs(fraction * 100), locale, digits, digits);
 
-  if (Number(text) === 0) {
+  return `${fraction < 0 && Number(Math.abs(fraction * 100).toFixed(digits)) !== 0 ? MINUS : ''}${text}%`;
+}
+
+export function formatChange(fraction, locale, digits = 2) {
+  if (isMissing(fraction)) {
+    return DASH;
+  }
+
+  const text = formatDecimal(Math.abs(fraction * 100), locale, digits, digits);
+
+  if (Number(Math.abs(fraction * 100).toFixed(digits)) === 0) {
     return `${text}%`;
   }
 
   return `${fraction > 0 ? '+' : MINUS}${text}%`;
 }
 
-export function formatNumber(value, maximumFractionDigits = 2, minimumFractionDigits = 0) {
+export function formatNumber(value, locale, maximumFractionDigits = 2, minimumFractionDigits = 0) {
   if (isMissing(value)) {
     return DASH;
   }
 
-  return value.toLocaleString('en-US', { maximumFractionDigits, minimumFractionDigits });
+  return formatDecimal(value, locale, maximumFractionDigits, minimumFractionDigits);
 }
 
 // NAVs run from about 1 (USD funds) to tens of thousands, so small ones keep four decimals.
-export function formatNav(value) {
+export function formatNav(value, locale) {
   if (isMissing(value)) {
     return DASH;
   }
 
-  return value < 100 ? formatNumber(value, 4, 4) : formatNumber(value, 2, 2);
+  return value < 100 ? formatNumber(value, locale, 4, 4) : formatNumber(value, locale, 2, 2);
 }
 
-export function formatCompact(value) {
+export function formatCompact(value, locale) {
   if (isMissing(value)) {
     return DASH;
   }
 
-  return compactNumber.format(value);
+  return new Intl.NumberFormat(intlLocale(locale), { notation: 'compact', maximumFractionDigits: 1 }).format(value);
 }
 
+// An unknown currency has no prefix: showing "Rp" for it would state a currency nobody gave.
 export function currencyPrefix(currency) {
-  return currency === 'USD' ? 'US$' : 'Rp';
+  return { IDR: 'Rp', USD: 'US$' }[currency] ?? '';
 }
 
-export function formatMoney(value, currency = 'IDR') {
+export function withCurrency(text, currency) {
+  const prefix = currencyPrefix(currency);
+
+  return prefix === '' ? text : `${prefix} ${text}`;
+}
+
+export function formatMoney(value, locale, currency) {
   if (isMissing(value)) {
     return DASH;
   }
 
-  return `${currencyPrefix(currency)} ${formatCompact(value)}`;
+  return withCurrency(formatCompact(value, locale), currency);
 }
 
 export function changeClass(value) {
@@ -77,18 +88,27 @@ export function changeClass(value) {
   return value > 0 ? 'up' : 'down';
 }
 
-export function formatDate(date) {
+const MONTH_FORMATS = {
+  id: new Intl.DateTimeFormat('id-ID', { month: 'short', timeZone: 'UTC' }),
+  en: new Intl.DateTimeFormat('en-US', { month: 'short', timeZone: 'UTC' }),
+};
+
+export function formatMonthName(year, month, locale) {
+  return (MONTH_FORMATS[locale] ?? MONTH_FORMATS.id).format(Date.UTC(year, month - 1, 1));
+}
+
+export function formatDate(date, locale) {
   if (!date) {
     return DASH;
   }
 
   const [year, month, day] = date.split('-').map(Number);
 
-  return `${day} ${MONTHS[month - 1]} ${year}`;
+  return `${day} ${formatMonthName(year, month, locale)} ${year}`;
 }
 
 // Drops the year when it matches the reference date's year, to keep table cells short.
-export function formatShortDate(date, referenceDate) {
+export function formatShortDate(date, referenceDate, locale) {
   if (!date) {
     return DASH;
   }
@@ -96,18 +116,23 @@ export function formatShortDate(date, referenceDate) {
   const [year, month, day] = date.split('-').map(Number);
 
   if (referenceDate && referenceDate.startsWith(String(year))) {
-    return `${day} ${MONTHS[month - 1]}`;
+    return `${day} ${formatMonthName(year, month, locale)}`;
   }
 
-  return `${MONTHS[month - 1]} ${year}`;
+  return `${formatMonthName(year, month, locale)} ${year}`;
 }
 
-export function formatMonth(date) {
+export function formatMonth(date, locale) {
   if (!date) {
     return DASH;
   }
 
   const [year, month] = date.split('-').map(Number);
 
-  return `${MONTHS[month - 1]} ${year}`;
+  return `${formatMonthName(year, month, locale)} ${year}`;
+}
+
+// A count of things, such as funds, with thousands separators.
+export function formatCount(value, locale) {
+  return formatDecimal(value, locale, 0);
 }

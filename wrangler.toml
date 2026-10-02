@@ -1,7 +1,14 @@
 # Must match the Worker name you create in the Cloudflare dashboard.
 name = "reksadana-id"
+main = "src/worker.js"
 compatibility_date = "2026-10-01"
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
 not_found_handling = "404-page"
+# Only the home page (to pick a language) and the per-fund CSV files run the Worker; every other request is a free static asset.
+run_worker_first = ["/", "/csv/nav/*", "/csv/aum/*"]
+
+# Workers Builds deploys pull requests with `wrangler preview`, which needs this block even when it is empty.
+[previews]

@@ -15,4 +15,12 @@ for (const scraper of SCRAPERS) {
   }
 }
 
+// The linker rebuilds data/funds.csv from whatever the scrapers saved, so it runs last even after a failure.
+const { status: linkStatus } = spawnSync('node', ['scripts/link-funds.js'], { stdio: 'inherit' });
+
+if (linkStatus !== 0) {
+  console.error(`link-funds failed with exit code ${linkStatus}`);
+  hasFailure = true;
+}
+
 process.exitCode = hasFailure ? 1 : 0;

@@ -1,0 +1,205 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { listArchives, zipArchive } from '../../../lib/archives.js';
+import { FUND_TYPES } from '../../../lib/fund-types.js';
+import { formatNumber } from '../../../lib/format.js';
+import { anchor, localePaths, localizeHref } from '../../../lib/i18n.js';
+import * as m from '../../../paraglide/messages.js';
+
+export const getStaticPaths = () => localePaths();
+
+const locale = Astro.currentLocale ?? 'id';
+
+const archives = listArchives().map((archive) => ({ ...archive, megabytes: zipArchive(archive).length / 1e6 }));
+const navArchiveCount = archives.filter((archive) => archive.name.startsWith('bareksa-nav-')).length;
+
+function archiveDescription(archive) {
+  if (archive.name === 'bareksa') {
+    return m.download_zip_bareksa();
+  }
+
+  if (archive.name.startsWith('bareksa-nav-')) {
+    return m.download_zip_bareksa_nav({ part: archive.name.replace('bareksa-nav-', ''), total: navArchiveCount });
+  }
+
+  return m.download_zip_everything({ folder: `data/${archive.name}/` });
+}
+
+const SOURCES = [
+  {
+    name: 'Bibit',
+    url: 'https://app.bibit.id/',
+    site: 'app.bibit.id',
+    rhythm: m.download_rhythm_daily(),
+    files: [
+      ['data/bibit/funds.csv', m.download_bibit_funds()],
+      ['data/bibit/funds/<symbol>.json', m.download_bibit_fund_json()],
+      ['data/bibit/nav/<symbol>.csv', m.download_bibit_nav()],
+      ['data/bibit/aum/<symbol>.csv', m.download_bibit_aum()],
+      ['data/bibit/dividends/<symbol>.json', m.download_bibit_dividends()],
+      ['data/bibit/documents/<symbol>.json', m.download_bibit_documents()],
+      ['data/bibit/switchables/<symbol>.json', m.download_bibit_switchables()],
+      ['data/bibit/types.json', m.download_bibit_types()],
+    ],
+  },
+  {
+    name: 'Kontan',
+    url: 'https://pusatdata.kontan.co.id/reksadana',
+    site: 'pusatdata.kontan.co.id',
+    rhythm: m.download_rhythm_weekly(),
+    files: [
+      ['data/kontan/funds.csv', m.download_kontan_funds()],
+      ['data/kontan/nav/<kontan_id>.csv', m.download_kontan_nav()],
+    ],
+  },
+  {
+    name: 'Bareksa',
+    url: 'https://www.bareksa.com/id/data/reksadana/daftar',
+    site: 'bareksa.com',
+    rhythm: m.download_rhythm_bareksa(),
+    files: [
+      ['data/bareksa/funds.csv', m.download_bareksa_funds()],
+      ['data/bareksa/aum/<bareksa_id>.csv', m.download_bareksa_aum()],
+      ['data/bareksa/units/<bareksa_id>.csv', m.download_bareksa_units()],
+      ['data/bareksa/allocation/<bareksa_id>.csv', m.download_bareksa_allocation()],
+      ['data/bareksa/nav/<bareksa_id>.csv', m.download_bareksa_nav()],
+    ],
+  },
+  {
+    name: 'Makmur',
+    url: 'https://www.makmur.id/',
+    site: 'makmur.id',
+    rhythm: m.download_rhythm_weekly(),
+    files: [
+      ['data/makmur/funds.csv', m.download_makmur_funds()],
+      ['data/makmur/funds/<makmur_id>.json', m.download_makmur_fund_json()],
+    ],
+  },
+];
+---
+
+<Base title={m.download_title()} description={m.download_description()} section="download">
+  <h1 class="page-title">{m.download_title()}</h1>
+  <p class="lede">{m.download_lede()}</p>
+
+  <div class="section">
+    <p>
+      <a class="btn btn-ink" href="/csv/funds.csv" download>{m.download_funds_csv()}</a>
+    </p>
+    <p class="muted small" set:html={m.download_funds_csv_note({ apiLink: anchor(localizeHref('/api/', locale), 'API') })} />
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">{m.download_zip_title()}</h2>
+    <p class="prose" set:html={m.download_zip_text()} />
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th>Zip</th>
+          <th>{m.download_zip_holds()}</th>
+          <th class="num">{m.download_zip_size()}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          archives.map((archive) => (
+            <tr>
+              <td><a href={`/download/${archive.name}.zip`} download><code>{archive.name}.zip</code></a></td>
+              <td>{archiveDescription(archive)}</td>
+              <td class="num">{formatNumber(archive.megabytes, locale, 1, 1)} MB</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">{m.download_contents_title()}</h2>
+
+    <table class="tbl files-table">
+      {
+        SOURCES.map((source) => (
+          <tbody>
+            <tr class="src-row">
+              <th colspan="2">
+                {source.name} <span class="muted small"><a href={source.url}>{source.site}</a> · {source.rhythm}</span>
+              </th>
+            </tr>
+            {source.files.map(([file, description]) => (
+              <tr>
+                <td><code>{file}</code></td>
+                <td>{description}</td>
+              </tr>
+            ))}
+          </tbody>
+        ))
+      }
+    </table>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">{m.download_notes_title()}</h2>
+    <ul class="prose">
+      <li set:html={m.download_note_history()} />
+      <li set:html={m.download_note_units()} />
+      <li set:html={m.download_note_makmur()} />
+    </ul>
+
+    <p class="src-head">{m.download_types_title()}</p>
+    <table class="tbl types-table">
+      <thead>
+        <tr>
+          <th>{m.download_types_type()}</th>
+          <th>{m.download_types_english()}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          FUND_TYPES.map((type) => (
+            <tr>
+              <td><code>{type.label}</code></td>
+              <td>{type.english}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</Base>
+
+<style>
+  .src-head {
+    margin-top: 22px;
+    margin-bottom: 6px;
+    font-weight: 650;
+    font-size: 13.5px;
+  }
+
+  .types-table {
+    max-width: 480px;
+  }
+
+  .files-table .src-row th {
+    padding-top: 16px;
+    border-bottom: 1px solid var(--rule-strong);
+    color: var(--ink);
+    font-weight: 650;
+  }
+
+  .files-table tbody:first-child .src-row th {
+    padding-top: 0;
+  }
+
+  .files-table td:first-child {
+    width: 1%;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 720px) {
+    .files-table td:first-child {
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+  }
+</style>

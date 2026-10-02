@@ -1,0 +1,431 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { anchor, localePaths, localizeHref } from '../../../lib/i18n.js';
+import * as m from '../../../paraglide/messages.js';
+
+export const getStaticPaths = () => localePaths();
+
+const locale = Astro.currentLocale ?? 'id';
+const downloadLink = (text) => anchor(localizeHref('/download/', locale), text);
+
+const ORIGIN = 'https://your-site.example';
+
+// The types are JSON types, left as they are. Only the word "or" follows the page language.
+const typeLabel = (type) => type.replaceAll(' or ', ` ${m.api_type_or()} `);
+
+const FUNDS_JSON_FIELDS = [
+  ['id', 'string', m.api_funds_id()],
+  ['name', 'string', m.api_funds_name()],
+  ['other_names', 'array', m.api_funds_other_names()],
+  ['manager', 'string or null', m.api_funds_manager()],
+  ['type', 'string or null', m.api_funds_type()],
+  ['currency', 'string or null', m.api_funds_currency()],
+  ['sharia', 'boolean or null', m.api_funds_sharia()],
+  ['etf', 'boolean', m.api_funds_etf()],
+  ['index', 'boolean', m.api_funds_index()],
+  ['launch_date', 'date or null', m.api_funds_launch_date()],
+  ['sources', 'object', m.api_funds_sources()],
+  ['active', 'boolean', m.api_funds_active()],
+  ['nav', 'number or null', m.api_funds_nav()],
+  ['nav_date', 'date or null', m.api_funds_nav_date()],
+  ['aum', 'number or null', m.api_funds_aum()],
+  ['aum_date', 'date or null', m.api_funds_aum_date()],
+  ['return_1y', 'number or null', m.api_funds_return_1y()],
+];
+
+const ONE_FUND_FIELDS = [
+  ['fund', 'object', m.api_fund_fund()],
+  ['history', 'object', m.api_fund_history()],
+  ['costs', 'object', m.api_fund_costs()],
+  ['symbol', 'string', m.api_fund_symbol()],
+  ['tradeable', '0 or 1', m.api_fund_tradeable()],
+  ['nav', 'array', m.api_fund_nav()],
+  ['aum', 'array', m.api_fund_aum()],
+  ['documents', 'object or null', m.api_fund_documents()],
+  ['switchables', 'array or null', m.api_fund_switchables()],
+  ['dividends', 'array or null', m.api_fund_dividends()],
+  ['kontan', 'object or null', m.api_fund_kontan()],
+  ['bareksa', 'object or null', m.api_fund_bareksa()],
+  ['makmur', 'object or null', m.api_fund_makmur()],
+];
+
+const TOC = [
+  ['funds-json', m.api_toc_funds()],
+  ['one-fund', m.api_toc_fund()],
+  ['types-json', m.api_toc_types()],
+  ['csv-funds', m.api_toc_csv_funds()],
+  ['csv-nav', m.api_toc_csv_nav()],
+  ['csv-aum', m.api_toc_csv_aum()],
+  ['zip', m.api_toc_zip()],
+];
+---
+
+<Base title="API" description={m.api_description()} section="api">
+  <h1 class="page-title">API</h1>
+  <p class="lede">{m.api_lede()}</p>
+
+  <div class="api-layout">
+    <nav class="api-toc" aria-label={m.api_toc_label()}>
+      <p class="small muted">{m.api_toc_title()}</p>
+      <ul>
+        {TOC.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}
+      </ul>
+    </nav>
+
+    <div class="api-content">
+      <div class="section">
+        <h2 class="section-title">{m.api_quickstart_title()}</h2>
+        <p set:html={m.api_quickstart_text()} />
+        <pre data-origin><code>curl {ORIGIN}/api/funds/RD216.json
+curl -O {ORIGIN}/csv/nav/RD216.csv
+curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">{m.api_endpoints_title()}</h2>
+        <p set:html={m.api_endpoints_text({ listLink: anchor('/api/funds.json', 'funds.json') })} />
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>{m.api_col_group()}</th>
+              <th>{m.api_col_path()}</th>
+              <th>{m.api_col_format()}</th>
+              <th>{m.api_col_purpose()}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="1">{m.api_group_list()}</th>
+              <td><a href="#funds-json"><code>/api/funds.json</code></a></td>
+              <td>JSON</td>
+              <td>{m.api_purpose_list()}</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th rowspan="1">{m.api_group_fund()}</th>
+              <td><a href="#one-fund"><code>/api/funds/&lt;id&gt;.json</code></a></td>
+              <td>JSON</td>
+              <td>{m.api_purpose_fund()}</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th rowspan="1">{m.api_group_types()}</th>
+              <td><a href="#types-json"><code>/api/types.json</code></a></td>
+              <td>JSON</td>
+              <td>{m.api_purpose_types()}</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th rowspan="3">CSV</th>
+              <td><a href="#csv-funds"><code>/csv/funds.csv</code></a></td>
+              <td>CSV</td>
+              <td>{m.api_purpose_csv_funds()}</td>
+            </tr>
+            <tr>
+              <td><a href="#csv-nav"><code>/csv/nav/&lt;id&gt;.csv</code></a></td>
+              <td>CSV</td>
+              <td>{m.api_purpose_csv_nav()}</td>
+            </tr>
+            <tr>
+              <td><a href="#csv-aum"><code>/csv/aum/&lt;id&gt;.csv</code></a></td>
+              <td>CSV</td>
+              <td>{m.api_purpose_csv_aum()}</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th rowspan="1">Zip</th>
+              <td><a href="#zip"><code>/download/&lt;name&gt;.zip</code></a></td>
+              <td>ZIP</td>
+              <td>{m.api_purpose_zip()}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">{m.api_conventions_title()}</h2>
+        <dl class="kv">
+          <dt>{m.api_conv_numbers()}</dt>
+          <dd set:html={m.api_conv_numbers_text()} />
+          <dt>{m.api_conv_dates()}</dt>
+          <dd set:html={m.api_conv_dates_text()} />
+          <dt>{m.api_conv_currency()}</dt>
+          <dd set:html={m.api_conv_currency_text()} />
+          <dt>{m.api_conv_missing()}</dt>
+          <dd set:html={m.api_conv_missing_text()} />
+          <dt>{m.api_conv_unknown()}</dt>
+          <dd>404.</dd>
+          <dt>{m.api_conv_makmur()}</dt>
+          <dd set:html={m.api_conv_makmur_text({ oneFundLink: anchor('#one-fund', m.api_conv_makmur_link()) })} />
+        </dl>
+      </div>
+
+      <div class="section" id="funds-json">
+        <h2 class="section-title"><code>GET /api/funds.json</code></h2>
+        <p set:html={m.api_funds_text({ csvLink: anchor('#csv-funds', 'funds.csv') })} />
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>{m.api_col_field()}</th>
+              <th>{m.api_col_type()}</th>
+              <th>{m.api_col_meaning()}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              FUNDS_JSON_FIELDS.map(([field, type, meaning]) => (
+                <tr>
+                  <td><code>{field}</code></td>
+                  <td class="muted">{typeLabel(type)}</td>
+                  <td>{meaning}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+        <details>
+          <summary>{m.api_example_response()}</summary>
+          <pre><code>{`[
+  {
+    "id": "RD1983",
+    "name": "Insight Renewable Energy Fund",
+    "other_names": ["Insight-meti Renewable Energy Fund"],
+    "manager": "Insight Investments Management, PT",
+    "type": "Obligasi",
+    "currency": "IDR",
+    "sharia": false,
+    "etf": false,
+    "index": false,
+    "launch_date": "2011-06-23",
+    "sources": { "bibit": ["RD1983", "RD1352"], "bareksa": ["440"], "kontan": ["15297"], "makmur": [] },
+    "active": true,
+    "nav": 2587.7419,
+    "nav_date": "2026-10-01",
+    "aum": 194240467107.88,
+    "aum_date": "2026-09-01",
+    "return_1y": 0.0632
+  }
+]`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="one-fund">
+        <h2 class="section-title"><code>GET /api/funds/&lt;id&gt;.json</code></h2>
+        <p set:html={m.api_fund_text()} />
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>{m.api_col_field()}</th>
+              <th>{m.api_col_type()}</th>
+              <th>{m.api_col_meaning()}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              ONE_FUND_FIELDS.map(([field, type, meaning]) => (
+                <tr>
+                  <td><code>{field}</code></td>
+                  <td class="muted">{typeLabel(type)}</td>
+                  <td>{meaning}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+        <p class="muted small">{m.api_fund_more()}</p>
+
+        <details>
+          <summary>{m.api_example_response()}</summary>
+          <pre><code>{`{
+  "fund": { "id": "RD8807", "name": "Grow Obligasi Optima Dinamis Kelas O", "...": "..." },
+  "history": { "nav": [{ "date": "2024-10-02", "value": 1000, "source": "bibit" }, "..."], "aum": ["..."] },
+  "symbol": "RD8807",
+  "name": "Grow Obligasi Optima Dinamis Kelas O",
+  "type": "Obligasi",
+  "tradeable": 1,
+  "fee": { "subscription": { "value": 0, "type": "percent", "currency": "IDR" }, "...": "..." },
+  "asset": [{ "name": "Obligasi Negara", "percentage": 81.33 }, "..."],
+  "simplereturn": { "1d": 0.0033, "1y": 0.0111, "...": "..." },
+  "nav": [{ "date": "2024-10-02", "nav": 1000, "nav_adjusted": 1000 }, "..."],
+  "aum": [{ "date": "2024-10-01", "aum": 42315763006.92 }, "..."],
+  "kontan": null,
+  "bareksa": null,
+  "makmur": null,
+  "documents": { "factsheets": ["..."], "prospectus": ["..."] },
+  "switchables": null,
+  "dividends": null
+}`}</code></pre>
+        </details>
+
+        <details>
+          <summary>{m.api_example_kontan()}</summary>
+          <p class="small muted" set:html={m.api_kontan_text()} />
+          <pre><code>{`"kontan": {
+  "id": 378,
+  "name": "Net Dana Gemilang",
+  "nav": [
+    { "date": "2025-10-02", "nav": 3257.37 },
+    { "date": "2025-10-03", "nav": 3258.24 },
+    "..."
+  ]
+}`}</code></pre>
+        </details>
+
+        <details>
+          <summary>{m.api_example_bareksa()}</summary>
+          <p class="small muted" set:html={m.api_bareksa_text()} />
+          <pre><code>{`"bareksa": {
+  "id": 354,
+  "name": "Aberdeen Standard Indonesia Bond Fund",
+  "nav": [{ "date": "2007-06-01", "nav": 1000 }, "..."],
+  "aum": [{ "date": "2007-06-01", "aum_idr": 80659641807, "aum_usd": 9139902.75 }, "..."],
+  "units": [{ "date": "2007-06-01", "units": 80646262 }, "..."],
+  "allocation": [
+    { "date": "2017-11-30", "saham": 0, "obligasi": 89.5, "pasar_uang": 10.5, "lainnya": 0 },
+    "..."
+  ]
+}`}</code></pre>
+        </details>
+
+        <details>
+          <summary>{m.api_example_makmur()}</summary>
+          <p class="small muted" set:html={m.api_makmur_text()} />
+          <pre><code>{`"makmur": {
+  "id": "67f4d3dbc5988e812e4e9d59",
+  "name": "Bahana Liquid USD",
+  "url": "https://www.makmur.id/id/reksadana/pasar-uang/bahana-liquid-usd-b2dbfdcba9e3",
+  "data": {
+    "currency": "USD",
+    "lastPrice": 100,
+    "return1y": 266,
+    "assetAllocations": [{ "asset": "Obligasi", "weight": 2984 }, "..."],
+    "factsheet": "https://cache.makmur.id/...",
+    "...": "..."
+  }
+}`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="types-json">
+        <h2 class="section-title"><code>GET /api/types.json</code></h2>
+        <p>{m.api_types_text()}</p>
+        <details>
+          <summary>{m.api_example_response()}</summary>
+          <pre><code>{`{
+  "types": [
+    { "code": 3, "label": "Pasar Uang" },
+    { "code": 2, "label": "Obligasi" }
+  ],
+  "show_sharia_tab": true
+}`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="csv-funds">
+        <h2 class="section-title"><code>GET /csv/funds.csv</code></h2>
+        <p set:html={m.api_csv_funds_text()} />
+        <details>
+          <summary>{m.api_example_response()}</summary>
+          <pre><code>{`id,name,other_names,manager,type,currency,sharia,launch_date,bibit,bareksa,kontan,makmur
+RD1983,Insight Renewable Energy Fund,Insight-meti Renewable Energy Fund,"Insight Investments Management, PT",Obligasi,IDR,false,2011-06-23,RD1983 RD1352 RD2280 RD2348,440,15297 615,64367a1f792d78750b0a3465`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="csv-nav">
+        <h2 class="section-title"><code>GET /csv/nav/&lt;id&gt;.csv</code></h2>
+        <p set:html={m.api_csv_nav_text({ downloadLink: downloadLink(m.api_zip_files_link()) })} />
+        <details>
+          <summary>{m.api_example_response()}</summary>
+          <pre><code>{`date,nav,source
+2011-06-22,1000,bareksa
+2011-06-23,1000.02,bareksa`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="csv-aum">
+        <h2 class="section-title"><code>GET /csv/aum/&lt;id&gt;.csv</code></h2>
+        <p set:html={m.api_csv_aum_text()} />
+        <details>
+          <summary>{m.api_example_response()}</summary>
+          <pre><code>{`date,aum,source
+2017-11-01,95394470734.7,bibit
+2017-12-01,113696742211.41,bibit`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="zip">
+        <h2 class="section-title"><code>GET /download/&lt;name&gt;.zip</code></h2>
+        <p set:html={m.api_zip_text({ downloadPageLink: downloadLink(m.api_zip_page_link()) })} />
+      </div>
+    </div>
+  </div>
+</Base>
+
+<script>
+  // Show the real host in the examples instead of the placeholder.
+  for (const node of document.querySelectorAll('[data-origin]')) {
+    node.textContent = node.textContent.replaceAll('https://your-site.example', location.origin);
+  }
+</script>
+
+<style>
+  .api-toc {
+    display: none;
+  }
+
+  .api-layout {
+    margin-top: 20px;
+  }
+
+  @media (min-width: 1100px) {
+    .api-layout {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .api-toc {
+      position: sticky;
+      top: 20px;
+      display: block;
+    }
+
+    .api-toc ul {
+      margin: 6px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .api-toc li + li {
+      margin-top: 6px;
+    }
+
+    .api-toc a {
+      color: var(--ink-2);
+    }
+  }
+
+  details {
+    margin-top: 10px;
+  }
+
+  details + details {
+    margin-top: 6px;
+  }
+
+  details summary {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  details pre,
+  details p {
+    margin-top: 8px;
+  }
+</style>

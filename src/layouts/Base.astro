@@ -5,42 +5,63 @@ import '@fontsource/spline-sans-mono/400.css';
 import '../styles/global.css';
 import { latestNavDate } from '../lib/data.js';
 import { formatDate } from '../lib/format.js';
+import { LOCALES, localizeHref, otherLocale, unlocalizedPath } from '../lib/i18n.js';
+import * as m from '../paraglide/messages.js';
 
-const {
-  title,
-  description = 'NAV history, returns, and fund size for every Indonesian mutual fund (reksa dana), from Bibit, Bareksa, Kontan, and Makmur. Free to download.',
-  section,
-} = Astro.props;
+const { title, description = m.site_description(), section, indexable = true } = Astro.props;
+
+const locale = Astro.currentLocale ?? 'id';
+const pagePath = unlocalizedPath(Astro.url.pathname);
+const absoluteUrl = (targetLocale) => new URL(localizeHref(pagePath, targetLocale), Astro.site).href;
 
 const NAV_LINKS = [
-  ['funds', '/', 'Funds'],
-  ['download', '/download/', 'Download'],
-  ['api', '/api/', 'API'],
+  ['funds', '/', m.nav_funds()],
+  ['compare', '/compare/', m.nav_compare()],
+  ['download', '/download/', m.nav_download()],
+  ['api', '/api/', m.nav_api()],
 ];
+
+const LANGUAGE_NAMES = { id: 'Bahasa Indonesia', en: 'English' };
 
 const dataDate = latestNavDate();
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="color-scheme" content="light dark" />
+    {indexable && <link rel="canonical" href={absoluteUrl(locale)} />}
+    {indexable && LOCALES.map((alternate) => <link rel="alternate" hreflang={alternate} href={absoluteUrl(alternate)} />)}
+    {indexable && <link rel="alternate" hreflang="x-default" href={absoluteUrl('id')} />}
+    {!indexable && <meta name="robots" content="noindex" />}
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315171c'/%3E%3Cpath d='M5 22l7-7 5 4 10-10' stroke='%23fafaf7' stroke-width='3' fill='none'/%3E%3C/svg%3E" />
     <title>{title === 'Reksadana ID' ? title : `${title} · Reksadana ID`}</title>
   </head>
   <body>
     <header class="site-header">
       <div class="wrap">
-        <a class="wordmark" href="/">Reksadana<span>ID</span></a>
-        <nav class="site-nav" aria-label="Main">
+        <a class="wordmark" href={localizeHref('/', locale)}>Reksadana<span>ID</span></a>
+        <nav class="site-nav" aria-label={m.nav_main()}>
           {NAV_LINKS.map(([key, href, label]) => (
-            <a href={href} aria-current={section === key ? 'page' : undefined}>{label}</a>
+            <a href={localizeHref(href, locale)} aria-current={section === key ? 'page' : undefined}>{label}</a>
           ))}
         </nav>
-        <span class="site-freshness" title="The newest NAV date in the data">Data to {formatDate(dataDate)}</span>
+        <span class="site-freshness" title={m.freshness_hint()}>{m.freshness({ date: formatDate(dataDate, locale) })}</span>
+        <nav class="lang-switch" aria-label={m.language_label()}>
+          {LOCALES.map((target) => (
+            <a
+              href={target === locale ? undefined : localizeHref(pagePath, target)}
+              lang={target}
+              hreflang={target}
+              title={LANGUAGE_NAMES[target]}
+              aria-current={target === locale ? 'true' : undefined}
+              data-lang={target}
+            >{target.toUpperCase()}</a>
+          ))}
+        </nav>
       </div>
     </header>
     <main class="wrap">
@@ -48,16 +69,33 @@ const dataDate = latestNavDate();
     </main>
     <footer class="site-footer">
       <div class="wrap">
-        <p>
-          Data from Bibit, Bareksa, Kontan, and Makmur. Not affiliated with any of them. Not financial advice: check a fund's
-          prospectus before you invest. Buy links include the site owner's referral codes.
-        </p>
-        <nav aria-label="Footer">
-          <a href="/download/">Download</a>
-          <a href="/api/">API</a>
-          <a href="https://github.com/risan/reksadana-id">Source</a>
+        <p>{m.footer_disclaimer()}</p>
+        <nav aria-label={m.nav_footer()}>
+          <a href={localizeHref('/download/', locale)}>{m.nav_download()}</a>
+          <a href={localizeHref('/api/', locale)}>{m.nav_api()}</a>
+          <a href="https://github.com/risan/reksadana-id">{m.footer_source()}</a>
         </nav>
       </div>
     </footer>
+    <script>
+      // The switcher keeps the query and hash of the page, and remembers the choice for the next visit to "/".
+      const ONE_YEAR_SECONDS = 365 * 24 * 60 * 60;
+
+      for (const link of document.querySelectorAll('.lang-switch a[href]')) {
+        const target = link.getAttribute('href');
+
+        const carryQueryAndHash = () => {
+          link.setAttribute('href', `${target}${location.search}${location.hash}`);
+        };
+
+        carryQueryAndHash();
+        link.addEventListener('pointerdown', carryQueryAndHash);
+        link.addEventListener('focus', carryQueryAndHash);
+        link.addEventListener('click', () => {
+          carryQueryAndHash();
+          document.cookie = `lang=${link.dataset.lang}; Max-Age=${ONE_YEAR_SECONDS}; Path=/; SameSite=Lax`;
+        });
+      }
+    </script>
   </body>
 </html>

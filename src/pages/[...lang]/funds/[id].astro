@@ -1,50 +1,55 @@
 ---
-import Base from '../../layouts/Base.astro';
-import { fundPerformance, isActive, latestAum, listDataFiles, listFundSymbols, loadFund, loadFundRecord, shortManagerName } from '../../lib/data.js';
-import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from '../../lib/format.js';
-import { englishTypeName } from '../../lib/fund-types.js';
-import { REFERRALS, bibitFundUrl } from '../../lib/referrals.js';
-import { RETURN_PERIODS, SOURCE_LABELS, fundCurrency, largeMoves, pickNavHistory } from '../../lib/series.js';
+import Base from '../../../layouts/Base.astro';
+import { fundIdOfBibitSymbol, fundPerformance, isActive, latestAum, listFundIds, loadFundRecord, shortManagerName, staleSourceDate } from '../../../lib/data.js';
+import { describeCosts } from '../../../lib/costs-text.js';
+import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from '../../../lib/format.js';
+import { shariaText, typeName } from '../../../lib/fund-types.js';
+import { localePaths, localizeHref } from '../../../lib/i18n.js';
+import { REFERRALS, bibitFundUrl } from '../../../lib/referrals.js';
+import * as m from '../../../paraglide/messages.js';
+import { RETURN_PERIODS, SOURCE_LABELS, fundCurrency, largeMoves, pickAumHistory, pickNavHistory } from '../../../lib/series.js';
 
 export function getStaticPaths() {
-  return listFundSymbols().map((symbol) => ({ params: { symbol } }));
+  return localePaths(listFundIds().map((id) => ({ id })));
 }
 
-const { symbol } = Astro.params;
-const fund = loadFundRecord(symbol);
+const { id } = Astro.params;
+const locale = Astro.currentLocale ?? 'id';
+const href = (path) => localizeHref(path, locale);
+const sourceLabel = (source) => (source === 'bareksa-monthly' ? m.source_bareksa_monthly() : SOURCE_LABELS[source]);
+const fund = loadFundRecord(id);
+const info = fund.fund;
 const { kontan, bareksa, makmur } = fund;
-const hasNavCsv = listDataFiles('nav').includes(`${symbol}.csv`);
-const hasAumCsv = listDataFiles('aum').includes(`${symbol}.csv`);
+const hasBibit = info.sources.bibit.length > 0;
 
 const history = pickNavHistory(fund);
 const performance = fundPerformance(fund, history);
 const lastPoint = history.points.at(-1);
 const navValue = lastPoint?.value ?? null;
 const navDate = history.frozenSince ?? lastPoint?.date ?? null;
-const active = isActive(navDate);
+const active = isActive(navDate, lastPoint?.source);
+const sourceDataDate = staleSourceDate(lastPoint?.source);
 const currency = fundCurrency(fund);
 const aum = latestAum(fund);
+const aumPoints = pickAumHistory(fund).points;
+const hasAumHistory = aumPoints.length > 0;
+const aumCurrency = aumPoints.at(-1)?.currency ?? null;
 const moves = largeMoves(history.points).reverse();
 
-const PERIOD_LABELS = { '1d': '1D', '1m': '1M', '3m': '3M', ytd: 'YTD', '1y': '1Y', '3y': '3Y', '5y': '5Y', '10y': '10Y', all: 'All' };
+const PERIOD_LABELS = {
+  '1d': m.period_1d(),
+  '1m': m.period_1m(),
+  '3m': m.period_3m(),
+  '6m': m.period_6m(),
+  ytd: m.period_ytd(),
+  '1y': m.period_1y(),
+  '3y': m.period_3y(),
+  '5y': m.period_5y(),
+  '10y': m.period_10y(),
+  all: m.period_all(),
+};
 const TABLE_PERIODS = RETURN_PERIODS.filter((period) => period !== '1d');
 const ret = (period) => performance.simplereturn?.[period] ?? null;
-
-// Bibit stores a fraction; a few funds carry a raw number that cannot be a ratio, so those show as missing.
-const expenseRatio = fund.expenseratio?.percentage;
-const validExpenseRatio = typeof expenseRatio === 'number' && expenseRatio >= 0 && expenseRatio < 1 ? expenseRatio : null;
-
-function formatFee(fee) {
-  if (!fee) {
-    return '—';
-  }
-
-  if (fee.type === 'percent') {
-    return `${formatNumber(fee.value, 2)}%`;
-  }
-
-  return `${fee.currency ?? ''} ${formatNumber(fee.value)}`.trim();
-}
 
 // Document URLs come from scraped data, so never link anything but http(s), such as a javascript: URL.
 function isWebUrl(url) {
@@ -57,10 +62,10 @@ function jakartaDate(isoTimestamp) {
 }
 
 const ASSET_CLASSES = [
-  { key: 'equity', label: 'Equity', color: 'var(--alloc-equity)', pattern: /saham|ekuitas|equit|stock/i },
-  { key: 'bonds', label: 'Bonds', color: 'var(--alloc-bonds)', pattern: /obligasi|sukuk|utang|hutang|pendapatan tetap|fixed income|bond/i },
-  { key: 'money', label: 'Money market', color: 'var(--alloc-money)', pattern: /pasar uang|deposit|kas|cash|money|likuid|setara/i },
-  { key: 'other', label: 'Other', color: 'var(--alloc-other)', pattern: /.*/ },
+  { key: 'equity', label: m.asset_equity(), color: 'var(--alloc-equity)', pattern: /saham|ekuitas|equit|stock/i },
+  { key: 'bonds', label: m.asset_bonds(), color: 'var(--alloc-bonds)', pattern: /obligasi|sukuk|utang|hutang|pendapatan tetap|fixed income|bond/i },
+  { key: 'money', label: m.asset_money(), color: 'var(--alloc-money)', pattern: /pasar uang|deposit|kas|cash|money|likuid|setara/i },
+  { key: 'other', label: m.asset_other(), color: 'var(--alloc-other)', pattern: /.*/ },
 ];
 
 function assetClassOf(name) {
@@ -111,90 +116,100 @@ const dividends = [...(fund.dividends ?? [])].sort((a, b) => b.date.localeCompar
 const factsheets = [...(fund.documents?.factsheets ?? [])].filter((document) => isWebUrl(document.file)).sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
 const prospectus = [...(fund.documents?.prospectus ?? [])].filter((document) => isWebUrl(document.file)).reverse();
 const makmurDocuments = [
-  ['Prospectus', makmur?.data.prospectus],
-  ['Factsheet', makmur?.data.factsheet],
+  [m.doc_prospectus(), makmur?.data.prospectus],
+  [m.doc_factsheet(), makmur?.data.factsheet],
 ].filter(([, url]) => isWebUrl(url));
 const switchables = fund.switchables ?? [];
 const buyLinks = [
-  fund.tradeable && { ...REFERRALS.bibit, url: bibitFundUrl(symbol) },
+  fund.tradeable && { ...REFERRALS.bibit, url: bibitFundUrl(fund.symbol) },
   makmur && { ...REFERRALS.makmur, url: makmur.url },
 ].filter(Boolean);
 
-const typeEnglish = englishTypeName(fund.type);
-// The record's nav is the history, so Bibit's first NAV date comes from its fund file.
-const launchDate = fund.released_date ?? loadFund(symbol)?.nav?.first_date ?? null;
-const manager = shortManagerName(fund.investment_manager?.name);
-const riskProfile = ['Low', 'Moderate', 'High'].includes(fund.riskprofile) ? fund.riskprofile : null;
+const typeLabel = info.type ? typeName(info.type, locale) : null;
+// English pages keep Bibit's own label beside the English name, so a reader can match it to the apps.
+const typeNote = typeLabel !== null && typeLabel !== info.type ? info.type : null;
+const launchDate = info.launch_date ?? fund.released_date ?? null;
+const manager = shortManagerName(info.manager);
+const RISK_LEVELS = { Low: m.risk_low(), Moderate: m.risk_moderate(), High: m.risk_high() };
+const riskProfile = Object.hasOwn(RISK_LEVELS, fund.riskprofile) ? RISK_LEVELS[fund.riskprofile] : null;
 const returnsNote = performance.source
-  ? `Change in NAV, computed from the ${SOURCE_LABELS[history.primary]} history.${
-      dividends.length > 0 ? ' This fund pays dividends, which these figures leave out, so its total return is higher.' : ''
-    }`
+  ? [m.returns_note({ source: sourceLabel(history.primary) }), dividends.length > 0 && m.returns_note_dividends(), m.returns_note_per_year()].filter(Boolean).join(' ')
   : null;
 
 const details = [
-  ['Type', fund.type ? `${fund.type}${typeEnglish ? ` (${typeEnglish})` : ''}` : null],
-  ['Manager', fund.investment_manager?.name],
-  ['Custodian bank', fund.custodian_bank?.name],
-  ['Currency', currency],
-  ['Launched', launchDate ? formatDate(launchDate) : null],
-  ['Risk profile', riskProfile],
-  ['Minimum buy', fund.minbuy ? `${currency} ${formatNumber(fund.minbuy)}` : null],
-  ['Expense ratio', validExpenseRatio === null ? null : formatPercent(validExpenseRatio)],
-  ['Subscription fee', fund.fee ? formatFee(fund.fee.subscription) : null],
-  ['Redemption fee', fund.fee ? formatFee(fund.fee.redemption) : null],
-  ['Switch fee', fund.fee ? formatFee(fund.fee.switch) : null],
+  [m.detail_type(), typeLabel === null ? null : `${typeLabel}${typeNote ? ` (${typeNote})` : ''}`],
+  [m.detail_manager(), info.manager],
+  [m.detail_currency(), currency ?? m.detail_not_stated()],
+  [m.compare_row_sharia(), shariaText(info.sharia)],
+  [m.detail_launched(), launchDate ? formatDate(launchDate, locale) : null],
+  [m.detail_risk(), riskProfile],
 ].filter(([, value]) => value !== null && value !== undefined && value !== '');
 
 function threeYearSub() {
   const threeYearsPerYear = performance.cagr?.['3y'] ?? null;
 
   if (threeYearsPerYear !== null) {
-    return `3Y: ${formatChange(threeYearsPerYear)} a year`;
+    return m.figure_three_year_sub({ change: formatChange(threeYearsPerYear, locale) });
   }
 
-  return ret('ytd') === null ? '' : `YTD: ${formatChange(ret('ytd'))}`;
+  return ret('ytd') === null ? '' : m.figure_ytd_sub({ change: formatChange(ret('ytd'), locale) });
 }
 
 const figures = [
   {
-    label: active ? 'NAV per unit' : 'Last NAV',
-    value: navValue === null ? '—' : formatNav(navValue),
-    unit: currency === 'USD' ? 'USD' : 'IDR',
-    sub: navDate ? formatDate(navDate) : 'No NAV yet',
+    label: active ? m.figure_nav() : m.figure_last_nav(),
+    value: navValue === null ? '—' : formatNav(navValue, locale),
+    unit: currency,
+    sub: navDate ? formatDate(navDate, locale) : m.figure_no_nav(),
     change: active ? ret('1d') : null,
   },
-  { label: '1-year return', value: formatChange(ret('1y')), className: changeClass(ret('1y')), sub: threeYearSub() },
-  { label: 'Worst fall, 1 year', value: formatPercent(performance.maxdrawdown?.['1y'] ?? null), sub: 'Peak to bottom' },
-  { label: 'Fund size', value: formatMoney(aum?.value ?? null, currency), sub: aum ? formatMonth(aum.date) : '' },
-  { label: 'Expense ratio', value: validExpenseRatio === null ? '—' : formatPercent(validExpenseRatio), sub: 'Yearly cost' },
+  { label: m.figure_return_1y(), value: formatChange(ret('1y'), locale), className: changeClass(ret('1y')), sub: threeYearSub() },
+  { label: m.figure_worst_fall(), value: formatPercent(performance.maxdrawdown?.['1y'] ?? null, locale), sub: m.figure_worst_fall_sub() },
+  { label: m.figure_aum(), value: formatMoney(aum?.value ?? null, locale, aum?.currency), sub: aum ? formatMonth(aum.date, locale) : '' },
 ].filter((figure, index) => index === 0 || figure.value !== '—');
 
+const costs = describeCosts(fund.costs, locale);
+const listOf = (value) => (value === null ? [] : [value]);
+const costRows = [
+  [m.detail_expense_ratio(), listOf(costs.expenseRatio)],
+  [m.compare_row_min_purchase(), costs.minPurchases],
+  [m.cost_row_min_topup(), listOf(costs.minTopup)],
+  [m.cost_row_min_redemption(), listOf(costs.minRedemption)],
+  ...(costs.fees.length === 0 ? [[m.compare_row_max_fees(), []]] : costs.fees.map((fee) => [fee.label, [fee]])),
+  [m.detail_custodian(), listOf(costs.custodian)],
+];
+
 const sources = [
-  { name: 'Bibit', url: 'https://app.bibit.id/', what: 'fund data, NAV, AUM' },
-  kontan && { name: 'Kontan', url: `https://pusatdata.kontan.co.id/reksadana/produk/${kontan.id}`, what: `daily NAV, last 12 months` },
-  bareksa && { name: 'Bareksa', url: `https://www.bareksa.com/id/data/reksadana/${bareksa.id}/`, what: 'daily NAV, monthly AUM, units, asset mix' },
-  makmur && { name: 'Makmur', url: makmur.url, what: 'documents' },
+  hasBibit && { name: 'Bibit', url: 'https://app.bibit.id/', what: m.source_bibit(), ids: info.sources.bibit },
+  kontan && { name: 'Kontan', url: `https://pusatdata.kontan.co.id/reksadana/produk/${kontan.id}`, what: m.source_kontan(), ids: info.sources.kontan },
+  bareksa && { name: 'Bareksa', url: `https://www.bareksa.com/id/data/reksadana/${bareksa.id}/`, what: m.source_bareksa(), ids: info.sources.bareksa },
+  makmur && { name: 'Makmur', url: makmur.url, what: m.source_makmur(), ids: info.sources.makmur },
 ].filter(Boolean);
 ---
 
-<Base title={`${fund.name} (${symbol})`} description={`NAV history, returns, fund size, and documents for ${fund.name}, a reksa dana managed by ${manager ?? 'an Indonesian investment manager'}.`} section="funds">
-  <nav class="crumbs" aria-label="Breadcrumb">
-    <a href="/">Funds</a>
-    {fund.type && <><span aria-hidden="true">/</span><a href={`/?type=${encodeURIComponent(fund.type)}`}>{fund.type}</a></>}
-    <span aria-hidden="true">/</span><span class="mono">{symbol}</span>
+<Base title={`${info.name} (${id})`} description={manager ? m.fund_description({ name: info.name, manager }) : m.fund_description_no_manager({ name: info.name })} section="funds">
+  <nav class="crumbs" aria-label={m.crumbs_label()}>
+    <a href={href('/')}>{m.nav_funds()}</a>
+    {info.type && <><span aria-hidden="true">/</span><a href={href(`/?type=${encodeURIComponent(info.type)}`)}>{typeLabel}</a></>}
+    <span aria-hidden="true">/</span><span class="mono">{id}</span>
   </nav>
 
   <header class="fund-head">
-    <h1 class="page-title">{fund.name}</h1>
+    <h1 class="page-title">{info.name}</h1>
+    {info.other_names.length > 0 && <p class="fund-aka muted small">{m.fund_also_known_as()} {info.other_names.join(' · ')}</p>}
     <p class="fund-meta">
       {manager && <span>{manager}</span>}
-      {fund.type && <span>{fund.type}{typeEnglish && <span class="muted"> · {typeEnglish}</span>}</span>}
-      {fund.sharia ? <span class="tag">Syariah</span> : null}
-      {fund.etf ? <span class="tag">ETF</span> : null}
-      {fund.index ? <span class="tag">Index</span> : null}
+      {info.type && <span>{typeLabel}{typeNote && <span class="muted"> · {typeNote}</span>}</span>}
+      {info.sharia ? <span class="tag">{m.tag_sharia()}</span> : null}
+      {info.etf ? <span class="tag">ETF</span> : null}
+      {info.index ? <span class="tag">{m.tag_index()}</span> : null}
       {currency === 'USD' && <span class="tag">USD</span>}
-      {dividends.length > 0 && <span class="tag">Pays dividends</span>}
-      {riskProfile && <span class="tag">{riskProfile} risk</span>}
+      {dividends.length > 0 && <span class="tag">{m.tag_pays_dividends()}</span>}
+      {riskProfile && <span class="tag">{m.tag_risk({ level: riskProfile })}</span>}
+    </p>
+    <p class="fund-compare">
+      <button class="btn" type="button" id="compare-toggle" data-fund-id={id} hidden></button>
+      <a class="btn btn-ink" id="compare-open" href={href('/compare/')} hidden></a>
     </p>
   </header>
 
@@ -202,14 +217,22 @@ const sources = [
     !active && (
       <p class="notice">
         <span>
-          <strong>Inactive.</strong>{' '}
+          <strong>{m.inactive_title()}</strong>{' '}
           {history.frozenSince
-            ? `The NAV has not changed since ${formatDate(navDate)}, although some sources still list it.`
+            ? m.inactive_frozen({ date: formatDate(navDate, locale) })
             : navDate
-              ? `No NAV since ${formatDate(navDate)}.`
-              : 'No NAV reported.'}{' '}
-          The fund may be closed, merged, or no longer reported.
+              ? m.inactive_since({ date: formatDate(navDate, locale) })
+              : m.inactive_no_nav()}{' '}
+          {m.inactive_reason()}
         </span>
+      </p>
+    )
+  }
+
+  {
+    sourceDataDate && (
+      <p class="muted small data-freshness">
+        {m.data_freshness({ source: sourceLabel(lastPoint.source), date: formatDate(sourceDataDate, locale) })}
       </p>
     )
   }
@@ -221,7 +244,7 @@ const sources = [
         <dd class={`figure-value ${figure.className ?? ''}`}>{figure.value}{figure.unit && figure.value !== '—' && <span class="unit">{figure.unit}</span>}</dd>
         <dd class="figure-sub">
           {figure.sub}
-          {figure.change !== null && figure.change !== undefined && <span class={changeClass(figure.change)}> · {formatChange(figure.change)} 1D</span>}
+          {figure.change !== null && figure.change !== undefined && <span class={changeClass(figure.change)}> · {m.figure_one_day({ change: formatChange(figure.change, locale) })}</span>}
         </dd>
       </div>
     ))}
@@ -231,15 +254,14 @@ const sources = [
     moves.length > 0 && (
       <p class="notice moves">
         <span>
-          <strong>Large one-day {moves.length === 1 ? 'move' : 'moves'} in the NAV:</strong>{' '}
+          <strong>{moves.length === 1 ? m.moves_title_one() : m.moves_title_many()}</strong>{' '}
           {moves.slice(0, 3).map((move, index) => (
             <>
               {index > 0 && '; '}
-              {formatChange(move.change, 1)} on {formatDate(move.date)}
+              {m.moves_item({ change: formatChange(move.change, locale, 1), date: formatDate(move.date, locale) })}
             </>
           ))}
-          {moves.length > 3 && `; and ${moves.length - 3} more`}. Returns that span {moves.length === 1 ? 'it' : 'them'} include
-          the move. It can be a real event, such as a default, or an error in the source data.
+          {moves.length > 3 && `; ${m.moves_more({ count: moves.length - 3 })}`}. {moves.length === 1 ? m.moves_note_one() : m.moves_note_many()}
         </span>
       </p>
     )
@@ -249,29 +271,29 @@ const sources = [
     <div class="fund-main">
       <section class="section">
         <h2 class="section-title">
-          Price (NAV)
+          {m.chart_nav_title()}
           <span class="aside" id="range-readout"></span>
         </h2>
         <div class="chart-bar">
-          <div class="seg" role="group" aria-label="Time range" id="range-buttons">
-            {['1M', '3M', '6M', 'YTD', '1Y', '3Y', '5Y', 'All'].map((range) => (
-              <button type="button" data-range={range} aria-pressed={range === '1Y' ? 'true' : 'false'}>{range}</button>
+          <div class="seg" role="group" aria-label={m.chart_range_label()} id="range-buttons">
+            {[['1M', '1m'], ['3M', '3m'], ['6M', '6m'], ['YTD', 'ytd'], ['1Y', '1y'], ['3Y', '3y'], ['5Y', '5y'], ['All', 'all']].map(([range, period]) => (
+              <button type="button" data-range={range} aria-pressed={range === '1Y' ? 'true' : 'false'}>{PERIOD_LABELS[period]}</button>
             ))}
           </div>
-          {dividends.length > 0 && <span class="chart-legend">NAV only: this fund also pays dividends.</span>}
+          {dividends.length > 0 && <span class="chart-legend">{m.chart_nav_only()}</span>}
         </div>
-        <div class="chart" id="nav-chart" data-symbol={symbol}></div>
-        <p class="chart-empty" id="nav-empty" hidden>Not enough NAV history to draw a chart.</p>
+        <div class="chart" id="nav-chart" data-fund-id={id}></div>
+        <p class="chart-empty" id="nav-empty" hidden>{m.chart_nav_empty()}</p>
 
-        <h3 class="chart-subtitle">Fund size <span class="muted">({currency}, monthly)</span></h3>
+        <h3 class="chart-subtitle">{m.figure_aum()} <span class="muted">({aumCurrency ? m.chart_aum_currency_monthly({ currency: aumCurrency }) : m.chart_aum_monthly()})</span></h3>
         <div class="chart" id="aum-chart"></div>
-        <p class="chart-empty" id="aum-empty" hidden>No fund size history.</p>
+        <p class="chart-empty" id="aum-empty" hidden>{m.chart_aum_empty()}</p>
       </section>
 
       <section class="section" hidden={Object.keys(performance.simplereturn).length === 0}>
         <h2 class="section-title">
-          Returns
-          {navDate && <span class="aside">to {formatDate(navDate)}</span>}
+          {m.returns_title()}
+          {navDate && <span class="aside">{m.returns_to({ date: formatDate(navDate, locale) })}</span>}
         </h2>
         <div class="table-scroll">
           <table class="tbl returns-table">
@@ -283,35 +305,35 @@ const sources = [
             </thead>
             <tbody>
               <tr>
-                <th scope="row">Return</th>
-                {TABLE_PERIODS.map((period) => <td class={`num ${changeClass(ret(period))}`}>{formatChange(ret(period))}</td>)}
+                <th scope="row">{m.returns_row_return()}</th>
+                {TABLE_PERIODS.map((period) => <td class={`num ${changeClass(ret(period))}`}>{formatChange(ret(period), locale)}</td>)}
               </tr>
               <tr>
-                <th scope="row" title="Compound annual growth rate">Per year</th>
+                <th scope="row" title={m.returns_row_per_year_title()}>{m.returns_row_per_year()}</th>
                 {TABLE_PERIODS.map((period) => {
                   const value = performance.cagr?.[period] ?? null;
 
-                  return <td class={`num ${changeClass(value)}`}>{formatChange(value)}</td>;
+                  return <td class={`num ${changeClass(value)}`}>{formatChange(value, locale)}</td>;
                 })}
               </tr>
               <tr>
-                <th scope="row" title="Largest fall from a peak within the period">Worst fall</th>
+                <th scope="row" title={m.returns_row_worst_fall_title()}>{m.returns_row_worst_fall()}</th>
                 {TABLE_PERIODS.map((period) => {
                   const value = performance.maxdrawdown?.[period] ?? null;
 
-                  return <td class="num">{formatPercent(value)}</td>;
+                  return <td class="num">{formatPercent(value, locale)}</td>;
                 })}
               </tr>
             </tbody>
           </table>
         </div>
-        {returnsNote && <p class="muted small table-note">{returnsNote} "Per year" is shown for periods of a year or more.</p>}
+        {returnsNote && <p class="muted small table-note">{returnsNote}</p>}
       </section>
 
       {
         (assets.length > 0 || latestMix) && (
           <section class="section">
-            <h2 class="section-title">Asset mix</h2>
+            <h2 class="section-title">{m.asset_mix_title()}</h2>
             {assets.length > 0 && (
               <>
                 <div class="mix-bar" role="img" aria-label={assets.map((asset) => `${asset.name} ${asset.percentage}%`).join(', ')}>
@@ -324,7 +346,7 @@ const sources = [
                     <li>
                       <i class="key-box" style={`background: ${asset.assetClass.color}`}></i>
                       {asset.name}
-                      <span class="num">{formatNumber(asset.percentage, 2)}%</span>
+                      <span class="num">{formatNumber(asset.percentage, locale, 2)}%</span>
                     </li>
                   ))}
                 </ul>
@@ -333,27 +355,27 @@ const sources = [
             {latestMix && (
               <figure class="mix-history">
                 <figcaption>
-                  <span>Mix over the last {mixColumns.length} months <span class="muted">(Bareksa)</span></span>
+                  <span>{m.asset_mix_history({ count: mixColumns.length })} <span class="muted">(Bareksa)</span></span>
                   <span class="mix-history-key">
                     {ASSET_CLASSES.map((assetClass) => (
                       <span><i class="key-box" style={`background: ${assetClass.color}`}></i> {assetClass.label}</span>
                     ))}
                   </span>
                 </figcaption>
-                <svg viewBox={`0 0 ${MIX_WIDTH} ${MIX_HEIGHT}`} preserveAspectRatio="none" role="img" aria-label="Monthly asset mix from Bareksa">
+                <svg viewBox={`0 0 ${MIX_WIDTH} ${MIX_HEIGHT}`} preserveAspectRatio="none" role="img" aria-label={m.asset_mix_history_label()}>
                   {mixColumns.map((column) => (
                     <g>
                       {column.segments.map((segment, index) => (
                         <rect x={column.x} y={segment.y + (index > 0 ? MIX_GAP / 2 : 0)} width={mixColumnWidth} height={Math.max(segment.height - (index > 0 ? MIX_GAP / 2 : 0) - (index < column.segments.length - 1 ? MIX_GAP / 2 : 0), 0.5)} fill={segment.color}>
-                          <title>{`${formatMonth(column.date)}: ${ASSET_CLASSES.find((assetClass) => assetClass.key === segment.key).label} ${formatNumber(segment.share * 100, 1)}%`}</title>
+                          <title>{`${formatMonth(column.date, locale)}: ${ASSET_CLASSES.find((assetClass) => assetClass.key === segment.key).label} ${formatNumber(segment.share * 100, locale, 1)}%`}</title>
                         </rect>
                       ))}
                     </g>
                   ))}
                 </svg>
                 <div class="mix-axis">
-                  <span>{formatMonth(mixColumns[0].date)}</span>
-                  <span>{formatMonth(latestMix.date)}</span>
+                  <span>{formatMonth(mixColumns[0].date, locale)}</span>
+                  <span>{formatMonth(latestMix.date, locale)}</span>
                 </div>
               </figure>
             )}
@@ -365,8 +387,8 @@ const sources = [
         holdings.length > 0 && (
           <section class="section">
             <h2 class="section-title">
-              Top holdings
-              <span class="aside">{formatDate(holdings[0].date)}, in no order</span>
+              {m.holdings_title()}
+              <span class="aside">{m.holdings_aside({ date: formatDate(holdings[0].date, locale) })}</span>
             </h2>
             <ol class="holdings">
               {holdings.map((holding) => (
@@ -384,28 +406,28 @@ const sources = [
         dividends.length > 0 && (
           <section class="section">
             <h2 class="section-title">
-              Dividends
-              <span class="aside">{dividends.length} payouts, per unit</span>
+              {m.dividends_title()}
+              <span class="aside">{m.dividends_aside({ count: dividends.length })}</span>
             </h2>
             <div class="table-scroll">
               <table class="tbl dividends-table">
                 <thead>
                   <tr>
-                    <th>Date</th>
-                    <th class="num">Per unit ({currency})</th>
+                    <th>{m.dividends_date()}</th>
+                    <th class="num">{m.dividends_per_unit()}{currency && ` (${currency})`}</th>
                   </tr>
                 </thead>
                 <tbody>
                   {dividends.slice(0, 12).map((dividend) => (
                     <tr>
-                      <td>{formatDate(jakartaDate(dividend.date))}</td>
-                      <td class="num">{formatNumber(dividend.value, 4)}</td>
+                      <td>{formatDate(jakartaDate(dividend.date), locale)}</td>
+                      <td class="num">{formatNumber(dividend.value, locale, 4)}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            {dividends.length > 12 && <p class="muted small table-note">The latest 12 of {dividends.length}. The <a href={`/api/funds/${symbol}.json`}>fund JSON</a> has all of them.</p>}
+            {dividends.length > 12 && <p class="muted small table-note" set:html={m.dividends_more({ total: dividends.length, jsonLink: anchor(`/api/funds/${id}.json`, m.dividends_json_link()) })} />}
           </section>
         )
       }
@@ -414,8 +436,8 @@ const sources = [
         fund.profile && (
           <section class="section">
             <h2 class="section-title">
-              Profile
-              <span class="aside">From the manager, in Indonesian</span>
+              {m.profile_title()}
+              <span class="aside">{m.profile_aside()}</span>
             </h2>
             <details class="profile">
               <summary>{fund.profile.split('\n')[0].slice(0, 220)}{fund.profile.length > 220 ? '…' : ''}</summary>
@@ -430,23 +452,39 @@ const sources = [
       {
         buyLinks.length > 0 && (
           <section class="side-block buy">
-            <h2 class="section-title">Buy this fund</h2>
+            <h2 class="section-title">{m.buy_title()}</h2>
             {buyLinks.map((link) => (
               <div class="buy-row">
-                <a class="btn btn-ink" href={link.url} target="_blank" rel="sponsored noopener">Open in {link.name} &nearr;</a>
+                <a class="btn btn-ink" href={link.url} target="_blank" rel="sponsored noopener">{m.buy_open({ name: link.name })} &nearr;</a>
                 <span class="small muted">
-                  Referral code <code>{link.code}</code>
-                  <button class="copy" type="button" data-copy={link.code} hidden>Copy</button>
+                  {m.buy_referral_code()} <code>{link.code}</code>
+                  <button class="copy" type="button" data-copy={link.code} data-copied={m.buy_copied()} hidden>{m.buy_copy()}</button>
                 </span>
               </div>
             ))}
-            <p class="small muted">New users type the code in the app. It helps keep this site running.</p>
+            <p class="small muted">{m.buy_note()}</p>
           </section>
         )
       }
 
       <section class="side-block">
-        <h2 class="section-title">Details</h2>
+        <h2 class="section-title">{m.compare_group_costs()}</h2>
+        <dl class="kv">
+          {costRows.map(([label, values]) => (
+            <>
+              <dt>{label}</dt>
+              <dd>
+                {values.length === 0 && <span class="muted">{m.compare_not_in_sources()}</span>}
+                {values.map((value) => <div>{value.text} <span class="muted small">{value.source}</span></div>)}
+              </dd>
+            </>
+          ))}
+        </dl>
+        {costs.fees.length > 0 && <p class="small muted">{m.cost_fees_note()}</p>}
+      </section>
+
+      <section class="side-block">
+        <h2 class="section-title">{m.details_title()}</h2>
         <dl class="kv">
           {details.map(([label, value]) => (
             <>
@@ -460,27 +498,27 @@ const sources = [
       {
         (prospectus.length > 0 || factsheets.length > 0 || makmurDocuments.length > 0) && (
           <section class="side-block">
-            <h2 class="section-title">Documents</h2>
+            <h2 class="section-title">{m.documents_title()}</h2>
             <ul class="doc-list">
               {prospectus.slice(0, 1).map((document) => (
-                <li><a href={document.file}>Prospectus</a> <span class="muted small">latest</span></li>
+                <li><a href={document.file}>{m.doc_prospectus()}</a> <span class="muted small">{m.documents_latest()}</span></li>
               ))}
               {factsheets.slice(0, 3).map((document) => (
-                <li><a href={document.file}>Factsheet</a> <span class="muted small">{document.date ? formatMonth(document.date) : document.name}</span></li>
+                <li><a href={document.file}>{m.doc_factsheet()}</a> <span class="muted small">{document.date ? formatMonth(document.date, locale) : document.name}</span></li>
               ))}
               {makmurDocuments.map(([label, url]) => (
-                <li><a href={url}>{label}</a> <span class="muted small">via Makmur</span></li>
+                <li><a href={url}>{label}</a> <span class="muted small">{m.documents_via_makmur()}</span></li>
               ))}
             </ul>
             {(factsheets.length > 3 || prospectus.length > 1) && (
               <details class="doc-more">
-                <summary>{factsheets.length - Math.min(3, factsheets.length) + Math.max(prospectus.length - 1, 0)} older documents</summary>
+                <summary>{m.documents_older({ count: factsheets.length - Math.min(3, factsheets.length) + Math.max(prospectus.length - 1, 0) })}</summary>
                 <ul class="doc-list">
                   {prospectus.slice(1).map((document) => (
-                    <li><a href={document.file}>Prospectus</a> <span class="muted small">{document.name}</span></li>
+                    <li><a href={document.file}>{m.doc_prospectus()}</a> <span class="muted small">{document.name}</span></li>
                   ))}
                   {factsheets.slice(3).map((document) => (
-                    <li><a href={document.file}>Factsheet</a> <span class="muted small">{document.date ? formatMonth(document.date) : document.name}</span></li>
+                    <li><a href={document.file}>{m.doc_factsheet()}</a> <span class="muted small">{document.date ? formatMonth(document.date, locale) : document.name}</span></li>
                   ))}
                 </ul>
               </details>
@@ -492,10 +530,10 @@ const sources = [
       {
         switchables.length > 0 && (
           <section class="side-block">
-            <h2 class="section-title">Switch to <span class="aside">in Bibit</span></h2>
+            <h2 class="section-title">{m.switch_title()} <span class="aside">{m.switch_aside()}</span></h2>
             <ul class="doc-list">
               {switchables.map((target) => (
-                <li><a href={`/funds/${target.symbol}/`}>{target.name}</a></li>
+                <li><a href={href(`/funds/${fundIdOfBibitSymbol(target.symbol)}/`)}>{target.name}</a></li>
               ))}
             </ul>
           </section>
@@ -503,28 +541,28 @@ const sources = [
       }
 
       <section class="side-block">
-        <h2 class="section-title">Data</h2>
+        <h2 class="section-title">{m.data_title()}</h2>
         <div class="downloads">
-          <a class="btn" href={`/api/funds/${symbol}.json`} download>JSON</a>
-          {hasNavCsv && <a class="btn" href={`/csv/nav/${symbol}.csv`} download>NAV CSV</a>}
-          {hasAumCsv && <a class="btn" href={`/csv/aum/${symbol}.csv`} download>AUM CSV</a>}
+          <a class="btn" href={`/api/funds/${id}.json`} download>JSON</a>
+          {history.points.length > 0 && <a class="btn" href={`/csv/nav/${id}.csv`} download>{m.data_nav_csv()}</a>}
+          {hasAumHistory && <a class="btn" href={`/csv/aum/${id}.csv`} download>{m.data_aum_csv()}</a>}
         </div>
         <ul class="source-list small">
           {sources.map((source) => (
-            <li><a href={source.url}>{source.name}</a> <span class="muted">{source.what}</span></li>
+            <li><a href={source.url}>{source.name}</a> <span class="muted">{source.what} · <span class="mono">{source.ids.join(', ')}</span></span></li>
           ))}
         </ul>
         {
           history.used.length > 0 && (
             <p class="small muted">
-              Chart:{' '}
+              {m.data_chart_prefix()}{' '}
               {history.used.map((part, index) => (
                 <>
-                  {index > 0 && ', then '}
-                  {SOURCE_LABELS[part.source]} from {formatDate(part.from)}
+                  {index > 0 && m.data_chart_then()}
+                  {m.data_chart_part({ source: sourceLabel(part.source), date: formatDate(part.from, locale) })}
                 </>
               ))}
-              .{history.droppedSpikes > 0 && ` ${history.droppedSpikes} one-day ${history.droppedSpikes === 1 ? 'spike' : 'spikes'} that reversed the next day ${history.droppedSpikes === 1 ? 'is' : 'are'} left out as source errors.`}
+              .{history.droppedSpikes > 0 && ` ${history.droppedSpikes === 1 ? m.data_spike_one() : m.data_spikes_many({ count: history.droppedSpikes })}`}
             </p>
           )
         }
@@ -553,6 +591,11 @@ const sources = [
     max-width: 30ch;
   }
 
+  .fund-aka {
+    margin-top: 4px;
+    max-width: 60ch;
+  }
+
   .fund-meta {
     display: flex;
     flex-wrap: wrap;
@@ -564,6 +607,12 @@ const sources = [
 
   .fund-meta .tag {
     margin-right: -6px;
+  }
+
+  .fund-compare {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
   }
 
   .notice + .figures,
@@ -862,18 +911,55 @@ const sources = [
   for (const button of document.querySelectorAll('[data-copy]')) {
     button.hidden = false;
 
+    const label = button.textContent;
+
     button.addEventListener('click', async () => {
       await navigator.clipboard.writeText(button.dataset.copy);
-      button.textContent = 'Copied';
+      button.textContent = button.dataset.copied;
       setTimeout(() => {
-        button.textContent = 'Copy';
+        button.textContent = label;
       }, 1500);
     });
   }
 </script>
 
 <script>
-  import { mountFundCharts } from '../../lib/fund-charts.js';
+  import { mountFundCharts } from '../../../lib/fund-charts.js';
 
-  mountFundCharts(document.getElementById('nav-chart').dataset.symbol);
+  mountFundCharts(document.getElementById('nav-chart').dataset.fundId);
+</script>
+
+<script>
+  import { MAX_FUNDS, selectionQuery } from '../../../lib/compare.js';
+  import { readTray, toggleInTray } from '../../../lib/compare-tray.js';
+  import { localizeHref } from '../../../lib/i18n.js';
+  import * as m from '../../../paraglide/messages.js';
+  import { setLocale } from '../../../paraglide/runtime.js';
+
+  const locale = document.documentElement.lang;
+
+  setLocale(locale, { reload: false });
+
+  const toggle = document.getElementById('compare-toggle');
+  const open = document.getElementById('compare-open');
+
+  function sync() {
+    const tray = readTray();
+    const isCompared = tray.includes(toggle.dataset.fundId);
+
+    toggle.hidden = false;
+    toggle.textContent = isCompared ? m.compare_button_remove() : m.compare_button_add();
+    toggle.disabled = !isCompared && tray.length >= MAX_FUNDS;
+    toggle.title = toggle.disabled ? m.compare_full({ count: MAX_FUNDS }) : '';
+    open.hidden = tray.length === 0;
+    open.textContent = m.compare_open({ count: tray.length });
+    open.href = localizeHref(`/compare/${selectionQuery(tray)}`, locale);
+  }
+
+  toggle.addEventListener('click', () => {
+    toggleInTray(toggle.dataset.fundId);
+    sync();
+  });
+
+  sync();
 </script>

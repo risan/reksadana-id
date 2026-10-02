@@ -104,6 +104,21 @@ export const readCsvRows = async (file) => {
   }
 };
 
+// Rows as objects keyed by the header line. A missing file counts as no rows.
+export const readCsvRecords = async (file) => {
+  try {
+    const [header, ...rows] = parseCsv(await fs.readFile(file, 'utf8'));
+
+    return rows.map((row) => Object.fromEntries(header.map((column, index) => [column, row[index] ?? ''])));
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      return [];
+    }
+
+    throw error;
+  }
+};
+
 // Runs `worker` over `items` with a fixed number of parallel workers.
 // Returns one message per item that threw, so one bad item never stops the run.
 export const runPool = async ({ items, worker, concurrency, label, describeItem }) => {
@@ -171,7 +186,7 @@ const MANAGER_ALIASES = {
 };
 
 // Names differ in case, punctuation, and the "reksa dana" prefix. Nothing fuzzier is safe.
-const normalizeName = (name) => name
+export const normalizeName = (name) => name
   .toLowerCase()
   .replace(/[^a-z0-9]+/g, ' ')
   .replace(/\b(reksa dana|reksadana|rd)\b/g, ' ')
@@ -191,7 +206,7 @@ const normalizeManager = (manager) => {
 };
 
 // Equality, not substring: "PT Alpha" and "PT Alpha Capital" are different managers.
-const isSameManager = (otherManager, bibitManager) => {
+export const isSameManager = (otherManager, bibitManager) => {
   const bibit = normalizeManager(bibitManager);
 
   return bibit !== '' && normalizeManager(otherManager) === bibit;

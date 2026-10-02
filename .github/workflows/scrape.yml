@@ -16,6 +16,7 @@ on:
           - kontan-full
           - makmur
           - bareksa
+          - bareksa-profiles
           - all
         default: bibit
 
@@ -68,10 +69,25 @@ jobs:
         if: (success() || failure()) && steps.decide.outputs.bareksa == 'true'
         run: npm run scrape:bareksa
 
+      # A slice of the fund pages (currency, custodian, minimums, fees), every day, apart from the monthly full run.
+      - name: Scrape Bareksa profiles
+        if: (success() || failure()) && steps.decide.outputs.bareksa_profiles == 'true'
+        run: npm run scrape:bareksa:profiles
+
+      # Rebuilds data/funds.csv and data/fund-ids.csv from whatever the scrapers saved. If the linker fails,
+      # nothing is committed, so the site never gets half-linked data. The check refuses a registry that
+      # points at a fund that is not live, for the same reason.
+      - name: Link funds
+        id: link
+        if: success() || failure()
+        run: |
+          npm run link
+          node scripts/check-funds.js
+
       # The scrapers exit non-zero when a few funds fail. Still save the funds that
       # succeeded; the failed ones are retried on the next run.
       - name: Commit and push changes
-        if: success() || failure()
+        if: (success() || failure()) && steps.link.outcome == 'success'
         run: |
           if [ -z "$(git status --porcelain data)" ]; then
             echo "No data changes."
