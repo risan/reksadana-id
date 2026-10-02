@@ -371,6 +371,81 @@ export function periodStartIndex(history, period, endDate) {
   return index;
 }
 
+// Dividend dates are midnight in Jakarta (UTC+7), stored as UTC.
+export function jakartaDate(isoTimestamp) {
+  return new Date(new Date(isoTimestamp).getTime() + 7 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
+// nav_adjusted over nav is constant within one Bibit download and steps up at an ex-date, by the payout
+// as a share of the previous NAV. A later download re-anchors it, which always steps down, so only a
+// small step up counts.
+const STEP_MIN = 1 + 1e-6;
+const DIVIDEND_FACTOR_MAX = 1.2;
+const LISTED_MATCH_DAYS = 3;
+
+function adjustmentSteps(rows) {
+  const steps = [];
+
+  for (let index = 1; index < rows.length; index++) {
+    const previous = rows[index - 1];
+    const row = rows[index];
+
+    if (previous.nav_adjusted === null || row.nav_adjusted === null) {
+      continue;
+    }
+
+    const factor = row.nav_adjusted / row.nav / (previous.nav_adjusted / previous.nav);
+
+    if (factor > STEP_MIN && factor < DIVIDEND_FACTOR_MAX) {
+      steps.push({ date: row.date, factor });
+    }
+  }
+
+  return steps;
+}
+
+// The dividends of a fund as { date, factor }, the date being the ex-date and the factor what one unit
+// held before it is worth after it, once the payout is reinvested. Bibit lists only the latest five payouts,
+// so older ones come from the nav_adjusted steps, and a listed payout fills in what the steps miss.
+export function dividendEvents(fund, history) {
+  const events = adjustmentSteps(fund.nav ?? []);
+
+  for (const payout of fund.dividends ?? []) {
+    const date = jakartaDate(payout.date);
+    const isCovered = events.some((event) => Math.abs(daysBetween(event.date, date)) <= LISTED_MATCH_DAYS);
+    const before = history.points[indexAtOrBefore(history.points, toDate(toTime(date) - DAY_MS))];
+
+    if (isCovered || !before) {
+      continue;
+    }
+
+    const factor = 1 + payout.value / before.value;
+
+    if (factor < DIVIDEND_FACTOR_MAX) {
+      events.push({ date, factor });
+    }
+  }
+
+  return events.sort((a, b) => a.date.localeCompare(b.date));
+}
+
+// The same history with every dividend reinvested on its ex-date: a total-return series.
+export function withDividendsReinvested(history, events) {
+  let eventIndex = 0;
+  let growth = 1;
+
+  const points = history.points.map((point) => {
+    while (eventIndex < events.length && events[eventIndex].date <= point.date) {
+      growth *= events[eventIndex].factor;
+      eventIndex++;
+    }
+
+    return { ...point, value: point.value * growth };
+  });
+
+  return { ...history, points };
+}
+
 const PERIOD_YEARS = { '1y': 1, '3y': 3, '5y': 5, '10y': 10 };
 
 // Simple return, annualised return (CAGR), and max drawdown for each period, ending at the latest NAV,

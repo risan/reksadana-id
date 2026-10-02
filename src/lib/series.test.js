@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { computeReturns, largeMoves, periodStartDate, pickAumHistory, pickNavHistory } from './series.js';
+import { computeReturns, dividendEvents, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, withDividendsReinvested } from './series.js';
 
 function dailyRows(startDate, values) {
   const start = Date.parse(`${startDate}T00:00:00Z`);
@@ -199,4 +199,75 @@ test('every AUM point carries its own currency: Bareksa by column, Bibit by the 
   assert.equal(pickAumHistory({ fund: { currency: null }, bareksa }).points[0].currency, 'IDR');
   assert.equal(pickAumHistory({ fund: { currency: null }, aum: [{ date: '2026-08-01', aum: 5e9 }] }).points[0].currency, null);
   assert.equal(pickAumHistory({ fund: { currency: 'USD' }, aum: [{ date: '2026-08-01', aum: 5e6 }] }).points[0].currency, 'USD');
+});
+
+// Rows whose nav_adjusted is nav times a factor that steps up at each ex-date, as in one Bibit download.
+function adjustedRows(startDate, navs, factors) {
+  return dailyRows(startDate, navs).map((row, index) => ({ ...row, nav_adjusted: row.nav * factors[index] }));
+}
+
+test('dividendEvents reads a dividend from a step up in nav_adjusted over nav', () => {
+  const fund = { nav: adjustedRows('2026-01-01', [100, 100, 99, 99], [1, 1, 1.01, 1.01]) };
+  const events = dividendEvents(fund, pickNavHistory(fund));
+
+  assert.equal(events.length, 1);
+  assert.equal(events[0].date, '2026-01-03');
+  assert.ok(Math.abs(events[0].factor - 1.01) < 1e-9);
+});
+
+test('dividendEvents ignores a re-anchored nav_adjusted, which steps down, and rows without nav_adjusted', () => {
+  const rows = adjustedRows('2026-01-01', [100, 100, 100, 100], [1.5, 1.5, 1, 1]);
+
+  rows.push({ date: '2026-01-05', nav: 100, nav_adjusted: null }, { date: '2026-01-06', nav: 90, nav_adjusted: 130 });
+
+  const fund = { nav: rows };
+
+  assert.deepEqual(dividendEvents(fund, pickNavHistory(fund)), []);
+});
+
+test('dividendEvents adds a listed payout the nav_adjusted steps do not cover', () => {
+  const fund = {
+    nav: adjustedRows('2026-01-01', [100, 100, 100, 100], [1, 1, 1, 1]),
+    dividends: [{ value: 2, date: '2026-01-02T17:00:00.000Z' }],
+  };
+  const events = dividendEvents(fund, pickNavHistory(fund));
+
+  assert.deepEqual(events, [{ date: '2026-01-03', factor: 1.02 }]);
+});
+
+test('dividendEvents counts a payout once when a step already covers it', () => {
+  const fund = {
+    nav: adjustedRows('2026-01-01', [100, 100, 99, 99], [1, 1, 1.01, 1.01]),
+    dividends: [{ value: 1, date: '2026-01-02T17:00:00.000Z' }],
+  };
+
+  assert.equal(dividendEvents(fund, pickNavHistory(fund)).length, 1);
+});
+
+test('dividendEvents skips a listed payout whose scale is off', () => {
+  const fund = {
+    nav: adjustedRows('2026-01-01', [100, 100, 100], [1, 1, 1]),
+    dividends: [{ value: 50, date: '2026-01-02T17:00:00.000Z' }],
+  };
+
+  assert.deepEqual(dividendEvents(fund, pickNavHistory(fund)), []);
+});
+
+test('withDividendsReinvested multiplies each point by the factors of the events up to its date', () => {
+  const history = pickNavHistory({ nav: dailyRows('2026-01-01', [100, 100, 99, 99]) });
+  const total = withDividendsReinvested(history, [{ date: '2026-01-03', factor: 1.01 }]);
+
+  assert.equal(total.primary, 'bibit');
+  assert.deepEqual(total.used, history.used);
+  assert.deepEqual(total.points.map((point) => point.value), [100, 100, 99 * 1.01, 99 * 1.01]);
+  assert.deepEqual(history.points.map((point) => point.value), [100, 100, 99, 99]);
+});
+
+test('the returns of a reinvested history include the dividend that the NAV change loses', () => {
+  const fund = { nav: adjustedRows('2026-01-01', [100, 100, 99, 99], [1, 1, 1.01, 1.01]) };
+  const history = pickNavHistory(fund);
+  const total = withDividendsReinvested(history, dividendEvents(fund, history));
+
+  assert.ok(Math.abs(computeReturns(history).simplereturn.all - -0.01) < 1e-9);
+  assert.ok(Math.abs(computeReturns(total).simplereturn.all - (99 * 1.01 / 100 - 1)) < 1e-9);
 });
