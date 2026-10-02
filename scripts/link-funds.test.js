@@ -1,0 +1,302 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import { linkFunds, makeNavSeries } from './link-funds.js';
+
+const TODAY = '2026-10-02';
+const MANAGER = 'Alpha Asset Management, PT';
+
+const isoDay = (offset) => new Date(Date.UTC(2026, 8, 1 + offset)).toISOString().slice(0, 10);
+
+// Distinctive NAVs with four decimals, one per day.
+const fourDecimalNav = (days, start = 1500.1234) => Array.from({ length: days }, (_, day) => [isoDay(day), Number((start + day * 1.2345).toFixed(4))]);
+
+const roundTo = (rows, decimals) => rows.map(([date, value]) => [date, Number(value.toFixed(decimals))]);
+
+const record = (source, id, fields = {}) => ({
+  source,
+  id,
+  name: `Fund ${id}`,
+  manager: MANAGER,
+  type: '',
+  currency: '',
+  sharia: '',
+  launchDate: '',
+  bibitSymbol: '',
+  ...fields,
+  nav: makeNavSeries(fields.nav ?? []),
+});
+
+const link = (records, { aliases = {}, registry = [] } = {}) => linkFunds({ records, aliases, registry, today: TODAY });
+
+const findFund = (result, key) => {
+  const [source, id] = key.split(':');
+
+  return result.funds.find((fund) => fund.sources[source].includes(id));
+};
+
+test('a renamed fund links to Bibit by NAV and takes the active Bareksa name', () => {
+  const nav = fourDecimalNav(5);
+  const result = link([
+    record('bibit', 'RD6436', { name: 'Kisi Fixed Income Fund Plus', manager: 'Kisi Asset Management, PT', nav }),
+    record('bareksa', '4831', { name: 'KIM Fixed Income Fund Plus', manager: 'Korea Investment Management Indonesia, PT', nav }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+  assert.equal(result.funds[0].id, 'RD6436');
+  assert.equal(result.funds[0].name, 'KIM Fixed Income Fund Plus');
+  assert.deepEqual(result.funds[0].otherNames, ['Kisi Fixed Income Fund Plus']);
+  assert.equal(result.report.linksByRule['nav'], 1);
+});
+
+test('Bibit duplicates are merged through the Bareksa history and the placeholder alias', () => {
+  const history = fourDecimalNav(30);
+  const result = link(
+    [
+      record('bibit', 'RD1352', { nav: history.slice(0, 10) }),
+      record('bibit', 'RD1983', { nav: history.slice(8) }),
+      record('bibit', 'RD2280', { manager: '' }),
+      record('bareksa', '440', { nav: history }),
+    ],
+    {
+      aliases: { 'bibit:RD2280': 'RD1983' },
+      registry: [
+        { id: 'RD1352', first_published: '2026-09-01', current_id: 'RD1352' },
+        { id: 'RD1983', first_published: '2026-09-01', current_id: 'RD1983' },
+        { id: 'RD2280', first_published: '2026-09-01', current_id: 'RD2280' },
+      ],
+    },
+  );
+
+  assert.equal(result.funds.length, 1);
+  assert.equal(result.funds[0].id, 'RD1983');
+  assert.deepEqual(result.funds[0].sources.bibit, ['RD1983', 'RD1352', 'RD2280']);
+  assert.deepEqual(result.funds[0].sources.bareksa, ['440']);
+
+  const currentIds = Object.fromEntries(result.registry.map((entry) => [entry.id, entry.current_id]));
+
+  assert.deepEqual(currentIds, { RD1352: 'RD1983', RD1983: 'RD1983', RD2280: 'RD1983' });
+});
+
+test('one equal NAV on one date is a coincidence, not a link', () => {
+  const result = link([
+    record('bibit', 'RD390', { nav: [['2019-01-07', 1002.3]] }),
+    record('bareksa', '2369', { nav: [['2019-01-07', 1002.3], ['2019-01-08', 1003.1]] }),
+  ]);
+
+  assert.equal(result.funds.length, 2);
+  assert.equal(result.report.linksByRule['nav'] ?? 0, 0);
+});
+
+test('USD funds with NAVs near 1.0 and two decimals are not linked', () => {
+  const nearOne = Array.from({ length: 5 }, (_, day) => [isoDay(day), 1 + (day % 2) * 0.01]);
+  const result = link([
+    record('kontan', '1', { nav: nearOne, currency: 'USD' }),
+    record('bareksa', '2', { nav: nearOne, currency: 'USD' }),
+  ]);
+
+  assert.equal(result.funds.length, 2);
+});
+
+test('funds that all sit at the 1000 launch NAV are not linked', () => {
+  const launch = Array.from({ length: 5 }, (_, day) => [isoDay(day), 1000]);
+  const result = link([
+    record('bibit', 'RD1', { nav: launch }),
+    record('bareksa', '2', { nav: launch }),
+  ]);
+
+  assert.equal(result.funds.length, 2);
+});
+
+test('Kontan with two decimals links to Bareksa with four decimals', () => {
+  const bareksaNav = fourDecimalNav(10);
+  const result = link([
+    record('kontan', '15297', { nav: roundTo(bareksaNav, 2) }),
+    record('bareksa', '440', { nav: bareksaNav }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+});
+
+test('share classes with the same NAV stay separate funds', () => {
+  const nav = fourDecimalNav(5);
+  const result = link([
+    record('bibit', 'RD10885', { name: 'Grow Obligasi Kelas M', nav }),
+    record('bibit', 'RD10886', { name: 'Grow Obligasi Kelas Q', nav }),
+    record('bareksa', '5259', { name: 'Grow Obligasi Kelas M', nav }),
+  ]);
+
+  assert.deepEqual(result.funds.map((fund) => fund.id).sort(), ['RD10885', 'RD10886']);
+  assert.deepEqual(findFund(result, 'bareksa:5259').sources.bibit, ['RD10885']);
+});
+
+test('equal NAVs from different managers are not linked', () => {
+  const nav = fourDecimalNav(5);
+  const result = link([
+    record('bibit', 'RD1', { nav }),
+    record('bareksa', '2', { nav, manager: 'Beta Asset Management, PT' }),
+  ]);
+
+  assert.equal(result.funds.length, 2);
+});
+
+test('equal NAVs in different currencies are not linked', () => {
+  const nav = fourDecimalNav(5);
+  const result = link([
+    record('bibit', 'RD1', { nav, currency: 'IDR' }),
+    record('bareksa', '2', { nav, currency: 'USD' }),
+  ]);
+
+  assert.equal(result.funds.length, 2);
+});
+
+test('a short history links only on long, equal values from a known manager', () => {
+  const recent = [['2026-09-30', 2587.7419], ['2026-10-01', 2588.1234]];
+  const bareksaNav = [['2026-09-29', 2586.1], ...recent];
+  const linked = link([
+    record('bibit', 'RD1', { nav: recent }),
+    record('bareksa', '2', { nav: bareksaNav }),
+  ]);
+  const otherManager = link([
+    record('bibit', 'RD1', { nav: recent }),
+    record('bareksa', '2', { nav: bareksaNav, manager: 'Beta Asset Management, PT' }),
+  ]);
+
+  assert.equal(linked.funds.length, 1);
+  assert.equal(linked.report.linksByRule['nav-short'], 1);
+  assert.equal(otherManager.funds.length, 2);
+});
+
+test('two sources with the same name and manager link when no Bibit fund is involved', () => {
+  const result = link([
+    record('kontan', '16548', { name: 'Reksa Dana Panin Global Sharia Equity Fund' }),
+    record('bareksa', '4695', { name: 'Panin Global Sharia Equity Fund' }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+  assert.equal(result.report.linksByRule['name'], 1);
+});
+
+test('a name shared by two funds of one source is not linked by name', () => {
+  const result = link([
+    record('kontan', '1', { name: 'Same Name Fund' }),
+    record('kontan', '2', { name: 'Same Name Fund' }),
+    record('bareksa', '3', { name: 'Same Name Fund' }),
+  ]);
+
+  assert.equal(result.funds.length, 3);
+});
+
+test('the bibit_symbol column links a record to its Bibit fund', () => {
+  const result = link([
+    record('bibit', 'RD7'),
+    record('kontan', '5', { bibitSymbol: 'RD7' }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+  assert.equal(result.report.linksByRule['column'], 1);
+});
+
+test('an alias of null blocks every automatic link of that record', () => {
+  const nav = fourDecimalNav(5);
+  const result = link(
+    [
+      record('bibit', 'RD1', { nav, name: 'Alpha Fund' }),
+      record('bareksa', '2', { nav, name: 'Alpha Fund', bibitSymbol: 'RD1' }),
+    ],
+    { aliases: { 'bareksa:2': null } },
+  );
+
+  assert.equal(result.funds.length, 2);
+});
+
+test('an alias links a record whatever the evidence says', () => {
+  const result = link(
+    [
+      record('bibit', 'RD1', { name: 'Old Name' }),
+      record('bareksa', '440', { name: 'New Name', manager: 'Other, PT' }),
+    ],
+    { aliases: { 'bareksa:440': 'RD1' } },
+  );
+
+  assert.equal(result.funds.length, 1);
+  assert.equal(result.report.linksByRule['alias'], 1);
+});
+
+test('a merge is refused when the members disagree on their NAV', () => {
+  const kontanNav = fourDecimalNav(5);
+  const bareksaNav = fourDecimalNav(5, 1700.5);
+  const result = link([
+    record('kontan', '1', { name: 'Alpha Fund', nav: kontanNav }),
+    record('bareksa', '2', { name: 'Alpha Fund', nav: bareksaNav }),
+  ]);
+
+  assert.equal(result.funds.length, 2);
+  assert.equal(result.report.refused.length, 1);
+  assert.equal(result.report.refused[0].rule, 'name');
+});
+
+test('the ID of a fund stays stable across successive runs', () => {
+  const olderNav = fourDecimalNav(5);
+  const newerNav = fourDecimalNav(8);
+  const bibitRecords = (nav2) => [record('bibit', 'RD1', { nav: olderNav }), record('bibit', 'RD2', { nav: nav2 })];
+  const ids = (result) => result.funds.map((fund) => fund.id).sort();
+  const currentId = (result, id) => result.registry.find((entry) => entry.id === id).current_id;
+
+  const first = link(bibitRecords(newerNav));
+
+  assert.deepEqual(ids(first), ['RD1', 'RD2']);
+  assert.deepEqual(first.registry.map((entry) => entry.id).sort(), ['RD1', 'RD2']);
+
+  const merged = link(bibitRecords(newerNav), { aliases: { 'bibit:RD1': 'RD2' }, registry: first.registry });
+
+  assert.deepEqual(ids(merged), ['RD2']);
+  assert.equal(currentId(merged, 'RD1'), 'RD2');
+
+  const stillMerged = link(
+    [record('bibit', 'RD1', { nav: fourDecimalNav(12, 1500.1234) }), record('bibit', 'RD2', { nav: newerNav })],
+    { aliases: { 'bibit:RD1': 'RD2' }, registry: merged.registry },
+  );
+
+  assert.deepEqual(ids(stillMerged), ['RD2']);
+
+  const split = link(bibitRecords(newerNav), { registry: stillMerged.registry });
+
+  assert.deepEqual(ids(split), ['RD1', 'RD2']);
+  assert.equal(currentId(split, 'RD1'), 'RD1');
+  assert.equal(currentId(split, 'RD2'), 'RD2');
+});
+
+test('a group without Bibit takes a prefixed ID and registers it', () => {
+  const result = link([record('bareksa', '37'), record('kontan', '9', { name: 'Other Fund' })]);
+
+  assert.deepEqual(result.funds.map((fund) => fund.id).sort(), ['BRK37', 'KTN9']);
+  assert.deepEqual(result.registry.map((entry) => entry.first_published), [TODAY, TODAY]);
+});
+
+test('types map to the Bibit vocabulary and the first source with a known type wins', () => {
+  const result = link([
+    record('bareksa', '1', { type: 'Pendapatan Tetap' }),
+    record('kontan', '2', { name: 'Other', type: 'PASAR UANG' }),
+    record('makmur', 'a', { name: 'Third', type: 'Indeks & ETF' }),
+  ]);
+  const typeOf = (key) => findFund(result, key).type;
+
+  assert.equal(typeOf('bareksa:1'), 'Obligasi');
+  assert.equal(typeOf('kontan:2'), 'Pasar Uang');
+  assert.equal(typeOf('makmur:a'), '');
+  assert.deepEqual([...result.report.unmappedTypes.keys()], ['Indeks & ETF']);
+});
+
+test('currency and sharia fall back to the name when no source states them', () => {
+  const result = link([
+    record('kontan', '1', { name: 'Schroder Dollar Syariah Fund' }),
+    record('kontan', '2', { name: 'Plain Fund' }),
+  ]);
+  const fund = findFund(result, 'kontan:1');
+  const plain = findFund(result, 'kontan:2');
+
+  assert.equal(fund.currency, 'USD');
+  assert.equal(fund.sharia, 'true');
+  assert.equal(plain.currency, '');
+  assert.equal(plain.sharia, '');
+});

@@ -37,7 +37,7 @@ A Kontan fund is matched to a Bibit fund only when its name, after lowercasing a
 
 - A trailing "Kelas A" is dropped when the full name finds nothing, because Bibit often lists that class without it. Other classes ("Kelas B") never match this way.
 - A few managers are known by two names, for example after a rename (`MANAGER_ALIASES` in `scrapers/lib.js`). Each pair is the same company, with the same fund names under both names.
-- `scrapers/fund-aliases.json` maps a fund to a Bibit symbol by hand (`"makmur:<makmur_id>": "RD123"`, also `kontan:` and `bareksa:`). It is for renamed funds. An alias wins over the automatic match, and `null` blocks a wrong automatic match. Each alias has the same manager, type, and currency, and a NAV (or one-day return) that agrees with Bibit.
+- `scrapers/fund-aliases.json` maps a fund to a Bibit symbol by hand (`"makmur:<makmur_id>": "RD123"`, also `kontan:` and `bareksa:`; `"bibit:RD2280": "RD1983"` joins a duplicate Bibit symbol to the fund it repeats). It is for renamed funds. An alias wins over the automatic match, and `null` blocks a wrong automatic match. Each alias has the same manager, type, and currency, and a NAV (or one-day return) that agrees with Bibit.
 
 Fund types (`type` column): `Pasar Uang` (money market), `Obligasi` (fixed income), `Saham` (equity), `Campuran` (balanced), `Terproteksi` (capital protected), and `Reksadana Global` (global).
 
@@ -76,6 +76,30 @@ The scraper reads only Makmur's public website. The page of a fund holds the who
 | `asof`, `portfolioAsof`, `inceptionDate` | a number like `20260930` | 2026-09-30 |
 
 In `funds.csv` the dates are ISO dates, and the other values are as in the JSON. `last_price` is a whole number, so it is rounded to 0.01 of the NAV. 128 of the 141 funds are matched to a Bibit fund. The matching rules are the same as for Kontan. The rest are not in Bibit under a name or NAV that matches.
+
+### One record per fund (`data/funds.csv`)
+
+The same fund appears in several sources, and Bibit lists some funds under more than one symbol or under a stale name. `scripts/link-funds.js` joins the records of all four sources into one fund each. It writes:
+
+| File | Content |
+|---|---|
+| `data/funds.csv` | One row per fund: `id`, `name`, `other_names` (separated by `\|`), `manager`, `type` (Bibit's labels), `currency` and `sharia` (empty when no source says), `launch_date`, and the source IDs of `bibit`, `bareksa`, `kontan`, and `makmur` (space-separated, the best record first). |
+| `data/fund-ids.csv` | Every fund ID ever published: `id`, `first_published`, `current_id`. A retired ID points at the fund that now holds its record. IDs are only added, never removed. |
+
+Records are joined by these rules, in this order. A merge is refused when two members of the joined group disagree (different currency or Kelas, NAV far apart on the latest shared date, and for NAV evidence a NAV that differs on more than 5% of the shared dates). Refusals are listed in the report.
+
+1. `scrapers/fund-aliases.json` (see above).
+2. The `bibit_symbol` columns of the other sources.
+3. The same normalized name and manager in two sources without Bibit (each name used once per source).
+4. NAV evidence: equal NAV (to the precision of the coarser source) on at least 3 shared dates, with distinctive values (at least 5 digits, not 1, 10, 100, 1000 or 10000), the same manager, and a compatible currency. Kontan's NAV is also tried one day earlier, because it often carries the next day's date. Bibit keeps NAV history only for funds it sells, so a Bibit fund with one or two rows links this way only when those values have at least 7 digits, the manager is known and the same, and each side has no other candidate. Candidates that miss this are printed in the report.
+
+A fund keeps its ID: the Bibit symbol of the group, or `BRK<id>`, `KTN<id>`, `MKR<id>` for a fund Bibit does not list. When two published IDs end up in one fund, the one that was already live stays and the other becomes a redirect. The name is the current Bareksa name, then Makmur, Bibit, Kontan; the other names go to `other_names`.
+
+```bash
+npm run link   # rewrites both files and prints the report (about 10 seconds); the scheduled workflow runs it after the scrapers
+```
+
+`scripts/check-funds.js` checks the result in `npm run build`.
 
 ### NAV history: buyable vs. other funds
 
@@ -158,6 +182,9 @@ npm run scrape:kontan
 npm run scrape:kontan:full   # scan every Kontan ID again (about 30 minutes)
 npm run scrape:makmur
 npm run scrape:bareksa
+
+# Join the records of all sources into data/funds.csv (npm run scrape does this last)
+npm run link
 
 # Check the Bareksa parsers
 npm test

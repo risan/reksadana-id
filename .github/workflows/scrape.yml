@@ -68,10 +68,17 @@ jobs:
         if: (success() || failure()) && steps.decide.outputs.bareksa == 'true'
         run: npm run scrape:bareksa
 
+      # Rebuilds data/funds.csv and data/fund-ids.csv from whatever the scrapers saved. If the linker fails,
+      # nothing is committed, so the site never gets half-linked data.
+      - name: Link funds
+        id: link
+        if: success() || failure()
+        run: npm run link
+
       # The scrapers exit non-zero when a few funds fail. Still save the funds that
       # succeeded; the failed ones are retried on the next run.
       - name: Commit and push changes
-        if: success() || failure()
+        if: (success() || failure()) && steps.link.outcome == 'success'
         run: |
           if [ -z "$(git status --porcelain data)" ]; then
             echo "No data changes."
