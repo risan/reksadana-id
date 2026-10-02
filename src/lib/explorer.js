@@ -71,7 +71,7 @@ export function filterFunds(funds, state, { ignoreType = false } = {}) {
 export function prepareFunds(data) {
   return data.funds.map((fund) => ({
     ...fund,
-    search: `${fund.name} ${fund.symbol} ${fund.manager ?? ''}`.toLowerCase(),
+    search: `${fund.names.join(' ')} ${fund.id} ${fund.manager ?? ''}`.toLowerCase(),
     aum_idr: fund.aum === null ? null : fund.aum * (fund.currency === 'USD' ? data.usd_to_idr : 1),
   }));
 }
@@ -166,8 +166,9 @@ function returnCell(value, className, extra = '') {
 }
 
 export function renderRow(fund, { terms, dataDate }) {
-  const href = `/funds/${encodeURIComponent(fund.symbol)}/`;
+  const href = `/funds/${encodeURIComponent(fund.id)}/`;
   const sharia = fund.sharia ? ' <span class="tag tag-quiet" title="Sharia fund">Syariah</span>' : '';
+  const kind = [fund.etf && 'ETF', fund.index && 'Index'].filter(Boolean).map((label) => ` <span class="tag tag-quiet">${label}</span>`).join('');
   const stale = fund.active ? '' : ' <span class="tag tag-stale" title="No NAV in the last month">Inactive</span>';
   const dividends = fund.dividends ? ' <span class="tag tag-quiet" title="Pays cash dividends. Returns here count the NAV only, so its total return is higher.">Dividend</span>' : '';
   const largeMove = fund.large_move ? '<span class="flag" title="The NAV moved more than 20% in one day in the last year. See the fund page.">!</span>' : '';
@@ -175,7 +176,7 @@ export function renderRow(fund, { terms, dataDate }) {
   const navDate = fund.nav_date ? formatShortDate(fund.nav_date, dataDate) : '';
 
   return `<tr data-href="${href}">
-    <td class="c-fund"><a href="${href}">${highlight(fund.name, terms)}</a>${sharia}${dividends}${stale}<div class="sub">${highlight(fund.manager ?? 'Unknown manager', terms)} · <span class="mono">${highlight(fund.symbol, terms)}</span></div></td>
+    <td class="c-fund"><a href="${href}">${highlight(fund.name, terms)}</a>${sharia}${kind}${dividends}${stale}<div class="sub">${highlight(fund.manager ?? 'Unknown manager', terms)} · <span class="mono">${highlight(fund.id, terms)}</span></div></td>
     <td class="num c-nav">${formatNav(fund.nav)}<div class="sub">${fund.currency === 'USD' ? 'USD · ' : ''}${navDate}</div></td>
     ${returnCell(fund.return_1m, 'c-1m')}
     ${returnCell(fund.return_ytd, 'c-ytd')}

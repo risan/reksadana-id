@@ -1,29 +1,31 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { fundPerformance, isActive, latestAum, listDataFiles, listFundSymbols, loadFund, loadFundRecord, shortManagerName } from '../../lib/data.js';
+import { fundIdOfBibitSymbol, fundPerformance, isActive, latestAum, listFundIds, loadFundRecord, shortManagerName, staleSourceDate } from '../../lib/data.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from '../../lib/format.js';
 import { englishTypeName } from '../../lib/fund-types.js';
 import { REFERRALS, bibitFundUrl } from '../../lib/referrals.js';
-import { RETURN_PERIODS, SOURCE_LABELS, fundCurrency, largeMoves, pickNavHistory } from '../../lib/series.js';
+import { RETURN_PERIODS, SOURCE_LABELS, fundCurrency, largeMoves, pickAumHistory, pickNavHistory } from '../../lib/series.js';
 
 export function getStaticPaths() {
-  return listFundSymbols().map((symbol) => ({ params: { symbol } }));
+  return listFundIds().map((id) => ({ params: { id } }));
 }
 
-const { symbol } = Astro.params;
-const fund = loadFundRecord(symbol);
+const { id } = Astro.params;
+const fund = loadFundRecord(id);
+const info = fund.fund;
 const { kontan, bareksa, makmur } = fund;
-const hasNavCsv = listDataFiles('nav').includes(`${symbol}.csv`);
-const hasAumCsv = listDataFiles('aum').includes(`${symbol}.csv`);
+const hasBibit = info.sources.bibit.length > 0;
 
 const history = pickNavHistory(fund);
 const performance = fundPerformance(fund, history);
 const lastPoint = history.points.at(-1);
 const navValue = lastPoint?.value ?? null;
 const navDate = history.frozenSince ?? lastPoint?.date ?? null;
-const active = isActive(navDate);
+const active = isActive(navDate, lastPoint?.source);
+const sourceDataDate = staleSourceDate(lastPoint?.source);
 const currency = fundCurrency(fund);
 const aum = latestAum(fund);
+const hasAumHistory = pickAumHistory(fund).points.length > 0;
 const moves = largeMoves(history.points).reverse();
 
 const PERIOD_LABELS = { '1d': '1D', '1m': '1M', '3m': '3M', ytd: 'YTD', '1y': '1Y', '3y': '3Y', '5y': '5Y', '10y': '10Y', all: 'All' };
@@ -116,14 +118,13 @@ const makmurDocuments = [
 ].filter(([, url]) => isWebUrl(url));
 const switchables = fund.switchables ?? [];
 const buyLinks = [
-  fund.tradeable && { ...REFERRALS.bibit, url: bibitFundUrl(symbol) },
+  fund.tradeable && { ...REFERRALS.bibit, url: bibitFundUrl(fund.symbol) },
   makmur && { ...REFERRALS.makmur, url: makmur.url },
 ].filter(Boolean);
 
-const typeEnglish = englishTypeName(fund.type);
-// The record's nav is the history, so Bibit's first NAV date comes from its fund file.
-const launchDate = fund.released_date ?? loadFund(symbol)?.nav?.first_date ?? null;
-const manager = shortManagerName(fund.investment_manager?.name);
+const typeEnglish = englishTypeName(info.type);
+const launchDate = info.launch_date ?? fund.released_date ?? null;
+const manager = shortManagerName(info.manager);
 const riskProfile = ['Low', 'Moderate', 'High'].includes(fund.riskprofile) ? fund.riskprofile : null;
 const returnsNote = performance.source
   ? `Change in NAV, computed from the ${SOURCE_LABELS[history.primary]} history.${
@@ -132,13 +133,13 @@ const returnsNote = performance.source
   : null;
 
 const details = [
-  ['Type', fund.type ? `${fund.type}${typeEnglish ? ` (${typeEnglish})` : ''}` : null],
-  ['Manager', fund.investment_manager?.name],
+  ['Type', info.type ? `${info.type}${typeEnglish ? ` (${typeEnglish})` : ''}` : null],
+  ['Manager', info.manager],
   ['Custodian bank', fund.custodian_bank?.name],
-  ['Currency', currency],
+  ['Currency', currency ?? 'Not stated'],
   ['Launched', launchDate ? formatDate(launchDate) : null],
   ['Risk profile', riskProfile],
-  ['Minimum buy', fund.minbuy ? `${currency} ${formatNumber(fund.minbuy)}` : null],
+  ['Minimum buy', fund.minbuy ? `${currency ?? ''} ${formatNumber(fund.minbuy)}`.trim() : null],
   ['Expense ratio', validExpenseRatio === null ? null : formatPercent(validExpenseRatio)],
   ['Subscription fee', fund.fee ? formatFee(fund.fee.subscription) : null],
   ['Redemption fee', fund.fee ? formatFee(fund.fee.redemption) : null],
@@ -159,7 +160,7 @@ const figures = [
   {
     label: active ? 'NAV per unit' : 'Last NAV',
     value: navValue === null ? '—' : formatNav(navValue),
-    unit: currency === 'USD' ? 'USD' : 'IDR',
+    unit: currency,
     sub: navDate ? formatDate(navDate) : 'No NAV yet',
     change: active ? ret('1d') : null,
   },
@@ -170,28 +171,29 @@ const figures = [
 ].filter((figure, index) => index === 0 || figure.value !== '—');
 
 const sources = [
-  { name: 'Bibit', url: 'https://app.bibit.id/', what: 'fund data, NAV, AUM' },
-  kontan && { name: 'Kontan', url: `https://pusatdata.kontan.co.id/reksadana/produk/${kontan.id}`, what: `daily NAV, last 12 months` },
-  bareksa && { name: 'Bareksa', url: `https://www.bareksa.com/id/data/reksadana/${bareksa.id}/`, what: 'daily NAV, monthly AUM, units, asset mix' },
-  makmur && { name: 'Makmur', url: makmur.url, what: 'documents' },
+  hasBibit && { name: 'Bibit', url: 'https://app.bibit.id/', what: 'fund data, NAV, AUM', ids: info.sources.bibit },
+  kontan && { name: 'Kontan', url: `https://pusatdata.kontan.co.id/reksadana/produk/${kontan.id}`, what: `daily NAV, last 12 months`, ids: info.sources.kontan },
+  bareksa && { name: 'Bareksa', url: `https://www.bareksa.com/id/data/reksadana/${bareksa.id}/`, what: 'daily NAV, monthly AUM, units, asset mix', ids: info.sources.bareksa },
+  makmur && { name: 'Makmur', url: makmur.url, what: 'documents', ids: info.sources.makmur },
 ].filter(Boolean);
 ---
 
-<Base title={`${fund.name} (${symbol})`} description={`NAV history, returns, fund size, and documents for ${fund.name}, a reksa dana managed by ${manager ?? 'an Indonesian investment manager'}.`} section="funds">
+<Base title={`${info.name} (${id})`} description={`NAV history, returns, fund size, and documents for ${info.name}, a reksa dana managed by ${manager ?? 'an Indonesian investment manager'}.`} section="funds">
   <nav class="crumbs" aria-label="Breadcrumb">
     <a href="/">Funds</a>
-    {fund.type && <><span aria-hidden="true">/</span><a href={`/?type=${encodeURIComponent(fund.type)}`}>{fund.type}</a></>}
-    <span aria-hidden="true">/</span><span class="mono">{symbol}</span>
+    {info.type && <><span aria-hidden="true">/</span><a href={`/?type=${encodeURIComponent(info.type)}`}>{info.type}</a></>}
+    <span aria-hidden="true">/</span><span class="mono">{id}</span>
   </nav>
 
   <header class="fund-head">
-    <h1 class="page-title">{fund.name}</h1>
+    <h1 class="page-title">{info.name}</h1>
+    {info.other_names.length > 0 && <p class="fund-aka muted small">Also known as {info.other_names.join(' · ')}</p>}
     <p class="fund-meta">
       {manager && <span>{manager}</span>}
-      {fund.type && <span>{fund.type}{typeEnglish && <span class="muted"> · {typeEnglish}</span>}</span>}
-      {fund.sharia ? <span class="tag">Syariah</span> : null}
-      {fund.etf ? <span class="tag">ETF</span> : null}
-      {fund.index ? <span class="tag">Index</span> : null}
+      {info.type && <span>{info.type}{typeEnglish && <span class="muted"> · {typeEnglish}</span>}</span>}
+      {info.sharia ? <span class="tag">Syariah</span> : null}
+      {info.etf ? <span class="tag">ETF</span> : null}
+      {info.index ? <span class="tag">Index</span> : null}
       {currency === 'USD' && <span class="tag">USD</span>}
       {dividends.length > 0 && <span class="tag">Pays dividends</span>}
       {riskProfile && <span class="tag">{riskProfile} risk</span>}
@@ -210,6 +212,14 @@ const sources = [
               : 'No NAV reported.'}{' '}
           The fund may be closed, merged, or no longer reported.
         </span>
+      </p>
+    )
+  }
+
+  {
+    sourceDataDate && (
+      <p class="muted small data-freshness">
+        NAV from {SOURCE_LABELS[lastPoint.source]}, which is not updated daily: its data runs up to {formatDate(sourceDataDate)}.
       </p>
     )
   }
@@ -260,10 +270,10 @@ const sources = [
           </div>
           {dividends.length > 0 && <span class="chart-legend">NAV only: this fund also pays dividends.</span>}
         </div>
-        <div class="chart" id="nav-chart" data-symbol={symbol}></div>
+        <div class="chart" id="nav-chart" data-fund-id={id}></div>
         <p class="chart-empty" id="nav-empty" hidden>Not enough NAV history to draw a chart.</p>
 
-        <h3 class="chart-subtitle">Fund size <span class="muted">({currency}, monthly)</span></h3>
+        <h3 class="chart-subtitle">Fund size <span class="muted">({currency ? `${currency}, monthly` : 'monthly'})</span></h3>
         <div class="chart" id="aum-chart"></div>
         <p class="chart-empty" id="aum-empty" hidden>No fund size history.</p>
       </section>
@@ -392,7 +402,7 @@ const sources = [
                 <thead>
                   <tr>
                     <th>Date</th>
-                    <th class="num">Per unit ({currency})</th>
+                    <th class="num">Per unit{currency && ` (${currency})`}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -405,7 +415,7 @@ const sources = [
                 </tbody>
               </table>
             </div>
-            {dividends.length > 12 && <p class="muted small table-note">The latest 12 of {dividends.length}. The <a href={`/api/funds/${symbol}.json`}>fund JSON</a> has all of them.</p>}
+            {dividends.length > 12 && <p class="muted small table-note">The latest 12 of {dividends.length}. The <a href={`/api/funds/${id}.json`}>fund JSON</a> has all of them.</p>}
           </section>
         )
       }
@@ -495,7 +505,7 @@ const sources = [
             <h2 class="section-title">Switch to <span class="aside">in Bibit</span></h2>
             <ul class="doc-list">
               {switchables.map((target) => (
-                <li><a href={`/funds/${target.symbol}/`}>{target.name}</a></li>
+                <li><a href={`/funds/${fundIdOfBibitSymbol(target.symbol)}/`}>{target.name}</a></li>
               ))}
             </ul>
           </section>
@@ -505,13 +515,13 @@ const sources = [
       <section class="side-block">
         <h2 class="section-title">Data</h2>
         <div class="downloads">
-          <a class="btn" href={`/api/funds/${symbol}.json`} download>JSON</a>
-          {hasNavCsv && <a class="btn" href={`/csv/nav/${symbol}.csv`} download>NAV CSV</a>}
-          {hasAumCsv && <a class="btn" href={`/csv/aum/${symbol}.csv`} download>AUM CSV</a>}
+          <a class="btn" href={`/api/funds/${id}.json`} download>JSON</a>
+          {history.points.length > 0 && <a class="btn" href={`/csv/nav/${id}.csv`} download>NAV CSV</a>}
+          {hasAumHistory && <a class="btn" href={`/csv/aum/${id}.csv`} download>AUM CSV</a>}
         </div>
         <ul class="source-list small">
           {sources.map((source) => (
-            <li><a href={source.url}>{source.name}</a> <span class="muted">{source.what}</span></li>
+            <li><a href={source.url}>{source.name}</a> <span class="muted">{source.what} · <span class="mono">{source.ids.join(', ')}</span></span></li>
           ))}
         </ul>
         {
@@ -551,6 +561,11 @@ const sources = [
 
   .fund-head .page-title {
     max-width: 30ch;
+  }
+
+  .fund-aka {
+    margin-top: 4px;
+    max-width: 60ch;
   }
 
   .fund-meta {
@@ -875,5 +890,5 @@ const sources = [
 <script>
   import { mountFundCharts } from '../../lib/fund-charts.js';
 
-  mountFundCharts(document.getElementById('nav-chart').dataset.symbol);
+  mountFundCharts(document.getElementById('nav-chart').dataset.fundId);
 </script>

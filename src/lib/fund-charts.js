@@ -1,6 +1,6 @@
 import uPlot from 'uplot';
 import 'uplot/dist/uPlot.min.css';
-import { changeClass, formatChange, formatCompact, formatDate, formatMonth, formatNav } from './format.js';
+import { changeClass, formatChange, formatCompact, formatDate, formatMoney, formatMonth, formatNav } from './format.js';
 import { fundCurrency, periodStartIndex, pickAumHistory, pickNavHistory } from './series.js';
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -222,7 +222,7 @@ export async function mountFundCharts(symbol) {
     );
 
     const updateAumTip = attachTooltip(aumChart, aumContainer, (index) => `<div class="tip-date">${formatMonth(toDate(aumData[0][index]))}</div>
-      <div class="tip-row"><b>${currency === 'USD' ? 'US$' : 'Rp'} ${escapeHtml(formatCompact(aumData[1][index]))}</b></div>`);
+      <div class="tip-row"><b>${escapeHtml(formatMoney(aumData[1][index], currency))}</b></div>`);
 
     aumChart.hooks.setCursor.push(updateAumTip);
     observeWidth(aumChart, aumContainer, 130);
