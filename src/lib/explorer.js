@@ -84,9 +84,11 @@ export function filterFunds(funds, state, { ignoreType = false } = {}) {
   );
 }
 
-export function prepareFunds(data) {
+// With dividends included, a fund that pays them shows its total return in place of the NAV change.
+export function prepareFunds(data, includeDividends = false) {
   return data.funds.map((fund) => ({
     ...fund,
+    ...(includeDividends && fund.total),
     search: `${fund.names.join(' ')} ${fund.id} ${fund.manager ?? ''}`.toLowerCase(),
     aum_idr: fund.aum === null ? null : fund.aum * (fund.aum_currency === 'USD' ? data.usd_to_idr : 1),
   }));

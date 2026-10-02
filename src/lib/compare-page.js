@@ -11,7 +11,8 @@ import { attachTooltip, axes, chartHeight, cssColor, toSeconds } from './fund-ch
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from './format.js';
 import { shariaText, typeName } from './fund-types.js';
 import { anchor, localizeHref } from './i18n.js';
-import { indexAtOrBefore, pickNavHistory } from './series.js';
+import { readIncludeDividends, showIncludeDividends, writeIncludeDividends } from './dividend-setting.js';
+import { dividendEvents, indexAtOrBefore, pickNavHistory, withDividendsReinvested } from './series.js';
 
 const PICKER_RESULT_LIMIT = 8;
 const RETURN_PERIODS = ['1m', 'ytd', '1y', '3y', '5y'];
@@ -52,6 +53,7 @@ export async function mountComparePage() {
   const tableSection = document.getElementById('compare-table-section');
   const table = document.getElementById('compare-table');
   const tableEnd = document.getElementById('table-end');
+  const includeDividends = document.getElementById('include-dividends');
 
   const explorerData = await getJson('/explorer.json');
 
@@ -93,7 +95,15 @@ export async function mountComparePage() {
       record = await getJson(url, { cache: 'reload' });
     }
 
-    loaded.set(id, hasCurrentShape(record) ? { status: 'ready', record, history: pickNavHistory(record) } : { status: 'failed' });
+    if (hasCurrentShape(record)) {
+      const history = pickNavHistory(record);
+      const events = dividendEvents(record, history);
+
+      loaded.set(id, { status: 'ready', record, history, totalHistory: events.length > 0 ? withDividendsReinvested(history, events) : null });
+    } else {
+      loaded.set(id, { status: 'failed' });
+    }
+
     render();
   }
 
@@ -387,7 +397,7 @@ export async function mountComparePage() {
       return;
     }
 
-    const analysis = settled ? analyzeFunds(ids.filter((id) => loaded.get(id).status === 'ready').map((id) => ({ id, history: loaded.get(id).history }))) : null;
+    const analysis = settled ? analyzeFunds(ids.filter((id) => loaded.get(id).status === 'ready').map((id) => ({ id, history: (includeDividends.checked && loaded.get(id).totalHistory) || loaded.get(id).history }))) : null;
 
     if (analysis) {
       noticeLines.push(...analysis.excluded.map(exclusionNotice));
@@ -432,6 +442,14 @@ export async function mountComparePage() {
       }
     });
   }
+
+  includeDividends.checked = readIncludeDividends();
+  showIncludeDividends(includeDividends.checked);
+  includeDividends.addEventListener('change', () => {
+    writeIncludeDividends(includeDividends.checked);
+    showIncludeDividends(includeDividends.checked);
+    render();
+  });
 
   for (const button of rangeButtons) {
     button.addEventListener('click', () => {

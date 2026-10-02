@@ -1,11 +1,15 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import { loadFundSummaries } from '../../../lib/data.js';
+import { formatCount } from '../../../lib/format.js';
 import { CHART_RANGES } from '../../../lib/compare.js';
 import { localePaths } from '../../../lib/i18n.js';
 import * as m from '../../../paraglide/messages.js';
 
 export const getStaticPaths = () => localePaths();
 
+const locale = Astro.currentLocale ?? 'id';
+const dividendFundCount = loadFundSummaries().funds.filter((fund) => fund.total).length;
 const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_ytd(), '1y': m.period_1y(), '3y': m.period_3y(), '5y': m.period_5y(), all: m.period_all() };
 ---
 
@@ -24,6 +28,11 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     <ul class="picker-results" id="picker-results" hidden></ul>
   </div>
 
+  <label class="dividend-toggle">
+    <input type="checkbox" id="include-dividends" /> {m.dividends_toggle()}
+    <span class="muted small">{m.dividends_toggle_help({ count: formatCount(dividendFundCount, locale) })}</span>
+  </label>
+
   <div id="compare-notices"></div>
   <p class="compare-empty" id="compare-empty">{m.compare_loading()}</p>
 
@@ -38,7 +47,10 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     <ul class="compare-legend" id="compare-legend"></ul>
     <div class="chart" id="compare-chart"></div>
     <p class="chart-empty" id="chart-message" hidden></p>
-    <p class="muted small">{m.compare_chart_caption()}</p>
+    <p class="muted small">
+      <span data-view="nav">{m.compare_chart_caption()}</span>
+      <span data-view="total">{m.compare_chart_caption_total()}</span>
+    </p>
   </section>
 
   <section class="section" id="compare-table-section" hidden>

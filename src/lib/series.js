@@ -371,6 +371,81 @@ export function periodStartIndex(history, period, endDate) {
   return index;
 }
 
+// Dividend dates are midnight in Jakarta (UTC+7), stored as UTC.
+export function jakartaDate(isoTimestamp) {
+  return new Date(new Date(isoTimestamp).getTime() + 7 * 60 * 60 * 1000).toISOString().slice(0, 10);
+}
+
+// nav_adjusted over nav is constant within one Bibit download and steps up at an ex-date, by the payout
+// as a share of the previous NAV. A later download re-anchors it, which always steps down, so only a
+// small step up counts.
+const STEP_MIN = 1 + 1e-6;
+const DIVIDEND_FACTOR_MAX = 1.2;
+const LISTED_MATCH_DAYS = 3;
+
+// A payout reinvested on the ex-date buys payout / ex-date NAV more units per unit held.
+function reinvestmentFactor(payout, exDateNav) {
+  return 1 + payout / exDateNav;
+}
+
+function adjustmentSteps(rows) {
+  const steps = [];
+
+  for (let index = 1; index < rows.length; index++) {
+    const previous = rows[index - 1];
+    const row = rows[index];
+
+    if (previous.nav_adjusted === null || row.nav_adjusted === null) {
+      continue;
+    }
+
+    const step = row.nav_adjusted / row.nav / (previous.nav_adjusted / previous.nav);
+
+    if (step > STEP_MIN && step < DIVIDEND_FACTOR_MAX) {
+      steps.push({ date: row.date, factor: reinvestmentFactor(previous.nav * (step - 1), row.nav) });
+    }
+  }
+
+  return steps;
+}
+
+// The dividends of a fund as { date, factor }, the date being the ex-date and the factor what one unit
+// held before it is worth after it, once the payout is reinvested. Bibit lists only the latest five payouts,
+// so older ones come from the nav_adjusted steps, and a listed payout fills in what the steps miss.
+export function dividendEvents(fund, history) {
+  const events = adjustmentSteps(fund.nav ?? []);
+
+  for (const payout of fund.dividends ?? []) {
+    const date = jakartaDate(payout.date);
+    const isCovered = events.some((event) => Math.abs(daysBetween(event.date, date)) <= LISTED_MATCH_DAYS);
+    const exDatePoint = history.points[indexAtOrBefore(history.points, date)];
+
+    // A NAV from another day would reinvest at the wrong price, so a payout without its ex-date NAV is left out.
+    if (isCovered || exDatePoint?.date !== date) {
+      continue;
+    }
+
+    const factor = reinvestmentFactor(payout.value, exDatePoint.value);
+
+    if (factor < DIVIDEND_FACTOR_MAX) {
+      events.push({ date, factor });
+    }
+  }
+
+  return events.sort((a, b) => a.date.localeCompare(b.date));
+}
+
+// The same history with every dividend reinvested on its ex-date, scaled like an adjusted close: it ends at
+// the latest NAV and every earlier point is lowered by the dividends paid after it. Returns are ratios,
+// so the scale does not change them.
+export function withDividendsReinvested(history, events) {
+  const growthAt = (date) => events.filter((event) => event.date <= date).reduce((growth, event) => growth * event.factor, 1);
+  const latestGrowth = growthAt(history.points.at(-1)?.date);
+  const points = history.points.map((point) => ({ ...point, value: (point.value * growthAt(point.date)) / latestGrowth }));
+
+  return { ...history, points };
+}
+
 const PERIOD_YEARS = { '1y': 1, '3y': 3, '5y': 5, '10y': 10 };
 
 // Simple return, annualised return (CAGR), and max drawdown for each period, ending at the latest NAV,

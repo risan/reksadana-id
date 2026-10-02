@@ -13,6 +13,7 @@ const data = loadFundSummaries();
 const funds = prepareFunds(data);
 const initial = sortFunds(filterFunds(funds, DEFAULT_STATE), DEFAULT_STATE.sort, DEFAULT_STATE.dir);
 const inactiveCount = funds.filter((fund) => !fund.active).length;
+const dividendFundCount = funds.filter((fund) => fund.total).length;
 
 const COLUMNS = [
   { key: null, label: m.compare_col_header(), className: 'c-compare', hidden: true },
@@ -51,6 +52,7 @@ const COLUMNS = [
     <label class="check"><input type="checkbox" name="bibit" /> {m.filter_bibit()}</label>
     <label class="check"><input type="checkbox" name="makmur" /> {m.filter_makmur()}</label>
     <label class="check" title={m.filter_inactive_title()}><input type="checkbox" name="inactive" /> {m.filter_inactive({ count: formatCount(inactiveCount, locale) })}</label>
+    <label class="check" title={m.dividends_toggle_help({ count: formatCount(dividendFundCount, locale) })}><input type="checkbox" id="include-dividends" /> {m.dividends_toggle()}</label>
     <span class="result-count" id="count" aria-live="polite">{fundCountLabel(initial.length, locale)}</span>
   </form>
 
@@ -478,6 +480,7 @@ const COLUMNS = [
   import { DEFAULT_STATE, PAGE_SIZE, filterFunds, fundCountLabel, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../../lib/explorer.js';
   import { MAX_FUNDS, selectionQuery } from '../../lib/compare.js';
   import { readTray, toggleInTray, writeTray } from '../../lib/compare-tray.js';
+  import { readIncludeDividends, writeIncludeDividends } from '../../lib/dividend-setting.js';
   import { formatCount } from '../../lib/format.js';
   import { localizeHref } from '../../lib/i18n.js';
   import * as m from '../../paraglide/messages.js';
@@ -497,7 +500,8 @@ const COLUMNS = [
   const nextPage = document.getElementById('next-page');
   const currencyButtons = controls.querySelectorAll('[data-currency]');
   const sortButtons = document.querySelectorAll('[data-sort]');
-  const checkboxes = controls.querySelectorAll('input[type="checkbox"]');
+  const checkboxes = controls.querySelectorAll('input[type="checkbox"][name]');
+  const includeDividends = document.getElementById('include-dividends');
   const compareBar = document.getElementById('compare-bar');
   const compareLink = document.getElementById('compare-link');
   const compareClear = document.getElementById('compare-clear');
@@ -507,6 +511,7 @@ const COLUMNS = [
 
   let state = readStateFromUrl();
   let compared = readTray();
+  let data = null;
   let funds = [];
   let dataDate = '';
 
@@ -717,13 +722,23 @@ const COLUMNS = [
     }
   });
 
+  includeDividends.addEventListener('change', () => {
+    writeIncludeDividends(includeDividends.checked);
+
+    if (data) {
+      funds = prepareFunds(data, includeDividends.checked);
+      update({});
+    }
+  });
+
+  includeDividends.checked = readIncludeDividends();
   syncControls();
   syncCompare();
 
   const response = await fetch('/explorer.json');
-  const data = await response.json();
 
-  funds = prepareFunds(data);
+  data = await response.json();
+  funds = prepareFunds(data, includeDividends.checked);
   dataDate = data.date;
   render();
 </script>
