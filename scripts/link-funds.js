@@ -605,8 +605,8 @@ const loadRecords = async () => {
       name: row.name,
       manager: row.manager,
       type: row.type,
-      // The Bareksa profile scrape adds a currency column; until then it is empty.
-      currency: row.currency ?? '',
+      // Bareksa can show a USD fund's AUM in Rp, so an IDR the name contradicts is not taken as the fund's currency.
+      currency: row.currency === 'IDR' && USD_IN_NAME.test(row.name) ? '' : row.currency,
       sharia: '',
       launchDate: row.launch_date,
       bibitSymbol: row.bibit_symbol,

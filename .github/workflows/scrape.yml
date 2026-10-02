@@ -16,6 +16,7 @@ on:
           - kontan-full
           - makmur
           - bareksa
+          - bareksa-profiles
           - all
         default: bibit
 
@@ -67,6 +68,11 @@ jobs:
       - name: Scrape Bareksa
         if: (success() || failure()) && steps.decide.outputs.bareksa == 'true'
         run: npm run scrape:bareksa
+
+      # A slice of the fund pages (currency, custodian, minimums, fees), every day, apart from the monthly full run.
+      - name: Scrape Bareksa profiles
+        if: (success() || failure()) && steps.decide.outputs.bareksa_profiles == 'true'
+        run: npm run scrape:bareksa:profiles
 
       # Rebuilds data/funds.csv and data/fund-ids.csv from whatever the scrapers saved. If the linker fails,
       # nothing is committed, so the site never gets half-linked data.
