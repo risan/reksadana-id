@@ -13,9 +13,9 @@
     "scrape:makmur": "node scrapers/makmur.js",
     "scrape:bareksa": "node scrapers/bareksa.js",
     "link": "node scripts/link-funds.js",
-    "test": "node --test scrapers/*.test.js scripts/*.test.js src/lib/*.test.js",
+    "test": "node --test scrapers/*.test.js scripts/*.test.js src/*.test.js src/lib/*.test.js",
     "dev": "astro dev",
-    "build": "astro build && node scripts/check-dist.js && node scripts/check-funds.js",
+    "build": "astro build && node scripts/write-redirects.js && node scripts/check-dist.js && node scripts/check-funds.js",
     "preview": "wrangler dev"
   },
   "dependencies": {
