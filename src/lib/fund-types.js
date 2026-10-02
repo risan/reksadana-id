@@ -1,3 +1,5 @@
+import * as m from '../paraglide/messages.js';
+
 // Bibit's type labels, in the order a reader looks for them, with an English name for each.
 export const FUND_TYPES = [
   { label: 'Pasar Uang', english: 'Money market' },
@@ -18,4 +20,13 @@ export function englishTypeName(label) {
 // Indonesian pages show Bibit's label; English pages show the English name, and the label when there is none.
 export function typeName(label, locale) {
   return locale === 'en' ? (englishTypeName(label) ?? label) : label;
+}
+
+// Sharia status is null when no source states it, which is not the same as "No".
+export function shariaText(sharia) {
+  if (sharia === null || sharia === undefined) {
+    return m.detail_not_stated();
+  }
+
+  return sharia ? m.compare_yes() : m.compare_no();
 }

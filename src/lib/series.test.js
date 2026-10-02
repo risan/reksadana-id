@@ -190,3 +190,13 @@ test('pickAumHistory switches to Bareksa when Bibit is off by more than tenfold 
 
   assert.equal(pickAumHistory(fund).source, 'bibit');
 });
+
+test('every AUM point carries its own currency: Bareksa by column, Bibit by the fund, null when unknown', () => {
+  const bareksa = { aum: [{ date: '2026-08-01', aum_idr: 418_000_000, aum_usd: 25_000 }], units: [], nav: [] };
+
+  assert.equal(pickAumHistory({ fund: { currency: 'USD' }, bareksa }).points[0].currency, 'USD');
+  assert.equal(pickAumHistory({ fund: { currency: 'IDR' }, bareksa }).points[0].currency, 'IDR');
+  assert.equal(pickAumHistory({ fund: { currency: null }, bareksa }).points[0].currency, 'IDR');
+  assert.equal(pickAumHistory({ fund: { currency: null }, aum: [{ date: '2026-08-01', aum: 5e9 }] }).points[0].currency, null);
+  assert.equal(pickAumHistory({ fund: { currency: 'USD' }, aum: [{ date: '2026-08-01', aum: 5e6 }] }).points[0].currency, 'USD');
+});

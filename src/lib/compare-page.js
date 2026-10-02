@@ -9,7 +9,7 @@ import { readTrayText, writeTray } from './compare-tray.js';
 import { DEFAULT_STATE, escapeHtml, filterFunds, prepareFunds, sortFunds } from './explorer.js';
 import { attachTooltip, axes, chartHeight, cssColor, toSeconds } from './fund-charts.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from './format.js';
-import { typeName } from './fund-types.js';
+import { shariaText, typeName } from './fund-types.js';
 import { anchor, localizeHref } from './i18n.js';
 import { indexAtOrBefore, pickNavHistory } from './series.js';
 
@@ -335,9 +335,9 @@ export async function mountComparePage() {
         ${row(m.detail_manager(), (column) => (column.fund.manager ? escapeHtml(column.fund.manager) : missing))}
         ${row(m.detail_currency(), (column) => escapeHtml(column.fund.currency ?? m.detail_not_stated()))}
         ${row(m.detail_launched(), (column) => (column.status === 'ready' ? formatDate(column.record.fund.launch_date ?? column.record.released_date ?? null, locale) : missing))}
-        ${row(m.compare_row_sharia(), (column) => escapeHtml(column.fund.sharia ? m.compare_yes() : m.compare_no()))}
+        ${row(m.compare_row_sharia(), (column) => escapeHtml(shariaText(column.fund.sharia)))}
         ${row(m.compare_row_nav(), (column) => `${formatNav(column.fund.nav, locale)}${column.fund.currency === 'USD' ? ' USD' : ''}<div class="sub">${formatDate(column.fund.nav_date, locale)}</div>`)}
-        ${row(m.figure_aum(), (column) => `${formatMoney(column.fund.aum, locale, column.fund.currency)}<div class="sub">${column.fund.aum_date ? formatMonth(column.fund.aum_date, locale) : ''}</div>`)}
+        ${row(m.figure_aum(), (column) => `${formatMoney(column.fund.aum, locale, column.fund.aum_currency)}<div class="sub">${column.fund.aum_date ? formatMonth(column.fund.aum_date, locale) : ''}</div>`)}
         ${analysis?.commonEnd ? group(m.compare_group_returns({ date: formatDate(analysis.commonEnd, locale) })) : ''}
         ${analysis ? RETURN_PERIODS.map((period) => row(`${m.returns_row_return()} ${periodLabels[period]}`, returnCell((returns) => returns.simplereturn[period], formatChange, true), { className: 'num' })).join('') : ''}
         ${analysis ? CAGR_PERIODS.map((period) => row(`${m.returns_row_per_year()} ${periodLabels[period]}`, returnCell((returns) => returns.cagr[period], formatChange, true), { title: m.returns_row_per_year_title(), className: 'num' })).join('') : ''}

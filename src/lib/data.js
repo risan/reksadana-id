@@ -2,7 +2,7 @@ import { closeSync, existsSync, fstatSync, openSync, readFileSync, readSync, rea
 import path from 'node:path';
 import { buildCosts } from './costs.js';
 import { makmurFundUrl } from './referrals.js';
-import { computeReturns, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, sparkline } from './series.js';
+import { computeReturns, fundCurrency, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, sparkline } from './series.js';
 
 export const DATA_DIR = path.resolve('data');
 
@@ -430,7 +430,7 @@ export function latestAum(record) {
     const bibit = readJson(null, 'funds', `${symbol}.json`)?.aum;
 
     if (bibit?.value > 0) {
-      return { value: bibit.value, date: bibit.date };
+      return { value: bibit.value, date: bibit.date, currency: fundCurrency(record) };
     }
   }
 
@@ -492,7 +492,7 @@ function buildFundSummaries() {
       manager: shortManagerName(fund.manager),
       type: fund.type,
       currency: fund.currency,
-      sharia: fund.sharia === true,
+      sharia: fund.sharia,
       etf: fund.etf,
       index: fund.index,
       bibit: record.tradeable === 1,
@@ -500,6 +500,7 @@ function buildFundSummaries() {
       nav: roundSignificant(last?.value ?? null, 8),
       nav_date: navDate,
       aum: roundSignificant(aum?.value ?? null, 4),
+      aum_currency: aum?.currency ?? null,
       aum_date: aum?.date ?? null,
       return_1m: periodReturn('1m'),
       return_ytd: periodReturn('ytd'),

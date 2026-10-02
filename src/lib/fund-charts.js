@@ -3,7 +3,7 @@ import 'uplot/dist/uPlot.min.css';
 import * as m from '../paraglide/messages.js';
 import { setLocale } from '../paraglide/runtime.js';
 import { changeClass, formatChange, formatCompact, formatDate, formatMoney, formatMonth, formatMonthName, formatNav, formatNumber } from './format.js';
-import { fundCurrency, periodStartIndex, pickAumHistory, pickNavHistory } from './series.js';
+import { periodStartIndex, pickAumHistory, pickNavHistory } from './series.js';
 
 const RANGE_PERIODS = { '1M': '1m', '3M': '3m', '6M': '6m', YTD: 'ytd', '1Y': '1y', '3Y': '3y', '5Y': '5y', All: 'all' };
 const DEFAULT_RANGE = '1Y';
@@ -127,9 +127,9 @@ export async function mountFundCharts(symbol) {
   const readout = document.getElementById('range-readout');
 
   const fund = await (await fetch(`/api/funds/${encodeURIComponent(symbol)}.json`)).json();
-  const currency = fundCurrency(fund);
   const history = pickNavHistory(fund);
   const aumHistory = pickAumHistory(fund);
+  const aumCurrency = aumHistory.points.at(-1)?.currency ?? null;
   const points = history.points;
   const sync = { key: `fund-${symbol}` };
   let startIndex = 0;
@@ -229,7 +229,7 @@ export async function mountFundCharts(symbol) {
     );
 
     const updateAumTip = attachTooltip(aumChart, aumContainer, (index) => `<div class="tip-date">${formatMonth(toDate(aumData[0][index]), locale)}</div>
-      <div class="tip-row"><b>${escapeHtml(formatMoney(aumData[1][index], locale, currency))}</b></div>`);
+      <div class="tip-row"><b>${escapeHtml(formatMoney(aumData[1][index], locale, aumCurrency))}</b></div>`);
 
     aumChart.hooks.setCursor.push(updateAumTip);
     observeWidth(aumChart, aumContainer, 130);

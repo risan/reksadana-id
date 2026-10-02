@@ -88,7 +88,7 @@ export function prepareFunds(data) {
   return data.funds.map((fund) => ({
     ...fund,
     search: `${fund.names.join(' ')} ${fund.id} ${fund.manager ?? ''}`.toLowerCase(),
-    aum_idr: fund.aum === null ? null : fund.aum * (fund.currency === 'USD' ? data.usd_to_idr : 1),
+    aum_idr: fund.aum === null ? null : fund.aum * (fund.aum_currency === 'USD' ? data.usd_to_idr : 1),
   }));
 }
 
@@ -207,7 +207,7 @@ export function renderRow(fund, { terms, dataDate, locale, comparedIds }) {
     ${returnCell(fund.return_1y, 'c-1y', locale, largeMove)}
     <td class="c-spark">${renderSpark(fund.spark, changeClass(fund.return_1y) || 'flat')}</td>
     ${returnCell(fund.return_3y, 'c-3y', locale)}
-    <td class="num c-aum">${formatMoney(fund.aum, locale, fund.currency)}<div class="sub">${fund.aum_date ? formatMonth(fund.aum_date, locale) : ''}</div></td>
+    <td class="num c-aum">${formatMoney(fund.aum, locale, fund.aum_currency)}<div class="sub">${fund.aum_date ? formatMonth(fund.aum_date, locale) : ''}</div></td>
     <td class="c-buy">${buy}</td>
   </tr>`;
 }

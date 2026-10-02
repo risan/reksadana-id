@@ -3,7 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import { fundIdOfBibitSymbol, fundPerformance, isActive, latestAum, listFundIds, loadFundRecord, shortManagerName, staleSourceDate } from '../../../lib/data.js';
 import { describeCosts } from '../../../lib/costs-text.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from '../../../lib/format.js';
-import { typeName } from '../../../lib/fund-types.js';
+import { shariaText, typeName } from '../../../lib/fund-types.js';
 import { localePaths, localizeHref } from '../../../lib/i18n.js';
 import { REFERRALS, bibitFundUrl } from '../../../lib/referrals.js';
 import * as m from '../../../paraglide/messages.js';
@@ -31,7 +31,9 @@ const active = isActive(navDate, lastPoint?.source);
 const sourceDataDate = staleSourceDate(lastPoint?.source);
 const currency = fundCurrency(fund);
 const aum = latestAum(fund);
-const hasAumHistory = pickAumHistory(fund).points.length > 0;
+const aumPoints = pickAumHistory(fund).points;
+const hasAumHistory = aumPoints.length > 0;
+const aumCurrency = aumPoints.at(-1)?.currency ?? null;
 const moves = largeMoves(history.points).reverse();
 
 const PERIOD_LABELS = {
@@ -138,6 +140,7 @@ const details = [
   [m.detail_type(), typeLabel === null ? null : `${typeLabel}${typeNote ? ` (${typeNote})` : ''}`],
   [m.detail_manager(), info.manager],
   [m.detail_currency(), currency ?? m.detail_not_stated()],
+  [m.compare_row_sharia(), shariaText(info.sharia)],
   [m.detail_launched(), launchDate ? formatDate(launchDate, locale) : null],
   [m.detail_risk(), riskProfile],
 ].filter(([, value]) => value !== null && value !== undefined && value !== '');
@@ -162,7 +165,7 @@ const figures = [
   },
   { label: m.figure_return_1y(), value: formatChange(ret('1y'), locale), className: changeClass(ret('1y')), sub: threeYearSub() },
   { label: m.figure_worst_fall(), value: formatPercent(performance.maxdrawdown?.['1y'] ?? null, locale), sub: m.figure_worst_fall_sub() },
-  { label: m.figure_aum(), value: formatMoney(aum?.value ?? null, locale, currency), sub: aum ? formatMonth(aum.date, locale) : '' },
+  { label: m.figure_aum(), value: formatMoney(aum?.value ?? null, locale, aum?.currency), sub: aum ? formatMonth(aum.date, locale) : '' },
 ].filter((figure, index) => index === 0 || figure.value !== '—');
 
 const costs = describeCosts(fund.costs, locale);
@@ -282,7 +285,7 @@ const sources = [
         <div class="chart" id="nav-chart" data-fund-id={id}></div>
         <p class="chart-empty" id="nav-empty" hidden>{m.chart_nav_empty()}</p>
 
-        <h3 class="chart-subtitle">{m.figure_aum()} <span class="muted">({currency ? m.chart_aum_currency_monthly({ currency }) : m.chart_aum_monthly()})</span></h3>
+        <h3 class="chart-subtitle">{m.figure_aum()} <span class="muted">({aumCurrency ? m.chart_aum_currency_monthly({ currency: aumCurrency }) : m.chart_aum_monthly()})</span></h3>
         <div class="chart" id="aum-chart"></div>
         <p class="chart-empty" id="aum-empty" hidden>{m.chart_aum_empty()}</p>
       </section>

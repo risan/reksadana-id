@@ -20,10 +20,10 @@ function toDate(time) {
   return new Date(time).toISOString().slice(0, 10);
 }
 
-function cleanPoints(rows, key, source) {
+function cleanPoints(rows, key, source, currency) {
   return rows
     .filter((row) => row[key] !== null && row[key] !== undefined && row[key] > 0)
-    .map((row) => ({ date: row.date, value: row[key], source }));
+    .map((row) => ({ date: row.date, value: row[key], source, ...(currency !== undefined && { currency }) }));
 }
 
 function monthlyNavFromBareksa(fund) {
@@ -250,11 +250,13 @@ function hasUnitError(bibitPoint, bareksaByMonth) {
   return sameMonth !== undefined && isFarOff(bibitPoint.value, sameMonth);
 }
 
+// Every point knows its currency: Bareksa's column names it, and Bibit's figure is in the currency of the fund
+// (null when no source states it, which the pages then show without a currency).
 export function pickAumHistory(fund) {
   const key = fundCurrency(fund) === 'USD' ? 'aum_usd' : 'aum_idr';
-  const bareksa = cleanPoints(fund.bareksa?.aum ?? [], key, 'bareksa');
+  const bareksa = cleanPoints(fund.bareksa?.aum ?? [], key, 'bareksa', key === 'aum_usd' ? 'USD' : 'IDR');
   const bareksaByMonth = new Map(bareksa.map((point) => [point.date.slice(0, 7), point.value]));
-  const bibitAll = cleanPoints(fund.aum ?? [], 'aum', 'bibit');
+  const bibitAll = cleanPoints(fund.aum ?? [], 'aum', 'bibit', fundCurrency(fund));
   const bibit = bibitAll.filter((point) => !hasUnitError(point, bareksaByMonth));
   const latestIsWrong = bibitAll.length > 0 && hasUnitError(bibitAll.at(-1), bareksaByMonth);
 
