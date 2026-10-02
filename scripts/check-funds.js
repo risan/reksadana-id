@@ -56,4 +56,10 @@ const fundHolding = (source, id) => funds.find((fund) => fund[source].split(' ')
 
 assert.notEqual(fundHolding('bibit', 'RD390'), fundHolding('bareksa', '2369'), 'RD390 and Bareksa 2369 are different funds');
 
+const gemilangOne = fundHolding('bareksa', '3569');
+const gemilangOneLastDate = fs.readFileSync('data/bareksa/nav/3569.csv', 'utf8').trim().split('\n').at(-1).split(',')[0];
+
+assert.ok(gemilangOne.kontan === '', 'Gemilang I must not hold the Kontan record of Gemilang II');
+assert.ok(gemilangOneLastDate.startsWith('2019-'), `BRK3569 latest NAV must be in 2019, it is ${gemilangOneLastDate}`);
+
 console.log(`data/funds.csv: ${funds.length} funds, ${registry.length} published IDs, checks passed.`);

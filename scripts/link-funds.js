@@ -185,29 +185,36 @@ const movedBack = (record) => {
   return kontanMovedBack.get(record);
 };
 
-const compareNav = (a, b) => {
-  const comparison = compareSeries(a, b);
+// The comparison of two records on the date alignment that agrees best, with the records as aligned.
+const alignNav = (a, b) => {
+  const plain = { pair: [a, b], comparison: compareSeries(a, b) };
 
   if (a.source !== 'kontan' && b.source !== 'kontan' || a.source === b.source) {
-    return comparison;
+    return plain;
   }
 
-  const moved = a.source === 'kontan' ? compareSeries(movedBack(a), b) : compareSeries(a, movedBack(b));
+  const pair = a.source === 'kontan' ? [movedBack(a), b] : [a, movedBack(b)];
+  const moved = { pair, comparison: compareSeries(...pair) };
 
-  return moved.close > comparison.close ? moved : comparison;
+  return moved.comparison.close > plain.comparison.close ? moved : plain;
 };
+
+const compareNav = (a, b) => alignNav(a, b).comparison;
 
 const shareClassOf = (record) => record.name.match(/\bkelas\s+([a-z0-9]+)\b/i)?.[1].toLowerCase() ?? '';
 
 // Classes of one fund often hold the same NAV from the day they start, so NAV cannot tell them apart.
 const hasConflictingClass = (a, b) => shareClassOf(a) !== '' && shareClassOf(b) !== '' && shareClassOf(a) !== shareClassOf(b);
 
-const ROMAN_NUMERAL = /^(x{0,2})(ix|iv|v?i{0,3})$/;
-const ROMAN_DIGITS = { i: 1, v: 5, x: 10 };
+const ROMAN_NUMERAL = /^m{0,3}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})$/;
+const ROMAN_DIGITS = { i: 1, v: 5, x: 10, l: 50, c: 100, d: 500, m: 1000 };
 
-// Numbered series ("Gemilang I" and "Gemilang II", "Proteksi 69") are distinct funds with different histories.
-// Only the last word counts, so index names such as "LQ45" or "SRI-KEHATI" carry no number, and four-digit
-// years are not one. Roman and Arabic numerals are the same number.
+// A lone C, D or M is a share class ("Equity Indonesia D"), not 100, 500 or 1000.
+const isRomanNumeral = (word) => ROMAN_NUMERAL.test(word) && (word.length > 1 || 'ivxl'.includes(word));
+
+// Numbered series ("Gemilang I" and "Gemilang II", "Proteksi 69", "Proteksi LXIX") are distinct funds with
+// different histories. Only the last word counts, so index names such as "LQ45" or "SRI-KEHATI" carry no
+// number, and four-digit years are not one. Roman and Arabic numerals are the same number.
 const identityNumberOf = (record) => {
   const words = normalizeName(record.name).replace(/\bkelas [a-z0-9]+\b/g, ' ').trim().split(/\s+/);
   const last = words.at(-1);
@@ -220,7 +227,7 @@ const identityNumberOf = (record) => {
     return Number(last);
   }
 
-  if (last !== '' && ROMAN_NUMERAL.test(last)) {
+  if (isRomanNumeral(last)) {
     return [...last].reduce((total, letter, index, letters) => total + (ROMAN_DIGITS[letters[index + 1]] > ROMAN_DIGITS[letter] ? -1 : 1) * ROMAN_DIGITS[letter], 0);
   }
 
@@ -436,15 +443,26 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
   }
 
   // Another record of the same source that could equally be the match, because it holds an equal value on a date
-  // the two records share, makes that equal value a coincidence.
+  // the two records share, makes that equal value a coincidence. Dates are aligned as in the matching itself.
   const hasLookalike = (record, other) => {
-    const otherDates = new Set(other.nav.dates);
+    const [alignedRecord, alignedOther] = alignNav(record, other).pair;
+    const sharedValues = Array.from(alignedRecord.nav.dates)
+      .map((date, position) => ({ date, value: alignedRecord.nav.values[position] }))
+      .filter(({ date }) => valueOn(alignedOther, date) !== undefined);
 
-    return Array.from(record.nav.dates).some((date, position) => otherDates.has(date) && records.some((candidate) => {
-      const value = valueOn(candidate, date);
+    return records.some((candidate) => {
+      if (candidate.source !== record.source || candidate.key === record.key || !hasCompatibleManager(candidate, other) || !hasCompatibleCurrency(candidate, other)) {
+        return false;
+      }
 
-      return candidate.source === record.source && candidate.key !== record.key && hasCompatibleManager(candidate, other) && hasCompatibleCurrency(candidate, other) && value !== undefined && valuesAgree(value, record.nav.values[position]) && sharedDigits(value, record.nav.values[position]) >= MIN_DISTINCTIVE_DIGITS;
-    }));
+      const [alignedCandidate] = alignNav(candidate, other).pair;
+
+      return sharedValues.some(({ date, value }) => {
+        const candidateValue = valueOn(alignedCandidate, date);
+
+        return candidateValue !== undefined && valuesAgree(candidateValue, value) && sharedDigits(candidateValue, value) >= MIN_DISTINCTIVE_DIGITS;
+      });
+    });
   };
 
   // One or two equal dates are a coincidence unless the values are long, the managers are known and the same,

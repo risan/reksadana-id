@@ -326,6 +326,31 @@ test('numbered series of one manager stay apart even when a third source matches
   assert.ok(result.report.refused.some(({ reason }) => /number \d vs number \d/.test(reason)));
 });
 
+const latestNavDate = (result, records, key) => {
+  const fund = findFund(result, key);
+
+  return records
+    .filter((member) => fund.sources[member.source].includes(member.id))
+    .flatMap((member) => Array.from(member.nav.dates))
+    .reduce((latest, date) => Math.max(latest, date), 0);
+};
+
+test('an alias moves a mislabelled Kontan record to its fund, and each history ends where it should', () => {
+  const recent = [['2026-10-01', 969.8812], ['2026-09-30', 969.1234], ['2026-09-29', 968.5123]];
+  const kontanRecent = roundTo(recent, 2);
+  const records = [
+    record('bareksa', '3569', { name: 'Sequis Proteksi Gemilang I', manager: SEQUIS, nav: [['2019-03-08', 1014.7355]] }),
+    record('bareksa', '3727', { name: 'Reksa Dana Terproteksi Sequis Proteksi Gemilang II', manager: SEQUIS, nav: recent }),
+    record('kontan', '15447', { name: 'SEQUIS PROTEKSI GEMILANG I', manager: 'PT. Sequis Aset Manajemen', nav: kontanRecent }),
+  ];
+  const result = link(records, { aliases: { 'kontan:15447': 'bareksa:3727' } });
+
+  assert.equal(result.funds.length, 2);
+  assert.equal(findFund(result, 'kontan:15447'), findFund(result, 'bareksa:3727'));
+  assert.equal(latestNavDate(result, records, 'bareksa:3569'), makeNavSeries([['2019-03-08', 1]]).dates[0]);
+  assert.equal(latestNavDate(result, records, 'bareksa:3727'), makeNavSeries([['2026-10-01', 1]]).dates[0]);
+});
+
 test('Roman and Arabic numbers are the same number, and a name without a trailing number conflicts with nothing', () => {
   const nav = fourDecimalNav(5);
   const result = link([
@@ -335,6 +360,54 @@ test('Roman and Arabic numbers are the same number, and a name without a trailin
   ]);
 
   assert.equal(result.funds.length, 1);
+});
+
+test('Roman numbers above 29 are series numbers, and Arabic equals Roman', () => {
+  const nav = fourDecimalNav(5);
+  const conflict = link([
+    record('kontan', '1', { name: 'Alpha Proteksi XXX', nav }),
+    record('bareksa', '2', { name: 'Alpha Proteksi XXXI', nav }),
+  ]);
+  const same = link([
+    record('kontan', '1', { name: 'Alpha Proteksi LXIX', nav }),
+    record('bareksa', '2', { name: 'Alpha Proteksi 69', nav }),
+  ]);
+
+  assert.equal(conflict.funds.length, 2);
+  assert.equal(same.funds.length, 1);
+});
+
+test('a single shared date is no link between Roman numbers above 29', () => {
+  const recent = [['2026-10-01', 2588.1234]];
+  const result = link([
+    record('bibit', 'RD1', { name: 'Alpha Proteksi XXX', nav: recent }),
+    record('bareksa', '2', { name: 'Alpha Proteksi XXXI', nav: recent }),
+  ]);
+
+  assert.equal(result.funds.length, 2);
+});
+
+test('a lone share-class letter and words that only look Roman are not numbers', () => {
+  for (const [first, second] of [['Alpha Equity D', 'Alpha Equity C'], ['Alpha Cimb', 'Alpha Plus']]) {
+    const nav = fourDecimalNav(5);
+    const result = link([
+      record('kontan', '1', { name: first, nav }),
+      record('bareksa', '2', { name: second, nav }),
+    ]);
+
+    assert.equal(result.funds.length, 1, `${first} / ${second}`);
+  }
+});
+
+test('a third source cannot bridge two numbered series above 29', () => {
+  const nav = fourDecimalNav(5);
+  const result = link([
+    record('kontan', '1', { name: 'Alpha Proteksi XXXIV', nav }),
+    record('bareksa', '2', { name: 'Alpha Proteksi XXXV', nav }),
+    record('makmur', 'm1', { name: 'Alpha Proteksi', nav }),
+  ]);
+
+  assert.equal(result.funds.length, 2);
 });
 
 test('numbers that are not a series identity do not block a link', () => {
@@ -387,6 +460,16 @@ test('a short NAV match is no link when another record of the same source holds 
     record('bibit', 'RD1', { name: 'Alpha Satu', nav: recent }),
     record('bareksa', '2', { name: 'Alpha Dua', nav: recent }),
     record('bareksa', '3', { name: 'Alpha Tiga', manager: '', nav: recent }),
+  ]);
+
+  assert.equal(result.funds.length, 3);
+});
+
+test('a short NAV match is no link when a Kontan record matches the same Bibit value on shifted dates', () => {
+  const result = link([
+    record('bibit', 'RD1', { name: 'Alpha Satu', nav: [['2026-09-30', 2588.1234], ['2026-10-01', 2589.5678]] }),
+    record('kontan', '2', { name: 'Alpha Dua', nav: [['2026-09-30', 2588.1234], ['2026-10-01', 2588.1234], ['2026-10-02', 2589.5678]] }),
+    record('kontan', '3', { name: 'Alpha Tiga', nav: [['2026-10-01', 2456.4321], ['2026-10-02', 2589.5678]] }),
   ]);
 
   assert.equal(result.funds.length, 3);
