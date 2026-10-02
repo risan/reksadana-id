@@ -1,6 +1,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { makmurFundUrl } from './referrals.js';
+import { computeReturns, fundCurrency, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, sparkline } from './series.js';
 
 export const DATA_DIR = path.resolve('data');
 
@@ -266,4 +267,140 @@ export function loadMakmur(symbol) {
   }
 
   return { ...fund, data: JSON.parse(readText(MAKMUR_DIR, 'funds', `${fund.id}.json`)) };
+}
+
+// Everything about one fund, as served by /api/funds/<symbol>.json.
+export function loadFundRecord(symbol) {
+  return {
+    ...loadFundDetails(symbol),
+    nav: loadNavSeries(symbol),
+    aum: loadAumSeries(symbol),
+    kontan: loadKontan(symbol),
+    bareksa: loadBareksa(symbol),
+    makmur: loadMakmur(symbol),
+  };
+}
+
+let latestDate = null;
+
+// The newest NAV date of any fund: the date the whole dataset is current to.
+export function latestNavDate() {
+  if (latestDate === null) {
+    latestDate = readCsvObjects(BIBIT_DIR, 'funds.csv').reduce((latest, row) => (row.nav_date > latest ? row.nav_date : latest), '');
+  }
+
+  return latestDate;
+}
+
+// A fund that has reported no NAV for this long is probably closed, merged, or no longer reported.
+const ACTIVE_WITHIN_DAYS = 31;
+
+export function isActive(navDate) {
+  if (!navDate) {
+    return false;
+  }
+
+  const ageDays = (Date.parse(latestNavDate()) - Date.parse(navDate)) / (24 * 60 * 60 * 1000);
+
+  return ageDays <= ACTIVE_WITHIN_DAYS;
+}
+
+export function shortManagerName(name) {
+  return name?.replace(/^PT\.?\s+/i, '').replace(/,?\s+PT\.?$/i, '').trim() ?? null;
+}
+
+// Every return is the change in NAV, computed here so the chart, the table, and the fund list agree.
+// Bibit's own figures lag its NAV history, and its nav_adjusted changes base between scrapes. Its dividend
+// list only keeps the latest five payouts, which is too short to rebuild a total return.
+export function fundPerformance(record, history = pickNavHistory(record)) {
+  return { source: history.primary, ...computeReturns(history) };
+}
+
+// Some funds have a latest AUM in their Bibit fund file but no AUM history.
+export function latestAum(record) {
+  const latest = pickAumHistory(record).points.at(-1);
+
+  if (latest) {
+    return latest;
+  }
+
+  const bibit = loadFund(record.symbol)?.aum;
+
+  return bibit?.value > 0 ? { value: bibit.value, date: bibit.date } : null;
+}
+
+function roundTo(value, decimals) {
+  if (value === null || value === undefined) {
+    return null;
+  }
+
+  return Math.round(value * 10 ** decimals) / 10 ** decimals;
+}
+
+function roundSignificant(value, digits) {
+  return value === null || value === undefined ? null : Number(value.toPrecision(digits));
+}
+
+function hasLargeMoveInLastYear(points) {
+  if (points.length < 2) {
+    return false;
+  }
+
+  const yearAgo = periodStartDate('1y', points.at(-1).date);
+
+  return largeMoves(points).some((move) => move.date > yearAgo);
+}
+
+let fundSummaries = null;
+
+// One compact row per fund for the fund explorer, plus the USD rate it needs to rank funds by size.
+export function loadFundSummaries() {
+  fundSummaries ??= buildFundSummaries();
+
+  return fundSummaries;
+}
+
+function buildFundSummaries() {
+  const makmur = loadMakmurFundsBySymbol();
+  let usdToIdr = null;
+
+  const funds = readCsvObjects(BIBIT_DIR, 'funds.csv').map((row) => {
+    const record = loadFundRecord(row.symbol);
+    const history = pickNavHistory(record);
+    const last = history.points.at(-1);
+    const navDate = history.frozenSince ?? last?.date ?? emptyToNull(row.nav_date);
+    const active = isActive(navDate);
+    const performance = fundPerformance(record, history);
+    const aum = latestAum(record);
+    const periodReturn = (period) => (active ? roundTo(performance.simplereturn[period], 5) : null);
+
+    if (fundCurrency(record) === 'USD' && record.currency_exchange?.exchange_rate > 1) {
+      usdToIdr = record.currency_exchange.exchange_rate;
+    }
+
+    return {
+      symbol: row.symbol,
+      name: row.name,
+      manager: shortManagerName(row.investment_manager),
+      type: emptyToNull(row.type),
+      currency: fundCurrency(record),
+      sharia: row.sharia === 'true',
+      bibit: row.tradeable === '1',
+      makmur: makmur.has(row.symbol),
+      nav: roundSignificant(last?.value ?? toNumberOrNull(row.nav), 8),
+      nav_date: navDate,
+      aum: roundSignificant(aum?.value ?? null, 4),
+      aum_date: aum?.date ?? null,
+      return_1m: periodReturn('1m'),
+      return_ytd: periodReturn('ytd'),
+      return_1y: periodReturn('1y'),
+      return_3y: periodReturn('3y'),
+      spark: active ? sparkline(history.points) : null,
+      large_move: active && hasLargeMoveInLastYear(history.points),
+      dividends: (record.dividends?.length ?? 0) > 0,
+      active,
+    };
+  });
+
+  return { date: latestNavDate(), usd_to_idr: usdToIdr, funds };
 }

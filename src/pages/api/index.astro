@@ -3,11 +3,192 @@ import Base from '../../layouts/Base.astro';
 
 const ORIGIN = 'https://your-site.example';
 
-const endpoints = [
-  {
-    path: '/api/funds.json',
-    description: 'Index of every fund. The columns of funds.csv, with numbers and booleans typed, plus return_1y (a fraction, so 0.0106 is 1.06%) and makmur_url (the Makmur page of the fund, or null when there is no Makmur match).',
-    example: `[
+const FUNDS_JSON_FIELDS = [
+  ['symbol', 'string', 'Bibit ticker, e.g. RD13.'],
+  ['name', 'string', 'Fund name.'],
+  ['type', 'string', 'Indonesian fund type, e.g. Obligasi.'],
+  ['investment_manager', 'string', 'The manager running the fund.'],
+  ['currency', 'string', 'IDR or USD.'],
+  ['sharia', 'boolean', 'Sharia-compliant fund.'],
+  ['etf', 'boolean', 'Traded as an ETF.'],
+  ['index', 'boolean', 'Tracks an index.'],
+  ['tradeable', 'boolean', 'You can buy it in the Bibit app.'],
+  ['status', 'number', "Bibit's own status code."],
+  ['nav_first_date', 'date', 'First date with a stored NAV.'],
+  ['nav_date', 'date', 'Date of the latest NAV below.'],
+  ['nav', 'number', 'Latest NAV per unit.'],
+  ['aum', 'number', 'Latest fund size, in the fund currency.'],
+  ['expense_ratio', 'number', 'Yearly fee, as a fraction.'],
+  ['return_1y', 'number or null', "Bibit's own 1-year return, as a fraction. Only for funds Bibit computes it for, and it can lag the NAV history."],
+  ['makmur_url', 'string or null', "The fund's Makmur page, or null when there is no match."],
+];
+
+const ONE_FUND_FIELDS = [
+  ['symbol', 'string', 'Bibit ticker.'],
+  ['name', 'string', 'Fund name.'],
+  ['type', 'string', 'Indonesian fund type.'],
+  ['tradeable', '0 or 1', 'You can buy it in the Bibit app.'],
+  ['nav', 'array', 'Daily NAV: { date, nav, nav_adjusted }.'],
+  ['aum', 'array', 'Fund size over time: { date, aum }.'],
+  ['documents', 'object or null', 'Links to factsheets and prospectus files.'],
+  ['switchables', 'array or null', 'Funds you can switch to in the app.'],
+  ['dividends', 'array or null', 'Dividend history.'],
+  ['kontan', 'object or null', 'The matching Kontan fund, see below.'],
+  ['bareksa', 'object or null', 'The matching Bareksa fund, see below.'],
+  ['makmur', 'object or null', 'The matching Makmur fund, see below.'],
+];
+---
+
+<Base
+  title="API"
+  description="A free, read-only JSON and CSV API for Indonesian mutual fund data. No key, open CORS."
+  section="api"
+>
+  <h1 class="page-title">API</h1>
+  <p class="lede">
+    Free, read-only, static JSON and CSV files. No key, open CORS, rebuilt whenever the data changes.
+  </p>
+
+  <div class="api-layout">
+    <nav class="api-toc" aria-label="Endpoints on this page">
+      <p class="small muted">On this page</p>
+      <ul>
+        <li><a href="#funds-json">Fund list</a></li>
+        <li><a href="#one-fund">One fund</a></li>
+        <li><a href="#types-json">Fund types</a></li>
+        <li><a href="#csv-funds">CSV: fund list</a></li>
+        <li><a href="#csv-nav">CSV: NAV</a></li>
+        <li><a href="#csv-aum">CSV: AUM</a></li>
+        <li><a href="#zip">Zip files</a></li>
+      </ul>
+    </nav>
+
+    <div class="api-content">
+      <div class="section">
+        <h2 class="section-title">Quick start</h2>
+        <p>
+          No key is needed, and <code>Access-Control-Allow-Origin: *</code> lets you call this from a browser. Every
+          path below is a <code>GET</code> request. An unknown path answers 404.
+        </p>
+        <pre data-origin><code>curl {ORIGIN}/api/funds/RD216.json
+curl -O {ORIGIN}/csv/nav/RD216.csv
+curl -s {ORIGIN}/api/funds.json | jq 'map(select(.tradeable)) | length'</code></pre>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Endpoints</h2>
+        <p>
+          Replace <code>RD216</code> with any symbol from <a href="/api/funds.json">funds.json</a>.
+        </p>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Group</th>
+              <th>Path</th>
+              <th>Format</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="1">Fund list</th>
+              <td><a href="#funds-json"><code>/api/funds.json</code></a></td>
+              <td>JSON</td>
+              <td>Index of every fund.</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th rowspan="1">One fund</th>
+              <td><a href="#one-fund"><code>/api/funds/&lt;symbol&gt;.json</code></a></td>
+              <td>JSON</td>
+              <td>Everything about one fund.</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th rowspan="1">Fund types</th>
+              <td><a href="#types-json"><code>/api/types.json</code></a></td>
+              <td>JSON</td>
+              <td>Fund type codes and labels.</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th rowspan="3">CSV</th>
+              <td><a href="#csv-funds"><code>/csv/funds.csv</code></a></td>
+              <td>CSV</td>
+              <td>The fund index as CSV.</td>
+            </tr>
+            <tr>
+              <td><a href="#csv-nav"><code>/csv/nav/&lt;symbol&gt;.csv</code></a></td>
+              <td>CSV</td>
+              <td>Daily NAV of one fund.</td>
+            </tr>
+            <tr>
+              <td><a href="#csv-aum"><code>/csv/aum/&lt;symbol&gt;.csv</code></a></td>
+              <td>CSV</td>
+              <td>AUM history of one fund.</td>
+            </tr>
+          </tbody>
+          <tbody>
+            <tr>
+              <th rowspan="1">Zip</th>
+              <td><a href="#zip"><code>/download/&lt;name&gt;.zip</code></a></td>
+              <td>ZIP</td>
+              <td>One source's data, or one part of it.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">Conventions</h2>
+        <dl class="kv">
+          <dt>Numbers</dt>
+          <dd>Returns and ratios are fractions: <code>0.0106</code> is 1.06%.</dd>
+          <dt>Dates</dt>
+          <dd>ISO, <code>YYYY-MM-DD</code>.</dd>
+          <dt>Currency</dt>
+          <dd>AUM and NAV are in the fund's own currency.</dd>
+          <dt>Missing data</dt>
+          <dd>A missing part is <code>null</code>, or an empty list.</dd>
+          <dt>Unknown paths</dt>
+          <dd>404.</dd>
+          <dt>Makmur fields</dt>
+          <dd>Scaled — see <a href="#one-fund">one fund</a> below.</dd>
+        </dl>
+      </div>
+
+      <div class="section" id="funds-json">
+        <h2 class="section-title"><code>GET /api/funds.json</code></h2>
+        <p>
+          An index of every fund: the same columns as <a href="#csv-funds">funds.csv</a>, with numbers and booleans
+          typed, plus <code>return_1y</code> and <code>makmur_url</code>.
+        </p>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Type</th>
+              <th>Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              FUNDS_JSON_FIELDS.map(([field, type, meaning]) => (
+                <tr>
+                  <td><code>{field}</code></td>
+                  <td class="muted">{type}</td>
+                  <td>{meaning}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+        <details>
+          <summary>Example response</summary>
+          <pre><code>{`[
   {
     "symbol": "RD13",
     "name": "ABF Indonesia Bond Index Fund",
@@ -24,14 +205,45 @@ const endpoints = [
     "nav": 59116.5317,
     "aum": 7850300000000,
     "expense_ratio": 0.0021,
-    "return_1y": 0.010580157352288122
+    "return_1y": 0.010580157352288122,
+    "makmur_url": null
   }
-]`,
-  },
-  {
-    path: '/api/funds/RD8807.json',
-    description: 'Everything about one fund: the full Bibit record, plus documents, switchables, dividends, nav, aum, kontan, bareksa, and makmur. kontan, bareksa, and makmur are the matching funds from Kontan, Bareksa, and Makmur, or null when there is no confident match. A missing part is null (documents, switchables, dividends, kontan, bareksa, makmur) or an empty list (nav, aum).',
-    example: `{
+]`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="one-fund">
+        <h2 class="section-title"><code>GET /api/funds/&lt;symbol&gt;.json</code></h2>
+        <p>
+          Everything about one fund: the full Bibit record, plus <code>documents</code>, <code>switchables</code>,
+          <code>dividends</code>, <code>nav</code>, <code>aum</code>, and the matching funds from Kontan, Bareksa, and
+          Makmur. A missing part is <code>null</code>, or an empty list for <code>nav</code> and <code>aum</code>.
+        </p>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Field</th>
+              <th>Type</th>
+              <th>Meaning</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              ONE_FUND_FIELDS.map(([field, type, meaning]) => (
+                <tr>
+                  <td><code>{field}</code></td>
+                  <td class="muted">{type}</td>
+                  <td>{meaning}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+        <p class="muted small">Plus every other field Bibit returns: fees, asset allocation, returns, drawdown, and more.</p>
+
+        <details>
+          <summary>Example response</summary>
+          <pre><code>{`{
   "symbol": "RD8807",
   "name": "Grow Obligasi Optima Dinamis Kelas O",
   "type": "Obligasi",
@@ -39,165 +251,208 @@ const endpoints = [
   "fee": { "subscription": { "value": 0, "type": "percent", "currency": "IDR" }, "...": "..." },
   "asset": [{ "name": "Obligasi Negara", "percentage": 81.33 }, "..."],
   "simplereturn": { "1d": 0.0033, "1y": 0.0111, "...": "..." },
-  "nav": [
-    { "date": "2024-10-02", "nav": 1000, "nav_adjusted": 1000 },
-    "..."
-  ],
-  "aum": [
-    { "date": "2024-10-01", "aum": 42315763006.92 },
-    "..."
-  ],
+  "nav": [{ "date": "2024-10-02", "nav": 1000, "nav_adjusted": 1000 }, "..."],
+  "aum": [{ "date": "2024-10-01", "aum": 42315763006.92 }, "..."],
   "kontan": null,
   "bareksa": null,
   "makmur": null,
   "documents": { "factsheets": ["..."], "prospectus": ["..."] },
   "switchables": null,
   "dividends": null
-}`,
-  },
-  {
-    path: '/api/funds/RD1141.json',
-    description: 'A fund with a Kontan match: kontan holds the Kontan fund id, its name, and its daily NAV. Kontan serves the last 12 months, and every update adds the new days.',
-    example: `{
-  "symbol": "RD1141",
+}`}</code></pre>
+        </details>
+
+        <details>
+          <summary>Example with a Kontan match</summary>
+          <p class="small muted">
+            <code>kontan</code> holds the Kontan fund id, its name, and its daily NAV. Kontan serves the last 12
+            months, and every update adds the new days.
+          </p>
+          <pre><code>{`"kontan": {
+  "id": 378,
   "name": "Net Dana Gemilang",
-  "...": "...",
-  "kontan": {
-    "id": 378,
-    "name": "Net Dana Gemilang",
-    "nav": [
-      { "date": "2025-10-02", "nav": 3257.37 },
-      { "date": "2025-10-03", "nav": 3258.24 },
-      "..."
-    ]
-  }
-}`,
-  },
-  {
-    path: '/api/funds/RD3420.json',
-    description: 'A fund with a Bareksa match: bareksa holds the Bareksa fund id and name, then four lists. nav is the daily NAV (empty until the owner has run the logged-in backfill described in the README). aum has the monthly AUM in rupiah and US dollars, and units the monthly units outstanding. allocation has the monthly asset allocation in percent: saham (equity), obligasi (bonds), pasar_uang (money market), and lainnya (other). Any list can be empty.',
-    example: `{
-  "symbol": "RD3420",
+  "nav": [
+    { "date": "2025-10-02", "nav": 3257.37 },
+    { "date": "2025-10-03", "nav": 3258.24 },
+    "..."
+  ]
+}`}</code></pre>
+        </details>
+
+        <details>
+          <summary>Example with a Bareksa match</summary>
+          <p class="small muted">
+            <code>bareksa</code> holds the Bareksa fund id and name, then four lists. <code>nav</code> is the daily
+            NAV, empty until the owner has run the logged-in backfill described in the README. <code>aum</code> is
+            the monthly fund size in rupiah and US dollars, and <code>units</code> the monthly units outstanding.
+            <code>allocation</code> is the monthly asset allocation in percent: <code>saham</code> (equity),
+            <code>obligasi</code> (bonds), <code>pasar_uang</code> (money market), and <code>lainnya</code> (other).
+            Any list can be empty.
+          </p>
+          <pre><code>{`"bareksa": {
+  "id": 354,
   "name": "Aberdeen Standard Indonesia Bond Fund",
-  "...": "...",
-  "bareksa": {
-    "id": 354,
-    "name": "Aberdeen Standard Indonesia Bond Fund",
-    "nav": [
-      { "date": "2007-06-01", "nav": 1000 },
-      "..."
-    ],
-    "aum": [
-      { "date": "2007-06-01", "aum_idr": 80659641807, "aum_usd": 9139902.75 },
-      "..."
-    ],
-    "units": [
-      { "date": "2007-06-01", "units": 80646262 },
-      "..."
-    ],
-    "allocation": [
-      { "date": "2017-11-30", "saham": 0, "obligasi": 89.5, "pasar_uang": 10.5, "lainnya": 0 },
-      "..."
-    ]
-  }
-}`,
-  },
-  {
-    path: '/api/funds/RD142.json',
-    description: 'A fund with a Makmur match: makmur holds the Makmur fund id, its name, the address of its Makmur page (url), and data, the fund record from Makmur as it is. Makmur scales its numbers: returns, drawdown, CAGR, the expense ratio, and the asset allocation weights are in hundredths of a percent (2162 is 21.62%), and lastPrice is the NAV times 100 (156 is 1.56). lastAum and the minimum buy are plain amounts. Dates are numbers like 20260930.',
-    example: `{
-  "symbol": "RD142",
+  "nav": [{ "date": "2007-06-01", "nav": 1000 }, "..."],
+  "aum": [{ "date": "2007-06-01", "aum_idr": 80659641807, "aum_usd": 9139902.75 }, "..."],
+  "units": [{ "date": "2007-06-01", "units": 80646262 }, "..."],
+  "allocation": [
+    { "date": "2017-11-30", "saham": 0, "obligasi": 89.5, "pasar_uang": 10.5, "lainnya": 0 },
+    "..."
+  ]
+}`}</code></pre>
+        </details>
+
+        <details>
+          <summary>Example with a Makmur match</summary>
+          <p class="small muted">
+            <code>makmur</code> holds the Makmur fund id, its name, its page address (<code>url</code>), and
+            <code>data</code>, the fund record from Makmur as it is. Makmur scales its numbers: returns, drawdown,
+            CAGR, the expense ratio, and the asset allocation weights are in hundredths of a percent
+            (<code>2162</code> is 21.62%), and <code>lastPrice</code> is the NAV times 100 (<code>156</code> is
+            1.56). <code>lastAum</code> and the minimum buy are plain amounts. Dates are numbers like
+            <code>20260930</code>.
+          </p>
+          <pre><code>{`"makmur": {
+  "id": "67f4d3dbc5988e812e4e9d59",
   "name": "Bahana Liquid USD",
-  "...": "...",
-  "makmur": {
-    "id": "67f4d3dbc5988e812e4e9d59",
-    "name": "Bahana Liquid USD",
-    "url": "https://www.makmur.id/id/reksadana/pasar-uang/bahana-liquid-usd-b2dbfdcba9e3",
-    "data": {
-      "currency": "USD",
-      "lastPrice": 100,
-      "return1y": 266,
-      "assetAllocations": [{ "asset": "Obligasi", "weight": 2984 }, "..."],
-      "factsheet": "https://cache.makmur.id/...",
-      "...": "..."
-    }
+  "url": "https://www.makmur.id/id/reksadana/pasar-uang/bahana-liquid-usd-b2dbfdcba9e3",
+  "data": {
+    "currency": "USD",
+    "lastPrice": 100,
+    "return1y": 266,
+    "assetAllocations": [{ "asset": "Obligasi", "weight": 2984 }, "..."],
+    "factsheet": "https://cache.makmur.id/...",
+    "...": "..."
   }
-}`,
-  },
-  {
-    path: '/api/types.json',
-    description: 'Fund type codes and labels.',
-    example: `{
+}`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="types-json">
+        <h2 class="section-title"><code>GET /api/types.json</code></h2>
+        <p>Fund type codes and their Indonesian labels, as used in the Bibit app's filter.</p>
+        <details>
+          <summary>Example response</summary>
+          <pre><code>{`{
   "types": [
     { "code": 3, "label": "Pasar Uang" },
     { "code": 2, "label": "Obligasi" }
   ],
   "show_sharia_tab": true
-}`,
-  },
-  {
-    path: '/csv/funds.csv',
-    description: 'The fund index as CSV. An exact copy of data/bibit/funds.csv.',
-    example: `symbol,name,type,investment_manager,currency,sharia,etf,index,tradeable,status,nav_first_date,nav_date,nav,aum,expense_ratio
-RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,IDR,false,true,true,1,1,2007-12-18,2026-09-30,59116.5317,7850300000000,0.0021`,
-  },
-  {
-    path: '/csv/nav/RD216.csv',
-    description: 'Daily NAV of one fund. An exact copy of data/bibit/nav/<symbol>.csv. nav_adjusted can be empty.',
-    example: `date,nav,nav_adjusted
-2000-01-05,4336.44,4336.44
-2000-01-06,4386.41,4386.41`,
-  },
-  {
-    path: '/csv/aum/RD216.csv',
-    description: 'AUM history of one fund. An exact copy of data/bibit/aum/<symbol>.csv.',
-    example: `date,aum
-2004-06-07,9993.82
-2004-07-30,12837`,
-  },
-  {
-    path: '/download/bibit.zip',
-    description: 'The Bibit data (data/bibit/) as one zip file. The other sources have their own zips: kontan.zip, makmur.zip, bareksa.zip (without daily NAV), and bareksa-nav-1.zip and up (daily NAV, split by size). See the download page for the list.',
-    example: null,
-  },
-];
----
+}`}</code></pre>
+        </details>
+      </div>
 
-<Base title="API">
-  <h1>API</h1>
-  <p>
-    A free, read-only API made of static files. No key is needed, and CORS is open
-    (<code>Access-Control-Allow-Origin: *</code>), so you can call it from a browser. The data is rebuilt every time it changes: Bibit daily, Kontan and Makmur weekly, Bareksa monthly.
-  </p>
-  <p>Replace the host below with the one you are visiting.</p>
+      <div class="section" id="csv-funds">
+        <h2 class="section-title"><code>GET /csv/funds.csv</code></h2>
+        <p>The fund index as CSV. An exact copy of <code>data/bibit/funds.csv</code>.</p>
+        <details>
+          <summary>Example response</summary>
+          <pre><code>{`symbol,name,type,investment_manager,currency,sharia,etf,index,tradeable,status,nav_first_date,nav_date,nav,aum,expense_ratio
+RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,IDR,false,true,true,1,1,2007-12-18,2026-09-30,59116.5317,7850300000000,0.0021`}</code></pre>
+        </details>
+      </div>
 
-  <pre data-origin><code>curl {ORIGIN}/api/funds/RD216.json
-curl -O {ORIGIN}/csv/nav/RD216.csv
-curl -s {ORIGIN}/api/funds.json | jq 'map(select(.tradeable)) | length'</code></pre>
-
-  <h2>Endpoints</h2>
-  <p>
-    Replace <code>RD8807</code> or <code>RD216</code> with any symbol from <a href="/api/funds.json">funds.json</a>.
-    Everything is a <code>GET</code> request. Unknown paths return 404.
-  </p>
-
-  {
-    endpoints.map((endpoint) => (
-      <section>
-        <h2><code>GET {endpoint.path}</code></h2>
-        <p>{endpoint.description}</p>
+      <div class="section" id="csv-nav">
+        <h2 class="section-title"><code>GET /csv/nav/&lt;symbol&gt;.csv</code></h2>
         <p>
-          Example: <a href={endpoint.path}>{ORIGIN}{endpoint.path}</a>
+          Daily NAV of one fund. An exact copy of <code>data/bibit/nav/&lt;symbol&gt;.csv</code>.
+          <code>nav_adjusted</code> is Bibit's dividend-adjusted NAV, or empty. Its base can change between updates, so
+          compare it only within one download.
         </p>
-        {endpoint.example && <pre data-origin><code>{endpoint.example}</code></pre>}
-      </section>
-    ))
-  }
+        <details>
+          <summary>Example response</summary>
+          <pre><code>{`date,nav,nav_adjusted
+2000-01-05,4336.44,4336.44
+2000-01-06,4386.41,4386.41`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="csv-aum">
+        <h2 class="section-title"><code>GET /csv/aum/&lt;symbol&gt;.csv</code></h2>
+        <p>AUM history of one fund. An exact copy of <code>data/bibit/aum/&lt;symbol&gt;.csv</code>.</p>
+        <details>
+          <summary>Example response</summary>
+          <pre><code>{`date,aum
+2004-06-07,9993.82
+2004-07-30,12837`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="zip">
+        <h2 class="section-title"><code>GET /download/&lt;name&gt;.zip</code></h2>
+        <p>
+          One source's data as a zip file: <code>bibit.zip</code>, <code>kontan.zip</code>, <code>makmur.zip</code>,
+          or <code>bareksa.zip</code> (without the daily NAV). Bareksa's daily NAV is split further, into
+          <code>bareksa-nav-1.zip</code> and up, because a single file here cannot be bigger than 25 MiB. See the
+          full list, with sizes, on the <a href="/download/">download page</a>.
+        </p>
+      </div>
+    </div>
+  </div>
 </Base>
 
 <script>
   // Show the real host in the examples instead of the placeholder.
-  for (const block of document.querySelectorAll('[data-origin], section a')) {
-    block.textContent = block.textContent.replaceAll('https://your-site.example', location.origin);
+  for (const node of document.querySelectorAll('[data-origin]')) {
+    node.textContent = node.textContent.replaceAll('https://your-site.example', location.origin);
   }
 </script>
+
+<style>
+  .api-toc {
+    display: none;
+  }
+
+  .api-layout {
+    margin-top: 20px;
+  }
+
+  @media (min-width: 1100px) {
+    .api-layout {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .api-toc {
+      position: sticky;
+      top: 20px;
+      display: block;
+    }
+
+    .api-toc ul {
+      margin: 6px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .api-toc li + li {
+      margin-top: 6px;
+    }
+
+    .api-toc a {
+      color: var(--ink-2);
+    }
+  }
+
+  details {
+    margin-top: 10px;
+  }
+
+  details + details {
+    margin-top: 6px;
+  }
+
+  details summary {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 13px;
+  }
+
+  details pre,
+  details p {
+    margin-top: 8px;
+  }
+</style>

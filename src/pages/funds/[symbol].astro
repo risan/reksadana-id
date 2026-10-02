@@ -1,46 +1,49 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { listDataFiles, listFundSymbols, loadBareksa, loadFundDetails, loadKontan, loadMakmur } from '../../lib/data.js';
-import { formatCompact, formatNumber, formatPercent, signClass } from '../../lib/format.js';
+import { fundPerformance, isActive, latestAum, listDataFiles, listFundSymbols, loadFund, loadFundRecord, shortManagerName } from '../../lib/data.js';
+import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from '../../lib/format.js';
+import { englishTypeName } from '../../lib/fund-types.js';
 import { REFERRALS, bibitFundUrl } from '../../lib/referrals.js';
+import { RETURN_PERIODS, SOURCE_LABELS, fundCurrency, largeMoves, pickNavHistory } from '../../lib/series.js';
 
 export function getStaticPaths() {
-  const symbolsWithNav = new Set(listDataFiles('nav').map((file) => file.slice(0, -'.csv'.length)));
-  const symbolsWithAum = new Set(listDataFiles('aum').map((file) => file.slice(0, -'.csv'.length)));
-
-  return listFundSymbols().map((symbol) => ({
-    params: { symbol },
-    props: {
-      fund: loadFundDetails(symbol),
-      kontan: loadKontan(symbol),
-      bareksa: loadBareksa(symbol),
-      makmur: loadMakmur(symbol),
-      hasNavCsv: symbolsWithNav.has(symbol),
-      hasAumCsv: symbolsWithAum.has(symbol),
-    },
-  }));
+  return listFundSymbols().map((symbol) => ({ params: { symbol } }));
 }
 
-const { fund, kontan, bareksa, makmur, hasNavCsv, hasAumCsv } = Astro.props;
 const { symbol } = Astro.params;
+const fund = loadFundRecord(symbol);
+const { kontan, bareksa, makmur } = fund;
+const hasNavCsv = listDataFiles('nav').includes(`${symbol}.csv`);
+const hasAumCsv = listDataFiles('aum').includes(`${symbol}.csv`);
 
-const RETURN_PERIODS = ['1d', '1m', '3m', 'ytd', '1y', '3y', '5y', '10y', 'all'];
-const FEE_LABELS = [
-  ['subscription', 'Subscription'],
-  ['redemption', 'Redemption'],
-  ['switch', 'Switch'],
-];
+const history = pickNavHistory(fund);
+const performance = fundPerformance(fund, history);
+const lastPoint = history.points.at(-1);
+const navValue = lastPoint?.value ?? null;
+const navDate = history.frozenSince ?? lastPoint?.date ?? null;
+const active = isActive(navDate);
+const currency = fundCurrency(fund);
+const aum = latestAum(fund);
+const moves = largeMoves(history.points).reverse();
+
+const PERIOD_LABELS = { '1d': '1D', '1m': '1M', '3m': '3M', ytd: 'YTD', '1y': '1Y', '3y': '3Y', '5y': '5Y', '10y': '10Y', all: 'All' };
+const TABLE_PERIODS = RETURN_PERIODS.filter((period) => period !== '1d');
+const ret = (period) => performance.simplereturn?.[period] ?? null;
+
+// Bibit stores a fraction; a few funds carry a raw number that cannot be a ratio, so those show as missing.
+const expenseRatio = fund.expenseratio?.percentage;
+const validExpenseRatio = typeof expenseRatio === 'number' && expenseRatio >= 0 && expenseRatio < 1 ? expenseRatio : null;
 
 function formatFee(fee) {
   if (!fee) {
-    return '-';
+    return '—';
   }
 
   if (fee.type === 'percent') {
-    return `${fee.value}%`;
+    return `${formatNumber(fee.value, 2)}%`;
   }
 
-  return `${fee.currency} ${formatNumber(fee.value)}`;
+  return `${fee.currency ?? ''} ${formatNumber(fee.value)}`.trim();
 }
 
 // Document URLs come from scraped data, so never link anything but http(s), such as a javascript: URL.
@@ -49,18 +52,64 @@ function isWebUrl(url) {
 }
 
 // Dividend dates are midnight in Jakarta (UTC+7), stored as UTC.
-function formatDividendDate(isoTimestamp) {
-  const jakartaTime = new Date(new Date(isoTimestamp).getTime() + 7 * 60 * 60 * 1000);
-
-  return jakartaTime.toISOString().slice(0, 10);
+function jakartaDate(isoTimestamp) {
+  return new Date(new Date(isoTimestamp).getTime() + 7 * 60 * 60 * 1000).toISOString().slice(0, 10);
 }
 
-const launchDate = fund.released_date ?? fund.nav?.first_date ?? '-';
-const dividends = fund.dividends ?? [];
-const factsheets = fund.documents?.factsheets ?? [];
-const prospectus = fund.documents?.prospectus ?? [];
-// Bibit lists prospectus versions oldest first.
-const latestProspectus = prospectus.at(-1);
+const ASSET_CLASSES = [
+  { key: 'equity', label: 'Equity', color: 'var(--alloc-equity)', pattern: /saham|ekuitas|equit|stock/i },
+  { key: 'bonds', label: 'Bonds', color: 'var(--alloc-bonds)', pattern: /obligasi|sukuk|utang|hutang|pendapatan tetap|fixed income|bond/i },
+  { key: 'money', label: 'Money market', color: 'var(--alloc-money)', pattern: /pasar uang|deposit|kas|cash|money|likuid|setara/i },
+  { key: 'other', label: 'Other', color: 'var(--alloc-other)', pattern: /.*/ },
+];
+
+function assetClassOf(name) {
+  return ASSET_CLASSES.find((assetClass) => assetClass.pattern.test(name));
+}
+
+// Bibit's mix uses the manager's own names; the bar groups them into four classes, the list keeps the names.
+const assets = (fund.asset ?? [])
+  .filter((asset) => asset.percentage > 0)
+  .map((asset) => ({ ...asset, assetClass: assetClassOf(asset.name) }))
+  .sort((a, b) => ASSET_CLASSES.indexOf(a.assetClass) - ASSET_CLASSES.indexOf(b.assetClass) || b.percentage - a.percentage);
+const assetTotal = assets.reduce((sum, asset) => sum + asset.percentage, 0);
+
+const BAREKSA_CLASSES = [
+  ['saham', 'equity'],
+  ['obligasi', 'bonds'],
+  ['pasar_uang', 'money'],
+  ['lainnya', 'other'],
+];
+const ALLOCATION_MONTHS = 24;
+const allocationHistory = (bareksa?.allocation ?? [])
+  .filter((row) => BAREKSA_CLASSES.some(([column]) => row[column] > 0))
+  .slice(-ALLOCATION_MONTHS);
+
+const MIX_WIDTH = 600;
+const MIX_HEIGHT = 120;
+const MIX_GAP = 2;
+const mixColumnWidth = allocationHistory.length ? (MIX_WIDTH - MIX_GAP * (allocationHistory.length - 1)) / allocationHistory.length : 0;
+const mixColumns = allocationHistory.map((row, index) => {
+  const total = BAREKSA_CLASSES.reduce((sum, [column]) => sum + (row[column] ?? 0), 0);
+  let y = MIX_HEIGHT;
+
+  const segments = BAREKSA_CLASSES.map(([column, key]) => {
+    const share = (row[column] ?? 0) / total;
+    const height = share * MIX_HEIGHT;
+
+    y -= height;
+
+    return { key, share, y, height, color: ASSET_CLASSES.find((assetClass) => assetClass.key === key).color };
+  }).filter((segment) => segment.height > 0);
+
+  return { date: row.date, x: index * (mixColumnWidth + MIX_GAP), segments };
+});
+const latestMix = mixColumns.at(-1);
+
+const holdings = fund.holding ?? [];
+const dividends = [...(fund.dividends ?? [])].sort((a, b) => b.date.localeCompare(a.date));
+const factsheets = [...(fund.documents?.factsheets ?? [])].filter((document) => isWebUrl(document.file)).sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
+const prospectus = [...(fund.documents?.prospectus ?? [])].filter((document) => isWebUrl(document.file)).reverse();
 const makmurDocuments = [
   ['Prospectus', makmur?.data.prospectus],
   ['Factsheet', makmur?.data.factsheet],
@@ -70,328 +119,743 @@ const buyLinks = [
   fund.tradeable && { ...REFERRALS.bibit, url: bibitFundUrl(symbol) },
   makmur && { ...REFERRALS.makmur, url: makmur.url },
 ].filter(Boolean);
-const holdings = fund.holding ?? [];
-const assets = fund.asset ?? [];
-const ALLOCATION_HISTORY_ROWS = 12;
-const allocationHistory = (bareksa?.allocation ?? []).slice(-ALLOCATION_HISTORY_ROWS).reverse();
-const hasBareksaMonthlyData = bareksa && bareksa.aum.length > 0 && bareksa.units.length > 0;
+
+const typeEnglish = englishTypeName(fund.type);
+// The record's nav is the history, so Bibit's first NAV date comes from its fund file.
+const launchDate = fund.released_date ?? loadFund(symbol)?.nav?.first_date ?? null;
+const manager = shortManagerName(fund.investment_manager?.name);
+const riskProfile = ['Low', 'Moderate', 'High'].includes(fund.riskprofile) ? fund.riskprofile : null;
+const returnsNote = performance.source
+  ? `Change in NAV, computed from the ${SOURCE_LABELS[history.primary]} history.${
+      dividends.length > 0 ? ' This fund pays dividends, which these figures leave out, so its total return is higher.' : ''
+    }`
+  : null;
 
 const details = [
-  ['Type', fund.type],
-  ['Investment manager', fund.investment_manager?.name],
+  ['Type', fund.type ? `${fund.type}${typeEnglish ? ` (${typeEnglish})` : ''}` : null],
+  ['Manager', fund.investment_manager?.name],
   ['Custodian bank', fund.custodian_bank?.name],
-  ['Currency', fund.currency_exchange?.currency],
-  ['Sharia', fund.sharia ? 'Yes' : 'No'],
-  ['Buyable in Bibit app', fund.tradeable ? 'Yes' : 'No'],
-  ['Risk profile', fund.riskprofile],
-  ['Launch date', launchDate],
-  ['Latest NAV', fund.nav ? `${formatNumber(fund.nav.value, 4)} (${fund.nav.date})` : null],
-  ['AUM', fund.aum ? `${formatCompact(fund.aum.value)} (${fund.aum.date})` : null],
-  ['Expense ratio', fund.expenseratio?.percentage == null ? null : formatPercent(fund.expenseratio.percentage)],
-  ['Minimum buy', fund.minbuy ? formatNumber(fund.minbuy) : null],
-];
----
+  ['Currency', currency],
+  ['Launched', launchDate ? formatDate(launchDate) : null],
+  ['Risk profile', riskProfile],
+  ['Minimum buy', fund.minbuy ? `${currency} ${formatNumber(fund.minbuy)}` : null],
+  ['Expense ratio', validExpenseRatio === null ? null : formatPercent(validExpenseRatio)],
+  ['Subscription fee', fund.fee ? formatFee(fund.fee.subscription) : null],
+  ['Redemption fee', fund.fee ? formatFee(fund.fee.redemption) : null],
+  ['Switch fee', fund.fee ? formatFee(fund.fee.switch) : null],
+].filter(([, value]) => value !== null && value !== undefined && value !== '');
 
-<Base title={`${fund.name} (${symbol})`} description={`NAV history and data for ${fund.name}.`}>
-  <p><a href="/">&larr; All funds</a></p>
-  <h1>{fund.name}</h1>
-  <p class="muted">{symbol}</p>
+function threeYearSub() {
+  const threeYearsPerYear = performance.cagr?.['3y'] ?? null;
 
-  {
-    buyLinks.length > 0 && (
-      <>
-        <h2>Where to buy</h2>
-        <ul class="buy-list">
-          {buyLinks.map((link) => (
-            <li>
-              <a class="button" href={link.url} target="_blank" rel="sponsored noopener">Buy on {link.name}</a>
-              <span>
-                New user? Use referral code <code>{link.code}</code>
-              </span>
-              <button class="button" type="button" data-copy={link.code} hidden>Copy code</button>
-            </li>
-          ))}
-        </ul>
-      </>
-    )
+  if (threeYearsPerYear !== null) {
+    return `3Y: ${formatChange(threeYearsPerYear)} a year`;
   }
 
+  return ret('ytd') === null ? '' : `YTD: ${formatChange(ret('ytd'))}`;
+}
+
+const figures = [
   {
-    !fund.tradeable && (
-      <p class="note">
-        Bibit gives no NAV history for funds you cannot buy in its app. History for this fund starts on 2026-10-01,
-        when this repository began collecting it (see the README).
-        {kontan && ' The chart also includes daily NAV from Kontan for the last 12 months, and it grows with every update.'}
-        {bareksa && bareksa.nav.length > 0 && ' It also includes the daily NAV history from Bareksa.'}
-        {hasBareksaMonthlyData && ' Bareksa also gives monthly AUM and units. When no source has daily NAV, the chart shows a monthly NAV computed as AUM divided by units.'}
+    label: active ? 'NAV per unit' : 'Last NAV',
+    value: navValue === null ? '—' : formatNav(navValue),
+    unit: currency === 'USD' ? 'USD' : 'IDR',
+    sub: navDate ? formatDate(navDate) : 'No NAV yet',
+    change: active ? ret('1d') : null,
+  },
+  { label: '1-year return', value: formatChange(ret('1y')), className: changeClass(ret('1y')), sub: threeYearSub() },
+  { label: 'Worst fall, 1 year', value: formatPercent(performance.maxdrawdown?.['1y'] ?? null), sub: 'Peak to bottom' },
+  { label: 'Fund size', value: formatMoney(aum?.value ?? null, currency), sub: aum ? formatMonth(aum.date) : '' },
+  { label: 'Expense ratio', value: validExpenseRatio === null ? '—' : formatPercent(validExpenseRatio), sub: 'Yearly cost' },
+].filter((figure, index) => index === 0 || figure.value !== '—');
+
+const sources = [
+  { name: 'Bibit', url: 'https://app.bibit.id/', what: 'fund data, NAV, AUM' },
+  kontan && { name: 'Kontan', url: `https://pusatdata.kontan.co.id/reksadana/produk/${kontan.id}`, what: `daily NAV, last 12 months` },
+  bareksa && { name: 'Bareksa', url: `https://www.bareksa.com/id/data/reksadana/${bareksa.id}/`, what: 'daily NAV, monthly AUM, units, asset mix' },
+  makmur && { name: 'Makmur', url: makmur.url, what: 'documents' },
+].filter(Boolean);
+---
+
+<Base title={`${fund.name} (${symbol})`} description={`NAV history, returns, fund size, and documents for ${fund.name}, a reksa dana managed by ${manager ?? 'an Indonesian investment manager'}.`} section="funds">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <a href="/">Funds</a>
+    {fund.type && <><span aria-hidden="true">/</span><a href={`/?type=${encodeURIComponent(fund.type)}`}>{fund.type}</a></>}
+    <span aria-hidden="true">/</span><span class="mono">{symbol}</span>
+  </nav>
+
+  <header class="fund-head">
+    <h1 class="page-title">{fund.name}</h1>
+    <p class="fund-meta">
+      {manager && <span>{manager}</span>}
+      {fund.type && <span>{fund.type}{typeEnglish && <span class="muted"> · {typeEnglish}</span>}</span>}
+      {fund.sharia ? <span class="tag">Syariah</span> : null}
+      {fund.etf ? <span class="tag">ETF</span> : null}
+      {fund.index ? <span class="tag">Index</span> : null}
+      {currency === 'USD' && <span class="tag">USD</span>}
+      {dividends.length > 0 && <span class="tag">Pays dividends</span>}
+      {riskProfile && <span class="tag">{riskProfile} risk</span>}
+    </p>
+  </header>
+
+  {
+    !active && (
+      <p class="notice">
+        <span>
+          <strong>Inactive.</strong>{' '}
+          {history.frozenSince
+            ? `The NAV has not changed since ${formatDate(navDate)}, although some sources still list it.`
+            : navDate
+              ? `No NAV since ${formatDate(navDate)}.`
+              : 'No NAV reported.'}{' '}
+          The fund may be closed, merged, or no longer reported.
+        </span>
       </p>
     )
   }
 
-  <div class="table-wrap">
-    <table>
-      <tbody>
-        {
-          details.map(([label, value]) => (
-            <tr>
-              <th>{label}</th>
-              <td>{value ?? '-'}</td>
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
-  </div>
-
-  <p class="muted">
-    Source: <a href="https://app.bibit.id/">Bibit</a>
-    {
-      kontan && (
-        <>
-          {' and '}
-          <a href={`https://pusatdata.kontan.co.id/reksadana/produk/${kontan.id}`}>Kontan</a>
-          {' (NAV line "NAV (Kontan)")'}
-        </>
-      )
-    }
-    {
-      bareksa && (
-        <>
-          {kontan ? ', ' : ' and '}
-          <a href={`https://www.bareksa.com/id/data/reksadana/${bareksa.id}/`}>Bareksa</a>
-          {' (NAV line "NAV (Bareksa)", monthly AUM, units, and asset allocation)'}
-        </>
-      )
-    }
-    {
-      makmur && (
-        <>
-          {kontan || bareksa ? ', ' : ' and '}
-          <a href={makmur.url}>Makmur</a>
-          {' (documents)'}
-        </>
-      )
-    }
-  </p>
-
-  <h2>Downloads</h2>
-  <div class="button-row">
-    <a class="button" href={`/api/funds/${symbol}.json`} download>Fund JSON</a>
-    {hasNavCsv && <a class="button" href={`/csv/nav/${symbol}.csv`} download>NAV CSV</a>}
-    {hasAumCsv && <a class="button" href={`/csv/aum/${symbol}.csv`} download>AUM CSV</a>}
-    {isWebUrl(latestProspectus?.file) && <a class="button" href={latestProspectus.file}>Latest prospectus</a>}
-  </div>
-
-  <h2>NAV</h2>
-  <div class="button-row" data-range-buttons>
-    <button class="button" data-range="1M">1M</button>
-    <button class="button" data-range="6M">6M</button>
-    <button class="button" data-range="YTD">YTD</button>
-    <button class="button" data-range="1Y">1Y</button>
-    <button class="button" data-range="3Y">3Y</button>
-    <button class="button" data-range="5Y">5Y</button>
-    <button class="button" data-range="ALL" aria-pressed="true">ALL</button>
-  </div>
-  <div id="nav-chart" data-symbol={symbol}></div>
-  <p id="nav-empty" class="muted" hidden>Not enough NAV history to draw a chart.</p>
-
-  <h2>AUM (IDR)</h2>
-  <div id="aum-chart"></div>
-  <p id="aum-empty" class="muted" hidden>Not enough AUM history to draw a chart.</p>
-
-  <h2>Returns</h2>
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Period</th>
-          <th class="numeric">Simple return</th>
-          <th class="numeric">CAGR</th>
-          <th class="numeric">Max drawdown</th>
-        </tr>
-      </thead>
-      <tbody>
-        {
-          RETURN_PERIODS.map((period) => (
-            <tr>
-              <td>{period.toUpperCase()}</td>
-              <td class={`numeric ${signClass(fund.simplereturn?.[period])}`}>{formatPercent(fund.simplereturn?.[period])}</td>
-              <td class={`numeric ${signClass(fund.cagr?.[period])}`}>{formatPercent(fund.cagr?.[period])}</td>
-              <td class={`numeric ${signClass(fund.maxdrawdown?.[period])}`}>{formatPercent(fund.maxdrawdown?.[period])}</td>
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
-  </div>
-
-  <h2>Fees</h2>
-  <div class="table-wrap">
-    <table>
-      <tbody>
-        {
-          FEE_LABELS.map(([key, label]) => (
-            <tr>
-              <th>{label}</th>
-              <td>{formatFee(fund.fee?.[key])}</td>
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
-  </div>
+  <dl class="figures">
+    {figures.map((figure) => (
+      <div>
+        <dt>{figure.label}</dt>
+        <dd class={`figure-value ${figure.className ?? ''}`}>{figure.value}{figure.unit && figure.value !== '—' && <span class="unit">{figure.unit}</span>}</dd>
+        <dd class="figure-sub">
+          {figure.sub}
+          {figure.change !== null && figure.change !== undefined && <span class={changeClass(figure.change)}> · {formatChange(figure.change)} 1D</span>}
+        </dd>
+      </div>
+    ))}
+  </dl>
 
   {
-    assets.length > 0 && (
-      <>
-        <h2>Asset allocation</h2>
-        <div class="table-wrap">
-          <table>
-            <tbody>
-              {assets.map((asset) => (
-                <tr>
-                  <td>{asset.name}</td>
-                  <td class="numeric">{asset.percentage}%</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </>
+    moves.length > 0 && (
+      <p class="notice moves">
+        <span>
+          <strong>Large one-day {moves.length === 1 ? 'move' : 'moves'} in the NAV:</strong>{' '}
+          {moves.slice(0, 3).map((move, index) => (
+            <>
+              {index > 0 && '; '}
+              {formatChange(move.change, 1)} on {formatDate(move.date)}
+            </>
+          ))}
+          {moves.length > 3 && `; and ${moves.length - 3} more`}. Returns that span {moves.length === 1 ? 'it' : 'them'} include
+          the move. It can be a real event, such as a default, or an error in the source data.
+        </span>
+      </p>
     )
   }
 
-  {
-    allocationHistory.length > 0 && (
-      <>
-        <h2>Asset allocation history</h2>
-        <p class="muted">
-          From Bareksa, month by month, as a share of the fund's assets. The latest {ALLOCATION_HISTORY_ROWS} entries are
-          shown; the <a href={`/api/funds/${symbol}.json`}>fund JSON</a> has the full history.
-        </p>
-        <div class="table-wrap">
-          <table>
+  <div class="fund-grid">
+    <div class="fund-main">
+      <section class="section">
+        <h2 class="section-title">
+          Price (NAV)
+          <span class="aside" id="range-readout"></span>
+        </h2>
+        <div class="chart-bar">
+          <div class="seg" role="group" aria-label="Time range" id="range-buttons">
+            {['1M', '3M', '6M', 'YTD', '1Y', '3Y', '5Y', 'All'].map((range) => (
+              <button type="button" data-range={range} aria-pressed={range === '1Y' ? 'true' : 'false'}>{range}</button>
+            ))}
+          </div>
+          {dividends.length > 0 && <span class="chart-legend">NAV only: this fund also pays dividends.</span>}
+        </div>
+        <div class="chart" id="nav-chart" data-symbol={symbol}></div>
+        <p class="chart-empty" id="nav-empty" hidden>Not enough NAV history to draw a chart.</p>
+
+        <h3 class="chart-subtitle">Fund size <span class="muted">({currency}, monthly)</span></h3>
+        <div class="chart" id="aum-chart"></div>
+        <p class="chart-empty" id="aum-empty" hidden>No fund size history.</p>
+      </section>
+
+      <section class="section" hidden={Object.keys(performance.simplereturn).length === 0}>
+        <h2 class="section-title">
+          Returns
+          {navDate && <span class="aside">to {formatDate(navDate)}</span>}
+        </h2>
+        <div class="table-scroll">
+          <table class="tbl returns-table">
             <thead>
               <tr>
-                <th>Date</th>
-                <th class="numeric">Equity</th>
-                <th class="numeric">Bonds</th>
-                <th class="numeric">Money market</th>
-                <th class="numeric">Other</th>
+                <th></th>
+                {TABLE_PERIODS.map((period) => <th class="num">{PERIOD_LABELS[period]}</th>)}
               </tr>
             </thead>
             <tbody>
-              {allocationHistory.map((row) => (
-                <tr>
-                  <td>{row.date}</td>
-                  <td class="numeric">{formatNumber(row.saham)}%</td>
-                  <td class="numeric">{formatNumber(row.obligasi)}%</td>
-                  <td class="numeric">{formatNumber(row.pasar_uang)}%</td>
-                  <td class="numeric">{formatNumber(row.lainnya)}%</td>
-                </tr>
-              ))}
+              <tr>
+                <th scope="row">Return</th>
+                {TABLE_PERIODS.map((period) => <td class={`num ${changeClass(ret(period))}`}>{formatChange(ret(period))}</td>)}
+              </tr>
+              <tr>
+                <th scope="row" title="Compound annual growth rate">Per year</th>
+                {TABLE_PERIODS.map((period) => {
+                  const value = performance.cagr?.[period] ?? null;
+
+                  return <td class={`num ${changeClass(value)}`}>{formatChange(value)}</td>;
+                })}
+              </tr>
+              <tr>
+                <th scope="row" title="Largest fall from a peak within the period">Worst fall</th>
+                {TABLE_PERIODS.map((period) => {
+                  const value = performance.maxdrawdown?.[period] ?? null;
+
+                  return <td class="num">{formatPercent(value)}</td>;
+                })}
+              </tr>
             </tbody>
           </table>
         </div>
-      </>
-    )
-  }
+        {returnsNote && <p class="muted small table-note">{returnsNote} "Per year" is shown for periods of a year or more.</p>}
+      </section>
 
-  {
-    holdings.length > 0 && (
-      <>
-        <h2>Top holdings</h2>
-        <p class="muted">As of {holdings[0].date}</p>
-        <div class="table-wrap">
-          <table>
-            <tbody>
+      {
+        (assets.length > 0 || latestMix) && (
+          <section class="section">
+            <h2 class="section-title">Asset mix</h2>
+            {assets.length > 0 && (
+              <>
+                <div class="mix-bar" role="img" aria-label={assets.map((asset) => `${asset.name} ${asset.percentage}%`).join(', ')}>
+                  {assets.map((asset) => (
+                    <span style={`flex-basis: ${(asset.percentage / assetTotal) * 100}%; background: ${asset.assetClass.color}`} title={`${asset.name}: ${asset.percentage}%`} />
+                  ))}
+                </div>
+                <ul class="mix-legend">
+                  {assets.map((asset) => (
+                    <li>
+                      <i class="key-box" style={`background: ${asset.assetClass.color}`}></i>
+                      {asset.name}
+                      <span class="num">{formatNumber(asset.percentage, 2)}%</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+            {latestMix && (
+              <figure class="mix-history">
+                <figcaption>
+                  <span>Mix over the last {mixColumns.length} months <span class="muted">(Bareksa)</span></span>
+                  <span class="mix-history-key">
+                    {ASSET_CLASSES.map((assetClass) => (
+                      <span><i class="key-box" style={`background: ${assetClass.color}`}></i> {assetClass.label}</span>
+                    ))}
+                  </span>
+                </figcaption>
+                <svg viewBox={`0 0 ${MIX_WIDTH} ${MIX_HEIGHT}`} preserveAspectRatio="none" role="img" aria-label="Monthly asset mix from Bareksa">
+                  {mixColumns.map((column) => (
+                    <g>
+                      {column.segments.map((segment, index) => (
+                        <rect x={column.x} y={segment.y + (index > 0 ? MIX_GAP / 2 : 0)} width={mixColumnWidth} height={Math.max(segment.height - (index > 0 ? MIX_GAP / 2 : 0) - (index < column.segments.length - 1 ? MIX_GAP / 2 : 0), 0.5)} fill={segment.color}>
+                          <title>{`${formatMonth(column.date)}: ${ASSET_CLASSES.find((assetClass) => assetClass.key === segment.key).label} ${formatNumber(segment.share * 100, 1)}%`}</title>
+                        </rect>
+                      ))}
+                    </g>
+                  ))}
+                </svg>
+                <div class="mix-axis">
+                  <span>{formatMonth(mixColumns[0].date)}</span>
+                  <span>{formatMonth(latestMix.date)}</span>
+                </div>
+              </figure>
+            )}
+          </section>
+        )
+      }
+
+      {
+        holdings.length > 0 && (
+          <section class="section">
+            <h2 class="section-title">
+              Top holdings
+              <span class="aside">{formatDate(holdings[0].date)}, in no order</span>
+            </h2>
+            <ol class="holdings">
               {holdings.map((holding) => (
-                <tr>
-                  <td>{holding.name}</td>
-                  <td class="muted">{holding.symbol}</td>
-                </tr>
+                <li>
+                  <span>{holding.name}</span>
+                  {holding.symbol && holding.symbol !== holding.name && <span class="mono muted">{holding.symbol}</span>}
+                </li>
               ))}
-            </tbody>
-          </table>
-        </div>
-      </>
-    )
-  }
+            </ol>
+          </section>
+        )
+      }
 
-  {
-    dividends.length > 0 && (
-      <>
-        <h2>Dividends</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th class="numeric">Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              {dividends.map((dividend) => (
-                <tr>
-                  <td>{formatDividendDate(dividend.date)}</td>
-                  <td class="numeric">{formatNumber(dividend.value, 4)}</td>
-                </tr>
+      {
+        dividends.length > 0 && (
+          <section class="section">
+            <h2 class="section-title">
+              Dividends
+              <span class="aside">{dividends.length} payouts, per unit</span>
+            </h2>
+            <div class="table-scroll">
+              <table class="tbl dividends-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th class="num">Per unit ({currency})</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {dividends.slice(0, 12).map((dividend) => (
+                    <tr>
+                      <td>{formatDate(jakartaDate(dividend.date))}</td>
+                      <td class="num">{formatNumber(dividend.value, 4)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {dividends.length > 12 && <p class="muted small table-note">The latest 12 of {dividends.length}. The <a href={`/api/funds/${symbol}.json`}>fund JSON</a> has all of them.</p>}
+          </section>
+        )
+      }
+
+      {
+        fund.profile && (
+          <section class="section">
+            <h2 class="section-title">
+              Profile
+              <span class="aside">From the manager, in Indonesian</span>
+            </h2>
+            <details class="profile">
+              <summary>{fund.profile.split('\n')[0].slice(0, 220)}{fund.profile.length > 220 ? '…' : ''}</summary>
+              <p>{fund.profile}</p>
+            </details>
+          </section>
+        )
+      }
+    </div>
+
+    <aside class="fund-side">
+      {
+        buyLinks.length > 0 && (
+          <section class="side-block buy">
+            <h2 class="section-title">Buy this fund</h2>
+            {buyLinks.map((link) => (
+              <div class="buy-row">
+                <a class="btn btn-ink" href={link.url} target="_blank" rel="sponsored noopener">Open in {link.name} &nearr;</a>
+                <span class="small muted">
+                  Referral code <code>{link.code}</code>
+                  <button class="copy" type="button" data-copy={link.code} hidden>Copy</button>
+                </span>
+              </div>
+            ))}
+            <p class="small muted">New users type the code in the app. It helps keep this site running.</p>
+          </section>
+        )
+      }
+
+      <section class="side-block">
+        <h2 class="section-title">Details</h2>
+        <dl class="kv">
+          {details.map(([label, value]) => (
+            <>
+              <dt>{label}</dt>
+              <dd>{value}</dd>
+            </>
+          ))}
+        </dl>
+      </section>
+
+      {
+        (prospectus.length > 0 || factsheets.length > 0 || makmurDocuments.length > 0) && (
+          <section class="side-block">
+            <h2 class="section-title">Documents</h2>
+            <ul class="doc-list">
+              {prospectus.slice(0, 1).map((document) => (
+                <li><a href={document.file}>Prospectus</a> <span class="muted small">latest</span></li>
               ))}
-            </tbody>
-          </table>
-        </div>
-      </>
-    )
-  }
+              {factsheets.slice(0, 3).map((document) => (
+                <li><a href={document.file}>Factsheet</a> <span class="muted small">{document.date ? formatMonth(document.date) : document.name}</span></li>
+              ))}
+              {makmurDocuments.map(([label, url]) => (
+                <li><a href={url}>{label}</a> <span class="muted small">via Makmur</span></li>
+              ))}
+            </ul>
+            {(factsheets.length > 3 || prospectus.length > 1) && (
+              <details class="doc-more">
+                <summary>{factsheets.length - Math.min(3, factsheets.length) + Math.max(prospectus.length - 1, 0)} older documents</summary>
+                <ul class="doc-list">
+                  {prospectus.slice(1).map((document) => (
+                    <li><a href={document.file}>Prospectus</a> <span class="muted small">{document.name}</span></li>
+                  ))}
+                  {factsheets.slice(3).map((document) => (
+                    <li><a href={document.file}>Factsheet</a> <span class="muted small">{document.date ? formatMonth(document.date) : document.name}</span></li>
+                  ))}
+                </ul>
+              </details>
+            )}
+          </section>
+        )
+      }
 
-  {
-    (factsheets.length > 0 || prospectus.length > 0 || makmurDocuments.length > 0) && (
-      <>
-        <h2>Documents</h2>
-        <ul>
-          {prospectus.map((document) => (
-            <li>{isWebUrl(document.file) ? <a href={document.file}>Prospectus: {document.name}</a> : `Prospectus: ${document.name}`}</li>
-          ))}
-          {factsheets.map((document) => (
-            <li>
-              {isWebUrl(document.file) ? <a href={document.file}>Factsheet: {document.name}</a> : `Factsheet: ${document.name}`}
-              {document.date && <span class="muted"> ({document.date})</span>}
-            </li>
-          ))}
-          {makmurDocuments.map(([label, url]) => (
-            <li>
-              <a href={url}>{label} (Makmur)</a>
-            </li>
+      {
+        switchables.length > 0 && (
+          <section class="side-block">
+            <h2 class="section-title">Switch to <span class="aside">in Bibit</span></h2>
+            <ul class="doc-list">
+              {switchables.map((target) => (
+                <li><a href={`/funds/${target.symbol}/`}>{target.name}</a></li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      <section class="side-block">
+        <h2 class="section-title">Data</h2>
+        <div class="downloads">
+          <a class="btn" href={`/api/funds/${symbol}.json`} download>JSON</a>
+          {hasNavCsv && <a class="btn" href={`/csv/nav/${symbol}.csv`} download>NAV CSV</a>}
+          {hasAumCsv && <a class="btn" href={`/csv/aum/${symbol}.csv`} download>AUM CSV</a>}
+        </div>
+        <ul class="source-list small">
+          {sources.map((source) => (
+            <li><a href={source.url}>{source.name}</a> <span class="muted">{source.what}</span></li>
           ))}
         </ul>
-      </>
-    )
-  }
-
-  {
-    switchables.length > 0 && (
-      <>
-        <h2>Switch to</h2>
-        <ul>
-          {switchables.map((target) => (
-            <li>
-              <a href={`/funds/${target.symbol}/`}>{target.name}</a> <span class="muted">{target.symbol}</span>
-            </li>
-          ))}
-        </ul>
-      </>
-    )
-  }
-
-  {
-    fund.profile && (
-      <>
-        <h2>Profile</h2>
-        <p style="white-space: pre-line">{fund.profile}</p>
-      </>
-    )
-  }
+        {
+          history.used.length > 0 && (
+            <p class="small muted">
+              Chart:{' '}
+              {history.used.map((part, index) => (
+                <>
+                  {index > 0 && ', then '}
+                  {SOURCE_LABELS[part.source]} from {formatDate(part.from)}
+                </>
+              ))}
+              .{history.droppedSpikes > 0 && ` ${history.droppedSpikes} one-day ${history.droppedSpikes === 1 ? 'spike' : 'spikes'} that reversed the next day ${history.droppedSpikes === 1 ? 'is' : 'are'} left out as source errors.`}
+            </p>
+          )
+        }
+      </section>
+    </aside>
+  </div>
 </Base>
+
+<style is:global>
+  .crumbs {
+    display: flex;
+    gap: 6px;
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+
+  .crumbs a {
+    color: var(--ink-2);
+  }
+
+  .fund-head {
+    margin: 6px 0 14px;
+  }
+
+  .fund-head .page-title {
+    max-width: 30ch;
+  }
+
+  .fund-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;
+    margin-top: 8px;
+    color: var(--ink-2);
+  }
+
+  .fund-meta .tag {
+    margin-right: -6px;
+  }
+
+  .notice + .figures,
+  .fund-head + .notice {
+    margin-top: 14px;
+  }
+
+  .figures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: 14px 0 0 -13px;
+    border-top: 2px solid var(--ink);
+    clip-path: inset(0 0 0 13px);
+  }
+
+  /* Each cell draws its own left rule; the grid sits 13px left and clips it, so the first column lines up. */
+  .figures > div {
+    padding: 9px 12px 10px;
+    border-bottom: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+
+  .figures dt {
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .figures dd {
+    margin: 0;
+  }
+
+  .figure-value {
+    margin-top: 2px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .figure-value .unit {
+    margin-left: 4px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+
+  .figure-sub {
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 12px;
+  }
+
+  .fund-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 0 36px;
+  }
+
+  .chart-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+    margin-bottom: 8px;
+  }
+
+  .chart-legend {
+    display: flex;
+    gap: 14px;
+    color: var(--ink-2);
+    font-size: 12.5px;
+  }
+
+  #range-readout {
+    color: var(--ink-2);
+  }
+
+  #range-readout b {
+    font-weight: 650;
+  }
+
+  .chart-subtitle {
+    margin: 14px 0 4px;
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+
+  .notice.moves {
+    margin-top: 12px;
+  }
+
+  .returns-table td,
+  .returns-table th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .returns-table tbody th {
+    width: 1%;
+  }
+
+  .table-note {
+    margin-top: 6px;
+  }
+
+  .mix-bar {
+    display: flex;
+    gap: 2px;
+    height: 14px;
+  }
+
+  .mix-bar span {
+    min-width: 2px;
+  }
+
+  .mix-legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0 24px;
+    margin: 8px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+  }
+
+  .mix-legend li {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .mix-legend .num {
+    margin-left: auto;
+  }
+
+  .mix-history {
+    margin: 18px 0 0;
+  }
+
+  .mix-history figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4px 16px;
+    margin-bottom: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+  }
+
+  .mix-history-key {
+    display: flex;
+    gap: 12px;
+    color: var(--ink-2);
+    font-weight: 400;
+  }
+
+  .mix-history svg {
+    display: block;
+    width: 100%;
+    height: 120px;
+  }
+
+  .mix-history rect:hover {
+    opacity: 0.8;
+  }
+
+  .mix-axis {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 11.5px;
+  }
+
+  .holdings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13px;
+  }
+
+  .holdings li {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .dividends-table {
+    max-width: 360px;
+  }
+
+  .profile summary {
+    color: var(--ink-2);
+    cursor: pointer;
+  }
+
+  .profile p {
+    max-width: 72ch;
+    margin-top: 8px;
+    color: var(--ink-2);
+    font-size: 13.5px;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+
+  .side-block {
+    margin-top: 28px;
+  }
+
+  .buy-row {
+    display: grid;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  .buy-row .btn {
+    justify-content: center;
+  }
+
+  .copy {
+    margin-left: 4px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--accent);
+    font: inherit;
+    cursor: pointer;
+  }
+
+  .doc-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 13.5px;
+  }
+
+  .doc-list li {
+    padding: 4px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .doc-more {
+    margin-top: 6px;
+    font-size: 12.5px;
+  }
+
+  .doc-more summary {
+    color: var(--muted);
+    cursor: pointer;
+  }
+
+  .downloads {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .source-list {
+    margin: 10px 0 6px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .source-list li {
+    padding: 2px 0;
+  }
+
+  @media (max-width: 1000px) {
+    .fund-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  @media (max-width: 560px) {
+    .figures {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .figure-value {
+      font-size: 19px;
+    }
+  }
+</style>
 
 <script>
   // Without JavaScript the code is still shown as text, so the copy buttons stay hidden.
@@ -402,162 +866,14 @@ const details = [
       await navigator.clipboard.writeText(button.dataset.copy);
       button.textContent = 'Copied';
       setTimeout(() => {
-        button.textContent = 'Copy code';
-      }, 2000);
+        button.textContent = 'Copy';
+      }, 1500);
     });
   }
 </script>
 
 <script>
-  import uPlot from 'uplot';
-  import 'uplot/dist/uPlot.min.css';
-  import { formatCompact, formatNumber } from '../../lib/format.js';
+  import { mountFundCharts } from '../../lib/fund-charts.js';
 
-  const SECONDS_PER_DAY = 24 * 60 * 60;
-  const RANGE_DAYS = { '1M': 31, '6M': 183, '1Y': 366, '3Y': 1096, '5Y': 1827 };
-
-  const navContainer = document.getElementById('nav-chart');
-  const aumContainer = document.getElementById('aum-chart');
-  const rangeButtons = document.querySelectorAll('[data-range]');
-
-  function cssColor(name) {
-    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-  }
-
-  function toSeconds(date) {
-    return Date.parse(`${date}T00:00:00Z`) / 1000;
-  }
-
-  function createChart(container, emptyMessage, rows, series) {
-    if (rows.length < 2) {
-      emptyMessage.hidden = false;
-
-      return null;
-    }
-
-    const axisStyle = {
-      stroke: cssColor('--muted'),
-      grid: { stroke: cssColor('--border'), width: 1 },
-      ticks: { stroke: cssColor('--border'), width: 1 },
-    };
-
-    const chart = new uPlot(
-      {
-        width: container.clientWidth,
-        height: 320,
-        // Sources report on different dates, so draw each line across the dates where it has no value.
-        series: [{}, ...series.map((line) => ({ width: 2, spanGaps: true, ...line }))],
-        axes: [axisStyle, { ...axisStyle, size: 70, values: (_, ticks) => ticks.map((tick) => formatCompact(tick)) }],
-        scales: { x: { time: true } },
-        // Dates are calendar days stored as UTC midnight; show them as-is in every timezone.
-        tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),
-      },
-      [rows.map((row) => toSeconds(row.date)), ...series.map((line) => rows.map((row) => row[line.key] ?? null))],
-      container,
-    );
-
-    new ResizeObserver(() => {
-      chart.setSize({ width: container.clientWidth, height: 320 });
-    }).observe(container);
-
-    return chart;
-  }
-
-  function rangeStart(range, lastSeconds) {
-    if (range === 'ALL') {
-      return null;
-    }
-
-    if (range === 'YTD') {
-      return Date.UTC(new Date(lastSeconds * 1000).getUTCFullYear(), 0, 1) / 1000;
-    }
-
-    return lastSeconds - RANGE_DAYS[range] * SECONDS_PER_DAY;
-  }
-
-  // Sources report on different dates. Chart every date, and leave a source empty where it has no value.
-  function mergeNavRows(sources) {
-    const rowsByDate = new Map();
-
-    for (const { key, points } of sources) {
-      for (const { date, value } of points) {
-        const merged = rowsByDate.get(date) ?? { date };
-
-        merged[key] = value;
-        rowsByDate.set(date, merged);
-      }
-    }
-
-    return [...rowsByDate.values()].sort((a, b) => a.date.localeCompare(b.date));
-  }
-
-  // Bibit lists a fund you cannot buy with one NAV per update. Only its chart gives a daily history, and only that has nav_adjusted.
-  function hasDailyNav(fund) {
-    return fund.nav.some((row) => row.nav_adjusted !== null) || (fund.kontan?.nav.length ?? 0) > 1 || (fund.bareksa?.nav.length ?? 0) > 1;
-  }
-
-  // Bareksa reports a USD fund's AUM in both currencies; divide the one that matches the fund's NAV.
-  function computeMonthlyNav(fund) {
-    const unitsByDate = new Map(fund.bareksa.units.map((row) => [row.date, row.units]));
-    const aumKey = fund.currency_exchange?.currency === 'USD' ? 'aum_usd' : 'aum_idr';
-
-    return fund.bareksa.aum
-      .filter((row) => row[aumKey] > 0 && unitsByDate.get(row.date) > 0)
-      .map((row) => ({ date: row.date, value: row[aumKey] / unitsByDate.get(row.date) }));
-  }
-
-  const response = await fetch(`/api/funds/${navContainer.dataset.symbol}.json`);
-  const fund = await response.json();
-  const formatNav = (_, value) => formatNumber(value, 4);
-
-  const navSources = [
-    { key: 'nav', label: 'NAV', stroke: cssColor('--accent'), points: fund.nav.map((row) => ({ date: row.date, value: row.nav })) },
-    { key: 'nav_adjusted', label: 'NAV adjusted', stroke: cssColor('--positive'), points: fund.nav.map((row) => ({ date: row.date, value: row.nav_adjusted })) },
-  ];
-
-  if (fund.kontan) {
-    navSources.push({ key: 'kontan_nav', label: 'NAV (Kontan)', stroke: cssColor('--kontan'), dash: [6, 4], points: fund.kontan.nav.map((row) => ({ date: row.date, value: row.nav })) });
-  }
-
-  if (fund.bareksa) {
-    navSources.push({ key: 'bareksa_nav', label: 'NAV (Bareksa)', stroke: cssColor('--bareksa'), dash: [2, 3], points: fund.bareksa.nav.map((row) => ({ date: row.date, value: row.nav })) });
-  }
-
-  if (fund.bareksa && !hasDailyNav(fund)) {
-    navSources.push({
-      key: 'bareksa_monthly_nav',
-      label: 'Monthly NAV (Bareksa AUM ÷ units)',
-      stroke: cssColor('--bareksa'),
-      points: computeMonthlyNav(fund),
-    });
-  }
-
-  // A source without any value would only add an empty line to the legend.
-  const drawnSources = navSources.filter((source) => source.points.some((point) => point.value !== null));
-  const navSeries = drawnSources.map(({ key, label, stroke, dash }) => ({ key, label, stroke, dash, value: formatNav }));
-  const navChart = createChart(navContainer, document.getElementById('nav-empty'), mergeNavRows(drawnSources), navSeries);
-
-  createChart(aumContainer, document.getElementById('aum-empty'), fund.aum, [
-    { key: 'aum', label: 'AUM', stroke: cssColor('--accent'), value: (_, v) => formatNumber(v, 0) },
-  ]);
-
-  for (const button of rangeButtons) {
-    if (!navChart) {
-      button.disabled = true;
-
-      continue;
-    }
-
-    button.addEventListener('click', () => {
-      const dates = navChart.data[0];
-      const lastSeconds = dates[dates.length - 1];
-      const start = rangeStart(button.dataset.range, lastSeconds);
-
-      navChart.setScale('x', { min: start ?? dates[0], max: lastSeconds });
-
-      for (const other of rangeButtons) {
-        other.setAttribute('aria-pressed', String(other === button));
-      }
-    });
-  }
+  mountFundCharts(document.getElementById('nav-chart').dataset.symbol);
 </script>
