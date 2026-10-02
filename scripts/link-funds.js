@@ -111,6 +111,28 @@ const valuesClose = (x, y) => Math.abs(x - y) <= 1.0001 * 10 ** -coarseDecimals(
 
 const sharedDigits = (x, y) => integerDigits(x) + Math.min(valueDecimals(x), valueDecimals(y));
 
+const valueOn = (record, date) => {
+  const { dates, values } = record.nav;
+  let low = 0;
+  let high = dates.length - 1;
+
+  while (low <= high) {
+    const middle = (low + high) >> 1;
+
+    if (dates[middle] === date) {
+      return values[middle];
+    }
+
+    if (dates[middle] < date) {
+      low = middle + 1;
+    } else {
+      high = middle - 1;
+    }
+  }
+
+  return undefined;
+};
+
 const compareSeries = (a, b) => {
   const comparison = { shared: 0, close: 0, distinctive: 0, strong: 0, latestDifference: 0 };
   let i = 0;
@@ -179,6 +201,38 @@ const shareClassOf = (record) => record.name.match(/\bkelas\s+([a-z0-9]+)\b/i)?.
 
 // Classes of one fund often hold the same NAV from the day they start, so NAV cannot tell them apart.
 const hasConflictingClass = (a, b) => shareClassOf(a) !== '' && shareClassOf(b) !== '' && shareClassOf(a) !== shareClassOf(b);
+
+const ROMAN_NUMERAL = /^(x{0,2})(ix|iv|v?i{0,3})$/;
+const ROMAN_DIGITS = { i: 1, v: 5, x: 10 };
+
+// Numbered series ("Gemilang I" and "Gemilang II", "Proteksi 69") are distinct funds with different histories.
+// Only the last word counts, so index names such as "LQ45" or "SRI-KEHATI" carry no number, and four-digit
+// years are not one. Roman and Arabic numerals are the same number.
+const identityNumberOf = (record) => {
+  const words = normalizeName(record.name).replace(/\bkelas [a-z0-9]+\b/g, ' ').trim().split(/\s+/);
+  const last = words.at(-1);
+
+  if (words.length < 2) {
+    return null;
+  }
+
+  if (/^\d{1,3}$/.test(last)) {
+    return Number(last);
+  }
+
+  if (last !== '' && ROMAN_NUMERAL.test(last)) {
+    return [...last].reduce((total, letter, index, letters) => total + (ROMAN_DIGITS[letters[index + 1]] > ROMAN_DIGITS[letter] ? -1 : 1) * ROMAN_DIGITS[letter], 0);
+  }
+
+  return null;
+};
+
+const hasConflictingIdentityNumber = (a, b) => {
+  const numberA = identityNumberOf(a);
+  const numberB = identityNumberOf(b);
+
+  return numberA !== null && numberB !== null && numberA !== numberB;
+};
 
 const currencyOf = (record) => record.currency || (USD_IN_NAME.test(record.name) ? 'USD' : '');
 
@@ -289,6 +343,10 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
       return `Kelas ${shareClassOf(x).toUpperCase()} vs Kelas ${shareClassOf(y).toUpperCase()}`;
     }
 
+    if (hasConflictingIdentityNumber(x, y)) {
+      return `number ${identityNumberOf(x)} vs number ${identityNumberOf(y)}`;
+    }
+
     if (!hasCompatibleCurrency(x, y)) {
       return `currency ${currencyOf(x)} vs ${currencyOf(y)}`;
     }
@@ -377,8 +435,20 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
     }
   }
 
+  // Another record of the same source that could equally be the match, because it holds an equal value on a date
+  // the two records share, makes that equal value a coincidence.
+  const hasLookalike = (record, other) => {
+    const otherDates = new Set(other.nav.dates);
+
+    return Array.from(record.nav.dates).some((date, position) => otherDates.has(date) && records.some((candidate) => {
+      const value = valueOn(candidate, date);
+
+      return candidate.source === record.source && candidate.key !== record.key && hasCompatibleManager(candidate, other) && hasCompatibleCurrency(candidate, other) && value !== undefined && valuesAgree(value, record.nav.values[position]) && sharedDigits(value, record.nav.values[position]) >= MIN_DISTINCTIVE_DIGITS;
+    }));
+  };
+
   // One or two equal dates are a coincidence unless the values are long, the managers are known and the same,
-  // and nothing else in the other source could be the match.
+  // and nothing else in the other source could be the match. The conflict checks of tryMerge still apply.
   const partnersOf = new Map();
 
   for (const { a, b } of shortCandidates) {
@@ -392,7 +462,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
   const unlinkedShortCandidates = [];
 
   for (const { a, b } of shortCandidates) {
-    if (partnersOf.get(`${a.key}>${b.source}`).length === 1 && partnersOf.get(`${b.key}>${a.source}`).length === 1) {
+    if (partnersOf.get(`${a.key}>${b.source}`).length === 1 && partnersOf.get(`${b.key}>${a.source}`).length === 1 && !hasLookalike(a, b) && !hasLookalike(b, a)) {
       tryMerge(a, b, 'nav-short');
     } else {
       unlinkedShortCandidates.push(`${a.key} ~ ${b.key}`);
@@ -507,6 +577,20 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
       entry.current_id = entry.id;
     } else if (record) {
       entry.current_id = fundIdByKey.get(record.key);
+    }
+  }
+
+  // An entry whose record vanished keeps its old target, which may itself have been merged away since.
+  for (const entry of registryEntries) {
+    const seen = new Set([entry.id]);
+
+    while (!liveIds.has(entry.current_id) && registryById.has(entry.current_id)) {
+      if (seen.has(entry.current_id)) {
+        throw new Error(`Redirect cycle in ${FUND_IDS_FILE} at ${entry.current_id}`);
+      }
+
+      seen.add(entry.current_id);
+      entry.current_id = registryById.get(entry.current_id).current_id;
     }
   }
 

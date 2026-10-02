@@ -310,3 +310,110 @@ test('currency and sharia fall back to the name when no source states them', () 
   assert.equal(plain.currency, '');
   assert.equal(plain.sharia, '');
 });
+
+const SEQUIS = 'Sequis Aset Manajemen, PT';
+
+test('numbered series of one manager stay apart even when a third source matches both by name and NAV', () => {
+  const recent = [['2026-10-01', 969.8812], ['2026-09-30', 969.1234], ['2026-09-29', 968.5123]];
+  const result = link([
+    record('bareksa', '3569', { name: 'Sequis Proteksi Gemilang I', manager: SEQUIS, nav: [['2019-03-08', 1014.7355]] }),
+    record('bareksa', '3727', { name: 'Reksa Dana Terproteksi Sequis Proteksi Gemilang II', manager: SEQUIS, nav: recent }),
+    record('kontan', '15447', { name: 'SEQUIS PROTEKSI GEMILANG I', manager: 'PT. Sequis Aset Manajemen', nav: recent }),
+  ]);
+
+  assert.equal(result.funds.length, 2);
+  assert.notEqual(findFund(result, 'bareksa:3727'), findFund(result, 'kontan:15447'));
+  assert.ok(result.report.refused.some(({ reason }) => /number \d vs number \d/.test(reason)));
+});
+
+test('Roman and Arabic numbers are the same number, and a name without a trailing number conflicts with nothing', () => {
+  const nav = fourDecimalNav(5);
+  const result = link([
+    record('kontan', '1', { name: 'Alpha Money Market Fund 5', nav }),
+    record('bareksa', '2', { name: 'Alpha Money Market Fund V', nav }),
+    record('makmur', 'm1', { name: 'Alpha Money Market Fund', nav }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+});
+
+test('numbers that are not a series identity do not block a link', () => {
+  for (const name of ['Danareksa Indeks LQ45', 'Alpha IDX30', 'Alpha Indeks SRI-KEHATI', 'Alpha Fund 2024']) {
+    const nav = fourDecimalNav(5);
+    const result = link([
+      record('kontan', '1', { name, nav }),
+      record('bareksa', '2', { name: `${name} Syariah`, nav }),
+    ]);
+
+    assert.equal(result.funds.length, 1, name);
+  }
+});
+
+test('the same numbered fund from two sources links, and the next number stays apart', () => {
+  const nav = fourDecimalNav(5);
+  const result = link([
+    record('kontan', '1', { name: 'Danareksa Proteksi 69', nav }),
+    record('bareksa', '2', { name: 'BRI Proteksi 69', nav }),
+    record('bareksa', '3', { name: 'Danareksa Proteksi 70', nav }),
+  ]);
+
+  assert.equal(findFund(result, 'kontan:1'), findFund(result, 'bareksa:2'));
+  assert.notEqual(findFund(result, 'bareksa:3'), findFund(result, 'kontan:1'));
+});
+
+test('an alias still links numbered funds that the guard would refuse', () => {
+  const result = link([
+    record('kontan', '1', { name: 'Alpha Fund I' }),
+    record('bareksa', '2', { name: 'Alpha Fund II' }),
+  ], { aliases: { 'kontan:1': 'bareksa:2' } });
+
+  assert.equal(result.funds.length, 1);
+});
+
+test('a single shared date is no link when the names carry different numbers', () => {
+  const recent = [['2026-10-01', 2588.1234]];
+  const result = link([
+    record('bibit', 'RD1', { name: 'Alpha Proteksi 1', nav: recent }),
+    record('bareksa', '2', { name: 'Alpha Proteksi 2', nav: recent }),
+  ]);
+
+  assert.equal(result.funds.length, 2);
+  assert.equal(result.report.linksByRule['nav-short'], undefined);
+});
+
+test('a short NAV match is no link when another record of the same source holds the same value on that date', () => {
+  const recent = [['2026-10-01', 2588.1234]];
+  const result = link([
+    record('bibit', 'RD1', { name: 'Alpha Satu', nav: recent }),
+    record('bareksa', '2', { name: 'Alpha Dua', nav: recent }),
+    record('bareksa', '3', { name: 'Alpha Tiga', manager: 'Beta Asset Management, PT', nav: recent }),
+  ]);
+
+  assert.equal(result.funds.length, 3);
+});
+
+test('a short NAV match between records of one manager with no number conflict stays linked (accepted risk)', () => {
+  const recent = [['2026-10-01', 2588.1234]];
+  const result = link([
+    record('bibit', 'RD1', { name: 'Alpha Satu', nav: recent }),
+    record('bareksa', '2', { name: 'Alpha Dua', nav: recent }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+});
+
+test('a redirect to a record that vanished follows the fund that absorbed its target', () => {
+  const registry = [
+    { id: 'RD1', first_published: '2026-01-01', current_id: 'RD1' },
+    { id: 'RD2', first_published: '2025-01-01', current_id: 'RD2' },
+    { id: 'BRK9', first_published: '2026-01-01', current_id: 'RD1' },
+  ];
+  const result = link([
+    record('bibit', 'RD1', { name: 'Alpha Satu' }),
+    record('bibit', 'RD2', { name: 'Alpha Dua', nav: [['2026-10-01', 1500.1234]] }),
+  ], { registry, aliases: { 'bibit:RD1': 'bibit:RD2' } });
+  const targets = Object.fromEntries(result.registry.map((entry) => [entry.id, entry.current_id]));
+
+  assert.equal(targets.BRK9, 'RD2');
+  assert.equal(targets.RD1, 'RD2');
+});

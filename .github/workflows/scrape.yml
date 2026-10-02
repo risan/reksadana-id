@@ -75,11 +75,14 @@ jobs:
         run: npm run scrape:bareksa:profiles
 
       # Rebuilds data/funds.csv and data/fund-ids.csv from whatever the scrapers saved. If the linker fails,
-      # nothing is committed, so the site never gets half-linked data.
+      # nothing is committed, so the site never gets half-linked data. The check refuses a registry that
+      # points at a fund that is not live, for the same reason.
       - name: Link funds
         id: link
         if: success() || failure()
-        run: npm run link
+        run: |
+          npm run link
+          node scripts/check-funds.js
 
       # The scrapers exit non-zero when a few funds fail. Still save the funds that
       # succeeded; the failed ones are retried on the next run.
