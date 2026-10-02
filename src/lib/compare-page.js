@@ -275,6 +275,11 @@ export async function mountComparePage() {
       return { expense: missing, minimum: missing, fees: missing, custodian: missing };
     }
 
+    // A fund record cached by the browser from before a deploy can lack fields added since.
+    if (!column.record.costs) {
+      return { expense: notInSources, minimum: notInSources, fees: notInSources, custodian: notInSources };
+    }
+
     const costs = describeCosts(column.record.costs, locale);
     const line = (item) => `<div>${escapeHtml(item.label ?? '')} ${escapeHtml(item.text)} <span class="sub">${escapeHtml(item.source)}</span></div>`;
     const lines = (items) => (items.length === 0 ? notInSources : items.map(line).join(''));
