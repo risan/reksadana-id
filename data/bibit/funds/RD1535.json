@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Pasar Uang Syariah",
-      "percentage": 5.98
+      "percentage": 6.33
     },
     {
       "name": "Sukuk",
-      "percentage": 94.02
+      "percentage": 93.67
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-01",
+    "date": "2026-10-02",
     "first_date": "2010-02-11",
-    "value": 2401.1813
+    "value": 2401.564
   },
   "trade": null
 }
