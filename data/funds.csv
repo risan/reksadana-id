@@ -144,7 +144,7 @@ BRK1365,Sucorinvest Proteksi 5,,"Sucorinvest Asset Management, PT",Terproteksi,I
 BRK1371,Bahana F Optima Protected Fund 72,,"Bahana TCW Investment Management, PT",Terproteksi,IDR,,2014-03-24,,1371,,
 BRK1372,Batavia Proteksi Andalan 10,,"Batavia Prosperindo Aset Manajemen, PT",Terproteksi,IDR,,2014-04-04,,1372,,
 BRK1373,Batavia Proteksi Andalan 15,,"Batavia Prosperindo Aset Manajemen, PT",Terproteksi,IDR,,2014-03-20,,1373,,
-BRK1376,HPAM Smart Protected II,,"Henan Putihrai Asset Management, PT",Terproteksi,IDR,,2014-03-17,,1376,,
+BRK1376,HPAM Smart Protected II,,"Henan Putihrai Asset Management, PT",Terproteksi,,,2014-03-17,,1376,,
 BRK1377,Kharisma Proteksi Dana Prima,,"Pool Advista Aset Manajemen, PT",Terproteksi,IDR,,2014-03-20,,1377,,
 BRK1378,Sucorinvest Proteksi 9,,"Sucorinvest Asset Management, PT",Terproteksi,IDR,,2014-03-19,,1378,,
 BRK1381,Tram Terproteksi Lestari 7,,"Trimegah Asset Management, PT",Terproteksi,IDR,,2014-03-28,,1381,,
@@ -259,8 +259,8 @@ BRK1863,Mandiri Seri 19,,"Mandiri Manajemen Investasi, PT",Terproteksi,IDR,,2015
 BRK1864,Lippo Terproteksi II,,"Lippo Securities Tbk, PT",Terproteksi,IDR,,2015-04-28,,1864,,
 BRK1870,PNM Wika Realty,,"PNM Investment Management, PT",Penyertaan Terbatas,,,2015-05-07,,1870,,
 BRK1876,Bahana Liquid Cash,,"Bahana TCW Investment Management, PT",Pasar Uang,IDR,,2015-05-13,,1876,,
-BRK1879,Lancar Victoria Merkurius,,"Victoria Manajemen Investasi, PT",Pasar Uang,,,2015-06-04,,1879,1390,
-BRK1881,Sucorinvest Proteksi 12,,"Sucorinvest Asset Management, PT",Terproteksi,,,2015-05-13,,1881,,
+BRK1879,Lancar Victoria Merkurius,,"Victoria Manajemen Investasi, PT",Pasar Uang,IDR,,2015-06-04,,1879,1390,
+BRK1881,Sucorinvest Proteksi 12,,"Sucorinvest Asset Management, PT",Terproteksi,IDR,,2015-05-13,,1881,,
 BRK1883,BNIAM Proteksi L,,"BNI Asset Management, PT",Terproteksi,IDR,,2015-04-28,,1883,,
 BRK1884,BNIAM Proteksi LIV,,"BNI Asset Management, PT",Terproteksi,IDR,,2015-05-19,,1884,,
 BRK1885,BNIAM Proteksi LV,,"BNI Asset Management, PT",Terproteksi,IDR,,2015-06-12,,1885,,
@@ -1706,7 +1706,6 @@ KTN17047,SYAILENDRA RUSSEL IDEALRATINGS TOP 200 ISLAMIC TECHNOLOGY INDEX SHARIA 
 KTN17085,EASTSPRING IDR FIXED INCOME KELAS D,,PT. Eastspring Investments Indonesia,Obligasi,,,,,,17085,
 KTN17187,SIMAS GEMILANG 24,,PT. Sinarmas Asset Management,Terproteksi,,,,,,17187,
 MKR68c7bd9b334caac934c5c829,Avrist Ada Sukuk Berkah Syariah Kelas A,,PT Avrist Asset Management,Obligasi,IDR,true,2017-08-07,,,,68c7bd9b334caac934c5c829
-MKR640142d64c3ab277e00dee60,Eastspring Syariah Greater China Equity USD Kelas A,,PT Eastspring Investments Indonesia,Saham,USD,true,2020-06-15,,,,640142d64c3ab277e00dee60
 MNC36,Mnc36,,"MNC Asset Management, PT",Saham,IDR,false,2018-01-26,MNC36,,,
 RD1,Aberdeen Dana pendapatan Stabil,,"Aberdeen Standard Investments Indonesia, PT",Obligasi,IDR,false,2018-08-29,RD1,,791,
 RD2,Aberdeen Indonesia Balanced Growth Fund,,"Aberdeen Standard Investments Indonesia, PT",Campuran,IDR,false,2007-11-27,RD2,,,
@@ -3334,7 +3333,7 @@ RD3698,Insight ETF FTSE Indonesia Low Volatility Factor Index,,"Insight Investme
 RD3699,Avrist Proteksi Sukuk Berkah Syariah 4,,"Avrist Asset Management, PT",Terproteksi,IDR,true,2020-06-11,RD3699,4164,,
 RD3700,Bahana Premier Fixed Income Fund,,"Bahana TCW Investment Management, PT",Obligasi,IDR,false,2020-06-15,RD3700,4165,16054,
 RD3701,BNI AM Utama,,"BNI Asset Management, PT",Obligasi,IDR,false,2020-06-15,RD3701,4167,,
-RD3702,Eastspring Syariah Greater China Equity USD Kelas A,,"Eastspring Investments Indonesia, PT",Reksadana Global,USD,true,2020-06-15,RD3702,4166,16416,
+RD3702,Eastspring Syariah Greater China Equity USD Kelas A,,"Eastspring Investments Indonesia, PT",Reksadana Global,USD,true,2020-06-15,RD3702,4166,16416,640142d64c3ab277e00dee60
 RD3703,BNI AM Proteksi Jasmine,,"BNI Asset Management, PT",Terproteksi,IDR,false,2020-06-17,RD3703,4168,16055,
 RD3704,Bahana Himaya Syariah 1,,"Bahana TCW Investment Management, PT",Terproteksi,IDR,true,2020-06-18,RD3704,4169,,
 RD3705,Trimegah Terproteksi Futura 20,,"Trimegah Asset Management, PT",Terproteksi,IDR,false,2020-06-18,RD3705,4170,,
