@@ -19,6 +19,7 @@
   },
   "released_date": "2017-08-29",
   "is_top_product": 1,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -208,7 +209,7 @@
     "3y": 0.05107106179505938,
     "5y": 0.044711416734392495,
     "10y": null,
-    "all": 0.04999737659155401
+    "all": 0.049981960839244
   },
   "cagr_adjusted": {
     "1y": 0.047933373216194175,
@@ -255,7 +256,8 @@
     "all": -0.003548483172361
   },
   "instant_redemption": {
-    "type": 2
+    "type": 2,
+    "quota_limit": null
   },
   "nav": {
     "date": "2026-10-02",
@@ -263,7 +265,7 @@
     "value": 1559
   },
   "trade": {
-    "total_trades": 4083,
+    "total_trades": 3409,
     "period": "1d"
   }
 }
