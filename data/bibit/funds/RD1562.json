@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Money Market",
-      "percentage": 1.9
+      "percentage": 2.04
     },
     {
       "name": "Debt Securities",
-      "percentage": 98.1
+      "percentage": 97.96
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-02",
+    "date": "2026-10-05",
     "first_date": "2008-05-15",
-    "value": 3615.2843
+    "value": 3614.6734
   },
   "trade": null
 }

@@ -19,10 +19,11 @@
   },
   "released_date": "2026-04-22",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17845,
+    "exchange_rate": 17855,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,8 +61,12 @@
   },
   "asset": [
     {
+      "name": "Obligasi Negara",
+      "percentage": 25.25
+    },
+    {
       "name": "Pasar Uang dan/atau Deposito",
-      "percentage": 100
+      "percentage": 74.75
     }
   ],
   "holding": [
@@ -188,44 +193,44 @@
     "percentage": 0
   },
   "avg_yield": {
-    "date": "2026-08-31",
-    "percentage": 0.038
+    "date": "2026-09-30",
+    "percentage": 0.041
   },
   "cagr": {
-    "1y": 0.020785201386888774,
+    "1y": 0.020880476067919762,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.020785201386888774
+    "all": 0.020880476067919762
   },
   "cagr_adjusted": {
-    "1y": 0.021171772708533432,
+    "1y": 0.021543673334491364,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.021171772708533432
+    "all": 0.021543673334491364
   },
   "simplereturn": {
-    "1d": 0,
-    "1m": 0.0014882428812381665,
-    "3m": 0.005378486055777065,
+    "1d": 0.0002971768202080227,
+    "1m": 0.0017857142857142794,
+    "3m": 0.00567672542575437,
     "ytd": null,
-    "1y": 0.009400000000000075,
+    "1y": 0.009800000000000031,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.009400000000000075
+    "all": 0.009800000000000031
   },
   "changesvalue": {
-    "1d": 0,
-    "1m": 0.0015000000000000568,
-    "3m": 0.005400000000000071,
+    "1d": 0.00029999999999996696,
+    "1m": 0.0018000000000000238,
+    "3m": 0.005700000000000038,
     "ytd": null,
-    "1y": 0.009400000000000075,
+    "1y": 0.009800000000000031,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.009400000000000075
+    "all": 0.009800000000000031
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -243,9 +248,9 @@
     "all": -0.0003
   },
   "nav": {
-    "date": "2026-10-01",
+    "date": "2026-10-05",
     "first_date": "2026-04-22",
-    "value": 1.0094
+    "value": 1.0098
   },
   "trade": null
 }

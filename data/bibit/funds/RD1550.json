@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Money Market",
-      "percentage": 3.03
+      "percentage": 5.55
     },
     {
       "name": "Equities",
-      "percentage": 51.31
+      "percentage": 46.53
     },
     {
       "name": "Efek Bersifat Utang",
-      "percentage": 45.67
+      "percentage": 47.91
     }
   ],
   "holding": [
@@ -203,9 +203,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-02",
+    "date": "2026-10-05",
     "first_date": "2006-05-19",
-    "value": 4626.15
+    "value": 4654.97
   },
   "trade": null
 }

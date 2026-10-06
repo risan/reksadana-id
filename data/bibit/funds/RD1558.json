@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 2.4
+      "percentage": 19.78
     },
     {
       "name": "Efek Bersifat Utang",
-      "percentage": 97.6
+      "percentage": 80.22
     }
   ],
   "holding": [
@@ -175,9 +175,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-02",
+    "date": "2026-10-05",
     "first_date": "2018-03-20",
-    "value": 1027.37
+    "value": 1027.83
   },
   "trade": null
 }
