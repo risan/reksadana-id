@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,20 +60,20 @@
   },
   "asset": [
     {
-      "name": "Kas",
-      "percentage": 7.72
-    },
-    {
       "name": "Efek Bersifat Utang",
       "percentage": 92.28
+    },
+    {
+      "name": "Kas",
+      "percentage": 7.72
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "OBLIGASI BERKELANJUTAN IV BANK PANIN TAHAP III TAHUN 2025 SERI A (Bond)",
+      "name": "OBLIGASI BERKELANJUTAN IV BANK PANIN TAHAP III TAHUN 2025 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -82,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "OBLIGASI BERKELANJUTAN V BANK SMBC INDONESIA TAHAP II TAHUN 2024 SERI A (Bond)",
+      "name": "OBLIGASI BERKELANJUTAN V BANK SMBC INDONESIA TAHAP II TAHUN 2024 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -92,9 +91,9 @@
     },
     {
       "symbol": "",
-      "name": "OBLIGASI BERKELANJUTAN V MERDEKA COPPER GOLD TAHAP I TAHUN 2024 (Bond)",
+      "name": "OBLIGASI BERKELANJUTAN V MERDEKA COPPER GOLD TAHAP I TAHUN 2024",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,9 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "OBLIGASI BERKELANJUTAN VI TOWER BERSAMA INFRASTRUCTURE TAHAP VI TAHUN 2025 SERI A (Bond)",
+      "name": "OBLIGASI BERKELANJUTAN VI TOWER BERSAMA INFRASTUCTURE TAHAP VI TAHUN 2025 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,9 +111,9 @@
     },
     {
       "symbol": "",
-      "name": "OBLIGASI BERKELANJUTAN VII FEDERAL INTERNATIONAL FINANCE TAHAP II TAHUN 2025 SERI B (Bond)",
+      "name": "OBLIGASI BERKELANJUTAN VII FEDERAL INTERNATIONAL FINANCE TAHAP II TAHUN 2025 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -122,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "OBLIGASI BERKELANJUTAN VIII SARANA MULTIGRIYA FINANSIAL TAHAP III TAHUN 2026 (Bond)",
+      "name": "OBLIGASI BERKELANJUTAN VIII SARANA MULTIGRIYA FINANSIAL TAHAP III TAHUN 2026",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -132,9 +131,9 @@
     },
     {
       "symbol": "",
-      "name": "OBLIGASI BERWAWASAN SOSIAL BERKELANJUTAN I BANK BRI TAHAP I TAHUN 2025 SERI A (Bond)",
+      "name": "OBLIGASI BERWAWASAN SOSIAL BERKELANJUTAN I BANK BRI TAHAP I TAHUN 2025 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,7 +143,7 @@
       "symbol": "PBS003",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6020,
       "product_type": "FR",
@@ -154,7 +153,7 @@
       "symbol": "SR021-T3",
       "name": "Sukuk Ritel",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 8720,
       "product_type": "SBN",
@@ -164,7 +163,7 @@
       "symbol": "SR022-T3",
       "name": "Sukuk Ritel",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 9136,
       "product_type": "SBN",
@@ -197,8 +196,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 249104839790,
-    "date": "2026-08-01"
+    "value": 193281124758,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -209,40 +208,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.007961668055505244,
-    "3y": 0.005722642487519414,
-    "5y": -0.0012987363923161466,
-    "10y": 0.003642808503130812,
-    "all": 0.005094079821265751
+    "1y": -0.00844649646931006,
+    "3y": 0.005703855562581239,
+    "5y": -0.0012824053120887857,
+    "10y": 0.0036398898555292103,
+    "all": 0.005094323023844716
   },
   "cagr_adjusted": {
-    "1y": 0.025030231671520076,
-    "3y": 0.02891470463538104,
-    "5y": 0.012456299863940146,
-    "10y": 0.010530720823329842,
-    "all": 0.008936420739971362
+    "1y": 0.024529279475096866,
+    "3y": 0.028895484482122757,
+    "5y": 0.012472855870888422,
+    "10y": 0.010527782145306475,
+    "all": 0.008936076723827124
   },
   "simplereturn": {
-    "1d": 0.0002374450908226855,
-    "1m": 0.004585115659041961,
-    "3m": 0.017441328653106547,
-    "ytd": 0.01704637659472108,
-    "1y": 0.025030231671520076,
-    "3y": 0.08927646877072237,
-    "5y": 0.06385254117570538,
-    "10y": 0.11044028525260474,
-    "all": 0.17293288414162444
+    "1d": 0.000018260671079683988,
+    "1m": 0.00460346005741008,
+    "3m": 0.01689775973984453,
+    "ytd": 0.01706494854407703,
+    "1y": 0.024529279475096866,
+    "3y": 0.08921542677328875,
+    "5y": 0.06393952629351829,
+    "10y": 0.11040799347074959,
+    "all": 0.17295430268321987
   },
   "changesvalue": {
-    "1d": 0.2599999999999909,
-    "1m": 5.012631843090958,
-    "3m": 18.930294880222164,
-    "ytd": 18.86522497737792,
-    "1y": 27.634376974624956,
-    "3y": 96.12040286668594,
-    "5y": 70.39040286668592,
-    "10y": 116.64040286668592,
-    "all": 172.910402866686
+    "1d": 0.01999999999998181,
+    "1m": 5.032686673162971,
+    "3m": 18.35046014467889,
+    "ytd": 18.885778553730006,
+    "1y": 27.095042108192047,
+    "3y": 96.06181862387098,
+    "5y": 70.48181862387105,
+    "10y": 116.61181862387093,
+    "all": 172.93181862387098
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -260,9 +259,9 @@
     "all": -0.0504813094613829
   },
   "nav": {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "first_date": "2008-11-04",
-    "value": 1095.25
+    "value": 1095.27
   },
   "trade": null
 }

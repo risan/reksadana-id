@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Sukuk < 1 Tahun",
-      "percentage": 41
+      "percentage": 43
     },
     {
       "name": "Pasar uang syariah",
-      "percentage": 59
+      "percentage": 57
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "first_date": "2018-01-26",
-    "value": 1538.2101
+    "value": 1538.4172
   },
   "trade": null
 }

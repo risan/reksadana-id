@@ -18,7 +18,6 @@
   },
   "released_date": "2009-05-28",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,64 +59,74 @@
   },
   "asset": [
     {
-      "name": "Syariah Money Market",
-      "percentage": 9.07
-    },
-    {
       "name": "Efek Syariah Bersifat Ekuitas",
       "percentage": 41.12
     },
     {
-      "name": "SBSN and/or Sukuk",
+      "name": "SBSN dan/atau Sukuk",
       "percentage": 49.81
+    },
+    {
+      "name": "Instrumen Pasar Uang Syariah",
+      "percentage": 9.07
     }
   ],
   "holding": [
     {
-      "symbol": "MDKA",
-      "name": "Merdeka Copper Gold Tbk.",
+      "symbol": "",
+      "name": "PT BANK BTPN SYARIAH Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 4563,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "PT BANK MAYBANK INDONESIA Tbk",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "PT BANK SYARIAH INDONESIA Tbk",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
+      "company_id": 6020,
+      "product_type": "FR",
       "serie_id": null
     },
     {
       "symbol": "PBS030",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6385,
       "product_type": "FR",
       "serie_id": null
     },
     {
+      "symbol": "",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN IV PEGADAIAN TAHAP II TAHUN 2026 SEI",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN VI ADIRA FINANCE TAHAP II TAHUN 2025",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
       "symbol": "SR018-T5",
       "name": "Sukuk Ritel",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 5864,
       "product_type": "SBN",
@@ -127,7 +136,7 @@
       "symbol": "SR019-T5",
       "name": "Sukuk Ritel",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6179,
       "product_type": "SBN",
@@ -137,7 +146,7 @@
       "symbol": "SR021-T3",
       "name": "Sukuk Ritel",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 8720,
       "product_type": "SBN",
@@ -147,7 +156,7 @@
       "symbol": "SR022-T3",
       "name": "Sukuk Ritel",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 9136,
       "product_type": "SBN",
@@ -157,7 +166,7 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4623,
       "product_type": "Saham",
@@ -190,8 +199,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 190855623888,
-    "date": "2026-08-01"
+    "value": 182850570331,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -202,40 +211,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.013703626688665316,
-    "3y": 0.03464037804334996,
-    "5y": 0.03524627257704549,
-    "10y": 0.015658944863196522,
-    "all": 0.06290944156984168
+    "1y": -0.009871937146397447,
+    "3y": 0.03454913454280262,
+    "5y": 0.03505748594150515,
+    "10y": 0.016317153509943783,
+    "all": 0.06322094940195577
   },
   "cagr_adjusted": {
-    "1y": -0.013703626688665316,
-    "3y": 0.03464037804334996,
-    "5y": 0.03524627257704549,
-    "10y": 0.015658944863196522,
-    "all": 0.06291964586797727
+    "1y": -0.009871937146397447,
+    "3y": 0.03454913454280262,
+    "5y": 0.03505748594150515,
+    "10y": 0.016317153509943783,
+    "all": 0.06323120410243233
   },
   "simplereturn": {
-    "1d": 0.005941785108335873,
-    "1m": -0.026905859759932427,
-    "3m": 0.04256630152781793,
-    "ytd": -0.08294691334155313,
-    "1y": -0.013703626688665316,
-    "3y": 0.10756256842524325,
-    "5y": 0.18909999547922296,
-    "10y": 0.16809718364446735,
-    "all": 1.8933299999999997
+    "1d": 0.005284568300193859,
+    "1m": -0.021763477313315405,
+    "3m": 0.04562677499370893,
+    "ytd": -0.07810068367020295,
+    "1y": -0.009871937146397447,
+    "3y": 0.10726957104353518,
+    "5y": 0.18801617448842034,
+    "10y": 0.17568927674951595,
+    "all": 1.90862
   },
   "changesvalue": {
-    "1d": 17.090000000000146,
-    "1m": -80,
-    "3m": 118.13000000000011,
-    "ytd": -261.7000000000003,
-    "1y": -40.20000000000027,
-    "3y": 280.9899999999998,
-    "5y": 460.1199999999999,
-    "10y": 416.3699999999999,
-    "all": 1893.33
+    "1d": 15.289999999999964,
+    "1m": -64.71000000000004,
+    "3m": 126.92000000000007,
+    "ytd": -246.4100000000003,
+    "1y": -29,
+    "3y": 281.77999999999975,
+    "5y": 460.3199999999997,
+    "10y": 434.6500000000001,
+    "all": 1908.62
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -257,9 +266,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "first_date": "2009-05-12",
-    "value": 2893.33
+    "value": 2908.62
   },
   "trade": null
 }

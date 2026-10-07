@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Kas dan Setara Kas",
-      "percentage": 6.85
+      "percentage": 5.22
     },
     {
       "name": "Saham",
-      "percentage": 93.15
+      "percentage": 94.78
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "first_date": "2018-01-26",
-    "value": 692.9297
+    "value": 700.099
   },
   "trade": null
 }

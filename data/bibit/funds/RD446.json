@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 30
+      "percentage": 32
     },
     {
       "name": "Obligasi Jatuh Tempo < 1 Tahun",
-      "percentage": 70
+      "percentage": 68
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "first_date": "2015-12-29",
-    "value": 1856.854
+    "value": 1857.1237
   },
   "trade": null
 }

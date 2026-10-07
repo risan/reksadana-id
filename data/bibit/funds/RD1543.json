@@ -70,7 +70,7 @@
       "symbol": "",
       "name": "OBLIGASI BERKELANJUTAN VII ADIRA FINANCE TAHAP II TAHUN 2025 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -78,9 +78,9 @@
     },
     {
       "symbol": "",
-      "name": "OBLIGASI BERKELANJUTAN VII FEDERAL INTERNATIONAL FINANCE TAHAP II TAHUN 2025 SERI A",
+      "name": "OBLIGASI BERKELANJUTAN VII PEGADAIAN TAHAP II TAHUN 2026 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -90,7 +90,7 @@
       "symbol": "",
       "name": "OBLIGASI BERKELANJUTAN VIII SARANA MULTIGRIYA FINANSIAL TAHAP III TAHUN 2026",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -100,7 +100,7 @@
       "symbol": "",
       "name": "OBLIGASI I ADARO INDONESIA TAHUN 2026 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -110,7 +110,7 @@
       "symbol": "",
       "name": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0059",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -120,7 +120,7 @@
       "symbol": "FR0090",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 5806,
       "product_type": "FR",
@@ -130,7 +130,7 @@
       "symbol": "ORI024-T3",
       "name": "Obligasi Negara Ritel",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6238,
       "product_type": "SBN",
@@ -140,31 +140,31 @@
       "symbol": "ORI025-T3",
       "name": "Obligasi Negara Ritel",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6410,
       "product_type": "SBN",
       "serie_id": 3803
     },
     {
+      "symbol": "",
+      "name": "PT BANK RAKYAT INDONESIA (PERSERO), Tbk",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
       "symbol": "PBS003",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6020,
       "product_type": "FR",
       "serie_id": null
-    },
-    {
-      "symbol": "SR019-T3",
-      "name": "Sukuk Ritel",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 6178,
-      "product_type": "SBN",
-      "serie_id": 3603
     }
   ],
   "bank": [
@@ -193,8 +193,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 574972795458,
-    "date": "2026-08-01"
+    "value": 528454342735,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -205,40 +205,40 @@
     "percentage": 0.0576
   },
   "cagr": {
-    "1y": 0.03243926246638984,
-    "3y": 0.03898034866462541,
-    "5y": 0.03136973666055387,
-    "10y": 0.035159215821125134,
-    "all": 0.024684496190245486
+    "1y": 0.03265406334397247,
+    "3y": 0.03904266935617873,
+    "5y": 0.031416193627245015,
+    "10y": 0.035181533559806244,
+    "all": 0.024692072556074418
   },
   "cagr_adjusted": {
-    "1y": 0.03243926246638984,
-    "3y": 0.03898034866462541,
-    "5y": 0.03136973666055387,
-    "10y": 0.035159215821125134,
-    "all": 0.02468756129321603
+    "1y": 0.03265406334397247,
+    "3y": 0.03904266935617873,
+    "5y": 0.031416193627245015,
+    "10y": 0.035181533559806244,
+    "all": 0.024695138235035996
   },
   "simplereturn": {
-    "1d": 0.000382963908552858,
-    "1m": 0.004427717511622742,
-    "3m": 0.014361780366545895,
-    "ytd": 0.024074415068338517,
-    "1y": 0.03243926246638984,
-    "3y": 0.12155867811605514,
-    "5y": 0.16700285648530477,
-    "10y": 0.4127702115803793,
-    "all": 0.7240599999999999
+    "1d": 0.0002320104868740458,
+    "1m": 0.0046607552753923365,
+    "3m": 0.01416154036156625,
+    "ytd": 0.024312011071973894,
+    "1y": 0.03265406334397247,
+    "3y": 0.12176051207327232,
+    "5y": 0.16726571225505138,
+    "10y": 0.4130748303779215,
+    "all": 0.7244600000000001
   },
   "changesvalue": {
-    "1d": 0.6599999999998545,
-    "1m": 7.599999999999909,
-    "3m": 24.409999999999854,
-    "ytd": 40.52999999999997,
-    "1y": 54.169999999999845,
-    "3y": 186.8599999999999,
-    "5y": 246.72000000000003,
-    "10y": 503.72,
-    "all": 724.06
+    "1d": 0.40000000000009095,
+    "1m": 8,
+    "3m": 24.079999999999927,
+    "ytd": 40.930000000000064,
+    "1y": 54.52999999999997,
+    "3y": 187.18000000000006,
+    "5y": 247.11000000000013,
+    "10y": 504.10000000000014,
+    "all": 724.46
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -260,9 +260,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "first_date": "2004-06-10",
-    "value": 1724.06
+    "value": 1724.46
   },
   "trade": null
 }

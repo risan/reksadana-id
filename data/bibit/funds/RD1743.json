@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17855,
+    "exchange_rate": 17805,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,20 +60,20 @@
   },
   "asset": [
     {
-      "name": "Sukuk and/or Sharia Money Market",
-      "percentage": 5.89
-    },
-    {
       "name": "Efek Syariah Bersifat Ekuitas",
       "percentage": 94.11
+    },
+    {
+      "name": "Efek Syariah Pendapatan Tetap dan/atau Pasar Uang Syariah",
+      "percentage": 5.89
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "ALPHABET INC (Sharia Equity)",
+      "name": "ALPHABET INC",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "AMAZON.COM INC (Sharia Equity)",
+      "name": "AMAZON.COM INC",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,9 +91,9 @@
     },
     {
       "symbol": "",
-      "name": "APPLE INC (Sharia Equity)",
+      "name": "APPLE INC",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -101,9 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "ASML HOLDING NV (Sharia Equity)",
+      "name": "ASML HOLDING NV",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -111,9 +111,9 @@
     },
     {
       "symbol": "",
-      "name": "BROADCOM INC (Sharia Equity)",
+      "name": "BROADCOM INC",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -121,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "META PLATFORMS INC (Sharia Equity)",
+      "name": "META PLATFORMS INC",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -131,9 +131,9 @@
     },
     {
       "symbol": "",
-      "name": "MICROSOFT CORP (Sharia Equity)",
+      "name": "MICROSOFT CORP",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -141,9 +141,9 @@
     },
     {
       "symbol": "",
-      "name": "NVIDIA CORP (Sharia Equity)",
+      "name": "NVIDIA CORP",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -151,9 +151,9 @@
     },
     {
       "symbol": "",
-      "name": "SAMSUNG ELECTRONICS CO LTD (Sharia Equity)",
+      "name": "SAMSUNG ELECTRONICS CO LTD",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -161,9 +161,9 @@
     },
     {
       "symbol": "",
-      "name": "TAIWAN SEMICONDUCTOR MANUFAC (Sharia Equity)",
+      "name": "TAIWAN SEMICONDUCTOR MANUFAC",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -194,8 +194,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 32816984,
-    "date": "2026-08-01"
+    "value": 30523728,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -206,40 +206,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.12484375781210932,
-    "3y": 0.1575295314792362,
-    "5y": 0.07002352263486666,
-    "10y": 0.07757329431623172,
-    "all": 0.0794570943843742
+    "1y": 0.13095594845669756,
+    "3y": 0.16364913837827255,
+    "5y": 0.07223895718029749,
+    "10y": 0.07840215745673773,
+    "all": 0.08009302988025846
   },
   "cagr_adjusted": {
-    "1y": 0.12484375781210932,
-    "3y": 0.1575295314792362,
-    "5y": 0.07002352263486666,
-    "10y": 0.07757329431623172,
-    "all": 0.07947838254185013
+    "1y": 0.13095594845669756,
+    "3y": 0.16364913837827255,
+    "5y": 0.07223895718029749,
+    "10y": 0.07840215745673773,
+    "all": 0.08011448912334118
   },
   "simplereturn": {
-    "1d": 0.005901815255298093,
-    "1m": 0.01768670556837204,
-    "3m": 0.029892423895628406,
-    "ytd": 0.10165507785721295,
-    "1y": 0.12484375781210932,
-    "3y": 0.5509444367847789,
-    "5y": 0.4027059043581269,
-    "10y": 1.1109026083693,
-    "all": 1.2531797696544817
+    "1d": 0.006489465730287192,
+    "1m": 0.01784510271047801,
+    "3m": 0.03213455490222894,
+    "ytd": 0.1088042307315642,
+    "1y": 0.13095594845669756,
+    "3y": 0.5756732308120522,
+    "5y": 0.4172873505664394,
+    "10y": 1.1271958666040396,
+    "all": 1.2678017025538306
   },
   "changesvalue": {
-    "1d": 0.013199999999999878,
-    "1m": 0.03909999999999991,
-    "3m": 0.06530000000000014,
-    "ytd": 0.20760000000000023,
-    "1y": 0.2496999999999998,
-    "3y": 0.7992000000000001,
-    "5y": 0.6458999999999999,
-    "10y": 1.184,
-    "all": 1.2513
+    "1d": 0.014600000000000168,
+    "1m": 0.03970000000000029,
+    "3m": 0.07050000000000001,
+    "ytd": 0.2222000000000004,
+    "1y": 0.2622,
+    "3y": 0.8273000000000001,
+    "5y": 0.6667000000000003,
+    "10y": 1.1999000000000002,
+    "all": 1.2659000000000002
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -257,9 +257,9 @@
     "all": -0.2746014714898835
   },
   "nav": {
-    "date": "2026-10-02",
+    "date": "2026-10-05",
     "first_date": "2016-02-23",
-    "value": 2.2498
+    "value": 2.2644
   },
   "trade": null
 }
