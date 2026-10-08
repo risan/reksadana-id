@@ -68,11 +68,11 @@
     },
     {
       "name": "kas",
-      "percentage": 0.55
+      "percentage": 0.8
     },
     {
       "name": "Saham",
-      "percentage": 99.45
+      "percentage": 99.2
     }
   ],
   "investment_manager": {
@@ -86,8 +86,8 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 30187519111.74,
-    "date": "2026-08-01"
+    "value": 27464028554.2,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -149,9 +149,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2025-02-27",
-    "value": 167.9854
+    "value": 167.8776
   },
   "trade": null
 }

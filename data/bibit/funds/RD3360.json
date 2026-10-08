@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Ekuitas Syariah dalam Indeks JII",
-      "percentage": 99.5
+      "percentage": 99.7
     },
     {
       "name": "Sukuk, Pasar Uang & Kas Syariah",
-      "percentage": 0.5
+      "percentage": 0.3
     }
   ],
   "investment_manager": {
@@ -84,8 +84,8 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 9975653415.88,
-    "date": "2026-08-01"
+    "value": 9125786497.82,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -147,9 +147,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2019-09-16",
-    "value": 62.4532
+    "value": 62.0451
   },
   "trade": null
 }

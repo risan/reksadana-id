@@ -60,16 +60,16 @@
   },
   "asset": [
     {
-      "name": "Inst. Pasar Uang & Kas",
-      "percentage": 0.66
-    },
-    {
       "name": "Efek Obligasi",
       "percentage": 0
     },
     {
+      "name": "Inst. Pasar Uang & Kas",
+      "percentage": 1.01
+    },
+    {
       "name": "Efek Ekuitas",
-      "percentage": 99.34
+      "percentage": 98.99
     }
   ],
   "holding": [
@@ -191,8 +191,8 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 181840401428.76,
-    "date": "2026-08-01"
+    "value": 167426802041.45,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -254,9 +254,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2017-12-29",
-    "value": 741.06
+    "value": 738.08
   },
   "trade": null
 }

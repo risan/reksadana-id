@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 92
+      "percentage": 93
     },
     {
       "name": "Ekuitas, Pasar Uang & EBA",
-      "percentage": 8
+      "percentage": 7
     }
   ],
   "holding": [
@@ -73,7 +73,7 @@
       "symbol": "",
       "name": "Armadian Tritunggal, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +83,7 @@
       "symbol": "",
       "name": "Bank Kb Indonesia Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +93,7 @@
       "symbol": "",
       "name": "Energi Mitra Investama, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +103,7 @@
       "symbol": "",
       "name": "Lontar Papyrus Pulp & Paper Industry, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +113,7 @@
       "symbol": "",
       "name": "Merdeka Copper Gold Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +123,7 @@
       "symbol": "",
       "name": "Oki Pulp & Paper Mills, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +133,7 @@
       "symbol": "",
       "name": "PT Indah Kiat Pulp & Paper Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +143,7 @@
       "symbol": "",
       "name": "Pyridam Farma Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,7 +153,7 @@
       "symbol": "",
       "name": "Sinar Mas Multiartha Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -163,7 +163,7 @@
       "symbol": "",
       "name": "Sinar Mas Multifinance, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -217,8 +217,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 16682000000000,
-    "date": "2026-08-31"
+    "value": 16866000000000,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -229,40 +229,40 @@
     "percentage": 0.0781
   },
   "cagr": {
-    "1y": 0.054429337585099935,
-    "3y": 0.059658995365311496,
-    "5y": 0.05775237459690419,
-    "10y": 0.06490430557736815,
-    "all": 0.08051825224565667
+    "1y": 0.05399755224026048,
+    "3y": 0.059707865022181617,
+    "5y": 0.05775059571453456,
+    "10y": 0.06489975106794477,
+    "all": 0.08051455598640933
   },
   "cagr_adjusted": {
-    "1y": 0.054429337585099935,
-    "3y": 0.059658995365311496,
-    "5y": 0.05775237459690419,
-    "10y": 0.06490430557736815,
-    "all": 0.08052887919481955
+    "1y": 0.05399755224026048,
+    "3y": 0.059707865022181617,
+    "5y": 0.05775059571453456,
+    "10y": 0.06489975106794477,
+    "all": 0.08052518108039353
   },
   "simplereturn": {
-    "1d": 0.00013836166312253262,
-    "1m": 0.004434994203364129,
-    "3m": 0.012809981943954218,
-    "ytd": 0.03849825067945112,
-    "1y": 0.054429337585099935,
-    "3y": 0.18986691132137046,
-    "5y": 0.324097741708262,
-    "10y": 0.8754514655451129,
-    "all": 4.316480628440015
+    "1d": 0.00013836123952137847,
+    "1m": 0.004159652351305443,
+    "3m": 0.012809703698230424,
+    "ytd": 0.0386419385846557,
+    "1y": 0.05399755224026048,
+    "3y": 0.19003154278208623,
+    "5y": 0.32408660769304887,
+    "10y": 0.8753712555493978,
+    "all": 4.317216223289657
   },
   "changesvalue": {
-    "1d": 0.7390999999997803,
-    "1m": 23.589500000000044,
-    "3m": 67.57219999999961,
-    "ytd": 198.05359999999928,
-    "1y": 275.78019999999924,
-    "3y": 852.5078999999996,
-    "5y": 1307.6859999999997,
-    "10y": 2493.8696999999997,
-    "all": 4337.6357
+    "1d": 0.7391999999999825,
+    "1m": 22.134099999999307,
+    "3m": 67.58009999999922,
+    "ytd": 198.79279999999926,
+    "1y": 273.7424000000001,
+    "3y": 853.2470999999996,
+    "5y": 1307.8329999999996,
+    "10y": 2494.0928999999996,
+    "all": 4338.3749
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -280,9 +280,9 @@
     "all": -0.058117171382496
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2005-03-16",
-    "value": 5342.5367
+    "value": 5343.2759
   },
   "trade": null
 }

@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Efek Ekuitas",
-      "percentage": 69.39
+      "percentage": 72.77
     },
     {
       "name": "Instrumen Pasar Uang & Kas",
-      "percentage": 24.84
+      "percentage": 20.94
     },
     {
       "name": "Efek Obligasi",
-      "percentage": 5.76
+      "percentage": 6.29
     }
   ],
   "holding": [
@@ -150,8 +150,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 57897907454.74,
-    "date": "2026-08-01"
+    "value": 52571170942.45,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -213,9 +213,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2009-02-27",
-    "value": 9899.72
+    "value": 9836.37
   },
   "trade": null
 }

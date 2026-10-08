@@ -60,37 +60,27 @@
   "asset": [
     {
       "name": "Obligasi Pemerintah",
-      "percentage": 8.9
+      "percentage": 9.3
     },
     {
       "name": "Obligasi Korporasi",
-      "percentage": 6.9
+      "percentage": 7.2
     },
     {
       "name": "Pasar Uang & Kas",
-      "percentage": 22.3
+      "percentage": 68.9
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 62
+      "percentage": 14.5
     }
   ],
   "holding": [
     {
-      "symbol": "ARCI",
-      "name": "Archi Indonesia Tbk",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4850,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
       "symbol": "",
-      "name": "Bank Mega Syariah",
+      "name": "Bank Jabar Banten Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -98,9 +88,19 @@
     },
     {
       "symbol": "",
-      "name": "Bank Rakyat Indonesia (Persero) Tbk, PT",
+      "name": "Bank Kb Indonesia Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Mega Syariah",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -110,29 +110,19 @@
       "symbol": "",
       "name": "Bank Tabungan Negara (Persero) Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "BRMS",
-      "name": "Bumi Resources Minerals Tbk.",
+      "symbol": "ITMG",
+      "name": "Indo Tambangraya Megah Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 4633,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BUMI",
-      "name": "Bumi Resources Tbk",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4498,
+      "company_id": 4283,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -140,7 +130,7 @@
       "symbol": "EMAS",
       "name": "Merdeka Gold Resources Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 9567,
       "product_type": "Saham",
@@ -150,7 +140,7 @@
       "symbol": "",
       "name": "Pemerintah Republik Indonesia",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -160,7 +150,17 @@
       "symbol": "",
       "name": "Perusahaan Listrik Negara (Persero), PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. Jaccs Mitra Pinasthika Mustika Finance Ir Obligasi",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -170,7 +170,7 @@
       "symbol": "TINS",
       "name": "Timah Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4493,
       "product_type": "Saham",
@@ -203,8 +203,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 74000000000,
-    "date": "2026-08-01"
+    "value": 70000000000,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -215,40 +215,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.005781359352098336,
-    "3y": 0.03843899028478592,
-    "5y": 0.030092242761394106,
-    "10y": 0.041062362818321096,
-    "all": 0.08785833163483359
+    "1y": -0.014921979881381442,
+    "3y": 0.037920220889108736,
+    "5y": 0.03134820274898287,
+    "10y": 0.0411419100717898,
+    "all": 0.0877852188718482
   },
   "cagr_adjusted": {
-    "1y": -0.005781359352098336,
-    "3y": 0.03843899028478592,
-    "5y": 0.030092242761394106,
-    "10y": 0.041062362818321096,
-    "all": 0.0878680856779106
+    "1y": -0.014921979881381442,
+    "3y": 0.037920220889108736,
+    "5y": 0.03134820274898287,
+    "10y": 0.0411419100717898,
+    "all": 0.0877949634374453
   },
   "simplereturn": {
-    "1d": 0.00017051186449901223,
-    "1m": -0.054340998341388835,
-    "3m": 0.00040608877709225055,
-    "ytd": -0.11474097647431847,
-    "1y": -0.005781359352098336,
-    "3y": 0.11980643453643358,
-    "5y": 0.15979326748852318,
-    "10y": 0.4954347165023918,
-    "all": 7.73296406468357
+    "1d": -0.0014979511088492048,
+    "1m": -0.060871878281657965,
+    "3m": -0.005354199070455534,
+    "ytd": -0.11606705121022753,
+    "1y": -0.014921979881381442,
+    "3y": 0.11812901924612329,
+    "5y": 0.16688103263270326,
+    "10y": 0.49657776652396857,
+    "all": 7.719882511479337
   },
   "changesvalue": {
-    "1d": 1.4915000000000873,
-    "1m": -502.7311000000009,
-    "3m": 3.5512999999991735,
-    "ytd": -1133.9421000000002,
-    "1y": -50.8734000000004,
-    "3y": 936.0087000000003,
-    "5y": 1205.3706000000002,
-    "10y": 2898.4223999999995,
-    "all": 7746.8834
+    "1d": -13.105100000000675,
+    "1m": -566.2178000000004,
+    "3m": -47.02380000000085,
+    "ytd": -1147.0472000000009,
+    "1y": -132.32670000000144,
+    "3y": 922.9035999999996,
+    "5y": 1249.3152999999993,
+    "10y": 2898.542299999999,
+    "all": 7733.778299999999
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -270,9 +270,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2001-01-18",
-    "value": 8748.6834
+    "value": 8735.5783
   },
   "trade": null
 }

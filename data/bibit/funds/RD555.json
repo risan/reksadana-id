@@ -19,6 +19,7 @@
   },
   "released_date": "2006-06-09",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Obligas &/ Sukuk Pemerintah &/ Korporasi",
-      "percentage": 95.8
+      "percentage": 94.9
     },
     {
       "name": "Inst Pasar Uang",
-      "percentage": 4.2
+      "percentage": 5.1
     }
   ],
   "holding": [
@@ -73,17 +74,7 @@
       "symbol": "",
       "name": "Astra Sedaya Finance, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Bank Tabungan Negara (Persero) Tbk, PT",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +84,7 @@
       "symbol": "",
       "name": "Hutama Karya (Persero), PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +94,17 @@
       "symbol": "",
       "name": "Indomobil Finance Indonesia, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Lontar Papyrus Pulp & Paper industry, PT",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +114,7 @@
       "symbol": "",
       "name": "Oki Pulp & Paper Mills, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +124,7 @@
       "symbol": "",
       "name": "Pemerintah Republik Indonesia",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +134,7 @@
       "symbol": "",
       "name": "Pindo Deli Pulp And Paper Mills, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +144,7 @@
       "symbol": "",
       "name": "Prime Agri Resources Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,7 +154,7 @@
       "symbol": "",
       "name": "Profesional Telekomunikasi Indonesia, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -163,7 +164,7 @@
       "symbol": "",
       "name": "Wahana Inti Selaras, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,8 +197,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 1529000000000,
-    "date": "2026-08-01"
+    "value": 1482000000000,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -208,40 +209,40 @@
     "percentage": 0.0657
   },
   "cagr": {
-    "1y": 0.04006286214434951,
-    "3y": 0.045836633525870196,
-    "5y": 0.04306418396577616,
-    "10y": 0.047137772176627735,
-    "all": 0.032318835280495284
+    "1y": 0.04005217122585858,
+    "3y": 0.0458748258822721,
+    "5y": 0.04306252170989877,
+    "10y": 0.04713470810815301,
+    "all": 0.03231997525394581
   },
   "cagr_adjusted": {
-    "1y": 0.04006286214434951,
-    "3y": 0.045836633525870196,
-    "5y": 0.04306418396577616,
-    "10y": 0.047137772176627735,
-    "all": 0.03232326953064257
+    "1y": 0.04005217122585858,
+    "3y": 0.0458748258822721,
+    "5y": 0.04306252170989877,
+    "10y": 0.04713470810815301,
+    "all": 0.03232440906417655
   },
   "simplereturn": {
-    "1d": 0.00010957142310141776,
-    "1m": 0.0035126903788398334,
-    "3m": 0.010132486629330417,
-    "ytd": 0.029635652444758964,
-    "1y": 0.04006286214434951,
-    "3y": 0.14390919412485514,
-    "5y": 0.23468213924086445,
-    "10y": 0.585032810788074,
-    "all": 0.9067279000000001
+    "1d": 0.00010955941852008877,
+    "1m": 0.00329277184887089,
+    "3m": 0.010132435558751318,
+    "ytd": 0.029748458728128258,
+    "1y": 0.04005217122585858,
+    "3y": 0.14403452015100315,
+    "5y": 0.23467230115451843,
+    "10y": 0.5849864311688311,
+    "all": 0.9069368
   },
   "changesvalue": {
-    "1d": 0.20890000000008513,
-    "1m": 6.67430000000013,
-    "3m": 19.12610000000018,
-    "ytd": 54.88070000000016,
-    "1y": 73.44650000000001,
-    "3y": 239.87540000000013,
-    "5y": 362.4212,
-    "10y": 703.7699,
-    "all": 906.7279000000001
+    "1d": 0.20889999999985776,
+    "1m": 6.258499999999913,
+    "3m": 19.128099999999904,
+    "ytd": 55.08960000000002,
+    "1y": 73.4357,
+    "3y": 240.08429999999998,
+    "5y": 362.44859999999994,
+    "10y": 703.8118,
+    "all": 906.9368
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -263,9 +264,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2006-06-28",
-    "value": 1906.7279
+    "value": 1906.9368
   },
   "trade": null
 }

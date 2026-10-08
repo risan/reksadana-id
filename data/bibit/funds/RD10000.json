@@ -19,10 +19,11 @@
   },
   "released_date": "2025-11-07",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17805,
+    "exchange_rate": 17845,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -178,7 +179,7 @@
       "id": 31,
       "bank": "BCA",
       "account": " 6038532112 ",
-      "name": "Reksa Dana Batavia USD Money Market ",
+      "name": "Reksa Dana Batavia USD Money Market",
       "swift_code": "CENAIDJAXXX",
       "swift_address": "BANK CENTRAL ASIA, MENARA BCA, FLOOR 25, JL. MH THAMRIN 1, JAKARTA, Indonesia"
     }
@@ -197,23 +198,23 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 47637807.49,
-    "date": "2026-08-01"
+    "value": 67926093.19116,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
     "percentage": null
   },
   "avg_yield": {
-    "date": null,
-    "percentage": null
+    "date": "2026-09-30",
+    "percentage": 0.034
   },
   "cagr": {
-    "1y": 0.02340930394813956,
+    "1y": 0.023447778774326355,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.02340930394813956
+    "all": 0.023447778774326355
   },
   "cagr_adjusted": {
     "1y": 0.023518800861817235,
@@ -223,9 +224,9 @@
     "all": 0.023518800861817235
   },
   "simplereturn": {
-    "1d": 0.00009790483649885218,
-    "1m": 0.0015687812530640333,
-    "3m": 0.00571034754356603,
+    "1d": 0,
+    "1m": 0.0012742599490296325,
+    "3m": 0.005611340815121046,
     "ytd": 0.01814013754609789,
     "1y": 0.021500000000000075,
     "3y": null,
@@ -234,9 +235,9 @@
     "all": 0.021500000000000075
   },
   "changesvalue": {
-    "1d": 0.00009999999999998899,
-    "1m": 0.0016000000000000458,
-    "3m": 0.005800000000000027,
+    "1d": 0,
+    "1m": 0.0013000000000000789,
+    "3m": 0.005700000000000038,
     "ytd": 0.018199999999999994,
     "1y": 0.021500000000000075,
     "3y": null,
@@ -260,7 +261,7 @@
     "all": -0.0002977667493797
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2025-11-07",
     "value": 1.0215
   },

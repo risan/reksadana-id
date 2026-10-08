@@ -62,19 +62,29 @@
   "asset": [
     {
       "name": "Obligasi Negara",
-      "percentage": 96.62
+      "percentage": 95.63
     },
     {
       "name": "Pasar Uang dan/atau Deposito",
-      "percentage": 3.38
+      "percentage": 4.37
     }
   ],
   "holding": [
     {
       "symbol": "",
+      "name": "DEPOSITO PT BANK CAPITAL INDONESIA Tbk",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
       "name": "OBL NEGARA REPUBLIK INDONESIA SERI FR0082",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -84,7 +94,7 @@
       "symbol": "",
       "name": "OBL NEGARA REPUBLIK INDONESIA SERI FR0087",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -94,7 +104,7 @@
       "symbol": "FR0091",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 5802,
       "product_type": "FR",
@@ -104,19 +114,9 @@
       "symbol": "FR0096",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 5808,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
-      "symbol": "FR0100",
-      "name": "Obligasi FR",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 6155,
       "product_type": "FR",
       "serie_id": null
     },
@@ -124,7 +124,7 @@
       "symbol": "FR0101",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6261,
       "product_type": "FR",
@@ -134,7 +134,7 @@
       "symbol": "FR0103",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 8710,
       "product_type": "FR",
@@ -144,7 +144,7 @@
       "symbol": "FR0104",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 8733,
       "product_type": "FR",
@@ -154,7 +154,7 @@
       "symbol": "FR0106",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 9238,
       "product_type": "FR",
@@ -164,7 +164,7 @@
       "symbol": "FR0109",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 9551,
       "product_type": "FR",
@@ -193,8 +193,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 20567244803.03,
-    "date": "2026-08-01"
+    "value": 20690027202.58,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -212,33 +212,33 @@
     "all": null
   },
   "cagr_adjusted": {
-    "1y": 0.10671815587308964,
+    "1y": 0.10763476732446664,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.10671815587308964
+    "all": 0.10763476732446664
   },
   "simplereturn": {
-    "1d": -0.000773971059360723,
-    "1m": 0.00031384856806582206,
-    "3m": 0.019919999999999938,
+    "1d": 0.00044121107537842263,
+    "1m": 0.0011872522469484892,
+    "3m": 0.02037,
     "ytd": null,
-    "1y": 0.019919999999999938,
+    "1y": 0.02037,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.019919999999999938
+    "all": 0.02037
   },
   "changesvalue": {
-    "1d": -0.7900000000000773,
-    "1m": 0.31999999999993634,
-    "3m": 19.91999999999996,
+    "1d": 0.4500000000000455,
+    "1m": 1.2100000000000364,
+    "3m": 20.370000000000005,
     "ytd": null,
-    "1y": 19.91999999999996,
+    "1y": 20.370000000000005,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 19.91999999999996
+    "all": 20.370000000000005
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -256,9 +256,9 @@
     "all": -0.0063925869450472
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2026-07-27",
-    "value": 1019.92
+    "value": 1020.37
   },
   "trade": null
 }

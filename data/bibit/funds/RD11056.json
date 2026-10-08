@@ -18,11 +18,10 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17805,
+    "exchange_rate": 17830,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -69,8 +68,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": null,
-    "date": null
+    "value": 24496643.25036,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -132,9 +131,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "first_date": "2026-09-10",
-    "value": 0.9172
+    "value": 0.9204
   },
   "trade": null
 }

@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 88.5
+      "percentage": 96.9
     },
     {
       "name": "Ekuitas, Pasar Uang & Kas",
-      "percentage": 11.5
+      "percentage": 3.1
     }
   ],
   "investment_manager": {
@@ -79,8 +79,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 3043890620952.58,
-    "date": "2026-08-01"
+    "value": 2634837735411.86,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -142,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2022-09-15",
-    "value": 1044.02
+    "value": 1044.1577
   },
   "trade": null
 }

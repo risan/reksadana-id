@@ -21,7 +21,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17835,
+    "exchange_rate": 17830,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Efek Ekuitas",
-      "percentage": 19.45
+      "percentage": 14.14
     },
     {
       "name": "Inst. Pasar Uang & Kas",
-      "percentage": 7.46
+      "percentage": 17.93
     },
     {
       "name": "Efek Obligasi",
-      "percentage": 73.09
+      "percentage": 67.93
     }
   ],
   "holding": [
@@ -140,8 +140,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 1805706.13269,
-    "date": "2026-08-01"
+    "value": 1864075.65342,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -203,9 +203,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2007-12-14",
-    "value": 1.7572
+    "value": 1.7568
   },
   "trade": null
 }

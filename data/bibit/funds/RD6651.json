@@ -19,7 +19,6 @@
   },
   "released_date": "2024-06-19",
   "is_top_product": 0,
-  "is_featured_product": 1,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -74,7 +73,7 @@
       "symbol": "AMMN",
       "name": "Amman Mineral Internasional Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6026,
       "product_type": "Saham",
@@ -84,7 +83,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -94,7 +93,7 @@
       "symbol": "AUTO",
       "name": "Astra Otoparts Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4584,
       "product_type": "Saham",
@@ -104,7 +103,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -114,7 +113,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -124,27 +123,37 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "BFIN",
-      "name": "BFI Finance Indonesia Tbk.",
+      "symbol": "",
+      "name": "DEPOSITO PT BANK CIMB NIAGA",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4915,
-      "product_type": "Saham",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
       "serie_id": null
     },
     {
       "symbol": "",
-      "name": "FULLERTON LUXFUNDS - Global Absolute Alpha A USD Cap",
+      "name": "DEPOSITO PT Bank HSBC Indonesia",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "FULLERTON LUX FUNDS - Global Absolute Alpha A USD Cap",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -154,19 +163,9 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4623,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "TOTL",
-      "name": "Total Bangun Persada Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 5020,
       "product_type": "Saham",
       "serie_id": null
     }
@@ -193,8 +192,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 33143011391.22,
-    "date": "2026-08-01"
+    "value": 31995509112.49,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -205,40 +204,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.06857429718875496,
+    "1y": -0.07184686039748911,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.03208369161538205
+    "all": -0.03299319799683165
   },
   "cagr_adjusted": {
-    "1y": -0.06857429718875496,
+    "1y": -0.07184686039748911,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.03212131116516226
+    "all": -0.033031819649237626
   },
   "simplereturn": {
-    "1d": 0.005364399891628402,
-    "1m": -0.03853328911367215,
-    "3m": 0.0389624934203896,
-    "ytd": -0.15091662929369654,
-    "1y": -0.06857429718875496,
+    "1d": -0.0022528834752614246,
+    "1m": -0.04293114679515675,
+    "3m": 0.023825588726536617,
+    "ytd": -0.15282951518868004,
+    "1y": -0.07184686039748911,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.07229999999999992
+    "all": -0.07438999999999996
   },
   "changesvalue": {
-    "1d": 4.9500000000000455,
-    "1m": -37.17999999999995,
-    "3m": 34.79000000000008,
-    "ytd": -164.88999999999987,
-    "1y": -68.29999999999995,
+    "1d": -2.090000000000032,
+    "1m": -41.51999999999998,
+    "3m": 21.539999999999964,
+    "ytd": -166.9799999999999,
+    "1y": -71.64999999999998,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -72.29999999999995
+    "all": -74.38999999999999
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -260,9 +259,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2024-06-19",
-    "value": 927.7
+    "value": 925.61
   },
   "trade": null
 }

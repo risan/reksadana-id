@@ -19,6 +19,7 @@
   },
   "released_date": "2024-10-02",
   "is_top_product": 0,
+  "is_featured_product": 1,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,30 +61,20 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang dan/atau Deposito",
-      "percentage": 77.85
-    },
-    {
       "name": "Obligasi Negara",
       "percentage": 22.15
+    },
+    {
+      "name": "Pasar Uang dan/atau Deposito",
+      "percentage": 77.85
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "DEPOSITO BANK SULUT",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "DEPOSITO BPD RIAU",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,9 +82,9 @@
     },
     {
       "symbol": "",
-      "name": "DEPOSITO PT BANK ALADIN SYARIAH Tbk",
+      "name": "DEPOSITO PT BANK ALADIN SYARIAH Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -101,9 +92,49 @@
     },
     {
       "symbol": "",
-      "name": "OBL NEGARA REPUBLIK INDONESIA SERI FR0056",
+      "name": "DEPOSITO PT BANK CAPITAL INDONESIA Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK JABAR BANTEN SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK MEGA TBK",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK SULUT",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK TABUNGAN PENSIUNAN NASIONAL SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +144,7 @@
       "symbol": "",
       "name": "OBL NEGARA REPUBLIK INDONESIA SERI FR0059",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +154,7 @@
       "symbol": "PBS003",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6020,
       "product_type": "FR",
@@ -131,39 +162,9 @@
     },
     {
       "symbol": "",
-      "name": "SEKURITAS RUPIAH BANK INDONESIA 05/07/27",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "SEKURITAS RUPIAH BANK INDONESIA 07/16/27",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "SEKURITAS RUPIAH BANK INDONESIA 09/18/26",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "SEKURITAS RUPIAH BANK INDONESIA 11/06/26",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -192,8 +193,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 92332708272.82,
-    "date": "2026-08-01"
+    "value": 104167733735.56,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -204,40 +205,40 @@
     "percentage": 0.068
   },
   "cagr": {
-    "1y": 0.0410649432354373,
+    "1y": 0.041157127198207855,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.0447465199478323
+    "all": 0.04476976769569885
   },
   "cagr_adjusted": {
-    "1y": 0.0410649432354373,
+    "1y": 0.041157127198207855,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.044808828397820966
+    "all": 0.04483202438619083
   },
   "simplereturn": {
-    "1d": 0.00019231825924515,
-    "1m": 0.00486723221022034,
-    "3m": 0.015009293680297464,
-    "ytd": 0.03242425674717597,
-    "1y": 0.0410649432354373,
+    "1d": 0.00016481252575184513,
+    "1m": 0.004607659198763825,
+    "3m": 0.014912476307280542,
+    "ytd": 0.032594413196578076,
+    "1y": 0.041157127198207855,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.09215000000000018
+    "all": 0.09233000000000002
   },
   "changesvalue": {
-    "1d": 0.21000000000003638,
-    "1m": 5.290000000000191,
-    "3m": 16.15000000000009,
-    "ytd": 34.30000000000018,
-    "1y": 43.080000000000155,
+    "1d": 0.1799999999998363,
+    "1m": 5.009999999999991,
+    "3m": 16.049999999999955,
+    "ytd": 34.48000000000002,
+    "1y": 43.179999999999836,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 92.15000000000009
+    "all": 92.32999999999993
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -259,9 +260,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2024-10-02",
-    "value": 1092.15
+    "value": 1092.33
   },
   "trade": null
 }

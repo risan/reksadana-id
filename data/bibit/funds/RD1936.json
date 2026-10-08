@@ -61,7 +61,7 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 99.27
+      "percentage": 98.54
     },
     {
       "name": "Obligasi",
@@ -69,7 +69,7 @@
     },
     {
       "name": "Kas",
-      "percentage": 0.73
+      "percentage": 1.46
     },
     {
       "name": "Deposito",
@@ -87,8 +87,8 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 33052000917.09,
-    "date": "2026-08-01"
+    "value": 32143465505.42,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -150,9 +150,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2018-12-18",
-    "value": 603.2219
+    "value": 601.7301
   },
   "trade": null
 }

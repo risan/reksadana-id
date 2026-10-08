@@ -63,11 +63,11 @@
     },
     {
       "name": "Inst. Pasar Uang & Kas",
-      "percentage": 1.72
+      "percentage": 2.27
     },
     {
       "name": "Efek Obligasi",
-      "percentage": 98.28
+      "percentage": 97.73
     }
   ],
   "investment_manager": {
@@ -81,8 +81,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 61630223780.48,
-    "date": "2026-08-01"
+    "value": 61566690627.43,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -144,9 +144,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2024-10-24",
-    "value": 1024.8471
+    "value": 1023.4007
   },
   "trade": null
 }

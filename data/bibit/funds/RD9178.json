@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17835,
+    "exchange_rate": 17830,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -69,8 +69,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 5795719.23866,
-    "date": "2026-08-01"
+    "value": 6647216.76973,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -132,9 +132,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2025-02-06",
-    "value": 1.6047
+    "value": 1.6048
   },
   "trade": null
 }

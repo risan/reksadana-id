@@ -19,6 +19,7 @@
   },
   "released_date": "2003-04-28",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Pasar Uang & Kas",
-      "percentage": 2.6
+      "percentage": 7.4
     },
     {
       "name": "Obligasi",
-      "percentage": 97.4
+      "percentage": 92.6
     }
   ],
   "holding": [
@@ -73,7 +74,17 @@
       "symbol": "",
       "name": "Armadian Tritunggal, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Tabungan Negara (Persero) Tbk, PT Deposito",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +94,7 @@
       "symbol": "",
       "name": "Barito Pacific Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +104,7 @@
       "symbol": "",
       "name": "Federal International Finance, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +114,7 @@
       "symbol": "",
       "name": "Hino Finance Indonesia, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +124,7 @@
       "symbol": "",
       "name": "Indah Kiat Pulp & Paper Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +134,7 @@
       "symbol": "",
       "name": "Mandiri Tunas Finance, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +144,7 @@
       "symbol": "",
       "name": "Pindo Deli Pulp And Paper Mills, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -141,9 +152,9 @@
     },
     {
       "symbol": "",
-      "name": "PT Bank Pembangunan Daerah Jawa Barat D",
+      "name": "PT Bank Pembangunan Daerah Jawa Barat I",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,17 +164,7 @@
       "symbol": "",
       "name": "Sinar Mas Multiartha Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Sinar Mas Multifinance, PT",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -217,8 +218,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 668000000000,
-    "date": "2026-08-01"
+    "value": 641000000000,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -229,40 +230,40 @@
     "percentage": 0.0786
   },
   "cagr": {
-    "1y": 0.044224818660785425,
-    "3y": 0.05814808182199105,
-    "5y": 0.05535505732063628,
-    "10y": 0.06127079873121488,
-    "all": 0.0732358547048022
+    "1y": 0.04418776956654624,
+    "3y": 0.058196612757669186,
+    "5y": 0.05535662810686581,
+    "10y": 0.06126798169414416,
+    "all": 0.07323325013302329
   },
   "cagr_adjusted": {
-    "1y": 0.044224818660785425,
-    "3y": 0.05814808182199105,
-    "5y": 0.05535505732063628,
-    "10y": 0.06127079873121488,
-    "all": 0.07324485503087508
+    "1y": 0.04418776956654624,
+    "3y": 0.058196612757669186,
+    "5y": 0.05535662810686581,
+    "10y": 0.06126798169414416,
+    "all": 0.07324224906046739
   },
   "simplereturn": {
-    "1d": 0.00013878926546295745,
-    "1m": 0.004493340324804418,
-    "3m": 0.012104197268480998,
-    "ytd": 0.030961479940623038,
-    "1y": 0.044224818660785425,
-    "3y": 0.1847844539852097,
-    "5y": 0.30916075602922,
-    "10y": 0.8124337726413386,
-    "all": 4.115030872388736
+    "1d": 0.00013759840150062708,
+    "1m": 0.004208858715553765,
+    "3m": 0.012135083470738106,
+    "ytd": 0.031103338592271434,
+    "1y": 0.04418776956654624,
+    "3y": 0.18494747843220072,
+    "5y": 0.3091704988062849,
+    "10y": 0.8123856639762752,
+    "all": 4.1157346924604035
   },
   "changesvalue": {
-    "1d": 0.7461999999995896,
-    "1m": 24.05369999999948,
-    "3m": 64.30879999999979,
-    "ytd": 161.48750000000018,
-    "1y": 227.73599999999988,
-    "3y": 838.6596,
-    "5y": 1269.8458999999993,
-    "10y": 2410.3797,
-    "all": 4325.9797
+    "1d": 0.7399000000004889,
+    "1m": 22.54030000000057,
+    "3m": 64.47980000000007,
+    "ytd": 162.22740000000067,
+    "1y": 227.58460000000014,
+    "3y": 839.3995000000004,
+    "5y": 1270.0511999999999,
+    "10y": 2410.6326000000004,
+    "all": 4326.7196
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -280,9 +281,9 @@
     "all": -0.2056328287097518
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2003-09-09",
-    "value": 5377.2427
+    "value": 5377.9826
   },
   "trade": null
 }

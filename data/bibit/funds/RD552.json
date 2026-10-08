@@ -64,15 +64,15 @@
     },
     {
       "name": "Obligasi Korporasi",
-      "percentage": 76.4
+      "percentage": 76.8
     },
     {
       "name": "Inst Pasar Uang",
-      "percentage": 19.3
+      "percentage": 19.1
     },
     {
       "name": "Saham",
-      "percentage": 4.3
+      "percentage": 4
     }
   ],
   "holding": [
@@ -124,8 +124,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 27409918491.62,
-    "date": "2026-08-01"
+    "value": 27340633931.92,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -187,9 +187,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2005-04-01",
-    "value": 5840.4198
+    "value": 5841.2071
   },
   "trade": null
 }

@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Pasar Uang & Kas",
-      "percentage": 10.8
+      "percentage": 21.7
     },
     {
       "name": "Saham",
-      "percentage": 89.2
+      "percentage": 78.3
     }
   ],
   "holding": [
@@ -133,8 +133,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 17787132678.7,
-    "date": "2026-08-01"
+    "value": 16340896158.33,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -196,9 +196,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2016-09-23",
-    "value": 879.5139
+    "value": 877.1939
   },
   "trade": null
 }

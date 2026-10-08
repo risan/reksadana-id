@@ -64,15 +64,15 @@
     },
     {
       "name": "Obligasi",
-      "percentage": 82.15
+      "percentage": 82.1
     },
     {
       "name": "Kas",
-      "percentage": 4.65
+      "percentage": 1.45
     },
     {
       "name": "Deposito",
-      "percentage": 13.2
+      "percentage": 16.45
     }
   ],
   "investment_manager": {
@@ -86,8 +86,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 30303687052,
-    "date": "2026-08-01"
+    "value": 30363314282.98,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -149,9 +149,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2022-01-14",
-    "value": 1142.1748
+    "value": 1142.4063
   },
   "trade": null
 }

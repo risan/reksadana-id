@@ -65,7 +65,7 @@
     },
     {
       "name": "Saham",
-      "percentage": 99.2
+      "percentage": 98.99
     },
     {
       "name": "Obligasi",
@@ -73,7 +73,7 @@
     },
     {
       "name": "Kas",
-      "percentage": 0.07
+      "percentage": 1.01
     }
   ],
   "holding": [
@@ -145,8 +145,8 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 1912359759070.7,
-    "date": "2026-08-01"
+    "value": 1788537644393.88,
+    "date": "2026-09-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -208,9 +208,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2012-10-31",
-    "value": 446.5051
+    "value": 444.9307
   },
   "trade": null
 }
