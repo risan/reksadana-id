@@ -94,8 +94,16 @@ export function prepareFunds(data, includeDividends = false) {
   }));
 }
 
+const SORT_KEYS = new Set(['name', 'return_1m', 'return_ytd', 'return_1y', 'return_3y', 'aum']);
+
+// A sort key from a link the visitor may have edited; anything unknown sorts like the default.
+export function parseSortKey(key) {
+  return SORT_KEYS.has(key) ? key : DEFAULT_STATE.sort;
+}
+
 export function sortFunds(funds, key, direction) {
-  const sortKey = key === 'aum' ? 'aum_idr' : key;
+  const knownKey = parseSortKey(key);
+  const sortKey = knownKey === 'aum' ? 'aum_idr' : knownKey;
 
   return [...funds].sort((a, b) => {
     const left = a[sortKey];

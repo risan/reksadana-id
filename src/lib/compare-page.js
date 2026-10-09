@@ -7,6 +7,7 @@ import { CHART_RANGES, MAX_FUNDS, MIN_FUNDS, analyzeFunds, chartRange, indexedSe
 import { describeCosts } from './costs-text.js';
 import { readTrayText, writeTray } from './compare-tray.js';
 import { DEFAULT_STATE, escapeHtml, filterFunds, prepareFunds, sortFunds } from './explorer.js';
+import { fetchFundRecord, getJson } from './fetch-json.js';
 import { attachTooltip, axes, chartHeight, cssColor, toSeconds } from './fund-charts.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from './format.js';
 import { shariaText, typeName } from './fund-types.js';
@@ -20,18 +21,6 @@ const CAGR_PERIODS = ['3y', '5y'];
 const DRAWDOWN_PERIODS = ['1y', '3y'];
 const DEFAULT_RANGE = '1y';
 const CHART_HEIGHT = 320;
-
-async function getJson(url, options) {
-  try {
-    const response = await fetch(url, options);
-
-    return response.ok ? await response.json() : null;
-  } catch {
-    return null;
-  }
-}
-
-const hasCurrentShape = (record) => Boolean(record?.fund && record.costs);
 
 export async function mountComparePage() {
   const locale = document.documentElement.lang;
@@ -87,15 +76,9 @@ export async function mountComparePage() {
 
     loaded.set(id, { status: 'loading' });
 
-    const url = `/api/funds/${encodeURIComponent(id)}.json`;
-    let record = await getJson(url);
+    const record = await fetchFundRecord(id);
 
-    // The browser may hold a record from before a deploy for an hour; it lacks the fields added since.
-    if (record !== null && !hasCurrentShape(record)) {
-      record = await getJson(url, { cache: 'reload' });
-    }
-
-    if (hasCurrentShape(record)) {
+    if (record !== null) {
       const history = pickNavHistory(record);
       const events = dividendEvents(record, history);
 

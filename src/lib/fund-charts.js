@@ -2,6 +2,7 @@ import uPlot from 'uplot';
 import 'uplot/dist/uPlot.min.css';
 import * as m from '../paraglide/messages.js';
 import { setLocale } from '../paraglide/runtime.js';
+import { fetchFundRecord } from './fetch-json.js';
 import { changeClass, formatChange, formatCompact, formatDate, formatMoney, formatMonth, formatMonthName, formatNav, formatNumber } from './format.js';
 import { dividendEvents, periodStartIndex, pickAumHistory, pickNavHistory, withDividendsReinvested } from './series.js';
 
@@ -79,6 +80,8 @@ export function attachTooltip(chart, container, renderTooltip) {
 
   tip.className = 'chart-tip';
   tip.hidden = true;
+  // A chart redrawn in the same container leaves its old tip behind, since uPlot only removes its own root.
+  container.querySelector('.chart-tip')?.remove();
   container.append(tip);
 
   chart.over.addEventListener('mouseenter', () => {
@@ -127,7 +130,21 @@ export async function mountFundCharts(symbol, includeToggle) {
   const rangeButtons = [...document.querySelectorAll('[data-range]')];
   const readout = document.getElementById('range-readout');
 
-  const fund = await (await fetch(`/api/funds/${encodeURIComponent(symbol)}.json`)).json();
+  const fund = await fetchFundRecord(symbol);
+
+  if (fund === null) {
+    const message = document.getElementById('nav-empty');
+
+    message.textContent = m.chart_load_failed();
+    message.hidden = false;
+
+    for (const button of rangeButtons) {
+      button.disabled = true;
+    }
+
+    return;
+  }
+
   const navHistory = pickNavHistory(fund);
   const events = dividendEvents(fund, navHistory);
   const totalHistory = includeToggle && events.length > 0 ? withDividendsReinvested(navHistory, events) : null;
