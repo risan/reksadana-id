@@ -408,6 +408,8 @@ const sources = [
     </ul>
   </nav>
 
+  <div class="fund-body">
+  <div class="fund-main">
   <section class="fund-section" id="overview">
     <dl class="figures">
       {figures.map((figure) => (
@@ -458,82 +460,36 @@ const sources = [
         </p>
       )
     }
-
-    <div class="overview-grid">
-      <div class="overview-left">
-        {
-          glance.length > 0 && (
-            <section class="card glance">
-              <h2 class="card-title">{m.glance_title()}</h2>
-              <ul class="glance-list">
-                {glance.map((sentence) => <li>{sentence}</li>)}
-              </ul>
-            </section>
-          )
-        }
-
-        {
-          summary !== null && (
-            <section class="card profile-card">
-              <h2 class="card-title">{m.profile_title()} <span class="aside muted">{m.profile_aside()}</span></h2>
-              {
-                profileText === summary ? (
-                  <p class="profile-text">{summary}</p>
-                ) : (
-                  <details class="profile">
-                    <summary>{summary}</summary>
-                    <p class="profile-text">{profileText}</p>
-                  </details>
-                )
-              }
-            </section>
-          )
-        }
-      </div>
-
-      <div class="overview-rail">
-        {
-          buyLinks.length > 0 && (
-            <section class="card buy-card" id="buy">
-              <h2 class="card-title">{m.buy_title()}</h2>
-              {buyLinks.map((link) => (
-                <div class="buy-row">
-                  <a class="btn btn-primary" href={link.url} target="_blank" rel="sponsored noopener">{m.buy_open({ name: link.name })}<Fragment set:html={icon('arrow-up-right')} /></a>
-                  <span class="referral small muted">
-                    {m.buy_referral_code()} <code>{link.code}</code>
-                    <button class="copy" type="button" data-copy={link.code} data-copied={m.buy_copied()} data-failed={m.buy_copy_failed()} hidden><Fragment set:html={icon('copy', { size: 14 })} /><span class="copy-label">{m.buy_copy()}</span></button>
-                  </span>
-                </div>
-              ))}
-              <p class="small muted">{m.buy_note()}</p>
-            </section>
-          )
-        }
-
-        <section class="card details-card">
-          <h2 class="card-title">{m.details_title()}</h2>
-          <dl class="kv">
-            {details.map(([label, value, isMuted]) => (
-              <>
-                <dt>{label}</dt>
-                <dd class={isMuted ? 'muted' : undefined}>{value}</dd>
-              </>
-            ))}
-          </dl>
-          {
-            ojkSparkPath && (
-              <figure class="ojk-spark">
-                <svg viewBox="0 0 200 36" preserveAspectRatio="none" role="img" aria-label={m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}>
-                  <path d={ojkSparkPath} fill="none" stroke="var(--gold)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" />
-                </svg>
-                <figcaption class="muted small">{m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}</figcaption>
-              </figure>
-            )
-          }
-        </section>
-      </div>
-    </div>
   </section>
+
+  {
+    glance.length > 0 && (
+      <section class="card glance">
+        <h2 class="card-title">{m.glance_title()}</h2>
+        <ul class="glance-list">
+          {glance.map((sentence) => <li>{sentence}</li>)}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    summary !== null && (
+      <section class="card profile-card">
+        <h2 class="card-title">{m.profile_title()} <span class="aside muted">{m.profile_aside()}</span></h2>
+        {
+          profileText === summary ? (
+            <p class="profile-text">{summary}</p>
+          ) : (
+            <details class="profile">
+              <summary>{summary}</summary>
+              <p class="profile-text">{profileText}</p>
+            </details>
+          )
+        }
+      </section>
+    )
+  }
 
   {
     showPerformance && (
@@ -867,6 +823,51 @@ const sources = [
       }
     </div>
   </section>
+  </div>
+
+  <aside class="fund-aside">
+    {
+      buyLinks.length > 0 && (
+        <section class="card buy-card" id="buy">
+          <h2 class="card-title">{m.buy_title()}</h2>
+          {buyLinks.map((link) => (
+            <div class="buy-row">
+              <a class="btn btn-primary" href={link.url} target="_blank" rel="sponsored noopener">{m.buy_open({ name: link.name })}<Fragment set:html={icon('arrow-up-right')} /></a>
+              <span class="referral small muted">
+                {m.buy_referral_code()} <code>{link.code}</code>
+                <button class="copy" type="button" data-copy={link.code} data-copied={m.buy_copied()} data-failed={m.buy_copy_failed()} hidden><Fragment set:html={icon('copy', { size: 14 })} /><span class="copy-label">{m.buy_copy()}</span></button>
+              </span>
+            </div>
+          ))}
+          <p class="small muted">{m.buy_note()}</p>
+        </section>
+      )
+    }
+
+    <section class="card details-card">
+      <h2 class="card-title">{m.details_title()}</h2>
+      <dl class="kv">
+        {details.map(([label, value, isMuted]) => (
+          <>
+            <dt>{label}</dt>
+            <dd class={isMuted ? 'muted' : undefined}>{value}</dd>
+          </>
+        ))}
+      </dl>
+      {
+        ojkSparkPath && (
+          <figure class="ojk-spark">
+            <svg viewBox="0 0 200 36" preserveAspectRatio="none" role="img" aria-label={m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}>
+              <path d={ojkSparkPath} fill="none" stroke="var(--gold)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" />
+            </svg>
+            <figcaption class="muted small">{m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}</figcaption>
+          </figure>
+        )
+      }
+    </section>
+
+  </aside>
+  </div>
 </Base>
 
 <style is:global>
@@ -1138,32 +1139,50 @@ const sources = [
     line-height: 1.5;
   }
 
-  .overview-grid {
-    display: grid;
+  .fund-body {
+    display: flex;
+    flex-direction: column;
     gap: var(--s-3);
-    margin-top: var(--s-3);
   }
 
-  .overview-left,
-  .overview-rail {
+  .fund-main,
+  .fund-aside {
     display: contents;
   }
 
+  .fund-body .fund-section:not(#overview) {
+    margin-top: var(--s-5);
+  }
+
   .buy-card {
-    order: 1;
     scroll-margin-top: calc(var(--header-h) + 64px);
   }
 
-  .glance {
-    order: 2;
-  }
+  /* One column: the buy card sits right under the key figures, the rest of the details follow the summary. */
+  @media (max-width: 999px) {
+    .fund-body #overview {
+      order: 0;
+    }
 
-  .details-card {
-    order: 3;
-  }
+    .buy-card {
+      order: 1;
+    }
 
-  .profile-card {
-    order: 4;
+    .glance {
+      order: 2;
+    }
+
+    .details-card {
+      order: 3;
+    }
+
+    .profile-card {
+      order: 4;
+    }
+
+    .fund-body .fund-section:not(#overview) {
+      order: 5;
+    }
   }
 
   .glance-list {
@@ -1563,23 +1582,29 @@ const sources = [
   }
 
   @media (min-width: 1000px) {
-    .overview-grid {
+    .fund-body {
+      display: grid;
       grid-template-columns: minmax(0, 1fr) 340px;
+      gap: var(--s-5);
       align-items: start;
     }
 
-    .overview-left,
-    .overview-rail {
+    .fund-main,
+    .fund-aside {
       display: grid;
       gap: var(--s-3);
     }
 
-    .overview-left {
-      grid-column: 1;
-    }
-
-    .overview-rail {
+    .fund-aside {
       grid-column: 2;
+      padding-top: var(--s-4);
+    }
+  }
+
+  @media (min-width: 1000px) and (min-height: 900px) {
+    .fund-aside {
+      position: sticky;
+      top: calc(var(--header-h) + 48px + var(--s-2));
     }
   }
 
