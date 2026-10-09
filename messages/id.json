@@ -346,7 +346,6 @@
   "compare_no_match": "Tidak ada dana yang cocok.",
   "compare_empty": "Tambahkan sedikitnya dua dana untuk melihat perbandingan. Anda juga bisa mencentang dana di {link}.",
   "compare_empty_link": "daftar reksa dana",
-  "compare_selected_one": "Dipilih: {name}",
   "compare_remove": "Hapus {name}",
   "compare_open": "Bandingkan ({count})",
   "compare_clear": "Kosongkan",
@@ -427,5 +426,11 @@
   "cost_sources_differ": "Sumber-sumber kami menyebut angka yang berbeda dan tidak ada yang menyebut tanggalnya, jadi kami tampilkan masing-masing.",
   "cost_missing": "Tidak ada di sumber kami: {items}.",
 
-  "documents_card_title": "Prospektus dan factsheet"
+  "documents_card_title": "Prospektus dan factsheet",
+
+  "compare_selected_label": "Reksa dana yang dipilih",
+  "compare_count": "{count} dari {max} dipilih",
+  "compare_results_label": "Reksa dana yang cocok",
+  "compare_best": "Terbaik di antara dana yang dibandingkan",
+  "compare_best_note": "Titik emas menandai nilai terbaik di satu baris: imbal hasil tertinggi, penurunan terkecil, expense ratio terendah. Ini bukan peringkat keseluruhan."
 }

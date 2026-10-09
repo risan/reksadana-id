@@ -346,7 +346,6 @@
   "compare_no_match": "No fund matches.",
   "compare_empty": "Add at least two funds to see the comparison. You can also tick funds in the {link}.",
   "compare_empty_link": "fund list",
-  "compare_selected_one": "Selected: {name}",
   "compare_remove": "Remove {name}",
   "compare_open": "Compare ({count})",
   "compare_clear": "Clear",
@@ -427,5 +426,11 @@
   "cost_sources_differ": "The sources give different figures and neither says as of when, so we show each one.",
   "cost_missing": "Not in our sources: {items}.",
 
-  "documents_card_title": "Prospectus and factsheets"
+  "documents_card_title": "Prospectus and factsheets",
+
+  "compare_selected_label": "Funds you picked",
+  "compare_count": "{count} of {max} picked",
+  "compare_results_label": "Matching funds",
+  "compare_best": "Best of the funds compared",
+  "compare_best_note": "A gold dot marks the best value in a row: the highest return, the smallest fall, the lowest expense ratio. It is not an overall ranking."
 }
