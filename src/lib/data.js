@@ -289,6 +289,23 @@ function loadBareksaProfile(ids) {
   return mergeFirstValues(rows);
 }
 
+let prospectusRowsById = null;
+
+// The operating expense ratio a fund's prospectus states (scrapers/prospectus.js), from the first of its Bareksa
+// funds that has one: { value (a fraction), year, url, uploaded }, or null. A prospectus whose table could not be
+// read with certainty has no value.
+function loadOperatingExpense(ids) {
+  prospectusRowsById ??= new Map(readCsvObjects(BAREKSA_DIR, 'prospectus.csv').map((row) => [row.bareksa_id, row]));
+
+  const row = ids.map((id) => prospectusRowsById.get(id)).find((candidate) => candidate?.status === 'parsed');
+
+  if (row === undefined) {
+    return null;
+  }
+
+  return { value: Math.round(Number(row.operating_expense_pct) * 100) / 10000, year: Number(row.year), url: row.url, uploaded: row.uploaded };
+}
+
 // The first Makmur fund of one fund, with its raw Makmur record, or null when there is none.
 // The record's numbers are scaled: see "Makmur" in the README.
 function loadMakmur(ids) {
@@ -377,7 +394,13 @@ export function loadFundRecord(id) {
 
   return {
     ...bibitRecord,
-    costs: buildCosts({ bibit: bibitRecord, makmur: makmurFund?.data, bareksa: loadBareksaProfile(bareksa), currency: fund.currency }),
+    costs: buildCosts({
+      bibit: bibitRecord,
+      makmur: makmurFund?.data,
+      bareksa: loadBareksaProfile(bareksa),
+      operatingExpense: loadOperatingExpense(bareksa),
+      currency: fund.currency,
+    }),
     documents: firstBibitJson(bibit, 'documents'),
     switchables: firstBibitJson(bibit, 'switchables'),
     dividends: firstBibitJson(bibit, 'dividends'),
@@ -661,6 +684,8 @@ function buildFundSummaries() {
       },
       expense_ratio: record.costs.expense_ratio?.value ?? null,
       expense_source: record.costs.expense_ratio?.source ?? null,
+      operating_expense: record.costs.operating_expense?.value ?? null,
+      operating_expense_year: record.costs.operating_expense?.year ?? null,
       min_purchase: lowestRupiahMinPurchase(record.costs),
       fee_subscription: record.costs.max_fees.subscription?.max ?? null,
       fee_redemption: record.costs.max_fees.redemption?.max ?? null,

@@ -28,6 +28,8 @@ const fund = {
   total: { ...returns, return_1y: 0.2, spark: [100, 0, 20, 40] },
   expense_ratio: 0.0183,
   expense_source: 'bibit',
+  operating_expense: 0.0203,
+  operating_expense_year: 2025,
   min_purchase: 10000,
   fee_subscription: 0.02,
   fee_redemption: null,
@@ -80,6 +82,8 @@ test('decoding gives back what was encoded, at the precision the explorer shows'
   assert.equal(first.fee_subscription, 0.02);
   assert.equal(first.fee_redemption, null);
   assert.equal(first.expense_source, 'bibit');
+  assert.equal(first.operating_expense, 0.0203);
+  assert.equal(first.operating_expense_year, 2025);
   assert.equal(first.min_purchase, 10000);
   assert.equal(first.sharia, true);
   assert.equal(first.dividends, true);
@@ -98,6 +102,8 @@ test('a fund without values keeps its nulls and yes/no fields', () => {
   assert.equal(decoded.nav_date, null);
   assert.equal(decoded.spark, null);
   assert.equal(decoded.total, null);
+  assert.equal(decoded.operating_expense, null);
+  assert.equal(decoded.operating_expense_year, null);
   assert.equal(decoded.sharia, null);
   assert.equal(decoded.active, false);
   assert.equal(decoded.ojk_status, null);

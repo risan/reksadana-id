@@ -62,11 +62,11 @@ export const DEFAULT_STATE = {
 
 const SORT_KEYS = new Set([
   'name', 'return_1m', 'return_3m', 'return_6m', 'return_ytd', 'return_1y', 'return_3y', 'return_5y', 'cagr_3y', 'cagr_5y',
-  'drawdown_1y', 'drawdown_3y', 'aum', 'expense_ratio', 'min_purchase', 'fee_subscription', 'fee_redemption', 'launch_date',
+  'drawdown_1y', 'drawdown_3y', 'aum', 'expense_ratio', 'operating_expense', 'min_purchase', 'fee_subscription', 'fee_redemption', 'launch_date',
 ]);
 
 // Names and costs read best from the smallest, everything else from the largest.
-const ASCENDING_FIRST = new Set(['name', 'expense_ratio', 'min_purchase', 'fee_subscription', 'fee_redemption']);
+const ASCENDING_FIRST = new Set(['name', 'expense_ratio', 'operating_expense', 'min_purchase', 'fee_subscription', 'fee_redemption']);
 
 export const defaultDirection = (key) => (ASCENDING_FIRST.has(key) ? 1 : -1);
 

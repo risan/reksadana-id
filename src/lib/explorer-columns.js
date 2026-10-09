@@ -90,6 +90,14 @@ export const COLUMNS = [
     cell: (fund, { locale }) => (fund.expense_ratio === null ? nil : `${formatPercent(fund.expense_ratio, locale, 2)}<div class="sub">${fund.expense_source === 'makmur' ? 'Makmur' : 'Bibit'}</div>`),
   },
   {
+    ...percentColumn('operating_expense', () => m.col_operating_expense(), () => m.col_operating_expense_title(), 2),
+    cell: (fund, { locale }) => (fund.operating_expense === null ? nil : `${formatPercent(fund.operating_expense, locale, 2)}<div class="sub">${fund.operating_expense_year}</div>`),
+    csv: [
+      { header: () => `${m.col_operating_expense()} (%)`, value: (fund) => percentNumber(fund.operating_expense, 2) },
+      { header: () => m.csv_operating_expense_year(), value: (fund) => fund.operating_expense_year },
+    ],
+  },
+  {
     key: 'min_purchase',
     label: () => m.col_min_purchase(),
     title: () => m.col_min_purchase_title(),
@@ -122,7 +130,7 @@ export const COLUMN_PRESETS = [
   { key: 'simple', label: () => m.preset_simple(), columns: ['return_1y', 'spark', 'aum'] },
   { key: 'returns', label: () => m.preset_returns(), columns: ['return_1m', 'return_3m', 'return_6m', 'return_ytd', 'return_1y', 'return_3y', 'return_5y'] },
   { key: 'risk', label: () => m.preset_risk(), columns: ['return_1y', 'spark', 'drawdown_1y', 'drawdown_3y', 'cagr_3y'] },
-  { key: 'costs', label: () => m.preset_costs(), columns: ['expense_ratio', 'min_purchase', 'fee_subscription', 'fee_redemption', 'buy'] },
+  { key: 'costs', label: () => m.preset_costs(), columns: ['operating_expense', 'expense_ratio', 'min_purchase', 'fee_subscription', 'fee_redemption', 'buy'] },
   { key: 'everything', label: () => m.preset_everything(), columns: COLUMN_KEYS },
 ];
 

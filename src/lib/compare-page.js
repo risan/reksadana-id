@@ -290,7 +290,7 @@ export async function mountComparePage() {
 
   function costRows(column) {
     if (column.status !== 'ready') {
-      return { expense: missing, minimum: missing, fees: missing, custodian: missing };
+      return { operating: missing, expense: missing, minimum: missing, fees: missing, custodian: missing };
     }
 
     const costs = describeCosts(column.record.costs, locale);
@@ -298,6 +298,7 @@ export async function mountComparePage() {
     const lines = (items) => (items.length === 0 ? notInSources : items.map(line).join(''));
 
     return {
+      operating: costs.operatingExpense === null ? notInSources : `<div>${escapeHtml(costs.operatingExpense.text)} <span class="sub">${costs.operatingExpense.year}</span></div>`,
       expense: lines(costs.expenseRatios),
       minimum: lines(costs.minPurchases),
       fees: lines(costs.fees),
@@ -373,6 +374,7 @@ export async function mountComparePage() {
         ${analysis ? CAGR_PERIODS.map((period) => row(`${m.returns_row_per_year()} ${periodLabels[period]}`, returnCell((returns) => returns.cagr[period], formatChange, true), { title: m.returns_row_per_year_title(), className: 'num', best: { read: returnOf((returns) => returns.cagr[period]), prefer: 'high' } })).join('') : ''}
         ${analysis ? DRAWDOWN_PERIODS.map((period) => row(`${m.returns_row_worst_fall()} ${periodLabels[period]}`, returnCell((returns) => returns.maxdrawdown[period], formatPercent, false), { title: m.returns_row_worst_fall_title(), className: 'num', best: { read: returnOf((returns) => returns.maxdrawdown[period]), prefer: 'high' } })).join('') : ''}
         ${group(m.compare_group_costs())}
+        ${row(m.detail_operating_expense(), (column) => costRows(column).operating)}
         ${row(m.detail_expense_ratio(), (column) => costRows(column).expense, { best: { read: expenseRatioOf, prefer: 'low' } })}
         ${row(m.compare_row_min_purchase(), (column) => costRows(column).minimum)}
         ${row(m.compare_row_max_fees(), (column) => costRows(column).fees)}

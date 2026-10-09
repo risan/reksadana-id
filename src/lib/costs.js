@@ -74,13 +74,15 @@ function custodianOf({ bibit, bareksa }) {
 }
 
 // `bibit` is the fund's Bibit record ({} when Bibit does not list it), `makmur` its Makmur record data,
-// `bareksa` its Bareksa row of funds.csv (profile columns).
-export function buildCosts({ bibit, makmur, bareksa, currency }) {
+// `bareksa` its Bareksa row of funds.csv (profile columns), `operatingExpense` the audited ratio of its prospectus
+// ({ value, year, url, uploaded }, a fraction, or null).
+export function buildCosts({ bibit, makmur, bareksa, operatingExpense = null, currency }) {
   const buyableOnBibit = bibit.tradeable === 1;
   const expenseRatios = expenseRatiosOf({ bibit, makmur });
 
   return {
     currency,
+    operating_expense: operatingExpense && { ...operatingExpense, source: 'prospectus' },
     expense_ratio: expenseRatios[0] ?? null,
     expense_ratios: expenseRatios,
     min_purchase: [

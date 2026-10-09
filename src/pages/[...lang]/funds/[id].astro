@@ -242,7 +242,7 @@ const costRows = [
 ];
 const costRowsWithData = costRows.filter(([, values]) => values.length > 0);
 const missingCosts = [...(costs.expenseRatios.length === 0 ? [m.detail_expense_ratio()] : []), ...costRows.filter(([, values]) => values.length === 0).map(([label]) => label)];
-const hasCosts = costs.expenseRatios.length > 0 || costRowsWithData.length > 0;
+const hasCosts = costs.operatingExpense !== null || costs.expenseRatios.length > 0 || costRowsWithData.length > 0;
 
 const glance = [];
 const oneYear = ret('1y');
@@ -712,6 +712,21 @@ const sources = [
       <section class="fund-section" id="costs">
         <h2 class="section-title">{m.compare_group_costs()}</h2>
         <div class="card costs-card">
+          {
+            costs.operatingExpense && (
+              <div class="expense audited">
+                <h3 class="card-title">
+                  {m.detail_operating_expense()}
+                  <button class="info-btn" type="button" popovertarget="info-operating-expense" aria-label={m.info_about({ term: m.detail_operating_expense() })}><Fragment set:html={icon('info', { size: 16 })} /></button>
+                </h3>
+                <ul class="expense-list">
+                  <li><span class="expense-value">{costs.operatingExpense.text}</span><span class="muted small">{m.cost_operating_expense_year({ year: costs.operatingExpense.year })}</span></li>
+                </ul>
+                <p class="small"><a href={costs.operatingExpense.url}>{m.cost_operating_expense_link()}</a></p>
+                <div class="info-pop" id="info-operating-expense" popover>{m.cost_operating_expense_info()}</div>
+              </div>
+            )
+          }
           {
             costs.expenseRatios.length > 0 && (
               <div class="expense">
