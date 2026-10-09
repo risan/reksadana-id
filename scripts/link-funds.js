@@ -6,7 +6,8 @@ import { isSameManager, normalizeManager, normalizeName, readCsvRecords, toCsv, 
 const DATA_DIR = 'data';
 const FUNDS_FILE = `${DATA_DIR}/funds.csv`;
 const FUND_IDS_FILE = `${DATA_DIR}/fund-ids.csv`;
-const FUNDS_HEADER = ['id', 'name', 'other_names', 'manager', 'type', 'currency', 'sharia', 'launch_date', 'bibit', 'bareksa', 'kontan', 'makmur'];
+const OJK_DIR = `${DATA_DIR}/ojk/monthly`;
+const FUNDS_HEADER = ['id', 'name', 'other_names', 'manager', 'type', 'currency', 'sharia', 'launch_date', 'bibit', 'bareksa', 'kontan', 'makmur', 'ojk'];
 const FUND_IDS_HEADER = ['id', 'first_published', 'current_id'];
 
 const SOURCES = ['bibit', 'bareksa', 'kontan', 'makmur'];
@@ -702,6 +703,51 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
   };
 };
 
+// OJK names a fund type right after "Reksa Dana" ("REKSA DANA INDEKS BAHANA IDX30"), which the other sources leave out.
+const OJK_TYPE_WORD = /^(terproteksi|indeks|campuran|saham|pasar uang|pendapatan tetap) /;
+
+// OJK lists every registered fund by name and manager, with no ID. A fund takes the OJK name that has the same
+// normalized name and manager as one of its own names, when both sides are unique: the fund has one such OJK name,
+// the OJK name has one such fund, and OJK itself lists the name once. The fund's own name counts before its other
+// names, and OJK's name as written before the name without its type word. `ojkFunds` are the newest OJK rows as
+// { name, manager, currency, count }, with `count` the number of rows with that name in its month.
+export const matchOjkFunds = (funds, ojkFunds) => {
+  const keyOf = (name, manager) => `${normalizeName(name)}|${normalizeManager(manager)}`;
+  const usable = ojkFunds.filter((ojk) => ojk.count === 1 && normalizeManager(ojk.manager) !== '');
+  const indexes = [
+    Map.groupBy(usable, (ojk) => keyOf(ojk.name, ojk.manager)),
+    Map.groupBy(usable, (ojk) => keyOf(normalizeName(ojk.name).replace(OJK_TYPE_WORD, ''), ojk.manager)),
+  ];
+
+  const findCandidates = (fund) => {
+    for (const index of indexes) {
+      for (const name of [fund.name, ...fund.otherNames]) {
+        const candidates = (index.get(keyOf(name, fund.manager)) ?? []).filter((ojk) => fund.currency === '' || ojk.currency === fund.currency);
+
+        if (candidates.length > 0) {
+          return candidates;
+        }
+      }
+    }
+
+    return [];
+  };
+
+  const ojkNamesByFundId = new Map();
+
+  for (const fund of funds) {
+    const candidates = normalizeManager(fund.manager) === '' ? [] : findCandidates(fund);
+
+    if (candidates.length === 1) {
+      ojkNamesByFundId.set(fund.id, candidates[0].name);
+    }
+  }
+
+  const fundsByOjkName = Map.groupBy(ojkNamesByFundId, ([, ojkName]) => ojkName);
+
+  return new Map([...ojkNamesByFundId].filter(([, ojkName]) => fundsByOjkName.get(ojkName).length === 1));
+};
+
 const readNavSeries = (file, valueColumn) => {
   let text;
 
@@ -808,6 +854,24 @@ const loadRecords = async () => {
   ];
 };
 
+// The newest row of every OJK fund name, from the monthly files, oldest month first.
+const loadOjkFunds = async () => {
+  const months = fs.existsSync(OJK_DIR) ? fs.readdirSync(OJK_DIR).filter((file) => file.endsWith('.csv')).sort() : [];
+  const latestByName = new Map();
+
+  for (const file of months) {
+    const month = file.slice(0, -'.csv'.length);
+
+    for (const row of await readCsvRecords(`${OJK_DIR}/${file}`)) {
+      const known = latestByName.get(row.fund);
+
+      latestByName.set(row.fund, { name: row.fund, manager: row.manager, currency: row.currency, month, count: known?.month === month ? known.count + 1 : 1 });
+    }
+  }
+
+  return [...latestByName.values()];
+};
+
 const printReport = ({ groups, withBibit, withoutBibit, linksByRule, refused, retiredIds, activeWithoutBibit, unmappedTypes, unlinkedShortCandidates, unlinkedOtherManagerMatches, nameDuplicates }) => {
   console.log(`Funds: ${groups} (${withBibit} with Bibit, ${withoutBibit} without)`);
   console.log(`Links by rule: ${JSON.stringify(linksByRule)}`);
@@ -852,6 +916,7 @@ const toFundsCsv = (funds) => toCsv(FUNDS_HEADER, funds.map((fund) => [
   fund.sharia,
   fund.launchDate,
   ...SOURCES.map((source) => fund.sources[source].join(' ')),
+  fund.ojk ?? '',
 ]));
 
 const main = async () => {
@@ -859,11 +924,14 @@ const main = async () => {
   const today = new Date().toISOString().slice(0, 10);
   const result = linkFunds({ records: await loadRecords(), aliases: ALIASES, registry, today });
 
-  const sortedFunds = result.funds.toSorted((a, b) => a.id.localeCompare(b.id, 'en', { numeric: true }));
+  const ojkFunds = await loadOjkFunds();
+  const ojkNamesByFundId = matchOjkFunds(result.funds, ojkFunds);
+  const sortedFunds = result.funds.map((fund) => ({ ...fund, ojk: ojkNamesByFundId.get(fund.id) })).toSorted((a, b) => a.id.localeCompare(b.id, 'en', { numeric: true }));
 
   await writeFileAtomic(FUNDS_FILE, toFundsCsv(sortedFunds));
   await writeFileAtomic(FUND_IDS_FILE, toCsv(FUND_IDS_HEADER, result.registry.map((entry) => FUND_IDS_HEADER.map((column) => entry[column]))));
   printReport(result.report);
+  console.log(`OJK funds: ${ojkFunds.length}, linked to a fund: ${ojkNamesByFundId.size}`);
 };
 
 if (import.meta.url === pathToFileURL(process.argv[1]).href) {

@@ -13,7 +13,7 @@ const decide = (requestedSource, moment) => {
 
 // 2026-10-17 is a Saturday and 2026-10-03 is the first Saturday of October.
 test('the cron run on Saturday evening scrapes Makmur and the weekly Kontan', () => {
-  assert.deepEqual(decide('', '2026-10-17T22:17:00Z'), ['bibit', 'kontan', 'makmur', 'bareksa_profiles']);
+  assert.deepEqual(decide('', '2026-10-17T22:17:00Z'), ['bibit', 'kontan', 'makmur', 'bareksa_profiles', 'benchmarks', 'macro']);
 });
 
 test('a run GitHub starts hours late still belongs to the evening it was scheduled for', () => {
@@ -22,16 +22,16 @@ test('a run GitHub starts hours late still belongs to the evening it was schedul
 });
 
 test('the first Saturday of the month runs the full Kontan rescan instead', () => {
-  assert.deepEqual(decide('', '2026-10-03T22:17:00Z'), ['bibit', 'kontan_full', 'makmur', 'bareksa_profiles']);
+  assert.deepEqual(decide('', '2026-10-03T22:17:00Z'), ['bibit', 'kontan_full', 'makmur', 'bareksa_profiles', 'benchmarks', 'macro']);
 });
 
-test('a weekday scrapes only Bibit and the Bareksa profiles', () => {
-  assert.deepEqual(decide('', '2026-10-14T22:17:00Z'), ['bibit', 'bareksa_profiles']);
+test('a weekday scrapes Bibit, the Bareksa profiles, the benchmarks, and the macro data, plus OJK from the 8th to the 15th', () => {
+  assert.deepEqual(decide('', '2026-10-14T22:17:00Z'), ['bibit', 'bareksa_profiles', 'benchmarks', 'macro', 'ojk']);
 });
 
 test('the first of the month also scrapes Bareksa, even when the run starts after midnight UTC', () => {
-  assert.deepEqual(decide('', '2026-11-01T22:17:00Z'), ['bibit', 'bareksa', 'bareksa_profiles']);
-  assert.deepEqual(decide('', '2026-11-02T02:10:00Z'), ['bibit', 'bareksa', 'bareksa_profiles']);
+  assert.deepEqual(decide('', '2026-11-01T22:17:00Z'), ['bibit', 'bareksa', 'bareksa_profiles', 'benchmarks', 'macro']);
+  assert.deepEqual(decide('', '2026-11-02T02:10:00Z'), ['bibit', 'bareksa', 'bareksa_profiles', 'benchmarks', 'macro']);
 });
 
 test('a requested source runs alone', () => {

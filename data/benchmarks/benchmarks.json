@@ -1,0 +1,132 @@
+[
+  {
+    "id": "ihsg",
+    "name": { "id": "IHSG (Indeks Harga Saham Gabungan)", "en": "IHSG (Jakarta Composite Index)" },
+    "description": {
+      "id": "Indeks seluruh saham yang tercatat di Bursa Efek Indonesia, tertimbang kapitalisasi pasar.",
+      "en": "All shares listed on the Indonesia Stock Exchange, weighted by market capitalization."
+    },
+    "kind": "stock",
+    "source": "Bareksa",
+    "publisher": "Indonesia Stock Exchange",
+    "currency": "IDR",
+    "start_date": "1989-12-28"
+  },
+  {
+    "id": "lq45",
+    "name": { "id": "LQ45", "en": "LQ45" },
+    "description": {
+      "id": "45 saham paling likuid dan berkapitalisasi besar di Bursa Efek Indonesia.",
+      "en": "The 45 most liquid, large-capitalization shares on the Indonesia Stock Exchange."
+    },
+    "kind": "stock",
+    "source": "Bareksa",
+    "publisher": "Indonesia Stock Exchange",
+    "currency": "IDR",
+    "start_date": "2004-01-02"
+  },
+  {
+    "id": "idx30",
+    "name": { "id": "IDX30", "en": "IDX30" },
+    "description": {
+      "id": "30 saham paling likuid dan berkapitalisasi besar di Bursa Efek Indonesia.",
+      "en": "The 30 most liquid, large-capitalization shares on the Indonesia Stock Exchange."
+    },
+    "kind": "stock",
+    "source": "Bareksa",
+    "publisher": "Indonesia Stock Exchange",
+    "currency": "IDR",
+    "start_date": "2012-07-09"
+  },
+  {
+    "id": "jii",
+    "name": { "id": "Jakarta Islamic Index (JII)", "en": "Jakarta Islamic Index (JII)" },
+    "description": {
+      "id": "30 saham syariah yang paling likuid di Bursa Efek Indonesia.",
+      "en": "The 30 most liquid sharia-compliant shares on the Indonesia Stock Exchange."
+    },
+    "kind": "stock",
+    "source": "Bareksa",
+    "publisher": "Indonesia Stock Exchange",
+    "currency": "IDR",
+    "start_date": "2004-01-02"
+  },
+  {
+    "id": "issi",
+    "name": { "id": "Indeks Saham Syariah Indonesia (ISSI)", "en": "Indonesia Sharia Stock Index (ISSI)" },
+    "description": {
+      "id": "Seluruh saham syariah yang tercatat di Bursa Efek Indonesia.",
+      "en": "All sharia-compliant shares listed on the Indonesia Stock Exchange."
+    },
+    "kind": "stock",
+    "source": "Bareksa",
+    "publisher": "Indonesia Stock Exchange",
+    "currency": "IDR",
+    "start_date": "2011-05-12"
+  },
+  {
+    "id": "sri-kehati",
+    "name": { "id": "SRI-KEHATI", "en": "SRI-KEHATI" },
+    "description": {
+      "id": "25 saham dengan kinerja keberlanjutan yang baik (lingkungan, sosial, tata kelola), disusun bersama Yayasan KEHATI.",
+      "en": "25 shares with a good sustainability record (environment, social, governance), built with the KEHATI Foundation."
+    },
+    "kind": "stock",
+    "source": "Bareksa",
+    "publisher": "Indonesia Stock Exchange and KEHATI Foundation",
+    "currency": "IDR",
+    "start_date": "2009-06-08"
+  },
+  {
+    "id": "bareksa-money-market",
+    "name": { "id": "Indeks Reksa Dana Pasar Uang Bareksa", "en": "Bareksa Money Market Fund Index" },
+    "description": {
+      "id": "Rata-rata kinerja reksa dana pasar uang yang dipantau Bareksa.",
+      "en": "Average performance of the money market funds Bareksa tracks."
+    },
+    "kind": "fund-category",
+    "source": "Bareksa",
+    "publisher": "Bareksa",
+    "currency": "IDR",
+    "start_date": "2012-12-28"
+  },
+  {
+    "id": "bareksa-fixed-income",
+    "name": { "id": "Indeks Reksa Dana Pendapatan Tetap Bareksa", "en": "Bareksa Fixed Income Fund Index" },
+    "description": {
+      "id": "Rata-rata kinerja reksa dana pendapatan tetap yang dipantau Bareksa.",
+      "en": "Average performance of the fixed income funds Bareksa tracks."
+    },
+    "kind": "fund-category",
+    "source": "Bareksa",
+    "publisher": "Bareksa",
+    "currency": "IDR",
+    "start_date": "2004-01-02"
+  },
+  {
+    "id": "bareksa-equity",
+    "name": { "id": "Indeks Reksa Dana Saham Bareksa", "en": "Bareksa Equity Fund Index" },
+    "description": {
+      "id": "Rata-rata kinerja reksa dana saham yang dipantau Bareksa.",
+      "en": "Average performance of the equity funds Bareksa tracks."
+    },
+    "kind": "fund-category",
+    "source": "Bareksa",
+    "publisher": "Bareksa",
+    "currency": "IDR",
+    "start_date": "2004-01-02"
+  },
+  {
+    "id": "bareksa-balanced",
+    "name": { "id": "Indeks Reksa Dana Campuran Bareksa", "en": "Bareksa Balanced Fund Index" },
+    "description": {
+      "id": "Rata-rata kinerja reksa dana campuran yang dipantau Bareksa.",
+      "en": "Average performance of the balanced funds Bareksa tracks."
+    },
+    "kind": "fund-category",
+    "source": "Bareksa",
+    "publisher": "Bareksa",
+    "currency": "IDR",
+    "start_date": "2004-01-02"
+  }
+]

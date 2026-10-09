@@ -1,5 +1,6 @@
 import { closeSync, existsSync, fstatSync, openSync, readFileSync, readSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import { benchmarkAt, suggestBenchmarkIds } from './benchmarks.js';
 import { buildCosts } from './costs.js';
 import { makmurFundUrl } from './referrals.js';
 import { computeReturns, dividendEvents, fundCurrency, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, sparkline, withDividendsReinvested } from './series.js';
@@ -10,6 +11,9 @@ const BIBIT_DIR = path.join(DATA_DIR, 'bibit');
 const KONTAN_DIR = path.join(DATA_DIR, 'kontan');
 const BAREKSA_DIR = path.join(DATA_DIR, 'bareksa');
 const MAKMUR_DIR = path.join(DATA_DIR, 'makmur');
+const OJK_DIR = path.join(DATA_DIR, 'ojk', 'monthly');
+const BENCHMARKS_DIR = path.join(DATA_DIR, 'benchmarks');
+const MACRO_DIR = path.join(DATA_DIR, 'macro');
 
 function readText(directory, ...segments) {
   const file = path.join(directory, ...segments);
@@ -159,6 +163,7 @@ function parseFund(row) {
     currency: emptyToNull(row.currency),
     sharia: row.sharia === '' ? null : row.sharia === 'true',
     launch_date: emptyToNull(row.launch_date),
+    ojk: emptyToNull(row.ojk),
     ...indexFlags(sources, [row.name, ...otherNames]),
     sources,
   };
@@ -302,6 +307,66 @@ function loadMakmur(ids) {
   };
 }
 
+let ojkMonthsByName = null;
+let newestOjkMonth = '';
+
+// Every fund OJK lists, by the name OJK writes, with one row per month (oldest first): the manager, custodian,
+// type, currency, AUM in rupiah (also for a USD fund), and units in the fund's own currency.
+function loadOjkMonthsByName() {
+  if (ojkMonthsByName === null) {
+    const files = existsSync(OJK_DIR) ? readdirSync(OJK_DIR).filter((file) => file.endsWith('.csv')).sort() : [];
+
+    ojkMonthsByName = new Map();
+
+    for (const file of files) {
+      const month = file.slice(0, -'.csv'.length);
+
+      newestOjkMonth = month;
+
+      for (const row of readCsvObjects(OJK_DIR, file)) {
+        const rows = ojkMonthsByName.get(row.fund) ?? [];
+
+        if (rows.at(-1)?.month !== month) {
+          rows.push({ month, manager: row.manager, custodian: row.custodian, type: row.type, currency: row.currency, aum: Number(row.aum), units: Number(row.units) });
+          ojkMonthsByName.set(row.fund, rows);
+        }
+      }
+    }
+  }
+
+  return ojkMonthsByName;
+}
+
+// What OJK's monthly statistics say about a fund, or null when the fund is not linked to an OJK fund.
+// `status` is "zero_aum" when OJK's latest AUM is 0 (the fund is dissolved or not launched, per OJK),
+// "not_listed" when OJK no longer lists the fund in its newest month, and "registered" otherwise.
+function loadOjk(name) {
+  const months = name === null ? undefined : loadOjkMonthsByName().get(name);
+
+  if (months === undefined) {
+    return null;
+  }
+
+  const latest = months.at(-1);
+  let status = 'registered';
+
+  if (latest.month !== newestOjkMonth) {
+    status = 'not_listed';
+  } else if (latest.aum === 0) {
+    status = 'zero_aum';
+  }
+
+  return {
+    name,
+    manager: latest.manager,
+    custodian: latest.custodian,
+    type: latest.type,
+    currency: latest.currency,
+    status,
+    months: months.map(({ month, aum, units }) => ({ month, aum, units })),
+  };
+}
+
 // Everything about one fund, as served by /api/funds/<id>.json. The Bibit fields (profile, holdings, fees,
 // documents) come from its Bibit records and are missing for a fund Bibit does not list.
 export function loadFundRecord(id) {
@@ -322,6 +387,7 @@ export function loadFundRecord(id) {
     kontan: loadKontan(kontan),
     bareksa: loadBareksa(bareksa),
     makmur: makmurFund,
+    ojk: loadOjk(fund.ojk),
   };
 }
 
@@ -462,6 +528,50 @@ function hasLargeMoveInLastYear(points) {
   return largeMoves(points).some((move) => move.date > yearAgo);
 }
 
+const BI_RATE_SERIES = {
+  id: 'bi-rate',
+  name: { id: 'BI-Rate (suku bunga acuan Bank Indonesia)', en: 'BI-Rate (Bank Indonesia policy rate)' },
+  description: {
+    id: 'Suku bunga acuan Bank Indonesia (BI 7-Day Reverse Repo Rate), dalam persen per tahun, pada tanggal keputusan Rapat Dewan Gubernur.',
+    en: "Bank Indonesia's policy rate (BI 7-Day Reverse Repo Rate) in percent per year, on the date of the Board of Governors' decision.",
+  },
+  kind: 'rate',
+  source: 'Bank Indonesia',
+  publisher: 'Bank Indonesia',
+  currency: 'IDR',
+};
+
+let benchmarkSeries = null;
+
+// The series funds are compared with, each as its metadata and points ({ date, value }, oldest first):
+// the stock and fund category indices in data/benchmarks/, and the BI-Rate from data/macro/.
+export function loadBenchmarks() {
+  if (benchmarkSeries === null) {
+    const toPoints = (rows, valueColumn) => rows.map((row) => ({ date: row.date, value: Number(row[valueColumn]) }));
+    const indexMetadata = JSON.parse(readText(BENCHMARKS_DIR, 'benchmarks.json'));
+    const biRatePoints = toPoints(readCsvObjects(MACRO_DIR, 'bi-rate.csv'), 'rate');
+
+    benchmarkSeries = [
+      ...indexMetadata.map((metadata) => ({ ...metadata, points: toPoints(readCsvObjects(BENCHMARKS_DIR, `${metadata.id}.csv`), 'value') })),
+      { ...BI_RATE_SERIES, start_date: biRatePoints[0].date, points: biRatePoints },
+    ];
+  }
+
+  return benchmarkSeries;
+}
+
+// The benchmarks suggested for a fund, measured to the date of the fund's latest NAV so that the periods line up.
+export function fundBenchmarks(fund, history) {
+  const endDate = history.points.at(-1)?.date;
+  const seriesById = new Map(loadBenchmarks().map((series) => [series.id, series]));
+
+  if (!endDate) {
+    return [];
+  }
+
+  return suggestBenchmarkIds(fund).map((id) => benchmarkAt(seriesById.get(id), endDate)).filter((entry) => entry !== null);
+}
+
 let fundSummaries = null;
 
 // One compact row per fund for the fund explorer, plus the USD rate it needs to rank funds by size.
@@ -521,6 +631,7 @@ function buildFundSummaries() {
       large_move: active && hasLargeMoveInLastYear(history.points),
       dividends: (record.dividends?.length ?? 0) > 0,
       active,
+      ...(record.ojk && { ojk_status: record.ojk.status }),
     };
   });
 
