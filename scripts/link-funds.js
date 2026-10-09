@@ -20,6 +20,8 @@ const SHARIA_PRIORITY = ['bibit', 'makmur'];
 const LAUNCH_DATE_PRIORITY = ['bareksa', 'bibit', 'kontan', 'makmur'];
 
 const ACTIVE_DAYS = 31;
+const MIN_AGREEING_TYPE_SOURCES = 2;
+const GENERAL_TYPES = new Set(['Pasar Uang', 'Obligasi', 'Saham', 'Campuran', 'Terproteksi']);
 const MIN_SHARED_EQUAL_DATES = 3;
 const MIN_DISTINCTIVE_DIGITS = 5;
 const MIN_SHORT_HISTORY_DIGITS = 7;
@@ -631,7 +633,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
 
     const mappedTypes = TYPE_PRIORITY
       .flatMap((source) => ordered.filter((member) => member.source === source))
-      .map((member) => ({ raw: member.type, mapped: TYPES[member.type.toLowerCase()] }))
+      .map((member) => ({ source: member.source, raw: member.type, mapped: TYPES[member.type.toLowerCase()] }))
       .filter(({ raw }) => raw !== '');
 
     for (const { raw, mapped } of mappedTypes) {
@@ -639,6 +641,21 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
         unmappedTypes.set(raw, (unmappedTypes.get(raw) ?? 0) + 1);
       }
     }
+
+    // Bibit's label wins unless two other sources agree on a different one. Its specialised labels (global, private
+    // placement, real estate, gold ETF) have no counterpart elsewhere, so only a general label can be overruled.
+    const typeBySource = new Map();
+
+    for (const { source, mapped } of mappedTypes) {
+      if (mapped && !typeBySource.has(source)) {
+        typeBySource.set(source, mapped);
+      }
+    }
+
+    const agreedOtherType = [...Map.groupBy([...typeBySource].filter(([source]) => source !== 'bibit'), ([, type]) => type)]
+      .find(([type, votes]) => votes.length >= MIN_AGREEING_TYPE_SOURCES && type !== typeBySource.get('bibit'))?.[0];
+    const bibitType = typeBySource.get('bibit');
+    const overrulingType = bibitType === undefined || GENERAL_TYPES.has(bibitType) ? agreedOtherType : undefined;
 
     const launchSource = LAUNCH_DATE_PRIORITY.find((source) => ordered.some((member) => member.source === source && member.launchDate !== ''));
     const launchDates = ordered.filter((member) => member.source === launchSource && member.launchDate !== '').map((member) => member.launchDate);
@@ -648,7 +665,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
       name: names[0] ?? '',
       otherNames,
       manager: firstFrom(ordered, MANAGER_PRIORITY, 'manager'),
-      type: mappedTypes.find(({ mapped }) => mapped)?.mapped ?? '',
+      type: overrulingType ?? mappedTypes.find(({ mapped }) => mapped)?.mapped ?? '',
       currency: firstFrom(ordered, CURRENCY_PRIORITY, 'currency') || (USD_IN_NAME.test(allNames) ? 'USD' : ''),
       sharia: firstFrom(ordered, SHARIA_PRIORITY, 'sharia') || (SHARIA_IN_NAME.test(allNames) ? 'true' : ''),
       launchDate: launchDates.sort()[0] ?? '',

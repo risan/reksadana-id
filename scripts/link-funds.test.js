@@ -634,3 +634,28 @@ test('a NAV series loses a short run far from the NAV around it and keeps the re
   assert.deepEqual(Array.from(cleaned.dates), [20260424, 20260429, 20260430]);
   assert.deepEqual(Array.from(cleaned.values), [1.02, 1.02, 1.03]);
 });
+
+const typeFor = (types) => {
+  const nav = fourDecimalNav(5);
+  const result = link(Object.entries(types).map(([source, type]) => record(source, '1', { name: 'Alpha Dana Utama', type, nav })));
+
+  return result.funds[0].type;
+};
+
+test('Bibit\'s type wins unless two other sources agree on another', () => {
+  assert.equal(typeFor({ bibit: 'Saham' }), 'Saham');
+  assert.equal(typeFor({ bibit: 'Saham', bareksa: 'Pasar Uang' }), 'Saham');
+  assert.equal(typeFor({ bibit: 'Saham', bareksa: 'Pasar Uang', kontan: 'Obligasi' }), 'Saham');
+  assert.equal(typeFor({ bibit: 'Saham', bareksa: 'Pasar Uang', kontan: 'Pasar Uang' }), 'Pasar Uang');
+  assert.equal(typeFor({ bibit: 'Saham', bareksa: 'Saham', kontan: 'Pasar Uang' }), 'Saham');
+});
+
+test('Bibit\'s specialised types are not overruled by the general ones other sources use', () => {
+  assert.equal(typeFor({ bibit: 'Reksadana Global', bareksa: 'Saham', kontan: 'Saham' }), 'Reksadana Global');
+  assert.equal(typeFor({ bibit: 'Penyertaan Terbatas', bareksa: 'Obligasi', kontan: 'Obligasi' }), 'Penyertaan Terbatas');
+});
+
+test('a type no source can name is left to the first source that can', () => {
+  assert.equal(typeFor({ bibit: 'Benchmark', bareksa: 'ETF', kontan: 'Indeks & ETF' }), 'Benchmark');
+  assert.equal(typeFor({ bareksa: 'Saham', kontan: 'ETF' }), 'Saham');
+});
