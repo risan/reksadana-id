@@ -172,6 +172,22 @@ export const decodeHtml = (text) => text
   .replaceAll('&amp;', '&')
   .trim();
 
+// Every field of the page's form that a browser would send, except the buttons.
+export const readFormFields = (html) => {
+  const fields = new URLSearchParams();
+
+  for (const [tag] of html.matchAll(/<input[^>]*>/g)) {
+    const name = tag.match(/name="([^"]+)"/)?.[1];
+    const type = tag.match(/type="([^"]+)"/)?.[1];
+
+    if (name && !['submit', 'button', 'image', 'checkbox', 'radio'].includes(type)) {
+      fields.set(name, decodeHtml(tag.match(/value="([^"]*)"/)?.[1] ?? ''));
+    }
+  }
+
+  return fields;
+};
+
 const BIBIT_SYMBOL_COLUMN = 0;
 const BIBIT_NAME_COLUMN = 1;
 const BIBIT_MANAGER_COLUMN = 3;

@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { findNextPageTarget, parseBiRateRows, parseInflationRows, parseJisdorRows, readFormFields } from './macro.js';
+import { findNextPageTarget, parseBiRateRows, parseInflationRows, parseJisdorRows } from './macro.js';
+import { readFormFields } from './lib.js';
 
 const readFixture = (name) => fs.readFileSync(path.join(import.meta.dirname, 'fixtures', name), 'utf8');
 

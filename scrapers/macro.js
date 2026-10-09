@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { HttpError, decodeHtml, mergeRowsByDate, readCsvRows, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
+import { HttpError, decodeHtml, mergeRowsByDate, readCsvRows, readFormFields, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
 
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'macro');
 const JISDOR_URL = 'https://www.bi.go.id/biwebservice/wskursbi.asmx/getSubKursJisdor3';
@@ -129,22 +129,6 @@ export const findNextPageTarget = (html) => {
   const nextNumber = String(Number(active[1]) + 1);
 
   return (links.find((link) => link.text === nextNumber) ?? links.findLast((link) => link.text === '...'))?.target ?? null;
-};
-
-// Every field of the page's form that a browser would send, except the buttons.
-export const readFormFields = (html) => {
-  const fields = new URLSearchParams();
-
-  for (const [tag] of html.matchAll(/<input[^>]*>/g)) {
-    const name = tag.match(/name="([^"]+)"/)?.[1];
-    const type = tag.match(/type="([^"]+)"/)?.[1];
-
-    if (name && !['submit', 'button', 'image', 'checkbox', 'radio'].includes(type)) {
-      fields.set(name, decodeHtml(tag.match(/value="([^"]*)"/)?.[1] ?? ''));
-    }
-  }
-
-  return fields;
 };
 
 // All the pages of the table when `allPages`, else only the first one (the newest rows).
