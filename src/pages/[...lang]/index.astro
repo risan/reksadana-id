@@ -401,7 +401,6 @@ const sortIcons = `<span class="sort-up">${icon('arrow-up', { size: 14 })}</span
   function syncControls() {
     searchInput.value = state.q;
     searchClear.hidden = state.q === '';
-    includeDividends.checked = readIncludeDividends();
     sortSelect.value = state.sort;
     pageSize.value = String(state.size);
     sortDirection.dataset.dir = state.dir === 1 ? 'asc' : 'desc';
@@ -753,6 +752,8 @@ const sortIcons = `<span class="sort-up">${icon('arrow-up', { size: 14 })}</span
 
   new ResizeObserver(syncWidth).observe(frame);
 
+  // Read once: the box is the setting from here on, even when the browser refuses to store it.
+  includeDividends.checked = readIncludeDividends();
   table.dataset.density = readDensity();
   syncColumns();
   syncDensity();
