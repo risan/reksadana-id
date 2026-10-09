@@ -20,6 +20,7 @@ on:
           - bareksa-nav
           - bareksa-nav-all
           - bareksa-profiles
+          - prospectus
           - benchmarks
           - macro
           - ojk
@@ -94,6 +95,18 @@ jobs:
         if: (success() || failure()) && steps.decide.outputs.bareksa_profiles == 'true'
         run: npm run scrape:bareksa:profiles
 
+      # The audited operating expenses in each fund's prospectus, read from the PDF that Bareksa links. A fund is
+      # read again only when its link points at another file, so a normal week asks for the links and little more.
+      # The other scrapers need no packages; this one reads PDFs with pdfjs-dist.
+      - name: Install packages for the prospectus reader
+        if: steps.decide.outputs.prospectus == 'true'
+        run: npm ci --ignore-scripts
+
+      - name: Scrape prospectuses
+        id: prospectus
+        if: (success() || failure()) && steps.decide.outputs.prospectus == 'true'
+        run: npm run scrape:prospectus
+
       # Index levels, Bank Indonesia's rates, and OJK's monthly statistics do not depend on Bibit. They run before
       # the linker, which reads the OJK files.
       - name: Scrape benchmarks
@@ -142,6 +155,7 @@ jobs:
             source_row Bareksa "${{ steps.bareksa.outcome }}" bareksa
             source_row "Bareksa NAV" "${{ steps.bareksa_nav.outcome }}" bareksa
             source_row "Bareksa profiles" "${{ steps.bareksa_profiles.outcome }}" bareksa
+            source_row Prospectuses "${{ steps.prospectus.outcome }}" bareksa/prospectus.csv
             source_row Benchmarks "${{ steps.benchmarks.outcome }}" benchmarks
             source_row "Bank Indonesia" "${{ steps.macro.outcome }}" macro
             source_row OJK "${{ steps.ojk.outcome }}" ojk
