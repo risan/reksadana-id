@@ -47,7 +47,7 @@ Conventions: returns and ratios are fractions (`0.0106` is 1.06%), dates are ISO
 | Bareksa | `data/bareksa/` | 3,812 | Monthly AUM, units, and asset allocation, back to each fund's launch. Daily NAV: the last year every day, older history loaded by hand. Fund pages: custodian, minimums, maximum fees. Prospectus: the audited operating expenses | Daily (NAV, fund pages), weekly (prospectus), monthly (the rest) |
 | Benchmarks | `data/benchmarks/` | 10 series | Daily levels of IHSG, LQ45, IDX30, JII, ISSI, SRI-KEHATI and four Bareksa fund category indices | Daily |
 | Macro | `data/macro/` | 3 series | USD/IDR (JISDOR), the BI-Rate, and monthly inflation, from Bank Indonesia | Daily |
-| OJK | `data/ojk/` | about 2,100 per month | Month-end AUM and units of every registered fund, for the last 36 months | Daily from the 8th to the 15th of the month (UTC) |
+| OJK | `data/ojk/` | about 2,100 per month | Month-end AUM and units of every registered fund, for the last 36 months | Daily from the 8th to the 15th of the month (UTC); from a home connection when OJK does not answer GitHub |
 
 "Updated" is how often the repository gets new data, see [Scheduled updates](#scheduled-updates).
 
@@ -404,7 +404,7 @@ The files were first filled with the full history from a logged-in browser sessi
 
 ### OJK
 
-OJK's source is the Statistik NAB Reksa Dana page, `reksadana.ojk.go.id/Public/StatistikNABReksadanaPublicDetail.aspx?year=&month=`. The page shows 10 rows, but one DevExpress callback POST with the page's form fields and `__CALLBACKPARAM=c0:KV|2;[];GB|22;12|PAGERONCLICK5|PSP-1;` returns every row (about 2,100 rows, 1.8 MB). `scrapers/ojk.js` asks for one month at a time with a pause of 3 seconds after each request, checks that the rows it got equal the item count the page states, and skips a month that is not published yet (the page then says "0 items"). OJK publishes last month's figures from about the 8th. A run fetches the months of the last 36 that are not stored, and the newest two stored months again, because OJK revises recent figures.
+OJK's source is the Statistik NAB Reksa Dana page, `reksadana.ojk.go.id/Public/StatistikNABReksadanaPublicDetail.aspx?year=&month=`. The page shows 10 rows, but one DevExpress callback POST with the page's form fields and `__CALLBACKPARAM=c0:KV|2;[];GB|22;12|PAGERONCLICK5|PSP-1;` returns every row (about 2,100 rows, 1.8 MB). `scrapers/ojk.js` asks for one month at a time with a pause of 3 seconds after each request, checks that the rows it got equal the item count the page states, and skips a month that is not published yet (the page then says "0 items"). OJK publishes last month's figures from about the 8th. A run fetches the months of the last 36 that are not stored, and the newest two stored months again, because OJK revises recent figures. On 2026-10-09 OJK's server gave GitHub's runners no answer at all (a home connection worked). When every month fails that way, the scraper prints a warning, changes no data, and exits 0; run `npm run scrape:ojk` from home after the 8th.
 
 ## How funds are linked
 

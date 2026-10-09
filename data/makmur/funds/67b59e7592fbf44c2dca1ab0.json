@@ -25,54 +25,54 @@
       "instrument": "Obligasi Berkelanjutan IV Lontar Papyrus Pulp & Paper Industry Tahap II Tahun 2026 Seri B"
     },
     {
-      "instrument": "Obligasi Berkelanjutan I Bumi Tahap III Tahun 2025"
+      "instrument": "Obligasi Berkelanjutan III Provident Investasi Bersama Tahap II Tahun 2026 Seri B"
     },
     {
-      "instrument": "Obligasi Negara Republik Indonesia Seri FR0101"
+      "instrument": "Obligasi Berkelanjutan III Provident Investasi Bersama Tahap II Tahun 2026 Seri C"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9325
+      "weight": 9579
     },
     {
       "asset": "Pasar Uang",
-      "weight": 675
+      "weight": 421
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 2,
-  "return5d": 12,
-  "return1m": 79,
-  "return3m": 262,
-  "returnytd": 125,
-  "return1y": 235,
-  "return3y": 1702,
-  "return5y": 2776,
-  "return10y": 7438,
-  "returnsi": 25187,
+  "portfolioAsof": 20260930,
+  "return1d": 7,
+  "return5d": 11,
+  "return1m": 55,
+  "return3m": 264,
+  "returnytd": 136,
+  "return1y": 230,
+  "return3y": 1713,
+  "return5y": 2799,
+  "return10y": 7455,
+  "returnsi": 25227,
   "drawdownytd": -291,
   "drawdown1y": -291,
   "drawdown3y": -291,
   "drawdown5y": -291,
   "drawdownsi": -3140,
-  "cagr1y": 235,
-  "cagr3y": 538,
-  "cagr5y": 502,
-  "cagr10y": 572,
+  "cagr1y": 230,
+  "cagr3y": 541,
+  "cagr5y": 506,
+  "cagr10y": 573,
   "cagrsi": 708,
   "rating": 0,
   "description": "REKSA DANA TRIM DANA TETAP 2 (selanjutnya disebut “TRIM DANA TETAP 2”) adalah Reksa Dana berbentuk Kontrak  Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan  pelaksanaannya.  TRIM DANA TETAP 2 bertujuan untuk mempertahankan investasi awal dan untuk memperoleh pendapatan yang  optimal berupa kupon bunga dan apresiasi nilai pokok dari Efek bersifat utang.   Kebijakan investasi TRIM DANA TETAP 2 adalah sebesar minimum 80% (delapan puluh persen) dan maksimum 100%  (seratus persen) pada Efek bersifat utang serta minimum 0% (nol persen) dan maksimum 20% (dua puluh persen)  pada instrumen pasar uang antara lain Sertifikat Bank Indonesia (SBI), Surat Perbendaharaan Negara (SPN) dan  deposito sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 351868,
+  "lastPrice": 352267,
   "expenseRatio": 210,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "trim-dana-tetap-2-kelas-a-a0d2e88d8b25",
   "currency": "IDR",
-  "lastAum": 2751460000000,
+  "lastAum": 2543070000000,
   "factsheet": "https://cache.makmur.id/files/products/67b59e7592fbf44c2dca1ab0/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/67b59e7592fbf44c2dca1ab0/prospectus.pdf",
   "inceptionDate": 20080521,

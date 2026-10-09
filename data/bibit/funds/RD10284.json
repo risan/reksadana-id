@@ -57,7 +57,16 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Likuiditas",
+      "percentage": 1.93
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 98.07
+    }
+  ],
   "investment_manager": {
     "name": "Bahana TCW Investment Management, PT"
   },

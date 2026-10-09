@@ -16,42 +16,42 @@
   },
   "topHoldings": [
     {
-      "instrument": "SIIJEE02A"
+      "instrument": "PBS003"
     },
     {
-      "instrument": "SISMAR01ACN2"
+      "instrument": "PBS030"
     },
     {
       "instrument": "SMINKP04CN5"
     },
     {
-      "instrument": "SMLPPI02BCN2"
+      "instrument": "SMLPPI02ACN4"
     },
     {
-      "instrument": "SMLPPI02CCN2"
+      "instrument": "SMLPPI02BCN2"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9057
+      "weight": 8281
     },
     {
       "asset": "Pasar Uang",
-      "weight": 943
+      "weight": 1719
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 2,
-  "return5d": 13,
-  "return1m": 60,
-  "return3m": 297,
-  "returnytd": 469,
+  "return5d": 11,
+  "return1m": 48,
+  "return3m": 285,
+  "returnytd": 480,
   "return1y": 630,
   "return3y": null,
   "return5y": null,
   "return10y": null,
-  "returnsi": 2094,
+  "returnsi": 2107,
   "drawdownytd": -115,
   "drawdown1y": -115,
   "drawdown3y": null,
@@ -65,11 +65,11 @@
   "rating": 0,
   "description": "REKSA DANA SYARIAH SYAILENDRA SHARIA FIXED INCOME FUND (untuk selanjutnya disebut “SYAILENDRA SHARIA  FIXED INCOME FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun  1995 tentang Pasar Modal sebagaimana terakhir diubah dengan Undang-Undang Nomor 4 tahun 2023 tentang  Pengembangan dan Penguatan Sektor Keuangan (selanjutnya disebut “Undang-Undang Pasar Modal”) beserta peraturan  pelaksanaannya.  SYAILENDRA SHARIA FIXED INCOME FUND bertujuan untuk memberikan hasil investasi yang optimum untuk jangka  menengah dan panjang sesuai dengan Prinsip Syariah di Pasar Modal melalui investasi sesuai dengan Kebijakan Investasi.",
   "isSyariah": true,
-  "lastPrice": 120936,
+  "lastPrice": 121070,
   "expenseRatio": 208,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "syailendra-sharia-fixed-income-fund-kelas-a-00e2ae32e7b6",
   "currency": "IDR",
   "lastAum": 2570000000000,

@@ -61,20 +61,20 @@
   },
   "asset": [
     {
-      "name": "Saham",
-      "percentage": 93.25
+      "name": "Deposito",
+      "percentage": 1.54
     },
     {
       "name": "Pendapatan Tetap",
       "percentage": 4.65
     },
     {
-      "name": "Deposito",
-      "percentage": 1.54
-    },
-    {
       "name": "Kas",
       "percentage": 0.55
+    },
+    {
+      "name": "Saham",
+      "percentage": 93.25
     }
   ],
   "holding": [
@@ -217,11 +217,11 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.11440816468679804,
-    "3y": -0.07666470748765308,
-    "5y": -0.03621558875545694,
-    "10y": -0.02216835996950739,
-    "all": 0.09824079623992144
+    "1y": -0.12004245458508289,
+    "3y": -0.0737240229127818,
+    "5y": -0.03520923775219076,
+    "10y": -0.021657983842475637,
+    "all": 0.098454825607734
   },
   "cagr_adjusted": {
     "1y": -0.08834175075551909,
@@ -272,9 +272,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-08",
+    "date": "2026-10-09",
     "first_date": "2000-01-05",
-    "value": 21105.77
+    "value": 21216.19
   },
   "trade": null
 }

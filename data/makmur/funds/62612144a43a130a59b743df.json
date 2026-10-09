@@ -19,6 +19,9 @@
       "instrument": "Armadian Tritunggal, PT"
     },
     {
+      "instrument": "Bank Tabungan Negara (Persero) Tbk, PT"
+    },
+    {
       "instrument": "Barito Pacific Tbk, PT"
     },
     {
@@ -26,38 +29,35 @@
     },
     {
       "instrument": "Hino Finance Indonesia, PT"
-    },
-    {
-      "instrument": "Indah Kiat Pulp & Paper Tbk, PT"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9740
+      "weight": 9260
     },
     {
       "asset": "Pasar Uang",
-      "weight": 260
+      "weight": 740
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 1,
   "return5d": 10,
   "return1m": 42,
-  "return3m": 120,
-  "returnytd": 304,
-  "return1y": 443,
+  "return3m": 122,
+  "returnytd": 314,
+  "return1y": 441,
   "return3y": 1848,
-  "return5y": 3093,
-  "return10y": 8132,
-  "returnsi": 43742,
+  "return5y": 3094,
+  "return10y": 8129,
+  "returnsi": 43795,
   "drawdownytd": -104,
   "drawdown1y": -104,
   "drawdown3y": -104,
   "drawdown5y": -104,
   "drawdownsi": -479,
-  "cagr1y": 443,
+  "cagr1y": 441,
   "cagr3y": 582,
   "cagr5y": 554,
   "cagr10y": 613,
@@ -65,14 +65,14 @@
   "rating": 0,
   "description": "REKSA DANA DANAMAS PASTI adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal serta pelaksanaannya di bidang Reksa Dana. DANAMAS PASTI bertujuan untuk memperoleh pendapatan yang stabil dan optimal dalam jangka menengah dan panjang dengan tingkat risiko yang relatif rendah melalui penempatan dana investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) pada Efek bersifat utang yang diterbitkan oleh perusahaan-perusahaan berbadan hukum Indonesia termasuk Obligasi Pemerintah Republik Indonesia, Obligasi Pemerintah Daerah (“Municipal Bonds”) dan Efek bersifat utang lainnya sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia serta minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) pada Instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun. Khusus untuk Obligasi Pemerintah Republik Indonesia, termasuk Obligasi Pemerintah Republik Indonesia yang dilengkapi dengan REPO (Repurchase Agreement), maka komposisi investasinya dapat mencapai 100 % (seratus persen) dengan tetap memperhatikan peraturan perundang-undangan yang berlaku.",
   "isSyariah": false,
-  "lastPrice": 537423,
+  "lastPrice": 537946,
   "expenseRatio": 259,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "danamas-pasti-1bf542c19447",
   "currency": "IDR",
-  "lastAum": 668000000000,
+  "lastAum": 641000000000,
   "factsheet": "https://cache.makmur.id/files/products/62612144a43a130a59b743df/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/62612144a43a130a59b743df/prospectus.pdf",
   "inceptionDate": 20030428,

@@ -19,13 +19,13 @@
       "instrument": "BOLD03A"
     },
     {
-      "instrument": "INET01A"
-    },
-    {
       "instrument": "IJEE03A"
     },
     {
-      "instrument": "LTLS04CN1"
+      "instrument": "INET01A"
+    },
+    {
+      "instrument": "MBMA01ACN5"
     },
     {
       "instrument": "SMBWPT01ACN2"
@@ -34,24 +34,24 @@
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 7528
+      "weight": 7683
     },
     {
       "asset": "Pasar Uang",
-      "weight": 2472
+      "weight": 2231
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 2,
   "return5d": 11,
   "return1m": 48,
-  "return3m": 144,
-  "returnytd": 411,
+  "return3m": 145,
+  "returnytd": 423,
   "return1y": 542,
-  "return3y": 1755,
-  "return5y": 2717,
+  "return3y": 1756,
+  "return5y": 2722,
   "return10y": null,
-  "returnsi": 5670,
+  "returnsi": 5687,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": -2,
@@ -59,20 +59,20 @@
   "drawdownsi": -6,
   "cagr1y": 542,
   "cagr3y": 554,
-  "cagr5y": 492,
+  "cagr5y": 493,
   "cagr10y": null,
   "cagrsi": 506,
   "rating": 0,
   "description": "Reksa Dana DANAPATHI MONEY MARKET FUND (selanjutnya disebut ”DANAPATHI MONEY MARKET FUND”) adalah  Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 Tahun 1995 tentang Pasar Modal.   DANAPATHI MONEY MARKET FUND bertujuan untuk memberikan tingkat likuiditas yang tinggi untuk memenuhi  kebutuhan dana tunai dalam waktu yang singkat sekaligus memberikan tingkat pendapatan investasi yang menarik.   DANAPATHI MONEY MARKET FUND akan melakukan investasi dengan komposisi portofolio investasi 100% (seratus  persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dan/atau Efek bersifat utang yang diterbitkan oleh Pemerintah  Indonesia dan/atau korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di  dalam maupun di luar negeri dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh tempo tidak lebih dari  1 (satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 156697,
+  "lastPrice": 156873,
   "expenseRatio": 174,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "danapathi-money-market-fund-090c45cbae8c",
   "currency": "IDR",
-  "lastAum": 827229170641,
+  "lastAum": 898719228061,
   "factsheet": "https://cache.makmur.id/files/products/6833d9db1f93e8abc0801a24/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6833d9db1f93e8abc0801a24/prospectus.pdf",
   "inceptionDate": 20170828,

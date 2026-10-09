@@ -22,57 +22,57 @@
       "instrument": "Bank Rakyat Indonesia (Persero) Tbk"
     },
     {
-      "instrument": "Bank Mandiri ( Persero ) Tbk"
-    },
-    {
       "instrument": "Merdeka Copper Gold Tbk"
     },
     {
       "instrument": "Amman Mineral Internasional Tbk"
+    },
+    {
+      "instrument": "Bank Mandiri ( Persero ) Tbk"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 9178
+      "weight": 8999
     },
     {
       "asset": "Obligasi",
-      "weight": 822
+      "weight": 1001
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 27,
-  "return5d": -332,
-  "return1m": -744,
-  "return3m": 844,
-  "returnytd": -1560,
-  "return1y": -989,
-  "return3y": -653,
-  "return5y": 1555,
-  "return10y": 3740,
-  "returnsi": 31796,
+  "portfolioAsof": 20260930,
+  "return1d": 127,
+  "return5d": 45,
+  "return1m": -947,
+  "return3m": 591,
+  "returnytd": -1522,
+  "return1y": -1261,
+  "return3y": -348,
+  "return5y": 1232,
+  "return10y": 3791,
+  "returnsi": 31986,
   "drawdownytd": -3229,
   "drawdown1y": -3229,
   "drawdown3y": -3229,
   "drawdown5y": -3229,
   "drawdownsi": -7641,
-  "cagr1y": -989,
-  "cagr3y": -223,
-  "cagr5y": 293,
-  "cagr10y": 323,
-  "cagrsi": 810,
+  "cagr1y": -1261,
+  "cagr3y": -117,
+  "cagr5y": 235,
+  "cagr10y": 327,
+  "cagrsi": 812,
   "rating": 0,
   "description": "REKSA DANA TRIM KAPITAL PLUS (selanjutnya disebut “TRIM KAPITAL PLUS”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Tujuan investasi TRIM KAPITAL PLUS adalah untuk memperoleh peningkatan nilai investasi yang maksimal dalam jangka panjang berupa capital gain dan deviden melalui investasi pada Efek bersifat ekuitas. Kebijakan investasi TRIM KAPITAL PLUS adalah sebesar minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) pada Efek bersifat ekuitas serta minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) pada Efek bersifat utang dan instrumen pasar uang.",
   "isSyariah": false,
-  "lastPrice": 417964,
+  "lastPrice": 419864,
   "expenseRatio": 691,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "trim-kapital-plus-bd14a929012f",
   "currency": "IDR",
-  "lastAum": 588870000000,
+  "lastAum": 574640000000,
   "factsheet": "https://cache.makmur.id/files/products/60d1bccf4cc7bb3913edb061/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/60d1bccf4cc7bb3913edb061/prospectus.pdf",
   "inceptionDate": 20080526,

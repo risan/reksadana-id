@@ -22,7 +22,7 @@
       "instrument": "Obligasi Berkelanjutan III Lontar Papyrus Pulp & Paper Industry Tahap III Tahun 2025 Seri B"
     },
     {
-      "instrument": "Medco Energi Internasional Tbk"
+      "instrument": "Amman Mineral Internasional Tbk"
     },
     {
       "instrument": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap I Tahun 2025 Seri B"
@@ -34,49 +34,49 @@
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 3974
+      "weight": 3946
     },
     {
       "asset": "Obligasi",
-      "weight": 3505
+      "weight": 3614
     },
     {
       "asset": "Pasar Uang",
-      "weight": 2521
+      "weight": 2440
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 59,
-  "return5d": -151,
-  "return1m": -246,
-  "return3m": 493,
-  "returnytd": -1329,
-  "return1y": -1066,
-  "return3y": 837,
+  "portfolioAsof": 20260930,
+  "return1d": 53,
+  "return5d": -26,
+  "return1m": -615,
+  "return3m": 409,
+  "returnytd": -1352,
+  "return1y": -1117,
+  "return3y": 876,
   "return5y": null,
   "return10y": null,
-  "returnsi": 1644,
+  "returnsi": 1614,
   "drawdownytd": -2282,
   "drawdown1y": -2282,
   "drawdown3y": -2282,
   "drawdown5y": null,
   "drawdownsi": -2282,
-  "cagr1y": -1066,
-  "cagr3y": 272,
+  "cagr1y": -1117,
+  "cagr3y": 284,
   "cagr5y": null,
   "cagr10y": null,
-  "cagrsi": 433,
+  "cagrsi": 424,
   "rating": 0,
   "description": "REKSA DANA TRIMEGAH BALANCED ABSOLUTE STRATEGY LOW VOLATILITY (untuk selanjutnya disebut “TRIMEGAH BALANCED ABSOLUTE STRATEGY LOW VOLATILITY“) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. TRIMEGAH BALANCED ABSOLUTE STRATEGY LOW VOLATILITY bertujuan untuk memberikan tingkat pertumbuhan modal yang optimal dalam jangka panjang melalui investasi sesuai dengan Kebijakan Investasi. Portofolio mencakup minimum 1% hingga maksimum 79% pada Efek bersifat ekuitas dan utang, baik di pasar domestik maupun internasional, serta instrumen pasar uang dalam negeri dengan jatuh tempo maksimal satu tahun atau deposito.   Manajer Investasi menjamin kegiatan investasi ini sesuai dengan peraturan perundang-undangan di Indonesia dan tidak bertentangan dengan hukum di negara penerbit Efek luar negeri, menawarkan kesempatan berinvestasi yang aman dan regulatif.",
   "isSyariah": false,
-  "lastPrice": 116441,
+  "lastPrice": 116138,
   "expenseRatio": 441,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "trimegah-balanced-absolute-strategy-low-volatility-33925e0cc236",
   "currency": "IDR",
-  "lastAum": 104500000000,
+  "lastAum": 101380000000,
   "factsheet": "https://cache.makmur.id/files/products/65b070ed3bd47139ba4debf0/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/65b070ed3bd47139ba4debf0/prospectus.pdf",
   "inceptionDate": 20230303,

@@ -16,63 +16,63 @@
   },
   "topHoldings": [
     {
-      "instrument": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0082"
-    },
-    {
       "instrument": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0087"
     },
     {
       "instrument": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0091"
     },
     {
-      "instrument": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0096"
+      "instrument": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0103"
     },
     {
-      "instrument": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0100"
+      "instrument": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0109"
+    },
+    {
+      "instrument": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0104"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9860
+      "weight": 9842
     },
     {
       "asset": "Pasar Uang",
-      "weight": 140
+      "weight": 158
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -5,
-  "return5d": -9,
-  "return1m": 39,
-  "return3m": 198,
+  "portfolioAsof": 20260930,
+  "return1d": 6,
+  "return5d": 0,
+  "return1m": -9,
+  "return3m": 215,
   "returnytd": -126,
-  "return1y": 84,
-  "return3y": 1678,
-  "return5y": 2701,
-  "return10y": 8413,
+  "return1y": 9,
+  "return3y": 1776,
+  "return5y": 2718,
+  "return10y": 8431,
   "returnsi": 49167,
   "drawdownytd": -499,
   "drawdown1y": -499,
   "drawdown3y": -499,
   "drawdown5y": -499,
   "drawdownsi": -2777,
-  "cagr1y": 84,
-  "cagr3y": 531,
-  "cagr5y": 490,
-  "cagr10y": 629,
+  "cagr1y": 9,
+  "cagr3y": 560,
+  "cagr5y": 493,
+  "cagr10y": 631,
   "cagrsi": 867,
   "rating": 0,
   "description": "Prospektus Reksa Dana Indeks ABF Indonesia Bond Index Fund (selanjutnya disebut “ABF IBI FUND”) adalah suatu Reksa Dana yang merupakan suatu Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor: 8 Tahun 1995 (seribu sembilan ratus sembilan puluh lima) tentang Pasal Modal (selanjutnya disebut “UU Pasar Modal”) berikut peraturan pelaksanaannya mengenai Reksa Dana. Tujuan dari pengelolaan ABF IBI FUND adalah untuk mencapai tingkat pengembalian (sebelum memperhitungkan imbalan jasa dan pengeluaran yang dibebankan kepada ABF IBI FUND) yang mendekati tingkat pengembalian dari indeks yang menjadi tolok ukur. Kebijakan Investasi ABF IBI FUND adalah: 1. Manajer Investasi akan melakukan investasi pada: a. Efek bersifat Utang yang menjadi bagian dari Indeks Tolok Ukur (Efek Tolok Ukur), atau Efek-efek bersifat Utang yang menurut Manajer Investasi, serupa dengan Efek Tolok Ukur dan diterbitkan oleh institusi yang sama dengan institusi yang menerbitkan Efek Tolok Ukur. Investasi pada Efek Tolok Ukur sekurang-kurangnya 80% (delapan puluh persen) dari Nilai Aktiva Bersih ABF IBI FUND, sesuai dengan Peraturan Bapepam Nomor IV.C.4 tentang pedoman Pengelolaan Reksa Dana Terproteksi, Reksa Dana Dengan Penjaminan, dan Reksa Dana Indeks angka 9. Investasi pada Efek bersifat Utang yang serupa dengan Efek Tolok Ukur tidak melebihi dari 15% (lima belas persen) dari Nilai Aktiva Bersih ABF IBI FUND. Efek bersifat Utang yang serupa dengan Efek Tolok Ukur mencakup namun tidak terbatas pada: (i) Obligasi berdenominasi Rupiah yang diterbitkan oleh Pemerintah dan lembaga milik pemerintah berdomisili di Indonesia sesuai dengan peraturan perundang-undangan yang berlaku; (ii) Obligasi berdenominasi Rupiah yang diterbitkan oleh lembaga keuangan supranasional sesuai dengan peraturan perundang-undangan yang berlaku. b. Setara Kas, rekening deposito (berjangka) dan Sertifikat Bank Indonesia (SBI). 2. Investasi ABF IBI FUND Efek bersifat Utang yang disebutkan dalam Bab V Prospektus ini harus berdenominasi Rupiah. 3. Manajer Investasi dapat melakukan transaksi REPO untuk kepentingan Pemegang Unit Penyertaan sesuai dengan peraturan perundang-undangan yang berlaku dan syarat-syarat Kontrak ini",
   "isSyariah": false,
-  "lastPrice": 5917447,
+  "lastPrice": 5917443,
   "expenseRatio": 22,
   "minFirstBuy": 100000000,
   "minNextBuy": 100000000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "bahana-abf-indonesia-bond-index-fund-9627e1c0108a",
   "currency": "IDR",
-  "lastAum": 7850300000000,
+  "lastAum": 7763320000000,
   "factsheet": "https://cache.makmur.id/files/products/60f943904ce7bd6b08deeb1a/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/60f943904ce7bd6b08deeb1a/prospectus.pdf",
   "inceptionDate": 20050525,

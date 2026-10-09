@@ -19,60 +19,60 @@
       "instrument": "Astra Sedaya Finance, PT"
     },
     {
+      "instrument": "Hutama Karya (Persero), PT"
+    },
+    {
       "instrument": "Indomobil Finance Indonesia, PT"
     },
     {
+      "instrument": "Lontar Papyrus Pulp & Paper Industry, PT"
+    },
+    {
       "instrument": "Oki Pulp & Paper Mills, PT"
-    },
-    {
-      "instrument": "Bank Tabungan Negara (Persero) Tbk, PT"
-    },
-    {
-      "instrument": "Hutama Karya (Persero), PT"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9580
+      "weight": 9490
     },
     {
       "asset": "Pasar Uang",
-      "weight": 420
+      "weight": 510
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 1,
   "return5d": 8,
   "return1m": 33,
   "return3m": 101,
-  "returnytd": 292,
-  "return1y": 402,
+  "returnytd": 300,
+  "return1y": 400,
   "return3y": 1439,
-  "return5y": 2349,
-  "return10y": 5856,
-  "returnsi": 9059,
+  "return5y": 2348,
+  "return10y": 5853,
+  "returnsi": 9074,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": 0,
   "drawdown5y": 0,
   "drawdownsi": -9,
-  "cagr1y": 402,
+  "cagr1y": 400,
   "cagr3y": 458,
   "cagr5y": 431,
   "cagr10y": 472,
-  "cagrsi": 322,
+  "cagrsi": 323,
   "rating": 0,
   "description": "REKSA DANA DANAMAS RUPIAH PLUS (selanjutnya disebut “DANAMAS RUPIAH PLUS”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. DANAMAS RUPIAH PLUS bertujuan untuk memperoleh tingkat pendapatan yang stabil dan bersaing dengan tetap mempertahankan nilai modal investasi serta menjaga kestabilan likuiditas dengan tingkat resiko yang relatif rendah dengan diversifikasi portofolio melalui investasi 100% (seratus persen) pada instrumen pasar uang dan/atau efek hutang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun yang diterbitkan sesuai dengan peraturan perundang – undangan yang berlaku di Indonesia, termasuk Obligasi Pemerintah Republik Indonesia, Obligasi Pemerintah Daerah (“Municipal Bonds”), serta Efek bersifat utang lainnya termasuk Sertifikat Bank Indonesia (SBI) dan instrumen pasar uang lainnya sesuai dengan peraturan perundang – undangan yang berlaku. Semua investasi portofolio efek tersebut di atas dapat dalam denominasi Rupiah maupun mata uang asing. Khusus untuk Obligasi Pemerintah Republik Indonesia, komposisi investasinya dapat mencapai 100% (seratus persen) dengan tetap memperhatikan peraturan perundang – undangan yang berlaku.",
   "isSyariah": false,
-  "lastPrice": 190589,
+  "lastPrice": 190735,
   "expenseRatio": 202,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "danamas-rupiah-plus-b658f767197a",
   "currency": "IDR",
-  "lastAum": 1529000000000,
+  "lastAum": 1482000000000,
   "factsheet": "https://cache.makmur.id/files/products/62541b67bf54c80a4005db7b/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/62541b67bf54c80a4005db7b/prospectus.pdf",
   "inceptionDate": 20060613,

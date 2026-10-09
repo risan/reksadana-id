@@ -16,13 +16,13 @@
   },
   "topHoldings": [
     {
-      "instrument": "AADI"
-    },
-    {
       "instrument": "AKRA"
     },
     {
       "instrument": "BBCA"
+    },
+    {
+      "instrument": "BBRI"
     },
     {
       "instrument": "BDMN"
@@ -34,42 +34,42 @@
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 9586
+      "weight": 8275
     },
     {
       "asset": "Pasar Uang",
-      "weight": 414
+      "weight": 1725
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 43,
-  "return5d": -167,
-  "return1m": -262,
-  "return3m": 1160,
-  "returnytd": -1791,
-  "return1y": -1157,
-  "return3y": -303,
-  "return5y": 488,
-  "return10y": 2083,
-  "returnsi": 30282,
+  "portfolioAsof": 20260930,
+  "return1d": 81,
+  "return5d": 108,
+  "return1m": -580,
+  "return3m": 848,
+  "returnytd": -1702,
+  "return1y": -1553,
+  "return3y": -52,
+  "return5y": 480,
+  "return10y": 2124,
+  "returnsi": 30717,
   "drawdownytd": -3214,
   "drawdown1y": -3214,
   "drawdown3y": -3214,
   "drawdown5y": -3214,
   "drawdownsi": -6037,
-  "cagr1y": -1157,
-  "cagr3y": -102,
-  "cagr5y": 96,
-  "cagr10y": 191,
-  "cagrsi": 747,
+  "cagr1y": -1553,
+  "cagr3y": -17,
+  "cagr5y": 94,
+  "cagr10y": 194,
+  "cagrsi": 752,
   "rating": 0,
   "description": "Reksa Dana Syailendra Equity Opportunity Fund (selanjutnya disebut Syailendra Equity Opportunity Fund) adalah Reksa Dana terbuka berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. Tujuan Investasi Syailendra Equity Opportunity Fund adalah memberikan hasil investasi yang optimum melalui invetasi pada saham-saham yang masih mempunyai potensi yang cukup besar untuk tumbuh dalam jangka panjang dan dapat berinvestasi pada Efek bersifat utang atau instrumen pasar uang dalam hal terdapat kondisi pasar modal yang sedang dalam kondisi terkoreksi dengan tetap memperhatikan ketentuan pada kebijakan investasi.Kebijakan investasinya adalah sebesar 80% - 98% pada Efek bersifat ekuitas, 0% - 18% pada Efek bersifat utang antara lain Surat Utang Negara (SUN), Obligasi Pemerintah Daerah (Municipal Bond), obligasi yang diterbitkan oleh perusahaan dan Efek bersifat utang lainnya, 2% - 20% pada instrumen pasar uang antara lain Sertifikat Bank Indonesia (SBI), Surat Perbendaharaan Negara (SPN) atau Treasury Bills (T-Bills), Efek bersifat utang yang memiliki jatuh tempo kurang dari 1 (satu) tahun dan deposito. Manajer Investasi dapat berinvestasi pada efek-efek yang ditawarkan dan atau diperdagangkan di bursa efek di Indonesia maupun di luar negeri.sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 402818,
+  "lastPrice": 407167,
   "expenseRatio": 522,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "syailendra-equity-opportunity-fund-kelas-a-926bbe2e4843",
   "currency": "IDR",
   "lastAum": 220100000000,

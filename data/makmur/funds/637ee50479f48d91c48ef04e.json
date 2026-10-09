@@ -16,42 +16,42 @@
   },
   "topHoldings": [
     {
+      "instrument": "BANK NATIONALNOBU Tbk, PT"
+    },
+    {
       "instrument": "BARITO PACIFIC Tbk, PT"
     },
     {
       "instrument": "BUKIT MAKMUR MANDIRI UTAMA, PT"
     },
     {
-      "instrument": "CHANDRA ASRI PETROCHEMICAL Tbk, PT"
+      "instrument": "BUMI RESOURCES Tbk, PT"
     },
     {
       "instrument": "MERDEKA BATTERY MATERIALS Tbk, PT"
-    },
-    {
-      "instrument": "OKI PULP & PAPER MILLS, PT"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9167
+      "weight": 8104
     },
     {
       "asset": "Pasar Uang",
-      "weight": 833
+      "weight": 1896
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 2,
-  "return5d": 11,
+  "portfolioAsof": 20260930,
+  "return1d": 1,
+  "return5d": 10,
   "return1m": 45,
-  "return3m": 137,
-  "returnytd": 379,
+  "return3m": 138,
+  "returnytd": 389,
   "return1y": 515,
   "return3y": 1835,
   "return5y": 3080,
-  "return10y": 7934,
-  "returnsi": 9565,
+  "return10y": 7925,
+  "returnsi": 9586,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": 0,
@@ -60,19 +60,19 @@
   "cagr1y": 515,
   "cagr3y": 578,
   "cagr5y": 552,
-  "cagr10y": 602,
-  "cagrsi": 622,
+  "cagr10y": 601,
+  "cagrsi": 623,
   "rating": 0,
   "description": "REKSA DANA INSIGHT MONEY (I-MONEY) (selanjutnya disebut \"INSIGHT MONEY (I-MONEY)\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. INSIGHT MONEY (I-MONEY) bertujuan untuk memberikan tingkat pertumbuhan investasi yang relatif stabil sesuai dengan tingkat risiko yang dapat diterima melalui diversifikasi penempatan pada instrumen pasar uang dan/atau Efek bersifat utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun dan/atau deposito. INSIGHT MONEY (I-MONEY) akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan atau diperdagangkan di Bursa Efek Indonesia dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 195651,
+  "lastPrice": 195855,
   "expenseRatio": 68,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "insight-money-20ff31c73b9a",
   "currency": "IDR",
-  "lastAum": 495774750503,
+  "lastAum": 473846294325,
   "factsheet": "https://cache.makmur.id/files/products/637ee50479f48d91c48ef04e/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/637ee50479f48d91c48ef04e/prospectus.pdf",
   "inceptionDate": 20150826,
