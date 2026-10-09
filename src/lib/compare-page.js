@@ -445,7 +445,10 @@ export async function mountComparePage() {
     chart?.setSize({ width: chartContainer.clientWidth, height: chartHeight(CHART_HEIGHT) });
   }).observe(chartContainer);
 
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => chart?.redraw(false));
+  const redrawChart = () => chart?.redraw(false);
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', redrawChart);
+  window.addEventListener('themechange', redrawChart);
 
   commit();
 }
