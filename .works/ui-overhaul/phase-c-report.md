@@ -157,3 +157,56 @@ Download page at 360 dark. No horizontal scroll, no console errors; the overlay 
 Known gaps: the cursor shows a point on the overlay line too; "All" on a fund older than its index shows the
 "no data at the start of this range" message instead of a partial line (by design: the index must be rebased at
 the range start).
+
+## Polish
+
+Branch `worktree-agent-a2fda9fd34d1ddb4a`, from `da991dfd`. `npm test` (297) and `npm run build` pass. Checked in a browser
+(Playwright, built site served with `wrangler dev`) at 360, 390, 768, 1024, 1440px, light and dark, ID and EN, on: home, RD3480,
+RD870, RD216, RD851 (was BRK248, now a redirect), BRK92 (zero_aum), compare with 3 funds, download, API, 404. A script checked
+all 200 combinations for horizontal scroll, text under 12px, text contrast (AA, light and dark), empty headings and console
+errors; the only hits left are the 404 status of the 404 page and cells inside the returns table's own scroll box.
+
+Asked for:
+
+1. Fund page, two columns (`[id].astro`): `.fund-body` holds `.fund-main` (Overview, At a glance, Profile, Performance, Portfolio,
+   Costs, Documents, Data) and `.fund-aside` (buy card, details). From 1000px the aside is its own 340px column; it is sticky under
+   the section nav when the window is at least 900px tall (a taller aside than the window would hide its bottom), else it just
+   stacks. No gap on the left any more. Below 1000px the wrappers use `display: contents` and `order`, so the phone order is
+   unchanged: key figures, buy, glance, details, profile, then the sections. Section nav and anchors work. The key figures are 2x2
+   (4 across only where the column is wide enough, so there is never a lone fourth card). A grid item with `min-width: auto` let
+   the wide chart push the main column under the aside at 1000-1100px; `.fund-main` now has `min-width: 0`.
+2. Small percentages (`format.js`): a non-zero value under 0.05 percentage points gets two decimals in `formatPercent` and
+   `formatChange` (so every sentence, card, and table cell), and a value that rounds to zero never gets a minus. Tests added.
+3. Type cards: the description now spans the card width (the count no longer narrows it), the "Capital protected" text is shorter
+   in both languages ("Protected at maturity, money is locked in" / "Dilindungi saat jatuh tempo, dana terkunci"). Measured: no
+   card overflows its box from 360 to 1440px.
+4. Phone cards: the 12-month sparkline is back on the figures row (fluid 40-96px wide, `preserveAspectRatio="none"` with a
+   non-scaling stroke). The stats row may use the space under the checkbox, so it fits next to the three figures at 360px.
+5. Header: the language pill was clipped between 720 and 860px, and (found while testing) the freshness text overflowed at
+   960-1060px. Freshness now shows from 1060px; from 720 to 859px the nav drops its icons and tightens its padding. 120 checks
+   (720-1100 in steps of 20, three pages, both languages): no horizontal scroll.
+6. Default columns: new `standard` preset (YTD, 1Y, chart, 3Y per year, fund size), first in the list and the default; Simple stays
+   as a choice; a viewer's saved choice still wins (`parseColumns` only falls back to the default for nothing stored).
+7. OJK status: `ojk_status` was dropped from `explorer.json`; it is now a dictionary column in `explorer-data.js` (absent = null,
+   round trip tested). Zero_aum funds show a warning tag "Zero AUM per OJK" / "Dana kelolaan nol menurut OJK" with a title, in
+   table rows and in phone cards (the tag sits in the fund cell both use).
+
+Found in the review pass and fixed:
+
+- Download page on phones: the file list tables squeezed the path column to one character wide (text printed vertically). Rows now
+  stack the path above its description. Archive sizes under 1 MB show KB ("18 KB", not "0.0 MB").
+- API page: three field tables printed the `<code>` tags of their descriptions as text (the `ojk`, `costs`, and benchmark rows);
+  they render as HTML now.
+- English fund page: the asset mix list said "Obligasi", "Lainnya"; bare Indonesian class words use the class label on the
+  English page. The mix percentages now always have two decimals ("90.20%", not "90.2%").
+- Chart on phones: the "Compare with" pills stretched "None" to half the width; they size to their text.
+- Contrast: the type chip's note ("Saham") was 4.49:1 on the equity tint, now inherits the chip color.
+- Text under 12px: mono text (`code`, `.mono`, fund IDs) was 10.6-11.4px; it is at least 12px now.
+- Phone header: the language pill links are 44px wide and 40px tall.
+
+Screenshots: `/home/risan/.cache/claude-tmp/claude-1000/-home-risan-projects-code-reksadana-id/a14481e0-7cd8-4f16-a941-1017471ce1ac/scratchpad/ui-polish/shots/`
+(`final-home-1440.png`, `final-rd870-1440.png` scrolled to Performance with the sticky aside, `final-rd870-390.png`,
+`final-404-1440.png`, plus the working shots; scripts `shot.mjs`, `sweep.mjs`, `audit.mjs`, `hscroll.mjs` next to them).
+
+Not done: the chart range pills and the table-scroll API tables are under 44px tall on phones (36px pills inside a 44px group);
+the asset mix of RD870 sums to more than 100% in the source data (Obligasi 90.2, Deposito 20.62), which is the source's, not ours.
