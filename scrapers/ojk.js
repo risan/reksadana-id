@@ -67,6 +67,11 @@ export const parseCallbackRows = (callback) => [...callback.matchAll(/<tr id="[^
   return [...cells.slice(0, 5), toNumberText(cells[5]), toNumberText(cells[6])];
 });
 
+// fetch() throws a TypeError("fetch failed") when no HTTP answer came back at all; the cause holds the reason.
+const isNetworkError = (error) => error instanceof TypeError && error.message === 'fetch failed';
+
+const describe = (error) => (error.cause?.code ? `${error.message} (${error.cause.code})` : error.message);
+
 const monthKey = (year, month) => `${year}-${String(month).padStart(2, '0')}`;
 
 // Returns null while OJK has not published the month.
@@ -116,6 +121,7 @@ const main = async () => {
   const storedMonths = new Set((await fs.readdir(DATA_DIR)).filter((file) => file.endsWith('.csv')).map((file) => file.slice(0, -'.csv'.length)));
   const months = chooseMonths(monthsInWindow(new Date()), storedMonths);
   const failures = [];
+  const networkFailures = [];
 
   // One month at a time: a month is about 1.8 MB, and OJK's server is slow.
   for (const month of months) {
@@ -131,11 +137,22 @@ const main = async () => {
         console.log(`${month}: ${rows.length} funds`);
       }
     } catch (error) {
-      failures.push(`${month}: ${error.message}`);
+      failures.push(`${month}: ${describe(error)}`);
+
+      if (isNetworkError(error)) {
+        networkFailures.push(month);
+      }
     }
   }
 
   console.log(`${requestCount} requests`);
+
+  // OJK's server does not answer GitHub's runners at all, while a home connection in Indonesia works.
+  if (months.length > 0 && networkFailures.length === months.length) {
+    console.log(`::warning::OJK did not answer from this network (${failures[0]}), so it was skipped and no data changed. Run \`npm run scrape:ojk\` from a home connection instead.`);
+
+    return;
+  }
 
   if (failures.length > 0) {
     console.error(`${failures.length} months failed:\n${failures.join('\n')}`);
