@@ -15,6 +15,18 @@ test('the expense ratio is Bibit when valid, else Makmur, else unknown', () => {
   assert.equal(build({}).expense_ratio, null);
 });
 
+test('every valid expense ratio is kept with its source, the first choice first', () => {
+  const both = build({ bibit: { expenseratio: { percentage: 0.0122 } }, makmur: { expenseRatio: 206 } });
+
+  assert.deepEqual(both.expense_ratios, [
+    { value: 0.0122, source: 'bibit' },
+    { value: 0.0206, source: 'makmur' },
+  ]);
+  assert.deepEqual(both.expense_ratio, both.expense_ratios[0]);
+  assert.deepEqual(build({ bibit: { expenseratio: { percentage: 4343.1 } }, makmur: { expenseRatio: 206 } }).expense_ratios, [{ value: 0.0206, source: 'makmur' }]);
+  assert.deepEqual(build({}).expense_ratios, []);
+});
+
 test('the minimum purchase is listed per distributor, and Bibit counts only when the fund is buyable there', () => {
   const costs = build({ bibit: { tradeable: 1, minbuy: 10000 }, makmur: { minFirstBuy: 100000 }, bareksa: { min_purchase: '250000' } });
 
@@ -92,4 +104,16 @@ test('minimums read as text with their own currency, and without one when it is 
 
   assert.equal(costs.minPurchases[0].text, 'Rp 1,000,000');
   assert.equal(costs.minTopup.text, '100');
+});
+
+test('expense ratios read as text, and sources with the same figure share a line', () => {
+  const differ = describeCosts(build({ bibit: { expenseratio: { percentage: 0.0122 } }, makmur: { expenseRatio: 206 } }), 'en');
+  const same = describeCosts(build({ bibit: { expenseratio: { percentage: 0.0206 } }, makmur: { expenseRatio: 206 } }), 'en');
+
+  assert.deepEqual(differ.expenseRatios, [
+    { text: '1.22%', source: 'Bibit' },
+    { text: '2.06%', source: 'Makmur' },
+  ]);
+  assert.deepEqual(same.expenseRatios, [{ text: '2.06%', source: 'Bibit, Makmur' }]);
+  assert.deepEqual(describeCosts(build({}), 'en').expenseRatios, []);
 });
