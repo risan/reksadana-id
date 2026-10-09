@@ -17,6 +17,8 @@ on:
           - kontan-full
           - makmur
           - bareksa
+          - bareksa-nav
+          - bareksa-nav-all
           - bareksa-profiles
           - all
         default: bibit
@@ -70,12 +72,18 @@ jobs:
         if: (success() || failure()) && steps.decide.outputs.makmur == 'true'
         run: npm run scrape:makmur
 
-      # Bareksa has no daily NAV here: that needs a login, so it is only collected by hand with
-      # BAREKSA_COOKIE (see the README).
+      # The full NAV history of Bareksa needs a login, so it is only collected by hand with BAREKSA_COOKIE
+      # (see the README). The monthly run does not fetch it.
       - name: Scrape Bareksa
         id: bareksa
         if: (success() || failure()) && steps.decide.outputs.bareksa == 'true'
         run: npm run scrape:bareksa
+
+      # The last month or year of NAV needs no login: every day for the funds with a recent NAV, on Saturday for all.
+      - name: Scrape Bareksa NAV
+        id: bareksa_nav
+        if: (success() || failure()) && (steps.decide.outputs.bareksa_nav == 'true' || steps.decide.outputs.bareksa_nav_all == 'true')
+        run: npm run scrape:bareksa:nav${{ steps.decide.outputs.bareksa_nav_all == 'true' && ':all' || '' }}
 
       # A slice of the fund pages (currency, custodian, minimums, fees), every day, apart from the monthly full run.
       - name: Scrape Bareksa profiles
@@ -112,6 +120,7 @@ jobs:
             source_row "Kontan (full rescan)" "${{ steps.kontan_full.outcome }}" kontan
             source_row Makmur "${{ steps.makmur.outcome }}" makmur
             source_row Bareksa "${{ steps.bareksa.outcome }}" bareksa
+            source_row "Bareksa NAV" "${{ steps.bareksa_nav.outcome }}" bareksa
             source_row "Bareksa profiles" "${{ steps.bareksa_profiles.outcome }}" bareksa
             echo "| Link funds | ${{ steps.link.outcome }} | $(git status --porcelain data | wc -l) (all of data/) |"
           } >> "$GITHUB_STEP_SUMMARY"

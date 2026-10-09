@@ -12,6 +12,10 @@ const REQUEST_TIMEOUT_MS = 90 * 1000;
 const LIST_PAGE_SIZE = 100;
 const FIRST_DATE = '2000-01-01';
 const PROFILES_PER_RUN = 400;
+// The NAV endpoint answers without a login for the last month and the last year; longer periods need one.
+const NAV_MONTH_MAX_AGE_DAYS = 25;
+const RECENT_NAV_MAX_AGE_DAYS = 60;
+const DAY_IN_MS = 24 * 60 * 60 * 1000;
 const FUND_HEADER = [
   'bareksa_id', 'name', 'slug', 'type', 'manager', 'launch_date', 'bibit_symbol',
   'currency', 'custodian', 'min_purchase', 'min_topup', 'min_redemption', 'fee_purchase', 'fee_redemption', 'fee_switch', 'profile_date',
@@ -359,6 +363,29 @@ const fetchNavRows = async (id) => parseNavRows(await fetchJson(
 
 const today = () => new Date().toISOString().slice(0, 10);
 
+// Which period to ask for to bring a fund's stored NAV up to date: the last month when the stored file ends
+// within 25 days, else the last year. Null when the fund is skipped: the daily run only asks for funds with a
+// recent NAV (or none yet), and a fund that stopped long ago waits for the run over all funds.
+export const navPeriodFor = (lastDate, todayDate, { all = false } = {}) => {
+  if (lastDate === undefined) {
+    return '1y';
+  }
+
+  const ageDays = (Date.parse(todayDate) - Date.parse(lastDate)) / DAY_IN_MS;
+
+  if (ageDays <= NAV_MONTH_MAX_AGE_DAYS) {
+    return '1m';
+  }
+
+  return all || ageDays <= RECENT_NAV_MAX_AGE_DAYS ? '1y' : null;
+};
+
+// Parsed inside the retry: now and then the answer has no NAV list for a fund that has one.
+export const fetchRecentNavRows = (id, period) => fetchText(
+  `${BASE_URL}/ajax/mutualfund/nav/product1/?id=${id}&cperiod=${period}&startdate=&enddate=&requested_page=profile.graph`,
+  { parse: (text) => parseNavRows(JSON.parse(text)) },
+);
+
 // The page is parsed inside the retry: a throttled request can answer 200 with a page that has no profile.
 export const fetchProfile = async ({ id, slug }) => ({
   ...await fetchText(`${BASE_URL}/id/data/reksadana/${id}/${slug}`, { parse: parseFundPage }),
@@ -392,6 +419,64 @@ const mainProfiles = async ({ all }) => {
 
   reportMatches('Bareksa', funds.size, symbolsById, bibitRows);
   console.log(`${requestCount} requests in ${Math.round((Date.now() - startedAt) / 1000)} seconds`);
+
+  reportFailures(failures, queue.length);
+};
+
+// Daily NAV without a login: the last month or year of every fund, merged into the stored files by date.
+// A full history still needs BAREKSA_COOKIE (see `main`).
+const mainNav = async ({ all }) => {
+  const startedAt = Date.now();
+  const funds = await readStoredFunds();
+  const todayDate = today();
+  const queue = [];
+  let loggedOutError = null;
+
+  await fs.mkdir(path.join(DATA_DIR, 'nav'), { recursive: true });
+
+  for (const id of funds.keys()) {
+    const storedRows = await readCsvRows(path.join(DATA_DIR, 'nav', `${id}.csv`));
+    const period = navPeriodFor(storedRows.at(-1)?.[0], todayDate, { all });
+
+    if (period !== null) {
+      queue.push({ id, period, storedCount: storedRows.length });
+    }
+  }
+
+  console.log(`NAV: ${queue.length} of ${funds.size} funds (${queue.filter(({ period }) => period === '1m').length} for the last month)`);
+
+  let addedRows = 0;
+
+  const failures = await runPool({
+    items: queue,
+    worker: async ({ id, period, storedCount }) => {
+      if (loggedOutError) {
+        return;
+      }
+
+      try {
+        const rowCount = await updateSeries('nav', NAV_HEADER, id, () => fetchRecentNavRows(id, period));
+
+        addedRows += rowCount - storedCount;
+      } catch (error) {
+        if (!(error instanceof CookieError)) {
+          throw error;
+        }
+
+        loggedOutError = error;
+      }
+    },
+    concurrency: CONCURRENCY,
+    label: 'NAV refreshed',
+    describeItem: ({ id }) => `Bareksa ${id}`,
+  });
+
+  console.log(`${addedRows} new NAV rows, ${requestCount} requests in ${Math.round((Date.now() - startedAt) / 1000)} seconds`);
+
+  if (loggedOutError) {
+    console.error(`Bareksa asked for a login even for the last month or year: ${loggedOutError.message}`);
+    process.exitCode = 1;
+  }
 
   reportFailures(failures, queue.length);
 };
@@ -490,6 +575,8 @@ const main = async () => {
 if (process.argv[1] === import.meta.filename) {
   if (process.argv.includes('--profiles') || process.argv.includes('--profiles-all')) {
     await mainProfiles({ all: process.argv.includes('--profiles-all') });
+  } else if (process.argv.includes('--nav') || process.argv.includes('--nav-all')) {
+    await mainNav({ all: process.argv.includes('--nav-all') });
   } else {
     await main();
   }

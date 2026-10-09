@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { CookieError, assertCookieIsValid, fetchProfile, mergeRowsByDate, parseAllocationRows, parseAumRows, parseFundList, parseFundPage, parseNavRows, parseUnitsRows } from './bareksa.js';
+import { CookieError, assertCookieIsValid, fetchProfile, fetchRecentNavRows, navPeriodFor, mergeRowsByDate, parseAllocationRows, parseAumRows, parseFundList, parseFundPage, parseNavRows, parseUnitsRows } from './bareksa.js';
 
 // Built from the response shapes Bareksa sends for a logged-in and an anonymous request.
 const LOGGED_IN_NAV = {
@@ -244,4 +244,35 @@ test('a 200 page without a profile table is fetched again, and a good page is st
 
 test('the profile error says what came back instead', () => {
   assert.throws(() => parseFundPage('<html><title>Please wait</title></html>'), /no profile table \(\d+ characters, title "Please wait"\)/);
+});
+
+test('a fund whose stored NAV ends within 25 days asks for the last month, an older one for the last year', () => {
+  assert.equal(navPeriodFor('2026-10-08', '2026-10-09'), '1m');
+  assert.equal(navPeriodFor('2026-09-14', '2026-10-09'), '1m');
+  assert.equal(navPeriodFor('2026-09-13', '2026-10-09'), '1y');
+  assert.equal(navPeriodFor('2026-08-11', '2026-10-09'), '1y');
+});
+
+test('the daily run skips a fund that stopped over 60 days ago, the run over all funds does not', () => {
+  assert.equal(navPeriodFor('2026-08-09', '2026-10-09'), null);
+  assert.equal(navPeriodFor('2020-01-02', '2026-10-09'), null);
+  assert.equal(navPeriodFor('2026-08-09', '2026-10-09', { all: true }), '1y');
+  assert.equal(navPeriodFor('2020-01-02', '2026-10-09', { all: true }), '1y');
+});
+
+test('a fund without a stored NAV asks for the last year', () => {
+  assert.equal(navPeriodFor(undefined, '2026-10-09'), '1y');
+});
+
+test('an answer without a NAV list is asked again, and the last month is asked without a login', async (t) => {
+  const answers = [
+    { status: true, data: { auth: true, datas: [{ pid: '1', nav: false }] } },
+    { status: true, data: { auth: true, datas: [{ pid: '1', nav: [{ date: '2026-10-08', value: '1768.1' }, { date: '2026-10-09', value: '1769.2' }] }] } },
+  ];
+  const fetchMock = t.mock.method(globalThis, 'fetch', async () => Response.json(answers.shift()));
+
+  assert.deepEqual(await fetchRecentNavRows(1, '1m'), [['2026-10-08', '1768.1'], ['2026-10-09', '1769.2']]);
+  assert.equal(fetchMock.mock.callCount(), 2);
+  assert.match(String(fetchMock.mock.calls[0].arguments[0]), /cperiod=1m/);
+  assert.equal(fetchMock.mock.calls[0].arguments[1].headers.Cookie, undefined);
 });
