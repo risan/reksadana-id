@@ -62,7 +62,51 @@ test('each share class takes the table titled with its own class, and a fund wit
   assert.deepEqual(operatingExpenseOf('sucorinvest-equity'), { status: 'share_classes' });
 });
 
-const row = (pairs, overrides = {}) => ({ page: 1, cells: pairs.map(({ percent }) => String(percent)), pairs, classTitle: null, hasYearHeader: true, hasClassColumns: false, hasUnevenColumns: false, mentionsClass: false, ...overrides });
+test('classes side by side take the cell under their own name, whatever the layout of the header', () => {
+  // "Kelas A/ Class A" in two languages, one table per year, a "-" under a class that has no figure.
+  assert.deepEqual(operatingExpenseOf('allianz-alpha-sector-rotation', 'A'), { status: 'parsed', year: 2025, percent: 3.76 });
+  assert.deepEqual(operatingExpenseOf('allianz-alpha-sector-rotation', 'B1'), { status: 'parsed', year: 2025, percent: 0.54 });
+  // "Kelas G/Class G" has no gap between the languages, so the reader sees one word.
+  assert.deepEqual(operatingExpenseOf('bahana-obligasi-ganesha', 'G'), { status: 'parsed', year: 2025, percent: 2.27 });
+  assert.deepEqual(operatingExpenseOf('bahana-obligasi-ganesha', 'D'), { status: 'parsed', year: 2025, percent: 2.35 });
+  assert.deepEqual(operatingExpenseOf('bahana-obligasi-ganesha', 'I'), { status: 'parsed', year: 2025, percent: 0.7 });
+  // "Kelas/ Class" with the names in the line below, one of the four classes without a cell.
+  assert.deepEqual(operatingExpenseOf('bnp-prima-ii', 'RK1'), { status: 'parsed', year: 2025, percent: 1.44 });
+  assert.deepEqual(operatingExpenseOf('bnp-prima-ii', 'IK1'), { status: 'parsed', year: 2025, percent: 0.85 });
+  assert.deepEqual(operatingExpenseOf('bnp-prima-ii', 'DR1'), { status: 'parsed', year: 2025, percent: 1.37 });
+  assert.deepEqual(operatingExpenseOf('mandiri-asia-sharia-equity', 'A'), { status: 'parsed', year: 2025, percent: 13.55 });
+  assert.deepEqual(operatingExpenseOf('mandiri-asia-sharia-equity', 'B'), { status: 'parsed', year: 2025, percent: 3.05 });
+  assert.deepEqual(operatingExpenseOf('manulife-dana-kas-ii', 'A2'), { status: 'parsed', year: 2025, percent: 0.98 });
+  assert.deepEqual(operatingExpenseOf('manulife-dana-kas-ii', 'I3'), { status: 'parsed', year: 2025, percent: 0.93 });
+});
+
+test('a fund of a prospectus with classes and no class of its own gets no value', () => {
+  assert.deepEqual(operatingExpenseOf('bahana-obligasi-ganesha'), { status: 'share_classes' });
+  assert.deepEqual(operatingExpenseOf('bnp-prima-ii', 'ZZ9'), { status: 'share_classes' });
+});
+
+test('a class with a "-" or no cell under the newest year has no figure, and an older year does not stand in', () => {
+  assert.deepEqual(operatingExpenseOf('allianz-alpha-sector-rotation', 'IB'), { status: 'no_row' });
+  assert.deepEqual(operatingExpenseOf('bnp-prima-ii', 'IK2'), { status: 'no_row' });
+  // Class B has 0.07 in 2023 but "-" in 2025 and 2024.
+  assert.deepEqual(operatingExpenseOf('eastspring-alpha-navigator', 'B'), { status: 'no_row' });
+});
+
+test('the years over the classes of a table with period columns before them are read, and the period columns are not', () => {
+  const [ikhtisarOf2025, ikhtisarOf2024And2023] = findOperatingExpenseRows(readPages('eastspring-alpha-navigator')).filter((row) => row.page < 100);
+
+  assert.deepEqual(ikhtisarOf2025.classPairs, [{ class: 'A', year: 2025, percent: 6.76 }, { class: 'B', year: 2025, percent: null }, { class: 'C', year: 2025, percent: 4.58 }]);
+  assert.deepEqual(ikhtisarOf2024And2023.classPairs.map(({ class: name, year }) => `${name}${year}`), ['A2024', 'B2024', 'C2024', 'A2023', 'B2023', 'C2023']);
+  assert.equal(ikhtisarOf2024And2023.classPairs.find(({ class: name, year }) => name === 'B' && year === 2023).percent, 0.07);
+});
+
+test('a table of one class under a year of its own does not take the header of the table above it', () => {
+  // Class B has its own table for 2023 (the fund started that year); the header above is the one of 2024.
+  assert.deepEqual(operatingExpenseOf('batavia-campuran-cemerlang', 'B'), { status: 'parsed', year: 2024, percent: 2.14 });
+  assert.deepEqual(operatingExpenseOf('batavia-campuran-cemerlang', 'A'), { status: 'parsed', year: 2024, percent: 1.25 });
+});
+
+const row = (pairs, overrides = {}) => ({ page: 1, cells: pairs.map(({ percent }) => String(percent)), pairs, classPairs: [], classTitle: null, hasYearHeader: true, hasClassColumns: false, hasUnevenColumns: false, mentionsClass: false, ...overrides });
 
 test('the newest year up to last year wins, and a year after it is ignored', () => {
   const rows = [row([{ year: 2026, percent: 9 }, { year: 2025, percent: 1.5 }, { year: 2024, percent: 1.4 }])];
@@ -110,7 +154,8 @@ test('an untitled table on a page that names share classes is not given to a fun
 
 test('the share class comes from the end of the fund name', () => {
   assert.equal(fundClassOf('Reksa Dana Sucorinvest Equity Fund Kelas A'), 'A');
-  assert.equal(fundClassOf('Manulife Dana Kas II Kelas D1'), null);
+  assert.equal(fundClassOf('Manulife Dana Kas II Kelas D1'), 'D1');
+  assert.equal(fundClassOf('Syailendra Dana Kelas Utama'), null);
   assert.equal(fundClassOf('Eastspring IDR Fixed Income Fund Class b'), 'B');
   assert.equal(fundClassOf('Schroder Dana Prestasi Plus'), null);
 });
