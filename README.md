@@ -1,6 +1,6 @@
 # Reksadana ID
 
-Raw data for Indonesian mutual funds (reksa dana), and a website that reads it: [reksadana.risanb.com](https://reksadana.risanb.com). The data comes from four fund sources: the public API behind [Bibit](https://app.bibit.id/), the [Kontan pusatdata](https://pusatdata.kontan.co.id/reksadana) pages, [Bareksa](https://www.bareksa.com/id/data/reksadana/daftar), and the public fund pages of [Makmur](https://www.makmur.id/). The prospectus PDFs that Bareksa links give one more figure for each fund that has a readable one: its audited operating expenses. Three more folders hold what the funds are measured against: benchmark index levels (from Bareksa), the exchange rate, policy rate and inflation (from Bank Indonesia), and the official monthly size of every fund (from OJK, the regulator). The data lives in this repository, so you can read it without calling any of the sites.
+Raw data for Indonesian mutual funds (reksa dana), and a website that reads it: [reksadana.risanb.com](https://reksadana.risanb.com). The data comes from four fund sources: the public API behind [Bibit](https://app.bibit.id/), the [Kontan pusatdata](https://pusatdata.kontan.co.id/reksadana) pages, [Bareksa](https://www.bareksa.com/id/data/reksadana/daftar), and the public fund pages of [Makmur](https://www.makmur.id/). The prospectus PDFs that Bareksa links, and those on the managers' own websites, give one more figure for each fund that has a readable one: its audited operating expenses. Three more folders hold what the funds are measured against: benchmark index levels (from Bareksa), the exchange rate, policy rate and inflation (from Bank Indonesia), and the official monthly size of every fund (from OJK, the regulator). The data lives in this repository, so you can read it without calling any of the sites.
 
 If you want the data, read [Get the data](#get-the-data) and [What is where](#what-is-where). If you maintain the project, start at [Run it yourself](#run-it-yourself).
 
@@ -43,6 +43,7 @@ Conventions: returns and ratios are fractions (`0.0106` is 1.06%), dates are ISO
 |---|---|---|---|---|
 | Bibit | `data/bibit/` | 3,046 (the master list) | Fees, returns, documents, daily NAV for buyable funds, AUM | Daily |
 | Kontan | `data/kontan/` | 1,660 | Daily NAV for the last 12 months, growing every run | By hand from a home connection (GitHub is blocked) |
+| Fund managers | `data/managers/` | 500 | The audited operating expenses in the prospectuses on the managers' own websites (19 managers) | Weekly |
 | Makmur | `data/makmur/` | 141 | Latest price, returns, asset allocation, top holdings, and factsheet and prospectus links | Weekly |
 | Bareksa | `data/bareksa/` | 3,812 | Monthly AUM, units, and asset allocation, back to each fund's launch. Daily NAV: the last year every day, older history loaded by hand. Fund pages: custodian, minimums, maximum fees. Prospectus: the audited operating expenses | Daily (NAV, fund pages), weekly (prospectus), monthly (the rest) |
 | Benchmarks | `data/benchmarks/` | 10 series | Daily levels of IHSG, LQ45, IDX30, JII, ISSI, SRI-KEHATI and four Bareksa fund category indices | Daily |
@@ -101,6 +102,7 @@ Kontan only serves the last 12 months of NAV per fund. Every run merges that win
 | `data/bareksa/allocation/<bareksa_id>.csv` | Asset allocation in percent: `date,saham,obligasi,pasar_uang,lainnya` (equity, bonds, money market, other). Bareksa's own chart uses these four names in this order. Only some funds have it (1,337). |
 | `data/bareksa/nav/<bareksa_id>.csv` | Daily NAV per unit: `date,nav`. 3,635 of the 3,812 files reach back more than a year, the oldest to 2001. See "Bareksa daily NAV". |
 | `data/bareksa/prospectus.csv` | One row per fund: the audited operating expenses in its prospectus. See "Operating expenses from the prospectus". |
+| `data/managers/prospectus.csv` | One row per fund: the same figure from the prospectus on its manager's website, keyed by the fund `id` of `data/funds.csv`. See "Prospectuses on the managers' websites". |
 
 `data/bareksa/funds.csv` also holds, from each fund's public Bareksa page: `currency`, `custodian`, `min_purchase`, `min_topup`, `min_redemption` (plain numbers) with `min_purchase_currency`, `min_topup_currency`, `min_redemption_currency` (the currency of each amount, which can differ from the fund's), `fee_purchase`, `fee_redemption`, `fee_switch` (maximum per prospectus, as `min-max` fractions: `-0.02` is at most 2%, `0.005-0.03` is 0.5% to 3%, `0` is free, empty is unknown) and `profile_date` (when the page was last fetched). Rows fetched before the amount currencies were stored have them empty until the next fetch; until then a rupiah fund's amounts count as rupiah and any other fund's have no currency.
 
@@ -265,7 +267,7 @@ The GitHub Actions workflow `.github/workflows/scrape.yml` runs once a day at **
 | Saturday | Sunday morning | Makmur (`scrape:makmur`); Bareksa NAV of all funds (`scrape:bareksa:nav:all`), instead of the daily one; Kontan (see below) |
 | Saturday, day 1 to 7 of the month | Sunday morning | Kontan as a full rescan (`scrape:kontan:full`), instead of the normal Kontan run |
 | Saturday, day 8 or later | Sunday morning | The normal Kontan run (`scrape:kontan`) |
-| Sunday | Monday morning | Prospectuses (`scrape:prospectus`): the link of every fund is asked for, and only a fund whose link changed is read again |
+| Sunday | Monday morning | Prospectuses (`scrape:prospectus`): the link of every fund is asked for, and only a fund whose link changed is read again. Then the managers' prospectuses (`scrape:prospectus:managers`): each manager's list is asked for, and only a file whose version changed is read again |
 | Day 1 of the month, any weekday | The 2nd, 05:17 | Bareksa full run (`scrape:bareksa`): fund list, AUM, units, allocation |
 | Day 8 to 15 of the month | The 9th to the 16th, 05:17 | OJK (`scrape:ojk`): nothing is new before the 8th, and when nothing is new it asks for only the newest two months |
 
@@ -300,6 +302,8 @@ npm run scrape:bareksa:profiles   # up to 400 Bareksa fund pages: custodian, min
 npm run scrape:bareksa:nav        # the last month or year of NAV for funds with a recent NAV
 npm run scrape:bareksa:nav:all    # the same for every fund
 npm run scrape:prospectus         # the audited operating expenses of the prospectuses Bareksa links (the first run: about 2 hours)
+npm run scrape:prospectus -- --status=share_classes,no_row   # read again the funds the reader gave up on, after it learned something new
+npm run scrape:prospectus:managers                # the same from the managers' own websites (the first run: about 1 hour); --manager=bahana for one manager, --all to read every file again
 npm run scrape:benchmarks         # the last year of every benchmark index, merged into data/benchmarks/
 npm run scrape:macro              # JISDOR, BI-Rate, inflation; the first run takes the whole history
 npm run scrape:ojk                # the OJK months of the last 36 that are not stored yet (about 30 minutes the first time)
@@ -379,12 +383,73 @@ The NAV files you commit are public, because this repository is public.
 1. **The link.** `GET https://www.bareksa.com/id/data/mutualfund/prospectus/<bareksa_id>/<slug>` answers 302 to `https://media.bareksa.com/uploads//file_doc/<YYYY>/<MM>/<CODE>_prospectus.pdf` (the upload month), or 404. The fund page and the profile data carry only this redirecting address, so every run asks once per fund (about 3,800 requests, 3 at a time with a pause, about 30 minutes). A redirect to an empty folder counts as no prospectus.
 2. **The file.** A fund is read again only when its link now points at another file than the stored row, or the row is `error`; `--all` reads every fund again, and `--ids=3,19` limits a run to some funds (for trying out the parser). Funds that share one PDF share one download. A PDF is never stored. The first run downloads about 1,400 files (about 5 GB) and takes about 30 minutes plus the links; a normal weekly run reads only the files that changed.
 3. **The table.** `pdfjs-dist` gives every text piece of the pages that contain "Biaya operasi", "Beban operasi" or "Operating expenses", with its position. A row is a line that *starts* with that label ("Jumlah Beban Operasi" of the financial statements is another row). Its numbers are matched to the year header above by column: each calendar year is paired with the cell right under it (the nearest, within half a column, and each cell with one year), so a year-to-date or 12, 36 or 60 month column is never taken for a year, years in ascending order work, and a year without a number stays empty.
-4. **What is stored.** The newest calendar year up to last year, when every table of the prospectus that gives that year agrees, and the audited report's table (the one whose years are in its text, not in a header) shows the same figure. Nothing is stored when the figure is 0 or 15% and over, when the fund was launched during that year (`partial_year`), or when the layout is not certain: years that come twice in a header (a table of periods), columns that are not evenly spaced, or share classes. For a fund with a class in its name ("Kelas A") the table titled with the same class is used; a prospectus that names classes in any other way, or a table without a title, gives `share_classes`. The fund's name must appear in the PDF (a renamed manager is tolerated: the first word may differ), or the status is `no_row`. A prospectus without text, or one where the table is probably a picture (a quarter of the pages are empty), is `scanned`.
+4. **What is stored.** The newest calendar year up to last year, when every table of the prospectus that gives that year agrees, and the audited report's table (the one whose years are in its text, not in a header) shows the same figure. Nothing is stored when the figure is 0 or 15% and over, when the fund was launched during that year (`partial_year`), or when the layout is not certain: years that come twice in a header (a table of periods), columns that are not evenly spaced, or share classes. For a fund with a class in its name ("Kelas A", "Kelas B1", "Kelas RK1") the figure of that class is used. A table that lays out the classes side by side is read by position: each class name in the header line ("Kelas A", "Kelas/ Class" with the letters in the line below, or "Kelas A/ Class A" in two languages) gives a column, the cell under it is the class's, and the year over it (one year for the whole table, or one year over each group of classes) is the cell's. A table is used only when every number in it sits under exactly one class and one year; a "-" under a class says it had no ratio that year, and then an older year does not stand in. A table titled with the class ("Reksa Dana X Kelas A" above it) is used too. A table that cannot be placed with certainty, a prospectus that names classes in another way ("Kelas Utama"), or a fund without a class in its name gives `share_classes`. The fund's name must appear in the PDF (a renamed manager is tolerated: the first word may differ), or the status is `no_row`. A prospectus without text, or one where the table is probably a picture (a quarter of the pages are empty), is `scanned`.
 5. **Tested against.** `scrapers/prospectus.test.js` parses text items saved from real prospectuses (`scrapers/fixtures/prospectus-*.json`; only the pages with the table), including the figures read by hand: Schroder Dana Prestasi Plus 2.03% (2025), BNP Paribas Rupiah Plus 0.71%, Sucorinvest Equity Fund Kelas A 3.85% and Kelas B 2.13%, Sucorinvest Maxi Fund 5.17%, and Batavia Dana Saham Syariah 6.00%.
 
-Results of the first run (2026-10-10): 3,812 funds: 2,401 `not_found` (no prospectus on Bareksa), and of the 1,411 with a PDF 702 `parsed` (256 of them for 2025, 148 for 2024, 124 for 2023, the rest older), 145 `share_classes`, 395 `no_row`, 101 `scanned`, 42 `partial_year`, 24 `conflict`, and 2 `unreadable`. A hand check of about 50 parsed funds against the PDF text found the figure under the right year every time (two reading mistakes found that way, a financial-statement row and a share-class table without a title, are fixed and tested).
+Results of the first run (2026-10-10): 3,812 funds: 2,401 `not_found` (no prospectus on Bareksa), and of the 1,411 with a PDF 702 `parsed` (256 of them for 2025, 148 for 2024, 124 for 2023, the rest older), 145 `share_classes`, 395 `no_row`, 101 `scanned`, 42 `partial_year`, 24 `conflict`, and 2 `unreadable`. After the reader learned to place share-class tables (`--status=share_classes` read the 145 again): 793 `parsed`, 33 `share_classes`, 405 `no_row`, 53 `partial_year`. That also corrected nine funds of the BNI Asset Management family, whose class ("R1", "I1") the first reader did not know, so they had the figure of another class. 12 values read from the new class tables were checked against the page images, and all were right. A hand check of about 50 parsed funds against the PDF text found the figure under the right year every time (two reading mistakes found that way, a financial-statement row and a share-class table without a title, are fixed and tested).
 
 The label is "operating expenses", not "TER": the figure includes transaction costs, and a prospectus that was not updated shows an old year. The site and the API show the year with the figure.
+
+### Prospectuses on the managers' websites
+
+`scrapers/prospectus-managers.js` (`npm run scrape:prospectus:managers`) reads the same figure from the prospectus PDFs that the managers publish on their own websites, which OJK requires them to do. It keeps `data/managers/prospectus.csv`. It is a second script and not a flag of `scrape:prospectus` because it has another input (a list per manager, not one link per fund), another key (the fund `id` of `data/funds.csv`, there is no Bareksa id), and another failure rule: a manager that blocks us is skipped, and only unreadable files count toward the 5% limit.
+
+The columns are `fund_id`, `manager`, `url` (the file), `link` (a page to open instead, when the file has no address of its own: Bahana and Indo Premier), `version`, `status`, `year`, `operating_expense_pct`, and `checked` (the date the file was last read). `status` is the same as in `data/bareksa/prospectus.csv`, without `not_found` and `error`. Where a fund has a value from both sources, the site shows the newer year, and the manager's for the same year, with a link to that PDF. When the two differ for the same year the scraper prints both figures and the job summary counts them (there was 1 on the first run, and the Bareksa copy was the wrong one).
+
+1. **The list.** Each file in `scrapers/prospectus-managers/` is one manager and exports its name as in `data/funds.csv` and `listDocuments()`, which returns the manager's prospectus files as `{ name, url }` (and `shareClass` or `link` when needed). There is no base class. The adapters use plain `fetch`, no cookies, no login, no JavaScript, at most 2 requests at a time, with a pause. A manager whose list cannot be read, or is empty, gets a `::warning::` and keeps its stored rows. Adapters:
+
+| Manager | Where the list comes from | Funds with a value |
+|---|---|---|
+| Manulife | The JSON of the documents page; a file per umbrella at `/content/dam/wam/id/id/funds/prospectus/<code>-prospectus.pdf`. Akamai blocks `curl` and may block GitHub's runners: a 403 gives a warning and keeps the rows | 43 |
+| Trimegah | The 43 fund pages (`/id/reksadana/detail/<code>`), each with a prospectus button | 26 |
+| Mandiri | A fixed list of 36 codes in the adapter. The site answers 403 to everything except `/ftp/prospectus/id/<code>.pdf`. To add a fund, take the code from a browser (the `/ftp/prospectus/id/...` link on the fund's page) and add it with the fund's name. Use the code with the class (`MITRA-A`); the file without it is old | 31 |
+| Syailendra | The fund pages linked from the product pages; the prospectus link of each | 8 |
+| BRI | The JSON that the product page asks for (all funds at once). Files of fewer than 5 pages are fact sheets under a prospectus label and are ignored | 24 |
+| Bahana | The JSON `GET /api/products`; the file is an attachment of the site's API that answers with the PDF inside a data address. Its token holds the upload time, so a replaced file has another URL | 24 |
+| BNI | The 13 category pages, then each fund page's "Prospektus" link | 15 |
+| Batavia | The fund pages linked from `/produk`, each with its `PROSP-<code>-ID.pdf` | 22 |
+| BNP Paribas | The public JSON of the document library (`DOC_FP` in Indonesian); the share class is in the share's name between brackets | 28 |
+| Eastspring | The fund pages linked from the fund list, each with its `/iddocs/PRO/` file | 21 |
+| STAR | The WordPress REST list of products, then each product page | 10 |
+| Panin | A fixed list of 42 page slugs in the adapter (the list page opens a fund with a form that needs a session, and the slug is not made of the name); then `/produk/<slug>/dokumen`. To refresh it, open each fund from `/produk` in a browser and take the slug from the address | 28 |
+| Allianz | The downloads page, read each run because the date folder of the files changes every year | 9 |
+| SAM | The prospectus page | 15 |
+| UOB | The product pages; a page of several funds (the protected funds) gives none | 4 |
+| Indo Premier | The JSON of the site's API; the prospectus is the answer to a POST, so the address kept for it is made up (`.../download_pdf?filetype=prospektus&fundcode=<ticker>`) and `link` is the manager's site. The API gives no version, so the file is read again after 30 days | 15 |
+| Sinarmas | The site's server actions (a Next.js app): one for the list, one per fund for the file. Their ids are made when the site is built; after a new build the adapter fails, warns, and keeps the rows until the ids are read again from the site's scripts | 19 |
+| HPAM (Henan) | The API of the HPAM site, fund number 1 to 30 (a number without a fund answers 400); the file is shared on Google Drive and is fetched from its share link, which is also the `link` | 8 |
+| Schroders | A fixed list of fund names in the adapter: the fund centre shows nothing until a visitor accepts a disclaimer. The files are at `https://api.schroders.com/document-store/<Name-With-Hyphens>-SP-IDBA.pdf`. A file that answers 404 is skipped | 20 |
+
+2. **The match.** A file is matched to a fund of the same manager (the manager names are compared as the linker does) when its name equals the fund's name or one of its `other_names`, after the same normalization as the linker's (case, punctuation, "Reksa Dana" removed) and with a leading kind of fund ("Syariah", "Indeks", "Saham", ...) left out of both. A file without a class in its name covers every class of that fund, because one prospectus does; a file with a class covers only that one. Nothing is matched loosely. A fund that two different files claim has no file, and the names that matched no fund are printed.
+3. **The version.** The URL of a manager's file often stays the same when the file is replaced, so a `HEAD` request gives a version: the ETag, else Last-Modified, else Content-Length. A file is read again when its address or version changed. When the server gives none (Schroders answers 404 to `HEAD`, Indo Premier has no file address), it is read again when `checked` is older than 30 days. `--all` reads everything again, and `--manager=bahana` runs one adapter.
+4. **The reading.** The same reader and checks as for Bareksa's copy: the fund's name must be in the PDF, a scanned file is `scanned`, a fund launched during the year is `partial_year`, and the class rules apply. A file of fewer than 5 pages is `no_row`.
+5. **Blocked and left out.** Sucorinvest's pages answer 403 to everything that is not a browser (Cloudflare) and its files have no guessable address, so it has no adapter. Setiabudi (its page of a fund hides the prospectus link behind a document page, and one fund has none) and Insight (the table's columns come out scrambled) have none yet. A prospectus on a manager's site that the reader cannot place with certainty (a fund with classes named "Kelas Utama" or "Kelas Dana", as STAR's) gives `conflict`, `share_classes`, or `no_row`, never a guess.
+
+Results of the first run (2026-10-10), 500 rows:
+
+| Manager | Files listed | Funds matched | Funds with a value |
+|---|---|---|---|
+| Manulife | 57 | 56 | 43 |
+| Trimegah | 43 | 43 | 26 |
+| Mandiri | 36 | 39 | 31 |
+| Syailendra | 15 | 14 | 8 |
+| BRI | 32 | 31 | 24 |
+| Bahana | 31 | 29 | 24 |
+| BNI | 19 | 18 | 15 |
+| Batavia | 24 | 24 | 22 |
+| BNP Paribas | 32 | 29 | 28 |
+| Eastspring | 24 | 26 | 21 |
+| STAR | 29 | 26 | 10 |
+| Panin | 42 | 39 | 28 |
+| Allianz | 7 | 11 | 9 |
+| SAM | 23 | 26 | 15 |
+| UOB | 8 | 7 | 4 |
+| Indo Premier | 19 | 20 | 15 |
+| Sinarmas | 20 | 21 | 19 |
+| HPAM (Henan) | 18 | 17 | 8 |
+| Schroders | 24 | 25 | 20 |
+
+Of the 1,306 funds that OJK lists with assets, 436 had a value before this work (33.4%), 508 after the share-class tables (38.9%), and 556 (42.6%) with the managers' files, 48 of them from a manager only (the managers' files also give a newer year for some of the others). The funds that still have none are mostly managers without an adapter (Sucorinvest, Insight, Setiabudi, and the small ones), funds of an adapter's manager that the manager does not list, and share-class tables the reader does not place. Eleven manager values were checked against the page images and all were right.
 
 ### Makmur
 
