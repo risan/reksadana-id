@@ -114,3 +114,46 @@ switch flips `data-dividends`, no console errors. Picker: keyboard add works and
 - Dev toolbar of `astro dev` is visible in some screenshots (round pill at the bottom); it is not in the build.
 - `src/lib/icons.js` and `messages/*.json` appends will conflict textually with the other branches (same last
   lines); resolve by keeping both sides.
+
+## Phase D: benchmarks, OJK, freshness, API docs
+
+Merged `worktree-overhaul-2026-10` twice (data enrichment first, then phase B and backend round 2): no conflicts.
+`npm test` 293 pass, `npm run build` passes (9,228 pages, 13,891 files, 1,035 redirects, funds check passed).
+
+Built (fund page `[id].astro`, `src/lib/fund-charts.js`):
+
+- Returns table: one muted italic row per suggested index (short name, full localized name in the `title`),
+  from `fundBenchmarks()`; same single `returnRows()` path as the median row (both use `.row-reference`). The
+  BI-Rate is not a row: "BI-Rate 5.75% a year (as of 23 Sep 2026)" is a note under the table.
+- Chart: "Compare with" pills (None + each index) under the range pills; they wrap on phones, since names such as
+  "Bareksa Fixed Income Fund Index" are long. The chosen index is drawn dashed in `--gold`, rebased to the fund's
+  NAV at the range start (`rebaseBenchmark` in `src/lib/benchmarks.js`, tested). Levels load from
+  `/api/benchmarks/<id>.json` on first use and are cached in memory; a failed load shows a message and goes back
+  to None; an index with no level at the range start (e.g. All) says so. The readout and the tooltip get the
+  index's change over the range. The overlay follows the dividend toggle, the range pills, and `themechange`.
+- At a glance: "Over the same year, IHSG moved -26.9%." after the fund's return sentence, from the first suggested
+  index, skipped for inactive funds or when missing.
+- OJK in Details: "OJK: Registered" and "Fund size per OJK: Rp 7.1T · Sep 2026" (rupiah, month), a month-end AUM
+  sparkline (`linePath`, tested) with a caption; `zero_aum` shows a notice under the header ("OJK reports zero
+  assets for this fund in Sep 2026: it may be dissolved, matured, or not launched yet") and a Details row;
+  `not_listed` is a muted Details row with the last month listed.
+- Freshness notice: only when the NAV source's newest date is more than 5 days behind the site's newest data
+  date; wording "Latest NAV is from <date> (<source>)". RD3480 no longer shows it (checked at 390px).
+- Returns table: the first column is sticky (also on desktop), with a width that keeps labels readable.
+- API page: endpoint rows, TOC entries, field tables and examples for `/api/benchmarks.json` and
+  `/api/benchmarks/<id>.json`; `ojk` in the funds.json fields; `ojk` and `benchmarks` in the one-fund table, with
+  an example of both. `costs.expense_ratios` was already in the `costs` description (phase C). Download page:
+  three more "What's in the data" blocks (Benchmarks, Bank Indonesia, OJK); the zip list was already generated.
+- Chart tooltip names get an ellipsis (moved from the compare page's CSS to `global.css`) and the tooltip no
+  longer runs off the left edge on phones.
+- Tests: `rebaseBenchmark` (3), `shortBenchmarkName`, `linePath`. The explorer's `ojk_status` is untouched.
+
+Screenshots (same folder as above; `d-*` and `overlay*` files): RD3480 (390, no freshness notice), RD870 (money
+market, BI-Rate note, overlay with the Bareksa index, 390 and 1440 dark, ID and EN), RD216 (equity with IHSG,
+overlay, OJK block, 1440 and 390 dark), RD493 (OJK zero_aum notice, 1440), API page at 360 (benchmarks section),
+Download page at 360 dark. No horizontal scroll, no console errors; the overlay interaction was run at 1440 and
+390 (index switch, 3Y and All ranges).
+
+Known gaps: the cursor shows a point on the overlay line too; "All" on a fund older than its index shows the
+"no data at the start of this range" message instead of a partial line (by design: the index must be rebased at
+the range start).
