@@ -8,9 +8,11 @@ import * as bni from './prospectus-managers/bni.js';
 import * as bnpParibas from './prospectus-managers/bnp-paribas.js';
 import * as bri from './prospectus-managers/bri.js';
 import * as eastspring from './prospectus-managers/eastspring.js';
+import * as hpam from './prospectus-managers/hpam.js';
 import * as manulife from './prospectus-managers/manulife.js';
 import * as panin from './prospectus-managers/panin.js';
 import * as samuel from './prospectus-managers/samuel.js';
+import * as sinarmas from './prospectus-managers/sinarmas.js';
 import * as star from './prospectus-managers/star.js';
 import * as syailendra from './prospectus-managers/syailendra.js';
 import * as trimegah from './prospectus-managers/trimegah.js';
@@ -185,4 +187,17 @@ test('UOB: a page with one Indonesian prospectus gives it, and a page of several
 
   assert.deepEqual(uob.parseFundPage(one, 'https://www.uobam.co.id/products-and-services/x.html'), { name: 'UOBAM Dana Rupiah', url: 'https://www.uobam.co.id/web-resources/a/prospektus-uobam-dana-rupiah.pdf' });
   assert.equal(uob.parseFundPage(several, 'https://www.uobam.co.id/products-and-services/x.html').url, '');
+});
+
+test('Sinarmas: the data of a server action is in the line numbered 1, and any other answer is an error', () => {
+  const text = '0:{"a":"$@1"}\n1:{"success":true,"rawdata":{"data":[{"id":"002","name":"Simas Satu"}]}}\n';
+
+  assert.deepEqual(sinarmas.parseActionResponse(text), [{ id: '002', name: 'Simas Satu' }]);
+  assert.throws(() => sinarmas.parseActionResponse('<html>Not found</html>'), /did not answer/);
+});
+
+test('HPAM: the prospectus is a file on Google Drive, taken from its share link', () => {
+  assert.equal(hpam.downloadAddressOf('https://drive.google.com/file/d/abc_123/view?usp=sharing'), 'https://drive.google.com/uc?export=download&id=abc_123');
+  assert.equal(hpam.downloadAddressOf(''), '');
+  assert.deepEqual(hpam.parseProduct({ data: { produk: { nama_produk: 'HPAM Government Bond', file_propektus: 'https://drive.google.com/file/d/x/view' } } }), { name: 'HPAM Government Bond', link: 'https://drive.google.com/file/d/x/view' });
 });

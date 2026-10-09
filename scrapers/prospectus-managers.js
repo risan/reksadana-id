@@ -10,11 +10,13 @@ import * as bnpParibas from './prospectus-managers/bnp-paribas.js';
 import * as bri from './prospectus-managers/bri.js';
 import * as eastspring from './prospectus-managers/eastspring.js';
 import * as mandiri from './prospectus-managers/mandiri.js';
+import * as hpam from './prospectus-managers/hpam.js';
 import * as indoPremier from './prospectus-managers/indo-premier.js';
 import * as manulife from './prospectus-managers/manulife.js';
 import * as panin from './prospectus-managers/panin.js';
 import * as samuel from './prospectus-managers/samuel.js';
 import * as schroders from './prospectus-managers/schroders.js';
+import * as sinarmas from './prospectus-managers/sinarmas.js';
 import * as star from './prospectus-managers/star.js';
 import * as syailendra from './prospectus-managers/syailendra.js';
 import * as trimegah from './prospectus-managers/trimegah.js';
@@ -23,7 +25,7 @@ import * as uob from './prospectus-managers/uob.js';
 // Each adapter exports the manager's name as in data/funds.csv, `listDocuments()` (the prospectuses on the manager's
 // website, as { name, url, link?, shareClass?, version? }), and maybe `downloadDocument(url)` for a file that a plain
 // GET of its address does not give.
-const ADAPTERS = [manulife, trimegah, mandiri, syailendra, bri, bahana, bni, batavia, bnpParibas, eastspring, star, panin, allianz, samuel, uob, indoPremier, schroders];
+const ADAPTERS = [manulife, trimegah, mandiri, syailendra, bri, bahana, bni, batavia, bnpParibas, eastspring, star, panin, allianz, samuel, uob, indoPremier, sinarmas, hpam, schroders];
 
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data');
 const FUNDS_FILE = path.join(DATA_DIR, 'funds.csv');
