@@ -165,13 +165,84 @@ function continues(lastPoint, firstNewPoint) {
   return !areNeighbours(lastPoint, firstNewPoint) || Math.abs(ratio - 1) <= NEXT_DAY_MISMATCH;
 }
 
+const OVERLAP_TOLERANCE = 0.005;
+const OVERLAP_AGREEING_SHARE = 0.95;
+
+// Two sources agree when they share days and almost all of them carry the same NAV. Sources that never
+// overlap cannot show they are the same fund on the same scale, so they do not agree.
+function agreeOnOverlap(base, other) {
+  const baseByDate = new Map(base.map((point) => [point.date, point.value]));
+  const shared = other.filter((point) => baseByDate.has(point.date));
+  const agreeing = shared.filter((point) => Math.abs(point.value / baseByDate.get(point.date) - 1) <= OVERLAP_TOLERANCE);
+
+  return shared.length > 0 && agreeing.length / shared.length >= OVERLAP_AGREEING_SHARE;
+}
+
+const LAG_MIN_CHANGES = 5;
+const LAG_DOMINANCE = 3;
+
+// Kontan stamps some funds' NAV with the next trading day's date. The tell is a NAV that equals the
+// reference's NAV of the previous Kontan row's date, far more often than the NAV of its own date.
+function lagsBehind(kontan, reference) {
+  const referenceByDate = new Map(reference.map((point) => [point.date, point.value]));
+  let sameDay = 0;
+  let nextDay = 0;
+
+  for (let index = 1; index < kontan.length; index++) {
+    if (kontan[index].value === kontan[index - 1].value) {
+      continue;
+    }
+
+    if (referenceByDate.get(kontan[index].date) === kontan[index].value) {
+      sameDay++;
+    }
+
+    if (referenceByDate.get(kontan[index - 1].date) === kontan[index].value) {
+      nextDay++;
+    }
+  }
+
+  return sameDay + nextDay >= LAG_MIN_CHANGES && nextDay > sameDay * LAG_DOMINANCE;
+}
+
+// Every NAV moves back to the date of the row before it. The first row is dropped: its own day is unknown.
+function alignKontan(kontan, reference) {
+  if (!lagsBehind(kontan, reference)) {
+    return kontan;
+  }
+
+  return kontan.slice(1).map((point, index) => ({ ...point, date: kontan[index].date }));
+}
+
 // The canonical currency of data/funds.csv: 'IDR', 'USD', or null when no source says.
 export function fundCurrency(fund) {
   return fund.fund?.currency || null;
 }
 
+// Older days from the other sources, which join the primary history only where the two agree and the join continues.
+function olderPoints(base, primary, sources) {
+  const olderByDate = new Map();
+
+  for (const name of ['bibit', 'bareksa', 'kontan']) {
+    const older = sources[name].filter((point) => point.date < base[0].date);
+
+    if (name === primary || older.length === 0 || !agreeOnOverlap(base, sources[name]) || !continues(older.at(-1), base[0])) {
+      continue;
+    }
+
+    for (const point of older) {
+      if (!olderByDate.has(point.date)) {
+        olderByDate.set(point.date, point);
+      }
+    }
+  }
+
+  return [...olderByDate.values()].sort((a, b) => a.date.localeCompare(b.date));
+}
+
 // Bibit only gives a daily history (with nav_adjusted) for funds you can buy in its app. For the others it
-// has one row per scrape, so a longer daily source wins, and newer rows from any source extend it.
+// has one row per scrape, so a longer daily source wins, and the other sources extend it on both ends:
+// newer rows always, older rows when they agree with the primary history where they overlap.
 export function pickNavHistory(fund) {
   const bibitRows = fund.nav ?? [];
   // Only Bibit's daily history fills nav_adjusted, so it tells a daily history from one row per scrape.
@@ -179,8 +250,9 @@ export function pickNavHistory(fund) {
   const sources = {
     bibit: cleanPoints(bibitRows, 'nav', 'bibit'),
     bareksa: cleanPoints(fund.bareksa?.nav ?? [], 'nav', 'bareksa'),
-    kontan: cleanPoints(fund.kontan?.nav ?? [], 'nav', 'kontan'),
   };
+
+  sources.kontan = alignKontan(cleanPoints(fund.kontan?.nav ?? [], 'nav', 'kontan'), [...sources.bibit, ...sources.bareksa]);
 
   let primary = null;
 
@@ -198,7 +270,7 @@ export function pickNavHistory(fund) {
   }
 
   if (primary === null) {
-    return { points: [], primary: null, used: [], droppedSpikes: 0, frozenSince: null };
+    return { points: [], primary: null, primaryFrom: null, used: [], droppedSpikes: 0, frozenSince: null };
   }
 
   const base = sources[primary];
@@ -220,7 +292,11 @@ export function pickNavHistory(fund) {
     }
   }
 
-  const points = [...base, ...[...newerByDate.values()].sort((a, b) => a.date.localeCompare(b.date))];
+  const points = [
+    ...olderPoints(base, primary, sources),
+    ...base,
+    ...[...newerByDate.values()].sort((a, b) => a.date.localeCompare(b.date)),
+  ];
   const cleaned = dropSpikes(points);
   const end = frozenEnd(cleaned, Object.values(sources));
   const final = end ? [...cleaned.filter((point) => point.date < end.date), end] : cleaned;
@@ -228,6 +304,7 @@ export function pickNavHistory(fund) {
   return {
     points: final,
     primary,
+    primaryFrom: base[0].date,
     used: sourceRuns(final),
     droppedSpikes: points.length - cleaned.length,
     frozenSince: end?.date ?? null,
@@ -437,11 +514,14 @@ export function dividendEvents(fund, history) {
 
 // The same history with every dividend reinvested on its ex-date, scaled like an adjusted close: it ends at
 // the latest NAV and every earlier point is lowered by the dividends paid after it. Returns are ratios,
-// so the scale does not change them.
+// so the scale does not change them. Dividends are known only from the primary history on, so older days
+// from another source are left out: with them, a payout before that date would count as a loss.
 export function withDividendsReinvested(history, events) {
   const growthAt = (date) => events.filter((event) => event.date <= date).reduce((growth, event) => growth * event.factor, 1);
   const latestGrowth = growthAt(history.points.at(-1)?.date);
-  const points = history.points.map((point) => ({ ...point, value: (point.value * growthAt(point.date)) / latestGrowth }));
+  const points = history.points
+    .filter((point) => point.date >= history.primaryFrom)
+    .map((point) => ({ ...point, value: (point.value * growthAt(point.date)) / latestGrowth }));
 
   return { ...history, points };
 }
