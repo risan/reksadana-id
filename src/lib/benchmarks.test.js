@@ -33,6 +33,17 @@ test('an index is measured to the last day on or before the end date, with the s
   assert.equal(entry.returns.simplereturn['1y'], undefined);
 });
 
+test('an index is measured over the fund\'s window, so its "all" starts where the fund\'s does', () => {
+  const series = { id: 'ihsg', kind: 'stock', points: dailyPoints('2026-01-01', Array.from({ length: 100 }, (_, day) => 1000 + day)) };
+  const wholeIndex = benchmarkAt(series, '2026-03-01');
+  const fundWindow = benchmarkAt(series, '2026-03-01', '2026-02-01');
+
+  assert.ok(Math.abs(wholeIndex.returns.simplereturn.all - (1059 / 1000 - 1)) < 1e-12);
+  assert.ok(Math.abs(fundWindow.returns.simplereturn.all - (1059 / 1031 - 1)) < 1e-12);
+  assert.ok(Math.abs(fundWindow.returns.simplereturn['1m'] - (1059 / 1031 - 1)) < 1e-12);
+  assert.equal(benchmarkAt(series, '2026-03-01', '2025-01-01').returns.simplereturn.all, wholeIndex.returns.simplereturn.all);
+});
+
 test('a rate has the value in force on the end date and no returns', () => {
   const series = { id: 'bi-rate', kind: 'rate', points: [{ date: '2026-06-18', value: 5.75 }, { date: '2026-09-23', value: 5.5 }] };
 

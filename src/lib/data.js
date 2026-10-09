@@ -560,7 +560,7 @@ export function loadBenchmarks() {
   return benchmarkSeries;
 }
 
-// The benchmarks suggested for a fund, measured to the date of the fund's latest NAV so that the periods line up.
+// The benchmarks suggested for a fund, measured over the fund's own history (its first to its latest NAV) so that the periods line up.
 export function fundBenchmarks(fund, history) {
   const endDate = history.points.at(-1)?.date;
   const seriesById = new Map(loadBenchmarks().map((series) => [series.id, series]));
@@ -569,7 +569,7 @@ export function fundBenchmarks(fund, history) {
     return [];
   }
 
-  return suggestBenchmarkIds(fund).map((id) => benchmarkAt(seriesById.get(id), endDate)).filter((entry) => entry !== null);
+  return suggestBenchmarkIds(fund).map((id) => benchmarkAt(seriesById.get(id), endDate, history.points[0].date)).filter((entry) => entry !== null);
 }
 
 let fundSummaries = null;

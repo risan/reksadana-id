@@ -25,7 +25,7 @@ export function suggestBenchmarkIds({ type, currency, sharia }) {
 // A series as of a date: the figures a fund page compares with the fund's own. An index gets its returns over
 // the periods computeReturns knows, ending on the last day on or before `endDate`, so they line up with the
 // fund's. A rate (the BI-Rate) has no return, only the value in force on that day.
-export function benchmarkAt(series, endDate) {
+export function benchmarkAt(series, endDate, startDate = '') {
   const endIndex = indexAtOrBefore(series.points, endDate);
 
   if (endIndex < 0) {
@@ -38,7 +38,10 @@ export function benchmarkAt(series, endDate) {
     return { ...entry, returns: null };
   }
 
-  return { ...entry, returns: computeReturns({ points: series.points, primary: 'benchmark' }, endDate) };
+  // The index is measured over the fund's own window: from the day the fund's history starts, "all" is the same stretch.
+  const firstIndex = Math.max(0, indexAtOrBefore(series.points, startDate));
+
+  return { ...entry, returns: computeReturns({ points: series.points.slice(firstIndex), primary: 'benchmark' }, endDate) };
 }
 
 // A series that stops more than this many days before a date has nothing to say about that date.
