@@ -42,7 +42,7 @@ export function describeCosts(costs, locale) {
 
   return {
     operatingExpense: costs.operating_expense
-      ? { text: formatPercent(costs.operating_expense.value, locale), year: costs.operating_expense.year, url: costs.operating_expense.url }
+      ? { text: formatPercent(costs.operating_expense.value, locale), year: costs.operating_expense.year, url: costs.operating_expense.url, provider: costs.operating_expense.provider }
       : null,
     expenseRatio: withSource(costs.expense_ratio, costs.expense_ratio && formatPercent(costs.expense_ratio.value, locale)),
     expenseRatios: groupBySameText(costs.expense_ratios.map((item) => withSource(item, formatPercent(item.value, locale)))),

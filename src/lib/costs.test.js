@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { describeCosts } from './costs-text.js';
-import { buildCosts, formatFeeRange, parseFeeRange } from './costs.js';
+import { buildCosts, formatFeeRange, parseFeeRange, pickOperatingExpense } from './costs.js';
 
 const noProfile = {};
 const build = (parts) => buildCosts({ bibit: {}, makmur: undefined, bareksa: noProfile, currency: 'IDR', ...parts });
@@ -118,18 +118,29 @@ test('expense ratios read as text, and sources with the same figure share a line
   assert.deepEqual(describeCosts(build({}), 'en').expenseRatios, []);
 });
 
+test('the operating expenses of the newer year win, and the manager\'s file wins for the same year', () => {
+  const bareksa = { year: 2025, value: 0.02, provider: 'bareksa' };
+
+  assert.equal(pickOperatingExpense(bareksa, { year: 2025, value: 0.021, provider: 'manager' }).provider, 'manager');
+  assert.equal(pickOperatingExpense(bareksa, { year: 2024, value: 0.021, provider: 'manager' }).provider, 'bareksa');
+  assert.equal(pickOperatingExpense({ ...bareksa, year: 2024 }, { year: 2025, value: 0.021, provider: 'manager' }).provider, 'manager');
+  assert.equal(pickOperatingExpense(bareksa, null).provider, 'bareksa');
+  assert.equal(pickOperatingExpense(null, { year: 2025, provider: 'manager' }).provider, 'manager');
+  assert.equal(pickOperatingExpense(null, null), null);
+});
+
 test('the audited operating expenses of the prospectus come with their year and file, and are null without one', () => {
-  const operatingExpense = { value: 0.0203, year: 2025, url: 'https://media.bareksa.com/uploads//file_doc/2026/07/ACLEKPP_prospectus.pdf', uploaded: '2026-07' };
+  const operatingExpense = { value: 0.0203, year: 2025, url: 'https://media.bareksa.com/uploads//file_doc/2026/07/ACLEKPP_prospectus.pdf', uploaded: '2026-07', provider: 'bareksa' };
 
   assert.deepEqual(build({ operatingExpense }).operating_expense, { ...operatingExpense, source: 'prospectus' });
   assert.equal(build({}).operating_expense, null);
 });
 
 test('the audited operating expenses read as text with their year, apart from the expense ratios of Bibit and Makmur', () => {
-  const operatingExpense = { value: 0.0203, year: 2025, url: 'https://example.com/a.pdf', uploaded: '2026-07' };
+  const operatingExpense = { value: 0.0203, year: 2025, url: 'https://example.com/a.pdf', uploaded: '2026-07', provider: 'manager' };
   const costs = describeCosts(build({ operatingExpense, bibit: { expenseratio: { percentage: 0.0122 } } }), 'en');
 
-  assert.deepEqual(costs.operatingExpense, { text: '2.03%', year: 2025, url: 'https://example.com/a.pdf' });
+  assert.deepEqual(costs.operatingExpense, { text: '2.03%', year: 2025, url: 'https://example.com/a.pdf', provider: 'manager' });
   assert.deepEqual(costs.expenseRatios, [{ text: '1.22%', source: 'Bibit' }]);
   assert.equal(describeCosts(build({}), 'en').operatingExpense, null);
 });

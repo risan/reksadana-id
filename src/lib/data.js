@@ -1,7 +1,7 @@
 import { closeSync, existsSync, fstatSync, openSync, readFileSync, readSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { benchmarkAt, suggestBenchmarkIds } from './benchmarks.js';
-import { buildCosts } from './costs.js';
+import { buildCosts, pickOperatingExpense } from './costs.js';
 import { makmurFundUrl } from './referrals.js';
 import { computeReturns, dividendEvents, fundCurrency, largeMoves, periodStartDate, periodStartIndex, pickAumHistory, pickNavHistory, sparkline, withDividendsReinvested } from './series.js';
 
@@ -10,6 +10,7 @@ export const DATA_DIR = path.resolve('data');
 const BIBIT_DIR = path.join(DATA_DIR, 'bibit');
 const KONTAN_DIR = path.join(DATA_DIR, 'kontan');
 const BAREKSA_DIR = path.join(DATA_DIR, 'bareksa');
+const MANAGERS_DIR = path.join(DATA_DIR, 'managers');
 const MAKMUR_DIR = path.join(DATA_DIR, 'makmur');
 const OJK_DIR = path.join(DATA_DIR, 'ojk', 'monthly');
 const BENCHMARKS_DIR = path.join(DATA_DIR, 'benchmarks');
@@ -290,20 +291,23 @@ function loadBareksaProfile(ids) {
 }
 
 let prospectusRowsById = null;
+let managerProspectusRowsById = null;
 
-// The operating expense ratio a fund's prospectus states (scrapers/prospectus.js), from the first of its Bareksa
-// funds that has one: { value (a fraction), year, url, uploaded }, or null. A prospectus whose table could not be
-// read with certainty has no value.
-function loadOperatingExpense(ids) {
+// The operating expense ratio a fund's prospectus states: { value (a fraction), year, url, uploaded, provider }, or
+// null. It is read from the prospectus on the manager's website (scrapers/prospectus-managers.js) and from Bareksa's
+// copy of it (scrapers/prospectus.js), from the first of the fund's Bareksa funds that has one. The newer year wins;
+// for the same year the manager's file does. A prospectus whose table could not be read with certainty has no value.
+function loadOperatingExpense(ids, fundId) {
   prospectusRowsById ??= new Map(readCsvObjects(BAREKSA_DIR, 'prospectus.csv').map((row) => [row.bareksa_id, row]));
+  managerProspectusRowsById ??= new Map(readCsvObjects(MANAGERS_DIR, 'prospectus.csv').map((row) => [row.fund_id, row]));
 
-  const row = ids.map((id) => prospectusRowsById.get(id)).find((candidate) => candidate?.status === 'parsed');
+  const toExpense = (row, provider, url) => ({ value: Math.round(Number(row.operating_expense_pct) * 100) / 10000, year: Number(row.year), url, uploaded: row.uploaded ?? '', provider });
+  const bareksaRow = ids.map((id) => prospectusRowsById.get(id)).find((candidate) => candidate?.status === 'parsed');
+  const managerRow = managerProspectusRowsById.get(fundId);
+  const bareksa = bareksaRow && toExpense(bareksaRow, 'bareksa', bareksaRow.url);
+  const manager = managerRow?.status === 'parsed' ? toExpense(managerRow, 'manager', managerRow.link || managerRow.url) : null;
 
-  if (row === undefined) {
-    return null;
-  }
-
-  return { value: Math.round(Number(row.operating_expense_pct) * 100) / 10000, year: Number(row.year), url: row.url, uploaded: row.uploaded };
+  return pickOperatingExpense(bareksa, manager);
 }
 
 // The first Makmur fund of one fund, with its raw Makmur record, or null when there is none.
@@ -398,7 +402,7 @@ export function loadFundRecord(id) {
       bibit: bibitRecord,
       makmur: makmurFund?.data,
       bareksa: loadBareksaProfile(bareksa),
-      operatingExpense: loadOperatingExpense(bareksa),
+      operatingExpense: loadOperatingExpense(bareksa, id),
       currency: fund.currency,
     }),
     documents: firstBibitJson(bibit, 'documents'),

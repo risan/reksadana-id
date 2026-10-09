@@ -95,6 +95,7 @@ function buildArchives() {
     { name: 'bibit', description: 'Everything in data/bibit/', files: collectFiles(path.join(DATA_DIR, 'bibit')) },
     { name: 'kontan', description: 'Everything in data/kontan/', files: collectFiles(path.join(DATA_DIR, 'kontan')) },
     { name: 'makmur', description: 'Everything in data/makmur/', files: collectFiles(path.join(DATA_DIR, 'makmur')) },
+    { name: 'managers', description: 'Everything in data/managers/', files: collectFiles(path.join(DATA_DIR, 'managers')) },
     { name: 'ojk', description: 'Everything in data/ojk/', files: collectFiles(path.join(DATA_DIR, 'ojk')) },
     { name: 'benchmarks', description: 'Everything in data/benchmarks/', files: collectFiles(path.join(DATA_DIR, 'benchmarks')) },
     { name: 'macro', description: 'Everything in data/macro/', files: collectFiles(path.join(DATA_DIR, 'macro')) },

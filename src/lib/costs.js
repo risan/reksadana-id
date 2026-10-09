@@ -73,9 +73,20 @@ function custodianOf({ bibit, bareksa }) {
   return null;
 }
 
+// The operating expenses of a fund's prospectus as Bareksa has it and as the manager's website has it (each
+// { year, ... } or null): the newer year, and the manager's for the same year.
+export function pickOperatingExpense(bareksa, manager) {
+  if (bareksa && manager) {
+    return manager.year >= bareksa.year ? manager : bareksa;
+  }
+
+  return manager ?? bareksa ?? null;
+}
+
 // `bibit` is the fund's Bibit record ({} when Bibit does not list it), `makmur` its Makmur record data,
 // `bareksa` its Bareksa row of funds.csv (profile columns), `operatingExpense` the audited ratio of its prospectus
-// ({ value, year, url, uploaded }, a fraction, or null).
+// ({ value, year, url, uploaded, provider }, a fraction, `provider` the "manager" or "bareksa" that the file came from,
+// or null).
 export function buildCosts({ bibit, makmur, bareksa, operatingExpense = null, currency }) {
   const buyableOnBibit = bibit.tradeable === 1;
   const expenseRatios = expenseRatiosOf({ bibit, makmur });
