@@ -362,6 +362,34 @@ function isFarOff(value, reference) {
   return ratio > UNIT_ERROR_RATIO || ratio < 1 / UNIT_ERROR_RATIO;
 }
 
+const AUM_SPIKE_RATIO = 8;
+const AUM_NEIGHBOURS_AGREE_RATIO = 3;
+const ABSURD_AUM = 1e6;
+const ABSURD_AUM_RATIO = 1000;
+
+const isOffBy = (value, reference, factor) => value / reference > factor || value / reference < 1 / factor;
+
+// A month that jumps far from both neighbours while the neighbours agree is a unit or class error (Bareksa has
+// hundreds), and so is a figure under a million in a series that otherwise runs a thousand times higher.
+function dropAumErrors(points) {
+  const sortedValues = points.map((point) => point.value).sort((a, b) => a - b);
+  const median = sortedValues[sortedValues.length >> 1];
+
+  return points.filter((point, index) => {
+    const previous = points[index - 1];
+    const next = points[index + 1];
+
+    if (point.value < ABSURD_AUM && median >= point.value * ABSURD_AUM_RATIO) {
+      return false;
+    }
+
+    return !(previous && next
+      && isOffBy(point.value, previous.value, AUM_SPIKE_RATIO)
+      && isOffBy(point.value, next.value, AUM_SPIKE_RATIO)
+      && !isOffBy(next.value, previous.value, AUM_NEIGHBOURS_AGREE_RATIO));
+  });
+}
+
 // Some Bibit AUM figures are in the wrong unit: a USD fund in rupiah, a figure 1,000 times too big, or the
 // NAV in place of the AUM. Bareksa's figure for the same month catches those; smaller differences are real.
 function hasUnitError(bibitPoint, bareksaByMonth) {
@@ -374,9 +402,9 @@ function hasUnitError(bibitPoint, bareksaByMonth) {
 // (null when no source states it, which the pages then show without a currency).
 export function pickAumHistory(fund) {
   const key = fundCurrency(fund) === 'USD' ? 'aum_usd' : 'aum_idr';
-  const bareksa = cleanPoints(fund.bareksa?.aum ?? [], key, 'bareksa', key === 'aum_usd' ? 'USD' : 'IDR');
+  const bareksa = dropAumErrors(cleanPoints(fund.bareksa?.aum ?? [], key, 'bareksa', key === 'aum_usd' ? 'USD' : 'IDR'));
   const bareksaByMonth = new Map(bareksa.map((point) => [point.date.slice(0, 7), point.value]));
-  const bibitAll = cleanPoints(fund.aum ?? [], 'aum', 'bibit', fundCurrency(fund));
+  const bibitAll = dropAumErrors(cleanPoints(fund.aum ?? [], 'aum', 'bibit', fundCurrency(fund)));
   const bibit = bibitAll.filter((point) => !hasUnitError(point, bareksaByMonth));
   const latestIsWrong = bibitAll.length > 0 && hasUnitError(bibitAll.at(-1), bareksaByMonth);
 

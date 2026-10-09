@@ -467,3 +467,27 @@ test('a fund whose Bareksa NAV stopped moving long ago is frozen even if a re-da
 
   assert.equal(history.frozenSince, '2026-01-01');
 });
+
+const monthlyAum = (values) => values.map((aum, index) => ({ date: `2026-${String(index + 1).padStart(2, '0')}-01`, aum }));
+
+test('a month far from both neighbours, which agree with each other, is dropped from the fund size', () => {
+  const history = pickAumHistory({ aum: monthlyAum([8.87e6, 527.37, 6.57e6, 77.7e9, 5.22e6, 5.5e6]) });
+
+  assert.deepEqual(history.points.map((point) => point.value), [8.87e6, 6.57e6, 5.22e6, 5.5e6]);
+});
+
+test('a latest figure of a few rupiah after months in the billions is dropped, a real change is kept', () => {
+  const absurd = pickAumHistory({ aum: monthlyAum([3.0e9, 3.05e9, 3.1e9, 1.38]) });
+  const halved = pickAumHistory({ aum: monthlyAum([3.0e9, 3.05e9, 3.1e9, 1.1e9]) });
+
+  assert.deepEqual(absurd.points.map((point) => point.value), [3.0e9, 3.05e9, 3.1e9]);
+  assert.equal(halved.points.length, 4);
+});
+
+test('a fund that is small all along, or two odd months in a row, keeps its figures', () => {
+  const small = pickAumHistory({ fund: { currency: 'USD' }, aum: monthlyAum([4.5e5, 4.7e5, 4.9e5]) });
+  const twoMonths = pickAumHistory({ aum: monthlyAum([1e9, 1.1e9, 5e10, 5.1e10, 1.2e9]) });
+
+  assert.equal(small.points.length, 3);
+  assert.equal(twoMonths.points.length, 5);
+});
