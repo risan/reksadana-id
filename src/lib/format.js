@@ -12,14 +12,26 @@ function formatDecimal(value, locale, maximumFractionDigits, minimumFractionDigi
   return value.toLocaleString(intlLocale(locale), { maximumFractionDigits, minimumFractionDigits });
 }
 
+const TINY_PERCENT_POINTS = 0.05;
+const TINY_DIGITS = 2;
+
+// A value that is not zero but would round to a flat 0.0% gets two decimals, so it reads as small, not as nothing.
+function digitsFor(fraction, digits) {
+  const isTiny = fraction !== 0 && Math.abs(fraction * 100) < TINY_PERCENT_POINTS;
+
+  return isTiny ? Math.max(digits, TINY_DIGITS) : digits;
+}
+
 export function formatPercent(fraction, locale, digits = 2) {
   if (isMissing(fraction)) {
     return DASH;
   }
 
-  const text = formatDecimal(Math.abs(fraction * 100), locale, digits, digits);
+  const shownDigits = digitsFor(fraction, digits);
+  const text = formatDecimal(Math.abs(fraction * 100), locale, shownDigits, shownDigits);
+  const isZeroWhenShown = Number(Math.abs(fraction * 100).toFixed(shownDigits)) === 0;
 
-  return `${fraction < 0 && Number(Math.abs(fraction * 100).toFixed(digits)) !== 0 ? MINUS : ''}${text}%`;
+  return `${fraction < 0 && !isZeroWhenShown ? MINUS : ''}${text}%`;
 }
 
 export function formatChange(fraction, locale, digits = 2) {
@@ -27,9 +39,10 @@ export function formatChange(fraction, locale, digits = 2) {
     return DASH;
   }
 
-  const text = formatDecimal(Math.abs(fraction * 100), locale, digits, digits);
+  const shownDigits = digitsFor(fraction, digits);
+  const text = formatDecimal(Math.abs(fraction * 100), locale, shownDigits, shownDigits);
 
-  if (Number(Math.abs(fraction * 100).toFixed(digits)) === 0) {
+  if (Number(Math.abs(fraction * 100).toFixed(shownDigits)) === 0) {
     return `${text}%`;
   }
 

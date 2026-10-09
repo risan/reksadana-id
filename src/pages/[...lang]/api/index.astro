@@ -219,7 +219,7 @@ curl -s {ORIGIN}/api/benchmarks/ihsg.json | jq '.points[-1]'</code></pre>
                   <tr>
                     <td><code>{field}</code></td>
                     <td class="muted">{typeLabel(type)}</td>
-                    <td>{meaning}</td>
+                    <td set:html={meaning} />
                   </tr>
                 ))
               }
@@ -271,7 +271,7 @@ curl -s {ORIGIN}/api/benchmarks/ihsg.json | jq '.points[-1]'</code></pre>
                   <tr>
                     <td><code>{field}</code></td>
                     <td class="muted">{typeLabel(type)}</td>
-                    <td>{meaning}</td>
+                    <td set:html={meaning} />
                   </tr>
                 ))
               }
@@ -393,7 +393,7 @@ curl -s {ORIGIN}/api/benchmarks/ihsg.json | jq '.points[-1]'</code></pre>
                   <tr>
                     <td><code>{field}</code></td>
                     <td class="muted">{typeLabel(type)}</td>
-                    <td>{meaning}</td>
+                    <td set:html={meaning} />
                   </tr>
                 ))
               }

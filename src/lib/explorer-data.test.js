@@ -36,6 +36,7 @@ const fund = {
   large_move: false,
   dividends: true,
   active: true,
+  ojk_status: 'zero_aum',
 };
 
 const bare = {
@@ -83,6 +84,7 @@ test('decoding gives back what was encoded, at the precision the explorer shows'
   assert.equal(first.sharia, true);
   assert.equal(first.dividends, true);
   assert.equal(first.active, true);
+  assert.equal(first.ojk_status, 'zero_aum');
   assert.equal(first.total.return_1y, 0.2);
   assert.equal(first.total.return_6m, null);
 });
@@ -98,6 +100,7 @@ test('a fund without values keeps its nulls and yes/no fields', () => {
   assert.equal(decoded.total, null);
   assert.equal(decoded.sharia, null);
   assert.equal(decoded.active, false);
+  assert.equal(decoded.ojk_status, null);
 });
 
 test('a sparkline keeps its shape within one step of 36', () => {

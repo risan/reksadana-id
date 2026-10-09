@@ -326,7 +326,7 @@ pre,
 kbd,
 .mono {
   font-family: var(--mono);
-  font-size: 0.88em;
+  font-size: max(0.88em, var(--fs-xs));
   font-variant-numeric: normal;
 }
 
@@ -592,6 +592,11 @@ main.wrap {
     display: none;
   }
 
+  .lang-switch a {
+    min-width: 44px;
+    height: 40px;
+  }
+
   .site-freshness {
     display: none;
   }
@@ -632,8 +637,27 @@ main.wrap {
   }
 }
 
-@media (max-width: 959px) {
+@media (max-width: 1059px) {
   .site-freshness {
+    display: none;
+  }
+}
+
+/* Between the tab bar and a full header the nav and the actions only just fit, so the nav drops its icons. */
+@media (min-width: 720px) and (max-width: 859px) {
+  .site-header .wrap {
+    gap: var(--s-2);
+  }
+
+  .site-nav {
+    margin-left: 0;
+  }
+
+  .site-nav a {
+    padding: 0 var(--s-2);
+  }
+
+  .site-nav a svg {
     display: none;
   }
 }

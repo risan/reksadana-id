@@ -16,7 +16,7 @@ export function renderSpark(spark, direction) {
   const y = (value) => (1.5 + ((100 - value) / 100) * (SPARK_HEIGHT - 3)).toFixed(1);
   const points = spark.map((value, index) => `${(index * step).toFixed(1)},${y(value)}`).join(' ');
 
-  return `<svg class="spark ${direction}" width="${SPARK_WIDTH}" height="${SPARK_HEIGHT}" viewBox="0 0 ${SPARK_WIDTH} ${SPARK_HEIGHT}" aria-hidden="true"><line x1="0" x2="${SPARK_WIDTH}" y1="${y(spark[0])}" y2="${y(spark[0])}" /><polyline points="${points}" /></svg>`;
+  return `<svg class="spark ${direction}" width="${SPARK_WIDTH}" height="${SPARK_HEIGHT}" viewBox="0 0 ${SPARK_WIDTH} ${SPARK_HEIGHT}" preserveAspectRatio="none" aria-hidden="true"><line x1="0" x2="${SPARK_WIDTH}" y1="${y(spark[0])}" y2="${y(spark[0])}" /><polyline points="${points}" /></svg>`;
 }
 
 const nil = '<span class="nil">&mdash;</span>';
@@ -118,6 +118,7 @@ export const COLUMNS = [
 export const COLUMN_KEYS = COLUMNS.map((column) => column.key);
 
 export const COLUMN_PRESETS = [
+  { key: 'standard', label: () => m.preset_standard(), columns: ['return_ytd', 'return_1y', 'spark', 'cagr_3y', 'aum'] },
   { key: 'simple', label: () => m.preset_simple(), columns: ['return_1y', 'spark', 'aum'] },
   { key: 'returns', label: () => m.preset_returns(), columns: ['return_1m', 'return_3m', 'return_6m', 'return_ytd', 'return_1y', 'return_3y', 'return_5y'] },
   { key: 'risk', label: () => m.preset_risk(), columns: ['return_1y', 'spark', 'drawdown_1y', 'drawdown_3y', 'cagr_3y'] },

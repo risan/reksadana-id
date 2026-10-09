@@ -79,6 +79,10 @@ const assets = (fund.asset ?? [])
   .filter((asset) => asset.percentage > 0)
   .map((asset) => ({ ...asset, assetClass: assetClassOf(asset.name) }))
   .sort((a, b) => ASSET_CLASSES.indexOf(a.assetClass) - ASSET_CLASSES.indexOf(b.assetClass) || b.percentage - a.percentage);
+
+// The English page names a bare Indonesian class word ("Obligasi", "Lainnya") with the class label; longer names stay as given.
+const INDONESIAN_CLASS_WORDS = /^(saham|obligasi|sukuk|pasar uang|deposito|kas|lainnya)$/i;
+const assetName = (asset) => (locale === 'en' && INDONESIAN_CLASS_WORDS.test(asset.name.trim()) ? asset.assetClass.label : asset.name);
 const assetTotal = assets.reduce((sum, asset) => sum + asset.percentage, 0);
 
 const BAREKSA_CLASSES = [
@@ -409,6 +413,8 @@ const sources = [
     </ul>
   </nav>
 
+  <div class="fund-body">
+  <div class="fund-main">
   <section class="fund-section" id="overview">
     <dl class="figures">
       {figures.map((figure) => (
@@ -459,82 +465,36 @@ const sources = [
         </p>
       )
     }
-
-    <div class="overview-grid">
-      <div class="overview-left">
-        {
-          glance.length > 0 && (
-            <section class="card glance">
-              <h2 class="card-title">{m.glance_title()}</h2>
-              <ul class="glance-list">
-                {glance.map((sentence) => <li>{sentence}</li>)}
-              </ul>
-            </section>
-          )
-        }
-
-        {
-          summary !== null && (
-            <section class="card profile-card">
-              <h2 class="card-title">{m.profile_title()} <span class="aside muted">{m.profile_aside()}</span></h2>
-              {
-                profileText === summary ? (
-                  <p class="profile-text">{summary}</p>
-                ) : (
-                  <details class="profile">
-                    <summary>{summary}</summary>
-                    <p class="profile-text">{profileText}</p>
-                  </details>
-                )
-              }
-            </section>
-          )
-        }
-      </div>
-
-      <div class="overview-rail">
-        {
-          buyLinks.length > 0 && (
-            <section class="card buy-card" id="buy">
-              <h2 class="card-title">{m.buy_title()}</h2>
-              {buyLinks.map((link) => (
-                <div class="buy-row">
-                  <a class="btn btn-primary" href={link.url} target="_blank" rel="sponsored noopener">{m.buy_open({ name: link.name })}<Fragment set:html={icon('arrow-up-right')} /></a>
-                  <span class="referral small muted">
-                    {m.buy_referral_code()} <code>{link.code}</code>
-                    <button class="copy" type="button" data-copy={link.code} data-copied={m.buy_copied()} data-failed={m.buy_copy_failed()} hidden><Fragment set:html={icon('copy', { size: 14 })} /><span class="copy-label">{m.buy_copy()}</span></button>
-                  </span>
-                </div>
-              ))}
-              <p class="small muted">{m.buy_note()}</p>
-            </section>
-          )
-        }
-
-        <section class="card details-card">
-          <h2 class="card-title">{m.details_title()}</h2>
-          <dl class="kv">
-            {details.map(([label, value, isMuted]) => (
-              <>
-                <dt>{label}</dt>
-                <dd class={isMuted ? 'muted' : undefined}>{value}</dd>
-              </>
-            ))}
-          </dl>
-          {
-            ojkSparkPath && (
-              <figure class="ojk-spark">
-                <svg viewBox="0 0 200 36" preserveAspectRatio="none" role="img" aria-label={m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}>
-                  <path d={ojkSparkPath} fill="none" stroke="var(--gold)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" />
-                </svg>
-                <figcaption class="muted small">{m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}</figcaption>
-              </figure>
-            )
-          }
-        </section>
-      </div>
-    </div>
   </section>
+
+  {
+    glance.length > 0 && (
+      <section class="card glance">
+        <h2 class="card-title">{m.glance_title()}</h2>
+        <ul class="glance-list">
+          {glance.map((sentence) => <li>{sentence}</li>)}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    summary !== null && (
+      <section class="card profile-card">
+        <h2 class="card-title">{m.profile_title()} <span class="aside muted">{m.profile_aside()}</span></h2>
+        {
+          profileText === summary ? (
+            <p class="profile-text">{summary}</p>
+          ) : (
+            <details class="profile">
+              <summary>{summary}</summary>
+              <p class="profile-text">{profileText}</p>
+            </details>
+          )
+        }
+      </section>
+    )
+  }
 
   {
     showPerformance && (
@@ -677,17 +637,17 @@ const sources = [
                 <h3 class="card-title">{m.asset_mix_title()}</h3>
                 {assets.length > 0 && (
                   <>
-                    <div class="mix-bar" role="img" aria-label={assets.map((asset) => `${asset.name} ${asset.percentage}%`).join(', ')}>
+                    <div class="mix-bar" role="img" aria-label={assets.map((asset) => `${assetName(asset)} ${asset.percentage}%`).join(', ')}>
                       {assets.map((asset) => (
-                        <span style={`flex-basis: ${(asset.percentage / assetTotal) * 100}%; background: ${asset.assetClass.color}`} title={`${asset.name}: ${asset.percentage}%`} />
+                        <span style={`flex-basis: ${(asset.percentage / assetTotal) * 100}%; background: ${asset.assetClass.color}`} title={`${assetName(asset)}: ${asset.percentage}%`} />
                       ))}
                     </div>
                     <ul class="mix-legend">
                       {assets.map((asset) => (
                         <li>
                           <i class="key-box" style={`background: ${asset.assetClass.color}`}></i>
-                          {asset.name}
-                          <span class="num">{formatNumber(asset.percentage, locale, 2)}%</span>
+                          {assetName(asset)}
+                          <span class="num">{formatNumber(asset.percentage, locale, 2, 2)}%</span>
                         </li>
                       ))}
                     </ul>
@@ -868,6 +828,51 @@ const sources = [
       }
     </div>
   </section>
+  </div>
+
+  <aside class="fund-aside">
+    {
+      buyLinks.length > 0 && (
+        <section class="card buy-card" id="buy">
+          <h2 class="card-title">{m.buy_title()}</h2>
+          {buyLinks.map((link) => (
+            <div class="buy-row">
+              <a class="btn btn-primary" href={link.url} target="_blank" rel="sponsored noopener">{m.buy_open({ name: link.name })}<Fragment set:html={icon('arrow-up-right')} /></a>
+              <span class="referral small muted">
+                {m.buy_referral_code()} <code>{link.code}</code>
+                <button class="copy" type="button" data-copy={link.code} data-copied={m.buy_copied()} data-failed={m.buy_copy_failed()} hidden><Fragment set:html={icon('copy', { size: 14 })} /><span class="copy-label">{m.buy_copy()}</span></button>
+              </span>
+            </div>
+          ))}
+          <p class="small muted">{m.buy_note()}</p>
+        </section>
+      )
+    }
+
+    <section class="card details-card">
+      <h2 class="card-title">{m.details_title()}</h2>
+      <dl class="kv">
+        {details.map(([label, value, isMuted]) => (
+          <>
+            <dt>{label}</dt>
+            <dd class={isMuted ? 'muted' : undefined}>{value}</dd>
+          </>
+        ))}
+      </dl>
+      {
+        ojkSparkPath && (
+          <figure class="ojk-spark">
+            <svg viewBox="0 0 200 36" preserveAspectRatio="none" role="img" aria-label={m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}>
+              <path d={ojkSparkPath} fill="none" stroke="var(--gold)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" />
+            </svg>
+            <figcaption class="muted small">{m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}</figcaption>
+          </figure>
+        )
+      }
+    </section>
+
+  </aside>
+  </div>
 </Base>
 
 <style is:global>
@@ -949,7 +954,7 @@ const sources = [
   }
 
   .chip-note {
-    color: var(--muted);
+    color: inherit;
     font-weight: var(--fw-body);
   }
 
@@ -1064,9 +1069,16 @@ const sources = [
 
   .figures {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--s-3);
     margin: 0;
+  }
+
+  /* Four across only where the column is wide enough, so the last card is never alone on a row. */
+  @media (min-width: 880px) and (max-width: 999px), (min-width: 1280px) {
+    .figures {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
 
   .figure {
@@ -1139,32 +1151,50 @@ const sources = [
     line-height: 1.5;
   }
 
-  .overview-grid {
-    display: grid;
+  .fund-body {
+    display: flex;
+    flex-direction: column;
     gap: var(--s-3);
-    margin-top: var(--s-3);
   }
 
-  .overview-left,
-  .overview-rail {
+  .fund-main,
+  .fund-aside {
     display: contents;
   }
 
+  .fund-body .fund-section:not(#overview) {
+    margin-top: var(--s-5);
+  }
+
   .buy-card {
-    order: 1;
     scroll-margin-top: calc(var(--header-h) + 64px);
   }
 
-  .glance {
-    order: 2;
-  }
+  /* One column: the buy card sits right under the key figures, the rest of the details follow the summary. */
+  @media (max-width: 999px) {
+    .fund-body #overview {
+      order: 0;
+    }
 
-  .details-card {
-    order: 3;
-  }
+    .buy-card {
+      order: 1;
+    }
 
-  .profile-card {
-    order: 4;
+    .glance {
+      order: 2;
+    }
+
+    .details-card {
+      order: 3;
+    }
+
+    .profile-card {
+      order: 4;
+    }
+
+    .fund-body .fund-section:not(#overview) {
+      order: 5;
+    }
   }
 
   .glance-list {
@@ -1564,23 +1594,31 @@ const sources = [
   }
 
   @media (min-width: 1000px) {
-    .overview-grid {
+    .fund-body {
+      display: grid;
       grid-template-columns: minmax(0, 1fr) 340px;
+      gap: var(--s-5);
       align-items: start;
     }
 
-    .overview-left,
-    .overview-rail {
+    .fund-main,
+    .fund-aside {
       display: grid;
+      grid-template-columns: minmax(0, 1fr);
       gap: var(--s-3);
+      min-width: 0;
     }
 
-    .overview-left {
-      grid-column: 1;
-    }
-
-    .overview-rail {
+    .fund-aside {
       grid-column: 2;
+      padding-top: var(--s-4);
+    }
+  }
+
+  @media (min-width: 1000px) and (min-height: 900px) {
+    .fund-aside {
+      position: sticky;
+      top: calc(var(--header-h) + 48px + var(--s-2));
     }
   }
 
@@ -1644,6 +1682,11 @@ const sources = [
     .chart-bar .seg button {
       flex: 1 1 0;
       padding: 0;
+    }
+
+    .chart-bar #benchmark-buttons button {
+      flex: 0 1 auto;
+      padding: var(--s-1) var(--s-3);
     }
 
     .copy {
