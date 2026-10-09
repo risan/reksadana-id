@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Decides which sources the scrape workflow runs and prints one `name=true|false` line per source.
 # Usage: decide-sources.sh [requested-source] [date]
-#   requested-source: bibit, kontan, kontan-full, makmur, bareksa, bareksa-nav, bareksa-nav-all, bareksa-profiles, or all.
-#   Empty means "by the date".
+#   requested-source: bibit, kontan, kontan-full, makmur, bareksa, bareksa-nav, bareksa-nav-all, bareksa-profiles,
+#     benchmarks, macro, ojk, or all. Empty means "by the date".
 #   date: any `date -d` value, to try another moment than now (UTC).
 set -euo pipefail
 
@@ -21,6 +21,9 @@ bareksa=false
 bareksa_nav=false
 bareksa_nav_all=false
 bareksa_profiles=false
+benchmarks=false
+macro=false
+ojk=false
 
 case "$requested" in
   bibit) bibit=true ;;
@@ -31,11 +34,21 @@ case "$requested" in
   bareksa-nav) bareksa_nav=true ;;
   bareksa-nav-all) bareksa_nav_all=true ;;
   bareksa-profiles) bareksa_profiles=true ;;
-  all) bibit=true; kontan=true; makmur=true; bareksa=true; bareksa_nav=true; bareksa_profiles=true ;;
+  benchmarks) benchmarks=true ;;
+  macro) macro=true ;;
+  ojk) ojk=true ;;
+  all) bibit=true; kontan=true; makmur=true; bareksa=true; bareksa_nav=true; bareksa_profiles=true; benchmarks=true; macro=true; ojk=true ;;
   "")
     # The run starts in the evening UTC, so Saturday here is Sunday morning in Jakarta.
     bibit=true
     bareksa_profiles=true
+    benchmarks=true
+    macro=true
+
+    # OJK publishes last month's figures from about the 8th. A run when nothing is new asks for two months.
+    if [ "$day_of_month" -ge 8 ] && [ "$day_of_month" -le 15 ]; then
+      ojk=true
+    fi
 
     if [ "$weekday" = 6 ]; then
       makmur=true
@@ -61,6 +74,6 @@ case "$requested" in
     ;;
 esac
 
-for output in bibit=$bibit kontan=$kontan kontan_full=$kontan_full makmur=$makmur bareksa=$bareksa bareksa_nav=$bareksa_nav bareksa_nav_all=$bareksa_nav_all bareksa_profiles=$bareksa_profiles; do
+for output in bibit=$bibit kontan=$kontan kontan_full=$kontan_full makmur=$makmur bareksa=$bareksa bareksa_nav=$bareksa_nav bareksa_nav_all=$bareksa_nav_all bareksa_profiles=$bareksa_profiles benchmarks=$benchmarks macro=$macro ojk=$ojk; do
   echo "$output"
 done

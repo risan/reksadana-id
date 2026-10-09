@@ -13,21 +13,16 @@ function isPositiveAmount(value) {
   return Number.isFinite(value) && value > 0;
 }
 
-function expenseRatioOf({ bibit, makmur }) {
+// Bibit and Makmur can disagree by up to 2x on the same fund, and neither says as of when, so every valid one is kept.
+function expenseRatiosOf({ bibit, makmur }) {
   const fromBibit = bibit.expenseratio?.percentage;
-
-  if (isValidExpenseRatio(fromBibit)) {
-    return { value: fromBibit, source: 'bibit' };
-  }
-
   // Makmur keeps hundredths of a percent: 206 is 2.06%.
   const fromMakmur = makmur?.expenseRatio / 10000;
 
-  if (isValidExpenseRatio(fromMakmur)) {
-    return { value: fromMakmur, source: 'makmur' };
-  }
-
-  return null;
+  return [
+    isValidExpenseRatio(fromBibit) && { value: fromBibit, source: 'bibit' },
+    isValidExpenseRatio(fromMakmur) && { value: fromMakmur, source: 'makmur' },
+  ].filter(Boolean);
 }
 
 function amountOf(amount, source, currency) {
@@ -82,10 +77,12 @@ function custodianOf({ bibit, bareksa }) {
 // `bareksa` its Bareksa row of funds.csv (profile columns).
 export function buildCosts({ bibit, makmur, bareksa, currency }) {
   const buyableOnBibit = bibit.tradeable === 1;
+  const expenseRatios = expenseRatiosOf({ bibit, makmur });
 
   return {
     currency,
-    expense_ratio: expenseRatioOf({ bibit, makmur }),
+    expense_ratio: expenseRatios[0] ?? null,
+    expense_ratios: expenseRatios,
     min_purchase: [
       buyableOnBibit ? amountOf(bibit.minbuy, 'bibit', 'IDR') : null,
       amountOf(makmur?.minFirstBuy, 'makmur', 'IDR'),

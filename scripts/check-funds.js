@@ -15,6 +15,10 @@ for (const entry of registry) {
   assert.ok(fundById.has(entry.current_id), `fund-ids.csv: ${entry.id} points at ${entry.current_id}, which is not a fund`);
 }
 
+const ojkNames = funds.map((fund) => fund.ojk).filter((name) => name !== '');
+
+assert.equal(ojkNames.length, new Set(ojkNames).size, 'an OJK fund is in two funds');
+
 for (const source of SOURCES) {
   const sourceIds = (await readCsvRecords(`data/${source}/funds.csv`)).map((row) => row[SOURCE_ID_COLUMNS[source]]);
   const linkedIds = funds.flatMap((fund) => fund[source].split(' ').filter((id) => id !== ''));

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSet xmlns="http://tempuri.org/">
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema"></xs:schema>
+  <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+    <NewDataSet xmlns="">
+      <Table diffgr:id="Table1" msdata:rowOrder="0">
+        <id_subkursasing>2332</id_subkursasing>
+        <lnk_subkursasing>23</lnk_subkursasing>
+        <nil_subkursasing>1.00</nil_subkursasing>
+        <beli_subkursasing>17884.00</beli_subkursasing>
+        <jual_subkursasing>17884.00</jual_subkursasing>
+        <tgl_subkursasing>2026-10-09T00:00:00+07:00</tgl_subkursasing>
+        <mts_subkursasing>USD  </mts_subkursasing>
+      </Table>
+      <Table diffgr:id="Table2" msdata:rowOrder="1">
+        <id_subkursasing>2331</id_subkursasing>
+        <lnk_subkursasing>23</lnk_subkursasing>
+        <nil_subkursasing>1.00</nil_subkursasing>
+        <beli_subkursasing>17890.50</beli_subkursasing>
+        <jual_subkursasing>17890.50</jual_subkursasing>
+        <tgl_subkursasing>2026-10-08T00:00:00+07:00</tgl_subkursasing>
+        <mts_subkursasing>USD  </mts_subkursasing>
+      </Table>
+      <Table diffgr:id="Table3" msdata:rowOrder="2">
+        <id_subkursasing>2330</id_subkursasing>
+        <lnk_subkursasing>23</lnk_subkursasing>
+        <nil_subkursasing>1.00</nil_subkursasing>
+        <beli_subkursasing>0.00</beli_subkursasing>
+        <jual_subkursasing>0.00</jual_subkursasing>
+        <tgl_subkursasing>2026-10-07T00:00:00+07:00</tgl_subkursasing>
+        <mts_subkursasing>USD  </mts_subkursasing>
+      </Table>
+    </NewDataSet>
+  </diffgr:diffgram>
+</DataSet>

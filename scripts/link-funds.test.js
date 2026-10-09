@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { linkFunds, makeNavSeries } from './link-funds.js';
+import { linkFunds, makeNavSeries, matchOjkFunds } from './link-funds.js';
 
 const TODAY = '2026-10-02';
 const MANAGER = 'Alpha Asset Management, PT';
@@ -696,4 +696,43 @@ test('a latest NAV that is only a rounding apart, or one odd last day, does not 
   assert.equal(linkNames(dollar, rounded), 1);
   assert.equal(linkNames(history, oddLastDay), 1);
   assert.equal(linkNames(history, differentFund), 2);
+});
+
+const ojkFund = (name, fields = {}) => ({ name, manager: 'PT Alpha Asset Management', currency: 'IDR', count: 1, ...fields });
+
+const linkedFund = (id, name, fields = {}) => ({ id, name, otherNames: [], manager: 'Alpha Asset Management, PT', currency: 'IDR', ...fields });
+
+const matchOjk = (funds, ojkFunds) => Object.fromEntries(matchOjkFunds(funds, ojkFunds));
+
+test('an OJK fund joins the fund with the same name once "Reksa Dana" is dropped and the manager is the same company', () => {
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju')], [ojkFund('REKSA DANA ALPHA SAHAM MAJU')]), { RD1: 'REKSA DANA ALPHA SAHAM MAJU' });
+});
+
+test('an OJK fund of another manager does not join, and neither does one in another currency', () => {
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju')], [ojkFund('RD ALPHA SAHAM MAJU', { manager: 'Beta Asset Management, PT' })]), {});
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju')], [ojkFund('RD ALPHA SAHAM MAJU', { currency: 'USD' })]), {});
+});
+
+test('the type word OJK puts after "Reksa Dana" is ignored, unless the name as written matches', () => {
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Index IDX30')], [ojkFund('REKSA DANA INDEKS ALPHA INDEX IDX30')]), { RD1: 'REKSA DANA INDEKS ALPHA INDEX IDX30' });
+  assert.deepEqual(
+    matchOjk([linkedFund('RD1', 'Alpha Dana Berimbang')], [ojkFund('REKSA DANA CAMPURAN ALPHA DANA BERIMBANG'), ojkFund('REKSA DANA ALPHA DANA BERIMBANG')]),
+    { RD1: 'REKSA DANA ALPHA DANA BERIMBANG' },
+  );
+});
+
+test('the name of the fund counts before its other names', () => {
+  const fund = linkedFund('RD1', 'Alpha Value Kelas A', { otherNames: ['Alpha Value'] });
+
+  assert.deepEqual(matchOjk([fund], [ojkFund('REKSA DANA ALPHA VALUE KELAS A'), ojkFund('REKSA DANA ALPHA VALUE')]), { RD1: 'REKSA DANA ALPHA VALUE KELAS A' });
+  assert.deepEqual(matchOjk([fund], [ojkFund('REKSA DANA ALPHA VALUE')]), { RD1: 'REKSA DANA ALPHA VALUE' });
+});
+
+test('two funds with the same name get no OJK fund, and an OJK name listed twice joins no fund', () => {
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju'), linkedFund('BRK2', 'Alpha Saham Maju')], [ojkFund('REKSA DANA ALPHA SAHAM MAJU')]), {});
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju')], [ojkFund('REKSA DANA ALPHA SAHAM MAJU', { count: 2 })]), {});
+});
+
+test('a fund without a manager joins no OJK fund', () => {
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju', { manager: '' })], [ojkFund('REKSA DANA ALPHA SAHAM MAJU', { manager: '' })]), {});
 });

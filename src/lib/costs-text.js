@@ -17,6 +17,23 @@ function sourceLabel(source) {
   return source === 'bareksa' ? m.cost_source_bareksa() : SOURCE_NAMES[source];
 }
 
+// Sources that give the same figure share one line: "1.22%, Bibit, Makmur".
+function groupBySameText(items) {
+  const groups = [];
+
+  for (const item of items) {
+    const group = groups.find((candidate) => candidate.text === item.text);
+
+    if (group) {
+      group.source = `${group.source}, ${item.source}`;
+    } else {
+      groups.push({ ...item });
+    }
+  }
+
+  return groups;
+}
+
 // Missing parts stay null or empty, so a caller shows "not in our sources", never zero.
 export function describeCosts(costs, locale) {
   const feeWords = { free: m.cost_fee_free(), upTo: (value) => m.cost_fee_up_to({ value }), from: (value) => m.cost_fee_from({ value }) };
@@ -25,6 +42,7 @@ export function describeCosts(costs, locale) {
 
   return {
     expenseRatio: withSource(costs.expense_ratio, costs.expense_ratio && formatPercent(costs.expense_ratio.value, locale)),
+    expenseRatios: groupBySameText(costs.expense_ratios.map((item) => withSource(item, formatPercent(item.value, locale)))),
     minPurchases: costs.min_purchase.map((item) => withSource(item, money(item))),
     minTopup: withSource(costs.min_topup, costs.min_topup && money(costs.min_topup)),
     minRedemption: withSource(costs.min_redemption, costs.min_redemption && money(costs.min_redemption)),

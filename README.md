@@ -1,6 +1,6 @@
 # Reksadana ID
 
-Raw data for Indonesian mutual funds (reksa dana). It comes from four sources: the public API behind [Bibit](https://app.bibit.id/), the [Kontan pusatdata](https://pusatdata.kontan.co.id/reksadana) pages, [Bareksa](https://www.bareksa.com/id/data/reksadana/daftar), and the public fund pages of [Makmur](https://www.makmur.id/). The data lives in this repository, so you can read it without calling any of the sites.
+Raw data for Indonesian mutual funds (reksa dana). It comes from four sources: the public API behind [Bibit](https://app.bibit.id/), the [Kontan pusatdata](https://pusatdata.kontan.co.id/reksadana) pages, [Bareksa](https://www.bareksa.com/id/data/reksadana/daftar), and the public fund pages of [Makmur](https://www.makmur.id/). Three more folders hold what the funds are measured against: benchmark index levels (from Bareksa), the exchange rate, policy rate and inflation (from Bank Indonesia), and the official monthly size of every fund (from OJK, the regulator). The data lives in this repository, so you can read it without calling any of the sites.
 
 | Source | Folder | Funds | What it adds | Updated |
 |---|---|---|---|---|
@@ -8,6 +8,9 @@ Raw data for Indonesian mutual funds (reksa dana). It comes from four sources: t
 | Kontan | `data/kontan/` | 1,660 | Daily NAV for the last 12 months, growing every run | Weekly |
 | Makmur | `data/makmur/` | 141 | Latest price, returns, asset allocation, top holdings, and factsheet and prospectus links | Weekly |
 | Bareksa | `data/bareksa/` | 3,812 | Monthly AUM, units, and asset allocation, back to each fund's launch. Daily NAV: the last month or year every day, the history from launch loaded by hand | Daily (NAV), monthly (the rest) |
+| Benchmarks | `data/benchmarks/` | 10 series | Daily levels of IHSG, LQ45, IDX30, JII, ISSI, SRI-KEHATI and four Bareksa fund category indices | Daily |
+| Macro | `data/macro/` | 3 series | USD/IDR (JISDOR), the BI-Rate, and monthly inflation, from Bank Indonesia | Daily |
+| OJK | `data/ojk/` | about 2,200 per month | Month-end AUM and units of every registered fund, for the last 36 months | Daily from the 8th to the 15th of the month |
 
 ## Data
 
@@ -79,13 +82,44 @@ The scraper reads only Makmur's public website. The page of a fund holds the who
 
 In `funds.csv` the dates are ISO dates, and the other values are as in the JSON. `last_price` is a whole number, so it is rounded to 0.01 of the NAV. 128 of the 141 funds are matched to a Bibit fund. The matching rules are the same as for Kontan. The rest are not in Bibit under a name or NAV that matches.
 
+### Benchmarks (`data/benchmarks/`)
+
+| Path | What it holds |
+|---|---|
+| `data/benchmarks/benchmarks.json` | One entry per series: `id`, `name` and `description` (each in `id` and `en`), `kind` (`stock` or `fund-category`), `source`, `publisher`, `currency`, and `start_date`. |
+| `data/benchmarks/<id>.csv` | Daily level: `date,value`. |
+
+The ids are `ihsg` (Jakarta Composite Index, back to 1989), `lq45`, `idx30`, `jii`, `issi`, `sri-kehati`, and Bareksa's category indices `bareksa-money-market`, `bareksa-fixed-income`, `bareksa-equity` and `bareksa-balanced`. The values are index levels, not returns, and they are price indices, so dividends are not in them.
+
+Without a login, Bareksa serves the last year of every index (`GET https://www.bareksa.com/ajax/mutualfund/nav/product_index/?id=131&sid=<code>&mfid=<n>&cperiod=1y&startdate=&enddate=`, with the header `X-Requested-With: XMLHttpRequest`; `sid` is `COMPOSITE`, `LQ45`, `JII`, `IDX30`, `ISSI` or `SRI-KEHATI`, and `mfid` is 1 to 4 for money market, fixed income, equity and balanced). `scrapers/benchmarks.js` makes 10 requests a day and merges the rows by date, so a newer value replaces a stored one and no older row is ever dropped. The files were first filled with the full history from a logged-in browser session. The public endpoint cannot give more than one year, so the scraper cannot fill a gap longer than a year. Source: Bareksa, from the Indonesia Stock Exchange (the category indices are Bareksa's own).
+
+### Macro (`data/macro/`)
+
+| Path | What it holds |
+|---|---|
+| `data/macro/usd-idr.csv` | `date,idr_per_usd`: the JISDOR reference rate (Jakarta Interbank Spot Dollar Rate), every business day since 2013-05-20. |
+| `data/macro/bi-rate.csv` | `date,rate`: the BI-Rate (BI 7-Day Reverse Repo Rate) in percent per year, one row per monthly meeting of the Board of Governors since 2016-04-21. |
+| `data/macro/inflation.csv` | `month,yoy_percent`: year-on-year CPI inflation in percent, one row per month since 2003-01. |
+
+Source: Bank Indonesia (Sumber: Bank Indonesia). `scrapers/macro.js` reads JISDOR from BI's web service (`POST https://www.bi.go.id/biwebservice/wskursbi.asmx/getSubKursJisdor3` with `mts=USD&startDate=...&endDate=...`) and the other two series from the tables on `bi.go.id/id/statistik/indikator/bi-rate.aspx` and `data-inflasi.aspx`. The first run asks for the whole history (JISDOR from 2013, and the two tables page by page through their WebForms pager). Later runs ask for the last 30 days or the first page only. Everything is merged by date. The date in `bi-rate.csv` is the day of the decision, as BI lists it. The rate usually takes effect the next day, and BI also lists meetings that left the rate unchanged. BI shows 0.00 % for 2002-12, where no year-on-year figure exists, so the scraper starts at 2003-01.
+
+### OJK (`data/ojk/`)
+
+| Path | What it holds |
+|---|---|
+| `data/ojk/monthly/<YYYY-MM>.csv` | One row per fund OJK lists for the month: `manager`, `custodian`, `fund` (the name as OJK writes it, often in capitals with a "REKSA DANA" prefix), `type`, `currency`, `aum`, `units`. |
+
+`aum` is the net asset value of the whole fund at the end of the month **in rupiah, also for a USD fund** (the AUM of a USD fund divided by its units is far above a dollar NAV, so OJK has converted it). `units` is in the fund's own currency. A fund with `aum` 0 is dissolved, matured, or not launched yet; OJK keeps listing it for a while. A share class is a row of its own ("... KELAS A"). OJK has no fund ID.
+
+Source: OJK, reksadana.ojk.go.id, Statistik NAB Reksa Dana (`Public/StatistikNABReksadanaPublicDetail.aspx?year=&month=`), from the custodian banks' reports to KSEI. The page shows 10 rows, but one DevExpress callback POST with the page's form fields and `__CALLBACKPARAM=c0:KV|2;[];GB|22;12|PAGERONCLICK5|PSP-1;` returns every row (about 2,100 rows, 1.8 MB). `scrapers/ojk.js` asks for one month at a time with a pause of 3 seconds after each request, checks that the rows it got equal the item count the page states, and skips a month that is not published yet (the page then says "0 items"). OJK publishes last month's figures from about the 8th. A run fetches the months of the last 36 that are not stored, and the newest two stored months again, because OJK revises recent figures.
+
 ### One record per fund (`data/funds.csv`)
 
 The same fund appears in several sources, and Bibit lists some funds under more than one symbol or under a stale name. `scripts/link-funds.js` joins the records of all four sources into one fund each. It writes:
 
 | File | Content |
 |---|---|
-| `data/funds.csv` | One row per fund: `id`, `name`, `other_names` (separated by `\|`), `manager`, `type` (Bibit's labels), `currency` and `sharia` (empty when no source says), `launch_date`, and the source IDs of `bibit`, `bareksa`, `kontan`, and `makmur` (space-separated, the best record first). |
+| `data/funds.csv` | One row per fund: `id`, `name`, `other_names` (separated by `\|`), `manager`, `type` (Bibit's labels), `currency` and `sharia` (empty when no source says), `launch_date`, the source IDs of `bibit`, `bareksa`, `kontan`, and `makmur` (space-separated, the best record first), and `ojk`, the fund's name in the OJK files (empty when there is no confident match, see below). |
 | `data/fund-ids.csv` | Every fund ID ever published: `id`, `first_published`, `current_id`. A retired ID points at the fund that now holds its record (never at another retired ID: the linker follows chains to the live fund). IDs are only added, never removed. |
 
 Records are joined by these rules, in this order. A merge is refused when two members of the joined group disagree (different currency, Kelas or series number, NAV far apart on the latest shared date, and for NAV evidence a NAV that differs on more than 5% of the shared dates). Refusals are listed in the report. Before any comparison, every NAV series loses the stretches in which a source served another fund's NAV (the same clean-up the site's history gets, see "Clean-up" below), so Kontan's bad days from 2026-04-27 to 2026-05-06 do not count against a link.
@@ -102,6 +136,8 @@ The series number is the last word of the name when it is a Roman numeral (I to 
 The short-history rule (`nav-short`) exists because Bibit keeps almost no NAV history for funds it does not sell, and about 200 renamed funds (for example Kisi to KIM Fixed Income Fund Plus) have only the latest few NAV values in common. Besides the conditions above, it needs that the two names do not conflict in series number or Kelas, and that neither record has a look-alike: another record of the same source, from a compatible manager and currency, with an equal value on the same date (Kontan dates aligned as in the match). Two unrelated funds of one manager that report the same long NAV on their only shared date, with names that carry no conflicting number, are still linked. That is an accepted risk; block such a pair with a `null` alias.
 
 A fund keeps its ID: the Bibit symbol of the group, or `BRK<id>`, `KTN<id>`, `MKR<id>` for a fund Bibit does not list. When two published IDs end up in one fund, the one that was already live stays and the other becomes a redirect. The name is the current Bareksa name, then Makmur, Bibit, Kontan; the other names go to `other_names`. The type is Bibit's label (the explorer groups by it; Bareksa calls global funds "Saham"), then Bareksa's, Kontan's, and Makmur's mapped to the same labels. Two other sources that agree on a different general type (money market, bonds, equity, mixed, protected) overrule Bibit's; Bibit's specialised labels are never overruled. Bibit's "Benchmark" (its gold ETFs) is shown as "ETF Emas" and "Gold ETFs". Types with no Bibit label (index funds, ETFs, DPLK) stay empty; the site marks such funds with `etf` and `index` flags, taken from Bibit, else from the name and the other sources' types.
+
+**OJK.** OJK has no IDs, so an OJK fund joins a fund by its normalized name and its manager, after the sources above are linked (`matchOjkFunds` in `scripts/link-funds.js`). Names are normalized as for the other sources ("Reksa Dana" and "RD" dropped, no punctuation or case). OJK puts a type word after "Reksa Dana" ("INDEKS", "CAMPURAN", "SAHAM", "TERPROTEKSI", "PASAR UANG", "PENDAPATAN TETAP"); it is ignored only when no OJK name matches as written. The managers must be the same company (`normalizeManager`, `MANAGER_ALIASES`), and the currency must agree when the fund has one. The match is one to one: the fund needs exactly one OJK name (its own name counts before its other names), the OJK name needs exactly one fund, and OJK must list the name once in its newest month. A fund without a manager gets none. The share class is part of the name, so "Kelas A" is never dropped.
 
 ```bash
 npm run link   # rewrites both files and prints the report (about 10 seconds); the scheduled workflow runs it after the scrapers
@@ -128,9 +164,11 @@ Public endpoints use the fund IDs of `data/funds.csv`:
 |---|---|
 | `/api/funds.json` | One entry per fund: the row of `funds.csv` (source IDs as lists), the latest NAV and AUM, and the 1-year return. |
 | `/csv/funds.csv` | A copy of `data/funds.csv`. |
-| `/api/funds/<id>.json` | The record of `loadFundRecord`: the Bibit fields, the per-source `nav`, `aum`, `kontan`, `bareksa`, `makmur`, the new `fund` row, `history`, the NAV and AUM series the site draws, with the source of each point, and `costs`, the merged costs and minimums (below). |
+| `/api/funds/<id>.json` | The record of `loadFundRecord`: the Bibit fields, the per-source `nav`, `aum`, `kontan`, `bareksa`, `makmur`, the new `fund` row, `history`, the NAV and AUM series the site draws, with the source of each point, `costs`, the merged costs and minimums (below), `ojk` (null without an OJK match: the OJK name, manager, custodian, type, currency, `status`, and `months`, a list of `{ month, aum, units }`), and `benchmarks` (below). |
 | `/csv/nav/<id>.csv`, `/csv/aum/<id>.csv` | **Changed:** the chosen history, with columns `date,nav,source` and `date,aum,source` (they were copies of the Bibit files, with `nav_adjusted`). The raw source files are in the zip files. |
 | `/fund-ids.json` | Retired IDs and the fund that replaced each. |
+| `/api/benchmarks.json` | The benchmark series: the metadata of `data/benchmarks/benchmarks.json` plus the BI-Rate (`bi-rate`, `kind` `rate`), with `end_date`, `latest_value`, and `points_count`. |
+| `/api/benchmarks/<id>.json` | One series: its metadata and `points`, a list of `{ date, value }`, oldest first. |
 
 The per-fund CSV files are not built: they would add two files per fund, and Cloudflare's free plan allows 20,000 files per deployment. `src/worker.js` runs only for `/`, `/csv/nav/*` and `/csv/aum/*` (`run_worker_first` in `wrangler.toml`; the free plan allows 100,000 Worker requests a day, and static assets are free). It reads `/api/funds/<id>.json` through the `ASSETS` binding, resolves a retired ID with `/fund-ids.json`, converts `history` to CSV, and sends the same headers `public/_headers` gives the other CSV files. It answers `GET` and `HEAD` only, and 404 as text. `src/worker.test.js` tests it with a fake `ASSETS` binding.
 
@@ -154,8 +192,13 @@ The site draws one NAV history per fund (`src/lib/series.js`, which runs at buil
 - **Source.** Bibit's daily history for funds buyable on Bibit, else Bareksa's daily NAV, else Kontan's, else a monthly NAV computed as Bareksa's AUM divided by its units. The other sources extend it: newer days always, and older days when the source has the same NAV (within 0.5%) on at least 95% of the days both have, and the join continues the series. So a fund that Bibit has listed only since 2024 still shows the Bareksa history before it. Where two sources overlap, they agree. Kontan stamps some funds' NAV with the next trading day; when a Kontan series matches another source a row later far more often than on the same date, its rows are moved back to the previous row's date.
 - **Clean-up.** A stretch of up to ten rows that all sit more than 15% away from the NAV before them, followed by a return to within 5% of it, is dropped as a source error. That is one wrong day, or days in which a source served another fund's NAV (Kontan did for about 8% of its funds from 2026-04-27 to 2026-05-06). A newer source that starts over a year after the history ended joins only if it agrees with the history where the two overlap, because a record can carry another fund's NAV. A NAV that stops changing for more than a month is treated as the end of the fund: some sources keep listing a closed fund's last NAV every day. NAVs are compared at the coarser of their precisions, so Kontan's 1268.36 and Bibit's 1268.3561 are the same value.
 - **Returns.** Every return, drawdown, and sparkline is computed from that history, so the list, the fund page, and its chart agree. Bibit's own return figures are not used: they can lag its NAV history. Returns are the change in NAV; funds that pay dividends are tagged. The "Include dividends" toggle (off by default, remembered in the browser) switches them to a total return with each dividend reinvested on its ex-date (`dividendEvents` and `withDividendsReinvested` in `src/lib/series.js`). A dividend is read from a step up in `nav_adjusted` over `nav` between two consecutive Bibit rows (only a step between 1 and 1.2 counts, because a later download re-anchors `nav_adjusted` with a step down). The step gives the payout as the previous NAV times (step − 1). A listed payout in `data/bibit/dividends/` that no step covers within 3 days is added too, but only when the history has a NAV on its ex-date. Each payout is reinvested at the ex-date NAV: one unit becomes 1 + payout ÷ ex-date NAV units. The total-return series is scaled to end at the latest NAV, like an adjusted close, so earlier points are lowered by the dividends paid after them. It covers only the days of the primary history, because dividends before it are unknown, so older days joined from another source are not part of it. Only the funds with such events (19 today) have a total return; the others show the NAV change either way. The fund JSON lists the events as `history.dividend_events`.
+- **Compared with its type.** The fund page ranks a fund's 1-year return among the active funds of its type (`return_1y` of `loadFundSummaries()`) and shows the median of each period as a muted row of the returns table. Both are computed once at build time (`peerReturns` in `src/lib/fund-page.js`) and left out when the type has fewer than 5 funds with a return.
 - **Flags.** A fund with no NAV in the 31 days before its source's newest date is inactive and hidden by default. A one-day move over 20% is shown on the fund page, since it can be a real event or a source error.
 - **Fund size.** Bibit's AUM, unless Bareksa's figure for the same month differs more than tenfold (a unit error), then Bareksa's. In both series a month that is more than 8 times off both neighbours, while the neighbours agree within 3 times, is dropped, and so is a figure under a million in a series whose median is a thousand times higher.
+
+**OJK in the fund record.** `ojk.status` is `registered` when the fund is in OJK's newest month with assets, `zero_aum` when its AUM there is 0 (dissolved or not launched, per OJK), and `not_listed` when OJK's newest month no longer lists it. The explorer summary has the same value as `ojk_status`, and leaves it out for a fund without an OJK match.
+
+**Benchmarks in the fund record.** `benchmarks` lists the series that suit the fund's type (`suggestBenchmarkIds` in `src/lib/benchmarks.js`): money market funds get `bareksa-money-market` and `bi-rate`, fixed income and capital protected funds `bareksa-fixed-income`, equity funds `ihsg` and `bareksa-equity` (and `jii` for a sharia fund), balanced funds `bareksa-balanced` and `ihsg`. Global funds, USD funds, and funds of other types get none. Each entry has `end_date` (the series' last day on or before the fund's latest NAV date), `value`, and `returns`: `simplereturn`, `cagr`, and `maxdrawdown` over the same periods, from the same function (`computeReturns`) and ending on the same date as the fund's returns. A rate has no returns (`returns` is null).
 
 The home page reads `/explorer.json`, a compact summary built by `loadFundSummaries()` in `src/lib/data.js`. It is not part of the public API.
 
@@ -187,7 +230,7 @@ The build image's default Node.js is already new enough. `.node-version` pins No
 
 Cloudflare's own docs: [Workers Builds](https://developers.cloudflare.com/workers/ci-cd/builds/).
 
-The build fails if `dist/` has more than 19,000 files or a file over 24 MiB, because the free plan allows 20,000 files and 25 MiB per file. That is why the download page has one zip per source, and Bareksa's daily NAV is split into several zips by size (see `src/lib/archives.js`).
+The build fails if `dist/` has more than 19,000 files or a file over 24 MiB, because the free plan allows 20,000 files and 25 MiB per file. That is why the download page has one zip per source (also `ojk`, `benchmarks`, and `macro`), and Bareksa's daily NAV is split into several zips by size (see `src/lib/archives.js`).
 
 ## Credits
 
@@ -196,7 +239,7 @@ The build fails if `dist/` has more than 19,000 files or a file over 24 MiB, bec
 
 ## Referral codes
 
-**Costs and minimums.** `loadFundRecord` merges them into `costs`, and every value keeps its `source`. The expense ratio is Bibit's `expenseratio.percentage` when it is a fraction between 0 and 0.1 (a few funds carry a raw number such as 4343.1, which is rejected), else Makmur's `expenseRatio` divided by 10,000, else unknown. The minimum purchase is listed per distributor: Bibit's `minbuy` only when the fund is buyable on Bibit, Makmur's `minFirstBuy` (both are rupiah amounts, also for USD funds, whose minimums there are of the size of rupiah ones), and Bareksa's `min_purchase` (the prospectus value). Each amount carries its own `currency`. The next purchase and the redemption minimum are Bareksa's. The maximum fees are Bareksa's, as `{ min, max }` fractions; Bibit's `fee` values are placeholders and are ignored. The custodian is Bareksa's, else Bibit's `custodian_bank`. A value no source has is `null` or an empty list, never 0, and the pages say "Not in our sources".
+**Costs and minimums.** `loadFundRecord` merges them into `costs`, and every value keeps its `source`. The expense ratio is Bibit's `expenseratio.percentage` when it is a fraction between 0 and 0.1 (a few funds carry a raw number such as 4343.1, which is rejected), and Makmur's `expenseRatio` divided by 10,000. `expense_ratio` is the first valid one (Bibit before Makmur) and `expense_ratios` lists every valid one with its source, because the two disagree by up to 2x on the same fund and neither says as of when; the fund page shows each. The minimum purchase is listed per distributor: Bibit's `minbuy` only when the fund is buyable on Bibit, Makmur's `minFirstBuy` (both are rupiah amounts, also for USD funds, whose minimums there are of the size of rupiah ones), and Bareksa's `min_purchase` (the prospectus value). Each amount carries its own `currency`. The next purchase and the redemption minimum are Bareksa's. The maximum fees are Bareksa's, as `{ min, max }` fractions; Bibit's `fee` values are placeholders and are ignored. The custodian is Bareksa's, else Bibit's `custodian_bank`. A value no source has is `null` or an empty list, never 0, and the pages say "Not in our sources".
 
 The "Buy this fund" block on a fund page links to the fund on Bibit (only when it is buyable there) and on Makmur (only when it is matched), and shows the owner's referral code with a copy button. Neither app has a working referral link, so the code is shown, not linked. The codes and the link builders are in `src/lib/referrals.js`. Change the codes there. The site footer says that some links include the owner's referral codes.
 
@@ -213,8 +256,10 @@ The GitHub Actions workflow `.github/workflows/scrape.yml` runs once a day at 22
 | Every day except Saturday | Bareksa NAV of the funds with a recent one (`scrape:bareksa:nav`) |
 | Every Saturday | Bareksa NAV of all funds (`scrape:bareksa:nav:all`), instead of the daily one |
 | The 1st of every month | Bareksa (AUM, units, allocation; the full NAV history needs a login) |
+| Every day | Benchmarks and macro (`scrape:benchmarks`, `scrape:macro`) |
+| Every day from the 8th to the 15th of the month | OJK (`scrape:ojk`): nothing is new before the 8th, and when nothing is new it asks for only the newest two months |
 
-You can also start it by hand from the Actions tab. The `sources` input picks one of `bibit` (the default), `kontan`, `kontan-full`, `makmur`, `bareksa`, `bareksa-nav`, `bareksa-nav-all`, `bareksa-profiles`, or `all` (everything except the Kontan full rescan).
+You can also start it by hand from the Actions tab. The `sources` input picks one of `bibit` (the default), `kontan`, `kontan-full`, `makmur`, `bareksa`, `bareksa-nav`, `bareksa-nav-all`, `bareksa-profiles`, `benchmarks`, `macro`, `ojk`, or `all` (everything except the Kontan full rescan).
 
 To run the scrapers yourself, you need Node.js 22 or newer. They have no dependencies to install.
 
@@ -230,6 +275,9 @@ npm run scrape:kontan:full   # scan every Kontan ID again (about 30 minutes)
 npm run scrape:makmur
 npm run scrape:bareksa
 npm run scrape:bareksa:profiles   # up to 400 Bareksa fund pages: custodian, minimums, fees
+npm run scrape:benchmarks   # the last year of every benchmark index, merged into data/benchmarks/
+npm run scrape:macro   # JISDOR, BI-Rate, inflation; the first run takes the whole history
+npm run scrape:ojk   # the OJK months of the last 36 that are not stored yet (about 30 minutes the first time)
 
 # Join the records of all sources into data/funds.csv (npm run scrape does this last)
 npm run link

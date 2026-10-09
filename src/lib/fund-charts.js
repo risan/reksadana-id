@@ -61,7 +61,7 @@ function dateTicks(locale) {
 export function axes(valueFormatter, locale) {
   const grid = { stroke: () => cssColor('--rule'), width: 1 };
   const ticks = { show: false };
-  const font = '11.5px "Schibsted Grotesk Variable", sans-serif';
+  const font = `12px ${cssColor('--sans')}`;
 
   return [
     { stroke: () => cssColor('--muted'), grid: { show: false }, ticks: { show: true, stroke: () => cssColor('--rule-strong'), width: 1, size: 4 }, font, values: dateTicks(locale), space: 64, gap: 4 },
@@ -133,7 +133,7 @@ export async function mountFundCharts(symbol, includeToggle) {
   const fund = await fetchFundRecord(symbol);
 
   if (fund === null) {
-    const message = document.getElementById('nav-empty');
+    const message = document.getElementById('chart-error');
 
     message.textContent = m.chart_load_failed();
     message.hidden = false;
@@ -160,14 +160,8 @@ export async function mountFundCharts(symbol, includeToggle) {
   let navChart = null;
   let aumChart = null;
 
-  if (points.length < 2) {
-    document.getElementById('nav-empty').hidden = false;
-
-    for (const button of rangeButtons) {
-      button.disabled = true;
-      button.setAttribute('aria-pressed', 'false');
-    }
-  } else {
+  // The page leaves out a chart it has no data for, so a missing container means there is nothing to draw.
+  if (navContainer && points.length >= 2) {
     data = [points.map((point) => toSeconds(point.date)), points.map((point) => point.value)];
 
     navChart = new uPlot(
@@ -176,11 +170,11 @@ export async function mountFundCharts(symbol, includeToggle) {
         height: chartHeight(300),
         padding: [8, 0, 0, 16],
         legend: { show: false },
-        cursor: { sync, points: { size: 7, width: 2, fill: () => cssColor('--paper') }, drag: { x: false, y: false } },
+        cursor: { sync, points: { size: 7, width: 2, fill: () => cssColor('--surface') }, drag: { x: false, y: false } },
         scales: { x: { time: true } },
         series: [
           {},
-          { label: m.chart_series_nav(), stroke: () => cssColor('--ink'), width: 1.6, fill: () => withAlpha(cssColor('--ink'), 0.05) },
+          { label: m.chart_series_nav(), stroke: () => cssColor('--accent'), width: 1.8, fill: () => withAlpha(cssColor('--accent'), 0.08) },
         ],
         axes: axes((value) => (value >= 100000 ? formatCompact(value, locale) : formatNumber(value, locale, value < 10 ? 4 : 2)), locale),
         tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),
@@ -227,9 +221,7 @@ export async function mountFundCharts(symbol, includeToggle) {
     observeWidth(navChart, navContainer, 300);
   }
 
-  if (aumHistory.points.length < 2) {
-    document.getElementById('aum-empty').hidden = false;
-  } else {
+  if (aumContainer && aumHistory.points.length >= 2) {
     const aumData = [aumHistory.points.map((point) => toSeconds(point.date)), aumHistory.points.map((point) => point.value)];
 
     aumChart = new uPlot(
@@ -242,7 +234,7 @@ export async function mountFundCharts(symbol, includeToggle) {
         scales: { x: { time: true }, y: { range: (_, __, max) => [0, max * 1.05] } },
         series: [
           {},
-          { label: m.figure_aum(), stroke: () => cssColor('--ink-2'), fill: () => withAlpha(cssColor('--ink-2'), 0.1), width: 1.4, points: { show: false } },
+          { label: m.figure_aum(), stroke: () => cssColor('--gold'), fill: () => withAlpha(cssColor('--gold'), 0.14), width: 1.6, points: { show: false } },
         ],
         axes: axes((value) => formatCompact(value, locale), locale),
         tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),

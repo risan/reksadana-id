@@ -20,6 +20,9 @@ on:
           - bareksa-nav
           - bareksa-nav-all
           - bareksa-profiles
+          - benchmarks
+          - macro
+          - ojk
           - all
         default: bibit
 
@@ -91,6 +94,23 @@ jobs:
         if: (success() || failure()) && steps.decide.outputs.bareksa_profiles == 'true'
         run: npm run scrape:bareksa:profiles
 
+      # Index levels, Bank Indonesia's rates, and OJK's monthly statistics do not depend on Bibit. They run before
+      # the linker, which reads the OJK files.
+      - name: Scrape benchmarks
+        id: benchmarks
+        if: (success() || failure()) && steps.decide.outputs.benchmarks == 'true'
+        run: npm run scrape:benchmarks
+
+      - name: Scrape macro
+        id: macro
+        if: (success() || failure()) && steps.decide.outputs.macro == 'true'
+        run: npm run scrape:macro
+
+      - name: Scrape OJK
+        id: ojk
+        if: (success() || failure()) && steps.decide.outputs.ojk == 'true'
+        run: npm run scrape:ojk
+
       # Rebuilds data/funds.csv and data/fund-ids.csv from whatever the scrapers saved. If the linker fails,
       # nothing is committed, so the site never gets half-linked data. The check refuses a registry that
       # points at a fund that is not live, for the same reason.
@@ -122,6 +142,9 @@ jobs:
             source_row Bareksa "${{ steps.bareksa.outcome }}" bareksa
             source_row "Bareksa NAV" "${{ steps.bareksa_nav.outcome }}" bareksa
             source_row "Bareksa profiles" "${{ steps.bareksa_profiles.outcome }}" bareksa
+            source_row Benchmarks "${{ steps.benchmarks.outcome }}" benchmarks
+            source_row "Bank Indonesia" "${{ steps.macro.outcome }}" macro
+            source_row OJK "${{ steps.ojk.outcome }}" ojk
             echo "| Link funds | ${{ steps.link.outcome }} | $(git status --porcelain data | wc -l) (all of data/) |"
           } >> "$GITHUB_STEP_SUMMARY"
 
