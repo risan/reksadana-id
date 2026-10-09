@@ -2,7 +2,8 @@ import uPlot from 'uplot';
 import 'uplot/dist/uPlot.min.css';
 import * as m from '../paraglide/messages.js';
 import { setLocale } from '../paraglide/runtime.js';
-import { fetchFundRecord } from './fetch-json.js';
+import { rebaseBenchmark } from './benchmarks.js';
+import { fetchFundRecord, getJson } from './fetch-json.js';
 import { changeClass, formatChange, formatCompact, formatDate, formatMoney, formatMonth, formatMonthName, formatNav, formatNumber } from './format.js';
 import { dividendEvents, periodStartIndex, pickAumHistory, pickNavHistory, withDividendsReinvested } from './series.js';
 
@@ -108,7 +109,7 @@ export function attachTooltip(chart, container, renderTooltip) {
     const left = chart.cursor.left + chart.over.offsetLeft;
     const flip = left + tip.offsetWidth + 16 > container.clientWidth;
 
-    tip.style.left = `${flip ? left - tip.offsetWidth - 10 : left + 10}px`;
+    tip.style.left = `${Math.max(flip ? left - tip.offsetWidth - 10 : left + 10, 0)}px`;
     tip.style.top = `${chart.over.offsetTop + 4}px`;
   };
 }
@@ -159,10 +160,16 @@ export async function mountFundCharts(symbol, includeToggle) {
   let startIndex = 0;
   let navChart = null;
   let aumChart = null;
+  // An index drawn over the NAV, chosen with the "Compare with" pills. Its levels load on first use.
+  const benchmarkButtons = [...document.querySelectorAll('[data-benchmark]')];
+  const benchmarkError = document.getElementById('benchmark-error');
+  const benchmarks = new Map(JSON.parse(navContainer?.closest('.chart-card').dataset.benchmarks ?? '[]').map((benchmark) => [benchmark.id, benchmark]));
+  const benchmarkLevels = new Map();
+  let benchmarkId = '';
 
   // The page leaves out a chart it has no data for, so a missing container means there is nothing to draw.
   if (navContainer && points.length >= 2) {
-    data = [points.map((point) => toSeconds(point.date)), points.map((point) => point.value)];
+    data = [points.map((point) => toSeconds(point.date)), points.map((point) => point.value), points.map(() => null)];
 
     navChart = new uPlot(
       {
@@ -175,6 +182,7 @@ export async function mountFundCharts(symbol, includeToggle) {
         series: [
           {},
           { label: m.chart_series_nav(), stroke: () => cssColor('--accent'), width: 1.8, fill: () => withAlpha(cssColor('--accent'), 0.08) },
+          { label: m.chart_compare_with(), show: false, stroke: () => cssColor('--gold'), width: 1.8, dash: [6, 4], points: { show: false } },
         ],
         axes: axes((value) => (value >= 100000 ? formatCompact(value, locale) : formatNumber(value, locale, value < 10 ? 4 : 2)), locale),
         tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),
@@ -212,8 +220,15 @@ export async function mountFundCharts(symbol, includeToggle) {
       const value = data[1][index];
       const change = value / points[startIndex].value - 1;
 
+      const benchmarkValue = data[2][index];
+      const benchmarkRow =
+        benchmarkValue === null
+          ? ''
+          : `<div class="tip-row"><i class="key-line benchmark-key"></i><b>${escapeHtml(benchmarks.get(benchmarkId).shortName)}</b><span class="${changeClass(benchmarkValue / points[startIndex].value - 1)}">${formatChange(benchmarkValue / points[startIndex].value - 1, locale)}</span></div>`;
+
       return `<div class="tip-date">${formatDate(toDate(data[0][index]), locale)}</div>
-        <div class="tip-row"><b>${formatNav(value, locale)}</b><span class="${changeClass(change)}">${formatChange(change, locale)}</span></div>
+        <div class="tip-row">${benchmarkRow === '' ? '' : '<i class="key-line nav-key"></i>'}<b>${formatNav(value, locale)}</b><span class="${changeClass(change)}">${formatChange(change, locale)}</span></div>
+        ${benchmarkRow}
         <div class="tip-note">${escapeHtml(m.chart_tip_since({ date: formatDate(points[startIndex].date, locale) }))}</div>`;
     });
 
@@ -266,7 +281,24 @@ export async function mountFundCharts(symbol, includeToggle) {
     const max = toSeconds(end.date);
     const change = end.value / start.value - 1;
 
-    readout.innerHTML = `<b class="${changeClass(change)}">${formatChange(change, locale)}</b> <span class="muted">${formatDate(start.date, locale)} – ${formatDate(end.date, locale)}</span>`;
+    const levels = benchmarkLevels.get(benchmarkId);
+
+    data[2] = levels ? rebaseBenchmark(points, levels, startIndex) : points.map(() => null);
+
+    const benchmarkEnd = data[2].at(-1);
+    const hasBenchmark = benchmarkEnd !== null;
+    const benchmarkChange = hasBenchmark ? benchmarkEnd / start.value - 1 : null;
+
+    if (levels) {
+      benchmarkError.hidden = hasBenchmark;
+      benchmarkError.textContent = hasBenchmark ? '' : m.benchmark_no_range();
+    }
+
+    readout.innerHTML = `<b class="${changeClass(change)}">${formatChange(change, locale)}</b> <span class="muted">${formatDate(start.date, locale)} – ${formatDate(end.date, locale)}</span>${
+      hasBenchmark ? ` <span class="benchmark-readout"><i class="key-line benchmark-key"></i>${escapeHtml(benchmarks.get(benchmarkId).shortName)} <b class="${changeClass(benchmarkChange)}">${formatChange(benchmarkChange, locale)}</b></span>` : ''
+    }`;
+    navChart.setSeries(2, { show: hasBenchmark });
+    navChart.setData(data);
     navChart.setScale('x', { min, max });
 
     if (aumChart) {
@@ -289,12 +321,46 @@ export async function mountFundCharts(symbol, includeToggle) {
 
     applyRange(periodStartIndex(history, RANGE_PERIODS[DEFAULT_RANGE]) < 0 ? 'All' : DEFAULT_RANGE);
 
+    for (const button of benchmarkButtons) {
+      button.addEventListener('click', async () => {
+        const chosenId = button.dataset.benchmark;
+
+        benchmarkId = chosenId;
+        benchmarkError.hidden = true;
+
+        for (const other of benchmarkButtons) {
+          other.setAttribute('aria-pressed', String(other === button));
+        }
+
+        if (chosenId !== '' && !benchmarkLevels.has(chosenId)) {
+          const series = await getJson(`/api/benchmarks/${encodeURIComponent(chosenId)}.json`);
+
+          if (benchmarkId !== chosenId) {
+            return;
+          }
+
+          if (series === null) {
+            benchmarkId = '';
+            benchmarkError.textContent = m.benchmark_load_failed();
+            benchmarkError.hidden = false;
+
+            for (const other of benchmarkButtons) {
+              other.setAttribute('aria-pressed', String(other.dataset.benchmark === ''));
+            }
+          } else {
+            benchmarkLevels.set(chosenId, series.points);
+          }
+        }
+
+        applyRange(range);
+      });
+    }
+
     // Both histories share their dates, so the range buttons and the x axis stay as they are.
     includeToggle?.addEventListener('change', () => {
       history = chosenHistory();
       points = history.points;
       data[1] = points.map((point) => point.value);
-      navChart.setData(data);
       applyRange(range);
     });
   }

@@ -1273,7 +1273,11 @@ dialog::backdrop {
 }
 
 .chart-tip .tip-row b {
+  max-width: 180px;
+  overflow: hidden;
   font-weight: var(--fw-strong);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .chart-tip .tip-row span:last-child {

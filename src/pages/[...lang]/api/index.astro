@@ -32,6 +32,20 @@ const FUNDS_JSON_FIELDS = [
   ['aum', 'number or null', m.api_funds_aum()],
   ['aum_date', 'date or null', m.api_funds_aum_date()],
   ['return_1y', 'number or null', m.api_funds_return_1y()],
+  ['ojk', 'string or null', m.api_funds_ojk()],
+];
+
+const BENCHMARKS_FIELDS = [
+  ['id', 'string', m.api_bm_id()],
+  ['name', 'object', m.api_bm_name()],
+  ['description', 'object', m.api_bm_description()],
+  ['kind', 'string', m.api_bm_kind()],
+  ['source', 'string', m.api_bm_source()],
+  ['currency', 'string', m.api_bm_currency()],
+  ['start_date', 'date', m.api_bm_start_date()],
+  ['end_date', 'date', m.api_bm_end_date()],
+  ['latest_value', 'number', m.api_bm_latest_value()],
+  ['points_count', 'number', m.api_bm_points_count()],
 ];
 
 const ONE_FUND_FIELDS = [
@@ -48,11 +62,15 @@ const ONE_FUND_FIELDS = [
   ['kontan', 'object or null', m.api_fund_kontan()],
   ['bareksa', 'object or null', m.api_fund_bareksa()],
   ['makmur', 'object or null', m.api_fund_makmur()],
+  ['ojk', 'object or null', m.api_fund_ojk()],
+  ['benchmarks', 'array', m.api_fund_benchmarks()],
 ];
 
 const TOC = [
   ['funds-json', m.api_toc_funds()],
   ['one-fund', m.api_toc_fund()],
+  ['benchmarks-json', m.api_toc_benchmarks()],
+  ['one-benchmark', m.api_toc_benchmark()],
   ['types-json', m.api_toc_types()],
   ['csv-funds', m.api_toc_csv_funds()],
   ['csv-nav', m.api_toc_csv_nav()],
@@ -81,7 +99,8 @@ const TOC = [
         <p set:html={m.api_quickstart_text()} />
         <pre data-origin><code>curl {ORIGIN}/api/funds/RD216.json
 curl -O {ORIGIN}/csv/nav/RD216.csv
-curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre>
+curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'
+curl -s {ORIGIN}/api/benchmarks/ihsg.json | jq '.points[-1]'</code></pre>
       </div>
 
       <div class="section">
@@ -111,6 +130,19 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
                 <td><a href="#one-fund"><code>/api/funds/&lt;id&gt;.json</code></a></td>
                 <td>JSON</td>
                 <td>{m.api_purpose_fund()}</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th rowspan="2">{m.api_group_benchmarks()}</th>
+                <td><a href="#benchmarks-json"><code>/api/benchmarks.json</code></a></td>
+                <td>JSON</td>
+                <td>{m.api_purpose_benchmarks()}</td>
+              </tr>
+              <tr>
+                <td><a href="#one-benchmark"><code>/api/benchmarks/&lt;id&gt;.json</code></a></td>
+                <td>JSON</td>
+                <td>{m.api_purpose_benchmark()}</td>
               </tr>
             </tbody>
             <tbody>
@@ -214,7 +246,8 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
     "nav_date": "2026-10-01",
     "aum": 194240467107.88,
     "aum_date": "2026-09-01",
-    "return_1y": 0.0632
+    "return_1y": 0.0632,
+    "ojk": "REKSA DANA INSIGHT RENEWABLE ENERGY FUND"
   }
 ]`}</code></pre>
         </details>
@@ -271,6 +304,29 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
         </details>
 
         <details>
+          <summary>{m.api_example_benchmarks_ojk()}</summary>
+          <pre><code>{`"ojk": {
+  "name": "REKSA DANA MANDIRI INVESTA PASAR UANG KELAS A",
+  "manager": "Mandiri Manajemen Investasi, PT",
+  "custodian": "CITIBANK N. A. - CUSTODY",
+  "type": "Money Market Fund",
+  "currency": "IDR",
+  "status": "registered",
+  "months": [{ "month": "2024-05", "aum": 9011172056, "units": 4768215 }, "..."]
+},
+"benchmarks": [
+  {
+    "id": "bareksa-money-market",
+    "kind": "fund-category",
+    "end_date": "2026-10-09",
+    "value": 1655.5041,
+    "returns": { "simplereturn": { "1y": 0.0388, "...": "..." }, "cagr": { "...": "..." }, "maxdrawdown": { "...": "..." } }
+  },
+  { "id": "bi-rate", "kind": "rate", "end_date": "2026-09-23", "value": 5.75, "returns": null }
+]`}</code></pre>
+        </details>
+
+        <details>
           <summary>{m.api_example_kontan()}</summary>
           <p class="small muted" set:html={m.api_kontan_text()} />
           <pre><code>{`"kontan": {
@@ -315,6 +371,67 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
     "factsheet": "https://cache.makmur.id/...",
     "...": "..."
   }
+}`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="benchmarks-json">
+        <h2 class="section-title"><code>GET /api/benchmarks.json</code></h2>
+        <p set:html={m.api_benchmarks_text({ oneLink: anchor('#one-benchmark', m.api_benchmarks_one_link()) })} />
+        <div class="table-scroll">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th>{m.api_col_field()}</th>
+                <th>{m.api_col_type()}</th>
+                <th>{m.api_col_meaning()}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                BENCHMARKS_FIELDS.map(([field, type, meaning]) => (
+                  <tr>
+                    <td><code>{field}</code></td>
+                    <td class="muted">{typeLabel(type)}</td>
+                    <td>{meaning}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
+        <details>
+          <summary>{m.api_example_response()}</summary>
+          <pre><code>{`[
+  {
+    "id": "ihsg",
+    "name": { "id": "IHSG (Indeks Harga Saham Gabungan)", "en": "IHSG (Jakarta Composite Index)" },
+    "description": { "id": "...", "en": "..." },
+    "kind": "stock",
+    "source": "Bareksa",
+    "publisher": "Indonesia Stock Exchange",
+    "currency": "IDR",
+    "start_date": "1989-12-28",
+    "end_date": "2026-10-08",
+    "latest_value": 6031.28,
+    "points_count": 8945
+  }
+]`}</code></pre>
+        </details>
+      </div>
+
+      <div class="section" id="one-benchmark">
+        <h2 class="section-title"><code>GET /api/benchmarks/&lt;id&gt;.json</code></h2>
+        <p set:html={m.api_benchmark_text()} />
+        <p class="small muted">{m.api_bm_points()}</p>
+        <details>
+          <summary>{m.api_example_response()}</summary>
+          <pre><code>{`{
+  "id": "ihsg",
+  "name": { "id": "IHSG (Indeks Harga Saham Gabungan)", "en": "IHSG (Jakarta Composite Index)" },
+  "kind": "stock",
+  "...": "...",
+  "points": [{ "date": "1989-12-28", "value": 399.69 }, { "date": "1990-01-03", "value": 398.77 }, "..."]
 }`}</code></pre>
         </details>
       </div>
