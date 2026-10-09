@@ -107,7 +107,8 @@
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   grid-template-areas:
-    'tile body count'
+    'tile name count'
+    '. desc desc'
     '. median median';
   align-items: start;
   gap: var(--s-1) var(--s-3);
@@ -139,14 +140,12 @@
 }
 
 .type-card-body {
-  display: grid;
-  grid-area: body;
-  gap: 2px;
-  min-width: 0;
+  display: contents;
 }
 
 .type-name {
   display: flex;
+  grid-area: name;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0 var(--s-2);
@@ -160,6 +159,7 @@
 }
 
 .type-desc {
+  grid-area: desc;
   color: var(--ink-2);
   font-size: var(--fs-sm);
   line-height: 1.4;
@@ -656,6 +656,11 @@ th[aria-sort='descending'] .sort-down {
   overflow: visible;
 }
 
+.spark polyline,
+.spark line {
+  vector-effect: non-scaling-stroke;
+}
+
 .spark polyline {
   fill: none;
   stroke-width: 1.4;
@@ -1014,7 +1019,8 @@ th[aria-sort='descending'] .sort-down {
     grid-template-columns: auto 1fr;
     grid-template-areas:
       'tile count'
-      'body body'
+      'name name'
+      'desc desc'
       'median median';
     gap: var(--s-2);
     padding: var(--s-3);
@@ -1125,8 +1131,9 @@ th[aria-sort='descending'] .sort-down {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    gap: var(--s-1) var(--s-4);
+    gap: var(--s-1) var(--s-3);
     margin-top: var(--s-3);
+    margin-right: calc(var(--s-6) * -1);
   }
 
   .card-figure {
@@ -1151,7 +1158,14 @@ th[aria-sort='descending'] .sort-down {
   }
 
   .card-spark {
+    flex: 1 1 40px;
+    min-width: 40px;
+    max-width: 96px;
     margin-left: auto;
+  }
+
+  .card-spark .spark {
+    width: 100%;
   }
 
   .card-meta {
@@ -1201,7 +1215,7 @@ th[aria-sort='descending'] .sort-down {
     display: none;
   }
 
-  .card-spark {
-    display: none;
+  .card-stats {
+    column-gap: var(--s-2);
   }
 }
