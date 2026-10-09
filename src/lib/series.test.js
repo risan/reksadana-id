@@ -438,3 +438,32 @@ test('a source that starts within a year of the end of the history still joins w
 
   assert.equal(history.points.length, 9);
 });
+
+test('a NAV that Kontan holds at two decimals for months and Bibit later lists at four is frozen from its first day', () => {
+  const kontan = plainRows('2026-01-01', Array.from({ length: 60 }, () => 1268.36));
+  const history = pickNavHistory({
+    nav: [{ date: '2026-03-02', nav: 1268.3561, nav_adjusted: null }, { date: '2026-03-03', nav: 1268.3561, nav_adjusted: null }],
+    kontan: { nav: kontan },
+  });
+
+  assert.equal(history.frozenSince, '2026-01-01');
+  assert.equal(history.points.at(-1).date, '2026-01-01');
+});
+
+test('a money-market NAV that moves a little each day is not frozen, at two decimals or four', () => {
+  const fourDecimals = pickNavHistory({ nav: dailyRows('2026-01-01', Array.from({ length: 60 }, (_, day) => 1000 + day * 0.0123)).map((row) => ({ ...row, nav_adjusted: null })) });
+  const twoDecimals = pickNavHistory({ kontan: { nav: plainRows('2026-01-01', Array.from({ length: 60 }, (_, day) => Number((1000 + day * 0.07).toFixed(2)))) } });
+
+  assert.equal(fourDecimals.frozenSince, null);
+  assert.equal(twoDecimals.frozenSince, null);
+});
+
+test('a fund whose Bareksa NAV stopped moving long ago is frozen even if a re-dated Bibit row repeats it', () => {
+  const bareksa = plainRows('2026-01-01', [1268.3561, 1268.3561, 1268.3561, 1268.3561, 1268.3561, 1268.3561, 1268.3561].concat(Array.from({ length: 50 }, () => 1268.3561)));
+  const history = pickNavHistory({
+    nav: [{ date: '2026-03-10', nav: 1268.36, nav_adjusted: null }],
+    bareksa: { nav: bareksa, aum: [], units: [] },
+  });
+
+  assert.equal(history.frozenSince, '2026-01-01');
+});

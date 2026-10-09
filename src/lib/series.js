@@ -113,11 +113,21 @@ export function dropSpikes(points) {
 
 const FROZEN_AFTER_DAYS = 31;
 
+const decimalsOf = (value) => (String(value).split('.')[1] ?? '').length;
+
+// Sources round differently (Kontan keeps two decimals, Bibit four), so two NAVs are the same when they agree at
+// the coarser of their two precisions. Two values of one source are compared as they are.
+function isSameNav(a, b) {
+  const scale = 10 ** Math.min(decimalsOf(a), decimalsOf(b));
+
+  return Math.round(a * scale) === Math.round(b * scale);
+}
+
 // The date the series' final value first appeared, counting only the unbroken run at its end.
 function startOfFinalRun(points) {
   let index = points.length - 1;
 
-  while (index > 0 && points[index - 1].value === points.at(-1).value) {
+  while (index > 0 && isSameNav(points[index - 1].value, points.at(-1).value)) {
     index--;
   }
 
@@ -143,13 +153,13 @@ function frozenEnd(points, sourceLists) {
   const candidates = [points.find((point) => point.date === lastChange)];
 
   for (const list of sourceLists) {
-    if (list.length === 0 || list.at(-1).value !== finalValue) {
+    if (list.length === 0 || !isSameNav(list.at(-1).value, finalValue)) {
       continue;
     }
 
     const start = startOfFinalRun(list);
 
-    if (points.every((point) => point.date < start || point.value === finalValue)) {
+    if (points.every((point) => point.date < start || isSameNav(point.value, finalValue))) {
       candidates.push(list.find((point) => point.date === start));
     }
   }
