@@ -99,7 +99,7 @@ jobs:
       # read again only when its link points at another file, so a normal week asks for the links and little more.
       # The other scrapers need no packages; this one reads PDFs with pdfjs-dist.
       - name: Install packages for the prospectus reader
-        if: steps.decide.outputs.prospectus == 'true'
+        if: (success() || failure()) && steps.decide.outputs.prospectus == 'true'
         run: npm ci --ignore-scripts
 
       - name: Scrape prospectuses
