@@ -597,20 +597,23 @@ function lowestRupiahMinPurchase(costs) {
   return amounts.length === 0 ? null : Math.min(...amounts);
 }
 
+// Returns are kept to more decimals than anyone reads, because the explorer data rounds them once, to tenths of a percent.
+const RETURN_DECIMALS = 8;
+
 // The returns that are shown or filtered on, for the NAV change or for the total return.
 function returnFields(returns, sixMonths, isActive) {
   const pick = (values, period, decimals) => (isActive ? roundTo(values[period], decimals) : null);
 
   return {
-    return_1m: pick(returns.simplereturn, '1m', 5),
-    return_3m: pick(returns.simplereturn, '3m', 5),
-    return_6m: isActive ? roundTo(sixMonths, 5) : null,
-    return_ytd: pick(returns.simplereturn, 'ytd', 5),
-    return_1y: pick(returns.simplereturn, '1y', 5),
-    return_3y: pick(returns.simplereturn, '3y', 5),
-    return_5y: pick(returns.simplereturn, '5y', 5),
-    cagr_3y: pick(returns.cagr, '3y', 5),
-    cagr_5y: pick(returns.cagr, '5y', 5),
+    return_1m: pick(returns.simplereturn, '1m', RETURN_DECIMALS),
+    return_3m: pick(returns.simplereturn, '3m', RETURN_DECIMALS),
+    return_6m: isActive ? roundTo(sixMonths, RETURN_DECIMALS) : null,
+    return_ytd: pick(returns.simplereturn, 'ytd', RETURN_DECIMALS),
+    return_1y: pick(returns.simplereturn, '1y', RETURN_DECIMALS),
+    return_3y: pick(returns.simplereturn, '3y', RETURN_DECIMALS),
+    return_5y: pick(returns.simplereturn, '5y', RETURN_DECIMALS),
+    cagr_3y: pick(returns.cagr, '3y', RETURN_DECIMALS),
+    cagr_5y: pick(returns.cagr, '5y', RETURN_DECIMALS),
   };
 }
 
@@ -625,7 +628,7 @@ function buildFundSummaries() {
     const active = isActive(navDate, last?.source);
     const performance = fundPerformance(record, history);
     const aum = latestAum(record);
-    const drawdown = (period) => (active ? roundTo(performance.maxdrawdown[period], 5) : null);
+    const drawdown = (period) => (active ? roundTo(performance.maxdrawdown[period], RETURN_DECIMALS) : null);
 
     if (fund.currency === 'USD' && record.currency_exchange?.exchange_rate > 1) {
       usdToIdr = record.currency_exchange.exchange_rate;

@@ -53,12 +53,15 @@ const fromDays = (days) => (days === null ? null : new Date(FIRST_DAY + days * D
 const encodeSpark = (spark) => (spark === null ? null : spark.map((value) => Math.round((value * SPARK_STEPS) / SPARK_TOP).toString(36)).join(''));
 const decodeSpark = (text) => (text === null ? null : [...text].map((digit) => Math.round((parseInt(digit, 36) * SPARK_TOP) / SPARK_STEPS)));
 
+// As the number formatting does, and unlike Math.round, which takes -140.5 to -140.
+const roundHalfAwayFromZero = (value) => Math.sign(value) * Math.round(Math.abs(value));
+
 function encodeNumberOrSpark(field, value) {
   if (field === 'spark') {
     return encodeSpark(value);
   }
 
-  return value === null ? null : Math.round(value * NUMBER_SCALES[field]);
+  return value === null ? null : roundHalfAwayFromZero(value * NUMBER_SCALES[field]);
 }
 
 function decodeNumberOrSpark(field, value) {

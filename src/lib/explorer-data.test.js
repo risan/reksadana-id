@@ -125,3 +125,11 @@ test('a decoded fund is encoded to the same row again', () => {
 
   assert.deepEqual(encodeSummaries(decodeSummaries(compact)).funds, compact.funds);
 });
+
+test('a return that falls on half a tenth of a percent rounds away from zero, as the page formatting does', () => {
+  const summaries = (value) => ({ funds: [{ ...fund, return_1y: value, total: null }] });
+  const decoded = (value) => decodeSummaries(encodeSummaries(summaries(value))).funds[0].return_1y;
+
+  assert.equal(decoded(0.0625), 0.063);
+  assert.equal(decoded(-0.0625), -0.063);
+});
