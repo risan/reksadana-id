@@ -118,6 +118,7 @@ export const COLUMNS = [
 export const COLUMN_KEYS = COLUMNS.map((column) => column.key);
 
 export const COLUMN_PRESETS = [
+  { key: 'standard', label: () => m.preset_standard(), columns: ['return_ytd', 'return_1y', 'spark', 'cagr_3y', 'aum'] },
   { key: 'simple', label: () => m.preset_simple(), columns: ['return_1y', 'spark', 'aum'] },
   { key: 'returns', label: () => m.preset_returns(), columns: ['return_1m', 'return_3m', 'return_6m', 'return_ytd', 'return_1y', 'return_3y', 'return_5y'] },
   { key: 'risk', label: () => m.preset_risk(), columns: ['return_1y', 'spark', 'drawdown_1y', 'drawdown_3y', 'cagr_3y'] },
