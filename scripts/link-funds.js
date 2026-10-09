@@ -386,6 +386,15 @@ const findEqualNavPairs = (records) => {
 
 const candidateId = (record) => `${ID_PREFIXES[record.source]}${record.id}`;
 
+export const SOURCE_ID_COLUMNS = { bibit: 'symbol', bareksa: 'bareksa_id', kontan: 'kontan_id', makmur: 'makmur_id' };
+
+// The record a fund ID was made from: "KTN14357" is "kontan:14357", and a Bibit symbol is itself.
+export const recordKeyOfId = (id) => {
+  const source = Object.keys(ID_PREFIXES).find((name) => ID_PREFIXES[name] !== '' && id.startsWith(ID_PREFIXES[name])) ?? 'bibit';
+
+  return `${source}:${id.slice(ID_PREFIXES[source].length)}`;
+};
+
 // Aliases name a Bibit symbol ("RD1983") or a record ("bareksa:440"). `null` blocks automatic links and keeps the
 // record as a fund of its own. "exclude" drops a record that carries another fund's NAV: it joins no fund and gets no page.
 export const EXCLUDED = 'exclude';
