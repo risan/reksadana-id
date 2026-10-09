@@ -60,3 +60,16 @@ test('benchmarks.json describes every scraped series, starting on the first date
     assert.ok(series.name.id && series.name.en && series.description.id && series.description.en, series.id);
   }
 });
+
+test('a stock index row dated on a weekend is a placeholder and is skipped, a category index row is not', () => {
+  const answer = {
+    data: {
+      auth: true,
+      sis: [{ sector_code: 'COMPOSITE', index: [{ recdate: '2012-12-07', value: '4290.8' }, { recdate: '2012-12-09', value: '6643.93' }, { recdate: '2012-12-10', value: '4300.1' }] }],
+      mfis: [{ product_type_id: '3', index: [{ date: '2012-12-08', value: '4780.5' }] }],
+    },
+  };
+
+  assert.deepEqual(parseIndexRows(answer, { id: 'ihsg', sectorCode: 'COMPOSITE' }), [['2012-12-07', '4290.8'], ['2012-12-10', '4300.1']]);
+  assert.deepEqual(parseIndexRows(answer, { id: 'bareksa-equity', productTypeId: '3' }), [['2012-12-08', '4780.5']]);
+});

@@ -57,7 +57,10 @@ const fetchJson = (url) => withRetries(async () => {
   }
 });
 
-// A stock index has `recdate` on its rows; a category index has `date`.
+const isWeekend = (date) => [0, 6].includes(new Date(`${date}T00:00:00Z`).getUTCDay());
+
+// A stock index has `recdate` on its rows; a category index has `date`. The stock exchange is closed at the
+// weekend, so a stock index row dated then is a placeholder (Bareksa has a 2012-12-09 row that is 50% too high).
 export const parseIndexRows = (json, series) => {
   if (json.data?.auth !== true) {
     throw new Error('Bareksa did not serve the index history');
@@ -73,7 +76,7 @@ export const parseIndexRows = (json, series) => {
 
   return index
     .map((row) => [row.recdate ?? row.date, String(Number(row.value))])
-    .filter(([date, value]) => /^\d{4}-\d{2}-\d{2}$/.test(date) && Number(value) > 0);
+    .filter(([date, value]) => /^\d{4}-\d{2}-\d{2}$/.test(date) && Number(value) > 0 && !(series.sectorCode && isWeekend(date)));
 };
 
 const updateSeries = async (series) => {
