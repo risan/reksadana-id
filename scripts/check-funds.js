@@ -2,10 +2,9 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import ALIASES from '../scrapers/fund-aliases.json' with { type: 'json' };
 import { readCsvRecords } from '../scrapers/lib.js';
-import { EXCLUDED } from './link-funds.js';
+import { EXCLUDED, SOURCE_ID_COLUMNS, recordKeyOfId } from './link-funds.js';
 
 const SOURCES = ['bibit', 'bareksa', 'kontan', 'makmur'];
-const SOURCE_ID_COLUMNS = { bibit: 'symbol', bareksa: 'bareksa_id', kontan: 'kontan_id', makmur: 'makmur_id' };
 
 const funds = await readCsvRecords('data/funds.csv');
 const registry = await readCsvRecords('data/fund-ids.csv');
@@ -14,7 +13,12 @@ const fundById = new Map(funds.map((fund) => [fund.id, fund]));
 assert.equal(fundById.size, funds.length, 'fund IDs are not unique');
 
 for (const entry of registry) {
-  assert.ok(fundById.has(entry.current_id), `fund-ids.csv: ${entry.id} points at ${entry.current_id}, which is not a fund`);
+  // An ID may have no fund only when its record is excluded, because it carries another fund's NAV.
+  if (entry.current_id === '') {
+    assert.equal(ALIASES[recordKeyOfId(entry.id)], EXCLUDED, `fund-ids.csv: ${entry.id} has no fund, but its record is not excluded`);
+  } else {
+    assert.ok(fundById.has(entry.current_id), `fund-ids.csv: ${entry.id} points at ${entry.current_id}, which is not a fund`);
+  }
 }
 
 const ojkNames = funds.map((fund) => fund.ojk).filter((name) => name !== '');

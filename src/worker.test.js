@@ -11,7 +11,7 @@ const NAV_POINTS = [
 const ASSETS = {
   '/api/funds/RD1983.json': { history: { nav: NAV_POINTS, aum: [] } },
   '/api/funds/BRK9.json': { history: { nav: [], aum: [{ date: '2026-09-01', value: 5000, source: 'bareksa' }] } },
-  '/fund-ids.json': { RD1352: 'RD1983', RD2000: 'RD1983', GONE: 'MISSING' },
+  '/fund-ids.json': { RD1352: 'RD1983', RD2000: 'RD1983', GONE: 'MISSING', KTN14438: '' },
 };
 
 // What the build writes to dist/_redirects. The platform follows these before the Worker sees the answer.
@@ -67,8 +67,8 @@ test('a retired ID serves the CSV of the fund that replaced it, through the redi
   }
 });
 
-test('an unknown fund, a retired ID without a record, and an empty history are 404 text', async () => {
-  for (const path of ['/csv/nav/NOPE.csv', '/csv/nav/GONE.csv', '/csv/aum/RD1983.csv', '/csv/nav/BRK9.csv']) {
+test('an unknown fund, a retired ID without a record or a fund, and an empty history are 404 text', async () => {
+  for (const path of ['/csv/nav/NOPE.csv', '/csv/nav/GONE.csv', '/csv/nav/KTN14438.csv', '/csv/aum/RD1983.csv', '/csv/nav/BRK9.csv']) {
     const response = await call(path);
 
     assert.equal(response.status, 404, path);

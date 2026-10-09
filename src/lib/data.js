@@ -186,10 +186,10 @@ export function listFunds() {
   return [...loadFundsById().values()];
 }
 
-// Retired fund IDs and the fund that holds their record now.
+// Retired fund IDs and the fund that holds their record now. An ID with no fund (its record was excluded) has none.
 export function loadRetiredIds() {
   return readCsvObjects(DATA_DIR, 'fund-ids.csv')
-    .filter((row) => row.id !== row.current_id)
+    .filter((row) => row.id !== row.current_id && row.current_id !== '')
     .map((row) => ({ id: row.id, current_id: row.current_id }));
 }
 

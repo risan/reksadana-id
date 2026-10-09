@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { linkFunds, makeNavSeries, matchOjkFunds } from './link-funds.js';
+import { linkFunds, makeNavSeries, matchOjkFunds, recordKeyOfId } from './link-funds.js';
 
 const TODAY = '2026-10-02';
 const MANAGER = 'Alpha Asset Management, PT';
@@ -783,4 +783,18 @@ test('two empty Bibit shells with one name and no manager are one fund, but a sh
   assert.equal(withManager.funds.length, 2);
   assert.equal(withNav.funds.length, 2);
   assert.equal(spelledTwice.funds.length, 1);
+});
+
+test('a fund ID names the record it was made from', () => {
+  assert.equal(recordKeyOfId('KTN14357'), 'kontan:14357');
+  assert.equal(recordKeyOfId('BRK248'), 'bareksa:248');
+  assert.equal(recordKeyOfId('MKR68c7bd9b'), 'makmur:68c7bd9b');
+  assert.equal(recordKeyOfId('RD1983'), 'bibit:RD1983');
+});
+
+test('a published ID of an excluded record can keep no fund at all', () => {
+  const registry = [{ id: 'KTN20', first_published: '2026-10-02', current_id: '' }];
+  const result = link([record('bareksa', '10', { nav: fourDecimalNav(5) })], { aliases: { 'kontan:20': 'exclude' }, registry });
+
+  assert.equal(result.registry.find((entry) => entry.id === 'KTN20').current_id, '');
 });
