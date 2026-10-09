@@ -1219,11 +1219,27 @@ const sources = [
   }
 
   #range-readout {
+    min-width: 0;
     color: var(--ink-2);
   }
 
   #range-readout b {
     font-weight: var(--fw-strong);
+  }
+
+  /* Index names can be long ("Bareksa Fixed Income Fund Index"), so these pills wrap instead of scrolling. */
+  #benchmark-buttons {
+    flex-wrap: wrap;
+    border-radius: var(--r-md);
+  }
+
+  #benchmark-buttons button {
+    height: auto;
+    min-height: 30px;
+    padding-top: var(--s-1);
+    padding-bottom: var(--s-1);
+    white-space: normal;
+    text-align: center;
   }
 
   .benchmark-key,
@@ -1242,8 +1258,8 @@ const sources = [
   }
 
   .benchmark-readout {
-    margin-left: var(--s-3);
-    white-space: nowrap;
+    display: inline-block;
+    margin-left: var(--s-2);
   }
 
   .chart-subtitle {
@@ -1270,6 +1286,7 @@ const sources = [
   }
 
   .returns-table tbody th {
+    min-width: 160px;
     max-width: 240px;
     background: var(--surface);
     white-space: normal;
@@ -1585,6 +1602,7 @@ const sources = [
     }
 
     .returns-table tbody th {
+      min-width: 112px;
       max-width: 120px;
     }
 

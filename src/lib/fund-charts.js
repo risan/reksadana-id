@@ -109,7 +109,7 @@ export function attachTooltip(chart, container, renderTooltip) {
     const left = chart.cursor.left + chart.over.offsetLeft;
     const flip = left + tip.offsetWidth + 16 > container.clientWidth;
 
-    tip.style.left = `${flip ? left - tip.offsetWidth - 10 : left + 10}px`;
+    tip.style.left = `${Math.max(flip ? left - tip.offsetWidth - 10 : left + 10, 0)}px`;
     tip.style.top = `${chart.over.offsetTop + 4}px`;
   };
 }
