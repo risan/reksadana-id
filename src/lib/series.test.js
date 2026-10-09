@@ -418,3 +418,23 @@ test('two excursions in a row are both dropped', () => {
 
   assert.deepEqual(history.points.map((point) => point.value), [100, 100.5, 100.2, 100.4, 100.6]);
 });
+
+test('a source that starts over a year after the history ended joins only when it agrees where they overlap', () => {
+  const ended = plainRows('2021-01-01', [100, 101, 102, 103, 104]);
+  const later = plainRows('2025-01-01', [105, 106, 107, 108]);
+  const overlapping = [...ended, ...plainRows('2025-01-01', [105, 106, 107, 108])];
+
+  const unvouched = pickNavHistory({ bareksa: { nav: ended, aum: [], units: [] }, kontan: { nav: later } });
+  const vouched = pickNavHistory({ bareksa: { nav: ended, aum: [], units: [] }, kontan: { nav: overlapping } });
+
+  assert.equal(unvouched.points.length, 5);
+  assert.equal(vouched.points.length, 9);
+});
+
+test('a source that starts within a year of the end of the history still joins without overlap', () => {
+  const ended = plainRows('2025-06-01', [100, 101, 102, 103, 104]);
+  const later = plainRows('2026-01-01', [105, 106, 107, 108]);
+  const history = pickNavHistory({ bareksa: { nav: ended, aum: [], units: [] }, kontan: { nav: later } });
+
+  assert.equal(history.points.length, 9);
+});

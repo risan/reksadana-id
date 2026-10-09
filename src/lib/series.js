@@ -203,6 +203,14 @@ function agreeOnOverlap(base, other) {
   return shared.length > 0 && agreeing.length / shared.length >= OVERLAP_AGREEING_SHARE;
 }
 
+const LONG_GAP_DAYS = 365;
+
+// After a gap of over a year a similar-looking value proves nothing (a source can carry another fund's NAV),
+// so a newer source joins only if it also agrees with the history where the two overlap.
+function isVouchedAcrossGap(base, other, firstNewPoint) {
+  return daysBetween(base.at(-1).date, firstNewPoint.date) <= LONG_GAP_DAYS || agreeOnOverlap(base, other);
+}
+
 const LAG_MIN_CHANGES = 5;
 const LAG_DOMINANCE = 3;
 
@@ -306,7 +314,7 @@ export function pickNavHistory(fund) {
   for (const name of ['bibit', 'kontan', 'bareksa']) {
     const newer = sources[name].filter((point) => point.date > baseEnd.date);
 
-    if (name === primary || newer.length === 0 || !continues(baseEnd, newer[0])) {
+    if (name === primary || newer.length === 0 || !continues(baseEnd, newer[0]) || !isVouchedAcrossGap(base, sources[name], newer[0])) {
       continue;
     }
 
