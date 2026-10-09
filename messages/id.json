@@ -119,6 +119,7 @@
   "chart_aum_monthly": "bulanan",
   "chart_aum_currency_monthly": "{currency}, bulanan",
   "chart_aum_empty": "Belum ada riwayat dana kelolaan.",
+  "chart_load_failed": "Grafik gagal dimuat. Muat ulang halaman.",
   "chart_series_nav": "NAB",
   "chart_tip_since": "sejak {date}",
 
@@ -146,8 +147,6 @@
   "dividends_aside": "{count} pembayaran, per unit",
   "dividends_date": "Tanggal",
   "dividends_per_unit": "Per unit",
-  "dividends_more": "12 terbaru dari {total}. {jsonLink} memuat semuanya.",
-  "dividends_json_link": "JSON reksa dana ini",
   "profile_title": "Profil",
   "profile_aside": "Dari manajer investasi",
 
@@ -349,6 +348,7 @@
   "compare_loading": "Memuat…",
   "compare_load_failed": "Data dana ini gagal dimuat.",
   "compare_picker_failed": "Daftar dana gagal dimuat. Muat ulang halaman.",
+  "fund_list_failed": "Daftar dana gagal dimuat. Muat ulang halaman.",
   "compare_excluded_stale": "{name}: NAB terakhirnya {date}, lebih dari sebulan sebelum dana lain, jadi tidak ikut grafik dan imbal hasil.",
   "compare_excluded_no_history": "{name}: riwayat NAB-nya terlalu pendek, jadi tidak ikut grafik dan imbal hasil.",
   "compare_excluded_gap": "{name}: tidak ada NAB di sekitar {date}, jadi tidak ikut grafik dan imbal hasil.",

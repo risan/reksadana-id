@@ -477,10 +477,11 @@ const COLUMNS = [
 </style>
 
 <script>
-  import { DEFAULT_STATE, PAGE_SIZE, filterFunds, fundCountLabel, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../../lib/explorer.js';
+  import { DEFAULT_STATE, PAGE_SIZE, filterFunds, fundCountLabel, parseSortKey, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../../lib/explorer.js';
   import { MAX_FUNDS, selectionQuery } from '../../lib/compare.js';
   import { readTray, toggleInTray, writeTray } from '../../lib/compare-tray.js';
   import { readIncludeDividends, writeIncludeDividends } from '../../lib/dividend-setting.js';
+  import { getJson } from '../../lib/fetch-json.js';
   import { formatCount } from '../../lib/format.js';
   import { localizeHref } from '../../lib/i18n.js';
   import * as m from '../../paraglide/messages.js';
@@ -522,7 +523,7 @@ const COLUMNS = [
     next.q = params.get('q') ?? '';
     next.type = params.get('type') ?? '';
     next.currency = params.get('currency') ?? '';
-    next.sort = params.get('sort') ?? DEFAULT_STATE.sort;
+    next.sort = parseSortKey(params.get('sort'));
     next.dir = params.get('dir') === 'asc' ? 1 : params.get('dir') === 'desc' ? -1 : TEXT_SORTS.has(next.sort) ? 1 : -1;
     next.page = Math.max(0, Number(params.get('page') ?? 1) - 1) || 0;
 
@@ -735,10 +736,13 @@ const COLUMNS = [
   syncControls();
   syncCompare();
 
-  const response = await fetch('/explorer.json');
+  data = await getJson('/explorer.json');
 
-  data = await response.json();
-  funds = prepareFunds(data, includeDividends.checked);
-  dataDate = data.date;
-  render();
+  if (data === null) {
+    count.textContent = m.fund_list_failed();
+  } else {
+    funds = prepareFunds(data, includeDividends.checked);
+    dataDate = data.date;
+    render();
+  }
 </script>

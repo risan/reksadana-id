@@ -297,3 +297,85 @@ test('a real step (RD1544, 2026-03-27) gives the same total-return day as its li
   // The total return of that day is about the NAV change plus the payout over the previous NAV, not a loss of 2.4%.
   assert.ok(Math.abs(2816.05 * fromList[0].factor / 2884.22 - 1) < 5e-3);
 });
+
+const plainRows = (startDate, values) => dailyRows(startDate, values).map(({ date, nav }) => ({ date, nav }));
+
+test('older days from Bareksa join a shorter Bibit history when they agree where both have a NAV', () => {
+  const bareksa = plainRows('2026-01-01', [90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102]);
+  const history = pickNavHistory({
+    nav: dailyRows('2026-01-10', [99, 100, 101, 102]),
+    bareksa: { nav: bareksa, aum: [], units: [] },
+  });
+
+  assert.equal(history.primary, 'bibit');
+  assert.equal(history.primaryFrom, '2026-01-10');
+  assert.equal(history.points[0].date, '2026-01-01');
+  assert.equal(history.points.length, 13);
+  assert.deepEqual(history.points.slice(8, 10).map((point) => point.source), ['bareksa', 'bibit']);
+  assert.deepEqual(history.used.map((part) => part.source), ['bareksa', 'bibit']);
+});
+
+test('a long Bareksa history gives a short Bibit history its 3-year return', () => {
+  const growing = (count, from) => Array.from({ length: count }, (_, index) => from * 1.0002 ** index);
+  const bareksa = plainRows('2021-01-01', growing(1800, 1000));
+  const sharedStart = bareksa[1500];
+  const history = pickNavHistory({
+    nav: dailyRows(sharedStart.date, growing(300, sharedStart.nav)),
+    bareksa: { nav: bareksa, aum: [], units: [] },
+  });
+  const { simplereturn } = computeReturns(history);
+
+  assert.ok(history.points.length > 1790);
+  assert.ok(simplereturn['3y'] > 0);
+  assert.ok(simplereturn['1y'] > 0);
+});
+
+test('older days that disagree with the primary history, or never overlap it, are not joined', () => {
+  const nav = dailyRows('2026-01-10', [99, 100, 101, 102]);
+  const disagreeing = plainRows('2026-01-01', [90, 91, 92, 93, 94, 95, 96, 97, 98, 149, 150, 151, 152]);
+  const apart = plainRows('2026-01-01', [90, 91, 92, 93, 94, 95, 96, 97, 98]);
+
+  assert.equal(pickNavHistory({ nav, bareksa: { nav: disagreeing, aum: [], units: [] } }).points[0].date, '2026-01-10');
+  assert.equal(pickNavHistory({ nav, bareksa: { nav: apart, aum: [], units: [] } }).points[0].date, '2026-01-10');
+});
+
+test('older days that do not continue into the primary history are not joined', () => {
+  const nav = dailyRows('2026-01-10', [99, 100, 101, 102]);
+  const jumps = [{ date: '2026-01-05', nav: 60 }, { date: '2026-01-09', nav: 61 }, { date: '2026-01-10', nav: 99 }, { date: '2026-01-11', nav: 100 }];
+
+  assert.equal(pickNavHistory({ nav, bareksa: { nav: jumps, aum: [], units: [] } }).points[0].date, '2026-01-10');
+});
+
+test('a total return covers only the days of the primary history, since older dividends are unknown', () => {
+  const bareksa = plainRows('2026-01-01', [85, 85, 85, 85, 85, 85, 85, 85, 85, 100, 100, 90, 90]);
+  const fund = {
+    nav: adjustedRows('2026-01-10', [100, 100, 90, 90], [1, 1, 1.1, 1.1]),
+    bareksa: { nav: bareksa, aum: [], units: [] },
+  };
+  const history = pickNavHistory(fund);
+  const total = withDividendsReinvested(history, dividendEvents(fund, history));
+
+  assert.equal(history.points[0].date, '2026-01-01');
+  assert.equal(total.points[0].date, '2026-01-10');
+  assert.ok(Math.abs(computeReturns(total).simplereturn.all) < 1e-9);
+});
+
+test('Kontan rows dated one trading day late are moved back to the day they belong to', () => {
+  const bareksa = plainRows('2026-01-01', [100, 101, 103, 102, 104, 107, 106, 108]);
+  const kontanLate = plainRows('2026-01-02', [100, 101, 103, 102, 104, 107, 106, 108, 109, 111]);
+  const history = pickNavHistory({ bareksa: { nav: bareksa, aum: [], units: [] }, kontan: { nav: kontanLate } });
+
+  assert.deepEqual(history.points.slice(-3).map((point) => [point.date, point.value, point.source]), [
+    ['2026-01-08', 108, 'bareksa'],
+    ['2026-01-09', 109, 'kontan'],
+    ['2026-01-10', 111, 'kontan'],
+  ]);
+});
+
+test('Kontan rows dated on the right day are left alone', () => {
+  const bareksa = plainRows('2026-01-01', [100, 101, 103, 102, 104, 107, 106, 108]);
+  const kontan = plainRows('2026-01-01', [100, 101, 103, 102, 104, 107, 106, 108, 109, 111]);
+  const history = pickNavHistory({ bareksa: { nav: bareksa, aum: [], units: [] }, kontan: { nav: kontan } });
+
+  assert.deepEqual(history.points.slice(-2).map((point) => [point.date, point.value]), [['2026-01-09', 109], ['2026-01-10', 111]]);
+});

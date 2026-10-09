@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { buildRedirects } from '../scripts/write-redirects.js';
 import worker from './worker.js';
 
 const NAV_POINTS = [
@@ -10,12 +11,16 @@ const NAV_POINTS = [
 const ASSETS = {
   '/api/funds/RD1983.json': { history: { nav: NAV_POINTS, aum: [] } },
   '/api/funds/BRK9.json': { history: { nav: [], aum: [{ date: '2026-09-01', value: 5000, source: 'bareksa' }] } },
-  '/fund-ids.json': { RD1352: 'RD1983', GONE: 'MISSING' },
+  '/fund-ids.json': { RD1352: 'RD1983', RD2000: 'RD1983', GONE: 'MISSING' },
 };
+
+// What the build writes to dist/_redirects. The platform follows these before the Worker sees the answer.
+const REDIRECTS = new Map(buildRedirects([{ id: 'RD1352', current_id: 'RD1983' }]).map((line) => line.split(' ')));
 
 const fakeAssets = (files, status = 200) => ({
   fetch: async (url) => {
-    const file = files[new URL(url.url ?? url).pathname];
+    const { pathname } = new URL(url.url ?? url);
+    const file = files[REDIRECTS.get(pathname) ?? pathname];
 
     if (!file) {
       return new Response('Not found', { status: 404, headers: { 'Content-Type': 'text/html' } });
@@ -53,11 +58,13 @@ test('serves an AUM history', async () => {
   assert.equal(await response.text(), 'date,aum,source\n2026-09-01,5000,bareksa\n');
 });
 
-test('a retired ID serves the CSV of the fund that replaced it', async () => {
-  const response = await call('/csv/nav/RD1352.csv');
+test('a retired ID serves the CSV of the fund that replaced it, through the redirect or the registry', async () => {
+  for (const id of ['RD1352', 'RD2000']) {
+    const response = await call(`/csv/nav/${id}.csv`);
 
-  assert.equal(response.status, 200);
-  assert.match(await response.text(), /^date,nav,source\n2026-09-30,/);
+    assert.equal(response.status, 200, id);
+    assert.match(await response.text(), /^date,nav,source\n2026-09-30,/, id);
+  }
 });
 
 test('an unknown fund, a retired ID without a record, and an empty history are 404 text', async () => {

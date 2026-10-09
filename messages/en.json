@@ -119,6 +119,7 @@
   "chart_aum_monthly": "monthly",
   "chart_aum_currency_monthly": "{currency}, monthly",
   "chart_aum_empty": "No fund size history.",
+  "chart_load_failed": "The charts failed to load. Reload the page.",
   "chart_series_nav": "NAV",
   "chart_tip_since": "since {date}",
 
@@ -146,8 +147,6 @@
   "dividends_aside": "{count} payouts, per unit",
   "dividends_date": "Date",
   "dividends_per_unit": "Per unit",
-  "dividends_more": "The latest 12 of {total}. The {jsonLink} has all of them.",
-  "dividends_json_link": "fund JSON",
   "profile_title": "Profile",
   "profile_aside": "From the manager, in Indonesian",
 
@@ -349,6 +348,7 @@
   "compare_loading": "Loading…",
   "compare_load_failed": "This fund failed to load.",
   "compare_picker_failed": "The fund list failed to load. Reload the page.",
+  "fund_list_failed": "The fund list failed to load. Reload the page.",
   "compare_excluded_stale": "{name}: its last NAV is {date}, over a month before the other funds, so it is left out of the chart and the returns.",
   "compare_excluded_no_history": "{name}: its NAV history is too short, so it is left out of the chart and the returns.",
   "compare_excluded_gap": "{name}: it has no NAV near {date}, so it is left out of the chart and the returns.",

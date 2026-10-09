@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { HttpError, decodeHtml, matchBibitSymbols, readCsvRows, reportMatches, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
+import { HttpError, decodeHtml, matchBibitSymbols, readCsvRows, reportFailures, reportMatches, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
 
 const BASE_URL = 'https://www.bareksa.com';
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'bareksa');
@@ -51,7 +51,7 @@ export const assertCookieIsValid = (value) => {
   }
 };
 
-const fetchText = (url, { sendCookie = false, acceptDatabaseError = false } = {}) => withRetries(async () => {
+const fetchText = (url, { sendCookie = false, acceptDatabaseError = false, parse = (text) => text } = {}) => withRetries(async () => {
   requestCount++;
 
   try {
@@ -75,7 +75,7 @@ const fetchText = (url, { sendCookie = false, acceptDatabaseError = false } = {}
       throw new HttpError(url, response.status, response.statusText);
     }
 
-    return text;
+    return parse(text);
   } catch (error) {
     // The error message of an invalid header repeats the whole cookie.
     if (sendCookie && !(error instanceof HttpError)) {
@@ -174,7 +174,7 @@ export const parseFundPage = (html) => {
   const type = cellValue('Jenis Reksa Dana');
 
   if (type === undefined) {
-    throw new Error('Fund page has no profile table');
+    throw new Error(`Fund page has no profile table (${html.length} characters, title "${html.match(/<title>([^<]*)<\/title>/)?.[1].trim() ?? ''}")`);
   }
 
   const manager = html.match(/<a itemprop="brand"[^>]*><span itemprop="name">([^<]*)<\/span>/)?.[1] ?? '';
@@ -359,16 +359,17 @@ const fetchNavRows = async (id) => parseNavRows(await fetchJson(
 
 const today = () => new Date().toISOString().slice(0, 10);
 
-const fetchProfile = async ({ id, slug }) => ({
-  ...parseFundPage(await fetchText(`${BASE_URL}/id/data/reksadana/${id}/${slug}`)),
+// The page is parsed inside the retry: a throttled request can answer 200 with a page that has no profile.
+export const fetchProfile = async ({ id, slug }) => ({
+  ...await fetchText(`${BASE_URL}/id/data/reksadana/${id}/${slug}`, { parse: parseFundPage }),
   profileDate: today(),
 });
 
 // Never-fetched funds first, then the oldest profile.
 const byOldestProfile = ([idA, a], [idB, b]) => a.profileDate.localeCompare(b.profileDate) || idA - idB;
 
-// Fund pages only, for the costs and minimums. A failed page gets today's date and keeps its old values,
-// so it moves to the back of the queue and cannot starve the funds behind it.
+// Fund pages only, for the costs and minimums. A failed page keeps its old values and date,
+// so the next run tries it again first.
 const mainProfiles = async ({ all }) => {
   const startedAt = Date.now();
   const funds = await readStoredFunds();
@@ -379,13 +380,7 @@ const mainProfiles = async ({ all }) => {
   const failures = await runPool({
     items: queue.map(([id]) => id),
     worker: async (id) => {
-      try {
-        funds.set(id, { ...funds.get(id), ...await fetchProfile({ id, slug: funds.get(id).slug }) });
-      } catch (error) {
-        funds.set(id, { ...funds.get(id), profileDate: today() });
-
-        throw error;
-      }
+      funds.set(id, { ...funds.get(id), ...await fetchProfile({ id, slug: funds.get(id).slug }) });
     },
     concurrency: CONCURRENCY,
     label: 'Profiles fetched',
@@ -398,10 +393,7 @@ const mainProfiles = async ({ all }) => {
   reportMatches('Bareksa', funds.size, symbolsById, bibitRows);
   console.log(`${requestCount} requests in ${Math.round((Date.now() - startedAt) / 1000)} seconds`);
 
-  if (failures.length > 0) {
-    console.error(`${failures.length} funds failed:\n${failures.join('\n')}`);
-    process.exitCode = 1;
-  }
+  reportFailures(failures, queue.length);
 };
 
 const main = async () => {

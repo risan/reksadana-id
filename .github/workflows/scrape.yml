@@ -2,9 +2,10 @@ name: Scrape
 
 on:
   schedule:
-    # Every day at 23:00 UTC, which is 06:00 the next day in Jakarta (UTC+7). One trigger decides from
-    # the date which sources run (see scripts/decide-sources.sh), so two sources never start two runs.
-    - cron: '0 23 * * *'
+    # Every day at 22:17 UTC, which is 05:17 the next day in Jakarta (UTC+7). Not on the hour: GitHub delays
+    # runs scheduled at the top of the hour by hours. One trigger decides from the date which sources run
+    # (see scripts/decide-sources.sh), so two sources never start two runs.
+    - cron: '17 22 * * *'
   workflow_dispatch:
     inputs:
       sources:
@@ -34,9 +35,9 @@ jobs:
     # A monthly run only asks for what is new since the last one. A full Kontan rescan takes about 30 minutes.
     timeout-minutes: 180
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .node-version
 
@@ -46,31 +47,39 @@ jobs:
         run: scripts/decide-sources.sh "${{ inputs.sources }}" | tee -a "$GITHUB_OUTPUT"
 
       - name: Scrape Bibit
+        id: bibit
         if: steps.decide.outputs.bibit == 'true'
         run: npm run scrape:bibit
 
       # The other sources match against Bibit's fund list, which is still usable when a few Bibit funds fail.
+      # Kontan answers 403 to GitHub's runners. The scraper notices that, warns, and ends green without
+      # touching data, so Kontan is refreshed by running `npm run scrape:kontan` from a home connection.
       - name: Scrape Kontan
+        id: kontan
         if: (success() || failure()) && steps.decide.outputs.kontan == 'true'
         run: npm run scrape:kontan
 
       # Finds funds whose ID failed before or lies past a gap in the IDs, which the normal run never asks for.
       - name: Scrape Kontan (full rescan)
+        id: kontan_full
         if: (success() || failure()) && steps.decide.outputs.kontan_full == 'true'
         run: npm run scrape:kontan:full
 
       - name: Scrape Makmur
+        id: makmur
         if: (success() || failure()) && steps.decide.outputs.makmur == 'true'
         run: npm run scrape:makmur
 
       # Bareksa has no daily NAV here: that needs a login, so it is only collected by hand with
       # BAREKSA_COOKIE (see the README).
       - name: Scrape Bareksa
+        id: bareksa
         if: (success() || failure()) && steps.decide.outputs.bareksa == 'true'
         run: npm run scrape:bareksa
 
       # A slice of the fund pages (currency, custodian, minimums, fees), every day, apart from the monthly full run.
       - name: Scrape Bareksa profiles
+        id: bareksa_profiles
         if: (success() || failure()) && steps.decide.outputs.bareksa_profiles == 'true'
         run: npm run scrape:bareksa:profiles
 
@@ -84,7 +93,30 @@ jobs:
           npm run link
           node scripts/check-funds.js
 
-      # The scrapers exit non-zero when a few funds fail. Still save the funds that
+      # `outcome` is skipped for a source that was not scheduled today. A source that ran and changed
+      # nothing (or skipped itself, like Kontan on a blocked network) shows 0 files.
+      - name: Write job summary
+        if: always()
+        run: |
+          source_row() {
+            echo "| $1 | $2 | $(git status --porcelain "data/$3" | wc -l) |"
+          }
+
+          {
+            echo "### Scrape $(date -u +%F)"
+            echo
+            echo "| Source | Result | Data files changed |"
+            echo "|---|---|---|"
+            source_row Bibit "${{ steps.bibit.outcome }}" bibit
+            source_row Kontan "${{ steps.kontan.outcome }}" kontan
+            source_row "Kontan (full rescan)" "${{ steps.kontan_full.outcome }}" kontan
+            source_row Makmur "${{ steps.makmur.outcome }}" makmur
+            source_row Bareksa "${{ steps.bareksa.outcome }}" bareksa
+            source_row "Bareksa profiles" "${{ steps.bareksa_profiles.outcome }}" bareksa
+            echo "| Link funds | ${{ steps.link.outcome }} | $(git status --porcelain data | wc -l) (all of data/) |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # The scrapers exit non-zero when more than 5% of the funds fail. Still save the funds that
       # succeeded; the failed ones are retried on the next run.
       - name: Commit and push changes
         if: (success() || failure()) && steps.link.outcome == 'success'

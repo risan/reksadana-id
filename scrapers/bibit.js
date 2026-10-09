@@ -1,7 +1,7 @@
 import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { HttpError, readCsvRows, runPool, toCsv, withRetries, writeFileAtomic } from './lib.js';
+import { HttpError, readCsvRows, reportFailures, runPool, toCsv, withRetries, writeFileAtomic } from './lib.js';
 
 const API_URL = 'https://api.bibit.id';
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'bibit');
@@ -328,10 +328,9 @@ const main = async () => {
     describeItem: (fund) => fund.symbol,
   });
 
-  if (failures.length > 0) {
-    console.error(`${failures.length} funds failed:\n${failures.join('\n')}`);
-    process.exitCode = 1;
-  }
+  reportFailures(failures, funds.length);
 };
 
-await main();
+if (process.argv[1] === import.meta.filename) {
+  await main();
+}

@@ -3,35 +3,24 @@ import uPlot from 'uplot';
 import 'uplot/dist/uPlot.min.css';
 import * as m from '../paraglide/messages.js';
 import { setLocale } from '../paraglide/runtime.js';
-import { CHART_RANGES, MAX_FUNDS, MIN_FUNDS, analyzeFunds, chartRange, indexedSeries, resolveSelection, returnsAtCommonEnd, selectionQuery, selectionText } from './compare.js';
+import { CHART_RANGES, MAX_FUNDS, MIN_FUNDS, analyzeFunds, chartRange, indexedSeries, resolveSelection, selectionQuery, selectionText } from './compare.js';
 import { describeCosts } from './costs-text.js';
 import { readTrayText, writeTray } from './compare-tray.js';
 import { DEFAULT_STATE, escapeHtml, filterFunds, prepareFunds, sortFunds } from './explorer.js';
+import { fetchFundRecord, getJson } from './fetch-json.js';
 import { attachTooltip, axes, chartHeight, cssColor, toSeconds } from './fund-charts.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from './format.js';
 import { shariaText, typeName } from './fund-types.js';
 import { anchor, localizeHref } from './i18n.js';
 import { readIncludeDividends, showIncludeDividends, writeIncludeDividends } from './dividend-setting.js';
-import { dividendEvents, indexAtOrBefore, pickNavHistory, withDividendsReinvested } from './series.js';
+import { computeReturns, dividendEvents, indexAtOrBefore, pickNavHistory, withDividendsReinvested } from './series.js';
 
 const PICKER_RESULT_LIMIT = 8;
-const RETURN_PERIODS = ['1m', 'ytd', '1y', '3y', '5y'];
+const TABLE_PERIODS = ['1m', 'ytd', '1y', '3y', '5y'];
 const CAGR_PERIODS = ['3y', '5y'];
 const DRAWDOWN_PERIODS = ['1y', '3y'];
 const DEFAULT_RANGE = '1y';
 const CHART_HEIGHT = 320;
-
-async function getJson(url, options) {
-  try {
-    const response = await fetch(url, options);
-
-    return response.ok ? await response.json() : null;
-  } catch {
-    return null;
-  }
-}
-
-const hasCurrentShape = (record) => Boolean(record?.fund && record.costs);
 
 export async function mountComparePage() {
   const locale = document.documentElement.lang;
@@ -87,15 +76,9 @@ export async function mountComparePage() {
 
     loaded.set(id, { status: 'loading' });
 
-    const url = `/api/funds/${encodeURIComponent(id)}.json`;
-    let record = await getJson(url);
+    const record = await fetchFundRecord(id);
 
-    // The browser may hold a record from before a deploy for an hour; it lacks the fields added since.
-    if (record !== null && !hasCurrentShape(record)) {
-      record = await getJson(url, { cache: 'reload' });
-    }
-
-    if (hasCurrentShape(record)) {
+    if (record !== null) {
       const history = pickNavHistory(record);
       const events = dividendEvents(record, history);
 
@@ -309,7 +292,7 @@ export async function mountComparePage() {
     const eligibleById = new Map(analysis?.eligible.map((entry) => [entry.id, entry]));
     const columns = ids.map((id, slot) => {
       const entry = loaded.get(id) ?? { status: 'loading' };
-      const returns = eligibleById.has(id) ? returnsAtCommonEnd(eligibleById.get(id), analysis.commonEnd) : null;
+      const returns = eligibleById.has(id) ? computeReturns(eligibleById.get(id).history, analysis.commonEnd) : null;
 
       return { id, slot, fund: fundsById.get(id), returns, inChart: eligibleById.has(id), ...entry };
     });
@@ -359,7 +342,7 @@ export async function mountComparePage() {
         ${row(m.compare_row_nav(), (column) => `${formatNav(column.fund.nav, locale)}${column.fund.currency === 'USD' ? ' USD' : ''}<div class="sub">${formatDate(column.fund.nav_date, locale)}</div>`)}
         ${row(m.figure_aum(), (column) => `${formatMoney(column.fund.aum, locale, column.fund.aum_currency)}<div class="sub">${column.fund.aum_date ? formatMonth(column.fund.aum_date, locale) : ''}</div>`)}
         ${analysis?.commonEnd ? group(m.compare_group_returns({ date: formatDate(analysis.commonEnd, locale) })) : ''}
-        ${analysis ? RETURN_PERIODS.map((period) => row(`${m.returns_row_return()} ${periodLabels[period]}`, returnCell((returns) => returns.simplereturn[period], formatChange, true), { className: 'num' })).join('') : ''}
+        ${analysis ? TABLE_PERIODS.map((period) => row(`${m.returns_row_return()} ${periodLabels[period]}`, returnCell((returns) => returns.simplereturn[period], formatChange, true), { className: 'num' })).join('') : ''}
         ${analysis ? CAGR_PERIODS.map((period) => row(`${m.returns_row_per_year()} ${periodLabels[period]}`, returnCell((returns) => returns.cagr[period], formatChange, true), { title: m.returns_row_per_year_title(), className: 'num' })).join('') : ''}
         ${analysis ? DRAWDOWN_PERIODS.map((period) => row(`${m.returns_row_worst_fall()} ${periodLabels[period]}`, returnCell((returns) => returns.maxdrawdown[period], formatPercent, false), { title: m.returns_row_worst_fall_title(), className: 'num' })).join('') : ''}
         ${group(m.compare_group_costs())}

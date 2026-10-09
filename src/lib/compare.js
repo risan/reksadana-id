@@ -1,6 +1,6 @@
 // Runs both at build time and in the browser, so it must not import Node modules.
 // The rules of the compare page. Every history is the object pickNavHistory returns.
-import { computeReturns, daysBetween, indexAtOrBefore, maxStartGapDays, periodStartDate } from './series.js';
+import { daysBetween, indexAtOrBefore, maxStartGapDays, periodStartDate } from './series.js';
 
 export const MIN_FUNDS = 2;
 export const MAX_FUNDS = 5;
@@ -96,11 +96,6 @@ export function analyzeFunds(entries) {
   }
 
   return { commonEnd, eligible, excluded };
-}
-
-// Returns, CAGR, and max drawdown of an eligible fund, measured back from the common end.
-export function returnsAtCommonEnd(entry, commonEnd) {
-  return computeReturns(entry.history, commonEnd);
 }
 
 // Where a chart range starts, and the NAV each eligible fund is indexed from: its last NAV on or before the start.
