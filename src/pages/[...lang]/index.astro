@@ -761,7 +761,7 @@ const sortIcons = `<span class="sort-up">${icon('arrow-up', { size: 14 })}</span
 
   // A shared link opens a filtered view, so the build-time rows, which are the default view, would flash first.
   if (serializeState(state) !== '') {
-    rows.innerHTML = renderSkeletonRows();
+    rows.innerHTML = renderSkeletonRows(state.size);
   }
 
   data = await getJson('/explorer.json');

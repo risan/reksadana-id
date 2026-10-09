@@ -689,6 +689,14 @@ th[aria-sort='descending'] .sort-down {
   animation: skeleton-pulse 1.4s ease-in-out infinite;
 }
 
+.skeleton-row td {
+  height: 61px;
+}
+
+.skeleton-row .fund-text {
+  flex: 1;
+}
+
 .skeleton-row .sub .skeleton-bar {
   width: 40%;
   margin-top: var(--s-2);
@@ -1044,6 +1052,10 @@ th[aria-sort='descending'] .sort-down {
     display: none;
   }
 
+  .quick-filters .chip {
+    min-height: var(--control-h);
+  }
+
   .sort-picker {
     display: flex;
   }
@@ -1159,7 +1171,7 @@ th[aria-sort='descending'] .sort-down {
   }
 
   .skeleton-row .c-fund {
-    min-height: 96px;
+    height: 130px;
   }
 
   .pager,

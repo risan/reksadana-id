@@ -9,8 +9,6 @@ import { typeLook } from './fund-types.js';
 import { icon } from './icons.js';
 import { localizeHref } from './i18n.js';
 
-export const SKELETON_ROW_COUNT = 12;
-
 function typeTile(tone, iconName, size) {
   return `<span class="icon-tile ${tone ? `type-${tone}` : ''}">${icon(iconName, { size })}</span>`;
 }
@@ -111,7 +109,7 @@ export function renderRows(funds, state, dataDate, locale, comparedIds = new Set
 }
 
 // Stands in for the rows until the fund list arrives, so the table keeps its height.
-export function renderSkeletonRows(count = SKELETON_ROW_COUNT) {
+export function renderSkeletonRows(count) {
   const bar = '<span class="skeleton-bar"></span>';
   const row = `<tr class="skeleton-row" aria-hidden="true"><td class="c-compare"></td><td class="c-fund"><div class="fund-cell"><span class="icon-tile"></span><div class="fund-text">${bar}<div class="sub">${bar}</div></div></div></td>${COLUMNS.map((column) => `<td class="col-${column.key}">${bar}</td>`).join('')}</tr>`;
 
