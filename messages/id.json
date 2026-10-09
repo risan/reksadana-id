@@ -447,5 +447,38 @@
   "benchmark_rate_note": "{name} {rate} per tahun (per {date}).",
   "benchmark_load_failed": "Data indeks gagal dimuat. Coba lagi.",
 
-  "benchmark_no_range": "Indeks ini belum punya data pada awal periode ini."
+  "benchmark_no_range": "Indeks ini belum punya data pada awal periode ini.",
+
+  "api_toc_benchmarks": "Pembanding",
+  "api_toc_benchmark": "Satu pembanding",
+  "api_group_benchmarks": "Pembanding",
+  "api_purpose_benchmarks": "Daftar pembanding dan nilai terakhirnya.",
+  "api_purpose_benchmark": "Satu pembanding dengan semua titiknya.",
+  "api_benchmarks_text": "Pembanding yang dipakai halaman reksa dana: indeks saham, indeks kategori reksa dana Bareksa, dan BI-Rate. Datanya sama dengan <code>data/benchmarks/</code> dan <code>data/macro/bi-rate.csv</code>; titik-titiknya ada di {oneLink}.",
+  "api_benchmarks_one_link": "satu pembanding",
+  "api_benchmark_text": "Satu pembanding: metadatanya dan setiap titik sebagai \\{ date, value \\}, dari yang terlama. Indeks berupa tingkat indeks (bukan imbal hasil, tanpa dividen); BI-Rate berupa persen per tahun pada tanggal keputusan.",
+  "api_bm_id": "Kode pembanding, misalnya ihsg, lq45, bareksa-equity, atau bi-rate.",
+  "api_bm_name": "Nama dalam bahasa Indonesia dan Inggris: \\{ id, en \\}.",
+  "api_bm_description": "Penjelasan singkat, juga \\{ id, en \\}.",
+  "api_bm_kind": "stock (indeks saham), fund-category (indeks kategori reksa dana), atau rate (suku bunga).",
+  "api_bm_source": "Tempat kami mengambilnya, misalnya Bareksa atau Bank Indonesia.",
+  "api_bm_currency": "Mata uang nilainya.",
+  "api_bm_start_date": "Tanggal data pertama.",
+  "api_bm_end_date": "Tanggal data terakhir.",
+  "api_bm_latest_value": "Nilai terakhir.",
+  "api_bm_points_count": "Jumlah titik.",
+  "api_bm_points": "Semua titik: \\{ date, value \\}, dari yang terlama.",
+  "api_funds_ojk": "Nama reksa dana ini menurut OJK, atau null bila tidak ada kecocokan. Statistik bulanan OJK ada di <code>data/ojk/</code>.",
+  "api_fund_ojk": "Data OJK atau null bila tidak ada kecocokan: \\{ name, manager, custodian, type, currency, status, months \\}. <code>status</code> adalah registered, zero_aum (dana kelolaan nol di bulan terbaru OJK), atau not_listed (tidak lagi ada di daftar bulan terbaru). <code>months</code> berisi \\{ month, aum, units \\} per bulan; <code>aum</code> dalam rupiah, juga untuk reksa dana USD.",
+  "api_fund_benchmarks": "Pembanding yang cocok dengan jenis reksa dana ini, tiap entri \\{ id, kind, end_date, value, returns \\}. <code>returns</code> memuat <code>simplereturn</code>, <code>cagr</code>, dan <code>maxdrawdown</code> untuk periode yang sama dan tanggal akhir yang sama dengan reksa dana; untuk suku bunga nilainya null dan <code>value</code> adalah suku bunga yang berlaku. Daftar kosong untuk reksa dana global, USD, dan jenis lain.",
+
+  "api_example_benchmarks_ojk": "Contoh dengan OJK dan pembanding",
+
+  "download_rhythm_ojk": "diperbarui bulanan, sejak sekitar tanggal 8",
+  "download_benchmarks_list": "Daftar pembanding: kode, nama, penjelasan, jenis, dan sumbernya.",
+  "download_benchmarks_csv": "Tingkat harian satu indeks: tanggal dan nilai. Indeks harga, tanpa dividen.",
+  "download_macro_usdidr": "Kurs JISDOR (rupiah per dolar AS), setiap hari kerja.",
+  "download_macro_birate": "BI-Rate dalam persen per tahun, satu baris per rapat bulanan.",
+  "download_macro_inflation": "Inflasi tahunan (YoY) dalam persen, satu baris per bulan.",
+  "download_ojk_monthly": "Dana kelolaan dan unit setiap reksa dana yang terdaftar di OJK pada akhir bulan, dalam rupiah. Satu berkas per bulan, 36 bulan terakhir."
 }

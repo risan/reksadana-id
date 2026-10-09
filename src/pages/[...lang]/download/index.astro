@@ -76,6 +76,34 @@ const SOURCES = [
       ['data/makmur/funds/<makmur_id>.json', m.download_makmur_fund_json()],
     ],
   },
+  {
+    name: m.api_group_benchmarks(),
+    url: 'https://www.bareksa.com/',
+    site: 'bareksa.com',
+    rhythm: m.download_rhythm_daily(),
+    files: [
+      ['data/benchmarks/benchmarks.json', m.download_benchmarks_list()],
+      ['data/benchmarks/<id>.csv', m.download_benchmarks_csv()],
+    ],
+  },
+  {
+    name: 'Bank Indonesia',
+    url: 'https://www.bi.go.id/',
+    site: 'bi.go.id',
+    rhythm: m.download_rhythm_daily(),
+    files: [
+      ['data/macro/usd-idr.csv', m.download_macro_usdidr()],
+      ['data/macro/bi-rate.csv', m.download_macro_birate()],
+      ['data/macro/inflation.csv', m.download_macro_inflation()],
+    ],
+  },
+  {
+    name: 'OJK',
+    url: 'https://reksadana.ojk.go.id/',
+    site: 'reksadana.ojk.go.id',
+    rhythm: m.download_rhythm_ojk(),
+    files: [['data/ojk/monthly/<YYYY-MM>.csv', m.download_ojk_monthly()]],
+  },
 ];
 ---
 
