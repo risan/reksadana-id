@@ -16,6 +16,7 @@
     "scrape:bareksa:nav": "node scrapers/bareksa.js --nav",
     "scrape:bareksa:nav:all": "node scrapers/bareksa.js --nav-all",
     "scrape:prospectus": "node scrapers/prospectus.js",
+    "scrape:prospectus:managers": "node scrapers/prospectus-managers.js",
     "scrape:benchmarks": "node scrapers/benchmarks.js",
     "scrape:macro": "node scrapers/macro.js",
     "scrape:ojk": "node scrapers/ojk.js",
