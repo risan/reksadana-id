@@ -2,7 +2,7 @@ import { closeSync, existsSync, fstatSync, openSync, readFileSync, readSync, rea
 import path from 'node:path';
 import { buildCosts } from './costs.js';
 import { makmurFundUrl } from './referrals.js';
-import { computeReturns, dividendEvents, fundCurrency, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, sparkline, withDividendsReinvested } from './series.js';
+import { computeReturns, dividendEvents, fundCurrency, largeMoves, periodStartDate, periodStartIndex, pickAumHistory, pickNavHistory, sparkline, withDividendsReinvested } from './series.js';
 
 export const DATA_DIR = path.resolve('data');
 
@@ -464,11 +464,44 @@ function hasLargeMoveInLastYear(points) {
 
 let fundSummaries = null;
 
-// One compact row per fund for the fund explorer, plus the USD rate it needs to rank funds by size.
+// One row per fund for the fund explorer, plus the USD rate it needs to rank funds by size. Returns,
+// CAGRs, and drawdowns are fractions; the cost fields are fractions or rupiah; a missing value is null.
+// The explorer.json endpoint shrinks this for the browser, so keep the field names stable.
 export function loadFundSummaries() {
   fundSummaries ??= buildFundSummaries();
 
   return fundSummaries;
+}
+
+// The change in NAV over the last six months, which `computeReturns` does not cover.
+function sixMonthReturn(history) {
+  const startIndex = periodStartIndex(history, '6m');
+
+  return startIndex < 0 ? null : history.points.at(-1).value / history.points[startIndex].value - 1;
+}
+
+// The lowest first purchase among the distributors that sell in rupiah.
+function lowestRupiahMinPurchase(costs) {
+  const amounts = costs.min_purchase.filter((minimum) => minimum.currency === 'IDR').map((minimum) => minimum.amount);
+
+  return amounts.length === 0 ? null : Math.min(...amounts);
+}
+
+// The returns that are shown or filtered on, for the NAV change or for the total return.
+function returnFields(returns, sixMonths, isActive) {
+  const pick = (values, period, decimals) => (isActive ? roundTo(values[period], decimals) : null);
+
+  return {
+    return_1m: pick(returns.simplereturn, '1m', 5),
+    return_3m: pick(returns.simplereturn, '3m', 5),
+    return_6m: isActive ? roundTo(sixMonths, 5) : null,
+    return_ytd: pick(returns.simplereturn, 'ytd', 5),
+    return_1y: pick(returns.simplereturn, '1y', 5),
+    return_3y: pick(returns.simplereturn, '3y', 5),
+    return_5y: pick(returns.simplereturn, '5y', 5),
+    cagr_3y: pick(returns.cagr, '3y', 5),
+    cagr_5y: pick(returns.cagr, '5y', 5),
+  };
 }
 
 function buildFundSummaries() {
@@ -482,8 +515,7 @@ function buildFundSummaries() {
     const active = isActive(navDate, last?.source);
     const performance = fundPerformance(record, history);
     const aum = latestAum(record);
-    const periodReturn = (period) => (active ? roundTo(performance.simplereturn[period], 5) : null);
-    const totalReturn = (period) => (active ? roundTo(performance.total.simplereturn[period], 5) : null);
+    const drawdown = (period) => (active ? roundTo(performance.maxdrawdown[period], 5) : null);
 
     if (fund.currency === 'USD' && record.currency_exchange?.exchange_rate > 1) {
       usdToIdr = record.currency_exchange.exchange_rate;
@@ -506,18 +538,21 @@ function buildFundSummaries() {
       aum: roundSignificant(aum?.value ?? null, 4),
       aum_currency: aum?.currency ?? null,
       aum_date: aum?.date ?? null,
-      return_1m: periodReturn('1m'),
-      return_ytd: periodReturn('ytd'),
-      return_1y: periodReturn('1y'),
-      return_3y: periodReturn('3y'),
+      ...returnFields(performance, sixMonthReturn(history), active),
+      drawdown_1y: drawdown('1y'),
+      drawdown_3y: drawdown('3y'),
       spark: active ? sparkline(history.points) : null,
       total: performance.total && {
-        return_1m: totalReturn('1m'),
-        return_ytd: totalReturn('ytd'),
-        return_1y: totalReturn('1y'),
-        return_3y: totalReturn('3y'),
+        ...returnFields(performance.total, sixMonthReturn(performance.totalHistory), active),
         spark: active ? sparkline(performance.totalHistory.points) : null,
       },
+      expense_ratio: record.costs.expense_ratio?.value ?? null,
+      expense_source: record.costs.expense_ratio?.source ?? null,
+      min_purchase: lowestRupiahMinPurchase(record.costs),
+      fee_subscription: record.costs.max_fees.subscription?.max ?? null,
+      fee_redemption: record.costs.max_fees.redemption?.max ?? null,
+      launch_date: fund.launch_date,
+      history_start: history.points[0]?.date ?? null,
       large_move: active && hasLargeMoveInLastYear(history.points),
       dividends: (record.dividends?.length ?? 0) > 0,
       active,
