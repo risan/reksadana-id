@@ -386,11 +386,16 @@ const findEqualNavPairs = (records) => {
 
 const candidateId = (record) => `${ID_PREFIXES[record.source]}${record.id}`;
 
-// Aliases name a Bibit symbol ("RD1983") or a record ("bareksa:440"). `null` blocks automatic links.
+// Aliases name a Bibit symbol ("RD1983") or a record ("bareksa:440"). `null` blocks automatic links and keeps the
+// record as a fund of its own. "exclude" drops a record that carries another fund's NAV: it joins no fund and gets no page.
+export const EXCLUDED = 'exclude';
+
 const resolveAliasTarget = (target) => (target.includes(':') ? target : `bibit:${target}`);
 
 export const linkFunds = ({ records: inputRecords, aliases, registry, today }) => {
-  const records = inputRecords.map((record) => ({ ...record, nav: record.source === 'kontan' ? withoutStaleTail(record.nav) : record.nav, key: `${record.source}:${record.id}` }));
+  const records = inputRecords
+    .map((record) => ({ ...record, nav: record.source === 'kontan' ? withoutStaleTail(record.nav) : record.nav, key: `${record.source}:${record.id}` }))
+    .filter((record) => aliases[record.key] !== EXCLUDED);
   const recordsByKey = new Map(records.map((record) => [record.key, record]));
   const parent = new Map(records.map((record) => [record.key, record.key]));
   const membersByRoot = new Map(records.map((record) => [record.key, [record]]));
