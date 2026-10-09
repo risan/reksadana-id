@@ -200,7 +200,7 @@ The site draws one NAV history per fund (`src/lib/series.js`, which runs at buil
 
 **Benchmarks in the fund record.** `benchmarks` lists the series that suit the fund's type (`suggestBenchmarkIds` in `src/lib/benchmarks.js`): money market funds get `bareksa-money-market` and `bi-rate`, fixed income and capital protected funds `bareksa-fixed-income`, equity funds `ihsg` and `bareksa-equity` (and `jii` for a sharia fund), balanced funds `bareksa-balanced` and `ihsg`. Global funds, USD funds, and funds of other types get none. Each entry has `end_date` (the series' last day on or before the fund's latest NAV date), `value`, and `returns`: `simplereturn`, `cagr`, and `maxdrawdown` over the same periods, from the same function (`computeReturns`) and ending on the same date as the fund's returns. A rate has no returns (`returns` is null).
 
-The home page reads `/explorer.json`, a compact summary built by `loadFundSummaries()` in `src/lib/data.js`. It is not part of the public API.
+The home page reads `/explorer.json`, a compact summary built by `loadFundSummaries()` in `src/lib/data.js` and shrunk by `src/lib/explorer-data.js` (a `columns` header and one array per fund; the browser expands it with `decodeSummaries()`). It is not part of the public API.
 
 You need Node.js 22.12 or newer. Cloudflare builds with Node 24 (see `.node-version`).
 
