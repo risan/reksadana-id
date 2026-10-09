@@ -155,3 +155,23 @@ export function indexedSeries(analysis, range) {
 
   return { dates: sortedDates, series };
 }
+
+// The ids that hold the best value of a table row: the highest for 'high', the lowest for 'low'. `entries` are
+// { id, value }, with a null value where a fund has none. Nothing is marked when fewer than two funds have a value
+// or when they all tie, since then no fund stands out.
+export function bestIds(entries, prefer) {
+  const known = entries.filter((entry) => entry.value !== null && entry.value !== undefined);
+
+  if (known.length < 2) {
+    return new Set();
+  }
+
+  const values = known.map((entry) => entry.value);
+  const best = prefer === 'high' ? Math.max(...values) : Math.min(...values);
+
+  if (values.every((value) => value === best)) {
+    return new Set();
+  }
+
+  return new Set(known.filter((entry) => entry.value === best).map((entry) => entry.id));
+}

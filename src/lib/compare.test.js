@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { analyzeFunds, chartRange, indexedSeries, resolveSelection, selectionQuery, selectionText } from './compare.js';
+import { analyzeFunds, bestIds, chartRange, indexedSeries, resolveSelection, selectionQuery, selectionText } from './compare.js';
 import { computeReturns } from './series.js';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -170,4 +170,21 @@ test('returns are measured back from the common end, not from each fund\'s own e
 
   assert.equal(analysis.commonEnd, '2026-09-30');
   assert.ok(Math.abs(result.simplereturn['1m'] - (494 / 463 - 1)) < 1e-12);
+});
+
+test('the best of a row is the highest or the lowest value, and ties share it', () => {
+  const entries = [{ id: 'A', value: 0.05 }, { id: 'B', value: 0.09 }, { id: 'C', value: 0.09 }, { id: 'D', value: null }];
+
+  assert.deepEqual([...bestIds(entries, 'high')], ['B', 'C']);
+  assert.deepEqual([...bestIds(entries, 'low')], ['A']);
+});
+
+test('no best is marked when fewer than two funds have a value or all are equal', () => {
+  assert.equal(bestIds([{ id: 'A', value: 0.05 }, { id: 'B', value: null }], 'high').size, 0);
+  assert.equal(bestIds([{ id: 'A', value: 0.05 }, { id: 'B', value: 0.05 }], 'low').size, 0);
+  assert.equal(bestIds([], 'high').size, 0);
+});
+
+test('a fall that is smaller is the higher number, so the best drawdown is the highest value', () => {
+  assert.deepEqual([...bestIds([{ id: 'A', value: -0.2 }, { id: 'B', value: -0.05 }], 'high')], ['B']);
 });
