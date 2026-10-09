@@ -1,5 +1,6 @@
 // Runs both at build time and in the browser, so it must not import Node modules.
 // Every function takes a fund in the shape of /api/funds/<symbol>.json.
+import { agreeAtPrecision, precisionOf } from './precision.js';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -113,21 +114,22 @@ export function dropSpikes(points) {
 
 const FROZEN_AFTER_DAYS = 31;
 
-const decimalsOf = (value) => (String(value).split('.')[1] ?? '').length;
+// Two NAVs of one source are the same only when they are equal. From two sources they are the same when they agree
+// at the coarser source's precision, which is the most decimals that source shows anywhere in the series: a Bibit
+// NAV of 1.0500 is stored as 1.05 and is still a four-decimal NAV.
+function isSameNav(a, b, precisions) {
+  if (a.source === b.source) {
+    return a.value === b.value;
+  }
 
-// Sources round differently (Kontan keeps two decimals, Bibit four), so two NAVs are the same when they agree at
-// the coarser of their two precisions. Two values of one source are compared as they are.
-function isSameNav(a, b) {
-  const scale = 10 ** Math.min(decimalsOf(a), decimalsOf(b));
-
-  return Math.round(a * scale) === Math.round(b * scale);
+  return agreeAtPrecision(a.value, b.value, Math.min(precisions[a.source], precisions[b.source]));
 }
 
 // The date the series' final value first appeared, counting only the unbroken run at its end.
-function startOfFinalRun(points) {
+function startOfFinalRun(points, precisions) {
   let index = points.length - 1;
 
-  while (index > 0 && isSameNav(points[index - 1].value, points.at(-1).value)) {
+  while (index > 0 && isSameNav(points[index - 1], points.at(-1), precisions)) {
     index--;
   }
 
@@ -138,13 +140,13 @@ function startOfFinalRun(points) {
 // so a NAV unchanged for longer means the fund stopped when that NAV first appeared. Another source can
 // show it earlier, as long as the chosen history has no other value after that date.
 // Returns the point the history ends on, or null.
-function frozenEnd(points, sourceLists) {
+function frozenEnd(points, sourceLists, precisions) {
   if (points.length < 2) {
     return null;
   }
 
-  const finalValue = points.at(-1).value;
-  const lastChange = startOfFinalRun(points);
+  const finalPoint = points.at(-1);
+  const lastChange = startOfFinalRun(points, precisions);
 
   if (daysBetween(lastChange, points.at(-1).date) <= FROZEN_AFTER_DAYS) {
     return null;
@@ -153,13 +155,13 @@ function frozenEnd(points, sourceLists) {
   const candidates = [points.find((point) => point.date === lastChange)];
 
   for (const list of sourceLists) {
-    if (list.length === 0 || !isSameNav(list.at(-1).value, finalValue)) {
+    if (list.length === 0 || !isSameNav(list.at(-1), finalPoint, precisions)) {
       continue;
     }
 
-    const start = startOfFinalRun(list);
+    const start = startOfFinalRun(list, precisions);
 
-    if (points.every((point) => point.date < start || isSameNav(point.value, finalValue))) {
+    if (points.every((point) => point.date < start || isSameNav(point, finalPoint, precisions))) {
       candidates.push(list.find((point) => point.date === start));
     }
   }
@@ -226,8 +228,8 @@ const LAG_DOMINANCE = 3;
 
 // Kontan stamps some funds' NAV with the next trading day's date. The tell is a NAV that equals the
 // reference's NAV of the previous Kontan row's date, far more often than the NAV of its own date.
-function lagsBehind(kontan, reference) {
-  const referenceByDate = new Map(reference.map((point) => [point.date, point.value]));
+function lagsBehind(kontan, reference, precisions) {
+  const referenceByDate = new Map(reference.map((point) => [point.date, point]));
   let sameDay = 0;
   let nextDay = 0;
 
@@ -236,11 +238,14 @@ function lagsBehind(kontan, reference) {
       continue;
     }
 
-    if (referenceByDate.get(kontan[index].date) === kontan[index].value) {
+    const sameDayPoint = referenceByDate.get(kontan[index].date);
+    const previousDayPoint = referenceByDate.get(kontan[index - 1].date);
+
+    if (sameDayPoint && isSameNav(sameDayPoint, kontan[index], precisions)) {
       sameDay++;
     }
 
-    if (referenceByDate.get(kontan[index - 1].date) === kontan[index].value) {
+    if (previousDayPoint && isSameNav(previousDayPoint, kontan[index], precisions)) {
       nextDay++;
     }
   }
@@ -249,8 +254,8 @@ function lagsBehind(kontan, reference) {
 }
 
 // Every NAV moves back to the date of the row before it. The first row is dropped: its own day is unknown.
-function alignKontan(kontan, reference) {
-  if (!lagsBehind(kontan, reference)) {
+function alignKontan(kontan, reference, precisions) {
+  if (!lagsBehind(kontan, reference, precisions)) {
     return kontan;
   }
 
@@ -295,7 +300,10 @@ export function pickNavHistory(fund) {
     bareksa: cleanPoints(fund.bareksa?.nav ?? [], 'nav', 'bareksa'),
   };
 
-  sources.kontan = alignKontan(cleanPoints(fund.kontan?.nav ?? [], 'nav', 'kontan'), [...sources.bibit, ...sources.bareksa]);
+  const rawKontan = cleanPoints(fund.kontan?.nav ?? [], 'nav', 'kontan');
+  const precisions = Object.fromEntries(Object.entries({ ...sources, kontan: rawKontan }).map(([name, points]) => [name, precisionOf(points.map((point) => point.value))]));
+
+  sources.kontan = alignKontan(rawKontan, [...sources.bibit, ...sources.bareksa], precisions);
 
   let primary = null;
 
@@ -308,6 +316,7 @@ export function pickNavHistory(fund) {
   } else if (fund.bareksa && monthlyNavFromBareksa(fund).length > 1) {
     primary = 'bareksa-monthly';
     sources['bareksa-monthly'] = monthlyNavFromBareksa(fund);
+    precisions['bareksa-monthly'] = precisionOf(sources['bareksa-monthly'].map((point) => point.value));
   } else if (sources.bibit.length > 0) {
     primary = 'bibit';
   }
@@ -320,8 +329,9 @@ export function pickNavHistory(fund) {
   const baseEnd = base.at(-1);
   const newerByDate = new Map();
 
-  // Every source may fill days after the primary history ends; on a date two sources share, the first wins.
-  for (const name of ['bibit', 'kontan', 'bareksa']) {
+  // Every source may fill days after the primary history ends; on a date two sources share, the first wins, so the
+  // sources with four decimals come before Kontan's two.
+  for (const name of ['bibit', 'bareksa', 'kontan']) {
     const newer = sources[name].filter((point) => point.date > baseEnd.date);
 
     if (name === primary || newer.length === 0 || !continues(baseEnd, newer[0]) || !isVouchedAcrossGap(base, sources[name], newer[0])) {
@@ -341,7 +351,7 @@ export function pickNavHistory(fund) {
     ...[...newerByDate.values()].sort((a, b) => a.date.localeCompare(b.date)),
   ];
   const cleaned = dropSpikes(points);
-  const end = frozenEnd(cleaned, Object.values(sources));
+  const end = frozenEnd(cleaned, Object.values(sources), precisions);
   const final = end ? [...cleaned.filter((point) => point.date < end.date), end] : cleaned;
 
   return {

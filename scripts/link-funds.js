@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import ALIASES from '../scrapers/fund-aliases.json' with { type: 'json' };
+import { agreeAtPrecision, decimalsOf } from '../src/lib/precision.js';
 import { dropSpikes } from '../src/lib/series.js';
 import { isSameManager, normalizeManager, normalizeName, readCsvRecords, toCsv, writeFileAtomic } from '../scrapers/lib.js';
 
@@ -130,17 +131,7 @@ const withoutSpikes = (series) => {
 
 const integerDigits = (value) => (value >= 1 ? Math.floor(Math.log10(value)) + 1 : 0);
 
-const valueDecimals = (value) => {
-  for (let decimals = 0; decimals < 5; decimals++) {
-    const scaled = value * 10 ** decimals;
-
-    if (Math.abs(scaled - Math.round(scaled)) < 1e-6) {
-      return decimals;
-    }
-  }
-
-  return 5;
-};
+const valueDecimals = decimalsOf;
 
 const isRoundNav = (value) => ROUND_NAVS.some((round) => Math.abs(value / round - 1) <= ROUND_NAV_TOLERANCE);
 
@@ -151,11 +142,7 @@ const digitsOf = (value) => integerDigits(value) + valueDecimals(value);
 const coarseDecimals = (x, y) => Math.min(valueDecimals(x), valueDecimals(y));
 
 // Equal when the finer value, rounded to the coarser value's decimals, is the coarser value.
-const valuesAgree = (x, y) => {
-  const scale = 10 ** coarseDecimals(x, y);
-
-  return Math.round(x * scale) === Math.round(y * scale);
-};
+const valuesAgree = (x, y) => agreeAtPrecision(x, y, coarseDecimals(x, y));
 
 // One unit in the last coarse decimal apart: some sources truncate where others round.
 const valuesClose = (x, y) => Math.abs(x - y) <= 1.0001 * 10 ** -coarseDecimals(x, y);

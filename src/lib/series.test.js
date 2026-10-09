@@ -491,3 +491,38 @@ test('a fund that is small all along, or two odd months in a row, keeps its figu
   assert.equal(small.points.length, 3);
   assert.equal(twoMonths.points.length, 5);
 });
+
+test('a growing four-decimal NAV that ends on 1.05 is not frozen by the zeros it lost when it was stored as a number', () => {
+  const values = Array.from({ length: 80 }, (_, day) => Number((1.0404 + day * 0.00012).toFixed(4)));
+
+  values[values.length - 1] = 1.05;
+  values[values.length - 2] = 1.0495;
+
+  const history = pickNavHistory({ bareksa: { nav: plainRows('2026-01-01', values), aum: [], units: [] } });
+
+  assert.equal(history.frozenSince, null);
+  assert.equal(history.points.length, 80);
+});
+
+test('Kontan rows a day late are found when Kontan keeps two decimals and Bareksa four', () => {
+  const bareksaValues = [2.3012, 2.3187, 2.3301, 2.3256, 2.3412, 2.3598, 2.3501, 2.3744, 2.3902];
+  const kontanValues = ['2.30', '2.32', '2.33', '2.33', '2.34', '2.36', '2.35', '2.37', '2.39', '2.41'].map(Number);
+  const history = pickNavHistory({
+    bareksa: { nav: plainRows('2026-01-01', bareksaValues), aum: [], units: [] },
+    kontan: { nav: plainRows('2026-01-02', kontanValues) },
+  });
+
+  assert.equal(history.points.at(-1).source, 'kontan');
+  assert.equal(history.points.at(-1).date, '2026-01-10');
+});
+
+test('on a day Bareksa and Kontan both have after the primary history, the four-decimal NAV wins', () => {
+  const history = pickNavHistory({
+    nav: dailyRows('2026-01-01', [2.0001, 2.0099, 2.0195]),
+    bareksa: { nav: [{ date: '2026-01-04', nav: 2.0638 }], aum: [], units: [] },
+    kontan: { nav: [{ date: '2026-01-04', nav: 2.1 }] },
+  });
+
+  assert.equal(history.points.at(-1).value, 2.0638);
+  assert.equal(history.points.at(-1).source, 'bareksa');
+});
