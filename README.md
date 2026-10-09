@@ -341,7 +341,7 @@ All requests go to `https://www.bareksa.com` with the header `X-Requested-With: 
   3. Click it. A small window opens (a public page cannot call localhost directly, so the two windows talk with `postMessage`). The tab asks Bareksa for each fund's NAV, 2 at a time, and sends each answer to the receiver, which merges the rows by date into `data/bareksa/nav/<bareksa_id>.csv`.
   4. When the button says "done", press Ctrl+C in the terminal, commit `data/bareksa/nav/`, and push.
 
-  A fund with a stored NAV file is asked from 30 days before its last stored row, to catch corrections; a fund with none gets its whole history. To load the full history of a fund that CI started with only a year, delete its NAV file first. The receiver serves only its own host name and accepts a save only from its own page as JSON. If the tab is not logged in, the sync stops and the button counts the failure.
+  A fund with a stored NAV file is asked from 30 days before its last stored row, to catch corrections; a fund with none, or whose stored NAV starts more than 30 days after its launch date (as when CI started it with only a year), gets its whole history. The receiver serves only its own host name and accepts a save only from its own page as JSON. If the tab is not logged in, the sync stops and the button counts the failure.
 - **Advanced alternative: a copied cookie.** `scrapers/bareksa.js` still accepts a login cookie in `BAREKSA_COOKIE`. Copy the whole value of the `cookie` request header from DevTools (Network tab, any request to `www.bareksa.com`) and keep the quotes, because the value has spaces and semicolons:
 
   ```bash

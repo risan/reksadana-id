@@ -139,14 +139,26 @@ const daysBefore = (isoDate, days) => {
   return date.toISOString().slice(0, 10);
 };
 
-// One [id, startDate] per fund; a fund with no stored NAV gets a null start date, which asks for its full history.
+// One [id, startDate] per fund. A null start date asks for the full history: for a fund with no stored NAV, and
+// for one whose stored NAV starts well after its launch, because the daily CI run only fetches the last year.
+export const syncStartDate = (rows, launchDate) => {
+  const firstDate = rows[0]?.[0];
+  const lastDate = rows.at(-1)?.[0];
+
+  if (!lastDate || (launchDate && daysBefore(firstDate, OVERLAP_DAYS) > launchDate)) {
+    return null;
+  }
+
+  return daysBefore(lastDate, OVERLAP_DAYS);
+};
+
 const listFunds = async () => {
   const funds = await readCsvRecords(path.join(DATA_DIR, 'funds.csv'));
 
-  return Promise.all(funds.map(async ({ bareksa_id: id }) => {
-    const lastDate = (await readCsvRows(path.join(NAV_DIR, `${id}.csv`))).at(-1)?.[0];
+  return Promise.all(funds.map(async ({ bareksa_id: id, launch_date: launchDate }) => {
+    const rows = await readCsvRows(path.join(NAV_DIR, `${id}.csv`));
 
-    return [id, lastDate ? daysBefore(lastDate, OVERLAP_DAYS) : null];
+    return [id, syncStartDate(rows, launchDate)];
   }));
 };
 
