@@ -96,7 +96,7 @@ test('a fund without values keeps its nulls and yes/no fields', () => {
   assert.equal(decoded.nav_date, null);
   assert.equal(decoded.spark, null);
   assert.equal(decoded.total, null);
-  assert.equal(decoded.sharia, false);
+  assert.equal(decoded.sharia, null);
   assert.equal(decoded.active, false);
 });
 

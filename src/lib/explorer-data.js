@@ -2,21 +2,22 @@
 // Runs at build time and in the browser, so it must not import Node modules.
 //
 // A fund becomes one array, in the order of `columns`. Repeated text (manager, type) becomes an index into a list,
-// yes/no fields become bits of one integer, dates become days since 2000-01-01, returns become whole tenths of a
-// percent, and the sparkline becomes a string with one base-36 digit per sample. Numbers are rounded to what the
-// explorer shows, and the sparkline to 36 steps, so decoding gives back the same text on screen, not the same bits.
+// yes/no fields become bits of one integer (Sharia stays as it is: it can be unknown), dates become days since
+// 2000-01-01, returns become whole tenths of a percent, and the sparkline becomes a string with one base-36 digit
+// per sample. Numbers are rounded to what the explorer shows, and the sparkline to 36 steps, so decoding gives
+// back the same text on screen, not the same bits.
 
 const COLUMNS = [
-  'id', 'name', 'other_names', 'manager', 'type', 'currency', 'aum_currency', 'expense_source', 'flags',
+  'id', 'name', 'other_names', 'manager', 'type', 'currency', 'sharia', 'aum_currency', 'expense_source', 'flags',
   'nav', 'aum', 'min_purchase', 'nav_date', 'aum_date', 'launch_date', 'history_start',
   'return_1m', 'return_3m', 'return_6m', 'return_ytd', 'return_1y', 'return_3y', 'return_5y', 'cagr_3y', 'cagr_5y',
   'drawdown_1y', 'drawdown_3y', 'expense_ratio', 'fee_subscription', 'fee_redemption', 'spark', 'total',
 ];
 
-const PLAIN_FIELDS = new Set(['id', 'name', 'nav', 'aum', 'min_purchase']);
+const PLAIN_FIELDS = new Set(['id', 'name', 'sharia', 'nav', 'aum', 'min_purchase']);
 const DICTIONARY_FIELDS = ['manager', 'type', 'currency', 'aum_currency', 'expense_source'];
 const DATE_FIELDS = new Set(['nav_date', 'aum_date', 'launch_date', 'history_start']);
-const FLAG_FIELDS = ['sharia', 'etf', 'index', 'bibit', 'makmur', 'large_move', 'dividends', 'active'];
+const FLAG_FIELDS = ['etf', 'index', 'bibit', 'makmur', 'large_move', 'dividends', 'active'];
 
 const PERCENT_TENTHS = 1000;
 const PERCENT_HUNDREDTHS = 10000;
