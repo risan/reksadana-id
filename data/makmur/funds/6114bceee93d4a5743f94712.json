@@ -23,56 +23,46 @@
     },
     {
       "instrument": "Bank Deposito Bank Riau sy"
-    },
-    {
-      "instrument": "Bank Deposito Bank Sumselbabel sy"
-    },
-    {
-      "instrument": "Sukuk Ijarah Berkelanjutan II PLN Tahap I Tahun 2017 Seri B"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 5854
-    },
-    {
-      "asset": "Obligasi",
-      "weight": 4146
+      "weight": 10000
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 1,
-  "return5d": 11,
-  "return1m": 47,
-  "return3m": 143,
-  "returnytd": 353,
-  "return1y": 512,
-  "return3y": 1661,
-  "return5y": 2429,
+  "portfolioAsof": 20260930,
+  "return1d": -17,
+  "return5d": -10,
+  "return1m": 25,
+  "return3m": 123,
+  "returnytd": 343,
+  "return1y": 467,
+  "return3y": 1643,
+  "return5y": 2410,
   "return10y": null,
-  "returnsi": 3371,
-  "drawdownytd": -7,
-  "drawdown1y": -7,
-  "drawdown3y": -7,
+  "returnsi": 3358,
+  "drawdownytd": -17,
+  "drawdown1y": -17,
+  "drawdown3y": -17,
   "drawdown5y": -36,
   "drawdownsi": -36,
-  "cagr1y": 512,
-  "cagr3y": 526,
-  "cagr5y": 444,
+  "cagr1y": 467,
+  "cagr3y": 520,
+  "cagr5y": 441,
   "cagr10y": null,
-  "cagrsi": 451,
+  "cagrsi": 448,
   "rating": 0,
   "description": "REKSA DANA SYARIAH AVRIST ADA LIQUID SYARIAH (selanjutnya disebut “AVRIST ADA LIQUID SYARIAH”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. AVRIST ADA LIQUID SYARIAH bertujuan untuk memberikan tingkat pertumbuhan investasi yang relatif stabil dengan risiko minimal sekaligus memperoleh tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat dengan berinvestasi pada Efek-efek yang sesuai dengan Kebijakan Investasi serta tidak bertentangan dengan Prinsip Syariah di Pasar Modal. AVRIST ADA LIQUID SYARIAH akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau Efek Syariah Berpendapatan Tetap yang diperdagangkan di Indonesia yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun dan/atau deposito Syariah; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": true,
-  "lastPrice": 133713,
+  "lastPrice": 133584,
   "expenseRatio": 36,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "avrist-ada-liquid-syariah-3a897d18e6d0",
   "currency": "IDR",
-  "lastAum": 94167900000,
+  "lastAum": 36885720000,
   "factsheet": "https://cache.makmur.id/files/products/6114bceee93d4a5743f94712/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6114bceee93d4a5743f94712/prospectus.pdf",
   "inceptionDate": 20200305,

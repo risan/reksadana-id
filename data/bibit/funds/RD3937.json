@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17865,
+    "exchange_rate": 17830,
     "currency": "USD"
   },
   "is_has_dividend": true,
@@ -60,12 +60,12 @@
   },
   "asset": [
     {
-      "name": "Obligasi Syariah",
-      "percentage": 100
-    },
-    {
       "name": "Pasar Uang Syariah",
       "percentage": 0
+    },
+    {
+      "name": "Obligasi Syariah",
+      "percentage": 100
     }
   ],
   "holding": [
@@ -166,11 +166,11 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.04419891204257376,
-    "3y": 0.004251503114749422,
-    "5y": -0.012851407353614897,
+    "1y": -0.044735886190641394,
+    "3y": 0.004208716574972016,
+    "5y": -0.012815412031174978,
     "10y": null,
-    "all": -0.012931609996815419
+    "all": -0.012954600542711803
   },
   "cagr_adjusted": {
     "1y": -0.025434048729557124,
@@ -205,7 +205,7 @@
   "maxdrawdown": {
     "1y": -0.048813835955731855,
     "3y": -0.05847692161304763,
-    "5y": -0.08805066905339831,
+    "5y": -0.08776779752679098,
     "10y": -0.0966371134226246,
     "all": -0.0966371134226246
   },

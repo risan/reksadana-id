@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17865,
+    "exchange_rate": 17830,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 92.07
+      "percentage": 96.67
     },
     {
       "name": "Instrumen Pasar Uang",
-      "percentage": 7.93
+      "percentage": 3.3
     }
   ],
   "holding": [

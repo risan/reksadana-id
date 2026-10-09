@@ -19,9 +19,6 @@
       "instrument": "ENRG01CN4"
     },
     {
-      "instrument": "FR0059"
-    },
-    {
       "instrument": "IJEE03A"
     },
     {
@@ -29,47 +26,50 @@
     },
     {
       "instrument": "MBMA01ACN4"
+    },
+    {
+      "instrument": "BUMI01ACN5"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9097
+      "weight": 8701
     },
     {
       "asset": "Pasar Uang",
-      "weight": 903
+      "weight": 1299
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 2,
-  "return5d": 14,
-  "return1m": 45,
-  "return3m": 133,
-  "returnytd": 335,
+  "portfolioAsof": 20260930,
+  "return1d": 1,
+  "return5d": 10,
+  "return1m": 44,
+  "return3m": 135,
+  "returnytd": 345,
   "return1y": 463,
-  "return3y": 1547,
-  "return5y": 2476,
-  "return10y": 6655,
-  "returnsi": 8324,
+  "return3y": 1553,
+  "return5y": 2480,
+  "return10y": 6646,
+  "returnsi": 8342,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": 0,
   "drawdown5y": 0,
   "drawdownsi": -4,
   "cagr1y": 463,
-  "cagr3y": 491,
-  "cagr5y": 452,
+  "cagr3y": 493,
+  "cagr5y": 453,
   "cagr10y": 523,
   "cagrsi": 550,
   "rating": 0,
   "description": "REKSA DANA SYAILENDRA DANA KAS (selanjutnya disebut “SYAILENDRA DANA KAS”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. SYAILENDRA DANA KAS bertujuan untuk memperoleh tingkat likuiditas yang tinggi untuk memenuhi kebutuhan uang tunai dalam waktu yang singkat sekaligus memberikan tingkat pendapatan investasi yang menarik. SYAILENDRA DANA KAS akan melakukan investasi dengan portofolio investasi dengan komposisi investasi 100% (seratus persen) dari Nilai Aktiva Bersih pada Instrumen Pasar Uang dalam negeri dan/atau Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, SYAILENDRA DANA KAS akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
   "isSyariah": false,
-  "lastPrice": 183242,
+  "lastPrice": 183422,
   "expenseRatio": 126,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "syailendra-dana-kas-31754fdb122c",
   "currency": "IDR",
   "lastAum": 3260000000000,

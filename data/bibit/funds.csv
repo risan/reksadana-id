@@ -8,7 +8,7 @@ RD5,Aberdeen Indonesia Government Bond Fund,Obligasi,"Aberdeen Standard Investme
 RD6,Aberdeen Indonesia Money Market Fund,Pasar Uang,"Aberdeen Standard Investments Indonesia, PT",IDR,false,false,false,0,1,2004-08-02,2019-11-07,1380.86,79847009358.6,
 RD7,Aberdeen Proteksi Income Plus Xvii,Terproteksi,"Aberdeen Standard Investments Indonesia, PT",IDR,false,false,false,0,1,2018-01-26,2019-11-07,809.72,86180774325.2,34234
 RD11,Aberdeen Syariah Asia Pacific Equity Usd Fund,Saham,"Aberdeen Standard Investments Indonesia, PT",USD,true,false,false,0,1,2016-04-13,2019-03-11,0.9876,10771343.33,
-RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,IDR,false,true,true,1,1,2007-12-18,2026-10-08,59141.0133,7763319217378,0.0021
+RD13,ABF Indonesia Bond Index Fund,Obligasi,PT Bahana TCW Investment Management,IDR,false,true,true,1,1,2007-12-18,2026-10-09,59174.4278,7763319217378,0.0021
 RD14,Archipelago Balance Fund,Campuran,"Shinhan Asset Management Indonesia, PT",IDR,false,false,false,0,1,2013-02-11,2019-01-09,1665.17,54266915274.95,
 RD15,Archipelago Equity Growth,Saham,"Shinhan Asset Management Indonesia, PT",IDR,false,false,false,0,1,2012-08-16,2019-01-09,2177.38,27359046238.98,
 RD17,Archipelago Metro Harmoni Balance Fund,Campuran,"Shinhan Asset Management Indonesia, PT",IDR,false,false,false,0,1,2018-09-19,2019-01-09,1064.0288,26454118105.29,
@@ -32,16 +32,16 @@ RD59,Aurora Dana Ekuitas,Saham,"Aurora Asset Management, PT",IDR,false,false,fal
 RD60,Aurora Equity,Saham,"Aurora Asset Management, PT",IDR,false,false,false,0,1,2018-04-27,2026-10-08,201.3088,77695140119.1,
 RD61,Aurora Likuid,Pasar Uang,"Aurora Asset Management,PT",IDR,false,false,false,0,1,2018-02-19,2020-05-18,1076.5743,213487.49,
 RD63,Aurora Sharia Equity,Saham,"Aurora Asset Management, PT",IDR,true,false,false,0,1,2018-06-29,2026-10-08,317.5607,288755371000.48,
-RD66,Avrist Ada Kas Mutiara,Pasar Uang,PT Avrist Asset Management,IDR,false,false,false,1,1,2017-04-13,2026-10-08,1603.95,441214724106.77,0.0055
-RD68,Avrist Ada Saham Blue Safir Kelas A,Saham,PT Avrist Asset Management,IDR,false,false,false,1,1,2017-04-13,2026-10-08,584.51,16010030264.59,0.0781
+RD66,Avrist Ada Kas Mutiara,Pasar Uang,PT Avrist Asset Management,IDR,false,false,false,1,1,2017-04-13,2026-10-09,1604.19,441214720000,0.0055
+RD68,Avrist Ada Saham Blue Safir Kelas A,Saham,PT Avrist Asset Management,IDR,false,false,false,1,1,2017-04-13,2026-10-09,590.69,16010000000,0.0781
 RD69,Avrist Ada Sukuk Berkah Syariah,Obligasi,PT Avrist Asset Management,IDR,true,false,false,0,1,2017-08-08,2026-10-08,1021.9472,368428321773,
 RD73,Avrist Dana Terproteksi Spirit 1,Terproteksi,PT Avrist Asset Management,IDR,false,false,false,0,1,2018-01-26,2024-02-28,1010.3955,,
 RD74,Avrist Dana Terproteksi Spirit 2,Terproteksi,"Avrist Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2022-06-06,988.1309,18928772878.67,
 RD79,Avrist Dana Terproteksi Sukuk Berkah Syariah,Terproteksi,"Avrist Asset Management, PT",IDR,true,false,false,0,1,2018-06-27,2020-08-14,1017.98,59387364538.52,
 RD80,Avrist Equity - Cross Sectoral,Saham,PT Avrist Asset Management,IDR,false,false,false,0,1,2013-05-16,2026-10-08,680.85,6303226515.36,
 RD81,Avrist Equity Amar Syariah,Saham,PT Avrist Asset Management,IDR,true,false,false,0,1,2013-10-24,2026-05-06,682.38,,0.04
-RD82,Avrist IDX30,Saham,PT Avrist Asset Management,IDR,false,false,true,1,1,2018-01-26,2026-10-08,735.65,64643327748.64,0.0151
-RD83,Avrist Prime Bond Fund,Obligasi,PT Avrist Asset Management,IDR,false,false,false,1,1,2014-05-22,2026-10-08,1982.6,42047086711.73,0.0155
+RD82,Avrist IDX30,Saham,PT Avrist Asset Management,IDR,false,false,true,1,1,2018-01-26,2026-10-09,744.91,64643330000,0.0151
+RD83,Avrist Prime Bond Fund,Obligasi,PT Avrist Asset Management,IDR,false,false,false,1,1,2014-05-22,2026-10-09,1983.43,42047090000,0.0155
 RD85,Axa Citradinamis,Saham,"Axa Investment Managers Select Indonesia, PT",IDR,false,false,false,0,1,2000-01-05,2026-10-08,4417.92,10975166135.61,
 RD86,Axa Maestrodollar,Obligasi,"Axa Investment Managers Select Indonesia, PT",USD,false,false,false,0,1,2008-12-02,2026-10-08,1.9146,1075043.65555,
 RD87,Axa Maestroobligasi Plus,Obligasi,"Axa Investment Managers Select Indonesia, PT",IDR,false,false,false,0,1,2011-09-09,2026-10-08,2212.1259,105693659679.07,
@@ -51,7 +51,7 @@ RD98,Bahana C Optima Protected Fund 78,Terproteksi,PT Bahana TCW Investment Mana
 RD121,Bahana D Optima Protected Fund 55,Terproteksi,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2018-01-26,2023-01-16,1124.828542,145.57,
 RD122,Bahana D Optima Protected Fund 56,Terproteksi,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2018-01-26,2023-01-16,1124.70358,148.69,
 RD123,Bahana Dana Infrastruktur,Campuran,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2000-01-05,2024-10-16,6398.271775,,
-RD124,Bahana Dana Likuid Kelas G,Pasar Uang,PT Bahana TCW Investment Management,IDR,false,false,false,1,1,2004-04-19,2026-10-08,2013.56,4083685376636.73,0.0301
+RD124,Bahana Dana Likuid Kelas G,Pasar Uang,PT Bahana TCW Investment Management,IDR,false,false,false,1,1,2004-04-19,2026-10-09,2013.82,4083685376636.73,0.0301
 RD125,Bahana Dana Prima,Saham,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2018-01-26,2026-10-08,12310.32,43811431742.95,
 RD132,Bahana F Optima Protected Fund 53,Terproteksi,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2018-01-26,2022-01-11,1191.65,,
 RD133,Bahana F Optima Protected Fund 54,Terproteksi,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2018-01-26,2022-01-11,1185.59,,
@@ -61,7 +61,7 @@ RD136,Bahana Income Bond Fund,Obligasi,PT Bahana TCW Investment Management,IDR,f
 RD137,Bahana Income Stream,Obligasi,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2015-06-11,2026-10-08,1472.0226,984225400018.75,
 RD138,Bahana Investasi Prima,Obligasi,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2012-12-14,2024-10-23,2237.912,,
 RD139,Bahana Kombinasi Arjuna,Campuran,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2005-03-30,2018-12-14,3561.104,10314099745.09,
-RD140,Bahana Likuid Plus,Pasar Uang,PT Bahana TCW Investment Management,IDR,false,false,false,1,1,2017-08-30,2026-10-08,1560.4,2142086642219.54,0.0228
+RD140,Bahana Likuid Plus,Pasar Uang,PT Bahana TCW Investment Management,IDR,false,false,false,1,1,2017-08-30,2026-10-09,1560.64,2142086642219.54,0.0228
 RD142,Bahana Liquid USD,Pasar Uang,PT Bahana TCW Investment Management,USD,false,false,false,1,1,2014-08-28,2026-10-08,1.002616,59727658.0816,0.0155
 RD159,Bahana Prime Income Fund,Obligasi,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2015-08-04,2026-10-08,2561.59,1890377156331.19,
 RD160,Bahana Primera Plus Protected Fund 100,Terproteksi,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2018-08-27,2018-10-19,999.62,40675439444.92,
@@ -89,8 +89,8 @@ RD198,Balanced Fund Sucorinvest Anak Pintar,Campuran,PT Sucorinvest Asset Manage
 RD201,Batavia Dana Dinamis,Campuran,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2002-06-04,2026-10-08,7313.72,71053107402.35,
 RD202,Batavia Dana Kas Cemerlang,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2018-01-26,2020-04-17,22.5752,,
 RD203,Batavia Dana Kas Gebyar,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2018-01-26,2026-10-08,4390.8356,100055438840.66,
-RD205,Batavia Dana Kas Maxima,Pasar Uang,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,1,1,2007-04-30,2026-10-08,1928.4,13437438074226.9,0.0125
-RD206,Batavia Dana Likuid,Pasar Uang,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,1,1,2014-01-15,2026-10-08,1423.65,129104699667,0.007
+RD205,Batavia Dana Kas Maxima,Pasar Uang,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,1,1,2007-04-30,2026-10-09,1928.66,13437438074226.9,0.0125
+RD206,Batavia Dana Likuid,Pasar Uang,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,1,1,2014-01-15,2026-10-09,1423.81,129104699667,0.007
 RD207,Batavia Dana Obligasi Andalan,Obligasi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2013-11-12,2021-10-18,1944.13,31817,
 RD208,Batavia Dana Obligasi Cemerlang,Obligasi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2014-03-21,2026-10-08,1450.5686,638043073358.62,
 RD209,Batavia Dana Obligasi Gemilang,Obligasi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2015-08-06,2021-11-15,1321.72,17646044,
@@ -98,14 +98,14 @@ RD210,Batavia Dana Obligasi Optimal,Obligasi,"Batavia Prosperindo Aset Manajemen
 RD211,Batavia Dana Obligasi Plus,Obligasi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2012-10-08,2026-10-08,2226.43,12338776440.12,
 RD212,Batavia Dana Obligasi Sejahtera,Obligasi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2015-06-26,2026-10-08,990.83,44964769094.29,
 RD213,Batavia Dana Obligasi Sentosa,Obligasi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2013-10-22,2022-02-07,1070.02,,
-RD214,Batavia Dana Obligasi Ultima,Obligasi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,1,1,2007-04-30,2026-10-08,2878.58,553309667148.95,0.0183
-RD216,Batavia Dana Saham,Saham,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,1,1,2000-01-05,2026-10-08,48456.42,1117894366508.82,0.0492
+RD214,Batavia Dana Obligasi Ultima,Obligasi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,1,1,2007-04-30,2026-10-09,2879.26,553309667148.95,0.0183
+RD216,Batavia Dana Saham,Saham,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,1,1,2000-01-05,2026-10-09,48994.39,1117894366508.82,0.0492
 RD217,Batavia Dana Saham Optimal,Saham,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2006-10-11,2026-10-08,2656.71,178037522962.6,0.0408
-RD218,Batavia Dana Saham Syariah,Saham,PT Batavia Prosperindo Aset Manajemen,IDR,true,false,false,1,1,2007-07-20,2026-10-08,1455.03,25806286057.37,0.0569
+RD218,Batavia Dana Saham Syariah,Saham,PT Batavia Prosperindo Aset Manajemen,IDR,true,false,false,1,1,2007-07-20,2026-10-09,1472.65,25806286057.37,0.0569
 RD219,Batavia Enhanced Equity Strategy,Saham,,IDR,false,false,false,0,1,2016-02-10,2018-10-25,1049.73,654387909.2,
 RD220,Batavia LQ45 Plus,Saham,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,true,0,1,2014-05-02,2026-10-08,701.47,13644054437,
 RD222,Batavia Obligasi Platinum,Obligasi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2018-01-26,2021-05-05,1167.29,445063233221,
-RD223,Batavia Obligasi Negara Indonesia,Obligasi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,1,1,2018-01-26,2026-10-08,1213.03,73805932288,0.0185
+RD223,Batavia Obligasi Negara Indonesia,Obligasi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,1,1,2018-01-26,2026-10-09,1213.64,73805932288,0.0185
 RD230,Batavia Prima Campuran,Campuran,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2011-04-08,2020-03-27,1602.9353,184312244306.63,
 RD231,Batavia Prima Ekspektasi,Campuran,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2009-03-03,2021-09-24,4693.7,,
 RD232,Batavia Prima Obligasi,Obligasi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2018-01-26,2026-10-08,1138.5538,1357042939519.36,
@@ -125,17 +125,17 @@ RD293,Batavia Proteksi Gemilang 16,Terproteksi,PT Batavia Prosperindo Aset Manaj
 RD294,Batavia Proteksi Gemilang 9,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2018-01-26,2026-10-08,1042.9538,156179934172.15,
 RD295,Batavia Proteksi Optimal 9,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2018-01-26,2020-06-23,908.42,611263,
 RD319,Batavia Usd Balanced Asia,Campuran,"Batavia Prosperindo Aset Manajemen, PT",USD,false,false,false,0,1,2010-12-14,2026-10-08,1.2363,20649834.54299,0.0176
-RD322,BNI-AM Dana Lancar Syariah,Pasar Uang,PT BNI Asset Management,IDR,true,false,false,1,1,2013-06-28,2026-10-08,1909.6,85826093433.04,0.0121
-RD323,BNI-AM Dana Likuid Kelas A,Pasar Uang,PT BNI Asset Management,IDR,false,false,false,1,1,2012-12-28,2026-10-08,2060.51,322889589007,0.0049
+RD322,BNI-AM Dana Lancar Syariah,Pasar Uang,PT BNI Asset Management,IDR,true,false,false,1,1,2013-06-28,2026-10-09,1909.83,85826093433.04,0.0121
+RD323,BNI-AM Dana Likuid Kelas A,Pasar Uang,PT BNI Asset Management,IDR,false,false,false,1,1,2012-12-28,2026-10-09,2060.85,322889589007,0.0049
 RD325,BNI-AM Dana Pasar Uang Kemilau,Pasar Uang,PT BNI Asset Management,IDR,false,false,false,0,1,2015-03-19,2026-10-08,2429.19,497280224851,0.0023
 RD326,BNI-AM Dana Pasar Uang Syariah Amerta,Pasar Uang,PT BNI Asset Management,IDR,true,false,false,0,1,2018-01-26,2022-10-05,1051.2644,,
 RD327,BNI-AM Dana Pendapatan Tetap,Obligasi,PT BNI Asset Management,IDR,false,false,false,0,1,2018-01-26,2026-10-08,1588.3151,893631161728.09,
 RD328,BNI-AM Dana Pendapatan Tetap Asana Sentral,Obligasi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2018-09-19,2018-12-14,1042.96,2001408.31,
 RD331,BNI-AM Dana Pendapatan Tetap Nirwasita,Obligasi,PT BNI Asset Management,IDR,false,false,false,0,1,2018-01-26,2026-10-08,1598.63,9207315387,
-RD332,BNI-AM Dana Pendapatan Tetap Syariah Ardhani,Obligasi,PT BNI Asset Management,IDR,true,false,false,1,1,2016-08-18,2026-10-08,1550.83,275282140845,0.0202
-RD334,BNI-AM Dana Saham Inspiring Equity Fund,Saham,PT BNI Asset Management,IDR,false,false,false,1,1,2014-04-08,2026-10-08,798.0225,1024977654911.99,0.0218
+RD332,BNI-AM Dana Pendapatan Tetap Syariah Ardhani,Obligasi,PT BNI Asset Management,IDR,true,false,false,1,1,2016-08-18,2026-10-09,1551.22,275282140845,0.0202
+RD334,BNI-AM Dana Saham Inspiring Equity Fund,Saham,PT BNI Asset Management,IDR,false,false,false,1,1,2014-04-08,2026-10-09,806.753,1024977654911.99,0.0218
 RD336,BNI-AM Dana Terencana,Campuran,PT BNI Asset Management,IDR,false,false,false,0,1,2012-05-28,2021-01-20,1394.24,,0.0539
-RD337,BNI-AM Indeks IDX30,Saham,PT BNI Asset Management,IDR,false,false,true,1,1,2017-12-29,2026-10-08,620.79,876130133756.35,0.0139
+RD337,BNI-AM Indeks IDX30,Saham,PT BNI Asset Management,IDR,false,false,true,1,1,2017-12-29,2026-10-09,628.6,876130133756.35,0.0139
 RD339,BNI-AM Nusantara ETF MSCI Indonesia Equity Index,Saham,PT BNI Asset Management,IDR,false,true,true,0,1,2018-05-24,2025-07-23,1009.6078,,0.0103
 RD354,BNI-AM Proteksi LI,Terproteksi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2020-07-13,1025.93,51268839522.69,
 RD355,BNI-AM Proteksi LII,Terproteksi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2019-12-27,1031.0791,3338421,
@@ -173,21 +173,21 @@ RD405,BNI-AM Proteksi XXXIX,Terproteksi,"BNI Asset Management, PT",IDR,false,fal
 RD406,BNI-AM Proteksi XXXVII,Terproteksi,PT BNI Asset Management,IDR,false,false,false,0,1,2018-01-26,2023-06-13,1162.44,,
 RD407,BNI-AM UGM Progressive Balanced,Campuran,PT BNI Asset Management,IDR,false,false,false,0,1,2016-05-13,2026-10-08,1496.4555,55877849088.45,
 RD408,BNP Paribas Astro,Saham,"BNP Paribas Asset Management, PT",USD,false,false,false,0,1,2014-04-15,2019-10-31,0.8418,449206.02,0.0323
-RD409,BNP Paribas Ekuitas,Saham,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2001-04-10,2026-10-08,15288.41,498730000000,0.0259
+RD409,BNP Paribas Ekuitas,Saham,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2001-04-10,2026-10-09,15444.75,498730000000,0.0259
 RD410,BNP Paribas Equitra,Campuran,PT BNP Paribas Asset Management,IDR,false,false,false,0,1,2005-10-11,2026-10-08,3859.1,34108465543.59,0.0249
-RD412,BNP Paribas Infrastruktur Plus,Saham,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2007-03-16,2026-10-08,2387.55,280170000000,0.0277
+RD412,BNP Paribas Infrastruktur Plus,Saham,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2007-03-16,2026-10-09,2410.54,280170000000,0.0277
 RD413,BNP Paribas Integra,Campuran,"BNP Paribas Asset Management, PT",IDR,false,false,false,0,1,2012-04-03,2019-10-31,1265.27,2454279536.48,0.0338
 RD414,BNP Paribas Kapital VI,Terproteksi,PT BNP Paribas Asset Management,IDR,false,false,false,0,1,2009-07-31,2022-07-26,1115.29,,
 RD415,BNP Paribas Maxi Obligasi,Obligasi,"BNP Paribas Asset Management, PT",IDR,false,false,false,0,1,2011-08-10,2022-11-17,1429.38,0.46,
 RD416,BNP Paribas Maxi Saham,Saham,PT BNP Paribas Asset Management,IDR,false,false,false,0,1,2010-01-29,2026-10-08,1552.38,1108740500666.63,
 RD421,BNP Paribas Obligasi Plus,Obligasi,PT BNP Paribas Asset Management,IDR,false,false,false,0,1,2008-08-26,2023-08-29,2209.87,,
-RD423,BNP Paribas Pesona,Saham,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2000-01-05,2026-10-08,21105.77,226850000000,0.0285
-RD424,BNP Paribas Pesona Syariah,Saham,PT BNP Paribas Asset Management,IDR,true,false,false,1,1,2007-05-08,2026-10-08,2360.53,201710000000,0.0192
+RD423,BNP Paribas Pesona,Saham,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2000-01-05,2026-10-09,21216.19,226850000000,0.0285
+RD424,BNP Paribas Pesona Syariah,Saham,PT BNP Paribas Asset Management,IDR,true,false,false,1,1,2007-05-08,2026-10-09,2368.75,201710000000,0.0192
 RD426,BNP Paribas Prima USD Kelas RK1,Obligasi,PT BNP Paribas Asset Management,USD,false,false,false,1,1,2010-08-10,2026-10-08,1.3269,152130000,0.0122
 RD428,BNP Paribas Proxima,Obligasi,PT BNP Paribas Asset Management,IDR,false,false,false,0,1,2014-09-25,2026-10-08,2320.16,356433294585.28,
-RD429,BNP Paribas Rupiah Plus,Pasar Uang,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2003-10-16,2026-10-08,2629.55,459220000000,0.007
+RD429,BNP Paribas Rupiah Plus,Pasar Uang,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2003-10-16,2026-10-09,2629.88,459220000000,0.007
 RD430,BNP Paribas Selaras IV,Terproteksi,"BNP Paribas Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2019-08-27,1000,105552731,
-RD431,BNP Paribas Solaris,Saham,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2008-05-16,2026-10-08,1591.3,358480000000,0.0493
+RD431,BNP Paribas Solaris,Saham,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2008-05-16,2026-10-09,1612.09,358480000000,0.0493
 RD433,BNP Paribas Star,Saham,"BNP Paribas Asset Management, PT",IDR,false,false,false,0,1,2011-06-16,2019-10-31,1425.79,36673921289.07,0.0296
 RD440,Campuran Victoria Jupiter,Campuran,PT Victoria Manajemen Investasi,IDR,false,false,false,0,1,2018-01-26,2026-10-08,284.9206,74058735171.52,
 RD441,Capital Balanced Fund,Campuran,"Capital Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2026-10-08,1656.65,579565571828,
@@ -225,7 +225,7 @@ RD506,Cipta Prima,Saham,"Ciptadana Asset Management, PT",IDR,false,false,false,0
 RD509,Cipta Proteksi III,Terproteksi,"Ciptadana Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2019-09-27,1098.65,43698781077.1,
 RD517,Cipta Syariah Balance,Campuran,"Ciptadana Asset Management, PT",IDR,true,false,false,0,1,2008-04-21,2026-08-26,1912.95,,
 RD518,Cipta Syariah Equity,Saham,"Ciptadana Asset Management, PT",IDR,true,false,false,0,1,2008-04-21,2026-10-08,1749.71,7368909794.94,
-RD523,Sucorinvest Citra Dana Berimbang,Campuran,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2018-01-26,2026-10-08,2918.56,179135523242,0.0383
+RD523,Sucorinvest Citra Dana Berimbang,Campuran,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2018-01-26,2026-10-09,2920.96,179135523242,0.0383
 RD524,Citragold,Campuran,PT Architas Asset Management Indonesia,IDR,false,false,false,0,1,2006-09-08,2023-07-17,2464.56,,
 RD525,Corfina Amanah Saham Syariah,Saham,"Corfina Capital, PT",IDR,true,false,false,0,1,2018-06-06,2021-07-12,452.2298,,
 RD529,Corfina Dana Kas Gemilang,Pasar Uang,"Corfina Capital, PT",IDR,false,false,false,0,1,2018-01-26,2020-11-04,728.1161,47205024.24,
@@ -249,24 +249,24 @@ RD547,Danakita Proteksi Seri V,Terproteksi,"Danakita Investama, PT",IDR,false,fa
 RD550,Danakita Stabil Pasar Uang,Pasar Uang,"Danakita Investama, PT",IDR,false,false,false,0,1,2018-01-26,2026-10-08,1749.11,53912890134.09,
 RD551,Danamas Dolar,Obligasi,PT Sinarmas Asset Management,USD,false,false,false,0,1,2004-06-02,2026-10-08,2.253528,170098101.36573,0.0135
 RD552,Danamas Fleksi,Campuran,PT Sinarmas Asset Management,IDR,false,false,false,0,1,2005-04-01,2026-10-08,5841.9848,27340633931.92,
-RD553,Danamas Pasti,Obligasi,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2003-09-09,2026-10-08,5378.7193,641000000000,0.028
-RD555,Danamas Rupiah Plus,Pasar Uang,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2006-06-28,2026-10-08,1907.1457,1482000000000,0.0126
-RD556,Danamas Stabil,Obligasi,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2005-03-16,2026-10-08,5344.0196,16866000000000,0.0176
+RD553,Danamas Pasti,Obligasi,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2003-09-09,2026-10-09,5379.4618,641000000000,0.0259
+RD555,Danamas Rupiah Plus,Pasar Uang,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2006-06-28,2026-10-09,1907.3547,1482000000000,0.0203
+RD556,Danamas Stabil,Obligasi,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2005-03-16,2026-10-09,5344.7561,16866000000000,0.0277
 RD557,Danareksa Anggrek Fleksibel,Campuran,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2004-08-19,2026-10-08,3772.94,22104418385.32,
 RD559,Danareksa Gebyar Dana Likuid,Pasar Uang,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2006-12-05,2026-10-08,1820.7695,482877209820.76,
 RD560,Danareksa Gebyar Dana Likuid Ii,Pasar Uang,"BRI Manajemen Investasi, PT",IDR,false,false,false,0,1,2018-01-26,2026-03-03,2366.3476,4991057.27,
 RD561,Danareksa Gebyar Indonesia Ii,Obligasi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2008-04-24,2026-10-08,3143.0616,384951191598.1,
-RD562,BRI Indeks Syariah,Saham,PT BRI Manajemen Investasi,IDR,true,false,true,1,1,2006-04-06,2026-10-08,1711.88,101338277129.89,0.0156
+RD562,BRI Indeks Syariah,Saham,PT BRI Manajemen Investasi,IDR,true,false,true,1,1,2006-04-06,2026-10-09,1735.83,101338277129.89,0.0156
 RD564,Danareksa Mawar,Saham,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2000-01-05,2026-10-08,6588.0325,14796436588.31,
 RD565,Danareksa Mawar Ekuitas Plus,Saham,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2015-04-15,2026-10-08,715.9282,1192096568868.86,
 RD567,Danareksa Mawar Fokus 10,Saham,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2010-03-03,2026-10-08,1166.2886,83426603210.45,
 RD568,Danareksa Mawar Komoditas 10,Saham,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2011-02-17,2026-10-08,735.9109,29464088356.24,
-RD569,BRI Mawar Konsumer 10 Kelas A,Saham,PT BRI Manajemen Investasi,IDR,false,false,false,1,1,2011-02-17,2026-10-08,1237.6827,157474717322.41,0.0477
+RD569,BRI Mawar Konsumer 10 Kelas A,Saham,PT BRI Manajemen Investasi,IDR,false,false,false,1,1,2011-02-17,2026-10-09,1252.7042,157474717322.41,0.0477
 RD570,Danareksa Mawar Rotasi Sektor Strategis,Saham,"Danareksa Investment Management, PT",IDR,false,false,false,0,1,2012-09-27,2019-03-29,1397.8159,9978753286.31,
 RD571,Danareksa Melati Dollar As,Obligasi,"Danareksa Investment Management, PT",USD,false,false,false,0,1,2000-12-04,2018-10-31,0.19065,467693.2,
 RD573,Danareksa Melati Pendapatan Tetap,Obligasi,"Danareksa Investment Management, PT",IDR,false,false,false,0,1,2018-01-26,2022-11-28,1099.07,,
 RD574,Danareksa Melati Pendapatan Tetap Ii,Obligasi,"Danareksa Investment Management, PT",IDR,false,false,false,0,1,2011-03-07,2022-01-31,1380.66,190066015841,
-RD578,BRI Melati Pendapatan Utama,Obligasi,PT BRI Manajemen Investasi,IDR,false,false,false,1,1,2012-09-27,2026-10-08,1977.4805,219990318189.67,0.0166
+RD578,BRI Melati Pendapatan Utama,Obligasi,PT BRI Manajemen Investasi,IDR,false,false,false,1,1,2012-09-27,2026-10-09,1978.9769,219990318189.67,0.0166
 RD579,Danareksa Melati Pendapatan Utama Ii,Obligasi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2018-01-26,2026-10-08,1470.8122,568967104808.05,
 RD580,Danareksa Melati Pendapatan Utama Syariah,Obligasi,"BRI Manajemen Investasi, PT",IDR,true,false,false,0,1,2015-10-23,2024-12-06,1899.3764,900407.54,
 RD581,Danareksa Melati Premium Dollar,Obligasi,PT BRI Manajemen Investasi,USD,false,false,false,0,1,2018-01-26,2026-10-08,1.378462,1904737.05778,
@@ -274,13 +274,13 @@ RD583,Danareksa Pendapatan Prima Plus,Obligasi,PT BRI Manajemen Investasi,IDR,fa
 RD611,Danareksa Proteksi Xvii Dollar,Terproteksi,"Danareksa Investment Management, PT",USD,false,false,false,0,1,2018-01-26,2020-07-29,1.085,1.16715,
 RD613,Danareksa Proteksi Xxi,Terproteksi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2018-01-26,2020-12-29,1025.532,,
 RD614,Danareksa Proteksi Xxii,Terproteksi,"Danareksa Investment Management, PT",IDR,false,false,false,0,1,2018-01-26,2021-05-28,1045.4209,6379367,
-RD618,BRI Seruni Pasar Uang II Kelas A,Pasar Uang,PT BRI Manajemen Investasi,IDR,false,false,false,1,1,2008-02-08,2026-10-08,1922.6143,2576658436020.65,0.0113
-RD619,BRI Seruni Pasar Uang III,Pasar Uang,PT BRI Manajemen Investasi,IDR,false,false,false,1,1,2010-02-17,2026-10-08,1907.987,2082468378752.89,0.0048
-RD620,BRI Seruni Pasar Uang Syariah,Pasar Uang,PT BRI Manajemen Investasi,IDR,true,false,false,1,1,2018-07-25,2026-10-08,1440.4946,1253985645887.11,0.0061
+RD618,BRI Seruni Pasar Uang II Kelas A,Pasar Uang,PT BRI Manajemen Investasi,IDR,false,false,false,1,1,2008-02-08,2026-10-09,1922.8516,2576658436020.65,0.0113
+RD619,BRI Seruni Pasar Uang III,Pasar Uang,PT BRI Manajemen Investasi,IDR,false,false,false,1,1,2010-02-17,2026-10-09,1908.2826,2082468378752.89,0.0048
+RD620,BRI Seruni Pasar Uang Syariah,Pasar Uang,PT BRI Manajemen Investasi,IDR,true,false,false,1,1,2018-07-25,2026-10-09,1440.6988,1253985645887.11,0.0061
 RD621,Danareksa Syariah Berimbang,Campuran,PT BRI Manajemen Investasi,IDR,true,false,false,0,1,2000-12-04,2026-10-08,5982.0146,25683872215.47,
 RD622,Danareksa Syariah Saham,Saham,PT BRI Manajemen Investasi,IDR,true,false,false,0,1,2014-09-19,2026-10-08,701.492,12661894762.74,
 RD629,Eastspring Investment Cash Reserve,Pasar Uang,"Eastspring Investments Indonesia, PT",IDR,false,false,false,0,1,2013-07-04,2019-11-15,1444.87,4981315542686.9,0.0089
-RD630,Eastspring Investments IDR High Grade Kelas A,Obligasi,PT Eastspring Investments Indonesia,IDR,false,false,false,1,1,2013-01-09,2026-10-08,1569.4,7460000000000,0.0218
+RD630,Eastspring Investments IDR High Grade Kelas A,Obligasi,PT Eastspring Investments Indonesia,IDR,false,false,false,1,1,2013-01-09,2026-10-09,1570.94,7460000000000,0.0218
 RD631,Eastspring Investments Value Discovery,Saham,"Eastspring Investments Indonesia, PT",IDR,false,false,false,0,1,2013-05-30,2019-12-19,1268.9,386695995474.11,0.0332
 RD632,Eastspring Investments Yield Discovery,Obligasi,"Eastspring Investments Indonesia, PT",IDR,false,false,false,0,1,2013-05-30,2019-12-19,1511.58,57169279598.52,0.0125
 RD633,Eastspring Syariah Fixed Income Amanah,Obligasi,"Eastspring Investments Indonesia, PT",IDR,true,false,false,0,1,2017-04-18,2019-12-06,1160.93,581455238566.65,0.0116
@@ -353,7 +353,7 @@ RD773,Insight Terproteksi 5,Terproteksi,"Insight Investments Management, PT",IDR
 RD778,Insight Tunas Bangsa (i-next G),Campuran,"Insight Investments Management, PT",IDR,false,false,false,0,1,2014-07-11,2026-07-06,1151.2246,2033986.19,
 RD779,Insight Wealth (i-wealth),Saham,"Insight Investments Management, PT",IDR,false,false,false,0,1,2014-10-16,2026-10-08,721.2496,43960954647.31,
 RD780,Investa Dana Dollar Mandiri,Obligasi,PT Mandiri Manajemen Investasi,USD,false,false,false,0,1,2018-01-26,2026-10-08,1.431803,9699444.28878,
-RD781,BNI-AM ITB Harmoni,Obligasi,PT BNI Asset Management,IDR,false,false,false,1,1,2018-01-26,2026-10-08,1564.6976,63492705418.27,0.0183
+RD781,BNI-AM ITB Harmoni,Obligasi,PT BNI Asset Management,IDR,false,false,false,1,1,2018-01-26,2026-10-09,1565.4676,63492705418.27,0.0183
 RD782,ITB-Niaga,Obligasi,PT Principal Asset Management,IDR,false,false,false,0,1,2018-01-26,2023-12-01,3230.8135,,
 RD787,Kehati Lestari,Obligasi,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2018-01-26,2020-07-07,2299.75,961593561461.35,0.0249
 RD788,Keraton Balance,Campuran,"Minna Padi Aset Manajemen, PT",IDR,false,false,false,0,1,2018-01-26,2026-10-08,2529.9668,13470511626.21,
@@ -375,11 +375,11 @@ RD819,Lautandhana Saham Syariah,Saham,"Lautandhana Investment Management, PT",ID
 RD822,Lippo Dana Prima,Campuran,"Lippo Securities Tbk, PT",IDR,false,false,false,0,1,2012-02-16,2020-04-06,1323.2404,53162721171.14,
 RD823,Lippo Equity Plus,Saham,"Lippo Securities Tbk, PT",IDR,false,false,false,0,1,2015-05-04,2020-04-06,755.9281,21817860774.33,
 RD827,Maestroberimbang,Campuran,PT Architas Asset Management Indonesia,IDR,false,false,false,0,1,2000-01-05,2024-05-20,6018.45,0.15,
-RD830,Majoris Obligasi Utama Indonesia,Obligasi,PT Majoris Asset Management,IDR,false,false,false,1,1,2015-12-01,2026-10-08,1763.8347,30150000000,0.0192
-RD831,Majoris Pasar Uang Indonesia,Pasar Uang,PT Majoris Asset Management,IDR,false,false,false,1,1,2016-04-07,2026-10-08,1645.5296,249390000000,0.0158
-RD832,Majoris Pasar Uang Syariah Indonesia,Pasar Uang,PT Majoris Asset Management,IDR,true,false,false,1,1,2018-01-10,2026-10-08,1497.4296,2660390000000,0.0068
-RD838,Majoris Sukuk Negara Indonesia,Obligasi,PT Majoris Asset Management,IDR,true,false,false,1,1,2017-11-09,2026-10-08,1503.258,263160000000,0.0182
-RD841,Bahana Pendapatan Tetap Makara Prima kelas G,Obligasi,PT Bahana TCW Investment Management,IDR,false,false,false,1,1,2018-01-26,2026-10-08,3484.9573,2683287748392.21,0.02
+RD830,Majoris Obligasi Utama Indonesia,Obligasi,PT Majoris Asset Management,IDR,false,false,false,1,1,2015-12-01,2026-10-09,1763.9843,30150000000,0.0192
+RD831,Majoris Pasar Uang Indonesia,Pasar Uang,PT Majoris Asset Management,IDR,false,false,false,1,1,2016-04-07,2026-10-09,1645.7837,249390000000,0.0158
+RD832,Majoris Pasar Uang Syariah Indonesia,Pasar Uang,PT Majoris Asset Management,IDR,true,false,false,1,1,2018-01-10,2026-10-09,1497.6522,2660390000000,0.0068
+RD838,Majoris Sukuk Negara Indonesia,Obligasi,PT Majoris Asset Management,IDR,true,false,false,1,1,2017-11-09,2026-10-09,1503.6993,263160000000,0.0182
+RD841,Bahana Pendapatan Tetap Makara Prima kelas G,Obligasi,PT Bahana TCW Investment Management,IDR,false,false,false,1,1,2018-01-26,2026-10-09,3485.8197,2683287748392.21,0.02
 RD844,Mandiri Aktif,Campuran,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2012-11-06,2022-10-20,1816.54,,
 RD846,Mandiri Dana Optima,Pasar Uang,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2013-09-18,2020-03-23,1465.887,16461.17,
 RD847,Mandiri Dolar,Terproteksi,"Mandiri Manajemen Investasi, PT",USD,false,false,false,0,1,2018-01-26,2019-03-18,1.00901,3760498.74,
@@ -387,13 +387,13 @@ RD848,Mandiri Dolar 2,Terproteksi,"Mandiri Manajemen Investasi, PT",USD,false,fa
 RD850,Mandiri Dynamic Equity,Saham,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2012-11-06,2022-10-25,693.05,,
 RD851,Mandiri Investa Aktif,Campuran,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2005-04-07,2026-10-08,3773.79,7149883422.21,
 RD852,Mandiri Investa Atraktif,Saham,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2005-09-05,2026-10-08,3244.85,642120313739,0.0255
-RD853,Mandiri Investa Atraktif-Syariah,Saham,PT Mandiri Manajemen Investasi,IDR,true,false,false,1,1,2018-01-26,2026-10-08,847.33,79821009233.17,0.0422
+RD853,Mandiri Investa Atraktif-Syariah,Saham,PT Mandiri Manajemen Investasi,IDR,true,false,false,1,1,2018-01-26,2026-10-09,854.9,79821009233.17,0.0422
 RD854,Mandiri Investa Capital Protected Dollar Fund,Terproteksi,"Mandiri Manajemen Investasi, PT",USD,false,false,false,0,1,2018-09-19,2018-11-19,1.02704,3899124.6,
 RD856,Mandiri Investa Cerdas Bangsa,Saham,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2008-07-16,2026-10-08,1840.67,737204053015.89,0.0136
 RD857,Mandiri Investa Dana Obligasi Seri II,Obligasi,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2018-01-26,2026-10-08,1681.2,227032131713.35,0.0193
 RD858,Mandiri Investa Dana Pendapatan Optimal,Obligasi,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2018-01-26,2022-01-28,2219.25,42746,
 RD859,Mandiri Investa Dana Pendapatan Optimal Seri 2,Obligasi,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2010-12-15,2022-02-03,1083.65,163999517294,
-RD860,Mandiri Investa Dana Syariah Kelas A,Obligasi,PT Mandiri Manajemen Investasi,IDR,true,false,false,1,1,2009-02-11,2026-10-08,4715.63,206983248886.51,0.0174
+RD860,Mandiri Investa Dana Syariah Kelas A,Obligasi,PT Mandiri Manajemen Investasi,IDR,true,false,false,1,1,2009-02-11,2026-10-09,4716.03,206983248886.51,0.0174
 RD862,Mandiri Investa Dynamic Balance Strategy,Campuran,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2018-01-26,2019-03-04,1290.24,11016648406,
 RD863,Mandiri Investa Ekuitas Dinamis,Saham,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2011-03-22,2026-10-08,775.7,165263642824.28,0.048
 RD864,Mandiri Investa Ekuitas Syariah,Saham,PT Mandiri Manajemen Investasi,IDR,true,false,false,0,1,2013-08-21,2026-09-21,931.32,1.38,
@@ -402,8 +402,8 @@ RD866,Mandiri Investa Equity Dynamo Factor,Saham,PT Mandiri Manajemen Investasi,
 RD867,Mandiri Investa Equity Movement,Saham,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2008-01-04,2026-10-08,1135.31,448349897568.04,0.0067
 RD868,Mandiri Investa Keluarga,Obligasi,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2018-01-26,2021-01-27,1275.84,,
 RD869,Mandiri Investa Obligasi Selaras,Obligasi,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2018-01-26,2021-10-11,1756.46,,
-RD870,Mandiri Investa Pasar Uang Kelas A,Pasar Uang,PT Mandiri Manajemen Investasi,IDR,false,false,false,1,1,2005-03-22,2026-10-08,1856.64,7094967332668.44,0.0126
-RD872,Mandiri Investa Syariah Berimbang Kelas A,Campuran,PT Mandiri Manajemen Investasi,IDR,true,false,false,1,1,2018-01-26,2026-10-08,4189.23,535795768456.74,0.04
+RD870,Mandiri Investa Pasar Uang Kelas A,Pasar Uang,PT Mandiri Manajemen Investasi,IDR,false,false,false,1,1,2005-03-22,2026-10-09,1856.88,7094967332668.44,0.0126
+RD872,Mandiri Investa Syariah Berimbang Kelas A,Campuran,PT Mandiri Manajemen Investasi,IDR,true,false,false,1,1,2018-01-26,2026-10-09,4210.01,535795768456.74,0.04
 RD873,Mandiri Kapital Prima,Pasar Uang,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2013-09-27,2021-09-13,1564.34,60522,
 RD874,Mandiri Kapital Syariah,Pasar Uang,"Mandiri Manajemen Investasi, PT",IDR,true,false,false,0,1,2018-01-26,2021-03-29,1118.97,1538903.75,
 RD875,Mandiri Obligasi Optima,Obligasi,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2018-01-26,2026-10-08,2143.46,21991999930,
@@ -427,9 +427,9 @@ RD941,Mandiri Seri 37,Terproteksi,"Mandiri Manajemen Investasi, PT",IDR,false,fa
 RD942,Mandiri Seri 38,Terproteksi,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2018-01-26,2019-01-03,1031.5708,56630138153.47,
 RD943,Mandiri Seri 41,Terproteksi,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2018-09-19,2018-12-19,1003.77,536967,
 RD981,Manulife Dana Campuran II,Campuran,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2009-01-27,2026-10-08,2567.22,58296338257,0.0255
-RD983,Manulife Dana Kas II Kelas A,Pasar Uang,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2009-01-27,2026-10-08,1937.1,2316928001800.56,0.0101
-RD984,Manulife Dana Kas Syariah,Pasar Uang,PT Manulife Aset Manajemen Indonesia,IDR,true,false,false,1,1,2018-09-03,2026-10-08,1374.49,255175127672.26,0.0092
-RD985,Manulife Dana Saham Kelas A,Saham,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2003-08-04,2026-10-08,7862.26,1811924419337.11,0.0347
+RD983,Manulife Dana Kas II Kelas A,Pasar Uang,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2009-01-27,2026-10-09,1937.39,2316928001800.56,0.0101
+RD984,Manulife Dana Kas Syariah,Pasar Uang,PT Manulife Aset Manajemen Indonesia,IDR,true,false,false,1,1,2018-09-03,2026-10-09,1374.67,255175127672.26,0.0092
+RD985,Manulife Dana Saham Kelas A,Saham,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2003-08-04,2026-10-09,7937.95,1811924419337.11,0.0347
 RD986,Manulife Dana Saham Utama,Saham,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2015-11-12,2026-10-08,1287.96,1392857428933.78,
 RD987,Manulife Dana Stabil Berimbang,Campuran,"Manulife Aset Manajemen Indonesia, PT",IDR,false,false,false,0,1,2018-09-19,2018-12-19,1907.62,2220298634,0.03
 RD988,Manulife Dana Tetap Pemerintah,Obligasi,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2007-10-05,2026-10-08,3195.22,146597375748,0.0249
@@ -438,13 +438,13 @@ RD990,Manulife Dana Tumbuh Berimbang,Campuran,PT Manulife Aset Manajemen Indones
 RD991,Manulife Greater Indonesia Fund,Saham,PT Manulife Aset Manajemen Indonesia,USD,false,false,false,0,1,2018-01-26,2026-10-08,0.7459,23169263.48507,0.03
 RD992,Manulife Indonesia Money Market Fund,Pasar Uang,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2008-05-16,2026-10-08,2107.45,1126672020713.14,
 RD993,Manulife Institutional Equity Fund,Saham,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2011-07-26,2026-10-08,1702.8,54172776623.94,0.0404
-RD994,Manulife Obligasi Negara Indonesia II Kelas A,Obligasi,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2009-01-27,2026-10-08,3106.35,1958889904557.54,0.0206
+RD994,Manulife Obligasi Negara Indonesia II Kelas A,Obligasi,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2009-01-27,2026-10-09,3108.63,1958889904557.54,0.0206
 RD995,Manulife Obligasi Unggulan,Obligasi,"Manulife Aset Manajemen Indonesia, PT",IDR,false,false,false,0,1,2016-08-12,2019-05-28,2717.14,1228774822064.84,0.02
 RD996,Manulife Pendapatan Bulanan II,Obligasi,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2009-01-27,2026-10-08,1125.11,1079952198594,0.0167
-RD998,Manulife Saham Andalan,Saham,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2007-11-02,2026-10-08,1702.31,916536827249,0.0307
+RD998,Manulife Saham Andalan,Saham,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2007-11-02,2026-10-09,1720.49,916536827249,0.0307
 RD999,Manulife Saham Smc Plus,Saham,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2013-02-28,2026-10-08,604.16,48001400155,0.0454
 RD1000,Manulife Saham Strategi Unggulan,Saham,"Manulife Aset Manajemen Indonesia, PT",IDR,false,false,false,0,1,2014-06-30,2019-08-23,965.42,861480798.46,0.02
-RD1001,Manulife Syariah Sektoral Amanah Kelas A,Saham,PT Manulife Aset Manajemen Indonesia,IDR,true,false,false,1,1,2009-01-22,2026-10-08,3211.3,174543334033,0.0318
+RD1001,Manulife Syariah Sektoral Amanah Kelas A,Saham,PT Manulife Aset Manajemen Indonesia,IDR,true,false,false,1,1,2009-01-22,2026-10-09,3234.63,174543334033,0.0318
 RD1002,Manulife Syariah Sukuk Indonesia,Obligasi,PT Manulife Aset Manajemen Indonesia,IDR,true,false,false,0,1,2017-05-15,2026-10-08,1022.07,205368336660.89,0.0182
 RD1003,Manulife USD Fixed Income Kelas A,Obligasi,PT Manulife Aset Manajemen Indonesia,USD,false,false,false,1,1,2013-11-18,2026-10-08,1.2296,87253591.97862,0.0134
 RD1018,Maybank Dana Berimbang,Campuran,"Maybank Asset Management, PT",IDR,false,false,false,0,1,2016-01-04,2021-05-07,1154.8762,1160579350.84,
@@ -638,7 +638,7 @@ RD1355,PNM Pasar Uang Syariah,Pasar Uang,"PNM Investment Management, PT",IDR,tru
 RD1361,Terproteksi BNI-AM Proteksi Spektra IX,Terproteksi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2019-02-27,1023.9811,4650982.58,
 RD1362,Terproteksi BNI-AM Proteksi Spektra VIII,Terproteksi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2023-01-04,1166.682,159081419981.47,
 RD1365,TRIM Syariah Berimbang,Campuran,PT Trimegah Asset Management,IDR,true,false,false,0,1,2018-01-26,2026-10-08,3353.88,140155838791.53,0.0552
-RD1366,TRIM Syariah Saham Kelas A,Saham,PT Trimegah Asset Management,IDR,true,false,false,1,1,2007-01-02,2026-10-08,1604.1,358845952770.84,0.073
+RD1366,TRIM Syariah Saham Kelas A,Saham,PT Trimegah Asset Management,IDR,true,false,false,1,1,2007-01-02,2026-10-09,1617.47,358845952770.84,0.073
 RD1374,Rdt Aberdeen Proteksi Income Plus Xv,Terproteksi,"Aberdeen Standard Investments Indonesia, PT",IDR,false,false,false,0,1,2018-01-26,2019-10-30,938.94,116429391460.1,
 RD1378,Rdt Bniam Proteksi Sriwijaya Seri I,Terproteksi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2023-01-04,1072.4013,54077396109.93,
 RD1379,Rdt Bniam Proteksi Sriwijaya Seri Vi,Terproteksi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2023-01-04,1042.8196,28377648248.81,
@@ -653,12 +653,12 @@ RD1399,RDT. Sucorinvest Proteksi 4,Terproteksi,PT Sucorinvest Asset Management,I
 RD1403,Recapital Proteksi Viii,Terproteksi,"Recapital Asset Management, PT",IDR,false,false,false,0,1,2018-09-05,2018-10-30,979.12813,4374077.03,
 RD1404,Archipelago Supreme Balance Fund,Campuran,"Shinhan Asset Management Indonesia, PT",IDR,false,false,false,0,1,2018-09-19,2019-01-09,1223.45,10561924626.14,
 RD1406,Bahana Pendapatan Tetap Utama 2,Obligasi,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2018-01-26,2026-10-08,6885.39,12863926489,
-RD1409,BNI-AM Dana Pendapatan Tetap Makara Investasi,Obligasi,PT BNI Asset Management,IDR,false,false,false,1,1,2018-01-26,2026-10-08,1209.5972,165219295097.98,0.0174
+RD1409,BNI-AM Dana Pendapatan Tetap Makara Investasi,Obligasi,PT BNI Asset Management,IDR,false,false,false,1,1,2018-01-26,2026-10-09,1210.2625,165219295097.98,0.0174
 RD1410,BNI-AM Dana Pendapatan Tetap Syariah Dompet Dhuafa,Obligasi,PT BNI Asset Management,IDR,true,false,false,0,1,2018-01-26,2026-10-08,4087.5121,10615552917.76,0.0167
 RD1416,Danareksa Pendapatan Tetap Indonesia Sehat,Obligasi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2016-12-02,2026-10-08,1861.8187,32002822304,
 RD1422,Lautandhana Maxima Income Fund,Obligasi,"Lautandhana Investment Management, PT",IDR,false,false,false,0,1,2018-01-26,2026-05-13,1546.9542,0.01,
 RD1429,Pratama Dana Likuid,Pasar Uang,"Pratama Capital Assets Management, PT",IDR,false,false,false,0,1,2018-01-26,2020-03-06,1095.4563,381939648.73,
-RD1436,Sucorinvest Bond Fund,Obligasi,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2016-12-08,2026-10-08,1701.24,382886262767,0.0149
+RD1436,Sucorinvest Bond Fund,Obligasi,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2016-12-08,2026-10-09,1702.3,382886262767,0.0149
 RD1438,Berbasis Sukuk Oso Celebes Syariah Sukuk,Obligasi,"OSO Manajemen Investasi, PT",IDR,true,false,false,0,1,2018-01-26,2020-06-30,1094.5597,939828.06,
 RD1439,Indosurya Hepi Ekuitas Global Syariah Usd,Reksadana Global,"Indosurya Asset Management, PT",USD,true,false,false,0,1,2018-01-26,2020-05-08,1.0206,,
 RD1440,Maybank Money Market Fund 2,Pasar Uang,"Maybank Asset Management, PT",IDR,true,false,false,0,1,2018-01-26,2026-10-08,1549.58,15356734127.24,
@@ -688,20 +688,20 @@ RD1534,Sam Sukuk Syariah Berkembang,Obligasi,"Samuel Aset Manajemen, PT",IDR,tru
 RD1535,Sam Sukuk Syariah Sejahtera,Obligasi,"Samuel Aset Manajemen, PT",IDR,true,false,false,0,1,2010-02-11,2026-10-08,2403.3001,47639840301.57,
 RD1536,Sam Syariah Berimbang,Campuran,"Samuel Aset Manajemen, PT",IDR,true,false,false,0,1,2010-02-11,2026-10-08,1039.3511,8835593614.15,
 RD1537,Samuel Dana Obligasi Terproteksi,Terproteksi,"Samuel Aset Manajemen, PT",IDR,false,false,false,0,1,2018-01-26,2022-10-13,25.5439,0.02,
-RD1538,Schroder 90 Plus Equity Fund,Saham,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2010-04-22,2026-10-08,1761.5,352392943780,0.0299
-RD1539,Schroder Dana Andalan II,Obligasi,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2008-11-04,2026-10-08,1095.43,193281124758,0.0152
+RD1538,Schroder 90 Plus Equity Fund,Saham,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2010-04-22,2026-10-09,1769.29,352392943780,0.0299
+RD1539,Schroder Dana Andalan II,Obligasi,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2008-11-04,2026-10-09,1095.72,193281124758,0.0152
 RD1540,Schroder Dana Campuran Progresif,Campuran,PT Schroder Investment Management Indonesia,IDR,false,false,false,0,1,2011-10-11,2023-08-30,2241.83,,
-RD1541,Schroder Dana Istimewa,Saham,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2004-12-28,2026-10-08,5950.23,267402872175,0.0257
+RD1541,Schroder Dana Istimewa,Saham,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2004-12-28,2026-10-09,6009.23,267402872175,0.0257
 RD1542,Schroder Dana Kombinasi,Campuran,PT Schroder Investment Management Indonesia,IDR,false,false,false,0,1,2004-12-28,2026-10-08,4518.32,243323054342,0.0222
-RD1543,Schroder Dana Likuid,Pasar Uang,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2004-06-10,2026-10-08,1724.79,528454342735,0.0122
-RD1544,Schroder Dana Mantap Plus II,Obligasi,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2007-01-30,2026-10-08,2766.48,741058500457,0.015
+RD1543,Schroder Dana Likuid,Pasar Uang,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2004-06-10,2026-10-09,1725.03,528454342735,0.0122
+RD1544,Schroder Dana Mantap Plus II,Obligasi,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2007-01-30,2026-10-09,2767.89,741058500457,0.015
 RD1545,Schroder Dana Obligasi Mantap,Obligasi,PT Schroder Investment Management Indonesia,IDR,false,false,false,0,1,2011-10-11,2023-08-30,2066.34,,
 RD1546,Schroder Dana Obligasi Utama,Obligasi,PT Schroder Investment Management Indonesia,IDR,false,false,false,0,1,2014-10-21,2023-08-25,1744.23,,
-RD1547,Schroder Dana Prestasi,Saham,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2000-01-05,2026-10-08,37041.33,752389582153,0.0214
-RD1548,Schroder Dana Prestasi Plus,Saham,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2000-09-26,2026-10-08,29485.52,2282414004707,0.0206
+RD1547,Schroder Dana Prestasi,Saham,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2000-01-05,2026-10-09,37438.87,752389582153,0.0214
+RD1548,Schroder Dana Prestasi Plus,Saham,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2000-09-26,2026-10-09,29879.75,2282414004707,0.0206
 RD1549,Schroder Dana Prestasi Prima,Saham,PT Schroder Investment Management Indonesia,IDR,false,false,false,0,1,2015-12-21,2026-10-08,1710.8,26023544,
 RD1550,Schroder Dana Terpadu II,Campuran,PT Schroder Investment Management Indonesia,IDR,false,false,false,0,1,2006-05-19,2026-10-08,4633.59,389415653078.64,0.0198
-RD1551,Schroder Dynamic Balanced Fund,Campuran,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2014-06-11,2026-10-08,1644.87,81430186759,0.0239
+RD1551,Schroder Dynamic Balanced Fund,Campuran,PT Schroder Investment Management Indonesia,IDR,false,false,false,1,1,2014-06-11,2026-10-09,1658.82,81430186759,0.0239
 RD1552,Schroder IDR Bond Fund II,Obligasi,"Schroder Investment Management Indonesia, PT",IDR,false,false,false,0,1,2010-03-08,2022-02-02,1483.86,142417475930,
 RD1553,Schroder IDR Bond Fund III,Obligasi,"Schroder Investment Management Indonesia, PT",IDR,false,false,false,0,1,2011-11-11,2022-02-02,1054.76,114318443742,
 RD1554,Schroder IDR Income Plan I,Terproteksi,"Schroder Investment Management Indonesia, PT",IDR,false,false,false,0,1,2018-01-26,2019-08-27,1008.7906,42155684.98,
@@ -711,7 +711,7 @@ RD1560,Schroder Investa Obligasi,Obligasi,PT Schroder Investment Management Indo
 RD1561,Schroder Money Market Fund,Pasar Uang,"Schroder Investment Management Indonesia, PT",IDR,false,false,false,0,1,2014-05-06,2020-03-23,1391.2605,0.01,
 RD1562,Schroder Prestasi Gebyar Indonesia II,Obligasi,PT Schroder Investment Management Indonesia,IDR,false,false,false,0,1,2008-05-15,2026-10-08,3612.8186,220660608791.25,0.0136
 RD1563,Schroder Providence Fund,Campuran,"Schroder Investment Management Indonesia, PT",IDR,false,false,false,0,1,2009-02-27,2020-01-21,4087.69,192786545612.68,
-RD1564,Schroder Syariah Balanced Fund,Campuran,PT Schroder Investment Management Indonesia,IDR,true,false,false,1,1,2009-05-12,2026-10-08,2882.57,182850570331,0.0247
+RD1564,Schroder Syariah Balanced Fund,Campuran,PT Schroder Investment Management Indonesia,IDR,true,false,false,1,1,2009-05-12,2026-10-09,2899.34,182850570331,0.0247
 RD1565,Schroder USD Bond Fund Kelas A,Obligasi,PT Schroder Investment Management Indonesia,USD,false,false,false,1,1,2007-10-02,2026-10-08,1.699,29464459,0.0129
 RD1567,Semesta Dana Maxima,Campuran,"Semesta Aset Manajemen, PT",IDR,false,false,false,0,1,2004-11-12,2026-10-08,11080.8645,6355422166.79,
 RD1568,Semesta Dana Saham,Saham,"Semesta Aset Manajemen, PT",IDR,false,false,false,0,1,2014-03-21,2026-10-08,1302.8401,10010370921.27,
@@ -722,7 +722,7 @@ RD1585,Setiabudi Dana Pasar Uang,Pasar Uang,"Setiabudi Investment Management, PT
 RD1586,Si Danaobligasi Maxima,Obligasi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2018-09-19,2018-10-23,3701.91,73213436099.24,
 RD1598,Simas Danamas Instrumen Negara,Obligasi,PT Sinarmas Asset Management,IDR,false,false,false,0,1,2007-10-08,2026-10-08,2975.4779,175541182094.31,0.02
 RD1599,Simas Danamas Mantap Plus,Obligasi,PT Sinarmas Asset Management,IDR,false,false,false,0,1,2007-10-02,2026-10-08,4086.7051,134539238689.43,
-RD1600,Simas Danamas Saham,Saham,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2007-10-05,2026-10-08,2015.7263,251000000000,0.0451
+RD1600,Simas Danamas Saham,Saham,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2007-10-05,2026-10-09,2040.0358,251000000000,0.0451
 RD1602,Simas Gemilang 10,Terproteksi,"Sinarmas Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2020-10-05,1019.5022,108037657992.4,
 RD1603,Simas Gemilang 11,Terproteksi,"Sinarmas Asset Management, PT",IDR,false,false,false,0,1,2018-03-09,2019-12-16,1006.8925,171273517530.14,
 RD1607,Simas Gemilang 4,Terproteksi,"Sinarmas Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2019-10-30,1023.3908,107185856812.9,
@@ -732,27 +732,27 @@ RD1613,Simas Liquid Fund,Pasar Uang,PT Sinarmas Asset Management,IDR,false,false
 RD1614,Simas Maju Berkembang,Campuran,"Sinarmas Asset Management, PT",IDR,false,false,false,0,1,2015-12-21,2019-12-20,1240.1677,124056621150.38,
 RD1621,Simas Saham Bertumbuh,Saham,PT Sinarmas Asset Management,IDR,false,false,false,0,1,2015-01-05,2026-10-08,893.2233,9974773307.22,0.04
 RD1624,Simas Saham Maksima,Saham,PT Sinarmas Asset Management,IDR,false,false,false,0,1,2016-09-23,2026-10-08,866.125,16340896158.33,0.05
-RD1628,Simas Saham Unggulan,Saham,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2012-12-19,2026-10-08,1121.0886,483000000000,0.0425
-RD1629,Simas Satu,Campuran,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2001-01-18,2026-10-08,8707.8375,70000000000,0.0355
+RD1628,Simas Saham Unggulan,Saham,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2012-12-19,2026-10-09,1131.8053,483000000000,0.0425
+RD1629,Simas Satu,Campuran,PT Sinarmas Asset Management,IDR,false,false,false,1,1,2001-01-18,2026-10-09,8741.106,70000000000,0.0355
 RD1630,Simas Satu Prima,Campuran,PT Sinarmas Asset Management,IDR,false,false,false,0,1,2012-12-19,2026-10-08,1274.0533,12448411451.01,0.04
-RD1634,Simas Syariah Unggulan,Saham,PT Sinarmas Asset Management,IDR,true,false,false,1,1,2014-08-11,2026-10-08,646.8592,35000000000,0.0455
+RD1634,Simas Syariah Unggulan,Saham,PT Sinarmas Asset Management,IDR,true,false,false,1,1,2014-08-11,2026-10-09,655.111,35000000000,0.0455
 RD1635,Simas Terproteksi 11,Terproteksi,"Sinarmas Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2022-03-07,1017.4431,185843111502.23,
 RD1636,Simas Terproteksi 12,Terproteksi,PT Sinarmas Asset Management	,IDR,false,false,false,0,1,2018-01-26,2018-12-27,1030.9763,,
 RD1640,Simas Terproteksi 5,Terproteksi,PT Sinarmas Asset Management	,IDR,false,false,false,0,1,2018-08-31,2018-09-27,1013.4066,,
 RD1643,Star Balanced,Campuran,"Surya Timur Alam Raya, PT",IDR,false,false,false,0,1,2005-03-22,2026-10-08,6319.3093,111950472052.68,
-RD1653,Sucorinvest Equity Fund Kelas A,Saham,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2012-05-09,2026-10-08,2611.35,1574496517499,0.0483
-RD1655,Sucorinvest Flexi Fund,Campuran,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2006-12-07,2026-10-08,6439.47,115100654045,0.0386
-RD1656,Sucorinvest Maxi Fund,Saham,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2014-10-02,2026-10-08,2585.7,1206087614385,0.0495
-RD1657,Sucorinvest Money Market Fund,Pasar Uang,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2014-10-21,2026-10-08,1996.87,9303349319518,0.0119
-RD1658,Sucorinvest Premium Fund Kelas A,Campuran,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2016-08-15,2026-10-08,1760.2675,909919927158.18,0.0376
+RD1653,Sucorinvest Equity Fund Kelas A,Saham,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2012-05-09,2026-10-09,2623.5,1574496517499,0.0483
+RD1655,Sucorinvest Flexi Fund,Campuran,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2006-12-07,2026-10-09,6468.63,115100654045,0.0386
+RD1656,Sucorinvest Maxi Fund,Saham,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2014-10-02,2026-10-09,2603.08,1206087614385,0.0495
+RD1657,Sucorinvest Money Market Fund,Pasar Uang,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2014-10-21,2026-10-09,1997.2,9303349319518,0.0119
+RD1658,Sucorinvest Premium Fund Kelas A,Campuran,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2016-08-15,2026-10-09,1760.6586,909919927158.18,0.0376
 RD1659,Sucorinvest Proteksi 10,Terproteksi,"Sucorinvest Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2020-12-29,928.009,436.43,
 RD1660,Sucorinvest Proteksi 13,Terproteksi,"Sucorinvest Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2019-11-28,971.3909,7149095.1,
 RD1661,Sucorinvest Proteksi 14,Terproteksi,"Sucorinvest Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2019-07-30,964.5541,8877453.04,
 RD1665,Sucorinvest Proteksi 8,Terproteksi,"Sucorinvest Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2023-01-03,1002.3367,100660332791.46,
 RD1666,Sucorinvest Proteksi USD 1,Terproteksi,PT Sucorinvest Asset Management,USD,false,false,false,0,1,2018-01-26,2022-01-28,1.0146,,
 RD1667,Sucorinvest Saham Dinamis,Saham,PT Sucorinvest Asset Management,IDR,false,false,false,0,1,2018-01-26,2026-10-08,1118.0936,55770412670.4,
-RD1668,Sucorinvest Sharia Equity Fund,Saham,PT Sucorinvest Asset Management,IDR,true,false,false,1,1,2013-11-11,2026-10-08,1764.23,977154918196,0.0463
-RD1669,Sucorinvest Sharia Money Market Fund,Pasar Uang,PT Sucorinvest Asset Management,IDR,true,false,false,1,1,2018-10-02,2026-10-08,1501.44,6360661623137,0.0174
+RD1668,Sucorinvest Sharia Equity Fund,Saham,PT Sucorinvest Asset Management,IDR,true,false,false,1,1,2013-11-11,2026-10-09,1773.44,977154918196,0.0463
+RD1669,Sucorinvest Sharia Money Market Fund,Pasar Uang,PT Sucorinvest Asset Management,IDR,true,false,false,1,1,2018-10-02,2026-10-09,1501.68,6360661623137,0.0174
 RD1671,Syailendra Balanced Opportunity Fund,Campuran,"Syailendra Capital, PT",IDR,false,false,false,0,1,2008-04-23,2026-10-08,4377.47,1506474411705.01,
 RD1673,Syailendra Capital Protected Fund 10,Terproteksi,"Syailendra Capital, PT",IDR,false,false,false,0,1,2018-01-26,2021-04-29,1021.5915,,
 RD1674,Syailendra Capital Protected Fund 11,Terproteksi,PT Syailendra Capital,IDR,false,false,false,0,1,2018-01-26,2023-07-04,1009.42,246694,
@@ -773,34 +773,34 @@ RD1713,Syailendra Sharia Equity Fund,Saham,"Syailendra Capital, PT",IDR,true,fal
 RD1715,Syailendra Sharia Money Market Fund,Pasar Uang,"Syailendra Capital, PT",IDR,true,false,false,0,1,2017-10-06,2026-10-08,1550.5973,892306363025,
 RD1719,Asia Raya Syariah Taktis Berimbang,Campuran,"Asia Raya Kapital, PT",IDR,true,false,false,0,1,2018-01-26,2021-03-08,1074.1031,47.87,
 RD1720,Avrist Sukuk Income Fund,Obligasi,PT Avrist Asset Management,IDR,true,false,false,0,1,2018-01-26,2026-10-08,1018.19,131193161204.9,
-RD1721,Bahana MES Syariah Fund Kelas G,Obligasi,PT Bahana TCW Investment Management,IDR,true,false,false,1,1,2018-01-26,2026-10-08,1629.18,129033066747.91,0.0248
-RD1725,BNP Paribas Cakra Syariah USD Kelas RK1,Reksadana Global,PT BNP Paribas Asset Management,USD,true,false,false,1,1,2018-01-26,2026-10-07,2.4295,57680000,0.0266
+RD1721,Bahana MES Syariah Fund Kelas G,Obligasi,PT Bahana TCW Investment Management,IDR,true,false,false,1,1,2018-01-26,2026-10-09,1628.72,129033066747.91,0.0248
+RD1725,BNP Paribas Cakra Syariah USD Kelas RK1,Reksadana Global,PT BNP Paribas Asset Management,USD,true,false,false,1,1,2018-01-26,2026-10-08,2.4106,57680000,0.0266
 RD1726,Capital Sharia Equity,Saham,"Capital Asset Management, PT",IDR,true,false,false,0,1,2018-01-26,2026-10-08,730.58,35014809910,
-RD1727,Principal Islamic Asia Pacific Equity Syariah (USD),Reksadana Global,PT Principal Asset Management,USD,true,false,false,0,1,2016-06-02,2026-10-07,1.361604,3114157.49763,
+RD1727,Principal Islamic Asia Pacific Equity Syariah (USD),Reksadana Global,PT Principal Asset Management,USD,true,false,false,0,1,2016-06-02,2026-10-08,1.334908,3114157.49763,
 RD1729,Corfina Investa Saham Syariah,Saham,"Corfina Capital, PT",IDR,true,false,false,0,1,2018-01-26,2024-10-02,207.5009,,
 RD1731,Eastspring Syariah Equity Islamic Asia Pacific Usd,Reksadana Global,"Eastspring Investments Indonesia, PT",USD,true,false,false,0,1,2016-11-01,2020-01-02,1.10352,37665163.20592,
-RD1734,Mandiri Global Sharia Equity Dollar,Reksadana Global,PT Mandiri Manajemen Investasi,USD,true,false,false,0,1,2018-01-26,2026-10-07,1.968386,36482514.68767,
-RD1735,Manulife Saham Syariah Asia Pasifik Dollar AS,Reksadana Global,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,1,1,2016-08-12,2026-10-07,2.0995,355673394.78783,0.0363
+RD1734,Mandiri Global Sharia Equity Dollar,Reksadana Global,PT Mandiri Manajemen Investasi,USD,true,false,false,0,1,2018-01-26,2026-10-08,1.944673,36482514.68767,
+RD1735,Manulife Saham Syariah Asia Pasifik Dollar AS,Reksadana Global,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,1,1,2016-08-12,2026-10-08,2.0638,355673394.78783,0.0363
 RD1740,PNM Sukuk Negara Syariah,Obligasi,"PNM Investment Management, PT",IDR,true,false,false,0,1,2018-01-26,2025-08-01,1067.1228,1067586746.21,
 RD1741,Premier ETF JII,Saham,"Indo Premier Investment Management, PT",IDR,true,true,false,0,1,2013-05-02,2026-10-08,496.8488,24652657358.66,
-RD1743,Schroder Global Sharia Equity Fund USD,Reksadana Global,PT Schroder Investment Management Indonesia,USD,true,false,false,1,1,2016-02-23,2026-10-07,2.27,30523728,0.0198
+RD1743,Schroder Global Sharia Equity Fund USD,Reksadana Global,PT Schroder Investment Management Indonesia,USD,true,false,false,1,1,2016-02-23,2026-10-08,2.2487,30523728,0.0198
 RD1747,Terprokteksi Avrist Protected Fund I,Terproteksi,"Avrist Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2019-10-14,1000.28,2434626781.47,
 RD1753,Tf Super Maxxi,Saham,"Treasure Fund Investama, PT",IDR,false,false,false,0,1,2018-01-26,2026-10-08,212.9036,186953103044.85,
 RD1754,TRAM Alpha,Campuran,PT Trimegah Asset Management,IDR,false,false,false,0,1,2013-05-02,2026-10-08,1600.79,118502107016,0.0446
-RD1755,TRAM Consumption Plus Kelas A,Saham,PT Trimegah Asset Management,IDR,false,false,false,1,1,2011-05-06,2026-10-08,1796.26,101085219806,0.0443
+RD1755,TRAM Consumption Plus Kelas A,Saham,PT Trimegah Asset Management,IDR,false,false,false,1,1,2011-05-06,2026-10-09,1820.99,101085219806,0.0443
 RD1757,TRAM Pendapatan Tetap USD,Obligasi,PT Trimegah Asset Management,USD,false,false,false,0,1,2011-07-19,2026-10-08,1.3489,579129.09013,
 RD1758,TRAM Pundi Kas,Pasar Uang,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2014-09-25,2020-07-10,1140.73,34435,
 RD1759,TRAM Pundi Kas 2,Pasar Uang,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2020-03-23,1350.8163,987308800736.62,
 RD1760,TRAM Pundi Kas 3,Pasar Uang,PT Trimegah Asset Management,IDR,false,false,false,0,1,2018-07-06,2023-09-05,1646.3531,2113,
-RD1761,TRAM Strategic Plus Kelas A,Obligasi,PT Trimegah Asset Management,IDR,false,false,false,1,1,2011-10-06,2026-10-08,2112.11,123326726916,0.0197
+RD1761,TRAM Strategic Plus Kelas A,Obligasi,PT Trimegah Asset Management,IDR,false,false,false,1,1,2011-10-06,2026-10-09,2113.85,123326726916,0.0197
 RD1762,TRAM Terproteksi Prima XV,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2020-12-22,974.29,442794,
-RD1763,TRIM Dana Tetap 2 Kelas A,Obligasi,PT Trimegah Asset Management,IDR,false,false,false,1,1,2008-05-22,2026-10-08,3520.28,1517431154849.12,0.0192
-RD1764,TRIM Kapital,Saham,PT Trimegah Asset Management,IDR,false,false,false,1,1,2000-01-05,2026-10-08,9447.3,337365291598.11,0.0742
-RD1765,TRIM Kapital Plus,Saham,PT Trimegah Asset Management,IDR,false,false,false,1,1,2008-05-27,2026-10-08,4145.97,574637801639.65,0.0721
-RD1766,TRIM Kas 2 Kelas A,Pasar Uang,PT Trimegah Asset Management,IDR,false,false,false,1,1,2008-04-14,2026-10-08,2061.9744,8357371511996,0.0072
+RD1763,TRIM Dana Tetap 2 Kelas A,Obligasi,PT Trimegah Asset Management,IDR,false,false,false,1,1,2008-05-22,2026-10-09,3522.67,1517431154849.12,0.0192
+RD1764,TRIM Kapital,Saham,PT Trimegah Asset Management,IDR,false,false,false,1,1,2000-01-05,2026-10-09,9567.48,337365291598.11,0.0742
+RD1765,TRIM Kapital Plus,Saham,PT Trimegah Asset Management,IDR,false,false,false,1,1,2008-05-27,2026-10-09,4198.64,574637801639.65,0.0721
+RD1766,TRIM Kas 2 Kelas A,Pasar Uang,PT Trimegah Asset Management,IDR,false,false,false,1,1,2008-04-14,2026-10-09,2062.2745,8357371511996,0.0072
 RD1767,TRIM Kombinasi 2,Campuran,PT Trimegah Asset Management,IDR,false,false,false,0,1,2006-11-13,2026-10-08,2638.01,79768321975.31,0.0374
 RD1770,Trimegah Bhakti Bangsa,Saham,PT Trimegah Asset Management,IDR,false,false,false,0,1,2015-11-12,2026-10-08,1375.1152,215125001937.69,
-RD1775,Trimegah Kas Syariah,Pasar Uang,PT Trimegah Asset Management,IDR,true,false,false,1,1,2016-12-22,2026-10-08,1549.4115,1986147186075.82,0.0072
+RD1775,Trimegah Kas Syariah,Pasar Uang,PT Trimegah Asset Management,IDR,true,false,false,1,1,2016-12-22,2026-10-09,1549.6371,1986147186075.82,0.0072
 RD1780,Trimegah Pundi Kas Syariah,Pasar Uang,PT Trimegah Asset Management,IDR,true,false,false,0,1,2018-01-26,2022-02-11,2767.879,,
 RD1801,Trimegah Terproteksi Prima XVIII,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2018-01-26,2019-01-07,1000.01,,
 RD1804,Tugu Mandiri Mantap,Obligasi,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2018-09-19,2018-12-12,1138.21,114877.09,
@@ -841,7 +841,7 @@ RD1907,Rhb Money Market Fund 5,Pasar Uang,"RHB Asset Management Indonesia, PT",I
 RD1908,Sucorinvest Proteksi 27,Terproteksi,PT Sucorinvest Asset Management,IDR,false,false,false,0,1,2018-11-28,2021-09-27,1024.4964,,
 RD1909,Maybank Sukuk Syariah,Obligasi,"Maybank Asset Management, PT",IDR,true,false,false,0,1,2018-05-23,2019-06-11,1166.26,64667,
 RD1910,Batavia Proteksi Ultima 23,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2018-11-30,2021-10-21,996.26,439253,
-RD1911,BNP Paribas SRI KEHATI Kelas RK1,Saham,PT BNP Paribas Asset Management,IDR,false,false,true,1,1,2018-11-30,2026-10-08,899.94,2260000000000,0.0165
+RD1911,BNP Paribas SRI KEHATI Kelas RK1,Saham,PT BNP Paribas Asset Management,IDR,false,false,true,1,1,2018-11-30,2026-10-09,908.66,2260000000000,0.0165
 RD1912,Aurora Cpf 3,Terproteksi,,IDR,false,false,false,0,1,2018-12-03,2019-02-20,1010.259,103677779271.07,
 RD1913,Pinnacle Smart Equity Fund,Saham,PT Pinnacle Persada Investama,IDR,false,false,false,0,1,2018-12-03,2020-08-10,989.7889,,
 RD1914,Prospera Balance Return Optimiser,Campuran,"Prospera Asset Management, PT",IDR,false,false,false,0,1,2018-12-03,2026-10-08,1284.6728,208240691849.11,
@@ -976,7 +976,7 @@ RD2042,Bni-am Proteksi Rajata,Terproteksi,PT BNI Asset Management,IDR,false,fals
 RD2043,Principal Cpf Cb Xxxvii,Terproteksi,PT Principal Asset Management,IDR,false,false,false,0,1,2019-03-21,2023-07-04,1068.02,,
 RD2044,Mandiri Seri 172,Terproteksi,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2019-03-21,2021-06-28,1004.434,,
 RD2045,Batavia Sri Kehati Etf,Saham,PT Batavia Prosperindo Aset Manajemen,IDR,false,true,true,0,1,2019-03-22,2026-10-08,381.4965,770827800387.61,
-RD2046,Jarvis Money Market Fund,Pasar Uang,PT Jarvis Aset Manajemen,IDR,false,false,false,1,1,2019-03-22,2026-10-08,1319.46,60022969739.4,0.0061
+RD2046,Jarvis Money Market Fund,Pasar Uang,PT Jarvis Aset Manajemen,IDR,false,false,false,1,1,2019-03-22,2026-10-09,1319.59,60022969739.4,0.0061
 RD2047,Danareksa Proteksi Gebyar 1,Terproteksi,"BRI Manajemen Investasi, PT",IDR,false,false,false,0,1,2019-03-27,2022-02-14,1023.9888,,
 RD2048,Mandiri Seri 171,Terproteksi,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2019-03-27,2022-01-12,1004.1473,,
 RD2050,Danareksa Bumn Fund 2018 Properti 5,Penyertaan Terbatas,"Danareksa Investment Management, PT",IDR,false,false,false,0,1,2019-03-25,2021-02-25,1025.4063,,
@@ -1142,7 +1142,7 @@ RD3166,Mnc Dana Seri 32,Terproteksi,"MNC Asset Management, PT",IDR,false,false,f
 RD3167,Eastspring Proteksi Citadel 2 ,Terproteksi,PT Eastspring Investments Indonesia,IDR,false,false,false,0,1,2019-04-26,2022-06-28,1005.8,,
 RD3168,Gemilang Dana Pasar Uang Arunika,Pasar Uang,PT Gemilang Indonesia Manajemen Investasi,IDR,false,false,false,0,1,2019-04-26,2023-12-12,1141.326,0.07,
 RD3169,Syailendra Capital Protected Fund 32,Terproteksi,"Syailendra Capital, PT",IDR,false,false,false,0,1,2019-04-26,2021-09-28,1005.1539,,
-RD3170,Trimegah Balanced Absolute Strategy Kelas A,Campuran,PT Trimegah Asset Management,IDR,false,false,false,1,1,2019-04-26,2026-10-08,1666.44,456041567387,0.0672
+RD3170,Trimegah Balanced Absolute Strategy Kelas A,Campuran,PT Trimegah Asset Management,IDR,false,false,false,1,1,2019-04-26,2026-10-09,1680.59,456041567387,0.0672
 RD3171,Victoria 10,Terproteksi,PT Victoria Manajemen Investasi,IDR,false,false,false,0,1,2019-04-25,2022-11-24,3668.857,,
 RD3172,Lautandhana Sharia Income Fund,Obligasi,"Lautandhana Investment Management, PT",IDR,true,false,false,0,1,2019-04-30,2026-10-08,1321.07,6612068129.09,
 RD3174,Danareksa Proteksi 62,Terproteksi,"BRI Manajemen Investasi, PT",IDR,false,false,false,0,1,2019-05-02,2022-03-14,1020.8497,163764756162.81,
@@ -1161,11 +1161,11 @@ RD3187,Batavia Proteksi Ultima 17,Terproteksi,PT Batavia Prosperindo Aset Manaje
 RD3188,Post Indo Equity Fund,Saham,"Post Asset Management Indonesia, PT",IDR,false,false,false,0,1,2019-05-15,2020-11-24,432.5234,175050998.08,
 RD3189,Ayers Asia Asset Management Balance Fund,Campuran,"Grow Investments Indonesia, PT",IDR,false,false,false,0,1,2019-05-17,2022-07-07,667.6946,,
 RD3190,Mandiri Seri 178,Terproteksi,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2019-05-22,2022-05-24,999.05,3404855.92,
-RD3191,Jarvis Balanced Fund,Campuran,PT Jarvis Aset Manajemen,IDR,false,false,false,1,1,2019-05-23,2026-10-08,1903.16,100635556432.87,0.061
+RD3191,Jarvis Balanced Fund,Campuran,PT Jarvis Aset Manajemen,IDR,false,false,false,1,1,2019-05-23,2026-10-09,1939.09,100635556432.87,0.061
 RD3192,Panin Dana Obligasi Bersama Tiga,Obligasi,"Panin Asset Management, PT",IDR,false,false,false,0,1,2019-05-23,2026-10-08,1723.2984,293102328064.16,
 RD3193,Insight Terproteksi 46,Terproteksi,"Insight Investments Management, PT",IDR,false,false,false,0,1,2019-05-24,2022-09-22,892.8415,,
-RD3194,Sucorinvest Sharia Balanced Fund ,Campuran,PT Sucorinvest Asset Management,IDR,true,false,false,1,1,2019-05-24,2026-10-08,1271.43,1493653638724,0.0356
-RD3195,Trimegah Fixed Income Plan,Obligasi,PT Trimegah Asset Management,IDR,false,false,false,1,1,2019-05-23,2026-10-08,1180.2642,6955494906930.32,0.0224
+RD3194,Sucorinvest Sharia Balanced Fund ,Campuran,PT Sucorinvest Asset Management,IDR,true,false,false,1,1,2019-05-24,2026-10-09,1271.81,1493653638724,0.0356
+RD3195,Trimegah Fixed Income Plan,Obligasi,PT Trimegah Asset Management,IDR,false,false,false,1,1,2019-05-23,2026-10-09,1180.9506,6955494906930.32,0.0224
 RD3196,Majoris Capital Protected Fund Indonesia Iii,Terproteksi,PT Majoris Asset Management,IDR,false,false,false,0,1,2019-05-24,2020-04-20,1000,,
 RD3197,Bni-am Proteksi Pinewood,Terproteksi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2019-05-27,2022-10-12,1054.5435,12460664.59,
 RD3198,Narada Saham Berkah Syariah,Saham,"Narada Aset Manajemen, PT",IDR,true,false,false,0,1,2019-05-27,2026-10-08,58.5723,11642014224.99,
@@ -1176,7 +1176,7 @@ RD3202,Insight Terproteksi 44,Terproteksi,"Insight Investments Management, PT",I
 RD3203,Insight Terproteksi 45,Terproteksi,"Insight Investments Management, PT",IDR,false,false,false,0,1,2019-05-28,2022-02-21,1000.0084,0.01,
 RD3204,Mandiri Seri 181,Terproteksi,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2019-05-28,2021-03-15,1024.3218,136037858.96,
 RD3205,Bahana Progressive Protected Fund 183,Terproteksi,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2019-05-28,2022-05-25,1000.14,,
-RD3206,Manulife Obligasi Unggulan Kelas A,Obligasi,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2003-11-04,2026-10-08,2609.57,10755718746485.5,0.0147
+RD3206,Manulife Obligasi Unggulan Kelas A,Obligasi,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2003-11-04,2026-10-09,2611.22,10755718746485.5,0.0147
 RD3207,Avrist Proteksi Spirit 9,Terproteksi,PT Avrist Asset Management,IDR,false,false,false,0,1,2019-05-31,2024-02-28,1000.71,,
 RD3209,Dplk Aia Financial,Campuran,,IDR,false,false,false,0,1,2019-11-28,2019-11-28,1046.779,,
 RD3210,Dplk Simas Jiwa,Campuran,,IDR,false,false,false,0,1,2019-11-28,2019-11-28,1784.4491,,
@@ -1396,9 +1396,9 @@ RD3426,Aberdeen Standard Proteksi Pendapatan Berkala,Terproteksi,"Danakita Inves
 RD3427,Aberdeen Standard Proteksi Pendapatan Berkala Usd,Terproteksi,"Danakita Investama, PT",USD,false,false,false,0,1,2019-11-04,2026-10-08,0.806924,16106746.51634,
 RD3428,Aberdeen Standard Syariah Proteksi Insha I,Terproteksi,"Aberdeen Standard Investments Indonesia, PT",IDR,true,false,false,0,1,2019-11-04,2020-12-29,998.39,,
 RD3429,Danareksa Proteksi Sosial 1,Terproteksi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2019-11-11,2026-10-08,1055.12,158061834733.25,
-RD3430,Manulife Saham Syariah Global Dividen Dolar As Kelas A1,Saham,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2019-11-12,2026-10-07,1.2038,330677.15048,
-RD3431,Manulife Saham Syariah Global Dividen Dolar As Kelas A2,Saham,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2019-11-12,2026-10-07,1.1366,37033.62887,
-RD3432,Manulife Saham Syariah Global Dividen Dolar As Kelas A3,Saham,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2019-11-12,2026-10-07,1.2084,4565930.86811,
+RD3430,Manulife Saham Syariah Global Dividen Dolar As Kelas A1,Saham,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2019-11-12,2026-10-08,1.1904,330677.15048,
+RD3431,Manulife Saham Syariah Global Dividen Dolar As Kelas A2,Saham,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2019-11-12,2026-10-08,1.1239,37033.62887,
+RD3432,Manulife Saham Syariah Global Dividen Dolar As Kelas A3,Saham,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2019-11-12,2026-10-08,1.1949,4565930.86811,
 RD3433,Kisi Idx Value30 Etf,,"Korea Investment Management Indonesia, PT",IDR,false,true,true,0,1,2019-11-12,2026-10-08,533.1659,8531054186.5,
 RD3434,Cipta Proteksi Xiii,Terproteksi,"Ciptadana Asset Management, PT",IDR,false,false,false,0,1,2019-11-13,2023-08-01,1132.191,169872965452.18,
 RD3435,Danareksa Proteksi 63,Terproteksi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2019-11-13,2026-10-08,441.15,1111510247.65,
@@ -1413,9 +1413,9 @@ RD3443,Trimegah Terproteksi Futura Xvi,Terproteksi,PT Trimegah Asset Management,
 RD3444,Victoria Dana Kas,Pasar Uang,PT Victoria Manajemen Investasi,IDR,false,false,false,0,1,2019-11-12,2022-10-11,1070.9092,,
 RD3445,Batavia Proteksi Maxima 16,Terproteksi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,0,1,2019-11-15,2026-10-08,1003.18,175535866,
 RD3446,Batavia Proteksi Maxima 12,Terproteksi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,0,1,2019-11-18,2022-10-28,1001.93,,
-RD3447,Eastspring IDR Fixed Income Fund Kelas A,Obligasi,PT Eastspring Investments Indonesia,IDR,false,false,false,1,1,2015-03-17,2026-10-08,1852.22,5430000000000,0.0101
-RD3448,Eastspring Investments Cash Reserve Kelas A,Pasar Uang,PT Eastspring Investments Indonesia,IDR,false,false,false,1,1,2013-07-04,2026-10-08,1789.85,18080000000,0.0204
-RD3449,Eastspring Syariah Money Market Khazanah Kelas A,Pasar Uang,PT Eastspring Investments Indonesia,IDR,true,false,false,1,1,2018-12-27,2026-10-08,1235.26,48360000000,0.0147
+RD3447,Eastspring IDR Fixed Income Fund Kelas A,Obligasi,PT Eastspring Investments Indonesia,IDR,false,false,false,1,1,2015-03-17,2026-10-09,1853.25,5430000000000,0.0101
+RD3448,Eastspring Investments Cash Reserve Kelas A,Pasar Uang,PT Eastspring Investments Indonesia,IDR,false,false,false,1,1,2013-07-04,2026-10-09,1790.09,18080000000,0.0204
+RD3449,Eastspring Syariah Money Market Khazanah Kelas A,Pasar Uang,PT Eastspring Investments Indonesia,IDR,true,false,false,1,1,2018-12-27,2026-10-09,1235.43,48360000000,0.0147
 RD3450,Eastspring Idr Fixed Income Fund Kelas B,Obligasi,PT Eastspring Investments Indonesia,IDR,false,false,false,0,1,2019-11-19,2026-10-08,1491.94,4701410512129.87,
 RD3451,Eastspring Investments Cash Reserve Kelas B,Pasar Uang,"Eastspring Investments Indonesia, PT",IDR,false,false,false,0,1,2019-11-19,2023-03-03,1112.89,155850130.1,
 RD3452,Eastspring Syariah Money Market Khazanah Kelas B,Pasar Uang,PT Eastspring Investments Indonesia,IDR,true,false,false,0,1,2019-11-19,2026-10-08,1265.54,45459130512.84,
@@ -1429,7 +1429,7 @@ RD3460,Cipta Etf Index Lq45,Saham,"Ciptadana Asset Management, PT",IDR,false,tru
 RD3461,Eastspring Syariah Fixed Income Amanah Kelas B,Obligasi,PT Eastspring Investments Indonesia,IDR,true,false,false,0,1,2019-11-27,2026-10-08,1488.65,469297209751,
 RD3462,Trimegah Terproteksi Lestari 11,Terproteksi,PT Trimegah Asset Management,IDR,false,false,false,0,1,2019-11-28,2022-09-26,1001.3435,,
 RD3463,Bahana Protected Fund 170,Terproteksi,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2019-11-28,2023-04-12,1000.25,5065286.09,
-RD3464,Danareksa G20 Sharia Equity Fund Dollar,Saham,PT BRI Manajemen Investasi,USD,true,false,false,0,1,2019-11-27,2026-10-07,1.4812,927784.68399,
+RD3464,Danareksa G20 Sharia Equity Fund Dollar,Saham,PT BRI Manajemen Investasi,USD,true,false,false,0,1,2019-11-27,2026-10-08,1.4727,927784.68399,
 RD3465,Victoria Dana Lancar,Pasar Uang,PT Victoria Manajemen Investasi,IDR,false,false,false,0,1,2019-11-29,2026-10-08,1746.3156,1452219.9,
 RD3466,Avrist Proteksi Spirit 12,Terproteksi,PT Avrist Asset Management,IDR,false,false,false,0,1,2019-11-29,2024-02-28,1004.9105,,
 RD3467,Batavia Proteksi Syariah Misbah 2,Terproteksi,PT Batavia Prosperindo Aset Manajemen,IDR,true,false,false,0,1,2019-11-29,2021-05-10,1031.0072,,
@@ -1445,14 +1445,14 @@ RD3476,Eastspring Syariah Misbah 1,Terproteksi,PT Eastspring Investments Indones
 RD3477,Foster Money Market,Pasar Uang,"Foster Asset Management, PT",IDR,false,false,false,0,1,2019-12-04,2020-12-22,1008.9751,,
 RD3478,Bond Bumn Kresna,Obligasi,"Kresna Asset Management, PT",IDR,false,false,false,0,1,2019-12-05,2020-03-10,1016.3461,330370494.07,
 RD3479,Nusadana Etf Idx Value30,,"Nusadana Investama Indonesia, PT",IDR,false,true,true,0,1,2019-12-05,2024-10-02,178.4186,,
-RD3480,Trimegah Dana Tetap Syariah Kelas A,Obligasi,PT Trimegah Asset Management,IDR,true,false,false,1,1,2019-12-06,2026-10-08,1561.8757,4363818832764.63,0.0122
+RD3480,Trimegah Dana Tetap Syariah Kelas A,Obligasi,PT Trimegah Asset Management,IDR,true,false,false,1,1,2019-12-06,2026-10-09,1562.2005,4363818832764.63,0.0122
 RD3481,Avrist Ada Obligasi Berlian,Obligasi,PT Avrist Asset Management,IDR,false,false,false,0,1,2019-12-06,2026-10-08,1014.47,251386722957,
 RD3482,Bowsprit Township Development Usd,Dana Investasi Real Estate,"Bowsprit Asset Management, PT",USD,false,false,false,0,1,2019-12-06,2024-10-25,1.0014,,
 RD3483,Batavia Proteksi Maxima 10,Terproteksi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,0,1,2019-12-09,2022-11-21,1000.3,,
 RD3484,Batavia Proteksi Maxima 17,Terproteksi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,0,1,2019-12-09,2022-11-21,1002.16,,
 RD3485,Eastspring Proteksi Citadel 5,Terproteksi,PT Eastspring Investments Indonesia,IDR,false,false,false,0,1,2019-12-09,2022-10-26,1009.02,,
 RD3486,Maybank Cpf Xv,Terproteksi,"Maybank Asset Management, PT",IDR,false,false,false,0,1,2019-12-09,2022-12-20,1001.45,,
-RD3487,Eastspring Syariah Fixed Income Amanah Kelas A,Obligasi,PT Eastspring Investments Indonesia,IDR,true,false,false,1,1,2017-04-18,2026-10-08,1578.61,1090000000000,0.0135
+RD3487,Eastspring Syariah Fixed Income Amanah Kelas A,Obligasi,PT Eastspring Investments Indonesia,IDR,true,false,false,1,1,2017-04-18,2026-10-09,1579.05,1090000000000,0.0135
 RD3492,Eastspring Syariah Equity Islamic Asia Pacific Usd Kelas B,Saham,PT Eastspring Investments Indonesia,USD,true,false,false,0,1,2019-12-10,2025-03-12,0.983972,,
 RD3493,Hpam Strategic Protected Iii,Terproteksi,"Henan Putihrai Asset Management, PT",IDR,false,false,false,0,1,2019-12-12,2021-10-12,1018.8765,42.37,
 RD3494,Kisi Equity Fund,Saham,"Korea Investment Management Indonesia, PT",IDR,false,false,false,0,1,2019-12-13,2026-10-08,931.0267,8166490817.12,
@@ -1470,8 +1470,8 @@ RD3505,Jasa Capital Pasar Uang Nusantara,Pasar Uang,"Jasa Capital Asset Manageme
 RD3506,Jasa Capital Pendapatan Stabil,Obligasi,"Jasa Capital Asset Management, PT",IDR,false,false,false,0,1,2019-12-20,2023-02-01,758.7453,158874005.69,
 RD3507,Eastspring Investments Alpha Navigator Kelas A,Saham,PT Eastspring Investments Indonesia,IDR,false,false,false,0,1,2019-12-16,2026-10-08,1209.16,757774150725.36,
 RD3508,Eastspring Investments Idr High Grade Kelas A,Obligasi,"Eastspring Investments Indonesia, PT",IDR,false,false,false,0,1,2019-12-16,2026-02-24,1660.74,9466762406352.58,
-RD3509,Eastspring Investments Value Discovery Kelas A,Saham,PT Eastspring Investments Indonesia,IDR,false,false,false,1,1,2013-05-30,2026-10-08,999.14,368380000000,0.0515
-RD3510,Eastspring Investments Yield Discovery Kelas A,Obligasi,PT Eastspring Investments Indonesia,IDR,false,false,false,1,1,2013-05-30,2026-10-08,1585.41,254570000000,0.0222
+RD3509,Eastspring Investments Value Discovery Kelas A,Saham,PT Eastspring Investments Indonesia,IDR,false,false,false,1,1,2013-05-30,2026-10-09,1009.94,368380000000,0.0515
+RD3510,Eastspring Investments Yield Discovery Kelas A,Obligasi,PT Eastspring Investments Indonesia,IDR,false,false,false,1,1,2013-05-30,2026-10-09,1586.06,254570000000,0.0222
 RD3511,Danareksa Proteksi 65,Terproteksi,"Danareksa Investment Management, PT",IDR,false,false,false,0,1,2019-12-23,2022-12-23,1018.08,,
 RD3512,Mandiri Seri 204,Terproteksi,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2019-12-23,2022-12-09,1000.6346,4143782.15,
 RD3513,Aberdeen Standard Indonesia Government Bond Fund 2,Obligasi,"Aberdeen Standard Investments Indonesia, PT",IDR,false,false,false,0,1,2019-12-26,2021-06-07,1122.96,112316767749.67,
@@ -1484,7 +1484,7 @@ RD3519,Jasa Capital Pendapatan 1,Terproteksi,,IDR,false,false,false,0,1,2020-01-
 RD3520,Setiabudi Dana Ekuitas Alpha,Saham,"Setiabudi Investment Management, PT",IDR,false,false,false,0,1,2020-01-03,2021-12-08,805.8744,16.29,
 RD3521,Gemilang Pendapatan Tetap Indonesia,Obligasi,"Gemilang Indonesia Manajemen Investasi, PT",IDR,false,false,false,0,1,2020-01-03,2020-01-03,1000.1035,,
 RD3522,Jasa Capital Pendapatan Terproteksi 1,Terproteksi,"Jasa Capital Asset Management, PT",IDR,false,false,false,0,1,2020-01-02,2026-10-08,928.8793,98213382477.68,
-RD3523,Eastspring Syariah Equity Islamic Asia Pacific USD Kelas A,Reksadana Global,PT Eastspring Investments Indonesia,USD,true,false,false,1,1,2016-10-28,2026-10-07,2.15763,7830000,0.0677
+RD3523,Eastspring Syariah Equity Islamic Asia Pacific USD Kelas A,Reksadana Global,PT Eastspring Investments Indonesia,USD,true,false,false,1,1,2016-10-28,2026-10-08,2.124065,7830000,0.0677
 RD3524,Pnm Multi Ekspor I,Penyertaan Terbatas,"PNM Investment Management, PT",IDR,false,false,false,0,1,2019-12-27,2020-03-31,1011.42,,
 RD3525,Penyertaan Terbatas Danareksa Bumn Fund 2018 Properti 4,Penyertaan Terbatas,"Danareksa Investment Management, PT",IDR,false,false,false,0,1,2019-09-09,2019-12-30,1012.5975,,
 RD3526,Penyertaan Terbatas Infrastruktur Tirta Banyubiru Mandiri,Penyertaan Terbatas,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2020-01-06,2020-07-02,977.86,,
@@ -1492,7 +1492,7 @@ RD3527,Pnm Multi Ekspor 1,Penyertaan Terbatas,,IDR,false,false,false,0,1,,,,,
 RD3528,Schroder Dana Pasar Uang,Pasar Uang,PT Schroder Investment Management Indonesia,IDR,false,false,false,0,1,2020-01-09,2023-08-25,1089.6,0.34,
 RD3529,Bni-am Etf Msci Esg Leaders Indonesia,Saham,PT BNI Asset Management,IDR,false,true,true,0,1,2020-01-09,2025-09-22,1004.6376,,
 RD3530,Batavia Dana Kas Nusantara,Pasar Uang,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,0,1,2020-01-13,2026-10-08,1298.4024,92655451112.69,
-RD3531,BNP Paribas Greater China Equity Syariah USD Kelas RK1,Reksadana Global,PT BNP Paribas Asset Management,USD,true,false,false,1,1,2020-01-16,2026-10-07,0.8825,234580000,0.0264
+RD3531,BNP Paribas Greater China Equity Syariah USD Kelas RK1,Reksadana Global,PT BNP Paribas Asset Management,USD,true,false,false,1,1,2020-01-16,2026-10-08,0.8685,234580000,0.0264
 RD3532,Rhb Money Market Fund 6,Pasar Uang,"RHB Asset Management Indonesia, PT",IDR,false,false,false,0,1,2020-01-21,2020-05-04,1009.3268,50032666613.09,
 RD3533,Mandiri Pasar Uang Optima 3,Pasar Uang,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2020-01-21,2026-10-08,1296.9943,13364632008.63,
 RD3534,Simas Cemerlang 13,Terproteksi,PT Sinarmas Asset Management,IDR,false,false,false,0,1,2020-01-22,2021-01-21,1018.7576,,
@@ -1503,7 +1503,7 @@ RD3538,Danareksa Proteksi 66,Terproteksi,"Danareksa Investment Management, PT",I
 RD3539,Sam Penyertaan Terbatas Jalan Tol,Penyertaan Terbatas,"Samuel Aset Manajemen, PT",IDR,false,false,false,0,1,2020-01-30,2026-10-08,1168.1537,2610086701152,
 RD3540,Star Etf Sri Kehati,,"Surya Timur Alam Raya, PT",IDR,false,true,true,0,1,2020-01-30,2022-05-20,235.213491,0.01,
 RD3541,Danareksa Proteksi Syariah Misbah Ii,Terproteksi,"Danareksa Investment Management, PT",IDR,true,false,false,0,1,2020-01-30,2021-05-05,1019.7208,1080061706124.1,
-RD3542,BNP Paribas Prima II Kelas RK1,Obligasi,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2007-09-25,2026-10-08,3297.69,627610000000,0.0143
+RD3542,BNP Paribas Prima II Kelas RK1,Obligasi,PT BNP Paribas Asset Management,IDR,false,false,false,1,1,2007-09-25,2026-10-09,3299.26,627610000000,0.0143
 RD3543,Panin Dana Berimbang,Campuran,"Panin Asset Management, PT",IDR,false,false,false,0,1,2020-02-05,2026-10-08,910.99,1112609977063.69,
 RD3544,Majoris Syariah Dana Lestari Universitas Syiah Kuala Indonesia,,PT Majoris Asset Management,IDR,true,false,false,0,1,2020-02-06,2026-10-08,1361.1938,16773242436.17,
 RD3545,Hpam Ultima Protected Ii,Terproteksi,PT Henan Putihrai Asset Management,IDR,false,false,false,0,1,2020-02-07,2023-12-22,895.0727,,
@@ -1522,7 +1522,7 @@ RD3557,Pinnacle Dana Obligasi Prima,Obligasi,"Pinnacle Persada Investama, PT",ID
 RD3558,Insight Terproteksi 48,Terproteksi,"Insight Investments Management, PT",IDR,false,false,false,0,1,2020-02-24,2023-03-16,1002.7603,,
 RD3559,Lautandhana Pasar Uang Optima,Pasar Uang,PT Lautandhana Investment Management,IDR,false,false,false,0,1,2020-02-24,2023-10-27,962.1616,,
 RD3560,Cipta Proteksi Xviii,Terproteksi,"Ciptadana Asset Management, PT",IDR,false,false,false,0,1,2020-02-26,2023-02-27,1001.46,,
-RD3561,Sucorinvest Stable Fund,Obligasi,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2020-02-26,2026-10-08,1468.85,2037402560967,0.0131
+RD3561,Sucorinvest Stable Fund,Obligasi,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2020-02-26,2026-10-09,1469.15,2037402560967,0.0131
 RD3562,Bahana Terproteksi Alhami Syariah,Terproteksi,PT Bahana TCW Investment Management,IDR,true,false,false,0,1,2020-02-27,2021-05-17,1014.0168,,
 RD3563,Danareksa Proteksi Syariah Iii,Terproteksi,"Danareksa Investment Management, PT",IDR,true,false,false,0,1,2020-02-27,2021-05-05,1010.719,204489652532.08,
 RD3564,Mandiri Syariah Seri 217,Terproteksi,PT Mandiri Manajemen Investasi,IDR,true,false,false,0,1,2020-02-27,2021-05-17,1011.5184,,
@@ -1556,7 +1556,7 @@ RD3591,Sucorinvest Dana Sehat Berimbang,,PT Sucorinvest Asset Management,IDR,fal
 RD3592,Bahana Mahmiya Syariah,Terproteksi,PT Bahana TCW Investment Management,IDR,true,false,false,0,1,2020-03-12,2021-05-17,1013.5526,,
 RD3593,Danareksa Proteksi Syariah Misbah Iii,Terproteksi,"Danareksa Investment Management, PT",IDR,true,false,false,0,1,2020-03-12,2021-05-17,1011.9522,,
 RD3594,Mandiri Seri 207,Terproteksi,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2020-03-12,2025-10-21,1005.6612,,
-RD3595,Bahana Likuid Syariah Kelas G,Pasar Uang,PT Bahana TCW Investment Management,IDR,true,false,false,1,1,2020-03-16,2026-10-08,1312.9,910791882628.24,0.017
+RD3595,Bahana Likuid Syariah Kelas G,Pasar Uang,PT Bahana TCW Investment Management,IDR,true,false,false,1,1,2020-03-16,2026-10-09,1313.08,910791882628.24,0.017
 RD3596,Simas Investa Equity,Saham,PT Sinarmas Asset Management,IDR,false,false,false,0,1,2020-03-16,2020-11-11,1017.7979,,
 RD3597,Bahana Likuid Syariah,Pasar Uang,"Bahana TCW Investment Management, PT",IDR,true,false,false,0,1,2020-03-10,2020-03-27,1357.33,245301142085.16,
 RD3598,Cipta Proteksi Xi,Terproteksi,"Lippo Securities Tbk, PT",IDR,false,false,false,0,1,2020-03-16,2021-07-07,1038.6016,,
@@ -1623,7 +1623,7 @@ RD3658,Test17,,,IDR,false,false,false,0,1,2020-04-06,2020-06-30,1057.73494,,
 RD3659,Test18,,,IDR,false,false,false,0,1,2020-04-06,2020-06-30,986.12402,,
 RD3660,Test19,,,IDR,false,false,false,0,1,2020-04-06,2020-06-30,720.68369,,
 RD3661,Insight Terproteksi 54,Terproteksi,"Insight Investments Management, PT",IDR,false,false,false,0,1,2020-04-06,2023-03-31,1000,138499625448.04,
-RD3662,Manulife Obligasi Negara Indonesia II Kelas Income 1,Obligasi,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2020-04-06,2026-10-08,1074.53,2233080785064.58,0.014
+RD3662,Manulife Obligasi Negara Indonesia II Kelas Income 1,Obligasi,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,1,1,2020-04-06,2026-10-09,1075.34,2233080785064.58,0.014
 RD3663,Avrist Ada Liquid Syariah,Pasar Uang,PT Avrist Asset Management,IDR,true,false,false,0,1,2020-03-31,2026-10-08,1338.08,36885723692.68,
 RD3664,Cipta Likuid Fund,Pasar Uang,"Ciptadana Asset Management, PT",IDR,false,false,false,0,1,2020-03-31,2023-01-10,1097.496,,
 RD3665,Cipta Dana Obligasi,Obligasi,"Ciptadana Asset Management, PT",IDR,false,false,false,0,1,2020-03-31,2025-08-07,45.92,439996.11,
@@ -1632,7 +1632,7 @@ RD3667,Cipta Equity Plus,Saham,"Ciptadana Asset Management, PT",IDR,false,false,
 RD3668,Wanteg Equitree Fund,Saham,"Wanteg Asset Management, PT",IDR,false,false,false,0,1,2020-04-06,2026-08-03,1279.3863,10158085802.98,
 RD3669,Bni-am Proteksi Magnolia,Terproteksi,PT BNI Asset Management,IDR,false,false,false,0,1,2020-04-08,2026-10-08,1057.3168,211113642198.48,
 RD3670,Manulife Obligasi Negara Indonesia II,Obligasi,"Manulife Aset Manajemen Indonesia, PT",IDR,false,false,false,0,1,2020-04-03,2020-05-14,2279.65,1972921459104.43,
-RD3672,Bahana Primavera 99 Kelas G,Saham,PT Bahana TCW Investment Management,IDR,false,false,false,1,1,2020-04-13,2026-10-08,1085.6,43951604970.81,0.015
+RD3672,Bahana Primavera 99 Kelas G,Saham,PT Bahana TCW Investment Management,IDR,false,false,false,1,1,2020-04-13,2026-10-09,1097.63,43951604970.81,0.015
 RD3673,Batavia Proteksi Maxima 22,Terproteksi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,0,1,2020-04-14,2023-05-09,1000.5,,
 RD3674,Trimegah Terproteksi Lestari 16,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2020-04-14,2023-02-23,1001.37,194457238715.31,
 RD3675,Bni-am Prioritas Optima,Obligasi,PT BNI Asset Management,IDR,false,false,false,0,1,2020-04-15,2023-05-22,1043.0387,3731357.53,
@@ -1662,7 +1662,7 @@ RD3698,Insight Etf Ftse Indonesia Low Volatility Factor Index,Saham,"Insight Inv
 RD3699,Avrist Proteksi Sukuk Berkah Syariah 4,Terproteksi,"Avrist Asset Management, PT",IDR,true,false,false,0,1,2020-06-11,2025-03-03,1000.6,17153.96,
 RD3700,Bahana Premier Fixed Income Fund,Obligasi,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2020-06-15,2026-10-08,1441.6,88071729856.33,
 RD3701,Bni-am Utama,Obligasi,PT BNI Asset Management,IDR,false,false,false,0,1,2020-06-15,2026-10-08,1423.56,710192851337.73,
-RD3702,Eastspring Syariah Greater China Equity USD Kelas A,Reksadana Global,PT Eastspring Investments Indonesia,USD,true,false,false,1,1,2020-06-15,2026-10-07,0.825971,21260000,0.0438
+RD3702,Eastspring Syariah Greater China Equity USD Kelas A,Reksadana Global,PT Eastspring Investments Indonesia,USD,true,false,false,1,1,2020-06-15,2026-10-08,0.809132,21260000,0.0438
 RD3703,Bni-am Proteksi Jasmine,Terproteksi,PT BNI Asset Management,IDR,false,false,false,0,1,2020-06-17,2026-10-08,1061.3261,211968650813.73,
 RD3704,Bahana Himaya Syariah 1,Terproteksi,PT Bahana TCW Investment Management,IDR,true,false,false,0,1,2020-06-18,2023-03-10,1000.18,,
 RD3705,Trimegah Terproteksi Futura 20,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2020-06-18,2022-08-29,1035.4861,0.01,
@@ -1737,7 +1737,7 @@ RD3773,Bni-am Proteksi Flamboyan,Terproteksi,PT BNI Asset Management,IDR,false,f
 RD3774,Penyertaan Terbatas Shinhan Manufaktur I,Penyertaan Terbatas,"Shinhan Asset Management Indonesia, PT",IDR,false,false,false,0,1,2020-08-18,2024-12-30,1009.8755,,
 RD3775,Rhb Indo-asia Equity Fund,Saham,"Allianz Global Investors Asset Management Indonesia, PT",IDR,false,false,false,0,1,2020-08-11,2026-10-08,1070.02,18887489828.28,
 RD3776,Fwd Asset Money Market Fund,Pasar Uang,PT FWD Asset Management,IDR,false,false,false,0,1,2020-08-11,2023-09-25,1489.1,,
-RD3777,Sam Global Sharia Equity Dollar,Saham,"Samuel Aset Manajemen, PT",USD,true,false,false,0,1,2020-08-19,2026-10-07,1.0872,1190184.36869,
+RD3777,Sam Global Sharia Equity Dollar,Saham,"Samuel Aset Manajemen, PT",USD,true,false,false,0,1,2020-08-19,2026-10-08,1.082,1190184.36869,
 RD3778,Sucorinvest Usd Balanced Fund,,PT Sucorinvest Asset Management,USD,false,false,false,0,1,2020-08-19,2026-10-08,1.5623,2877910.50911,
 RD3779,Trimegah Kas Syariah 3,Pasar Uang,PT Trimegah Asset Management,IDR,true,false,false,0,1,2020-08-19,2026-08-20,1032.7093,,
 RD3780,Bni-am Amanah,Terproteksi,,IDR,false,false,false,0,1,2020-08-24,2020-08-24,1000,,
@@ -1802,7 +1802,7 @@ RD3838,Mega Dana Terproteksi Xxiii,Terproteksi,"Mega Capital Investama, PT",IDR,
 RD3839,Shinhan Proteksi Iv,Terproteksi,"Danapathi Asset Management, PT",IDR,false,false,false,0,1,2020-11-09,2025-11-11,1024.7405,,
 RD3840,Insight Terproteksi 33,Terproteksi,"Insight Investments Management, PT",IDR,false,false,false,0,1,2019-10-03,2021-01-14,0.006,,
 RD3841,Trimegah Terproteksi Futura 21,Terproteksi,PT Trimegah Asset Management,IDR,false,false,false,0,1,2020-11-10,2023-07-25,1000.2589,0.01,
-RD3842,Manulife Saham Syariah Golden Asia Dolar As Kelas A1,Reksadana Global,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2020-11-11,2026-10-07,0.9977,6472855.3603,
+RD3842,Manulife Saham Syariah Golden Asia Dolar As Kelas A1,Reksadana Global,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2020-11-11,2026-10-08,0.9703,6472855.3603,
 RD3843,Pnm Dana Kas Platinum,Pasar Uang,"PNM Investment Management, PT",IDR,false,false,false,0,1,2020-04-14,2024-08-15,1094.6567,,
 RD3844,Bni-am Prioritas Mulberry,Pasar Uang,PT BNI Asset Management,IDR,false,false,false,0,1,2020-11-13,2022-06-22,1010.8821,,
 RD3845,Bni Am Dana Pendapatan Tetap Makara Investasi - Total Return,Obligasi,,IDR,false,false,false,0,1,2020-11-13,2020-11-13,1343.54376,,
@@ -1851,7 +1851,7 @@ RD3887,Penyertaan Terbatas Infrastruktur Tirta Banyubiru Mandiri,Penyertaan Terb
 RD3888,Bahana Pratama Pendapatan Tetap,Obligasi,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2021-01-20,2023-07-04,1013.28,1024616861.65,
 RD3889,Principal Cash Fund Syariah 2,Pasar Uang,PT Principal Asset Management,IDR,true,false,false,0,1,2021-01-21,2026-10-08,1212.91,13274027133.09,
 RD3890,Terproteksi Star Protected Ix,Terproteksi,PT Surya Timur Alam Raya,IDR,false,false,false,0,1,2021-01-27,2023-12-11,978.7444,,
-RD3891,Batavia Global Esg Sharia Equity Usd,Saham,PT Batavia Prosperindo Aset Manajemen,USD,true,false,false,0,1,2021-01-27,2026-10-07,1.4548,10091160.36889,
+RD3891,Batavia Global Esg Sharia Equity Usd,Saham,PT Batavia Prosperindo Aset Manajemen,USD,true,false,false,0,1,2021-01-27,2026-10-08,1.4471,10091160.36889,
 RD3892,Trimegah Terproteksi Futura 22 ,Terproteksi,PT Trimegah Asset Management,IDR,false,false,false,0,1,2021-02-02,2023-12-04,1000.094,,
 RD3893,Star Money Market Ii,Pasar Uang,"Surya Timur Alam Raya, PT",IDR,false,false,false,0,1,2021-02-04,2026-10-08,1764.6161,25743390152.07,
 RD3894,Ashmore Dana Usd Fixed Income,Obligasi,"Ashmore Asset Management Indonesia, PT",USD,false,false,false,0,1,2021-02-08,2026-10-08,0.9433,5776822.5383,
@@ -1861,7 +1861,7 @@ RD3897,Uobam Terproteksi 001,Terproteksi,PT UOB Asset Management Indonesia,IDR,f
 RD3898,Phillip Money Market Fund Syariah Bermanfaat,Pasar Uang,PT Phillip Asset Management,IDR,true,false,false,0,1,2021-02-16,2026-10-08,1210.609,38716256999.11,
 RD3899,Wanteg Diversity Fund,,"Wanteg Asset Management, PT",IDR,false,false,false,0,1,2021-02-17,2026-10-08,1452.0678,15241974181.11,
 RD3900,Star Protected X,Terproteksi,PT Surya Timur Alam Raya,IDR,false,false,false,0,1,2021-02-18,2024-02-12,1000,,
-RD3901,Trimegah FTSE Indonesia Low Volatility Factor Index Kelas A,Saham,PT Trimegah Asset Management,IDR,false,true,true,1,1,2021-02-19,2026-10-08,883.8259,24670722030.08,0.042
+RD3901,Trimegah FTSE Indonesia Low Volatility Factor Index Kelas A,Saham,PT Trimegah Asset Management,IDR,false,true,true,1,1,2021-02-19,2026-10-09,894.944,24670722030.08,0.042
 RD3902,Trimegah Terproteksi Prima 26,Terproteksi,PT Trimegah Asset Management,IDR,false,false,false,0,1,2021-02-22,2023-12-13,1000.0089,20.77,
 RD3903,Insight Priority Fixed Income Fund,Obligasi,"Insight Investments Management, PT",IDR,false,false,false,0,1,2020-07-21,2022-12-12,1014.6651,382684.12,
 RD3904,Insight Renewable Energy Fund - Total Return*,Obligasi,,IDR,false,false,false,0,1,2021-03-01,2021-03-01,1839.435073,,
@@ -1913,7 +1913,7 @@ RD3949,Trimegah Terproteksi Prima 29,Terproteksi,PT Trimegah Asset Management,ID
 RD3950,Batavia Proteksi Maxima 31,Terproteksi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,0,1,2021-05-10,2024-05-14,1003.14,,
 RD3951,Trimegah Obligasi Nusantara 2,Obligasi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2021-05-17,2026-07-14,1043.4727,0.01,
 RD3952,Trimegah Pundi Kas 11,Pasar Uang,PT Trimegah Asset Management,IDR,false,false,false,0,1,2021-05-21,2026-10-08,1244.0279,68052917306,
-RD3953,Star Global Sharia Equity Usd,Saham,"Surya Timur Alam Raya, PT",USD,true,false,false,0,1,2021-05-25,2026-10-07,0.9837,926980.88449,
+RD3953,Star Global Sharia Equity Usd,Saham,"Surya Timur Alam Raya, PT",USD,true,false,false,0,1,2021-05-25,2026-10-08,0.9892,926980.88449,
 RD3954,Bnp Paribas Idx Growth30,Saham,PT BNP Paribas Asset Management,IDR,false,false,true,0,1,2021-05-27,2026-10-08,960.68,231912276581.29,
 RD3955,Manulife Dana Kas Ii Kelas I1,Pasar Uang,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2021-05-28,2026-10-08,1052.99,10300801133.28,
 RD3956,Premier Permata Proteksi,Terproteksi,PT Indo Premier Investment Management,IDR,false,false,false,0,1,2021-05-28,2024-01-09,1006.074,,
@@ -1947,7 +1947,7 @@ RD3983,Bahana Progressive Protected Fund 220,Terproteksi,PT Bahana TCW Investmen
 RD3984,Bni-am Proteksi Cinnamon,Terproteksi,PT BNI Asset Management,IDR,false,false,false,0,1,2021-07-13,2026-10-08,1018.8345,212952394790.1,
 RD3985,Bni-am Proteksi Rosella,Terproteksi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2021-07-14,2026-07-15,1003.3751,0.01,
 RD3986,Syailendra Capital Protected Fund 44,Terproteksi,PT Syailendra Capital,IDR,false,false,false,0,1,2021-07-15,2024-07-08,1015.4575,0.01,
-RD3987,Bahana Us Opportunity Sharia Equity Usd,Saham,PT Bahana TCW Investment Management,USD,true,false,false,0,1,2021-07-15,2026-10-07,0.902137,1323978.76487,
+RD3987,Bahana Us Opportunity Sharia Equity Usd,Saham,PT Bahana TCW Investment Management,USD,true,false,false,0,1,2021-07-15,2026-10-08,0.894838,1323978.76487,
 RD3988,Manulife Brilian Usd Fixed Income Fund,Obligasi,PT Manulife Aset Manajemen Indonesia,USD,false,false,false,0,1,2021-07-19,2023-08-23,0.964,1055.78992,
 RD3989,Bnp Paribas Obligasi Brilian Usd,Obligasi,"BNP Paribas Asset Management, PT",USD,false,false,false,0,1,2021-07-22,2022-02-23,0.972,0.0013,
 RD3990,Mandiri Investa Dana Utama - Total Return*,Obligasi,,IDR,false,false,false,0,1,2021-07-21,2021-07-21,2777.610472,,
@@ -1959,7 +1959,7 @@ RD3995,Trimegah Terproteksi Prima 28,Terproteksi,PT Trimegah Asset Management,ID
 RD3996,Uobam Sustainable Equity Indonesia A,Saham,PT UOB Asset Management Indonesia,IDR,false,false,false,0,1,2021-08-03,2023-11-10,919.56,,
 RD3997,Sucorinvest Sharia Liquid Barokah,Pasar Uang,PT Sucorinvest Asset Management,IDR,true,false,false,0,1,2021-08-05,2026-09-16,1107.4,251633731923.65,
 RD3998,Rdpt Bahana Bumn Fund Iii,Penyertaan Terbatas,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2021-08-12,2022-05-09,1000.3842,,
-RD3999,Manulife Saham Syariah Global Dividen Dolar As Kelas A5,Saham,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2021-08-13,2026-10-07,1.0365,1101315.65423,
+RD3999,Manulife Saham Syariah Global Dividen Dolar As Kelas A5,Saham,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2021-08-13,2026-10-08,1.0249,1101315.65423,
 RD4000,Danareksa Proteksi 79,Terproteksi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2021-08-18,2026-04-16,1000.499,,
 RD4001,Kisi Premier Money Market Fund,Pasar Uang,PT Kisi Asset Management,IDR,false,false,false,0,1,2021-08-19,2023-10-18,989.4353,,
 RD4002,Star Protected Xii,Terproteksi,PT Surya Timur Alam Raya,IDR,false,false,false,0,1,2021-08-19,2024-03-25,1000,,
@@ -1979,7 +1979,7 @@ RD4015,Danareksa Proteksi 78,Terproteksi,PT BRI Manajemen Investasi,IDR,false,fa
 RD4016,Syailendra Capital Protected Fund 45,Terproteksi,"Syailendra Capital, PT",IDR,false,false,false,0,1,2021-09-15,2026-10-08,1016.3135,3082675016732.61,
 RD4017,Ashmore Dana Obligasi Providentia Nusantara,Obligasi,"Ashmore Asset Management Indonesia, PT",IDR,false,false,false,0,1,2021-09-20,2026-10-08,989.76,24548556309,
 RD4018,Bnp Paribas Idx Growth30 Etf,,PT BNP Paribas Asset Management,IDR,false,true,true,0,1,2021-09-20,2024-08-22,590.912252,,
-RD4019,BNP Paribas DJIM Global Technology Titans 50 Syariah USD,Reksadana Global,PT BNP Paribas Asset Management,USD,true,false,true,1,1,2021-09-20,2026-10-07,1.921,117190000,0.0211
+RD4019,BNP Paribas DJIM Global Technology Titans 50 Syariah USD,Reksadana Global,PT BNP Paribas Asset Management,USD,true,false,true,1,1,2021-09-20,2026-10-08,1.8958,117190000,0.0211
 RD4020,Avrist Proteksi Spirit 14,Terproteksi,PT Avrist Asset Management,IDR,false,false,false,0,1,2021-09-23,2024-06-10,1000.37,,
 RD4021,Principal Index Idx30 Kelas O,,PT Principal Asset Management,IDR,false,false,true,0,1,2021-09-24,2024-02-13,1370.23,,
 RD4022,Star Protected Xiii,Terproteksi,"Surya Timur Alam Raya, PT",IDR,false,false,false,0,1,2021-09-24,2025-03-13,1019.280163,,
@@ -2006,7 +2006,7 @@ RD4042,Sucorinvest Sustainability Equity Fund,Saham,PT Sucorinvest Asset Managem
 RD4043,Sucorinvest Proteksi 42,Terproteksi,PT Sucorinvest Asset Management,IDR,false,false,false,0,1,2021-10-29,2024-07-08,1001.44,,
 RD4044,Sucorinvest Monthly Income Fund,Obligasi,PT Sucorinvest Asset Management,IDR,false,false,false,0,1,2021-10-29,2026-10-08,1085.96,3936025677983.09,
 RD4045,Reksadana Terproteksi Panin 22,Terproteksi,"Panin Asset Management, PT",IDR,false,false,false,0,1,2021-10-29,2024-09-11,1000.1203,0.01,
-RD4046,Sucorinvest Sharia Sukuk Fund Kelas A,Obligasi,PT Sucorinvest Asset Management,IDR,true,false,false,1,1,2021-10-29,2026-10-08,1313.17,3200394793945,0.0143
+RD4046,Sucorinvest Sharia Sukuk Fund Kelas A,Obligasi,PT Sucorinvest Asset Management,IDR,true,false,false,1,1,2021-10-29,2026-10-09,1313.44,3200394793945,0.0143
 RD4048,Setiabudi Dana Pasar Uang Likuid,Pasar Uang,"Setiabudi Investment Management, PT",IDR,false,false,false,0,1,2021-11-04,2026-10-08,1100.8484,10779254133.94,
 RD4049,Batavia Saham Cemerlang - Total Return*,Saham,,IDR,false,false,false,0,1,,,,,
 RD4050,Batavia Saham Sejahtera - Total Return*,Saham,,IDR,false,false,false,0,1,,,,,
@@ -2023,7 +2023,7 @@ RD4060,Mega Asset Terproteksi 18,Terproteksi,"Mega Asset Management, PT",IDR,fal
 RD4061,Trimegah Terproteksi Prima 32,Terproteksi,PT Trimegah Asset Management,IDR,false,false,false,0,1,2021-11-25,2024-11-25,995.6535,,
 RD4062,Bmi Indo Proteksi Sinergi 1,Terproteksi,PT Berdikari Manajemen Investasi,IDR,false,false,false,0,1,2021-11-26,2024-05-15,1005.6345,16707001,
 RD4063,Anargya Supergrowth,Obligasi,"Anargya Aset Manajemen, PT",IDR,false,false,false,0,1,2021-11-26,2026-10-08,1210.1051,6028259358.15,
-RD4064,Batavia China Impact Sharia Equity Usd,Saham,PT Batavia Prosperindo Aset Manajemen,USD,true,false,false,0,1,2021-11-29,2026-10-07,0.4935,18797550.84603,
+RD4064,Batavia China Impact Sharia Equity Usd,Saham,PT Batavia Prosperindo Aset Manajemen,USD,true,false,false,0,1,2021-11-29,2026-10-08,0.4836,18797550.84603,
 RD4065,Capital Sharia Optimal Protected Fund 9,Terproteksi,"Capital Asset Management, PT",IDR,true,false,false,0,1,2021-11-30,2022-10-10,1014.5531,,
 RD4066,Sam Cipta Sejahtera Campuran - Total Return*,,,IDR,false,false,false,0,1,,,,,
 RD4067,Sam Dana Cerdas - Total Return*,Saham,,IDR,false,false,false,0,1,,,,,
@@ -2086,7 +2086,7 @@ RD4179,Bni-am Short Duration Bonds Index Kelas I1,,PT BNI Asset Management,IDR,f
 RD4180,Uobam Sustainable Equity Indonesia D,Saham,"UOB Asset Management Indonesia, PT",IDR,false,false,false,0,1,2022-02-11,2026-10-08,815.45,45271831170.06,
 RD4181,Avrist Ada Kas Permata,Saham,PT Avrist Asset Management,IDR,false,false,false,0,1,2022-02-17,2023-10-13,1009.1027,,
 RD4182,Bahana Mes Syariah Fund Kelas A,Saham,PT Bahana TCW Investment Management,IDR,true,false,false,0,1,2022-02-18,2026-10-08,1162.69,587280442.58,
-RD4183,Batavia Technology Sharia Equity USD,Reksadana Global,PT Batavia Prosperindo Aset Manajemen,USD,true,false,false,1,1,2022-02-16,2026-10-07,1.6093,187599767.00638,0.0297
+RD4183,Batavia Technology Sharia Equity USD,Reksadana Global,PT Batavia Prosperindo Aset Manajemen,USD,true,false,false,1,1,2022-02-16,2026-10-08,1.5825,187599767.00638,0.0297
 RD4184,Manulife Obligasi Negara Indonesia Ii Kelas D1,Obligasi,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2022-02-22,2026-10-08,1159.93,1720868957.71,
 RD4185,Bni-am Proteksi Peterseli,Terproteksi,PT BNI Asset Management,IDR,false,false,false,0,1,2022-02-24,2026-10-08,593.4241,11772560484.62,
 RD4187,Trimegah Prima Campuran,Terproteksi,PT Trimegah Asset Management,IDR,false,false,false,0,1,2022-02-25,2026-10-08,1167.8171,17496078193.04,
@@ -2104,7 +2104,7 @@ RD4198,Cipta Proteksi Xxii,Terproteksi,,IDR,false,false,false,0,1,2022-03-30,202
 RD4199,Mandiri Global Sharia Equity Dollar Kelas B,Saham,PT Mandiri Manajemen Investasi,USD,true,false,false,0,1,2022-03-30,2025-12-18,0.813409,,
 RD4200,Star Protected Xvi,Terproteksi,"Surya Timur Alam Raya, PT",IDR,false,false,false,0,1,2022-03-30,2025-04-08,1000.1507,,
 RD4201,Terproteksi Cipta Proteksi Xxii,Terproteksi,"Ciptadana Asset Management, PT",IDR,false,false,false,0,1,2022-03-29,2025-04-08,1021.7147,,
-RD4202,Mandiri Money Market USD,Pasar Uang,PT Mandiri Manajemen Investasi,USD,false,false,false,1,1,2022-03-31,2026-10-08,1.109123,288337025.65504,0.0049
+RD4202,Mandiri Money Market USD,Pasar Uang,PT Mandiri Manajemen Investasi,USD,false,false,false,1,1,2022-03-31,2026-10-09,1.109298,288337025.65504,0.0049
 RD4203,Anargya Superfund Equity Growth,Saham,"Anargya Aset Manajemen, PT",IDR,false,false,false,0,1,2022-04-06,2026-10-08,1682.5362,23494385772.3,
 RD4204,Bni-am Proteksi Rasamala,Terproteksi,PT BNI Asset Management,IDR,false,false,false,0,1,2022-04-07,2026-10-08,1037.3362,2357101719789.03,
 RD4205,Trimegah Terproteksi Dana Berkala 10,Terproteksi,PT Trimegah Asset Management,IDR,false,false,false,0,1,2022-04-07,2025-04-08,1000.6591,,
@@ -2123,7 +2123,7 @@ RD4217,Sequis Liquid Prima Ii,Pasar Uang,"Sequis Aset Manajemen, PT",IDR,false,f
 RD4218,Syailendra Money Market Fund 11,Pasar Uang,"Syailendra Capital, PT",IDR,false,false,false,0,1,2022-04-27,2026-10-08,1118.9976,9237643244.05,
 RD4219,Capital Etf Idx Esg Leaders,,"Capital Asset Management, PT",IDR,false,true,true,0,1,2022-04-28,2026-10-08,78.93399,9349725479.59,
 RD4220,Mega Asset Terproteksi 20,Terproteksi,"Mega Asset Management, PT",IDR,false,false,false,0,1,2022-05-12,2023-01-24,1003.3452,,
-RD4221,Mandiri Indeks FTSE Indonesia ESG Kelas A,Saham,PT Mandiri Manajemen Investasi,IDR,false,false,true,1,1,2022-05-13,2026-10-08,761.23,48637311864.15,0.0222
+RD4221,Mandiri Indeks FTSE Indonesia ESG Kelas A,Saham,PT Mandiri Manajemen Investasi,IDR,false,false,true,1,1,2022-05-13,2026-10-09,771.78,48637311864.15,0.0222
 RD4222,Mandiri Indeks Ftse Indonesia Esg Kelas A,,"Mandiri Manajemen Investasi, PT",IDR,false,false,true,0,1,2022-05-18,2022-06-14,976.91,1441865336.8,
 RD4223,Batavia Proteksi Maxima 39,Terproteksi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,0,1,2022-05-20,2025-03-24,1003.1374,,
 RD4225,Bni-am Proteksi Sakura,Terproteksi,PT BNI Asset Management,IDR,false,false,false,0,1,2022-05-25,2026-10-08,1014.001,303780465295.77,
@@ -2154,11 +2154,11 @@ RD4249,Ashmore Dana Pasar Uang Syariah,Pasar Uang,"Ashmore Asset Management Indo
 RD4250,Avrist Kas Syariah Inara,Pasar Uang,"Avrist Asset Management, PT",IDR,true,false,false,0,1,2022-07-15,2025-12-04,1001.4084,1005260.55,
 RD4251,Bahana Himaya Likuid Syariah,Pasar Uang,PT Bahana TCW Investment Management,IDR,true,false,false,0,1,2022-07-15,2026-10-08,1190.41,73968953380.78,
 RD4252,Danareksa Msci Indonesia Esg Screened Kelas B,,PT BRI Manajemen Investasi,IDR,false,false,true,0,1,2022-07-15,2026-10-08,595.61,29700659659.39,
-RD4253,Bahana Global Healthcare Sharia Usd Equity Fund,Saham,PT Bahana TCW Investment Management,USD,true,false,false,0,1,2022-07-19,2026-10-07,1.1393,1661162.14809,
+RD4253,Bahana Global Healthcare Sharia Usd Equity Fund,Saham,PT Bahana TCW Investment Management,USD,true,false,false,0,1,2022-07-19,2026-10-08,1.1317,1661162.14809,
 RD4254,Avrist Dana Kas Prima,Pasar Uang,PT Avrist Asset Management,IDR,false,false,false,0,1,2022-07-22,2024-08-05,1005.5938,,
 RD4255,Star Balanced Iii,,"Surya Timur Alam Raya, PT",IDR,false,false,false,0,1,2022-07-26,2026-10-08,1528.2571,218824569926.2,
-RD4256,Eastspring IDX ESG Leaders Plus Kelas A,Saham,PT Eastspring Investments Indonesia,IDR,false,false,true,1,1,2022-01-12,2026-10-08,619.95,120150000000,0.0455
-RD4257,Mandiri Asia Sharia Equity Dollar Kelas B,Saham,PT Mandiri Manajemen Investasi,USD,true,false,false,0,1,2022-07-26,2026-10-07,1.189953,434578.98368,
+RD4256,Eastspring IDX ESG Leaders Plus Kelas A,Saham,PT Eastspring Investments Indonesia,IDR,false,false,true,1,1,2022-01-12,2026-10-09,626.52,120150000000,0.0455
+RD4257,Mandiri Asia Sharia Equity Dollar Kelas B,Saham,PT Mandiri Manajemen Investasi,USD,true,false,false,0,1,2022-07-26,2026-10-08,1.17712,434578.98368,
 RD4258,Pnm Terproteksi Investa 41,Terproteksi,"PNM Investment Management, PT",IDR,false,false,false,0,1,2022-07-28,2026-10-08,1004.389,79838197863.5,
 RD4259,Eastspring Brilian Terproteksi 1,Terproteksi,PT Eastspring Investments Indonesia,IDR,false,false,false,0,1,2022-07-28,2024-03-15,1021.5532,68443842.65,
 RD4260,Trimegah Terproteksi Lestari 21,Saham,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2022-07-28,2025-07-07,1000.177,128683630683.06,
@@ -2178,12 +2178,12 @@ RD5623,Majoris Dana Kas Bintang Indonesia,Pasar Uang,PT Majoris Asset Management
 RD5624,Star Protected Xviii,Terproteksi,"Surya Timur Alam Raya, PT",IDR,false,false,false,0,1,2022-08-31,2025-05-19,1000.05,,
 RD5636,Bahana Gebyar Dana Likuid,Pasar Uang,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2022-09-02,2026-10-08,1176.36,3721567662175.32,
 RD5637,Bni-am Short Duration Bonds Index Kelas R1,,,IDR,false,false,true,0,1,,,,,
-RD5638,BNI-AM Short Duration Bonds Index Kelas R1,Obligasi,PT BNI Asset Management,IDR,false,false,true,1,1,2022-09-01,2026-10-08,1057.92,167620850552.47,0.0059
+RD5638,BNI-AM Short Duration Bonds Index Kelas R1,Obligasi,PT BNI Asset Management,IDR,false,false,true,1,1,2022-09-01,2026-10-09,1058.39,167620850552.47,0.0059
 RD5639,Avrist Ada Sukuk Berkah Syariah Dg Dividen*,Obligasi,PT Avrist Asset Management,IDR,true,false,false,0,1,2022-08-30,2023-02-03,1381.5647,,
 RD5640,Avrist Ada Obligasi Berlian Dg Dividen*,Obligasi,PT Avrist Asset Management,IDR,false,false,false,0,1,2022-08-30,2023-02-03,1234.69,,
 RD5641,Avrist Prime Income Fund Dg Dividen*,Obligasi,PT Avrist Asset Management,IDR,false,false,false,0,1,2022-08-30,2023-02-03,1552.8712,,
 RD5642,Avrist Sukuk Income Fund Dg Dividen*,Obligasi,PT Avrist Asset Management,IDR,true,false,false,0,1,2022-08-30,2023-02-03,1395.4552,,
-RD5643,BRI MSCI Indonesia ESG Screened Kelas A,Saham,PT BRI Manajemen Investasi,IDR,false,false,true,1,1,2022-09-08,2026-10-08,629.65,63995152773.56,0.0194
+RD5643,BRI MSCI Indonesia ESG Screened Kelas A,Saham,PT BRI Manajemen Investasi,IDR,false,false,true,1,1,2022-09-08,2026-10-09,638.88,63995152773.56,0.0194
 RD5644,Victoria Fixed Income,Obligasi,PT Victoria Manajemen Investasi,IDR,false,false,false,0,1,2022-09-09,2026-10-08,1214.7077,31773861793.88,
 RD5645,Simas Pendapatan Optima,Obligasi,PT Sinarmas Asset Management,IDR,false,false,false,0,1,2022-09-15,2026-10-08,1044.2959,2634837735411.86,
 RD5649,Bahana Dana Ekuitas Andalan Kelas S,Saham,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2022-09-20,2026-10-08,794.369,122018824446.4,
@@ -2228,7 +2228,7 @@ RD5730,Syailendra Capital Protected Fund 51,Terproteksi,"Syailendra Capital, PT"
 RD5737,Danareksa Seruni Pasar Uang Ii Kelas B,Saham,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2022-12-20,2025-01-09,1090.1144,,
 RD5739,Pnm Optima Bulanan,Obligasi,"PNM Investment Management, PT",IDR,false,false,false,0,1,2022-12-21,2026-10-08,992.8694,412691905532.88,
 RD5740,Star Protected 19,Terproteksi,,IDR,false,false,false,0,1,,,,,
-RD5741,Sucorinvest IDX30,Saham,PT Sucorinvest Asset Management,IDR,false,false,true,1,1,2022-12-21,2026-10-08,784.79,30364119151.65,0.0225
+RD5741,Sucorinvest IDX30,Saham,PT Sucorinvest Asset Management,IDR,false,false,true,1,1,2022-12-21,2026-10-09,794.62,30364119151.65,0.0225
 RD5742,Trimegah Terproteksi Futura 27,Terproteksi,PT Trimegah Asset Management,IDR,false,false,false,0,1,2022-12-21,2025-08-11,848.4049,,
 RD5744,Terproteksi Star Protected 19,Terproteksi,"Surya Timur Alam Raya, PT",IDR,false,false,false,0,1,2022-12-20,2025-12-16,1000,,
 RD5745,Panin 30,Terproteksi,"Panin Asset Management, PT",IDR,false,false,false,0,1,2022-12-22,2025-12-15,1000.2589,,
@@ -2288,13 +2288,13 @@ RD5913,Bni-am Indeks Idx30 Dengan Dividen*,Saham,PT BNI Asset Management,IDR,fal
 RD5924,Bni-am Indeks Idx Growth30 Kelas I2 Dengan Dividen*,Saham,PT BNI Asset Management,IDR,false,false,true,0,1,2023-03-29,2023-09-05,1162.98,,
 RD5925,Trimegah Pundi Kas Syariah 2,Pasar Uang,PT Trimegah Asset Management,IDR,true,false,false,0,1,2023-04-06,2026-09-07,1106.04,302334644695.55,
 RD5940,Valbury Prime Dynamic Equity,Saham,"Valbury Capital Management, PT",IDR,false,false,false,0,1,2023-04-10,2026-10-08,962.4045,18072417186.86,
-RD5941,Principal Islamic Asean Equity Syariah Usd,Saham,PT Principal Asset Management,USD,true,false,false,0,1,2023-04-12,2026-10-07,0.845853,2216077.14069,
+RD5941,Principal Islamic Asean Equity Syariah Usd,Saham,PT Principal Asset Management,USD,true,false,false,0,1,2023-04-12,2026-10-08,0.839167,2216077.14069,
 RD5942,Hpam Proteksi Prima Ii,Terproteksi,"Henan Putihrai Asset Management, PT",IDR,false,false,false,0,1,2023-04-14,2026-01-12,1000.6358,,
 RD5943,Trimegah Terproteksi Prima Syariah,Terproteksi,PT Trimegah Asset Management,IDR,true,false,false,0,1,2023-04-14,2026-01-27,1000.1963,,
 RD5944,Danareksa Proteksi 88,Terproteksi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2023-04-18,2026-10-08,1017.79,184578234569,
 RD5945,Sucorinvest Sharia Sustainability Equity Fund,Saham,PT Sucorinvest Asset Management,IDR,true,false,false,0,1,2023-04-18,2026-10-08,1114.1184,41738008331.52,
 RD5957,Trimegah Pundi Kas 12,Pasar Uang,PT Trimegah Asset Management,IDR,false,false,false,0,1,2023-05-05,2023-05-11,1000,,
-RD5958,Panin Global Shariah Equity Fund,Saham,"Panin Asset Management, PT",USD,true,false,false,0,1,2023-05-08,2026-10-07,2.2368,24424887.79526,
+RD5958,Panin Global Shariah Equity Fund,Saham,"Panin Asset Management, PT",USD,true,false,false,0,1,2023-05-08,2026-10-08,2.1864,24424887.79526,
 RD5959,Terproteksi Mandiri Investa 2,Terproteksi,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2023-05-11,2026-10-08,1018.166,680946217013.48,
 RD5962,Terproteksi Star Protected 21,Terproteksi,"Surya Timur Alam Raya, PT",IDR,false,false,false,0,1,2023-05-17,2025-07-17,1000.05,,
 RD5966,Bahana Centrum Protected Fund 232,Terproteksi,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2023-05-24,2026-10-08,1022.38,1245900678405.95,
@@ -2307,7 +2307,7 @@ RD5972,Batavia Proteksi Maxima 51,Terproteksi,PT Batavia Prosperindo Aset Manaje
 RD5973,Bnp Paribas Sukuk Negara Kelas Dr 1,Saham,,IDR,false,false,false,0,1,,,,,
 RD5974,Bnp Paribas Sukuk Negara Kelas Dr 1,Obligasi,PT BNP Paribas Asset Management,IDR,true,false,false,0,1,2023-05-25,2026-10-08,990.54,2137426959.16,
 RD5994,Danareksa Proteksi 86,Terproteksi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2023-05-26,2026-10-08,1014.3151,709291276565.1,
-RD5995,Trimegah Fixed Income Plan Syariah Kelas A,Obligasi,PT Trimegah Asset Management,IDR,true,false,false,1,1,2023-05-26,2026-10-08,1083.61,470885527502,0.0174
+RD5995,Trimegah Fixed Income Plan Syariah Kelas A,Obligasi,PT Trimegah Asset Management,IDR,true,false,false,1,1,2023-05-26,2026-10-09,1083.94,470885527502,0.0174
 RD5996,Trimegah Pendapatan Tetap Hijau Inklusif,Obligasi,PT Trimegah Asset Management,IDR,false,false,false,0,1,2023-05-26,2026-10-08,1160.3357,17412384776.04,
 RD6027,Pnm Pembiayaan Mikro Bumn Seri Xi,Penyertaan Terbatas,PT PNM Investment Management,IDR,false,false,false,0,1,2023-05-31,2024-06-05,1000,,
 RD6028,Manulife Dana Ekuitas Utama Kelas A1,Saham,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2023-05-31,2026-10-08,798.28,279925488.32,
@@ -2370,7 +2370,7 @@ RD6170,Syailendra Alpha Focus Equity Fund Kelas A,Saham,"Syailendra Capital, PT"
 RD6175,Anargya Super Equity,Saham,PT Anargya Aset Manajemen,IDR,false,false,false,0,1,2023-08-29,2023-11-17,1000.070054,,
 RD6176,Sam Obligasi Optima Kelas A,Obligasi,"Samuel Aset Manajemen, PT",IDR,false,false,false,0,1,2023-08-30,2026-10-08,1190.08,21126871478.08,
 RD6177,Sam Obligasi Optima Kelas D,Obligasi,"Samuel Aset Manajemen, PT",IDR,false,false,false,0,1,2023-08-30,2026-10-08,1009.21,63540770364.97,
-RD6180,Mandiri Asia Sharia Equity Dollar Kelas A,Saham,PT Mandiri Manajemen Investasi,USD,true,false,false,0,1,2023-09-01,2026-10-07,1.314065,7761636.36031,
+RD6180,Mandiri Asia Sharia Equity Dollar Kelas A,Saham,PT Mandiri Manajemen Investasi,USD,true,false,false,0,1,2023-09-01,2026-10-08,1.299814,7761636.36031,
 RD6181,Mega Asset Terproteksi 22,Terproteksi,"Mega Asset Management, PT",IDR,false,false,false,0,1,2023-09-04,2026-07-06,1001.3664,154741810826.12,
 RD6184,Bahana Salama Syariah 5,Terproteksi,PT Bahana TCW Investment Management,IDR,true,false,false,0,1,2023-09-05,2025-08-15,1000.0638,,
 RD6185,Simas Income Syariah,Obligasi,PT Sinarmas Asset Management,IDR,true,false,false,0,1,2023-09-05,2026-10-08,1149.1814,50799418434.67,
@@ -2386,13 +2386,13 @@ RD6209,Danareksa Proteksi 90,Terproteksi,PT BRI Manajemen Investasi,IDR,false,fa
 RD6215,Gemilang Ekuitas Digital,Penyertaan Terbatas,"Gemilang Indonesia Manajemen Investasi, PT",IDR,false,false,false,0,1,2023-09-15,2026-10-08,1079.1683,,
 RD6216,Pnm Pembiayaan Mikro Bumn Seri X,Penyertaan Terbatas,,IDR,false,false,false,0,1,2023-09-21,2023-09-21,1012.37,,
 RD6217,Rdpt Danareksa Ekuitas Energi,Penyertaan Terbatas,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2023-09-15,2026-03-10,1045.781,,
-RD6218,Penyertaan Terbatas Emco Property Fund,Terproteksi,"Emco Asset Management, PT",IDR,false,false,false,0,1,2023-09-22,2026-10-07,1112.9154,,
+RD6218,Penyertaan Terbatas Emco Property Fund,Terproteksi,"Emco Asset Management, PT",IDR,false,false,false,0,1,2023-09-22,2026-10-08,1112.9154,,
 RD6219,Bahana Salama Syariah 6,Terproteksi,PT Bahana TCW Investment Management,IDR,true,false,false,0,1,2023-09-25,2025-08-15,1000.1644,,
 RD6220,Majoris Usd Money Market Fund Indonesia,Pasar Uang,PT Majoris Asset Management,USD,false,false,false,0,1,2023-09-25,2023-10-27,1.0035,,
 RD6221,Syailendra Capital Protected Fund Syariah 2,Terproteksi,"Syailendra Capital, PT",IDR,true,false,false,0,1,2023-09-26,2025-12-12,1042.2698,,
 RD6232,Allianz Usd Fixed Income Fund,Obligasi,"Allianz Global Investors Asset Management Indonesia, PT",USD,false,false,false,0,1,2023-10-02,2026-10-08,1.0934,8643554.41139,
 RD6233,Eastspring Bakti Proteksi 1,Terproteksi,PT Eastspring Investments Indonesia,IDR,false,false,false,0,1,2023-10-02,2026-10-08,1036.7059,519888375184.13,
-RD6234,Allianz High Dividend Global Sharia Equity Dollar,Reksadana Global,"Allianz Global Investors Asset Management Indonesia, PT",USD,true,true,false,0,1,2023-10-02,2026-10-07,1.4457,8595945.07392,
+RD6234,Allianz High Dividend Global Sharia Equity Dollar,Reksadana Global,"Allianz Global Investors Asset Management Indonesia, PT",USD,true,true,false,0,1,2023-10-02,2026-10-08,1.4353,8595945.07392,
 RD6235,Rdt Mandiri Investa 3,Terproteksi,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2023-10-03,2026-10-08,1028.3431,538213824654.21,
 RD6252,Cipta Proteksi Xxvi,Terproteksi,"Ciptadana Asset Management, PT",IDR,false,false,false,0,1,2023-10-10,2026-10-08,1023.3242,21381120378.06,
 RD6253,Bni Am Pefindo I Grade Kelas I1,Saham,PT BNI Asset Management,IDR,false,false,true,0,1,2023-10-12,2025-05-16,1049.18,,
@@ -2405,7 +2405,7 @@ RD6281,Recapital Money Market Fund,Pasar Uang,"Recapital Asset Management, PT",I
 RD6282,Star Protected Dollar 6,Terproteksi,PT Surya Timur Alam Raya,USD,false,false,false,0,1,2023-11-09,2024-02-23,1.013,,
 RD6294,Bahana Sinergi Pasar Uang Kelas I,Pasar Uang,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2023-11-10,2026-10-08,1154.7,11535347255.13,
 RD6296,Manulife Saham Syariah Esg Transisi Global Dollar As,Reksadana Global,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2023-11-10,2023-11-10,1,,
-RD6297,Manulife Saham Syariah Esg Transisi Global Dolar As Kelas A1,Reksadana Global,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2023-11-14,2026-10-07,1.3904,2597990.23207,
+RD6297,Manulife Saham Syariah Esg Transisi Global Dolar As Kelas A1,Reksadana Global,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2023-11-14,2026-10-08,1.3864,2597990.23207,
 RD6298,Trimegah Terproteksi Dana Berkala 12,Terproteksi,PT Trimegah Asset Management,IDR,false,false,false,0,1,2023-11-15,2026-10-08,1030.389,514534991106.19,
 RD6299,Danareksa Proteksi 93,Terproteksi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2023-11-17,2026-10-08,1027.34,297810893014,
 RD6300,Insight Terproteksi Syariah Viii,Terproteksi,"Insight Investments Management, PT",IDR,true,false,false,0,1,2023-11-17,2026-10-08,862.8894,5289799249.76,
@@ -2415,7 +2415,7 @@ RD6318,Rdpt Danareksa Manufaktur 1,Penyertaan Terbatas,PT BRI Manajemen Investas
 RD6320,Kisi Idx30 Etf,Saham,"Korea Investment Management Indonesia, PT",IDR,false,true,true,0,1,2023-11-24,2026-10-08,789.112798,9387698351.96,
 RD6321,Trimegah Terproteksi Prima 38,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2023-12-04,2026-07-06,1001.459,198114974606.08,
 RD6322,Ashmore Dana Terproteksi Nusantara Iv,Terproteksi,"Ashmore Asset Management Indonesia, PT",IDR,false,false,false,0,1,2023-12-05,2026-10-08,1035.4878,517141607306.76,
-RD6323,Batavia Index PEFINDO I-Grade,Saham,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,true,1,1,2023-12-05,2026-10-08,736.6905,194463887161,0
+RD6323,Batavia Index PEFINDO I-Grade,Saham,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,true,1,1,2023-12-05,2026-10-09,746.1366,194463887161,0
 RD6324,Schroder Idr Income Plan Vii,Terproteksi,PT Schroder Investment Management Indonesia,IDR,false,false,false,0,1,2023-12-06,2026-10-08,1009.7655,499711215824.89,
 RD6335,Juara Providentia Balanced Fund,,"Juara Capital Indonesia, PT",IDR,false,false,false,0,1,2023-12-08,2026-10-08,1322.1547,246962873381.41,
 RD6337,Allianz Capital Protected Fund 62,Terproteksi,"Allianz Global Investors Asset Management Indonesia, PT",IDR,false,false,false,0,1,2023-12-12,2026-10-08,1029.6924,514581765130.65,
@@ -2440,14 +2440,14 @@ RD6393,Pnm Amanah Syariah Kelas D,Obligasi,"PNM Investment Management, PT",IDR,t
 RD6395,Bahana Usd Fixed Income Kelas I,Obligasi,PT Bahana TCW Investment Management,USD,false,false,false,0,1,2024-01-17,2026-10-08,1.0458,1609029.37737,
 RD6396,Hpam Balanced Fund Kelas B,,"Henan Putihrai Asset Management, PT",IDR,false,false,false,0,1,2024-01-17,2026-10-08,1042.5113,239697030260.12,
 RD6403,Batavia Proteksi Maxima 53,Terproteksi,PT Batavia Prosperindo Aset Manajemen,IDR,false,false,false,0,1,2024-01-18,2026-10-08,1014.16,136957841389.71,
-RD6407,Manulife Saham Syariah Esg Transisi Global Dolar As Kelas A2,Saham,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2024-01-18,2026-10-07,1.3437,2392571.61255,
+RD6407,Manulife Saham Syariah Esg Transisi Global Dolar As Kelas A2,Saham,PT Manulife Aset Manajemen Indonesia,USD,true,false,false,0,1,2024-01-18,2026-10-08,1.3398,2392571.61255,
 RD6408,Pendapatan Tetap Utama Kelas I,Obligasi,PT Bahana TCW Investment Management,IDR,false,false,false,0,1,2024-01-22,2026-10-08,903.75,70206943962.34,
 RD6409,Star Protected 23,Terproteksi,"Surya Timur Alam Raya, PT",IDR,false,false,false,0,1,2024-01-24,2025-11-24,1000,,
 RD6413,Avrist Emerald Stable Fund,Obligasi,PT Avrist Asset Management,IDR,false,false,false,0,1,2024-01-29,2026-10-08,1194.91,311602540573,
 RD6414,Syailendra Sharia Fixed Income Fund,Obligasi,"Syailendra Capital, PT",IDR,true,false,false,0,1,2024-01-29,2026-10-08,1210.4634,2957154017259.27,
 RD6415,Bri Proteksi 94,Terproteksi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2024-01-30,2026-10-08,1013.4401,421116766520.76,
 RD6416,Pinnacle Winner Balanced Fund,,PT Pinnacle Persada Investama,IDR,false,false,false,0,1,2024-01-30,2026-10-08,1240.1469,21087430451.36,
-RD6435,Sucorinvest Global Equity Sharia Usd,Reksadana Global,PT Sucorinvest Asset Management,USD,true,false,false,0,1,2024-02-01,2026-10-07,1.1824,2022178.78656,
+RD6435,Sucorinvest Global Equity Sharia Usd,Reksadana Global,PT Sucorinvest Asset Management,USD,true,false,false,0,1,2024-02-01,2026-10-08,1.1679,2022178.78656,
 RD6436,Kisi Fixed Income Fund Plus,Obligasi,"Korea Investment Management Indonesia, PT",IDR,false,false,false,0,1,2024-02-06,2026-10-08,1172.7226,3423760658211.96,
 RD6437,Uobam Dana Membangun Negeri D,Obligasi,"UOB Asset Management Indonesia, PT",IDR,false,false,false,0,1,2024-02-06,2026-10-08,960.5406,996319939474,
 RD6460,Prospera Bebas Finansial,Pasar Uang,"Prospera Asset Management, PT",IDR,false,false,false,0,1,2024-02-12,2026-10-08,1125.9848,15378214834.34,
@@ -2455,7 +2455,7 @@ RD6461,Hpam Balanced Fund Kelas C,,"Henan Putihrai Asset Management, PT",IDR,fal
 RD6462,Mega Asset Terproteksi 24,Terproteksi,"Mega Asset Management, PT",IDR,false,false,false,0,1,2024-02-20,2026-07-14,995.1811,,
 RD6463,Bni Am Idx Pefindo Prime Bank Kelas I2,Saham,PT BNI Asset Management,IDR,false,false,true,0,1,2024-02-27,2026-10-08,622.37,32642754980.23,
 RD6500,Bri Proteksi 95,Terproteksi,PT BRI Manajemen Investasi,IDR,false,false,false,0,1,2024-03-08,2026-10-08,1014.74,202005352811,
-RD6502,BNI-AM SRI KEHATI Kelas R1,Saham,PT BNI Asset Management,IDR,false,false,true,1,1,2023-07-17,2026-10-08,741.33,102767967027.18,0.0231
+RD6502,BNI-AM SRI KEHATI Kelas R1,Saham,PT BNI Asset Management,IDR,false,false,true,1,1,2023-07-17,2026-10-09,748.48,102767967027.18,0.0231
 RD6503,Terproteksi Panin 36,Terproteksi,"Panin Asset Management, PT",IDR,false,false,false,0,1,2024-03-15,2026-10-08,1012.337,38679127294.17,
 RD6504,Batavia Proteksi Syariah Maxima 2,Terproteksi,PT Batavia Prosperindo Aset Manajemen,IDR,true,false,false,0,1,2024-03-18,2026-10-08,1006.58,192625735697.72,
 RD6505,Bni Am Pefindo I Grade Kelas I2,Saham,PT BNI Asset Management,IDR,false,false,true,0,1,2024-03-18,2026-10-08,622.09,14633436741.57,
@@ -2466,11 +2466,11 @@ RD6515,Avrist Protected Fund 3,Terproteksi,PT Avrist Asset Management,IDR,false,
 RD6517,Setiabudi Dana Proteksi 8,Terproteksi,"Setiabudi Investment Management, PT",IDR,false,false,false,0,1,2024-03-26,2025-08-14,1000.7589,,
 RD6518,Avrist Sukuk Amanah Sejahtera,Obligasi,PT Avrist Asset Management,IDR,true,false,false,0,1,2024-03-27,2026-10-08,1174.8839,861385785266.16,
 RD6519,Avrist Sukuk Berkah 6,Terproteksi,"Avrist Asset Management, PT",IDR,true,false,false,0,1,2024-03-27,2026-07-15,1027.21,110460.69,
-RD6520,BNI-AM PEFINDO I-Grade Kelas R1,Saham,PT BNI Asset Management,IDR,false,false,true,1,1,2024-04-01,2026-10-08,623.46,2318494010.3,0.0385
+RD6520,BNI-AM PEFINDO I-Grade Kelas R1,Saham,PT BNI Asset Management,IDR,false,false,true,1,1,2024-04-01,2026-10-09,631.55,2318494010.3,0.0385
 RD6521,Bni Am Pefindo I Grade Kelas R1,Saham,PT BNI Asset Management,IDR,false,false,true,0,1,2024-04-01,2024-04-01,1000,,
-RD6522,BNI-AM IDX PEFINDO Prime Bank Kelas R1,Saham,PT BNI Asset Management,IDR,false,false,true,1,1,2024-04-02,2026-10-08,655.26,205334271747.02,0.0209
+RD6522,BNI-AM IDX PEFINDO Prime Bank Kelas R1,Saham,PT BNI Asset Management,IDR,false,false,true,1,1,2024-04-02,2026-10-09,663.72,205334271747.02,0.0209
 RD6523,Bni Am Idx Pefindo Prime Bank Kelas R1,Saham,PT BNI Asset Management,IDR,false,false,true,0,1,2024-04-02,2024-04-02,1000,,
-RD6524,BNP Paribas Sukuk Negara Kelas RK1,Obligasi,PT BNP Paribas Asset Management,IDR,true,false,false,1,1,2024-04-03,2026-10-08,1100.62,17190000000,0.0226
+RD6524,BNP Paribas Sukuk Negara Kelas RK1,Obligasi,PT BNP Paribas Asset Management,IDR,true,false,false,1,1,2024-04-03,2026-10-09,1100.77,17190000000,0.0226
 RD6525,Manulife Dana Tetap Stabil Kelas M5,Obligasi,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2024-04-03,2026-10-08,1004.75,3158967119.52,
 RD6526,Bnp Paribas Sukuk Negara Kelas Rk1,Obligasi,PT BNP Paribas Asset Management,IDR,true,false,false,0,1,2024-04-03,2024-04-03,1000,,
 RD6527,Trimegah Terproteksi Lestari 28,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2024-04-04,2026-07-06,1000.1794,59709773596.27,
@@ -2497,11 +2497,11 @@ RD6598,Simpan Bond Fund,Obligasi,"Simpan Asset Management, PT",IDR,false,false,f
 RD6636,Syailendra Capital Protected Fund 58,Terproteksi,"Syailendra Capital, PT",IDR,false,false,false,0,1,2024-05-29,2026-10-08,1028.146,513424500392.93,
 RD6637,Kisi Prima Balance Fund,Campuran,"Korea Investment Management Indonesia, PT",IDR,false,false,false,0,1,2024-06-03,2026-10-08,1270.3218,259670292830.66,
 RD6638,Panin Sri Kehati Kelas B,,"Panin Asset Management, PT",IDR,false,false,true,0,1,2024-06-05,2026-10-08,780,304370793243.68,
-RD6639,Mandiri Investa Dana Utama Kelas D,Obligasi,PT Mandiri Manajemen Investasi,IDR,false,false,false,1,1,2016-08-12,2026-10-08,2624.58,777876276.49,0.0342
+RD6639,Mandiri Investa Dana Utama Kelas D,Obligasi,PT Mandiri Manajemen Investasi,IDR,false,false,false,1,1,2016-08-12,2026-10-09,2626.35,777876276.49,0.0342
 RD6642,Bni Am Proteksi Azalea,Terproteksi,PT BNI Asset Management,IDR,false,false,false,0,1,2024-06-07,2026-10-08,1014.4031,101308305525.78,
 RD6645,Simpan Sustainable Equity Fund,Saham,"Simpan Asset Management, PT",IDR,false,false,false,0,1,2024-06-13,2026-10-08,905.0925,42306827021.91,
-RD6649,Grow SRI KEHATI Kelas O,Saham,PT Grow Investments Indonesia,IDR,false,false,true,1,1,2024-06-19,2026-10-08,903.7,109580168564,0.0149
-RD6651,Grow Saham Indonesia Plus Kelas O,Saham,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2024-06-19,2026-10-08,914.81,31995509112.49,0.0198
+RD6649,Grow SRI KEHATI Kelas O,Saham,PT Grow Investments Indonesia,IDR,false,false,true,1,1,2024-06-19,2026-10-09,912.62,109580168564,0.0149
+RD6651,Grow Saham Indonesia Plus Kelas O,Saham,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2024-06-19,2026-10-09,923.15,31995509112.49,0.0198
 RD6652,Mandiri Investa Dana Utama Kelas D,Obligasi,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2024-06-14,2024-06-14,2385.02,,
 RD6657,Allianz Capital Protected Fund 63,Terproteksi,"Allianz Global Investors Asset Management Indonesia, PT",IDR,false,false,false,0,1,2024-06-25,2026-10-08,1029.6105,514153302221.03,
 RD6658,Mega Asset Terproteksi 28,Terproteksi,"Mega Asset Management, PT",IDR,false,false,false,0,1,2024-06-27,2026-10-08,1008.3152,41450524986.88,
@@ -2518,7 +2518,7 @@ RD6705,Cipta Proteksi Xxvii,Terproteksi,"Ciptadana Asset Management, PT",IDR,fal
 RD6706,Mandiri Investa Pasar Uang Kelas B,Pasar Uang,PT Mandiri Manajemen Investasi,IDR,false,false,false,0,1,2024-07-16,2026-10-08,1879.75,64774456774.18,
 RD6710,Mandiri Etf Sri-kehati,,PT Mandiri Manajemen Investasi,IDR,false,true,true,0,1,2024-07-17,2026-10-08,331.5719,48516236702.79,
 RD6711,Avrist Pendidikan Solotech Kelas Silver,Obligasi,"Avrist Asset Management, PT",IDR,false,false,false,0,1,2024-07-18,2026-02-02,1095.25,5477864966,
-RD6712,Batavia India Sharia Equity Usd,Obligasi,"Batavia Prosperindo Aset Manajemen, PT",USD,true,false,false,0,1,2024-07-17,2026-10-07,0.7276,6811509.66761,
+RD6712,Batavia India Sharia Equity Usd,Obligasi,"Batavia Prosperindo Aset Manajemen, PT",USD,true,false,false,0,1,2024-07-17,2026-10-08,0.7165,6811509.66761,
 RD6713,Allianz Capital Protected Fund 64,Terproteksi,"Allianz Global Investors Asset Management Indonesia, PT",IDR,false,false,false,0,1,2024-07-23,2026-10-08,1028.907,513815286276.28,
 RD6716,Star Protected 24,Terproteksi,"Surya Timur Alam Raya, PT",IDR,false,false,false,0,1,2024-07-25,2025-11-24,1000,,
 RD6717,Trimegah Bakti Ganesha Abadi Kelas A,Obligasi,PT Trimegah Asset Management,IDR,false,false,false,0,1,2024-07-25,2026-10-08,1066.36,10681398785.19,
@@ -2533,7 +2533,7 @@ RD8668,Mandiri Investa 4,Terproteksi,PT Mandiri Manajemen Investasi,IDR,false,fa
 RD8671,Juara Empowerment Balanced Fund,Campuran,"Juara Capital Indonesia, PT",IDR,false,false,false,0,1,2024-08-01,2026-10-08,1266.5446,110684353580.9,
 RD8696,Hpam Proteksi Prima Syariah Iii,Terproteksi,"Henan Putihrai Asset Management, PT",IDR,true,false,false,0,1,2024-08-05,2026-10-08,1007.6359,107119332494.01,
 RD8698,Manulife Proteksi Dana Utama Vii,Terproteksi,PT Manulife Aset Manajemen Indonesia,IDR,false,false,false,0,1,2024-08-07,2026-10-08,1011.11,507360036716.98,
-RD8699,Uobam Global Sharia Balanced Fund Usd,Reksadana Global,"UOB Asset Management Indonesia, PT",USD,true,false,false,0,1,2024-08-05,2026-10-07,0.978358,8642879.58891,
+RD8699,Uobam Global Sharia Balanced Fund Usd,Reksadana Global,"UOB Asset Management Indonesia, PT",USD,true,false,false,0,1,2024-08-05,2026-10-08,0.972518,8642879.58891,
 RD8700,Mega Asset Terproteksi 27,Terproteksi,"Mega Asset Management, PT",IDR,false,false,false,0,1,2024-08-08,2026-10-08,1014.3569,23419061251.26,
 RD8711,Star Infobank 15 Kelas Profesional,,"Surya Timur Alam Raya, PT",IDR,false,false,true,0,1,2024-08-13,2026-10-08,700.11,53880448961,
 RD8713,Avrist Pendidikan Solotech Kelas Gold,Obligasi,PT Avrist Asset Management,IDR,false,false,false,0,1,2024-08-15,2026-02-02,923.02,,
@@ -2556,9 +2556,9 @@ RD8791,Batavia Proteksi Maxima 57,Terproteksi,"Batavia Prosperindo Aset Manajeme
 RD8792,Penyertaan Terbatas Bahana Infrastructure Fund Ii,Penyertaan Terbatas,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2024-09-25,2026-10-08,1014.14,,
 RD8793,Pnm Terproteksi Investa 48,Terproteksi,"PNM Investment Management, PT",IDR,false,false,false,0,1,2024-09-25,2026-10-08,1026.5882,104159655358.04,
 RD8806,Simpan Cash Syariah Fund,Pasar Uang,"Simpan Asset Management, PT",IDR,true,false,false,0,1,2024-09-26,2026-10-08,1083.4131,3953439181.75,
-RD8807,Grow Obligasi Optima Dinamis Kelas O,Obligasi,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2024-10-02,2026-10-08,1076.16,137022835510.95,0.0059
-RD8808,Grow Dana Optima Kas Utama,Pasar Uang,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2024-10-02,2026-10-08,1092.5,104167733735.56,0.0047
-RD8812,Grow Obligasi Optima Dinamis Kelas Q,Obligasi,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2024-10-02,2026-10-08,1031.16,2479672006.58,0.0085
+RD8807,Grow Obligasi Optima Dinamis Kelas O,Obligasi,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2024-10-02,2026-10-09,1076.83,137022835510.95,0.0059
+RD8808,Grow Dana Optima Kas Utama,Pasar Uang,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2024-10-02,2026-10-09,1092.69,104167733735.56,0.0047
+RD8812,Grow Obligasi Optima Dinamis Kelas Q,Obligasi,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2024-10-02,2026-10-09,1031.81,2479672006.58,0.0085
 RD8813,Obligasi Negara Indonesia Ii Kelas Income 2,Obligasi,"Manulife Aset Manajemen Indonesia, PT",IDR,false,false,false,0,1,2024-10-01,2026-10-08,921.83,3585812597860.1,
 RD8815,Grow Obligasi Optima Dinamis,Obligasi,"Grow Investments Indonesia, PT",IDR,false,false,false,0,1,2024-10-02,2024-10-02,1000,,
 RD8818,Cipta Proteksi Xxviii,Terproteksi,"Ciptadana Asset Management, PT",IDR,false,false,false,0,1,2024-10-03,2026-10-08,1030.77,31630135064.17,
@@ -2588,7 +2588,7 @@ RD8954,Bri Mi Proteksi 99,Terproteksi,"BRI Manajemen Investasi, PT",IDR,false,fa
 RD8955,Sucorinvest Proteksi 49,Terproteksi,"Sucorinvest Asset Management, PT",IDR,false,false,false,0,1,2024-12-04,2026-10-08,1033.7151,18709203921.66,
 RD8956,Bahana Ultima Protected Fund 236,Terproteksi,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2024-11-15,2026-07-15,1002.76,,
 RD8957,Capital Regular Income Fund,Obligasi,"Capital Asset Management, PT",IDR,false,false,false,0,1,2024-11-18,2026-10-08,1116.3601,10044881198.48,
-RD8958,Kisi Global Sharia Transformative Technology Equity Fund Usd,,"Korea Investment Management Indonesia, PT",USD,true,true,false,0,1,2024-11-18,2026-10-07,1.745,614460.709,
+RD8958,Kisi Global Sharia Transformative Technology Equity Fund Usd,,"Korea Investment Management Indonesia, PT",USD,true,true,false,0,1,2024-11-18,2026-10-08,1.7153,614460.709,
 RD8959,Sam Sejahtera Terproteksi 5,Terproteksi,"Samuel Aset Manajemen, PT",IDR,false,false,false,0,1,2024-11-19,2026-07-16,1025.9257,,
 RD8960,Bahana Sinergi Pasar Uang Kelas Dana Abadi Pundi Pundi Pl,Pasar Uang,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2024-11-20,2026-10-08,1088.89,5626428014.73,
 RD8961,Bri Mi Proteksi 103,Terproteksi,"BRI Manajemen Investasi, PT",IDR,false,false,false,0,1,2024-11-20,2026-10-08,1029.2089,1058821540863.88,
@@ -2618,7 +2618,7 @@ RD9117,Pnm Dana Surat Berharga Negara Ii Kelas B,Obligasi,"PNM Investment Manage
 RD9118,Allianz Rupiah Liquid Fund Kelas B1,Pasar Uang,"Allianz Global Investors Asset Management Indonesia, PT",IDR,false,false,false,0,1,2025-01-06,2026-10-08,1927.45,101888977513,
 RD9119,Allianz Usd Fixed Income Fund Kelas B1,Obligasi,"Allianz Global Investors Asset Management Indonesia, PT",USD,false,false,false,0,1,2025-01-06,2026-10-08,1.1183,3545232.71646,
 RD9141,Allianz Alpha Sector Rotation Kelas B1,Saham,"Allianz Global Investors Asset Management Indonesia, PT",IDR,false,false,false,0,1,2025-01-07,2026-10-08,1294.8,66087760997.52,
-RD9142,Allianz High Dividend Global Sharia Equity Dollar Kelas B1,,"Allianz Global Investors Asset Management Indonesia, PT",USD,true,true,false,0,1,2025-01-06,2026-10-07,1.5001,9418904.27641,
+RD9142,Allianz High Dividend Global Sharia Equity Dollar Kelas B1,,"Allianz Global Investors Asset Management Indonesia, PT",USD,true,true,false,0,1,2025-01-06,2026-10-08,1.4894,9418904.27641,
 RD9143,Star Infobank 15 Kelas Dana,,"Surya Timur Alam Raya, PT",IDR,false,false,true,0,1,2025-01-07,2026-10-08,778.3,1299990104,
 RD9147,Bni Am Proteksi Alocasia,Terproteksi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2025-01-08,2026-10-08,1012.4528,202226244055.45,
 RD9152,Bnp Paribas Kemilau Proteksi Rupiah,Terproteksi,"BNP Paribas Asset Management, PT",IDR,false,false,false,0,1,2025-01-14,2026-10-08,1030.31,514499026800.75,
@@ -2671,7 +2671,7 @@ RD9304,Sucorinvest Dana Prioritas Sehat Kelas A,Campuran,"Sucorinvest Asset Mana
 RD9305,Sucorinvest Dana Prioritas Sehat Kelas C,Campuran,"Sucorinvest Asset Management, PT",IDR,false,false,false,0,1,2025-03-24,2026-10-08,927.26,40369851.35,
 RD9310,Hpam Flexi Indonesia Sehat Kelas E,Campuran,"Henan Putihrai Asset Management, PT",IDR,false,false,false,0,1,2025-03-24,2026-10-08,994.8481,10135475746.84,
 RD9317,Trimegah Terproteksi 31,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2025-03-26,2026-10-08,1015.2225,506958177820.84,
-RD9318,Dire Bowsprit Industrial Infrastructure,Dana Investasi Real Estate,"Bowsprit Asset Management, PT",IDR,false,false,false,0,1,2025-04-08,2026-10-07,1036.936,,
+RD9318,Dire Bowsprit Industrial Infrastructure,Dana Investasi Real Estate,"Bowsprit Asset Management, PT",IDR,false,false,false,0,1,2025-04-08,2026-10-08,1037.0259,,
 RD9319,Foster Balanced Fund,Campuran,"Foster Asset Management, PT",IDR,false,false,false,0,1,2025-04-09,2026-10-08,1140.3026,11401666901.34,
 RD9320,Cipta Proteksi Xxix,Terproteksi,"Ciptadana Asset Management, PT",IDR,false,false,false,0,1,2025-04-14,2026-10-08,1024.43,11693766290.71,
 RD9321,Axa Bond Income Kelas A,Obligasi,"Axa Investment Managers Select Indonesia, PT",IDR,false,false,false,0,1,2025-04-15,2026-06-08,998.5934,,
@@ -2681,7 +2681,7 @@ RD9324,Eastspring Esgq45 Idx Kehati Kelas A,Saham,"Eastspring Investments Indone
 RD9325,Trimegah Terproteksi Syariah 5,Terproteksi,"Trimegah Asset Management, PT",IDR,true,false,false,0,1,2025-04-16,2026-10-08,1024.9857,516961895905.84,
 RD9326,Bri Mi Proteksi 106,Terproteksi,"BRI Manajemen Investasi, PT",IDR,false,false,false,0,1,2025-04-17,2026-10-08,1018.7834,733923543566.41,
 RD9327,Mandiri Investa 10,Terproteksi,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2025-04-17,2026-10-08,1016.7788,507750294693.51,
-RD9328,Grow Optima Liquid Fund,Pasar Uang,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2025-04-22,2026-10-08,1052.02,222840537532.96,0.0053
+RD9328,Grow Optima Liquid Fund,Pasar Uang,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2025-04-22,2026-10-09,1052.16,222840537532.96,0.0053
 RD9340,Rdt Avrist Sukuk Berkah 8,Terproteksi,"Avrist Asset Management, PT",IDR,true,false,false,0,1,2025-05-07,2026-10-08,1062.0103,47770170257.85,
 RD9348,Hpam Proteksi Prima Syariah Iii,Terproteksi,,IDR,false,false,false,0,1,2025-04-23,2025-04-23,1019.1692,,
 RD9349,Manulife Liquid Fund USD Kelas A,Pasar Uang,PT Manulife Aset Manajemen Indonesia,USD,false,false,false,1,1,2025-04-23,2026-10-08,1.0371,245756455.77209,0.0053
@@ -2805,7 +2805,7 @@ RD9525,Indo Arthabuana Golden Compass,Campuran,"Indo Arthabuana Investama, PT",I
 RD9526,Rdst Eastspring Syariah Berkah Proteksi 4,Terproteksi,"Eastspring Investments Indonesia, PT",IDR,false,false,false,0,1,2025-07-08,2026-10-08,1018.2903,408902477865.01,
 RD9527,Bni Am Proteksi Lily,Terproteksi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2025-07-09,2026-10-08,1011.282,151503748152.12,
 RD9528,Trimegah Terproteksi Optima 6,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2025-07-09,2026-10-08,1016.8306,199284043440.86,
-RD9530,BRI Seruni Likuid Dolar,Pasar Uang,PT BRI Manajemen Investasi,USD,false,false,false,1,1,2025-07-10,2026-10-08,1.041415,123342322.99065,
+RD9530,BRI Seruni Likuid Dolar,Pasar Uang,PT BRI Manajemen Investasi,USD,false,false,false,1,1,2025-07-10,2026-10-09,1.041473,123342322.99065,
 RD9531,Rdt Sucorinvest Proteksi 52,Terproteksi,"Sucorinvest Asset Management, PT",IDR,false,false,false,0,1,2025-07-10,2026-10-08,1078.5348,63598238203.04,
 RD9532,Rdt Bri Mi Proteksi 107,Terproteksi,"BRI Manajemen Investasi, PT",IDR,false,false,false,0,1,2025-07-15,2026-10-08,1013.7469,1215120334270.18,
 RD9533,Capital Optimal Protected Fund 15,Terproteksi,"Capital Asset Management, PT",IDR,false,false,false,0,1,2025-08-19,2026-10-08,1031.8105,28247948332.8,
@@ -2814,7 +2814,7 @@ RD9536,Rdspt Pnm Pembiayaan Mikro Bumn Seri Xvii,Penyertaan Terbatas,"PNM Invest
 RD9537,Sucorinvest Syariah Proteksi 5,Terproteksi,"Sucorinvest Asset Management, PT",IDR,true,false,false,0,1,2025-07-29,2026-10-08,1071.4849,56285528811.1,
 RD9538,Trimegah Dana Tetap Syariah Kelas B,Obligasi,"Trimegah Asset Management, PT",IDR,true,false,false,0,1,2025-07-29,2026-10-08,1066.7524,447971130017.69,
 RD9539,Eastspring Syariah Income Global Mixed Asset Usd,Reksadana Global,"Eastspring Investments Indonesia, PT",USD,true,false,false,0,1,,,,,
-RD9540,Eastspring Syariah Income Global Mixed Asset Usd Kelas A,Reksadana Global,"Eastspring Investments Indonesia, PT",USD,true,false,false,0,1,2025-09-30,2026-10-07,0.983993,51118907.78945,
+RD9540,Eastspring Syariah Income Global Mixed Asset Usd Kelas A,Reksadana Global,"Eastspring Investments Indonesia, PT",USD,true,false,false,0,1,2025-09-30,2026-10-08,0.979127,51118907.78945,
 RD9541,Eastspring Syariah Income Global Mixed Asset Usd Kelas B,Reksadana Global,"Eastspring Investments Indonesia, PT",USD,true,false,false,0,1,,,,,
 RD9542,Eastspring Syariah Income Global Mixed Asset Usd Kelas C,Reksadana Global,"Eastspring Investments Indonesia, PT",USD,true,false,false,0,1,,,,,
 RD9543,Terproteksi Trimegah Terproteksi 32,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,,,,,
@@ -2835,7 +2835,7 @@ RD9568,Rdspt Pnm Pembiayaan Mikro Bumn Seri Xviii,Penyertaan Terbatas,"PNM Inves
 RD9569,Star Money Market Ii Kelas Dana Plus,Pasar Uang,"Surya Timur Alam Raya, PT",IDR,false,false,false,0,1,2025-09-04,2026-10-08,1049.9451,23217956144.78,
 RD9570,Syailendra Progressive Balanced Fund Kelas A,Campuran,"Syailendra Capital, PT",IDR,false,false,false,0,1,2025-09-10,2026-10-08,1078.7304,1077850.42,
 RD9571,Syailendra Progressive Balanced Fund Kelas B,Campuran,"Syailendra Capital, PT",IDR,false,false,false,0,1,2025-09-10,2026-10-08,1009.2447,302629407310,
-RD9572,Batavia Us Franchise Sharia Equity Usd,Reksadana Global,"Batavia Prosperindo Aset Manajemen, PT",USD,true,false,false,0,1,2025-09-10,2026-10-07,1.0729,3677517.86792,
+RD9572,Batavia Us Franchise Sharia Equity Usd,Reksadana Global,"Batavia Prosperindo Aset Manajemen, PT",USD,true,false,false,0,1,2025-09-10,2026-10-08,1.0638,3677517.86792,
 RD9573,Manulife Proteksi Dana Utama Ix,Terproteksi,"Manulife Aset Manajemen Indonesia, PT",IDR,false,false,false,0,1,2025-09-11,2026-10-08,1006.11,824182034007.02,
 RD9574,Syailendra Equity Platinum Fund Kelas C,Saham,"Syailendra Capital, PT",IDR,false,false,false,0,1,2025-09-16,2026-10-08,961.6145,44610645127.28,
 RD9575,Bni Am Proteksi Vanilla,Terproteksi,"BNI Asset Management, PT",IDR,false,false,false,0,1,2025-09-17,2026-10-08,1023.4802,511273197828.29,
@@ -2867,14 +2867,14 @@ RD9603,Indo Rdn Kas Bertumbuh,Pasar Uang,"Indo Premier Investment Management, PT
 RD9605,Ashmore Dana Obligasi Nusantara Kelas B,Obligasi,"Ashmore Asset Management Indonesia, PT",IDR,false,false,false,0,1,2025-10-31,2026-10-08,971.81,74675719453.83,
 RD9606,Ashmore Dana Usd Nusantara Kelas B,Obligasi,"Ashmore Asset Management Indonesia, PT",USD,false,false,false,0,1,2025-10-31,2026-10-08,0.9214,4341704.20036,
 RD9607,Kisi Syariah Sukuk Fund,Obligasi,"Korea Investment Management Indonesia, PT",IDR,true,false,false,0,1,2025-10-31,2026-10-08,969.9318,1827173.51,
-RD9608,Rds Ibesln Syailendra Russel Idealratings Top 200 Islamic Technology Index Sharia Usd Kelas B,Reksadana Global,"Syailendra Capital, PT",USD,true,false,true,0,1,2025-11-05,2026-10-07,1.1498,18070654.46489,
+RD9608,Rds Ibesln Syailendra Russel Idealratings Top 200 Islamic Technology Index Sharia Usd Kelas B,Reksadana Global,"Syailendra Capital, PT",USD,true,false,true,0,1,2025-11-05,2026-10-08,1.1361,18070654.46489,
 RD10000,Batavia USD Money Market,Pasar Uang,PT Batavia Prosperindo Aset Manajemen,USD,false,false,false,1,1,2025-11-07,2026-10-08,1.0216,67926093.19116,
 RD10029,Uobam Protected I Usd,Terproteksi,"UOB Asset Management Indonesia, PT",USD,false,false,false,0,1,2025-11-11,2026-10-08,0.994099,2801481.70544,
 RD10040,Bahana Progressive Income Fund Kelas Dana Abadi Pundi Pundi Pl,Obligasi,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2025-11-13,2026-10-08,989.87,1162464808.43,
 RD10041,Mandiri Investa Indeks Obligasi Negara Kelas A,Obligasi,"Mandiri Manajemen Investasi, PT",IDR,false,false,true,0,1,2025-11-12,2026-10-08,957.5458,9807011749.47,
 RD10042,Mandiri Investa Indeks Obligasi Negara Kelas B,Obligasi,"Mandiri Manajemen Investasi, PT",IDR,false,false,true,0,1,2025-11-12,2026-10-08,965.7449,9671444667.23,
 RD10043,Terproteksi Bahana Amanah Proteksi Syariah 7,Terproteksi,"Bahana TCW Investment Management, PT",IDR,true,false,false,0,1,2025-11-12,2026-10-08,971.67,146645997040.4,
-RD10044,Rds Ibesln Syailendra Russel Idealratings Top 200 Islamic Technology Index Sharia Usd Kelas A,Reksadana Global,"Syailendra Capital, PT",USD,true,false,true,0,1,2025-11-13,2026-10-07,1.1593,13123564.61126,
+RD10044,Rds Ibesln Syailendra Russel Idealratings Top 200 Islamic Technology Index Sharia Usd Kelas A,Reksadana Global,"Syailendra Capital, PT",USD,true,false,true,0,1,2025-11-13,2026-10-08,1.1455,13123564.61126,
 RD10062,Sucorinvest Soe Plus Equity Fund,Saham,"Sucorinvest Asset Management, PT",IDR,false,false,false,0,1,2025-11-14,2026-10-08,957.3048,210343062249.2,
 RD10063,Uobam Cash Fund Usd,Pasar Uang,"UOB Asset Management Indonesia, PT",USD,false,false,false,0,1,2025-11-19,2026-10-08,1.025388,24666608.62424,
 RD10064,Sucorinvest Proteksi 53,Terproteksi,"Sucorinvest Asset Management, PT",IDR,false,false,false,0,1,2025-11-19,2026-10-08,1008.0623,1550833635113.04,
@@ -2914,14 +2914,14 @@ RD10238,Batavia Proteksi Maxima 65,Terproteksi,"Batavia Prosperindo Aset Manajem
 RD10239,Bnp Paribas Lumina Proteksi Rupiah 3,Terproteksi,"BNP Paribas Asset Management, PT",IDR,false,false,false,0,1,2026-01-21,2026-10-08,1004.5,1266318560566.04,
 RD10261,Terproteksi Panin 44,Terproteksi,"Panin Asset Management, PT",IDR,false,false,false,0,1,2026-01-23,2026-10-08,975.3817,977061439678.68,
 RD10262,Henan Proteksi Prima Syariah V,Terproteksi,"Henan Putihrai Asset Management, PT",IDR,false,false,false,0,1,2026-01-23,2026-10-08,1015.9217,11132190997.26,
-RD10263,Maybank Global Equity Technology Syariah Usd,Saham,"Maybank Asset Management, PT",USD,true,false,false,0,1,2026-01-26,2026-10-07,1.1873,1994316.74008,
+RD10263,Maybank Global Equity Technology Syariah Usd,Saham,"Maybank Asset Management, PT",USD,true,false,false,0,1,2026-01-26,2026-10-08,1.1701,1994316.74008,
 RD10264,Maybank High Devidend Equity Fund,Saham,"Maybank Asset Management, PT",IDR,false,false,false,0,1,2026-01-26,2026-10-08,876.68,23934663131.44,
 RD10265,Maybank Money Market Usd,Pasar Uang,"Maybank Asset Management, PT",USD,true,false,false,0,1,2026-01-26,2026-10-08,1.0057,1063807.55679,
 RD10266,Eastspring Idr Fixed Income Fund Kelas D,Obligasi,"Eastspring Investments Indonesia, PT",IDR,false,false,false,0,1,2026-01-27,2026-10-06,997.58,403602231028.69,
 RD10267,Manulife Obligasi Negara Indonesia Ii Kelas I3,Obligasi,"Manulife Aset Manajemen Indonesia, PT",IDR,false,false,false,0,1,2026-01-27,2026-10-06,995.12,403079407281.27,
 RD10284,Bahana Sukuk Syariah Kelas D,Obligasi,"Bahana TCW Investment Management, PT",IDR,true,false,false,0,1,2026-01-30,2026-10-08,966.57,18551014749.52,
-RD10285,Ashmore Global Em Equity Syariah Fund Usd,Reksadana Global,"Ashmore Asset Management Indonesia, PT",USD,true,false,false,0,1,2026-03-06,2026-10-07,1.2114,29713729.96739,
-RD10286,Ashmore Global Em Sukuk Fund Usd,Reksadana Global,"Ashmore Asset Management Indonesia, PT",USD,true,false,false,0,1,2026-02-23,2026-10-07,0.9604,5740581.49651,
+RD10285,Ashmore Global Em Equity Syariah Fund Usd,Reksadana Global,"Ashmore Asset Management Indonesia, PT",USD,true,false,false,0,1,2026-03-06,2026-10-08,1.1895,29713729.96739,
+RD10286,Ashmore Global Em Sukuk Fund Usd,Reksadana Global,"Ashmore Asset Management Indonesia, PT",USD,true,false,false,0,1,2026-02-23,2026-10-08,0.9608,5740581.49651,
 RD10287,Mandiri Investa Aktif,Campuran,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,,,,,
 RD10288,Mandiri Investa Aktif Kelas B,Campuran,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2026-02-04,2026-10-08,3703.73,2695377532945.87,
 RD10289,Premier Proteksi Xvii,Terproteksi,"Indo Premier Investment Management, PT",IDR,false,false,false,0,1,2026-02-05,2026-10-08,1008.6347,176301844167.04,
@@ -2940,7 +2940,7 @@ RD10352,Avrist Ada Sukuk Berkah Syariah Kelas B,Obligasi,"Avrist Asset Managemen
 RD10353,Kontrak Investasi Kolektif Pemupukan Dana Tapera Manulife Pendapatan Tetap,Obligasi,,IDR,false,false,false,0,1,,,,,
 RD10354,Kontrak Investasi Kolektif Pemupukan Dana Tapera Manulife Pendapatan Tetap Tanpa Penjualan Kembali,Obligasi,,IDR,false,false,false,0,1,,,,,
 RD10372,Principal Elite S P 500 Information Technology Shariah Usd,Reksadana Global,"Principal Asset Management, PT",USD,true,false,true,0,1,,,,,
-RD10387,Simas Global Equity Snp 500 Esg Shariah Usd,Reksadana Global,"Sinarmas Asset Management, PT",USD,true,false,false,0,1,2026-03-05,2026-10-07,1.202497,993333.16087,
+RD10387,Simas Global Equity Snp 500 Esg Shariah Usd,Reksadana Global,"Sinarmas Asset Management, PT",USD,true,false,false,0,1,2026-03-05,2026-10-08,1.180089,993333.16087,
 RD10394,Eastspring Syariah Berkah Proteksi 5,Terproteksi,"Eastspring Investments Indonesia, PT",IDR,true,false,false,0,1,2026-03-10,2026-10-08,1011.84,608474064029.01,
 RD10395,Setiabudi Dana Proteksi 10,Terproteksi,"Setiabudi Investment Management, PT",IDR,false,false,false,0,1,2026-04-14,2026-10-08,1053.275,19566322933.17,
 RD10396,Syailendra Pendapatan Tetap Premium Kelas C,Obligasi,"Syailendra Capital, PT",IDR,false,false,false,0,1,2026-03-10,2026-10-08,1016.4668,603943614281.3,
@@ -2951,7 +2951,7 @@ RD10469,Bni Am Proteksi Raflesia,Terproteksi,"BNI Asset Management, PT",IDR,fals
 RD10470,Batavia Proteksi Maxima 67,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2026-04-01,2026-10-08,1003.6343,801922940383.56,
 RD10472,Sequis Proteksi Harmonis,Terproteksi,"Sequis Aset Manajemen, PT",IDR,false,false,false,0,1,2026-04-01,2026-10-08,1003.564,501154954565.2,
 RD10475,Syailendra Capital Protected Fund Syariah 7,Terproteksi,"Syailendra Capital, PT",IDR,true,false,false,0,1,2026-04-08,2026-10-08,1010.631,711648702044.19,
-RD10476,Trim Kas USD,Pasar Uang,PT Trimegah Asset Management,USD,false,false,false,1,1,2026-04-08,2026-10-08,1.0121,5796304.10948,
+RD10476,Trim Kas USD,Pasar Uang,PT Trimegah Asset Management,USD,false,false,false,1,1,2026-04-08,2026-10-09,1.0122,5796304.10948,
 RD10477,Mandiri Investa 18,Terproteksi,"Mandiri Manajemen Investasi, PT",IDR,false,false,false,0,1,2026-04-15,2026-10-08,1003.991,2998376980513.97,
 RD10478,Grow USD Liquid Fund,Pasar Uang,PT Grow Investments Indonesia,USD,false,false,false,1,1,2026-04-22,2026-10-08,1.0101,1683936.94,0
 RD10479,Trimegah Terproteksi 36,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2026-04-15,2026-10-08,1006.6995,2337753797135.55,
@@ -2959,12 +2959,12 @@ RD10501,Panin 45,Terproteksi,"Panin Asset Management, PT",IDR,false,false,false,
 RD10502,Grow Usd Liquid Fund,Pasar Uang,"Grow Investments Indonesia, PT",USD,false,false,false,0,1,2026-04-22,2026-04-22,1,,
 RD10503,Bahana Progressive Income Fund Kelas Humanusia,Obligasi,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2026-04-24,2026-10-08,1006.83,1006301410.49,
 RD10504,Simas Pefindo Igrade,Saham,"Sinarmas Asset Management, PT",IDR,false,false,true,0,1,2026-04-28,2026-10-08,967.4,11355892983.72,
-RD10505,Sucorinvest Monthly Income Fund Kelas B,Obligasi,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2026-04-28,2026-10-08,988.85,3547423772.87,
+RD10505,Sucorinvest Monthly Income Fund Kelas B,Obligasi,PT Sucorinvest Asset Management,IDR,false,false,false,1,1,2026-04-28,2026-10-09,989.03,3547423772.87,
 RD10524,Batavia Proteksi Maxima 69,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",IDR,false,false,false,0,1,2026-04-29,2026-10-08,1004.8471,1294614542216.82,
 RD10525,Syailendra Sharia Fixed Income Fund Kelas B,Obligasi,"Syailendra Capital, PT",IDR,true,false,false,0,1,2026-05-04,2026-10-08,1010.4177,53898604099.35,
 RD10527,Pinnacle Dana Obligasi Unggulan Kelas B,Obligasi,"Pinnacle Persada Investama, PT",IDR,false,false,false,0,1,2026-05-08,2026-10-08,1672.1882,701517353.39,
 RD10577,Simpan Dollar Bond Fund,Obligasi,"Simpan Asset Management, PT",USD,false,false,false,0,1,2026-05-19,2026-10-08,0.998,1428810.59342,
-RD10578,Grow Absolute Mixed Alpha Kelas P,Campuran,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2026-05-22,2026-10-08,1029.37,21153246817.72,0
+RD10578,Grow Absolute Mixed Alpha Kelas P,Campuran,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2026-05-22,2026-10-09,1033.12,21153246817.72,0
 RD10580,Grow Absolute Mixed Alpha Kelas Q,Campuran,PT Grow Investments Indonesia,IDR,false,false,false,0,1,2026-05-22,2026-05-22,1000,,0
 RD10581,Grow Absolute Mixed Alpha Kelas M,Campuran,PT Grow Investments Indonesia,IDR,false,false,false,0,1,2026-05-22,2026-05-22,1000,,0
 RD10582,Grow Absolute Mixed Alpha,Campuran,PT Grow Investments Indonesia,IDR,false,false,false,0,1,2026-05-22,2026-05-22,1000,,0
@@ -2978,7 +2978,7 @@ RD10607,Batavia Proteksi Maxima 71,Terproteksi,"Batavia Prosperindo Aset Manajem
 RD10608,Henan Smart Growth Protected Fund Ii,Terproteksi,"Henan Putihrai Asset Management, PT",IDR,false,false,false,0,1,2026-06-02,2026-10-08,1026.8979,35070543956.9,
 RD10609,Trimegah Terproteksi Dana Berkala 19,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2026-06-02,2026-10-08,1016.4001,1279040237942.2,
 RD10636,Bahana Stellar Equity Fund Kelas G,Saham,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2026-06-03,2026-10-08,1044.72,27890001320.18,
-RD10637,Manulife Global Sharia Mixed Asset Dollar Return Kelas I1,Reksadana Global,"Manulife Aset Manajemen Indonesia, PT",USD,true,false,false,0,1,2026-06-08,2026-10-07,1.002,9876790.90293,
+RD10637,Manulife Global Sharia Mixed Asset Dollar Return Kelas I1,Reksadana Global,"Manulife Aset Manajemen Indonesia, PT",USD,true,false,false,0,1,2026-06-08,2026-10-08,0.9974,9876790.90293,
 RD10638,Bahana Centrum Protected Fund 245,Terproteksi,"Bahana TCW Investment Management, PT",IDR,false,false,false,0,1,2026-06-10,2026-10-08,1018.97,1287190727365.55,
 RD10639,Maybank Proteksi Xix,Terproteksi,"Maybank Asset Management, PT",IDR,false,false,false,0,1,2026-06-10,2026-10-08,1020.4787,509557692470.8,
 RD10675,Simpan Cash Syariah Fund Kelas Dana Abadi Istiqlal,Pasar Uang,"Simpan Asset Management, PT",IDR,true,false,false,0,1,2026-06-12,2026-10-08,1001.8387,230359407.08,
@@ -2994,13 +2994,13 @@ RD10854,Trimegah Money Market Usd,Pasar Uang,"Trimegah Asset Management, PT",USD
 RD10855,Avrist Sukuk Berkah 10,Terproteksi,"Avrist Asset Management, PT",IDR,true,false,false,0,1,2026-07-13,2026-10-08,1015.1498,101534341318.39,
 RD10856,Kim Protected Sharia Fund Ii,Terproteksi,"Korea Investment Management Indonesia, PT",IDR,true,false,false,0,1,2026-07-17,2026-10-08,1024.3424,122957111994.87,
 RD10857,Uobam Balanced Strategy Kelas L,Campuran,"UOB Asset Management Indonesia, PT",IDR,false,false,false,0,1,2026-07-17,2026-10-08,994.5302,80311651005,
-RD10881,Manulife Global Sharia Mixed Asset Dollar Return Kelas A1,Reksadana Global,"Manulife Aset Manajemen Indonesia, PT",USD,true,false,false,0,1,2026-07-21,2026-10-07,1.0039,724239.66306,
+RD10881,Manulife Global Sharia Mixed Asset Dollar Return Kelas A1,Reksadana Global,"Manulife Aset Manajemen Indonesia, PT",USD,true,false,false,0,1,2026-07-21,2026-10-08,0.9992,724239.66306,
 RD10882,Manulife Capital Protected Fund 5,Terproteksi,"Manulife Aset Manajemen Indonesia, PT",IDR,false,false,false,0,1,2026-07-22,2026-10-08,1007.99,1207829126864.47,
 RD10883,Grow Obligasi Republik Indonesia,Obligasi,PT Grow Investments Indonesia,IDR,false,false,false,0,1,2026-07-27,2026-07-27,1000,,0
-RD10884,Grow Obligasi Republik Indonesia Kelas O,Obligasi,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2026-07-27,2026-10-08,1020.22,20690027202.58,0
-RD10885,Grow Obligasi Republik Indonesia Kelas M,Obligasi,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2026-07-27,2026-10-08,1020.2,15298777964.43,0
-RD10886,Grow Obligasi Republik Indonesia Kelas Q,Obligasi,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2026-07-27,2026-10-08,1020.2,15309907203.98,0
-RD10887,Grow Saham Indonesia,Saham,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2026-07-27,2026-10-08,987.39,15683787922.67,0
+RD10884,Grow Obligasi Republik Indonesia Kelas O,Obligasi,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2026-07-27,2026-10-09,1020.94,20690027202.58,0
+RD10885,Grow Obligasi Republik Indonesia Kelas M,Obligasi,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2026-07-27,2026-10-09,1020.92,15298777964.43,0
+RD10886,Grow Obligasi Republik Indonesia Kelas Q,Obligasi,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2026-07-27,2026-10-09,1020.92,15309907203.98,0
+RD10887,Grow Saham Indonesia,Saham,PT Grow Investments Indonesia,IDR,false,false,false,1,1,2026-07-27,2026-10-09,1001.23,15683787922.67,0
 RD10888,Panin 47,Terproteksi,"Panin Asset Management, PT",IDR,false,false,false,0,1,2026-07-23,2026-10-08,1018.632,70408541774.07,
 RD10918,Grow Obligasi Republik Indonesia Kelas M,Obligasi,"Grow Investments Indonesia, PT",IDR,false,false,false,0,1,2026-07-27,2026-10-08,1020.2,15298777964.36,
 RD10919,Grow Obligasi Republik Indonesia Kelas O,Obligasi,"Grow Investments Indonesia, PT",IDR,false,false,false,0,1,2026-07-27,2026-10-08,1020.22,20690027202.58,
@@ -3034,7 +3034,7 @@ RD11019,Premier Alpha Strategic Equity Fund,Saham,"Indo Premier Investment Manag
 RD11053,Simas Gemilang 27,Terproteksi,"Sinarmas Asset Management, PT",IDR,false,false,false,0,1,2026-09-09,2026-10-08,1026.0286,218421927235.72,
 RD11054,Panin 49,Terproteksi,"Panin Asset Management, PT",IDR,false,false,false,0,1,2026-09-10,2026-10-08,1026.4343,101564221924.31,
 RD11055,Trimegah Terproteksi 37,Terproteksi,"Trimegah Asset Management, PT",IDR,false,false,false,0,1,2026-09-10,2026-10-08,1004.3798,802441214235.59,
-RD11056,Batavia Gold Sharia Equity Usd,Reksadana Global,"Batavia Prosperindo Aset Manajemen, PT",USD,true,false,false,0,1,2026-09-10,2026-10-07,0.9008,24496643.25036,
+RD11056,Batavia Gold Sharia Equity Usd,Reksadana Global,"Batavia Prosperindo Aset Manajemen, PT",USD,true,false,false,0,1,2026-09-10,2026-10-08,0.9087,24496643.25036,
 RD11057,Trimegah Ft4segood Indonesia Index Kelas A,Saham,"Trimegah Asset Management, PT",IDR,false,false,true,0,1,2026-09-11,2026-10-08,927.1945,3038760463,
 RD11060,Batavia Gold Sharia Etf,Benchmark,"Batavia Prosperindo Aset Manajemen, PT",IDR,true,true,false,0,1,2026-09-15,2026-10-08,1174.9764,1424218181.71,
 RD11061,Bri Mi Proteksi 112,Terproteksi,"BRI Manajemen Investasi, PT",IDR,false,false,false,0,1,2026-09-16,2026-10-08,1003.4678,1252696409557.48,

@@ -34,46 +34,46 @@
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 430
+      "weight": 400
     },
     {
       "asset": "Obligasi",
-      "weight": 7640
+      "weight": 7680
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1930
+      "weight": 1910
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 1,
   "return5d": 9,
   "return1m": 41,
-  "return3m": 122,
-  "returnytd": 213,
-  "return1y": 350,
-  "return3y": 1590,
-  "return5y": 2412,
-  "return10y": 7440,
-  "returnsi": 48374,
+  "return3m": 123,
+  "returnytd": 222,
+  "return1y": 349,
+  "return3y": 1591,
+  "return5y": 2407,
+  "return10y": 7433,
+  "returnsi": 48427,
   "drawdownytd": -156,
   "drawdown1y": -156,
   "drawdown3y": -156,
   "drawdown5y": -156,
   "drawdownsi": -736,
-  "cagr1y": 350,
+  "cagr1y": 349,
   "cagr3y": 504,
-  "cagr5y": 442,
+  "cagr5y": 441,
   "cagr10y": 572,
   "cagrsi": 854,
   "rating": 0,
   "description": "REKSA DANA DANAMAS FLEKSI (selanjutnya disebut “DANAMAS FLEKSI”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal serta pelaksanaannya. DANAMAS FLEKSI bertujuan untuk memperoleh pendapatan yang optimal dalam jangka panjang dengan tingkat fleksibilitas investasi yang cukup tinggi serta mengurangi risiko dengan berbagai jenis investasi portofolio efek yang terdiri dari Efek Ekuitas dan semua turunannya, Efek Bersifat Utang serta Instrumen Pasar Uang melalui penempatan dana investasi minimum 10% (sepuluh persen) dan maksimum 79% (tujuh puluh sembilan persen) pada Efek Bersifat Utang yang diterbitkan oleh perusahaan – perusahaan berbadan hukum Indonesia, Obligasi Pemerintah Republik Indonesia, Obligasi Pemerintah Daerah (“Municipal Bonds”), Efek Bersifat Utang lainnya sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia dan/atau Efek Beragun Aset yang telah dijual dalam Penawaran Umum, serta minimum 2% (dua persen) dan maksimum 79% (tujuh puluh sembilan persen) pada Efek Ekuitas beserta semua turunannya yang telah dijual dalam Penawaran Umum dan/atau dicatatkan di Bursa Efek baik di dalam maupun di luar negeri, serta minimum 2% (dua persen) dan maksimum 79% (tujuh puluh sembilan persen) pada Instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun. Semua investasi portofolio efek tersebut diatas dapat dalam denominasi Rupiah maupun mata uang asing. DANAMAS FLEKSI dapat mengadakan perjanjian pembelian kembali (REPO) sehubungan dengan penyelesaian transaksi Efek-efek tersebut di atas, perjanjian pembelian kembali (REPO) tersebut dapat dalam denominasi Rupiah maupun mata uang asing.",
   "isSyariah": false,
-  "lastPrice": 583738,
+  "lastPrice": 584275,
   "expenseRatio": 285,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "danamas-fleksi-dcd96cb04c99",
   "currency": "IDR",
   "lastAum": 27000000000,

@@ -16,42 +16,42 @@
   },
   "topHoldings": [
     {
+      "instrument": "Bank Aladin Syariah"
+    },
+    {
+      "instrument": "Bank Capital Indonesia"
+    },
+    {
       "instrument": "CIMB Niaga Auto Finance"
     },
     {
-      "instrument": "Integrasi Jaringan Ekosistem"
+      "instrument": "Inegrasi Jaringan Ekosistem"
     },
     {
       "instrument": "Mega Syariah"
-    },
-    {
-      "instrument": "Merdeka Battery Materials"
-    },
-    {
-      "instrument": "BJB Syariah"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 7306
+      "weight": 7375
     },
     {
       "asset": "Pasar Uang",
-      "weight": 2694
+      "weight": 2625
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 1,
-  "return5d": 10,
-  "return1m": 39,
-  "return3m": 120,
-  "returnytd": 331,
+  "return5d": 9,
+  "return1m": 40,
+  "return3m": 121,
+  "returnytd": 341,
   "return1y": 458,
   "return3y": 1642,
-  "return5y": 2670,
+  "return5y": 2671,
   "return10y": null,
-  "returnsi": 4015,
+  "returnsi": 4029,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": 0,
@@ -65,14 +65,14 @@
   "rating": 0,
   "description": "REKSA DANA KIM MONEY MARKET FUND (selanjutnya disebut “KIM MONEY MARKET FUND”) adalah Reksa Dana  berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta  peraturan pelaksanaannya.  KIM MONEY MARKET FUND bertujuan untuk menghasilkan pertumbuhan nilai investasi yang menarik dengan likuiditas  yang tinggi melalui investasi sesuai dengan kebijakan investasi.",
   "isSyariah": false,
-  "lastPrice": 140155,
+  "lastPrice": 140287,
   "expenseRatio": 69,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "kim-money-market-fund-52334320fc4a",
   "currency": "IDR",
-  "lastAum": 763913349113,
+  "lastAum": 643735929646,
   "factsheet": "https://cache.makmur.id/files/products/6717128df238f889f35e63bd/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6717128df238f889f35e63bd/prospectus.pdf",
   "inceptionDate": 20191212,

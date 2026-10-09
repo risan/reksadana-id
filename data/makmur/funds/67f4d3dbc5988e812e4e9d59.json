@@ -22,45 +22,45 @@
       "instrument": "BANK CAPITAL INDONESIA PT TBK"
     },
     {
-      "instrument": "BANK MNC INTERNASIONAL"
-    },
-    {
       "instrument": "BANK NATIONALNOBU TBK, PT"
     },
     {
       "instrument": "BANK PEMBANGUNAN DAERAH RIAU KEPRI, PT"
+    },
+    {
+      "instrument": "PERUSAHAN PENERBIT SBSN 4.4% 06JUNE27"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 2984
+      "weight": 3101
     },
     {
       "asset": "Pasar Uang",
-      "weight": 7016
+      "weight": 6899
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 0,
+  "portfolioAsof": 20260930,
+  "return1d": 1,
   "return5d": 4,
-  "return1m": 19,
+  "return1m": 18,
   "return3m": 64,
-  "returnytd": 194,
-  "return1y": 265,
-  "return3y": 894,
-  "return5y": 1164,
-  "return10y": 1575,
-  "returnsi": 23,
+  "returnytd": 198,
+  "return1y": 263,
+  "return3y": 892,
+  "return5y": 1167,
+  "return10y": 1578,
+  "returnsi": 27,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": 0,
   "drawdown5y": 0,
   "drawdownsi": -1413,
-  "cagr1y": 265,
-  "cagr3y": 290,
+  "cagr1y": 263,
+  "cagr3y": 289,
   "cagr5y": 223,
-  "cagr10y": 147,
+  "cagr10y": 148,
   "cagrsi": 2,
   "rating": 0,
   "description": "Reksa Dana BAHANA LIQUID USD (\"BAHANA LIQUID USD\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang Undang No.8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya.  BAHANA LIQUID USD bertujuan untuk untuk menghasilkan tingkat pengembalian yang optimal melalui investasi pada Instrumen Pasar Uang  dan/atau Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan korporasi yang berdomisili di Indonesia yang jatuh  temponya kurang dari 1 (satu) tahun yang masing-masing berdenominasi Dolar Amerika Serikat.   BAHANA LIQUID USD mempunyai komposisi investasi sebagai berikut:   sebesar 100% (seratus persen) portofolio investasi hanya pada Instrumen Pasar Uang berdenominasi Dolar Amerika Serikat yang  mempunyai jatuh tempo kurang dari 1 (satu) tahun, yaitu antara lain Efek Bersifat Utang berdenominasi Dolar Amerika Serikat yang  mempunyai jatuh tempo kurang dari 1 (satu) tahun, Surat Berharga Negara, Deposito dan Sertifikat Deposito yang mempunyai jatuh  tempo kurang dari 1 (satu) yang masing-masing berdenominasi Dolar Amerika Serikat dan diterbitkan berdasarkan peraturan perundang undangan yang berlaku di Indonesia;   Manajer Investasi dapat menempatkan jumlah tertentu dari aset BAHANA LIQUID USD dalam bentuk Kas antara lain untuk keperluan  penyelesaian transaksi Efek, pemenuhan pembayaran kewajiban kepada Pemegang Unit Penyertaan dan pembayaran biaya-biaya yang  menjadi beban BAHANA LIQUID USD sebagaimana diatur dalam Kontrak dan Prospektus, serta mengantisipasi kebutuhan likuiditas BAHANA  LIQUID USD lainnya.  BAHANA LIQUID USD dapat melakukan investasi pada Efek Bersifat Utang berdenomindasi Dolar Amerika Serikat yang mempunyai jatuh  tempo kurang dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan/atau dicatatkan di Bursa Efek di luar negeri sesuai dengan  peraturan perundangan yang berlaku di Indonesia.",
@@ -69,10 +69,10 @@
   "expenseRatio": 72,
   "minFirstBuy": 1000,
   "minNextBuy": 1000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "bahana-liquid-usd-b2dbfdcba9e3",
   "currency": "USD",
-  "lastAum": 64280000,
+  "lastAum": 60130000,
   "factsheet": "https://cache.makmur.id/files/products/67f4d3dbc5988e812e4e9d59/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/67f4d3dbc5988e812e4e9d59/prospectus.pdf",
   "inceptionDate": 20140827,

@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17865,
+    "exchange_rate": 17830,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Instrumen Pasar Uang",
-      "percentage": 6.08
+      "percentage": 3.39
     },
     {
       "name": "Obligasi Pemerintah",
-      "percentage": 93.92
+      "percentage": 96.61
     }
   ],
   "investment_manager": {

@@ -25,54 +25,54 @@
       "instrument": "SKK IJRH BKLJT II BUMI SERPONG DAMAI THP II TH 2025 SR B"
     },
     {
-      "instrument": "SUKUK IJARAH BERLANJUTAN III SPINDO TAHAP I TAHUN 2026 SERI C"
+      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN I DIAN SWASTATIKA SENTOSA TAHAP IV TAHUN 2025 SERI B"
     },
     {
-      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN I DIAN SWASTATIKA SENTOSA TAHAP IV TAHUN 2025 SERI B"
+      "instrument": "SUKUK WAKALAH I RAHARJA ENERGI CEPU TAHUN 2026 SERI B"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9884
+      "weight": 9479
     },
     {
       "asset": "Pasar Uang",
-      "weight": 116
+      "weight": 521
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -5,
-  "return5d": 11,
-  "return1m": 70,
-  "return3m": 268,
-  "returnytd": 120,
-  "return1y": 278,
-  "return3y": 1062,
-  "return5y": 1822,
+  "portfolioAsof": 20260930,
+  "return1d": -3,
+  "return5d": -17,
+  "return1m": 26,
+  "return3m": 262,
+  "returnytd": 103,
+  "return1y": 235,
+  "return3y": 1105,
+  "return5y": 1800,
   "return10y": null,
-  "returnsi": 6315,
+  "returnsi": 6287,
   "drawdownytd": -256,
   "drawdown1y": -256,
   "drawdown3y": -256,
   "drawdown5y": -256,
   "drawdownsi": -834,
-  "cagr1y": 278,
-  "cagr3y": 342,
-  "cagr5y": 340,
+  "cagr1y": 235,
+  "cagr3y": 356,
+  "cagr5y": 337,
   "cagr10y": null,
-  "cagrsi": 507,
+  "cagrsi": 504,
   "rating": 0,
   "description": "BAHANA MES SYARIAH FUND merupakan reksa dana berbentuk Kontrak Investasi Kolektif yang memiliki multi share class (memiliki beberapa Kelas Unit Penyertaan). BAHANA MES SYARIAH FUND terdiri dari 4 (empat) Kelas Unit Penyertaan yaitu BAHANA MES SYARIAH FUND Kelas G (General), BAHANA MES SYARIAH FUND Kelas D (Dividend), BAHANA MES SYARIAH FUND Kelas A dan BAHANA MES SYARIAH FUND Kelas O. BAHANA MES SYARIAH FUND bertujuan untuk menggalang dukungan finansial dari masyarakat untuk berpartisipasi dalam program-program usaha percepatan pengembangan dan penerapan system ekonomi dan etika usaha yang sesuai dengan syariah Islam di Indonesia yang dijalankan oleh Perkumpulan Masyarakat Ekonomi Syariah (MES). Kontribusi dari BAHANA MES SYARIAH FUND merupakan hal yang sangat penting untuk membangun sinergi dan kemitraan di antara perorangan dan lembaga-lembaga yang terlibat dalam kegiatan ekonomi syariah di Indonesia serta mendorong pengembangan aktivitas ekonomi syariah di Indonesia sehingga menjadi pilihan utama bagi masyarakat dalam kegiatan usaha termasuk dalam hal investasi maupun pembiayaan. BAHANA MES SYARIAH FUND mempunyai komposisi investasi sebagai berikut: 1. minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih BAHANA MES SYARIAH FUND dinvestasikan pada Efek Syariah Berpendapatan Tetap yaitu surat berharga yang diterbitkan oleh Pemerintah Indonesia atau Badan Usaha Milik Negara dan/atau sukuk yang diterbitkan oleh perusahaan-perusahaan berbadan hukum Indonesia melalui Penawaran Umum dan dicatatkan pada Bursa Efek baik di Indonesia maupun di luar negeri yang termasuk kategori layak investasi (investment grade) dengan peringkat minimum BBB (PEFINDO) atau peringkat lain yang setara; 2. minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih BAHANA MES SYARIAH FUND dinvestasikan pada setara kas dan atau Instrumen Pasar Uang Syariah antara lain Surat Berharga Syariah Negara dan/atau sukuk, Sertifikat Deposito Syariah, Deposito Syariah dan/atau Efek Pendapatan Tetap Syariah Berbasis Syariah yang mempunyai jatuh tempo kuraFng dari 1 (satu) tahun dan diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": true,
-  "lastPrice": 163147,
+  "lastPrice": 162872,
   "expenseRatio": 160,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "bahana-mes-syariah-kelas-g-ca1de951de05",
   "currency": "IDR",
-  "lastAum": 245610000000,
+  "lastAum": 248120000000,
   "factsheet": "https://cache.makmur.id/files/products/60d201504cc7bb3913edb071/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/60d201504cc7bb3913edb071/prospectus.pdf",
   "inceptionDate": 20161111,

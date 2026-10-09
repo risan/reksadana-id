@@ -22,13 +22,13 @@
       "instrument": "Bank Tabungan Negara USD"
     },
     {
-      "instrument": "Bank Victoria USD"
+      "instrument": "Bank J Trust USD"
     },
     {
       "instrument": "Bank Rakyat Indonesia USD"
     },
     {
-      "instrument": "Bank J Trust USD"
+      "instrument": "Bank Victoria USD"
     }
   ],
   "assetAllocations": [
@@ -37,7 +37,7 @@
       "weight": 10000
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 1,
   "return5d": 5,
   "return1m": 21,
@@ -47,7 +47,7 @@
   "return3y": null,
   "return5y": null,
   "return10y": null,
-  "returnsi": 117,
+  "returnsi": 122,
   "drawdownytd": null,
   "drawdown1y": null,
   "drawdown3y": null,
@@ -57,7 +57,7 @@
   "cagr3y": null,
   "cagr5y": null,
   "cagr10y": null,
-  "cagrsi": 240,
+  "cagrsi": 243,
   "rating": 0,
   "description": "REKSA DANA TRIM KAS USD (“TRIM KAS USD”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang Undang No. 8 tahun 1995 tentang Pasar Modal sebagaimana diubah dengan Undang-Undang No. 4 Tahun 2023 tentang  Pengembangan dan Penguatan Sektor Keuangan (Selanjutnya disebut “Undang-Undang Pasar Modal”) beserta peraturan  pelaksanaannya.    TRIM KAS USD bertujuan untuk memberikan tingkat likuiditas yang tinggi sekaligus memberikan tingkat pendapatan investasi  yang optimal dalam denominasi Dolar Amerika Serikat (USD).",
   "isSyariah": false,
@@ -65,10 +65,10 @@
   "expenseRatio": 70,
   "minFirstBuy": 100,
   "minNextBuy": 10,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "trim-kas-usd-ea38e6b1f0f3",
   "currency": "USD",
-  "lastAum": 5789000,
+  "lastAum": 5835000,
   "factsheet": "https://cache.makmur.id/files/products/6a4e0afcbb5c471dfd215d6d/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6a4e0afcbb5c471dfd215d6d/prospectus.pdf",
   "inceptionDate": 20260408,

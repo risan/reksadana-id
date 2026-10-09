@@ -16,16 +16,16 @@
   },
   "topHoldings": [
     {
-      "instrument": "Bank Panin Syariah"
-    },
-    {
-      "instrument": "Bank Victoria"
-    },
-    {
       "instrument": "Bank Jabar Syariah"
     },
     {
+      "instrument": "Bank Panin Syariah"
+    },
+    {
       "instrument": "BPD Jawa Tengah"
+    },
+    {
+      "instrument": "Bank Tabungan Negara"
     },
     {
       "instrument": "Bank Sulutgo"
@@ -37,38 +37,38 @@
       "weight": 10000
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 1,
-  "return5d": 9,
-  "return1m": 39,
-  "return3m": 116,
-  "returnytd": 289,
-  "return1y": 376,
-  "return3y": 1238,
-  "return5y": 1889,
+  "return5d": 10,
+  "return1m": 40,
+  "return3m": 118,
+  "returnytd": 299,
+  "return1y": 378,
+  "return3y": 1240,
+  "return5y": 1895,
   "return10y": null,
-  "returnsi": 2386,
+  "returnsi": 2398,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": -7,
   "drawdown5y": -7,
   "drawdownsi": -7,
-  "cagr1y": 376,
+  "cagr1y": 378,
   "cagr3y": 397,
-  "cagr5y": 352,
+  "cagr5y": 353,
   "cagr10y": null,
   "cagrsi": 347,
   "rating": 0,
   "description": "REKSA DANA TRIMEGAH DANA KAS 1 (selanjutnya disebut “TRIMEGAH DANA KAS 1”) adalah Reksa Dana Berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. TRIMEGAH DANA KAS 1 bertujuan untuk memenuhi kebutuhan likuiditas tunai dalam waktu singkat dengan potensi tambahan hasil investasi. TRIMEGAH DANA KAS 1 akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau Efek Bersifat Utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang diperdagangkan baik di dalam maupun di luar negeri dan/atau deposito dalam mata uang Rupiah, sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 123858,
+  "lastPrice": 123976,
   "expenseRatio": 97,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "trimegah-dana-kas-1-30b7ad241d4e",
   "currency": "IDR",
-  "lastAum": 34260000000,
+  "lastAum": 38290000000,
   "factsheet": "https://cache.makmur.id/files/products/64772376b60bc963c1abbde7/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/64772376b60bc963c1abbde7/prospectus.pdf",
   "inceptionDate": 20200625,

@@ -61,19 +61,19 @@
   "asset": [
     {
       "name": "Pendapatan Tetap",
-      "percentage": 98.95
+      "percentage": 99.73
     },
     {
       "name": "Pasar Uang",
-      "percentage": 1.05
+      "percentage": 0.27
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Bank Deposito Bank MNC",
+      "name": "Obligasi Berkelanjutan Bumi Tahap V Tahun 2026 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Bumi Tahap V Tahun 2026 Seri B",
+      "name": "Obligasi Berkelanjutan V Medco Energi Internasional Tahap II Tahun 2024 Seri C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,9 +91,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi I Adaro Indonesia Tahun 2026 Seri B",
+      "name": "Obligasi Adaro Indonesia Tahun 2026 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +103,7 @@
       "symbol": "",
       "name": "Obligasi Keberlanjutan Berkelanjutan I Bank BJB Tahap II Tahun 2026 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +113,7 @@
       "symbol": "",
       "name": "Obligasi Negara Republik Indonesia Seri FR0068",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +123,7 @@
       "symbol": "",
       "name": "Obligasi Negara Republik Indonesia Seri FR0074",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +133,7 @@
       "symbol": "FR0097",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 5804,
       "product_type": "FR",
@@ -143,7 +143,7 @@
       "symbol": "FR0103",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 8710,
       "product_type": "FR",
@@ -151,9 +151,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan I Pindo Deli Pulp & Paper Tahap II Tahun 2025 Seri C",
+      "name": "Sukuk Mudharabah Berkelanjutan Pindo Deli Pulp And Paper Tahap II Tahun 2025 Seri C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -163,7 +163,7 @@
       "symbol": "",
       "name": "Sukuk Mudharabah Berkelanjutan IV Indah Kiat Pulp & Paper Tahap V Tahun 2025",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,7 +196,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 42047086711.73,
+    "value": 42047090000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -208,40 +208,40 @@
     "percentage": 0.0799
   },
   "cagr": {
-    "1y": 0.01014938757209527,
-    "3y": 0.05101445445607622,
-    "5y": 0.039891880016245995,
-    "10y": 0.04925706653394135,
-    "all": 0.05611711225636684
+    "1y": 0.0066486324625825155,
+    "3y": 0.05100725896029923,
+    "5y": 0.03997893396186902,
+    "10y": 0.04930098458820753,
+    "all": 0.05615278510493171
   },
   "cagr_adjusted": {
-    "1y": 0.01014938757209527,
-    "3y": 0.05101445445607622,
-    "5y": 0.039891880016245995,
-    "10y": 0.04925706653394135,
-    "all": 0.056129863997136376
+    "1y": 0.0066486324625825155,
+    "3y": 0.05100725896029923,
+    "5y": 0.03997893396186902,
+    "10y": 0.04930098458820753,
+    "all": 0.05615278510493171
   },
   "simplereturn": {
-    "1d": -0.00014120874687328921,
-    "1m": 0.0013586476152955829,
-    "3m": 0.0214322514167955,
-    "ytd": -0.009403323640215566,
-    "1y": 0.01014938757209527,
-    "3y": 0.16098355087867233,
-    "5y": 0.21602060843964654,
-    "10y": 0.6174059178162654,
-    "all": 0.9671382930168873
+    "1d": 0.0004186421870271406,
+    "1m": 0.0011710606680095381,
+    "3m": 0.02351563064411266,
+    "ytd": -0.008988618081162358,
+    "1y": 0.0066486324625825155,
+    "3y": 0.16095970593055653,
+    "5y": 0.2165296859666339,
+    "10y": 0.6180830321670108,
+    "all": 0.9679618200940607
   },
   "changesvalue": {
-    "1d": -0.2800000000002001,
-    "1m": 2.689999999999827,
-    "3m": 41.59999999999991,
-    "ytd": -18.820000000000164,
-    "1y": 19.919999999999845,
-    "3y": 274.90999999999985,
-    "5y": 352.1999999999998,
-    "10y": 756.81,
-    "all": 974.7399999999999
+    "1d": 0.8300000000001546,
+    "1m": 2.3200000000001637,
+    "3m": 45.570000000000164,
+    "ytd": -17.99000000000001,
+    "1y": 13.100000000000136,
+    "3y": 274.99,
+    "5y": 353.03,
+    "10y": 757.6400000000001,
+    "all": 975.57
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -263,9 +263,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-08",
+    "date": "2026-10-09",
     "first_date": "2014-05-22",
-    "value": 1982.6
+    "value": 1983.43
   },
   "trade": null
 }

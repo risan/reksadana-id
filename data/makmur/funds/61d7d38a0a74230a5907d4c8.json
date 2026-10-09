@@ -19,64 +19,64 @@
       "instrument": "Medco Energi Internasional Tbk"
     },
     {
-      "instrument": "Indosat Tbk"
+      "instrument": "Aneka Tambang Tbk"
     },
     {
-      "instrument": "Sukuk Mudharabah Berkelanjutan II Oki Pulp & Paper Mills Tahap III Tahun 2025 Seri B"
+      "instrument": "Timah Tbk"
     },
     {
-      "instrument": "Dian Swastatika Sentosa Tbk"
+      "instrument": "Nexai Digital Infrastruktur Tbk"
     },
     {
-      "instrument": "Bumi Resources Tbk"
+      "instrument": "Adaro Andalan Indonesia Tbk"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 6999
+      "weight": 7244
     },
     {
       "asset": "Obligasi",
-      "weight": 569
+      "weight": 600
     },
     {
       "asset": "Pasar Uang",
-      "weight": 2432
+      "weight": 2156
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 104,
-  "return5d": -137,
-  "return1m": -441,
-  "return3m": 735,
-  "returnytd": -1610,
-  "return1y": -1145,
-  "return3y": 437,
-  "return5y": 1621,
-  "return10y": 3412,
-  "returnsi": 23803,
+  "portfolioAsof": 20260930,
+  "return1d": 42,
+  "return5d": -36,
+  "return1m": -923,
+  "return3m": 657,
+  "returnytd": -1641,
+  "return1y": -1213,
+  "return3y": 745,
+  "return5y": 1387,
+  "return10y": 3351,
+  "returnsi": 23680,
   "drawdownytd": -3266,
   "drawdown1y": -3266,
   "drawdown3y": -3266,
   "drawdown5y": -3266,
   "drawdownsi": -6169,
-  "cagr1y": -1145,
-  "cagr3y": 144,
-  "cagr5y": 305,
-  "cagr10y": 298,
-  "cagrsi": 635,
+  "cagr1y": -1213,
+  "cagr3y": 242,
+  "cagr5y": 263,
+  "cagr10y": 293,
+  "cagrsi": 633,
   "rating": 0,
   "description": "REKSA DANA TRIM SYARIAH BERIMBANG (selanjutnya disebut “TRIM SYARIAH BERIMBANG”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Tujuan investasi TRIM SYARIAH BERIMBANG adalah untuk mempertahankan investasi awal dan untuk memperoleh pertumbuhan nilai investasi yang optimal dalam jangka panjang sesuai dengan Prinsip Syariah di Pasar Modal melalui investasi pada Efek bersifat ekuitas dan Efek bersifat utang yang tercantum dalam Daftar Efek Syariah yang ditetapkan oleh OJK dan/atau pihak lain yang diakui oleh OJK dan Instrumen Pasar Uang yang sesuai dengan Prinsip Syariah di Pasar Modal. Kebijakan investasi TRIM SYARIAH BERIMBANG adalah sebesar minimum 5% (lima persen) dan maksimum 75% (tujuh puluh lima persen) pada Efek bersifat ekuitas yang sesuai dengan Prinsip Syariah di Pasar Modal, minimum 5% (lima persen) dan maksimum 75% (tujuh puluh lima persen) pada Efek bersifat utang yang sesuai dengan Prinsip Syariah di Pasar Modal serta minimum 5% (lima persen) dan maksimum 75% (tujuh puluh lima persen) pada Instrumen Pasar Uang yang sesuai dengan Prinsip Syariah di Pasar Modal.",
   "isSyariah": true,
-  "lastPrice": 338033,
+  "lastPrice": 336801,
   "expenseRatio": 517,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "trim-syariah-berimbang-a9a85d3f0182",
   "currency": "IDR",
-  "lastAum": 147280000000,
+  "lastAum": 140160000000,
   "factsheet": "https://cache.makmur.id/files/products/61d7d38a0a74230a5907d4c8/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/61d7d38a0a74230a5907d4c8/prospectus.pdf",
   "inceptionDate": 20061227,

@@ -16,10 +16,10 @@
   },
   "topHoldings": [
     {
-      "instrument": "OBL BKLJT III SINAR MAS MULTIARTHA THP IV THN 2025"
+      "instrument": "OBL BKLJT V INDAH KIAT PULP & PAPER THP V THN 2025 SERI B"
     },
     {
-      "instrument": "OBL BKLJT V INDAH KIAT PULP & PAPER THP V THN 2025 SERI B"
+      "instrument": "OBL BKLJT V SMART THP I THN 2025"
     },
     {
       "instrument": "OBL BKLJT VI INDOMOBIL FINANCE DENGAN TINGKAT BUNGA TETAP THN 2025 SERI C"
@@ -34,45 +34,45 @@
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9800
+      "weight": 9567
     },
     {
       "asset": "Pasar Uang",
-      "weight": 200
+      "weight": 433
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 1,
   "return5d": 10,
-  "return1m": 44,
-  "return3m": 135,
-  "returnytd": 328,
-  "return1y": 482,
+  "return1m": 45,
+  "return3m": 136,
+  "returnytd": 338,
+  "return1y": 479,
   "return3y": 2072,
-  "return5y": 4545,
-  "return10y": 10845,
-  "returnsi": 12418,
+  "return5y": 4559,
+  "return10y": 10866,
+  "returnsi": 12441,
   "drawdownytd": -52,
   "drawdown1y": -52,
   "drawdown3y": -52,
   "drawdown5y": -118,
   "drawdownsi": -1679,
-  "cagr1y": 482,
+  "cagr1y": 479,
   "cagr3y": 648,
-  "cagr5y": 778,
-  "cagr10y": 762,
+  "cagr5y": 780,
+  "cagr10y": 763,
   "cagrsi": 804,
   "rating": 0,
   "description": "STAR STABLE INCOME FUND adalah Reksa Dana yang dirancang khusus untuk investor yang menginginkan pertumbuhan aset yang stabil dan berkesinambungan dengan tingkat risiko yang terukur. Fokus utama Reksa Dana ini adalah melindungi modal para Pemegang Unit Penyertaan.  Untuk mencapai tujuan ini, STAR STABLE INCOME FUND mengalokasikan minimal 80% dari Nilai Aktiva Bersih pada Efek bersifat utang, seperti obligasi pemerintah dan korporasi. Reksa Dana ini juga dapat berinvestasi pada instrumen pasar uang dan deposito untuk menjaga likuiditas dan fleksibilitas portofolio.  Dengan strategi investasi yang terukur dan fokus pada aset yang relatif stabil, STAR STABLE INCOME FUND dapat menjadi pilihan tepat bagi investor yang ingin meminimalkan risiko dan meraih pertumbuhan aset yang berkesinambungan dalam jangka panjang.",
   "isSyariah": false,
-  "lastPrice": 224176,
+  "lastPrice": 224408,
   "expenseRatio": 224,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "star-stable-income-fund-kelas-utama-a4accf31b845",
   "currency": "IDR",
-  "lastAum": 9845291757982,
+  "lastAum": 9567543463557,
   "factsheet": "https://cache.makmur.id/files/products/65fcffb34a56f04220d17e11/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/65fcffb34a56f04220d17e11/prospectus.pdf",
   "inceptionDate": 20160429,

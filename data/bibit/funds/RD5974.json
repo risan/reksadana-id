@@ -59,12 +59,16 @@
   },
   "asset": [
     {
+      "name": "Deposito",
+      "percentage": 5.83
+    },
+    {
       "name": "Fixed Income",
-      "percentage": 97.99
+      "percentage": 89.83
     },
     {
       "name": "Cash",
-      "percentage": 2.01
+      "percentage": 4.34
     }
   ],
   "investment_manager": {

@@ -16,10 +16,10 @@
   },
   "topHoldings": [
     {
-      "instrument": "Bank Deposito BJB sy"
+      "instrument": "Bank Deposito Aladin sy"
     },
     {
-      "instrument": "Bank Deposito Sumselbabel sy"
+      "instrument": "SBSN Seri PBS034"
     },
     {
       "instrument": "Sukuk Ijarah Berkelanjutan II Indosat Tahap II Tahun 2017 Seri E"
@@ -34,45 +34,45 @@
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 8933
+      "weight": 9087
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1067
+      "weight": 913
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 1,
-  "return5d": 1,
-  "return1m": 67,
-  "return3m": 212,
-  "returnytd": 199,
-  "return1y": 323,
-  "return3y": 2287,
-  "return5y": 3546,
+  "portfolioAsof": 20260930,
+  "return1d": 0,
+  "return5d": -14,
+  "return1m": 14,
+  "return3m": 181,
+  "returnytd": 184,
+  "return1y": 289,
+  "return3y": 2244,
+  "return5y": 3524,
   "return10y": null,
-  "returnsi": 8583,
+  "returnsi": 8557,
   "drawdownytd": -183,
   "drawdown1y": -183,
   "drawdown3y": -183,
   "drawdown5y": -183,
   "drawdownsi": -902,
-  "cagr1y": 323,
-  "cagr3y": 711,
-  "cagr5y": 626,
+  "cagr1y": 289,
+  "cagr3y": 698,
+  "cagr5y": 622,
   "cagr10y": null,
-  "cagrsi": 700,
+  "cagrsi": 697,
   "rating": 0,
   "description": "REKSA DANA SYARIAH BERBASIS SUKUK AVRIST ADA SUKUK BERKAH SYARIAH (selanjutnya disebut \"AVRIST ADA SUKUK  BERKAH SYARIAH\" ) adalah Reksa Dana Syariah Berbasis Sukuk berbentuk Kontrak Investasi Kolektif berdasarkan Undang- Undang  No. 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya.  AVRIST ADA SUKUK BERKAH SYARIAH bertujuan untuk memberikan tingkat pendapatan nilai investasi yang relatif stabil melalui  investasi pada Sukuk dan/atau Surat Berharga Syariah Negara dan/atau surat berharga komersial Syariah yang jatuh temponya 1  (satu) tahun atau lebih dan masuk kategori layak investasi (investment grade) serta menurunkan tingkat risiko melalui pemilihan  penerbit surat berharga secara sangat hati-hati.",
   "isSyariah": true,
-  "lastPrice": 102337,
+  "lastPrice": 102190,
   "expenseRatio": 200,
   "minFirstBuy": 10000000,
   "minNextBuy": 10000000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "avrist-ada-sukuk-berkah-syariah-kelas-a-b19105b91453",
   "currency": "IDR",
-  "lastAum": 318659050000,
+  "lastAum": 368428320000,
   "factsheet": "https://cache.makmur.id/files/products/68c7bd9b334caac934c5c829/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/68c7bd9b334caac934c5c829/prospectus.pdf",
   "inceptionDate": 20170807,

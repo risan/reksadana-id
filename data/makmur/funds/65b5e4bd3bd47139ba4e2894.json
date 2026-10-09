@@ -16,6 +16,9 @@
   },
   "topHoldings": [
     {
+      "instrument": "Obligasi Berkelanjutan I Medco Power IndonesiaTahap I Tahun 2025 Seri A"
+    },
+    {
       "instrument": "Obligasi Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap III Tahun 2025"
     },
     {
@@ -26,38 +29,35 @@
     },
     {
       "instrument": "Obligasi Berkelanjutan VI Adira Finance Tahap V Tahun 2025 Seri B"
-    },
-    {
-      "instrument": "Obligasi Berkelanjutan VI Federal International Finance Tahap IV Tahun 2024 Seri B"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9244
+      "weight": 9194
     },
     {
       "asset": "Pasar Uang",
-      "weight": 756
+      "weight": 806
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 2,
-  "return5d": 12,
-  "return1m": 54,
+  "portfolioAsof": 20260930,
+  "return1d": 1,
+  "return5d": 10,
+  "return1m": 49,
   "return3m": 170,
-  "returnytd": 160,
-  "return1y": 357,
+  "returnytd": 170,
+  "return1y": 343,
   "return3y": null,
   "return5y": null,
   "return10y": null,
-  "returnsi": 1939,
+  "returnsi": 1951,
   "drawdownytd": -142,
   "drawdown1y": -142,
   "drawdown3y": null,
   "drawdown5y": null,
   "drawdownsi": -142,
-  "cagr1y": 357,
+  "cagr1y": 343,
   "cagr3y": null,
   "cagr5y": null,
   "cagr10y": null,
@@ -65,14 +65,14 @@
   "rating": 0,
   "description": "Reksa Dana Avrist Emerald Stable Fund merupakan produk investasi terstruktur yang dibentuk sesuai dengan UU No. 8 tahun 1995 dan UU No. 4 tahun 2023 tentang Pasar Modal dan Sektor Keuangan.   Manajer Investasi juga memastikan bahwa investasi pada Efek luar negeri tidak melanggar hukum dan peraturan yang berlaku, menjadikannya pilihan investasi yang aman dan terpercayatable Fund mengalokasikan portofolio investasinya dengan komposisi minimum 80% pada Efek bersifat utang dan maksimum 20% pada Efek ekuitas atau instrumen pasar uang, yang diperdagangkan baik domestik maupun internasional.   Dengan strategi investasi yang hati-hati dan kepatuhan terhadap regulasi di Indonesia, reksa dana ini mengupayakan kinerja stabil dengan risiko yang terkontrol. Manajer Investasi juga memastikan bahwa investasi pada Efek luar negeri tidak melanggar hukum dan peraturan yang berlaku, menjadikannya pilihan investasi yang aman dan terpercaya.",
   "isSyariah": false,
-  "lastPrice": 119391,
+  "lastPrice": 119508,
   "expenseRatio": 209,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "avrist-emerald-stable-fund-77604828d7c4",
   "currency": "IDR",
-  "lastAum": 354388890000,
+  "lastAum": 311602540000,
   "factsheet": "https://cache.makmur.id/files/products/65b5e4bd3bd47139ba4e2894/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/65b5e4bd3bd47139ba4e2894/prospectus.pdf",
   "inceptionDate": 20240129,

@@ -16,9 +16,6 @@
   },
   "topHoldings": [
     {
-      "instrument": "ADARO ANDALAN INDONESIA Tbk"
-    },
-    {
       "instrument": "AMMAN MINERAL INTERNASIONAL Tbk"
     },
     {
@@ -29,50 +26,53 @@
     },
     {
       "instrument": "BANK MANDIRI ( PERSERO ) Tbk"
+    },
+    {
+      "instrument": "BANK RAKYAT INDONESIA (PERSERO) Tbk"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 9354
+      "weight": 8698
     },
     {
       "asset": "Pasar Uang",
-      "weight": 646
+      "weight": 1302
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 58,
-  "return5d": -247,
-  "return1m": -539,
-  "return3m": 792,
-  "returnytd": -1936,
-  "return1y": -1940,
-  "return3y": -2424,
-  "return5y": -1140,
-  "return10y": -638,
-  "returnsi": 2070,
+  "portfolioAsof": 20260930,
+  "return1d": 94,
+  "return5d": 112,
+  "return1m": -597,
+  "return3m": 560,
+  "returnytd": -1845,
+  "return1y": -1976,
+  "return3y": -2249,
+  "return5y": -1321,
+  "return10y": -574,
+  "returnsi": 2206,
   "drawdownytd": -3492,
   "drawdown1y": -3492,
   "drawdown3y": -3877,
   "drawdown5y": -3877,
   "drawdownsi": -4534,
-  "cagr1y": -1940,
-  "cagr3y": -884,
-  "cagr5y": -239,
-  "cagr10y": -66,
-  "cagrsi": 134,
+  "cagr1y": -1976,
+  "cagr3y": -814,
+  "cagr5y": -279,
+  "cagr10y": -59,
+  "cagrsi": 142,
   "rating": 0,
   "description": "REKSA DANA SAHAM EASTSPRING INVESTMENTS ALPHA NAVIGATOR adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. REKSA DANA SAHAM EASTSPRING INVESTMENTS ALPHA NAVIGATOR bertujuan untuk memberikan imbal hasil investasi yang menarik dalam jangka panjang melalui investasi utama pada Efek bersifat ekuitas yang diterbitkan di Indonesia. REKSA DANA SAHAM EASTSPRING INVESTMENTS ALPHA NAVIGATOR akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) pada Efek bersifat ekuitas yang diterbitkan oleh korporasi Indonesia yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito berdenominasi Rupiah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 120702,
+  "lastPrice": 122057,
   "expenseRatio": 381,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "eastspring-investments-alpha-navigator-kelas-a-e68fb158eeb6",
   "currency": "IDR",
-  "lastAum": 624840000000,
+  "lastAum": 917540000000,
   "factsheet": "https://cache.makmur.id/files/products/615ebb9706b6703faa18b106/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/615ebb9706b6703faa18b106/prospectus.pdf",
   "inceptionDate": 20120829,

@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17865,
+    "exchange_rate": 17830,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 87.02
+      "percentage": 86.52
     },
     {
       "name": "Kas & Pasar Uang",
-      "percentage": 12.98
+      "percentage": 13.48
     }
   ],
   "holding": [

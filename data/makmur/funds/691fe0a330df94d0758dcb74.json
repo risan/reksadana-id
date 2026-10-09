@@ -16,6 +16,9 @@
   },
   "topHoldings": [
     {
+      "instrument": "BANK BUKOPIN SYARIAH Tbk, PT"
+    },
+    {
       "instrument": "BRIS"
     },
     {
@@ -25,54 +28,51 @@
       "instrument": "INTEGRASI JARINGAN EKOSISTEM, PT"
     },
     {
-      "instrument": "BANK BUKOPIN SYARIAH Tbk, PT"
-    },
-    {
-      "instrument": "OKI PULP & PAPER MILLS, PT"
+      "instrument": "MEDCO POWER INDONESIA, PT"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 8188
+      "weight": 8763
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1812
+      "weight": 1237
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": 0,
-  "return5d": 10,
-  "return1m": 53,
+  "portfolioAsof": 20260930,
+  "return1d": 2,
+  "return5d": 11,
+  "return1m": 49,
   "return3m": 226,
-  "returnytd": 463,
-  "return1y": 810,
-  "return3y": 3152,
-  "return5y": 5067,
-  "return10y": 12508,
-  "returnsi": 13055,
+  "returnytd": 474,
+  "return1y": 790,
+  "return3y": 3194,
+  "return5y": 5053,
+  "return10y": 12603,
+  "returnsi": 13081,
   "drawdownytd": -115,
   "drawdown1y": -115,
   "drawdown3y": -115,
   "drawdown5y": -144,
   "drawdownsi": -1584,
-  "cagr1y": 810,
-  "cagr3y": 956,
-  "cagr5y": 854,
-  "cagr10y": 845,
+  "cagr1y": 790,
+  "cagr3y": 968,
+  "cagr5y": 852,
+  "cagr10y": 850,
   "cagrsi": 869,
   "rating": 0,
   "description": "REKSA DANA SYARIAH PENDAPATAN TETAP INSIGHT ELITE FUND adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Pasar Modal. REKSA DANA SYARIAH PENDAPATAN TETAP INSIGHT ELITE FUND bertujuan untuk mendapatkan pengembalian investasi yang optimal dan meningkat dalam jangka panjang serta memberikan kesempatan kepada Pemegang Unit Penyertaan untuk berpartisipasi dalam Kegiatan Sosial Kemanusiaan dan/atau Sosial Keagamaan.",
   "isSyariah": true,
-  "lastPrice": 230548,
+  "lastPrice": 230810,
   "expenseRatio": 65,
   "minFirstBuy": 100000000,
   "minNextBuy": 50000000,
-  "asof": 20261002,
+  "asof": 20261009,
   "url": "insight-elite-fund-f520ee40bd4b",
   "currency": "IDR",
-  "lastAum": 157360868407,
+  "lastAum": 192956906683,
   "factsheet": "https://cache.makmur.id/files/products/691fe0a330df94d0758dcb74/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/691fe0a330df94d0758dcb74/prospectus.pdf",
   "inceptionDate": 20160929,
