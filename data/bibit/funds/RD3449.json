@@ -19,7 +19,6 @@
   },
   "released_date": "2018-12-26",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,7 +60,7 @@
   },
   "asset": [
     {
-      "name": "kas/Pasar Uang Syariah",
+      "name": "Kas dan/atau Pasar Uang",
       "percentage": 100
     }
   ],
@@ -70,7 +69,7 @@
       "symbol": "",
       "name": "BANK CIMB NIAGA SYARIAH",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -80,7 +79,7 @@
       "symbol": "",
       "name": "BANK DANAMON INDONESIA UNIT USAHA SYARIAH",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -90,7 +89,7 @@
       "symbol": "",
       "name": "BANK PERMATA UNIT USAHA SYARIAH",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -100,7 +99,7 @@
       "symbol": "",
       "name": "PT BANK ALADIN SYARIAH",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -110,7 +109,7 @@
       "symbol": "",
       "name": "PT BANK BTPN SYARIAH",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -120,7 +119,7 @@
       "symbol": "",
       "name": "PT BANK SYARIAH INDONESIA TBK",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -130,7 +129,7 @@
       "symbol": "PBS003",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6020,
       "product_type": "FR",
@@ -163,7 +162,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 2901075696.09,
+    "value": 48360000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -175,40 +174,40 @@
     "percentage": 0.0536
   },
   "cagr": {
-    "1y": 0.03239881638998954,
-    "3y": 0.03249109850699705,
-    "5y": 0.025761948617936348,
+    "1y": 0.03244625722978167,
+    "3y": 0.032535680981498505,
+    "5y": 0.025782864627382107,
     "10y": null,
-    "all": 0.027452494272918182
+    "all": 0.027459793846958513
   },
   "cagr_adjusted": {
-    "1y": 0.03239881638998954,
-    "3y": 0.03249109850699705,
-    "5y": 0.025761948617936348,
+    "1y": 0.03244625722978167,
+    "3y": 0.032535680981498505,
+    "5y": 0.025782864627382107,
     "10y": null,
-    "all": 0.02746228872732659
+    "all": 0.027469587493083703
   },
   "simplereturn": {
-    "1d": 0.00012146240738486469,
-    "1m": 0.003746474981511261,
-    "3m": 0.011224915874536334,
-    "ytd": 0.02663208817515339,
-    "1y": 0.03239881638998954,
-    "3y": 0.10067460989368415,
-    "5y": 0.13561971312982712,
+    "1d": 0.00012954416646437927,
+    "1m": 0.0032894469668049986,
+    "3m": 0.011248280830440827,
+    "ytd": 0.026765082373281457,
+    "1y": 0.03244625722978167,
+    "3y": 0.1008171958685713,
+    "5y": 0.13573549828526232,
     "10y": null,
-    "all": 0.2347542688047346
+    "all": 0.23491422401727524
   },
   "changesvalue": {
-    "1d": 0.14999999999986358,
-    "1m": 4.6099999999999,
-    "3m": 13.709999999999809,
-    "ytd": 32.039999999999964,
-    "1y": 38.75999999999999,
-    "3y": 112.9699999999998,
-    "5y": 147.5,
+    "1d": 0.16000000000008185,
+    "1m": 4.0499999999999545,
+    "3m": 13.740000000000009,
+    "ytd": 32.200000000000045,
+    "1y": 38.819999999999936,
+    "3y": 113.12999999999988,
+    "5y": 147.62999999999988,
     "10y": null,
-    "all": 234.81999999999994
+    "all": 234.98000000000002
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -226,9 +225,9 @@
     "all": -0.0245366895675769
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2018-12-27",
-    "value": 1235.1
+    "value": 1235.26
   },
   "trade": null
 }

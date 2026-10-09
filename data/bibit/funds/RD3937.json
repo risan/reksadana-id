@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17845,
+    "exchange_rate": 17865,
     "currency": "USD"
   },
   "is_has_dividend": true,
@@ -60,12 +60,12 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang Syariah",
-      "percentage": 13.97
+      "name": "Obligasi Syariah",
+      "percentage": 100
     },
     {
-      "name": "Obligasi Syariah",
-      "percentage": 86.03
+      "name": "Pasar Uang Syariah",
+      "percentage": 0
     }
   ],
   "holding": [
@@ -73,7 +73,7 @@
       "symbol": "",
       "name": "INDONESIA GOVT SUKUK 4.5% 01/12/2030",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +83,17 @@
       "symbol": "",
       "name": "PERUSAHAAN PENERBIT 4.55% 23/07/2030",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PERUSAHAAN PENERBIT SBSN 1% 09/06/2031",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +103,7 @@
       "symbol": "",
       "name": "PERUSAHAAN PENERBIT SBSN 4.4%01/03/28",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +113,7 @@
       "symbol": "",
       "name": "PERUSAHAAN PENERBIT SBSN 5.1% 02/07/2029",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -111,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "PERUSAHAAN PENERBIT SBSN 5.4% 15/11/2028",
+      "name": "PERUSAHAAN PENERBIT SBSN 5:4% 15/11/2028",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,7 +154,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 13046632.8717,
+    "value": 13130000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -156,60 +166,60 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.04418786620416859,
-    "3y": 0.0041601728083846545,
-    "5y": -0.013099939693744345,
+    "1y": -0.04419891204257376,
+    "3y": 0.004251503114749422,
+    "5y": -0.012851407353614897,
     "10y": null,
-    "all": -0.012987126736290655
+    "all": -0.012931609996815419
   },
   "cagr_adjusted": {
-    "1y": -0.02488622461116141,
-    "3y": 0.01097033951422155,
-    "5y": -0.008894046464407612,
+    "1y": -0.025434048729557124,
+    "3y": 0.010927266715871298,
+    "5y": -0.008857906840923357,
     "10y": null,
-    "all": -0.009331497916075793
+    "all": -0.009349935455654212
   },
   "simplereturn": {
-    "1d": 0.0002728806093617031,
-    "1m": -0.012928950874839473,
-    "3m": -0.01177131894242478,
-    "ytd": -0.018325733051263615,
-    "1y": -0.02488622461116141,
-    "3y": 0.03327338385208556,
-    "5y": -0.0436861960173931,
+    "1d": -0.00012781076274026582,
+    "1m": -0.013095509849610831,
+    "3m": -0.011094298388725221,
+    "ytd": -0.01845120158762481,
+    "1y": -0.025434048729557124,
+    "3y": 0.033141320393260454,
+    "5y": -0.043511828477654224,
     "10y": null,
-    "all": -0.05012314423200004
+    "all": -0.050244548717000015
   },
   "changesvalue": {
-    "1d": 0.00025399999999997647,
-    "1m": -0.012317269279999987,
-    "3m": -0.011201269279999981,
-    "ytd": -0.01773214423200009,
-    "1y": -0.024242144231999996,
-    "3y": 0.03058785576799994,
-    "5y": -0.043392144231999996,
+    "1d": -0.00011899999999998023,
+    "1m": -0.012476458907999977,
+    "3m": -0.010548458907999936,
+    "ytd": -0.017853548717000067,
+    "1y": -0.024786548717000034,
+    "3y": 0.030466451282999962,
+    "5y": -0.043205548717,
     "10y": null,
-    "all": -0.05012314423200004
+    "all": -0.050244548717000015
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
     "1y": -0.048813835955731855,
     "3y": -0.05847692161304763,
-    "5y": -0.0889495488554678,
+    "5y": -0.08805066905339831,
     "10y": -0.0966371134226246,
     "all": -0.0966371134226246
   },
   "maxdrawdown_adjusted": {
     "1y": -0.029594396568827,
     "3y": -0.0394527322162094,
-    "5y": -0.0880506690533984,
+    "5y": -0.0877677975267911,
     "10y": -0.0966371134226247,
     "all": -0.0966371134226247
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2021-04-15",
-    "value": 0.931064
+    "value": 0.930945
   },
   "trade": null
 }

@@ -61,12 +61,12 @@
   },
   "asset": [
     {
-      "name": "Obligasi",
-      "percentage": 91.99
+      "name": "Deposito Dan Kas",
+      "percentage": 6.91
     },
     {
-      "name": "Deposito dan Kas",
-      "percentage": 8.01
+      "name": "Obligasi",
+      "percentage": 93.09
     }
   ],
   "holding": [
@@ -74,7 +74,7 @@
       "symbol": "",
       "name": "Bank BJB Syariah tahun 2025 seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -84,7 +84,7 @@
       "symbol": "",
       "name": "Bank BJB tahap I tahun 2021 seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -94,7 +94,7 @@
       "symbol": "",
       "name": "Bank BTN tahap I tahun 2025",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -104,7 +104,7 @@
       "symbol": "",
       "name": "Bank Mega",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -114,7 +114,7 @@
       "symbol": "",
       "name": "Dian Swastatika Sentosa 2024 seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -124,7 +124,7 @@
       "symbol": "",
       "name": "Lontar Papyrus Pulp & Paper Industry",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,7 +134,7 @@
       "symbol": "",
       "name": "Medco Power Indonesia 2025 seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,7 +144,7 @@
       "symbol": "",
       "name": "Oki Pulp & Paper Mills 2025 seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -152,9 +152,9 @@
     },
     {
       "symbol": "",
-      "name": "Petrosea tahun 2024 Seri B",
+      "name": "Petrosea tahun 2024 seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -164,7 +164,7 @@
       "symbol": "",
       "name": "Sinar Mas Multiartha tahun 2025",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +197,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 30152777402.11,
+    "value": 30150000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -209,40 +209,40 @@
     "percentage": 0.0779
   },
   "cagr": {
-    "1y": 0.0351464891330302,
-    "3y": 0.05598693132343979,
-    "5y": 0.04176182365469283,
-    "10y": 0.04639262824558288,
-    "all": 0.053661459706447756
+    "1y": 0.034769276745235445,
+    "3y": 0.05594492671357143,
+    "5y": 0.042372643110299535,
+    "10y": 0.04638014118023581,
+    "all": 0.05363599448501222
   },
   "cagr_adjusted": {
-    "1y": 0.0351464891330302,
-    "3y": 0.05598693132343979,
-    "5y": 0.04176182365469283,
-    "10y": 0.04639262824558288,
-    "all": 0.053675357388776046
+    "1y": 0.034769276745235445,
+    "3y": 0.05594492671357143,
+    "5y": 0.042372643110299535,
+    "10y": 0.04638014118023581,
+    "all": 0.05364988190141462
   },
   "simplereturn": {
-    "1d": 0.00025544417886935733,
-    "1m": 0.004826632828496935,
-    "3m": 0.026518650039197622,
-    "ytd": 0.025891643611350768,
-    "1y": 0.0351464891330302,
-    "3y": 0.1775398964859478,
-    "5y": 0.22699330005094964,
-    "10y": 0.5737897563543255,
-    "all": 0.7641686918084267
+    "1d": -0.00011932800814851152,
+    "1m": 0.004216396120560351,
+    "3m": 0.026571486888947282,
+    "ytd": 0.02576922600494247,
+    "1y": 0.034769276745235445,
+    "3y": 0.17739938299558466,
+    "5y": 0.23059465478375718,
+    "10y": 0.5736019591574553,
+    "all": 0.7639581770723953
   },
   "changesvalue": {
-    "1d": 0.45049999999991996,
-    "1m": 8.473500000000058,
-    "3m": 45.57159999999999,
-    "ytd": 44.52130000000011,
-    "1y": 59.89490000000001,
-    "3y": 265.9684,
-    "5y": 326.34770000000003,
-    "10y": 643.1551999999999,
-    "all": 764.1152000000001
+    "1d": -0.21049999999991087,
+    "1m": 7.405799999999999,
+    "3m": 45.65460000000007,
+    "ytd": 44.3108000000002,
+    "1y": 59.26660000000015,
+    "3y": 265.75790000000006,
+    "5y": 330.51570000000015,
+    "10y": 642.9447,
+    "all": 763.9047000000002
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -260,9 +260,9 @@
     "all": -0.1017358411947766
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2015-12-01",
-    "value": 1764.0452
+    "value": 1763.8347
   },
   "trade": null
 }

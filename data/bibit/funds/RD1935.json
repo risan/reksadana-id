@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Time Deposit",
-      "percentage": 2
+      "percentage": 5
     },
     {
       "name": "Fixed Income",
-      "percentage": 96
+      "percentage": 92
     },
     {
       "name": "Cash & Equivalent",
-      "percentage": 2
+      "percentage": 3
     }
   ],
   "investment_manager": {
@@ -146,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2018-12-18",
-    "value": 1100.5278
+    "value": 1100.7341
   },
   "trade": null
 }

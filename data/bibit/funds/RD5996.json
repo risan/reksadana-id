@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Lainnya",
-      "percentage": 14.93
+      "percentage": 15.31
     },
     {
       "name": "Obligasi",
-      "percentage": 85.07
+      "percentage": 84.69
     }
   ],
   "investment_manager": {
@@ -142,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2023-05-26",
-    "value": 1160.3394
+    "value": 1160.3357
   },
   "trade": null
 }

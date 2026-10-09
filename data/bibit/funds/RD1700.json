@@ -61,15 +61,11 @@
   "asset": [
     {
       "name": "Kas&Setara",
-      "percentage": 1.04
-    },
-    {
-      "name": "Deposito",
-      "percentage": 5.99
+      "percentage": 7
     },
     {
       "name": "Obligasi",
-      "percentage": 92.97
+      "percentage": 93
     }
   ],
   "holding": [
@@ -204,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2011-12-09",
-    "value": 2707.43
+    "value": 2706.86
   },
   "trade": null
 }

@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17830,
+    "exchange_rate": 17865,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Money Market",
-      "percentage": 10.8
+      "percentage": 11.3
     },
     {
       "name": "Fixed Income",
-      "percentage": 89.2
+      "percentage": 88.7
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2024-04-22",
-    "value": 1.0845
+    "value": 1.0843
   },
   "trade": null
 }

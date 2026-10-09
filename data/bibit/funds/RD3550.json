@@ -59,12 +59,12 @@
   },
   "asset": [
     {
-      "name": "Time Deposit",
-      "percentage": 2
+      "name": "Deposito Berjangka",
+      "percentage": 5
     },
     {
       "name": "Equity",
-      "percentage": 96
+      "percentage": 94
     },
     {
       "name": "Cash & Equivalent",
@@ -145,9 +145,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2020-02-12",
-    "value": 2071.7451
+    "value": 2056.0437
   },
   "trade": null
 }

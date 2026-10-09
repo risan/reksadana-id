@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Time Deposit",
-      "percentage": 23
+      "percentage": 24
     },
     {
       "name": "Fixed Income - MM",
-      "percentage": 75
+      "percentage": 74
     },
     {
       "name": "Cash & Equivalent",
@@ -204,9 +204,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2015-08-13",
-    "value": 1767.3345
+    "value": 1767.6395
   },
   "trade": null
 }

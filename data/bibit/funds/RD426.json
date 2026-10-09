@@ -19,10 +19,11 @@
   },
   "released_date": "2010-08-09",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17845,
+    "exchange_rate": 17865,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,24 +61,24 @@
   },
   "asset": [
     {
-      "name": "Deposito",
-      "percentage": 4.07
+      "name": "Pendapatan Tetap",
+      "percentage": 87.3
     },
     {
-      "name": "Pendapatan Tetap",
-      "percentage": 85.51
+      "name": "Deposito",
+      "percentage": 9.2
     },
     {
       "name": "Kas",
-      "percentage": 10.42
+      "percentage": 3.5
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Indois 5.2 5.2% 07Feb2034 - FI",
+      "name": "Indois 5.2 5.2% 07Feb2034-FI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -85,9 +86,9 @@
     },
     {
       "symbol": "",
-      "name": "Indonesia Govt Sukuk 4.55% 23Jul2030 - FI",
+      "name": "Indonesia Govt Sukuk 4.55% 23Jul2030-FI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -95,9 +96,9 @@
     },
     {
       "symbol": "",
-      "name": "Pp Sbsn 5% 25May2030 - FI",
+      "name": "REP ID 1.85 0312//31-FI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -105,9 +106,9 @@
     },
     {
       "symbol": "",
-      "name": "REP ID 3.55 03/31/32 - FI",
+      "name": "REP ID 3.55 03/31/32-FI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -115,9 +116,9 @@
     },
     {
       "symbol": "",
-      "name": "REP ID 4.65 09/20/32 - FI",
+      "name": "REP ID 4.65 09/20/32-FI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -125,9 +126,9 @@
     },
     {
       "symbol": "",
-      "name": "REP ID 6 3/4 01/15/44 - FI",
+      "name": "REP ID 6 3/4 0115//44-FI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -135,9 +136,9 @@
     },
     {
       "symbol": "",
-      "name": "Republic Of Indonesia 5.95% 08/01/2046 - FI",
+      "name": "Republic Of Indonesia 5.95% 08/01/2046-FI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -145,9 +146,9 @@
     },
     {
       "symbol": "",
-      "name": "Republic Of Indonesia 8.50% 10/12/35 - FI",
+      "name": "Republic Of Indonesia 8.50% 10/12/35-FI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -155,9 +156,9 @@
     },
     {
       "symbol": "",
-      "name": "Sbsn Indo lii Indois 5.4% 11/15/28 - FI",
+      "name": "Sbsn Indo lii Indois 5.4% 11/15/28-FI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -167,7 +168,7 @@
       "symbol": "",
       "name": "TD Citibank Na (Jakarta Branch) - MM",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -202,7 +203,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 145227035.15723,
+    "value": 152130000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -214,40 +215,40 @@
     "percentage": 0.0502
   },
   "cagr": {
-    "1y": -0.021165191740413092,
-    "3y": 0.034208287671389837,
-    "5y": -0.0016194659832250435,
-    "10y": 0.015390509061617319,
-    "all": 0.01794580813919877
+    "1y": -0.02232537577365168,
+    "3y": 0.03410438629807522,
+    "5y": -0.0011715437936542505,
+    "10y": 0.015529390852321523,
+    "all": 0.017923773402575227
   },
   "cagr_adjusted": {
-    "1y": -0.02072729955004793,
-    "3y": 0.03428620000313498,
-    "5y": -0.0013204535603464906,
-    "10y": 0.015582951924936861,
-    "all": 0.017960033092806915
+    "1y": -0.02232537577365168,
+    "3y": 0.03410438629807522,
+    "5y": -0.0011715437936542505,
+    "10y": 0.015529390852321523,
+    "all": 0.017926836841546168
   },
   "simplereturn": {
-    "1d": 0.00022602275295713348,
-    "1m": -0.021809608016504667,
-    "3m": -0.026828910716903853,
-    "ytd": -0.029744938975371005,
-    "1y": -0.02072729955004793,
-    "3y": 0.10642553546128841,
-    "5y": -0.006584854833882159,
-    "10y": 0.16722349217513632,
-    "all": 0.33360120542440974
+    "1d": -0.0005272672491714037,
+    "1m": -0.02225333431582055,
+    "3m": -0.02455340733661704,
+    "ytd": -0.030256522692392096,
+    "1y": -0.02232537577365168,
+    "3y": 0.10584215351279269,
+    "5y": -0.005844009889862889,
+    "10y": 0.16660805345524876,
+    "all": 0.33289804118533395
   },
   "changesvalue": {
-    "1d": 0.00029999999999996696,
-    "1m": -0.02960000000000007,
-    "3m": -0.03660000000000019,
-    "ytd": -0.04070000000000018,
-    "1y": -0.028100000000000014,
-    "3y": 0.12769999999999992,
-    "5y": -0.008800000000000141,
-    "10y": 0.19019999999999992,
-    "all": 0.33209999999999984
+    "1d": -0.0006999999999999229,
+    "1m": -0.030200000000000005,
+    "3m": -0.033400000000000096,
+    "ytd": -0.0414000000000001,
+    "1y": -0.030299999999999994,
+    "3y": 0.127,
+    "5y": -0.007800000000000029,
+    "10y": 0.1895,
+    "all": 0.3313999999999999
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -265,9 +266,9 @@
     "all": -0.1610530960435358
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2010-08-10",
-    "value": 1.3276
+    "value": 1.3269
   },
   "trade": null
 }

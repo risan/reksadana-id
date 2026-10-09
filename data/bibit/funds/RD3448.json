@@ -61,16 +61,16 @@
   },
   "asset": [
     {
-      "name": "Kas dan/ Pasar Uang",
+      "name": "Kas dan/atau Pasar Uang",
       "percentage": 100
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "BANK JABAR BANTEN",
+      "name": "BANK DANAMON INDONESIA UNIT USAHA SYARIAH",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -80,7 +80,7 @@
       "symbol": "",
       "name": "BANK PERMATA UNIT USAHA SYARIAH",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -90,7 +90,7 @@
       "symbol": "",
       "name": "BANK RAKYAT INDONESIA",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -100,7 +100,7 @@
       "symbol": "",
       "name": "BANK TABUNGAN NEGARA",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -110,7 +110,17 @@
       "symbol": "",
       "name": "BANK UOB INDONESIA",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBL BKL V SARANA MULTI INFRA I 2026 A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -120,7 +130,7 @@
       "symbol": "FR0090",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 5806,
       "product_type": "FR",
@@ -130,7 +140,7 @@
       "symbol": "",
       "name": "PT BANK ALADIN SYARIAH",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -140,7 +150,7 @@
       "symbol": "",
       "name": "PT BANK BTPN SYARIAH",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -148,19 +158,9 @@
     },
     {
       "symbol": "",
-      "name": "PT BANK SYARIAH INDONESIA TBK",
+      "name": "SKIJR II INTGR JARINGAN EKOSISTEM 26 A",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "SK IJR II INTGR JARINGAN EKOSISTEM 26 A",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -193,7 +193,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 18084411310.5,
+    "value": 18080000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -205,40 +205,40 @@
     "percentage": 0.0546
   },
   "cagr": {
-    "1y": 0.0334636461804092,
-    "3y": 0.03792290278935573,
-    "5y": 0.030670320997719935,
-    "10y": 0.03774368682722007,
-    "all": 0.04483532434660953
+    "1y": 0.033430526285400664,
+    "3y": 0.037955765518433715,
+    "5y": 0.030689900732374875,
+    "10y": 0.03775354383441032,
+    "all": 0.04483334251852189
   },
   "cagr_adjusted": {
-    "1y": 0.0334636461804092,
-    "3y": 0.03792290278935573,
-    "5y": 0.030670320997719935,
-    "10y": 0.03774368682722007,
-    "all": 0.04484478665129221
+    "1y": 0.033430526285400664,
+    "3y": 0.037955765518433715,
+    "5y": 0.030689900732374875,
+    "10y": 0.03775354383441032,
+    "all": 0.04484280244271033
   },
   "simplereturn": {
-    "1d": 0.00008940945057900329,
-    "1m": 0.0038872528397140282,
-    "3m": 0.012107879452798453,
-    "ytd": 0.026539941838121806,
-    "1y": 0.0334636461804092,
-    "3y": 0.11813768672801905,
-    "5y": 0.16305124839158291,
-    "10y": 0.4484416351702427,
-    "all": 0.7897336920107603
+    "1d": 0.00009498904832150323,
+    "1m": 0.003791171505644675,
+    "3m": 0.012112438716827878,
+    "ytd": 0.02663745189026101,
+    "1y": 0.033430526285400664,
+    "3y": 0.11824389756277376,
+    "5y": 0.16316172552281683,
+    "10y": 0.44857922126271665,
+    "all": 0.7899036971109132
   },
   "changesvalue": {
-    "1d": 0.16000000000008185,
-    "1m": 6.930000000000064,
-    "3m": 21.410000000000082,
-    "ytd": 46.26999999999998,
-    "1y": 57.950000000000045,
-    "3y": 189.09000000000015,
-    "5y": 250.9000000000001,
-    "10y": 554.0900000000001,
-    "all": 789.71
+    "1d": 0.16999999999984539,
+    "1m": 6.759999999999991,
+    "3m": 21.419999999999845,
+    "ytd": 46.43999999999983,
+    "1y": 57.899999999999864,
+    "3y": 189.26,
+    "5y": 251.06999999999994,
+    "10y": 554.26,
+    "all": 789.8799999999999
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -256,9 +256,9 @@
     "all": -0.003239962764607
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2013-07-04",
-    "value": 1789.68
+    "value": 1789.85
   },
   "trade": null
 }

@@ -60,16 +60,12 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang",
-      "percentage": 5.02
-    },
-    {
       "name": "Surat Utang",
-      "percentage": 94.17
+      "percentage": 94.28
     },
     {
       "name": "Kas/Setara Kas",
-      "percentage": 0.81
+      "percentage": 5.72
     }
   ],
   "holding": [
@@ -204,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2014-06-19",
-    "value": 1935.37
+    "value": 1935.3
   },
   "trade": null
 }

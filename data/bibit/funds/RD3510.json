@@ -19,7 +19,6 @@
   },
   "released_date": "2013-05-29",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,39 +61,39 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 92.46
+      "percentage": 93.06
     },
     {
-      "name": "Kas dan/atau pasar uang",
-      "percentage": 7.54
+      "name": "Kas dan/atau Pasar Uang",
+      "percentage": 6.94
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "OB BK I MERDEKA BATTERY MATERIALS IV 26B",
+      "name": "OB BK I MERDEKA BATTERY MATERIALS IV 268",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "",
-      "name": "OBL BKL VII PEGADAIAN THPI THN 2026 A",
+      "symbol": "FR0110",
+      "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 10929,
+      "product_type": "FR",
       "serie_id": null
     },
     {
       "symbol": "",
       "name": "OBL BKL VIII SARANA MULTI FIN III 2026",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,9 +101,19 @@
     },
     {
       "symbol": "",
-      "name": "OBL I ADARO INDONESIA TAHUN 2026 SERI A",
+      "name": "OBL BWWSN SOS BKL II PEGADAIAN 12026 A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLI ADARO INDONESIA TAHUN 2026 SERI A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -114,17 +123,7 @@
       "symbol": "",
       "name": "OBL III INTEGRASI JARINGAN EKOSISTEM 26A",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "OBL NEGARA REPUBLIK INDONESIA FR0059",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,7 +133,7 @@
       "symbol": "",
       "name": "OBL NEGARA REPUBLIK INDONESIA FR0087",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,7 +143,7 @@
       "symbol": "FR0101",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6261,
       "product_type": "FR",
@@ -154,7 +153,7 @@
       "symbol": "FR0104",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 8733,
       "product_type": "FR",
@@ -162,9 +161,9 @@
     },
     {
       "symbol": "",
-      "name": "SUK IJR BKL I SAMUDERA INDONESIA III 26",
+      "name": "SUK UR BKL SAMUDERA INDONESIA III 26",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +196,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 254567188443.37,
+    "value": 254570000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -209,40 +208,40 @@
     "percentage": 0.0707
   },
   "cagr": {
-    "1y": -0.05532021377375018,
-    "3y": -0.001751375772019781,
-    "5y": -0.007737337569311276,
-    "10y": 0.021959160828880497,
-    "all": 0.03486787295431393
+    "1y": -0.05584835545709532,
+    "3y": -0.0017828561355901495,
+    "5y": -0.007646519274297159,
+    "10y": 0.02194949229533405,
+    "all": 0.034853281890995236
   },
   "cagr_adjusted": {
-    "1y": -0.004335181857683779,
-    "3y": 0.037754908490014616,
-    "5y": 0.02620446030432899,
-    "10y": 0.042301853186209826,
-    "all": 0.05025078999599342
+    "1y": -0.004891827718819242,
+    "3y": 0.037722182272293736,
+    "5y": 0.0262983851721581,
+    "10y": 0.042291992194871675,
+    "all": 0.05023280285551723
   },
   "simplereturn": {
-    "1d": 0.00029020251088263116,
-    "1m": 0.0033936732356698585,
-    "3m": 0.011810520500140198,
-    "ytd": -0.010385264962806007,
-    "1y": -0.004335181857683779,
-    "3y": 0.1175948419121311,
-    "5y": 0.1380713480277065,
-    "10y": 0.5133350797330434,
-    "all": 0.9256087239614739
+    "1d": -0.00009460379928849516,
+    "1m": 0.0026863649274755375,
+    "3m": 0.012657232602722113,
+    "ytd": -0.010478886276572452,
+    "1y": -0.004891827718819242,
+    "3y": 0.117489113194021,
+    "5y": 0.13859226161746463,
+    "10y": 0.5131919124849043,
+    "all": 0.9254265540602442
   },
   "changesvalue": {
-    "1d": 0.4600000000000364,
-    "1m": 5.389933643087943,
-    "3m": 18.782034540962968,
-    "ytd": -17.348688973017033,
-    "1y": -7.27621258175509,
-    "3y": 187.43677042058403,
-    "5y": 227.58990652147008,
-    "10y": 655.010428388566,
-    "all": 928.200428388566
+    "1d": -0.14999999999986358,
+    "1m": 4.269171142743971,
+    "3m": 20.109811159205037,
+    "ytd": -17.505084313876978,
+    "1y": -8.214308187164079,
+    "3y": 187.26824730221392,
+    "5y": 228.32243547907592,
+    "10y": 654.8277484116129,
+    "all": 928.017748411613
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -260,9 +259,9 @@
     "all": -0.1305742211362248
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2013-05-30",
-    "value": 1585.56
+    "value": 1585.41
   },
   "trade": null
 }

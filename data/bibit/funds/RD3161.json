@@ -65,11 +65,11 @@
     },
     {
       "name": "Time Deposit",
-      "percentage": 14
+      "percentage": 16
     },
     {
       "name": "Equity",
-      "percentage": 85
+      "percentage": 83
     }
   ],
   "holding": [
@@ -204,9 +204,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2019-04-12",
-    "value": 2680.0805
+    "value": 2627.3444
   },
   "trade": null
 }

@@ -57,7 +57,20 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Surat Utang",
+      "percentage": 83.67
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 9.4
+    },
+    {
+      "name": "Kas/Setara Kas",
+      "percentage": 6.93
+    }
+  ],
   "investment_manager": {
     "name": "Ciptadana Asset Management, PT"
   },
@@ -132,9 +145,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2026-08-28",
-    "value": 1002.1
+    "value": 1001.87
   },
   "trade": null
 }

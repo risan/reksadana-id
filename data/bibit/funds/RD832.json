@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Sukuk (<1 tahun)",
-      "percentage": 57.96
+      "percentage": 67.23
     },
     {
       "name": "Deposito Syariah dan Kas",
-      "percentage": 42.04
+      "percentage": 32.77
     }
   ],
   "holding": [
@@ -73,7 +73,7 @@
       "symbol": "",
       "name": "Bank BJB Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Riau Kepri Syariah",
+      "name": "Bank Riau Kepri",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,9 +91,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Syariah Nasional",
+      "name": "Bank Sumsel Babel Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -101,9 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "BPD Sumsel Babel UUS",
+      "name": "Bank Sumut Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -111,9 +111,9 @@
     },
     {
       "symbol": "",
-      "name": "BPD Sumut UUS",
+      "name": "PT Dian Swastatika Sentosa 2024 seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -121,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "PT CIMB Niaga Auto Finance",
+      "name": "PT Indah Kiat Pulp & Paper 2022 seri C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -131,9 +131,19 @@
     },
     {
       "symbol": "",
-      "name": "PT Indah Kiat Pulp & Paper tahun 2022 seri C",
+      "name": "PT Pegadaian (Persero) 2026 seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Permodalan Nasional Madani 2026 seri A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +153,7 @@
       "symbol": "",
       "name": "PT Sarana Multigriya Finansial II 2026",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,20 +163,10 @@
       "symbol": "",
       "name": "PT Sarana Multi Infrastruktur 2025",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "PBS003",
-      "name": "FR Syariah",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 6020,
-      "product_type": "FR",
       "serie_id": null
     }
   ],
@@ -196,7 +196,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 2660393627638.26,
+    "value": 2660390000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -208,40 +208,40 @@
     "percentage": 0.0681
   },
   "cagr": {
-    "1y": 0.04514057320491882,
-    "3y": 0.049748398555807816,
-    "5y": 0.046541224536373216,
+    "1y": 0.045157170062918084,
+    "3y": 0.04980114494728505,
+    "5y": 0.04655582198794961,
     "10y": null,
-    "all": 0.0472197080286656
+    "all": 0.04722261952568041
   },
   "cagr_adjusted": {
-    "1y": 0.04514057320491882,
-    "3y": 0.049748398555807816,
-    "5y": 0.046541224536373216,
+    "1y": 0.045157170062918084,
+    "3y": 0.04980114494728505,
+    "5y": 0.04655582198794961,
     "10y": null,
-    "all": 0.047234845172439144
+    "all": 0.047237752882615336
   },
   "simplereturn": {
-    "1d": 0.00014910011865887363,
-    "1m": 0.0043811754824834015,
-    "3m": 0.01246200065270231,
-    "ytd": 0.03383922640412429,
-    "1y": 0.04514057320491882,
-    "3y": 0.15679302761276004,
-    "5y": 0.2553987792511261,
+    "1d": 0.0001507476703741517,
+    "1m": 0.004389674294819956,
+    "3m": 0.01250671937133041,
+    "ytd": 0.03399507525904588,
+    "1y": 0.045157170062918084,
+    "3y": 0.15696741146677762,
+    "5y": 0.25548633497128526,
     "10y": null,
-    "all": 0.4972338446768936
+    "all": 0.4974595491909837
   },
   "changesvalue": {
-    "1d": 0.22319999999990614,
-    "1m": 6.530899999999974,
-    "3m": 18.428499999999985,
-    "ytd": 49.00589999999988,
-    "1y": 64.66560000000004,
-    "3y": 202.93270000000007,
-    "5y": 304.59169999999995,
+    "1d": 0.2256999999999607,
+    "1m": 6.544499999999971,
+    "3m": 18.496599999999944,
+    "ytd": 49.231599999999844,
+    "1y": 64.69809999999984,
+    "3y": 203.15840000000003,
+    "5y": 304.7207999999998,
     "10y": null,
-    "all": 497.22389999999996
+    "all": 497.4495999999999
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -263,12 +263,12 @@
     "quota_limit": 3
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2018-01-10",
-    "value": 1497.2039
+    "value": 1497.4296
   },
   "trade": {
-    "total_trades": 10828,
+    "total_trades": 9809,
     "period": "1d"
   }
 }

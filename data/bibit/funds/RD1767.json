@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 5.21
+      "percentage": 5.28
     },
     {
       "name": "Saham",
-      "percentage": 73.09
+      "percentage": 72.34
     },
     {
       "name": "Lainnya",
-      "percentage": 21.7
+      "percentage": 22.38
     }
   ],
   "holding": [
@@ -203,9 +203,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2006-11-13",
-    "value": 2684.51
+    "value": 2638.01
   },
   "trade": null
 }

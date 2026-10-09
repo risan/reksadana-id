@@ -57,7 +57,16 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 98.37
+    },
+    {
+      "name": "Lainnya",
+      "percentage": 1.63
+    }
+  ],
   "investment_manager": {
     "name": "Trimegah Asset Management, PT"
   },
@@ -132,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2026-09-11",
-    "value": 944.0894
+    "value": 927.1945
   },
   "trade": null
 }

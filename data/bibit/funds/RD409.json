@@ -19,7 +19,6 @@
   },
   "released_date": "2001-02-28",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,20 +60,20 @@
   },
   "asset": [
     {
-      "name": "Pendapatan Tetap",
-      "percentage": 4.78
-    },
-    {
-      "name": "Kas",
-      "percentage": 1.74
+      "name": "Saham",
+      "percentage": 86.94
     },
     {
       "name": "Deposito",
-      "percentage": 2.83
+      "percentage": 7.03
     },
     {
-      "name": "Saham",
-      "percentage": 90.65
+      "name": "Pendapatan Tetap",
+      "percentage": 5.11
+    },
+    {
+      "name": "Kas",
+      "percentage": 0.93
     }
   ],
   "holding": [
@@ -82,19 +81,9 @@
       "symbol": "AMMN",
       "name": "Amman Mineral Internasional Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6026,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "ANTM",
-      "name": "Aneka Tambang Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4396,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -102,7 +91,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -112,7 +101,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -122,19 +111,9 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4331,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BBNI",
-      "name": "Bank Negara Indonesia (Persero) Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4338,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -142,7 +121,7 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
@@ -152,17 +131,37 @@
       "symbol": "FR0090",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 5806,
       "product_type": "FR",
       "serie_id": null
     },
     {
+      "symbol": "ISAT",
+      "name": "Indosat Tbk",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4866,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Bank Mega",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
       "symbol": "",
       "name": "TD Bank Tabungan NEG Tbk PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -172,7 +171,7 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4623,
       "product_type": "Saham",
@@ -205,7 +204,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 498733620382.78,
+    "value": 498730000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -217,40 +216,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.08441175966684511,
-    "3y": -0.07131719690728089,
-    "5y": -0.020552790115966224,
-    "10y": -0.016679425035286632,
-    "all": 0.12015859180089139
+    "1y": -0.09657756974774223,
+    "3y": -0.07551983126033968,
+    "5y": -0.026081005867593876,
+    "10y": -0.018016512066423962,
+    "all": 0.119547741210978
   },
   "cagr_adjusted": {
-    "1y": -0.08441175966684511,
-    "3y": -0.07131719690728089,
-    "5y": -0.020552790115966224,
-    "10y": -0.016679425035286632,
-    "all": 0.1201722429101244
+    "1y": -0.09657756974774223,
+    "3y": -0.07551983126033968,
+    "5y": -0.026081005867593876,
+    "10y": -0.018016512066423962,
+    "all": 0.11956131782961554
   },
   "simplereturn": {
-    "1d": -0.0027155622307764027,
-    "1m": -0.05565805957853365,
-    "3m": 0.02972461361723111,
-    "ytd": -0.1460095505847061,
-    "1y": -0.08441175966684511,
-    "3y": -0.19905589242920618,
-    "5y": -0.09862570876704635,
-    "10y": -0.1548160053052161,
-    "all": 17.08152979197536
+    "1d": -0.013514769135867799,
+    "1m": -0.07948168646378229,
+    "3m": 0.03235615061947805,
+    "ytd": -0.15755103435278983,
+    "1y": -0.09657756974774223,
+    "3y": -0.20988046713375919,
+    "5y": -0.12377794716903268,
+    "10y": -0.16623847187084673,
+    "all": 16.837162091213496
   },
   "changesvalue": {
-    "1d": -42.19999999999891,
-    "1m": -913.4199999999983,
-    "3m": 447.3700000000008,
-    "ytd": -2649.720000000001,
-    "1y": -1428.8099999999977,
-    "3y": -3851.630000000001,
-    "5y": -1695.7299999999996,
-    "10y": -2838.8099999999977,
-    "all": 14640.75
+    "1d": -209.45000000000073,
+    "1m": -1320.0699999999997,
+    "3m": 479.1700000000001,
+    "ytd": -2859.170000000002,
+    "1y": -1634.3600000000006,
+    "3y": -4061.0800000000017,
+    "5y": -2159.6899999999987,
+    "10y": -3048.2599999999984,
+    "all": 14431.3
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -268,9 +267,9 @@
     "all": -0.6674866217437987
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2001-04-10",
-    "value": 15497.86
+    "value": 15288.41
   },
   "trade": null
 }

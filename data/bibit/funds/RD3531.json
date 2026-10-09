@@ -18,11 +18,10 @@
   },
   "released_date": "2020-01-15",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17845,
+    "exchange_rate": 17865,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,30 +59,20 @@
   },
   "asset": [
     {
-      "name": "Kas",
-      "percentage": 7.87
+      "name": "Saham",
+      "percentage": 90.55
     },
     {
-      "name": "Saham",
-      "percentage": 92.13
+      "name": "Kas",
+      "percentage": 9.45
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Advanced Micro Fabrication Inc China A",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "Alibaba Group Holding",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,9 +80,9 @@
     },
     {
       "symbol": "",
-      "name": "Byd H H",
+      "name": "Aspeed Technology",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -101,9 +90,9 @@
     },
     {
       "symbol": "",
-      "name": "Contemporary Amperex Technology A",
+      "name": "Contemporary Amperex Technology",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +102,7 @@
       "symbol": "",
       "name": "Delta Electronics",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +112,7 @@
       "symbol": "",
       "name": "Elite Material",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +122,7 @@
       "symbol": "",
       "name": "Jiangsu Hengli Hydraulic A A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +132,17 @@
       "symbol": "",
       "name": "Mediatek",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Shennan Circuits LTD A A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,7 +152,7 @@
       "symbol": "",
       "name": "Taiwan Semiconductor Manufacturing",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -161,9 +160,9 @@
     },
     {
       "symbol": "",
-      "name": "Wiwynn Corporation",
+      "name": "Wuxi ApPTec A A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -198,7 +197,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 233006742.67677,
+    "value": 234580000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -210,40 +209,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.12313903608377497,
-    "3y": 0.1662454861606435,
-    "5y": -0.00465239503620718,
+    "1y": 0.10908633907251475,
+    "3y": 0.16287317012436042,
+    "5y": -0.011997705962074723,
     "10y": null,
-    "all": -0.017232071038103314
+    "all": -0.018492111035294356
   },
   "cagr_adjusted": {
-    "1y": 0.12313903608377497,
-    "3y": 0.1662454861606435,
-    "5y": -0.00465239503620718,
+    "1y": 0.10908633907251475,
+    "3y": 0.16287317012436042,
+    "5y": -0.011997705962074723,
     "10y": null,
-    "all": -0.017239026525969092
+    "all": -0.018499567282176055
   },
   "simplereturn": {
-    "1d": 0.003381424706943248,
-    "1m": 0.0054212785181839696,
-    "3m": -0.015047576897543768,
-    "ytd": 0.18110654106408375,
-    "1y": 0.12313903608377497,
-    "3y": 0.5862437633642195,
-    "5y": -0.0230465320456541,
+    "1d": -0.008649741631094221,
+    "1m": -0.017260579064588,
+    "3m": -0.0093174674449934,
+    "ytd": 0.17089027464508422,
+    "1y": 0.10908633907251475,
+    "3y": 0.5725231646471844,
+    "5y": -0.05856624706635383,
     "10y": null,
-    "all": -0.11042270410712496
+    "all": -0.1181173178774857
   },
   "changesvalue": {
-    "1d": 0.0030000000000000027,
-    "1m": 0.0048000000000000265,
-    "3m": -0.013600000000000056,
-    "ytd": 0.13649999999999995,
-    "1y": 0.09760000000000002,
-    "3y": 0.32899999999999996,
-    "5y": -0.02100000000000002,
+    "1d": -0.00770000000000004,
+    "1m": -0.01550000000000007,
+    "3m": -0.008300000000000085,
+    "ytd": 0.12879999999999991,
+    "1y": 0.08679999999999999,
+    "3y": 0.3212999999999999,
+    "5y": -0.05490000000000006,
     "10y": null,
-    "all": -0.11049999999999993
+    "all": -0.11819999999999997
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -261,9 +260,9 @@
     "all": -0.5720364741641337
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2020-01-16",
-    "value": 0.8902
+    "value": 0.8825
   },
   "trade": null
 }

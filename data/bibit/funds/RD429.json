@@ -19,7 +19,6 @@
   },
   "released_date": "2003-10-14",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,15 +61,15 @@
   "asset": [
     {
       "name": "Deposito",
-      "percentage": 58.19
+      "percentage": 60.98
     },
     {
       "name": "Pendapatan Tetap",
-      "percentage": 38.18
+      "percentage": 38.53
     },
     {
       "name": "Kas",
-      "percentage": 3.63
+      "percentage": 0.49
     }
   ],
   "holding": [
@@ -78,17 +77,7 @@
       "symbol": "",
       "name": "Bank Indonesia 0.00% - MM",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "OB NEG Ri Seri FR0056 150926 FXH",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -98,7 +87,7 @@
       "symbol": "",
       "name": "OB NEG Ri Seri FR0059 150527 FXH",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -108,7 +97,7 @@
       "symbol": "PBS003",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6020,
       "product_type": "FR",
@@ -118,7 +107,7 @@
       "symbol": "",
       "name": "Sun Tb Fr 0042 150727 H",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -128,7 +117,7 @@
       "symbol": "",
       "name": "TD Bank Btpn Syariah Tbk PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -136,9 +125,9 @@
     },
     {
       "symbol": "",
-      "name": "TD Bank Danamon Indonesia Tbk PT",
+      "name": "TD Bank Jago Tbk PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -148,7 +137,17 @@
       "symbol": "",
       "name": "TD Bank Maybank Indonesia Tbk PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Bank Mega",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -158,7 +157,7 @@
       "symbol": "",
       "name": "TD Bank Tabungan NEG Tbk PT",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -168,7 +167,7 @@
       "symbol": "",
       "name": "TD PT Bank Smbc Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -201,7 +200,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 459216193987.51,
+    "value": 459220000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -213,40 +212,40 @@
     "percentage": 0.0598
   },
   "cagr": {
-    "1y": 0.03424999704978782,
-    "3y": 0.036317313861113254,
-    "5y": 0.02889751569537191,
-    "10y": 0.030434629304929794,
-    "all": 0.04293496144712661
+    "1y": 0.034197278376465245,
+    "3y": 0.03635541342428783,
+    "5y": 0.02891479678677733,
+    "10y": 0.030445994145671396,
+    "all": 0.04293473996807684
   },
   "cagr_adjusted": {
-    "1y": 0.03424999704978782,
-    "3y": 0.036317313861113254,
-    "5y": 0.02889751569537191,
-    "10y": 0.030434629304929794,
-    "all": 0.04294018593016746
+    "1y": 0.034197278376465245,
+    "3y": 0.03635541342428783,
+    "5y": 0.02891479678677733,
+    "10y": 0.030445994145671396,
+    "all": 0.04293996380113718
   },
   "simplereturn": {
-    "1d": 0.00012172206288463272,
-    "1m": 0.004151406016674519,
-    "3m": 0.012753500375556115,
-    "ytd": 0.027130919872959458,
-    "1y": 0.03424999704978782,
-    "3y": 0.11295668406415493,
-    "5y": 0.15308306288922036,
-    "10y": 0.3495980864191195,
-    "all": 1.629154833806648
+    "1d": 0.00011029719388733206,
+    "1m": 0.0039247576614858115,
+    "3m": 0.012779380442694999,
+    "ytd": 0.027244209531176233,
+    "1y": 0.034197278376465245,
+    "3y": 0.11307944006332526,
+    "5y": 0.15317990053765795,
+    "10y": 0.34974694330092704,
+    "all": 1.629444822207112
   },
   "changesvalue": {
-    "1d": 0.3200000000001637,
-    "1m": 10.870000000000346,
-    "3m": 33.11000000000013,
-    "ytd": 69.45000000000027,
-    "1y": 87.07000000000016,
-    "3y": 266.85000000000036,
-    "5y": 349.0600000000004,
-    "10y": 681.0800000000002,
-    "all": 1629.2200000000003
+    "1d": 0.2899999999999636,
+    "1m": 10.2800000000002,
+    "3m": 33.18000000000029,
+    "ytd": 69.74000000000024,
+    "1y": 86.95000000000027,
+    "3y": 267.1400000000003,
+    "5y": 349.28999999999996,
+    "10y": 681.3700000000001,
+    "all": 1629.5100000000002
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -268,9 +267,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2003-10-16",
-    "value": 2629.26
+    "value": 2629.55
   },
   "trade": null
 }

@@ -58,20 +58,20 @@
   },
   "asset": [
     {
-      "name": "Fixed Income",
-      "percentage": 74
+      "name": "Deposito Berjangka",
+      "percentage": 24
     },
     {
-      "name": "Cash & Equivalent",
+      "name": "Pendapatan Tetap",
+      "percentage": 62
+    },
+    {
+      "name": "Kas & Setara Kas",
       "percentage": 5
     },
     {
-      "name": "Time Deposit",
-      "percentage": 7
-    },
-    {
       "name": "Equity",
-      "percentage": 14
+      "percentage": 9
     }
   ],
   "investment_manager": {
@@ -148,9 +148,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2024-01-17",
-    "value": 1049.3109
+    "value": 1042.5113
   },
   "trade": null
 }

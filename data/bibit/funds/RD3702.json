@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17845,
+    "exchange_rate": 17865,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -59,12 +59,12 @@
   },
   "asset": [
     {
-      "name": "Kas dan/atau  Pasar Uang Syariah",
-      "percentage": 0.51
+      "name": "Efek Syariah (dalam dan luar negeri)",
+      "percentage": 92.19
     },
     {
-      "name": "Efek Syariah (dalam dan luar negeri)",
-      "percentage": 99.49
+      "name": "Kas dan/atau Pasar Uang Syariah",
+      "percentage": 7.81
     }
   ],
   "holding": [
@@ -72,17 +72,7 @@
       "symbol": "",
       "name": "ALIBABA GROUP HOLDING LTD",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "ASPEED TECHNOLOGY INC",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -92,7 +82,7 @@
       "symbol": "",
       "name": "DELTA ELECTRONICS INC",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,7 +92,7 @@
       "symbol": "",
       "name": "INNOVENT BIOLOGICS INC",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,17 +102,7 @@
       "symbol": "",
       "name": "MEDIATEK INCORPORATION",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "MEITUAN",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -132,7 +112,7 @@
       "symbol": "",
       "name": "TAIWAN SEMICONDUCTOR MANUFAC",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -140,9 +120,19 @@
     },
     {
       "symbol": "",
-      "name": "TECHTRONIC INDUSTRIES CO LTD",
+      "name": "UNIMICRON TECHNOLOGY CORP",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "UNITED MICROELECTRONICS CORP",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -152,7 +142,7 @@
       "symbol": "",
       "name": "WUXI APPTEC CO LTD - CNY1 H",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,7 +152,17 @@
       "symbol": "",
       "name": "WUXI BIOLOGICS (CAYMAN) INC - USD0.00002",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "ZHONGJI INNOLIGHT CO LTD - 'A'CNY1",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -193,7 +193,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 21113956.22769,
+    "value": 21260000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -205,40 +205,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.07054998332606521,
-    "3y": 0.11141671088764493,
-    "5y": -0.03787652298851696,
+    "1y": 0.05612085720130944,
+    "3y": 0.10754433828784138,
+    "5y": -0.0456589040464902,
     "10y": null,
-    "all": -0.028200354458636
+    "all": -0.02979690010415592
   },
   "cagr_adjusted": {
-    "1y": 0.07054998332606521,
-    "3y": 0.11141671088764493,
-    "5y": -0.03787652298851696,
+    "1y": 0.05612085720130944,
+    "3y": 0.10754433828784138,
+    "5y": -0.0456589040464902,
     "10y": null,
-    "all": -0.028212414658456697
+    "all": -0.029809627035582986
   },
   "simplereturn": {
-    "1d": 0.002882491895620065,
-    "1m": 0.010580851068981989,
-    "3m": -0.06775505736445198,
-    "ytd": 0.11725588200255133,
-    "1y": 0.07054998332606521,
-    "3y": 0.37287427483967117,
-    "5y": -0.1755694804694522,
+    "1d": -0.010416154984335013,
+    "1m": -0.014342653253618831,
+    "3m": -0.05701277187470388,
+    "ytd": 0.10561837157845266,
+    "1y": 0.05612085720130944,
+    "3y": 0.35857420361893455,
+    "5y": -0.20837750026356394,
     "10y": null,
-    "all": -0.165335
+    "all": -0.174029
   },
   "changesvalue": {
-    "1d": 0.00239900000000004,
-    "1m": 0.008738999999999941,
-    "3m": -0.06066300000000002,
-    "ytd": 0.08759799999999995,
-    "1y": 0.05500499999999997,
-    "3y": 0.226696,
-    "5y": -0.17774899999999993,
+    "1d": -0.00869399999999998,
+    "1m": -0.012019000000000002,
+    "3m": -0.04993800000000004,
+    "ytd": 0.07890399999999997,
+    "1y": 0.04389100000000001,
+    "3y": 0.21800200000000003,
+    "5y": -0.21741900000000003,
     "10y": null,
-    "all": -0.165335
+    "all": -0.174029
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -256,9 +256,9 @@
     "all": -0.6231754651824394
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2020-06-15",
-    "value": 0.834665
+    "value": 0.825971
   },
   "trade": null
 }

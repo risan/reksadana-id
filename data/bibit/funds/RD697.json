@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Time Deposit",
-      "percentage": 22
+      "percentage": 18
     },
     {
       "name": "Cash & Equivalent",
-      "percentage": 3
+      "percentage": 1
     },
     {
       "name": "Equity",
-      "percentage": 75
+      "percentage": 81
     }
   ],
   "holding": [
@@ -204,9 +204,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2014-08-29",
-    "value": 972.3836
+    "value": 970.5543
   },
   "trade": null
 }

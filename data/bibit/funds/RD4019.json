@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17845,
+    "exchange_rate": 17865,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -59,20 +59,20 @@
   },
   "asset": [
     {
-      "name": "Kas",
-      "percentage": 1.14
+      "name": "Saham",
+      "percentage": 105.22
     },
     {
-      "name": "Saham",
-      "percentage": 98.86
+      "name": "Kas",
+      "percentage": -5.22
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Alphabet Class A A - EQ",
+      "name": "Advanced Micro Devices",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -80,9 +80,9 @@
     },
     {
       "symbol": "",
-      "name": "Alphabet Class C C - EQ",
+      "name": "Alphabet Class A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -90,9 +90,9 @@
     },
     {
       "symbol": "",
-      "name": "Apple - EQ",
+      "name": "Alphabet Class CC",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -100,9 +100,9 @@
     },
     {
       "symbol": "",
-      "name": "Broadcom Inc - EQ",
+      "name": "Apple",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -110,9 +110,9 @@
     },
     {
       "symbol": "",
-      "name": "Meta Platforms Class A A - EQ",
+      "name": "Broadcom Inc",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -120,9 +120,9 @@
     },
     {
       "symbol": "",
-      "name": "Micron Technology - EQ",
+      "name": "Meta Platforms Class A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -130,9 +130,9 @@
     },
     {
       "symbol": "",
-      "name": "Microsoft - EQ",
+      "name": "Micron Technology",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -140,9 +140,9 @@
     },
     {
       "symbol": "",
-      "name": "Nvidia - EQ",
+      "name": "Microsoft",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -150,9 +150,9 @@
     },
     {
       "symbol": "",
-      "name": "Samsung Electronics LTD - EQ",
+      "name": "Nvidia",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -160,9 +160,9 @@
     },
     {
       "symbol": "",
-      "name": "Taiwan Semiconductor Manufacturing - EQ",
+      "name": "Taiwan Semiconductor Manufacturing",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -193,7 +193,7 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 116398008.10166,
+    "value": 117190000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -205,40 +205,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.24027312548312296,
-    "3y": 0.26444669880138294,
-    "5y": 0.14689322490803147,
+    "1y": 0.24392928835070915,
+    "3y": 0.2634827763454708,
+    "5y": 0.14360048472061893,
     "10y": null,
-    "all": 0.13846024708700955
+    "all": 0.13786510608798563
   },
   "cagr_adjusted": {
-    "1y": 0.24027312548312296,
-    "3y": 0.26444669880138294,
-    "5y": 0.14689322490803147,
+    "1y": 0.24392928835070915,
+    "3y": 0.2634827763454708,
+    "5y": 0.14360048472061893,
     "10y": null,
-    "all": 0.1385403539504535
+    "all": 0.13794480497123396
   },
   "simplereturn": {
-    "1d": 0.0013521947160390901,
-    "1m": 0.049893669229510884,
-    "3m": 0.06129423437327741,
-    "ytd": 0.21553030303030307,
-    "1y": 0.24027312548312296,
-    "3y": 1.021629567408652,
-    "5y": 0.9843347418324229,
+    "1d": -0.0022852394307676382,
+    "1m": 0.041870050981668294,
+    "3m": 0.0736642074670244,
+    "ytd": 0.2127525252525253,
+    "1y": 0.24392928835070915,
+    "3y": 1.0170096598068037,
+    "5y": 0.9560126260054984,
     "10y": null,
-    "all": 0.9254
+    "all": 0.921
   },
   "changesvalue": {
-    "1d": 0.0025999999999999357,
-    "1m": 0.09149999999999991,
-    "3m": 0.11119999999999997,
-    "ytd": 0.3413999999999999,
-    "1y": 0.373,
-    "3y": 0.973,
-    "5y": 0.9551,
+    "1d": -0.0043999999999999595,
+    "1m": 0.07719999999999994,
+    "3m": 0.13180000000000014,
+    "ytd": 0.33699999999999997,
+    "1y": 0.37670000000000003,
+    "3y": 0.9686,
+    "5y": 0.9389000000000001,
     "10y": null,
-    "all": 0.9254
+    "all": 0.921
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -256,9 +256,9 @@
     "all": -0.2503692762186115
   },
   "nav": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "first_date": "2021-09-20",
-    "value": 1.9254
+    "value": 1.921
   },
   "trade": null
 }

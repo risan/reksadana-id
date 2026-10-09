@@ -68,11 +68,11 @@
     },
     {
       "name": "Cash & Equivalent",
-      "percentage": 1
+      "percentage": 8
     },
     {
       "name": "Equity",
-      "percentage": 22
+      "percentage": 15
     }
   ],
   "holding": [
@@ -207,9 +207,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2011-07-19",
-    "value": 2252.8511
+    "value": 2227.382
   },
   "trade": null
 }

@@ -58,16 +58,16 @@
   },
   "asset": [
     {
+      "name": "Kas&Setara",
+      "percentage": 14.69
+    },
+    {
       "name": "Saham",
-      "percentage": 17.48
+      "percentage": 16.5
     },
     {
       "name": "Obligasi",
-      "percentage": 80.38
-    },
-    {
-      "name": "Kas&Setara",
-      "percentage": 2.14
+      "percentage": 68.81
     }
   ],
   "investment_manager": {
@@ -144,9 +144,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2024-09-02",
-    "value": 975.3723
+    "value": 974.4466
   },
   "trade": null
 }

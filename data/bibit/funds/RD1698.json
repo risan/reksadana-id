@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Kas&Setara",
-      "percentage": 0.96
+      "percentage": 2.16
     },
     {
       "name": "Saham",
-      "percentage": 95.86
+      "percentage": 82.75
     },
     {
       "name": "Deposito",
-      "percentage": 3.18
+      "percentage": 15.09
     }
   ],
   "holding": [
@@ -204,9 +204,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2007-06-08",
-    "value": 4090.65
+    "value": 4039.07
   },
   "trade": null
 }

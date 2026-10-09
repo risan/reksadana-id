@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Pasar Uang & Lain Lain",
-      "percentage": 63
+      "percentage": 46
     },
     {
       "name": "Obligasi",
-      "percentage": 37
+      "percentage": 54
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "first_date": "2022-11-28",
-    "value": 1173.8555
+    "value": 1174.0038
   },
   "trade": null
 }
