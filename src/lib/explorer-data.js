@@ -11,11 +11,11 @@ const COLUMNS = [
   'id', 'name', 'other_names', 'manager', 'type', 'currency', 'sharia', 'aum_currency', 'expense_source', 'flags',
   'nav', 'aum', 'min_purchase', 'nav_date', 'aum_date', 'launch_date', 'history_start',
   'return_1m', 'return_3m', 'return_6m', 'return_ytd', 'return_1y', 'return_3y', 'return_5y', 'cagr_3y', 'cagr_5y',
-  'drawdown_1y', 'drawdown_3y', 'expense_ratio', 'fee_subscription', 'fee_redemption', 'spark', 'total',
+  'drawdown_1y', 'drawdown_3y', 'expense_ratio', 'fee_subscription', 'fee_redemption', 'spark', 'total', 'ojk_status',
 ];
 
 const PLAIN_FIELDS = new Set(['id', 'name', 'sharia', 'nav', 'aum', 'min_purchase']);
-const DICTIONARY_FIELDS = ['manager', 'type', 'currency', 'aum_currency', 'expense_source'];
+const DICTIONARY_FIELDS = ['manager', 'type', 'currency', 'aum_currency', 'expense_source', 'ojk_status'];
 const DATE_FIELDS = new Set(['nav_date', 'aum_date', 'launch_date', 'history_start']);
 const FLAG_FIELDS = ['etf', 'index', 'bibit', 'makmur', 'large_move', 'dividends', 'active'];
 
@@ -95,7 +95,7 @@ export function encodeSummaries(summaries) {
     }
 
     if (DICTIONARY_FIELDS.includes(column)) {
-      return indexOf(column, fund[column]);
+      return indexOf(column, fund[column] ?? null);
     }
 
     if (DATE_FIELDS.has(column)) {

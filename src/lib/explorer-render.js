@@ -54,6 +54,7 @@ function renderTags(fund) {
     fund.index && tag(m.tag_index()),
     fund.dividends && tag(m.tag_dividend(), m.tag_dividend_title()),
     !fund.active && tag(m.tag_inactive(), m.tag_inactive_title(), 'tag-stale'),
+    fund.ojk_status === 'zero_aum' && tag(m.tag_zero_aum(), m.tag_zero_aum_title(), 'tag-stale'),
   ]
     .filter(Boolean)
     .join('');
