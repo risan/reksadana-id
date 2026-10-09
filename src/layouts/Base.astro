@@ -1,82 +1,141 @@
 ---
-import '@fontsource-variable/schibsted-grotesk';
-import '@fontsource-variable/newsreader';
+import '@fontsource-variable/plus-jakarta-sans';
+import '@fontsource-variable/newsreader/opsz.css';
 import '@fontsource/spline-sans-mono/400.css';
 import '../styles/global.css';
+import mainFont from '@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2?url';
 import { latestNavDate } from '../lib/data.js';
 import { formatDate } from '../lib/format.js';
-import { LOCALES, localizeHref, otherLocale, unlocalizedPath } from '../lib/i18n.js';
+import { LOCALES, localizeHref, unlocalizedPath } from '../lib/i18n.js';
+import { icon } from '../lib/icons.js';
 import * as m from '../paraglide/messages.js';
 
-const { title, description = m.site_description(), section, indexable = true } = Astro.props;
+const { title, description = m.site_description(), section, indexable = true, alternatePath } = Astro.props;
 
 const locale = Astro.currentLocale ?? 'id';
 const pagePath = unlocalizedPath(Astro.url.pathname);
+const switchPath = alternatePath ?? pagePath;
 const absoluteUrl = (targetLocale) => new URL(localizeHref(pagePath, targetLocale), Astro.site).href;
 
 const NAV_LINKS = [
-  ['funds', '/', m.nav_funds()],
-  ['compare', '/compare/', m.nav_compare()],
-  ['download', '/download/', m.nav_download()],
-  ['api', '/api/', m.nav_api()],
+  ['funds', '/', m.nav_funds(), 'table-2'],
+  ['compare', '/compare/', m.nav_compare(), 'git-compare'],
+  ['download', '/download/', m.nav_download(), 'download'],
+  ['api', '/api/', m.nav_api(), 'braces'],
 ];
 
 const LANGUAGE_NAMES = { id: 'Bahasa Indonesia', en: 'English' };
 
+const CREDITS = [
+  ['Bibit', 'https://app.bibit.id/'],
+  ['Bareksa', 'https://www.bareksa.com/'],
+  ['Kontan', 'https://pusatdata.kontan.co.id/reksadana'],
+  ['Makmur', 'https://www.makmur.id/'],
+];
+
+// Four ellipses around a point: the kawung motif, drawn on a 24 x 24 grid.
+const KAWUNG_SHAPES = '<ellipse cx="12" cy="6.5" rx="3.6" ry="5"/><ellipse cx="12" cy="17.5" rx="3.6" ry="5"/><ellipse cx="6.5" cy="12" rx="5" ry="3.6"/><ellipse cx="17.5" cy="12" rx="5" ry="3.6"/>';
+const logoMark = `<svg class="logo-mark" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">${KAWUNG_SHAPES}<circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none"/></svg>`;
+const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#2440a8"/><g transform="translate(4 4)" fill="none" stroke="#e2ae4a" stroke-width="1.7">${KAWUNG_SHAPES}<circle cx="12" cy="12" r="1.4" fill="#e2ae4a" stroke="none"/></g></svg>`;
+
 const dataDate = latestNavDate();
+const themeLabel = (mode) => m.theme_label({ mode });
 ---
 
 <!doctype html>
 <html lang={locale}>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="description" content={description} />
     <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f7f5ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)" />
+    <script is:inline>
+      // Set before the CSS paints, so a reader who picked a theme never sees the other one flash.
+      try {
+        const theme = localStorage.getItem('theme');
+
+        if (theme === 'light' || theme === 'dark') {
+          document.documentElement.dataset.theme = theme;
+        }
+      } catch {}
+    </script>
     {indexable && <link rel="canonical" href={absoluteUrl(locale)} />}
     {indexable && LOCALES.map((alternate) => <link rel="alternate" hreflang={alternate} href={absoluteUrl(alternate)} />)}
     {indexable && <link rel="alternate" hreflang="x-default" href={absoluteUrl('id')} />}
     {!indexable && <meta name="robots" content="noindex" />}
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2315171c'/%3E%3Cpath d='M5 22l7-7 5 4 10-10' stroke='%23fafaf7' stroke-width='3' fill='none'/%3E%3C/svg%3E" />
+    <link rel="icon" href={`data:image/svg+xml,${encodeURIComponent(faviconSvg)}`} />
+    <link rel="preload" href={mainFont} as="font" type="font/woff2" crossorigin />
     <title>{title === 'Reksadana ID' ? title : `${title} · Reksadana ID`}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main">{m.skip_to_content()}</a>
     <header class="site-header">
       <div class="wrap">
-        <a class="wordmark" href={localizeHref('/', locale)}>Reksadana<span>ID</span></a>
+        <a class="wordmark" href={localizeHref('/', locale)}><Fragment set:html={logoMark} />Reksadana<span>ID</span></a>
         <nav class="site-nav" aria-label={m.nav_main()}>
-          {NAV_LINKS.map(([key, href, label]) => (
-            <a href={localizeHref(href, locale)} aria-current={section === key ? 'page' : undefined}>{label}</a>
+          {NAV_LINKS.map(([key, href, label, iconName]) => (
+            <a href={localizeHref(href, locale)} aria-current={section === key ? 'page' : undefined}><Fragment set:html={icon(iconName)} />{label}</a>
           ))}
         </nav>
-        <span class="site-freshness" title={m.freshness_hint()}>{m.freshness({ date: formatDate(dataDate, locale) })}</span>
-        <nav class="lang-switch" aria-label={m.language_label()}>
-          {LOCALES.map((target) => (
-            <a
-              href={target === locale ? undefined : localizeHref(pagePath, target)}
-              lang={target}
-              hreflang={target}
-              title={LANGUAGE_NAMES[target]}
-              aria-current={target === locale ? 'true' : undefined}
-              data-lang={target}
-            >{target.toUpperCase()}</a>
-          ))}
-        </nav>
+        <div class="header-actions">
+          <span class="site-freshness" title={m.freshness_hint()}>{m.freshness({ date: formatDate(dataDate, locale) })}</span>
+          <button
+            class="icon-btn theme-toggle"
+            type="button"
+            aria-label={themeLabel(m.theme_system())}
+            title={themeLabel(m.theme_system())}
+            data-label-system={themeLabel(m.theme_system())}
+            data-label-light={themeLabel(m.theme_light())}
+            data-label-dark={themeLabel(m.theme_dark())}
+          >
+            <span class="theme-icon theme-icon-system" set:html={icon('monitor', { size: 20 })} />
+            <span class="theme-icon theme-icon-light" set:html={icon('sun', { size: 20 })} />
+            <span class="theme-icon theme-icon-dark" set:html={icon('moon', { size: 20 })} />
+          </button>
+          <nav class="seg lang-switch" aria-label={m.language_label()}>
+            {LOCALES.map((target) => (
+              <a
+                href={target === locale ? undefined : localizeHref(switchPath, target)}
+                lang={target}
+                hreflang={target}
+                title={LANGUAGE_NAMES[target]}
+                aria-current={target === locale ? 'true' : undefined}
+                data-lang={target}
+              >{target.toUpperCase()}</a>
+            ))}
+          </nav>
+        </div>
       </div>
     </header>
-    <main class="wrap">
+    <main class="wrap" id="main">
       <slot />
     </main>
     <footer class="site-footer">
-      <div class="wrap">
-        <p>{m.footer_disclaimer()}</p>
-        <nav aria-label={m.nav_footer()}>
-          <a href={localizeHref('/download/', locale)}>{m.nav_download()}</a>
-          <a href={localizeHref('/api/', locale)}>{m.nav_api()}</a>
-          <a href="https://github.com/risan/reksadana-id">{m.footer_source()}</a>
-        </nav>
+      <div class="kawung-band" aria-hidden="true"></div>
+      <div class="wrap footer-body">
+        <div class="footer-top">
+          <p>{m.footer_disclaimer()}</p>
+          <nav class="footer-links" aria-label={m.nav_footer()}>
+            <a href={localizeHref('/download/', locale)}>{m.nav_download()}</a>
+            <a href={localizeHref('/api/', locale)}>{m.nav_api()}</a>
+            <a href="https://github.com/risan/reksadana-id">{m.footer_source()}</a>
+          </nav>
+        </div>
+        <p class="footer-credits">
+          <span>{m.footer_data_from()}</span>
+          {CREDITS.map(([name, url]) => <a href={url} rel="noopener">{name}</a>)}
+          <span>{m.footer_icons_from()}</span>
+          <a href="https://lucide.dev" rel="noopener">Lucide</a>
+        </p>
       </div>
     </footer>
+    <nav class="tab-bar" aria-label={m.nav_main()}>
+      {NAV_LINKS.map(([key, href, label, iconName]) => (
+        <a href={localizeHref(href, locale)} aria-current={section === key ? 'page' : undefined}><Fragment set:html={icon(iconName, { size: 22 })} />{label}</a>
+      ))}
+    </nav>
     <script>
       // The switcher keeps the query and hash of the page, and remembers the choice for the next visit to "/".
       const ONE_YEAR_SECONDS = 365 * 24 * 60 * 60;
@@ -96,6 +155,47 @@ const dataDate = latestNavDate();
           document.cookie = `lang=${link.dataset.lang}; Max-Age=${ONE_YEAR_SECONDS}; Path=/; SameSite=Lax`;
         });
       }
+    </script>
+    <script>
+      // Cycles System, Light, Dark. "System" is no stored value and no data-theme, so the CSS media query decides.
+      const MODES = ['system', 'light', 'dark'];
+      const toggle = document.querySelector('.theme-toggle');
+      const root = document.documentElement;
+
+      const currentMode = () => (MODES.includes(root.dataset.theme) ? root.dataset.theme : 'system');
+
+      function showMode() {
+        const label = toggle.getAttribute(`data-label-${currentMode()}`);
+
+        toggle.setAttribute('aria-label', label);
+        toggle.setAttribute('title', label);
+      }
+
+      function remember(mode) {
+        try {
+          if (mode === 'system') {
+            localStorage.removeItem('theme');
+          } else {
+            localStorage.setItem('theme', mode);
+          }
+        } catch {}
+      }
+
+      toggle.addEventListener('click', () => {
+        const next = MODES[(MODES.indexOf(currentMode()) + 1) % MODES.length];
+
+        if (next === 'system') {
+          delete root.dataset.theme;
+        } else {
+          root.dataset.theme = next;
+        }
+
+        remember(next);
+        showMode();
+        window.dispatchEvent(new Event('themechange'));
+      });
+
+      showMode();
     </script>
   </body>
 </html>

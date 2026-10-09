@@ -4,6 +4,7 @@ import { loadFundSummaries } from '../../../lib/data.js';
 import { formatCount } from '../../../lib/format.js';
 import { CHART_RANGES } from '../../../lib/compare.js';
 import { localePaths } from '../../../lib/i18n.js';
+import { icon } from '../../../lib/icons.js';
 import * as m from '../../../paraglide/messages.js';
 
 export const getStaticPaths = () => localePaths();
@@ -22,6 +23,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
   <div class="picker">
     <label class="search">
       <span class="visually-hidden">{m.compare_picker_label()}</span>
+      <Fragment set:html={icon('search')} />
       <input id="picker-input" type="search" placeholder={m.search_placeholder()} autocomplete="off" spellcheck="false" />
     </label>
     <p class="muted small" id="picker-note" aria-live="polite"></p>
@@ -76,7 +78,9 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
   .picker-results {
     margin: 0;
     padding: 0;
-    border: 1px solid var(--rule-strong);
+    border-radius: var(--r-sm);
+    background: var(--surface);
+    box-shadow: var(--shadow-1);
     list-style: none;
   }
 
@@ -95,12 +99,12 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
   .picker-results .sub {
     display: block;
     color: var(--muted);
-    font-size: 12px;
+    font-size: var(--fs-xs);
   }
 
   .picker-results .mono {
-    color: var(--faint);
-    font-size: 11px;
+    color: var(--muted);
+    font-size: var(--fs-xs);
   }
 
   #compare-notices {
@@ -121,7 +125,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     margin-left: 6px;
     padding: 0 4px 0 6px;
     border: 1px solid var(--rule-strong);
-    border-radius: 2px;
+    border-radius: var(--r-xs);
   }
 
   .remove {
@@ -130,7 +134,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     background: none;
     color: var(--muted);
     font: inherit;
-    font-size: 16px;
+    font-size: var(--fs-md);
     line-height: 1;
     cursor: pointer;
   }
@@ -154,7 +158,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     margin: 0 0 6px;
     padding: 0;
     color: var(--ink-2);
-    font-size: 12.5px;
+    font-size: var(--fs-sm);
     list-style: none;
   }
 
@@ -204,7 +208,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
   .compare-table thead th {
     border-bottom: 1px solid var(--rule-strong);
     color: var(--ink);
-    font-size: 13.5px;
+    font-size: var(--fs-sm);
     font-weight: 500;
     white-space: normal;
   }
@@ -217,8 +221,11 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     min-width: 120px;
     max-width: 150px;
     padding-right: 12px;
-    background: var(--paper);
     white-space: normal;
+  }
+
+  .compare-table tbody th[scope='row'] {
+    background: var(--surface);
   }
 
   .compare-table .col-head {
@@ -243,12 +250,12 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
   .compare-table .sub {
     margin-top: 1px;
     color: var(--muted);
-    font-size: 12px;
+    font-size: var(--fs-xs);
     font-weight: 400;
   }
 
   .compare-table .mono {
-    font-size: 11.5px;
+    font-size: var(--fs-xs);
   }
 
   .compare-table .group th {
@@ -257,13 +264,13 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     border-bottom: 1px solid var(--rule-strong);
     background: none;
     color: var(--ink);
-    font-size: 12.5px;
+    font-size: var(--fs-sm);
     font-weight: 650;
     text-align: left;
   }
 
   .compare-table .tag {
-    font-size: 11px;
+    font-size: var(--fs-xs);
     line-height: 15px;
   }
 
