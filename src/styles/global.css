@@ -326,7 +326,7 @@ pre,
 kbd,
 .mono {
   font-family: var(--mono);
-  font-size: 0.88em;
+  font-size: max(0.88em, var(--fs-xs));
   font-variant-numeric: normal;
 }
 
@@ -590,6 +590,11 @@ main.wrap {
 @media (max-width: 719px) {
   .site-nav {
     display: none;
+  }
+
+  .lang-switch a {
+    min-width: 44px;
+    height: 40px;
   }
 
   .site-freshness {

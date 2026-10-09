@@ -78,6 +78,10 @@ const assets = (fund.asset ?? [])
   .filter((asset) => asset.percentage > 0)
   .map((asset) => ({ ...asset, assetClass: assetClassOf(asset.name) }))
   .sort((a, b) => ASSET_CLASSES.indexOf(a.assetClass) - ASSET_CLASSES.indexOf(b.assetClass) || b.percentage - a.percentage);
+
+// The English page names a bare Indonesian class word ("Obligasi", "Lainnya") with the class label; longer names stay as given.
+const INDONESIAN_CLASS_WORDS = /^(saham|obligasi|sukuk|pasar uang|deposito|kas|lainnya)$/i;
+const assetName = (asset) => (locale === 'en' && INDONESIAN_CLASS_WORDS.test(asset.name.trim()) ? asset.assetClass.label : asset.name);
 const assetTotal = assets.reduce((sum, asset) => sum + asset.percentage, 0);
 
 const BAREKSA_CLASSES = [
@@ -632,17 +636,17 @@ const sources = [
                 <h3 class="card-title">{m.asset_mix_title()}</h3>
                 {assets.length > 0 && (
                   <>
-                    <div class="mix-bar" role="img" aria-label={assets.map((asset) => `${asset.name} ${asset.percentage}%`).join(', ')}>
+                    <div class="mix-bar" role="img" aria-label={assets.map((asset) => `${assetName(asset)} ${asset.percentage}%`).join(', ')}>
                       {assets.map((asset) => (
-                        <span style={`flex-basis: ${(asset.percentage / assetTotal) * 100}%; background: ${asset.assetClass.color}`} title={`${asset.name}: ${asset.percentage}%`} />
+                        <span style={`flex-basis: ${(asset.percentage / assetTotal) * 100}%; background: ${asset.assetClass.color}`} title={`${assetName(asset)}: ${asset.percentage}%`} />
                       ))}
                     </div>
                     <ul class="mix-legend">
                       {assets.map((asset) => (
                         <li>
                           <i class="key-box" style={`background: ${asset.assetClass.color}`}></i>
-                          {asset.name}
-                          <span class="num">{formatNumber(asset.percentage, locale, 2)}%</span>
+                          {assetName(asset)}
+                          <span class="num">{formatNumber(asset.percentage, locale, 2, 2)}%</span>
                         </li>
                       ))}
                     </ul>
@@ -949,7 +953,7 @@ const sources = [
   }
 
   .chip-note {
-    color: var(--muted);
+    color: inherit;
     font-weight: var(--fw-body);
   }
 
@@ -1064,9 +1068,16 @@ const sources = [
 
   .figures {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--s-3);
     margin: 0;
+  }
+
+  /* Four across only where the column is wide enough, so the last card is never alone on a row. */
+  @media (min-width: 880px) and (max-width: 999px), (min-width: 1280px) {
+    .figures {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
 
   .figure {
@@ -1592,7 +1603,9 @@ const sources = [
     .fund-main,
     .fund-aside {
       display: grid;
+      grid-template-columns: minmax(0, 1fr);
       gap: var(--s-3);
+      min-width: 0;
     }
 
     .fund-aside {
@@ -1668,6 +1681,11 @@ const sources = [
     .chart-bar .seg button {
       flex: 1 1 0;
       padding: 0;
+    }
+
+    .chart-bar #benchmark-buttons button {
+      flex: 0 1 auto;
+      padding: var(--s-1) var(--s-3);
     }
 
     .copy {
