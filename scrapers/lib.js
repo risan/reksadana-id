@@ -12,13 +12,13 @@ export class HttpError extends Error {
   }
 }
 
-// Timeouts, dropped connections, and truncated bodies are worth a retry too.
+// Timeouts, dropped connections, and truncated bodies are worth a retry too. An error with `retryable = false` is not.
 export const withRetries = async (task) => {
   for (let attempt = 1; ; attempt++) {
     try {
       return await task();
     } catch (error) {
-      const retryable = !(error instanceof HttpError) || error.status === 429 || error.status >= 500;
+      const retryable = error.retryable !== false && (!(error instanceof HttpError) || error.status === 429 || error.status >= 500);
 
       if (!retryable || attempt === MAX_ATTEMPTS) {
         throw error;
@@ -27,6 +27,30 @@ export const withRetries = async (task) => {
       await sleep(2 ** attempt * 1000);
     }
   }
+};
+
+// A GET that retries, waits `delayMs` after every request, and returns the body text. Each source brings its own
+// headers and limits.
+export const createTextFetcher = ({ headers, timeoutMs, delayMs }) => {
+  let requestCount = 0;
+
+  const fetchText = (url) => withRetries(async () => {
+    requestCount++;
+
+    try {
+      const response = await fetch(url, { headers, signal: AbortSignal.timeout(timeoutMs) });
+
+      if (!response.ok) {
+        throw new HttpError(url, response.status, response.statusText);
+      }
+
+      return await response.text();
+    } finally {
+      await sleep(delayMs);
+    }
+  });
+
+  return { fetchText, getRequestCount: () => requestCount };
 };
 
 // Write to a temporary file first, so an interrupted run never leaves a half-written file.
@@ -119,6 +143,20 @@ export const readCsvRecords = async (file) => {
   }
 };
 
+// A new row replaces the stored row of the same date, column by column. A missing value in a new row
+// never erases the stored value of that column.
+export const mergeRowsByDate = (storedRows, newRows) => {
+  const rowsByDate = new Map(storedRows.map((row) => [row[0], row]));
+
+  for (const row of newRows) {
+    const storedRow = rowsByDate.get(row[0]);
+
+    rowsByDate.set(row[0], storedRow ? row.map((value, column) => (value === '' ? storedRow[column] ?? '' : value)) : row);
+  }
+
+  return [...rowsByDate.values()].sort((a, b) => a[0].localeCompare(b[0]));
+};
+
 // Runs `worker` over `items` with a fixed number of parallel workers.
 // Returns one message per item that threw, so one bad item never stops the run.
 export const runPool = async ({ items, worker, concurrency, label, describeItem }) => {
@@ -149,6 +187,51 @@ export const runPool = async ({ items, worker, concurrency, label, describeItem 
   return failures;
 };
 
+// Wraps a worker so it stops taking work once `limit` calls in a row were refused with HTTP 403.
+// A site that blocks this network refuses every request, so asking on would only waste the run.
+export const stopAfterForbidden = (worker, limit) => {
+  let forbiddenInARow = 0;
+
+  const guardedWorker = async (item) => {
+    if (forbiddenInARow >= limit) {
+      return;
+    }
+
+    try {
+      await worker(item);
+      forbiddenInARow = 0;
+    } catch (error) {
+      forbiddenInARow = error instanceof HttpError && error.status === 403 ? forbiddenInARow + 1 : 0;
+
+      throw error;
+    }
+  };
+
+  return { worker: guardedWorker, hasStopped: () => forbiddenInARow >= limit };
+};
+
+const FAILURE_TOLERANCE = 0.05;
+
+// A few transient failures are retried by the next run, so they only warn. The run fails
+// when more than 5% of the attempted funds failed, which means something real is wrong.
+export const reportFailures = (failures, attemptedCount) => {
+  if (failures.length === 0) {
+    return;
+  }
+
+  const summary = `${failures.length} of ${attemptedCount} funds failed`;
+
+  if (failures.length > attemptedCount * FAILURE_TOLERANCE) {
+    console.error(`${summary}:\n${failures.join('\n')}`);
+    process.exitCode = 1;
+
+    return;
+  }
+
+  console.log(`::warning::${summary}; they are retried next run`);
+  console.log(failures.join('\n'));
+};
+
 export const decodeHtml = (text) => text
   .replaceAll('&quot;', '"')
   .replaceAll('&#039;', "'")
@@ -157,6 +240,22 @@ export const decodeHtml = (text) => text
   .replaceAll('&gt;', '>')
   .replaceAll('&amp;', '&')
   .trim();
+
+// Every field of the page's form that a browser would send, except the buttons.
+export const readFormFields = (html) => {
+  const fields = new URLSearchParams();
+
+  for (const [tag] of html.matchAll(/<input[^>]*>/g)) {
+    const name = tag.match(/name="([^"]+)"/)?.[1];
+    const type = tag.match(/type="([^"]+)"/)?.[1];
+
+    if (name && !['submit', 'button', 'image', 'checkbox', 'radio'].includes(type)) {
+      fields.set(name, decodeHtml(tag.match(/value="([^"]*)"/)?.[1] ?? ''));
+    }
+  }
+
+  return fields;
+};
 
 const BIBIT_SYMBOL_COLUMN = 0;
 const BIBIT_NAME_COLUMN = 1;

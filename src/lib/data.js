@@ -1,8 +1,9 @@
 import { closeSync, existsSync, fstatSync, openSync, readFileSync, readSync, readdirSync } from 'node:fs';
 import path from 'node:path';
+import { benchmarkAt, suggestBenchmarkIds } from './benchmarks.js';
 import { buildCosts } from './costs.js';
 import { makmurFundUrl } from './referrals.js';
-import { computeReturns, dividendEvents, fundCurrency, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, sparkline, withDividendsReinvested } from './series.js';
+import { computeReturns, dividendEvents, fundCurrency, largeMoves, periodStartDate, periodStartIndex, pickAumHistory, pickNavHistory, sparkline, withDividendsReinvested } from './series.js';
 
 export const DATA_DIR = path.resolve('data');
 
@@ -10,6 +11,9 @@ const BIBIT_DIR = path.join(DATA_DIR, 'bibit');
 const KONTAN_DIR = path.join(DATA_DIR, 'kontan');
 const BAREKSA_DIR = path.join(DATA_DIR, 'bareksa');
 const MAKMUR_DIR = path.join(DATA_DIR, 'makmur');
+const OJK_DIR = path.join(DATA_DIR, 'ojk', 'monthly');
+const BENCHMARKS_DIR = path.join(DATA_DIR, 'benchmarks');
+const MACRO_DIR = path.join(DATA_DIR, 'macro');
 
 function readText(directory, ...segments) {
   const file = path.join(directory, ...segments);
@@ -159,6 +163,7 @@ function parseFund(row) {
     currency: emptyToNull(row.currency),
     sharia: row.sharia === '' ? null : row.sharia === 'true',
     launch_date: emptyToNull(row.launch_date),
+    ojk: emptyToNull(row.ojk),
     ...indexFlags(sources, [row.name, ...otherNames]),
     sources,
   };
@@ -181,10 +186,10 @@ export function listFunds() {
   return [...loadFundsById().values()];
 }
 
-// Retired fund IDs and the fund that holds their record now.
+// Retired fund IDs and the fund that holds their record now. An ID with no fund (its record was excluded) has none.
 export function loadRetiredIds() {
   return readCsvObjects(DATA_DIR, 'fund-ids.csv')
-    .filter((row) => row.id !== row.current_id)
+    .filter((row) => row.id !== row.current_id && row.current_id !== '')
     .map((row) => ({ id: row.id, current_id: row.current_id }));
 }
 
@@ -302,6 +307,66 @@ function loadMakmur(ids) {
   };
 }
 
+let ojkMonthsByName = null;
+let newestOjkMonth = '';
+
+// Every fund OJK lists, by the name OJK writes, with one row per month (oldest first): the manager, custodian,
+// type, currency, AUM in rupiah (also for a USD fund), and units in the fund's own currency.
+function loadOjkMonthsByName() {
+  if (ojkMonthsByName === null) {
+    const files = existsSync(OJK_DIR) ? readdirSync(OJK_DIR).filter((file) => file.endsWith('.csv')).sort() : [];
+
+    ojkMonthsByName = new Map();
+
+    for (const file of files) {
+      const month = file.slice(0, -'.csv'.length);
+
+      newestOjkMonth = month;
+
+      for (const row of readCsvObjects(OJK_DIR, file)) {
+        const rows = ojkMonthsByName.get(row.fund) ?? [];
+
+        if (rows.at(-1)?.month !== month) {
+          rows.push({ month, manager: row.manager, custodian: row.custodian, type: row.type, currency: row.currency, aum: Number(row.aum), units: Number(row.units) });
+          ojkMonthsByName.set(row.fund, rows);
+        }
+      }
+    }
+  }
+
+  return ojkMonthsByName;
+}
+
+// What OJK's monthly statistics say about a fund, or null when the fund is not linked to an OJK fund.
+// `status` is "zero_aum" when OJK's latest AUM is 0 (the fund is dissolved or not launched, per OJK),
+// "not_listed" when OJK no longer lists the fund in its newest month, and "registered" otherwise.
+function loadOjk(name) {
+  const months = name === null ? undefined : loadOjkMonthsByName().get(name);
+
+  if (months === undefined) {
+    return null;
+  }
+
+  const latest = months.at(-1);
+  let status = 'registered';
+
+  if (latest.month !== newestOjkMonth) {
+    status = 'not_listed';
+  } else if (latest.aum === 0) {
+    status = 'zero_aum';
+  }
+
+  return {
+    name,
+    manager: latest.manager,
+    custodian: latest.custodian,
+    type: latest.type,
+    currency: latest.currency,
+    status,
+    months: months.map(({ month, aum, units }) => ({ month, aum, units })),
+  };
+}
+
 // Everything about one fund, as served by /api/funds/<id>.json. The Bibit fields (profile, holdings, fees,
 // documents) come from its Bibit records and are missing for a fund Bibit does not list.
 export function loadFundRecord(id) {
@@ -322,6 +387,7 @@ export function loadFundRecord(id) {
     kontan: loadKontan(kontan),
     bareksa: loadBareksa(bareksa),
     makmur: makmurFund,
+    ojk: loadOjk(fund.ojk),
   };
 }
 
@@ -462,13 +528,93 @@ function hasLargeMoveInLastYear(points) {
   return largeMoves(points).some((move) => move.date > yearAgo);
 }
 
+const BI_RATE_SERIES = {
+  id: 'bi-rate',
+  name: { id: 'BI-Rate (suku bunga acuan Bank Indonesia)', en: 'BI-Rate (Bank Indonesia policy rate)' },
+  description: {
+    id: 'Suku bunga acuan Bank Indonesia (BI 7-Day Reverse Repo Rate), dalam persen per tahun, pada tanggal keputusan Rapat Dewan Gubernur.',
+    en: "Bank Indonesia's policy rate (BI 7-Day Reverse Repo Rate) in percent per year, on the date of the Board of Governors' decision.",
+  },
+  kind: 'rate',
+  source: 'Bank Indonesia',
+  publisher: 'Bank Indonesia',
+  currency: 'IDR',
+};
+
+let benchmarkSeries = null;
+
+// The series funds are compared with, each as its metadata and points ({ date, value }, oldest first):
+// the stock and fund category indices in data/benchmarks/, and the BI-Rate from data/macro/.
+export function loadBenchmarks() {
+  if (benchmarkSeries === null) {
+    const toPoints = (rows, valueColumn) => rows.map((row) => ({ date: row.date, value: Number(row[valueColumn]) }));
+    const indexMetadata = JSON.parse(readText(BENCHMARKS_DIR, 'benchmarks.json'));
+    const biRatePoints = toPoints(readCsvObjects(MACRO_DIR, 'bi-rate.csv'), 'rate');
+
+    benchmarkSeries = [
+      ...indexMetadata.map((metadata) => ({ ...metadata, points: toPoints(readCsvObjects(BENCHMARKS_DIR, `${metadata.id}.csv`), 'value') })),
+      { ...BI_RATE_SERIES, start_date: biRatePoints[0].date, points: biRatePoints },
+    ];
+  }
+
+  return benchmarkSeries;
+}
+
+// The benchmarks suggested for a fund, measured over the fund's own history (its first to its latest NAV) so that the periods line up.
+export function fundBenchmarks(fund, history) {
+  const endDate = history.points.at(-1)?.date;
+  const seriesById = new Map(loadBenchmarks().map((series) => [series.id, series]));
+
+  if (!endDate) {
+    return [];
+  }
+
+  return suggestBenchmarkIds(fund).map((id) => benchmarkAt(seriesById.get(id), endDate, history.points[0].date)).filter((entry) => entry !== null);
+}
+
 let fundSummaries = null;
 
-// One compact row per fund for the fund explorer, plus the USD rate it needs to rank funds by size.
+// One row per fund for the fund explorer, plus the USD rate it needs to rank funds by size. Returns,
+// CAGRs, and drawdowns are fractions; the cost fields are fractions or rupiah; a missing value is null.
+// The explorer.json endpoint shrinks this for the browser, so keep the field names stable.
 export function loadFundSummaries() {
   fundSummaries ??= buildFundSummaries();
 
   return fundSummaries;
+}
+
+// The change in NAV over the last six months, which `computeReturns` does not cover.
+function sixMonthReturn(history) {
+  const startIndex = periodStartIndex(history, '6m');
+
+  return startIndex < 0 ? null : history.points.at(-1).value / history.points[startIndex].value - 1;
+}
+
+// The lowest first purchase among the distributors that sell in rupiah.
+function lowestRupiahMinPurchase(costs) {
+  const amounts = costs.min_purchase.filter((minimum) => minimum.currency === 'IDR').map((minimum) => minimum.amount);
+
+  return amounts.length === 0 ? null : Math.min(...amounts);
+}
+
+// Returns are kept to more decimals than anyone reads, because the explorer data rounds them once, to tenths of a percent.
+const RETURN_DECIMALS = 8;
+
+// The returns that are shown or filtered on, for the NAV change or for the total return.
+function returnFields(returns, sixMonths, isActive) {
+  const pick = (values, period, decimals) => (isActive ? roundTo(values[period], decimals) : null);
+
+  return {
+    return_1m: pick(returns.simplereturn, '1m', RETURN_DECIMALS),
+    return_3m: pick(returns.simplereturn, '3m', RETURN_DECIMALS),
+    return_6m: isActive ? roundTo(sixMonths, RETURN_DECIMALS) : null,
+    return_ytd: pick(returns.simplereturn, 'ytd', RETURN_DECIMALS),
+    return_1y: pick(returns.simplereturn, '1y', RETURN_DECIMALS),
+    return_3y: pick(returns.simplereturn, '3y', RETURN_DECIMALS),
+    return_5y: pick(returns.simplereturn, '5y', RETURN_DECIMALS),
+    cagr_3y: pick(returns.cagr, '3y', RETURN_DECIMALS),
+    cagr_5y: pick(returns.cagr, '5y', RETURN_DECIMALS),
+  };
 }
 
 function buildFundSummaries() {
@@ -482,8 +628,7 @@ function buildFundSummaries() {
     const active = isActive(navDate, last?.source);
     const performance = fundPerformance(record, history);
     const aum = latestAum(record);
-    const periodReturn = (period) => (active ? roundTo(performance.simplereturn[period], 5) : null);
-    const totalReturn = (period) => (active ? roundTo(performance.total.simplereturn[period], 5) : null);
+    const drawdown = (period) => (active ? roundTo(performance.maxdrawdown[period], RETURN_DECIMALS) : null);
 
     if (fund.currency === 'USD' && record.currency_exchange?.exchange_rate > 1) {
       usdToIdr = record.currency_exchange.exchange_rate;
@@ -506,21 +651,25 @@ function buildFundSummaries() {
       aum: roundSignificant(aum?.value ?? null, 4),
       aum_currency: aum?.currency ?? null,
       aum_date: aum?.date ?? null,
-      return_1m: periodReturn('1m'),
-      return_ytd: periodReturn('ytd'),
-      return_1y: periodReturn('1y'),
-      return_3y: periodReturn('3y'),
+      ...returnFields(performance, sixMonthReturn(history), active),
+      drawdown_1y: drawdown('1y'),
+      drawdown_3y: drawdown('3y'),
       spark: active ? sparkline(history.points) : null,
       total: performance.total && {
-        return_1m: totalReturn('1m'),
-        return_ytd: totalReturn('ytd'),
-        return_1y: totalReturn('1y'),
-        return_3y: totalReturn('3y'),
+        ...returnFields(performance.total, sixMonthReturn(performance.totalHistory), active),
         spark: active ? sparkline(performance.totalHistory.points) : null,
       },
+      expense_ratio: record.costs.expense_ratio?.value ?? null,
+      expense_source: record.costs.expense_ratio?.source ?? null,
+      min_purchase: lowestRupiahMinPurchase(record.costs),
+      fee_subscription: record.costs.max_fees.subscription?.max ?? null,
+      fee_redemption: record.costs.max_fees.redemption?.max ?? null,
+      launch_date: fund.launch_date,
+      history_start: history.points[0]?.date ?? null,
       large_move: active && hasLargeMoveInLastYear(history.points),
       dividends: (record.dividends?.length ?? 0) > 0,
       active,
+      ...(record.ojk && { ojk_status: record.ojk.status }),
     };
   });
 

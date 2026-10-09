@@ -1,13 +1,16 @@
 ---
 import Base from '../../../layouts/Base.astro';
-import { fundIdOfBibitSymbol, fundPerformance, isActive, latestAum, listFundIds, loadFundRecord, shortManagerName, staleSourceDate } from '../../../lib/data.js';
+import { fundBenchmarks, fundIdOfBibitSymbol, fundPerformance, isActive, latestAum, latestNavDate, listFundIds, loadBenchmarks, loadFundRecord, loadFundSummaries, shortManagerName, staleSourceDate } from '../../../lib/data.js';
 import { describeCosts } from '../../../lib/costs-text.js';
+import { explorerTypeKey } from '../../../lib/explorer.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from '../../../lib/format.js';
-import { shariaText, typeName } from '../../../lib/fund-types.js';
+import { TABLE_PERIODS, linePath, medianReturns, peerReturns, profileSummary, shareBeaten, shortBenchmarkName } from '../../../lib/fund-page.js';
+import { shariaText, typeLook, typeName } from '../../../lib/fund-types.js';
 import { localePaths, localizeHref } from '../../../lib/i18n.js';
+import { icon } from '../../../lib/icons.js';
 import { REFERRALS, bibitFundUrl } from '../../../lib/referrals.js';
 import * as m from '../../../paraglide/messages.js';
-import { RETURN_PERIODS, SOURCE_LABELS, fundCurrency, jakartaDate, largeMoves, pickAumHistory, pickNavHistory } from '../../../lib/series.js';
+import { SOURCE_LABELS, daysBetween, fundCurrency, jakartaDate, largeMoves, pickAumHistory, pickNavHistory } from '../../../lib/series.js';
 
 export function getStaticPaths() {
   return localePaths(listFundIds().map((id) => ({ id })));
@@ -29,10 +32,14 @@ const navValue = lastPoint?.value ?? null;
 const navDate = history.frozenSince ?? lastPoint?.date ?? null;
 const active = isActive(navDate, lastPoint?.source);
 const sourceDataDate = staleSourceDate(lastPoint?.source);
+// A source that refreshes daily is never worth a notice; one that trails the site's newest data by days is.
+const STALE_SOURCE_DAYS = 5;
+const isSourceBehind = sourceDataDate !== null && daysBetween(sourceDataDate, latestNavDate()) > STALE_SOURCE_DAYS;
 const currency = fundCurrency(fund);
 const aum = latestAum(fund);
 const aumPoints = pickAumHistory(fund).points;
-const hasAumHistory = aumPoints.length > 0;
+const hasNavChart = history.points.length >= 2;
+const hasAumChart = aumPoints.length >= 2;
 const aumCurrency = aumPoints.at(-1)?.currency ?? null;
 const moves = largeMoves(history.points).reverse();
 
@@ -48,7 +55,6 @@ const PERIOD_LABELS = {
   '10y': m.period_10y(),
   all: m.period_all(),
 };
-const TABLE_PERIODS = RETURN_PERIODS.filter((period) => period !== '1d');
 const ret = (period, returns = performance) => returns?.simplereturn?.[period] ?? null;
 const total = performance.total;
 
@@ -73,6 +79,10 @@ const assets = (fund.asset ?? [])
   .filter((asset) => asset.percentage > 0)
   .map((asset) => ({ ...asset, assetClass: assetClassOf(asset.name) }))
   .sort((a, b) => ASSET_CLASSES.indexOf(a.assetClass) - ASSET_CLASSES.indexOf(b.assetClass) || b.percentage - a.percentage);
+
+// The English page names a bare Indonesian class word ("Obligasi", "Lainnya") with the class label; longer names stay as given.
+const INDONESIAN_CLASS_WORDS = /^(saham|obligasi|sukuk|pasar uang|deposito|kas|lainnya)$/i;
+const assetName = (asset) => (locale === 'en' && INDONESIAN_CLASS_WORDS.test(asset.name.trim()) ? asset.assetClass.label : asset.name);
 const assetTotal = assets.reduce((sum, asset) => sum + asset.percentage, 0);
 
 const BAREKSA_CLASSES = [
@@ -111,10 +121,12 @@ const holdings = fund.holding ?? [];
 const dividends = [...(fund.dividends ?? [])].sort((a, b) => b.date.localeCompare(a.date));
 const factsheets = [...(fund.documents?.factsheets ?? [])].filter((document) => isWebUrl(document.file)).sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
 const prospectus = [...(fund.documents?.prospectus ?? [])].filter((document) => isWebUrl(document.file)).reverse();
+const olderDocumentCount = factsheets.length - Math.min(3, factsheets.length) + Math.max(prospectus.length - 1, 0);
 const makmurDocuments = [
   [m.doc_prospectus(), makmur?.data.prospectus],
   [m.doc_factsheet(), makmur?.data.factsheet],
 ].filter(([, url]) => isWebUrl(url));
+const hasDocuments = prospectus.length > 0 || factsheets.length > 0 || makmurDocuments.length > 0;
 const switchables = fund.switchables ?? [];
 const buyLinks = [
   fund.tradeable && { ...REFERRALS.bibit, url: bibitFundUrl(fund.symbol) },
@@ -122,6 +134,7 @@ const buyLinks = [
 ].filter(Boolean);
 
 const typeLabel = info.type ? typeName(info.type, locale) : null;
+const look = typeLook(info.type);
 // English pages keep Bibit's own label beside the English name, so a reader can match it to the apps.
 const typeNote = typeLabel !== null && typeLabel !== info.type ? info.type : null;
 const launchDate = info.launch_date ?? fund.released_date ?? null;
@@ -137,6 +150,39 @@ const returnsNote = (isTotal) =>
     .filter(Boolean)
     .join(' ');
 
+const benchmarkMetadata = new Map(loadBenchmarks().map((series) => [series.id, series]));
+const benchmarks = fundBenchmarks(info, history).map((benchmark) => {
+  const name = benchmarkMetadata.get(benchmark.id).name[locale];
+
+  return { ...benchmark, name, shortName: shortBenchmarkName(name) };
+});
+const indexBenchmarks = benchmarks.filter((benchmark) => benchmark.returns !== null);
+const rateBenchmark = benchmarks.find((benchmark) => benchmark.returns === null);
+
+const ojk = fund.ojk;
+const ojkLatest = ojk?.months.at(-1) ?? null;
+const ojkMonth = ojkLatest ? formatMonth(`${ojkLatest.month}-01`, locale) : null;
+const ojkSparkPath = ojk && ojk.months.some((month) => month.aum > 0) ? linePath(ojk.months.map((month) => month.aum), 200, 36) : null;
+
+function ojkDetails() {
+  if (!ojk) {
+    return [];
+  }
+
+  if (ojk.status === 'registered') {
+    return [
+      [m.detail_ojk(), m.ojk_registered()],
+      [m.detail_ojk_aum(), `${formatMoney(ojkLatest.aum, locale, 'IDR')} · ${ojkMonth}`],
+    ];
+  }
+
+  if (ojk.status === 'zero_aum') {
+    return [[m.detail_ojk(), m.ojk_zero_row({ month: ojkMonth })]];
+  }
+
+  return [[m.detail_ojk(), m.ojk_not_listed({ month: ojkMonth }), true]];
+}
+
 const details = [
   [m.detail_type(), typeLabel === null ? null : `${typeLabel}${typeNote ? ` (${typeNote})` : ''}`],
   [m.detail_manager(), info.manager],
@@ -144,6 +190,7 @@ const details = [
   [m.compare_row_sharia(), shariaText(info.sharia)],
   [m.detail_launched(), launchDate ? formatDate(launchDate, locale) : null],
   [m.detail_risk(), riskProfile],
+  ...ojkDetails(),
 ].filter(([, value]) => value !== null && value !== undefined && value !== '');
 
 function threeYearSub(returns) {
@@ -168,25 +215,115 @@ const navFigure = (returns) => ({
 });
 
 const figures = [
-  { ...navFigure(performance), total: total && navFigure(total) },
-  { ...returnFigure(performance, m.figure_return_1y()), total: total && returnFigure(total, m.figure_return_1y_total()) },
-  { ...worstFallFigure(performance, m.figure_worst_fall()), total: total && worstFallFigure(total, m.figure_worst_fall_total()) },
-  { label: m.figure_aum(), value: formatMoney(aum?.value ?? null, locale, aum?.currency), sub: aum ? formatMonth(aum.date, locale) : '' },
+  { key: 'nav', info: m.info_nav(), ...navFigure(performance), total: total && navFigure(total) },
+  { key: 'return', info: m.info_return(), ...returnFigure(performance, m.figure_return_1y()), total: total && returnFigure(total, m.figure_return_1y_total()) },
+  { key: 'fall', info: m.info_drawdown(), ...worstFallFigure(performance, m.figure_worst_fall()), total: total && worstFallFigure(total, m.figure_worst_fall_total()) },
+  { key: 'aum', info: m.info_aum(), label: m.figure_aum(), value: formatMoney(aum?.value ?? null, locale, aum?.currency), sub: aum ? formatMonth(aum.date, locale) : '' },
 ].filter((figure, index) => index === 0 || figure.value !== '—');
 
 // A figure with dividends included has two views, which the page switches between.
 const figureViews = (figure) => (figure.total ? [{ view: 'nav', ...figure }, { view: 'total', ...figure.total }] : [figure]);
 
+const summaries = loadFundSummaries().funds;
+const peers = info.type ? peerReturns(summaries).get(info.type) : undefined;
+const ownSummary = summaries.find((summary) => summary.id === id);
+const ownOneYear = ownSummary?.return_1y ?? null;
+const shareBeatenOneYear = active && peers && ownOneYear !== null ? shareBeaten(peers.nav['1y'], ownOneYear) : null;
+
 const costs = describeCosts(fund.costs, locale);
+const feeRows = costs.fees.length === 0 ? [[m.compare_row_max_fees(), []]] : costs.fees.map((fee) => [fee.label, [fee]]);
 const listOf = (value) => (value === null ? [] : [value]);
 const costRows = [
-  [m.detail_expense_ratio(), listOf(costs.expenseRatio)],
   [m.compare_row_min_purchase(), costs.minPurchases],
   [m.cost_row_min_topup(), listOf(costs.minTopup)],
   [m.cost_row_min_redemption(), listOf(costs.minRedemption)],
-  ...(costs.fees.length === 0 ? [[m.compare_row_max_fees(), []]] : costs.fees.map((fee) => [fee.label, [fee]])),
+  ...feeRows,
   [m.detail_custodian(), listOf(costs.custodian)],
 ];
+const costRowsWithData = costRows.filter(([, values]) => values.length > 0);
+const missingCosts = [...(costs.expenseRatios.length === 0 ? [m.detail_expense_ratio()] : []), ...costRows.filter(([, values]) => values.length === 0).map(([label]) => label)];
+const hasCosts = costs.expenseRatios.length > 0 || costRowsWithData.length > 0;
+
+const glance = [];
+const oneYear = ret('1y');
+
+if (active && oneYear !== null) {
+  const change = formatPercent(Math.abs(oneYear), locale, 1);
+  const sentence = oneYear >= 0 ? m.glance_return_up({ change }) : m.glance_return_down({ change });
+  const rank =
+    shareBeatenOneYear === null
+      ? null
+      : shareBeatenOneYear >= 0.5
+        ? m.glance_rank_ahead({ percent: formatPercent(shareBeatenOneYear, locale, 0), type: typeLabel })
+        : m.glance_rank_behind({ percent: formatPercent(1 - shareBeatenOneYear, locale, 0), type: typeLabel });
+
+  glance.push([sentence, rank].filter(Boolean).join(' '));
+}
+
+const indexOneYear = indexBenchmarks[0]?.returns.simplereturn?.['1y'] ?? null;
+
+if (active && oneYear !== null && indexOneYear !== null) {
+  glance.push(m.glance_benchmark({ name: indexBenchmarks[0].shortName, change: formatChange(indexOneYear, locale, 1) }));
+}
+
+const oneYearFall = performance.maxdrawdown?.['1y'] ?? null;
+
+if (active && oneYear !== null && oneYearFall !== null && oneYearFall < 0) {
+  glance.push(m.glance_drawdown({ drop: formatPercent(Math.abs(oneYearFall), locale, 1) }));
+}
+
+if (costs.expenseRatios.length > 0) {
+  glance.push(m.glance_costs({ value: costs.expenseRatios.map((item) => `${item.text} (${item.source})`).join(', ') }));
+}
+
+const historyYears = hasNavChart ? Math.floor(daysBetween(history.points[0].date, lastPoint.date) / 365.25) : 0;
+
+if (historyYears >= 1) {
+  glance.push(historyYears === 1 ? m.glance_history_one() : m.glance_history({ count: historyYears }));
+}
+
+const summary = profileSummary(fund.profile);
+const profileText = fund.profile?.trim();
+
+const returnPeriods = TABLE_PERIODS.filter((period) =>
+  [ret(period), performance.cagr?.[period], performance.maxdrawdown?.[period]].some((value) => value !== null && value !== undefined),
+);
+const medians = { nav: medianReturns(peers?.nav), total: medianReturns(peers?.total) };
+// The medians are of funds that report today, which says nothing about a fund that stopped.
+const hasMedians = active && Object.values(medians.nav).some((value) => value !== null);
+
+// Every row of the returns table comes from here; a row for another yardstick is one more entry in the list.
+// The rows after the fund's own are yardsticks: muted, with no gain or loss color.
+function returnRows(returns, medianOfType) {
+  const percentCell = (value) => ({ text: formatPercent(value, locale), className: '' });
+  const changeCell = (value) => ({ text: formatChange(value, locale), className: changeClass(value) });
+
+  return [
+    { label: m.returns_row_return(), cells: returnPeriods.map((period) => changeCell(ret(period, returns))) },
+    { label: m.returns_row_per_year(), title: m.returns_row_per_year_title(), cells: returnPeriods.map((period) => changeCell(returns.cagr?.[period] ?? null)) },
+    { label: m.returns_row_worst_fall(), title: m.returns_row_worst_fall_title(), cells: returnPeriods.map((period) => percentCell(returns.maxdrawdown?.[period] ?? null)) },
+    hasMedians && { label: m.returns_row_median({ type: typeLabel }), className: 'row-reference', cells: returnPeriods.map((period) => ({ text: formatChange(medianOfType[period], locale), className: '' })) },
+    ...indexBenchmarks.map((benchmark) => ({
+      label: benchmark.shortName,
+      title: benchmark.name,
+      className: 'row-reference',
+      cells: returnPeriods.map((period) => ({ text: formatChange(benchmark.returns.simplereturn?.[period] ?? null, locale), className: '' })),
+    })),
+  ].filter(Boolean);
+}
+
+const returnViews = [{ view: 'nav', rows: returnRows(performance, medians.nav) }, ...(total ? [{ view: 'total', rows: returnRows(total, medians.total) }] : [])];
+
+const showPerformance = hasNavChart || hasAumChart;
+const showPortfolio = assets.length > 0 || latestMix !== undefined || holdings.length > 0;
+const sectionLinks = [
+  ['overview', m.section_overview(), true],
+  ['performance', m.section_performance(), showPerformance],
+  ['portfolio', m.section_portfolio(), showPortfolio],
+  ['costs', m.section_costs(), hasCosts],
+  ['documents', m.documents_title(), hasDocuments || switchables.length > 0],
+  ['data', m.data_title(), true],
+].filter(([, , isShown]) => isShown);
 
 const sources = [
   hasBibit && { name: 'Bibit', url: 'https://app.bibit.id/', what: m.source_bibit(), ids: info.sources.bibit },
@@ -197,34 +334,48 @@ const sources = [
 ---
 
 <Base title={`${info.name} (${id})`} description={manager ? m.fund_description({ name: info.name, manager }) : m.fund_description_no_manager({ name: info.name })} section="funds">
-  <nav class="crumbs" aria-label={m.crumbs_label()}>
-    <a href={href('/')}>{m.nav_funds()}</a>
-    {info.type && <><span aria-hidden="true">/</span><a href={href(`/?type=${encodeURIComponent(info.type)}`)}>{typeLabel}</a></>}
-    <span aria-hidden="true">/</span><span class="mono">{id}</span>
-  </nav>
-
-  <header class="fund-head">
-    <h1 class="page-title">{info.name}</h1>
-    {info.other_names.length > 0 && <p class="fund-aka muted small">{m.fund_also_known_as()} {info.other_names.join(' · ')}</p>}
-    <p class="fund-meta">
-      {manager && <span>{manager}</span>}
-      {info.type && <span>{typeLabel}{typeNote && <span class="muted"> · {typeNote}</span>}</span>}
-      {info.sharia ? <span class="tag">{m.tag_sharia()}</span> : null}
-      {info.etf ? <span class="tag">ETF</span> : null}
-      {info.index ? <span class="tag">{m.tag_index()}</span> : null}
-      {currency === 'USD' && <span class="tag">USD</span>}
-      {dividends.length > 0 && <span class="tag">{m.tag_pays_dividends()}</span>}
-      {riskProfile && <span class="tag">{m.tag_risk({ level: riskProfile })}</span>}
-    </p>
-    <p class="fund-compare">
-      <button class="btn" type="button" id="compare-toggle" data-fund-id={id} hidden></button>
-      <a class="btn btn-ink" id="compare-open" href={href('/compare/')} hidden></a>
-    </p>
+  <header class="fund-hero card kawung-bg">
+    <nav class="crumbs" aria-label={m.crumbs_label()}>
+      <a href={href('/')}>{m.nav_funds()}</a>
+      {info.type && <><Fragment set:html={icon('chevron-right', { size: 14 })} /><a href={href(`/?type=${encodeURIComponent(explorerTypeKey(info.type))}`)}>{typeLabel}</a></>}
+      <Fragment set:html={icon('chevron-right', { size: 14 })} /><span class="mono">{id}</span>
+    </nav>
+    <div class="fund-hero-main">
+      <span class={`icon-tile fund-tile type-${look.tone}`} set:html={icon(look.icon, { size: 28 })} />
+      <div class="fund-titles">
+        <h1 class="page-title">{info.name}</h1>
+        {info.other_names.length > 0 && <p class="fund-aka muted small">{m.fund_also_known_as()} {info.other_names.join(' · ')}</p>}
+        {
+          manager && (
+            <p class="fund-manager">
+              <a href={href(`/?manager=${encodeURIComponent(manager)}`)} title={m.fund_manager_link({ manager })}>{manager}</a>
+            </p>
+          )
+        }
+        <ul class="fund-chips">
+          {info.type && <li><a class={`tag tag-type type-${look.tone}`} href={href(`/?type=${encodeURIComponent(explorerTypeKey(info.type))}`)}><Fragment set:html={icon(look.icon, { size: 14 })} />{typeLabel}{typeNote && <span class="chip-note">{typeNote}</span>}</a></li>}
+          {info.sharia ? <li><span class="tag"><Fragment set:html={icon('moon-star', { size: 14 })} />{m.tag_sharia()}</span></li> : null}
+          {currency === 'USD' && <li><span class="tag">USD</span></li>}
+          {info.etf ? <li><span class="tag">ETF</span></li> : null}
+          {info.index ? <li><span class="tag">{m.tag_index()}</span></li> : null}
+          {dividends.length > 0 && <li><span class="tag"><Fragment set:html={icon('coins', { size: 14 })} />{m.tag_pays_dividends()}</span></li>}
+          {riskProfile && <li><span class="tag">{m.tag_risk({ level: riskProfile })}</span></li>}
+        </ul>
+      </div>
+    </div>
+    <div class="fund-actions">
+      <button class="btn" type="button" id="compare-toggle" data-fund-id={id} hidden><Fragment set:html={icon('git-compare')} /><span id="compare-toggle-label"></span></button>
+      <a class="btn btn-primary" id="compare-open" href={href('/compare/')} hidden></a>
+      <button class="btn" type="button" id="share-button"><Fragment set:html={icon('share-2')} />{m.fund_share()}</button>
+      {buyLinks.length > 0 && <a class="btn btn-primary fund-buy-jump" href="#buy">{m.fund_buy_jump()}</a>}
+      <span class="action-status small muted" id="action-status" role="status"></span>
+    </div>
   </header>
 
   {
     !active && (
-      <p class="notice">
+      <p class="notice fund-notice">
+        <Fragment set:html={icon('info')} />
         <span>
           <strong>{m.inactive_title()}</strong>{' '}
           {history.frozenSince
@@ -239,531 +390,981 @@ const sources = [
   }
 
   {
-    sourceDataDate && (
-      <p class="muted small data-freshness">
-        {m.data_freshness({ source: sourceLabel(lastPoint.source), date: formatDate(sourceDataDate, locale) })}
+    isSourceBehind && (
+      <p class="notice fund-notice">
+        <Fragment set:html={icon('calendar')} />
+        <span>{m.data_freshness({ source: sourceLabel(lastPoint.source), date: formatDate(sourceDataDate, locale) })}</span>
       </p>
     )
   }
 
-  <dl class="figures">
-    {figures.map((figure) => (
-      <div>
-        <dt>{figureViews(figure).map((shown) => <span data-view={shown.view}>{shown.label}</span>)}</dt>
-        <dd class="figure-value">{figureViews(figure).map((shown) => <span data-view={shown.view} class={shown.className ?? ''}>{shown.value}{shown.unit && shown.value !== '—' && <span class="unit">{shown.unit}</span>}</span>)}</dd>
-        <dd class="figure-sub">
-          {
-            figureViews(figure).map((shown) => (
-              <span data-view={shown.view}>
-                {shown.sub}
-                {shown.change !== null && shown.change !== undefined && <span class={changeClass(shown.change)}> · {m.figure_one_day({ change: formatChange(shown.change, locale) })}</span>}
-              </span>
-            ))
-          }
-        </dd>
-      </div>
-    ))}
-  </dl>
-
   {
-    total && (
-      <label class="dividend-toggle">
-        <input type="checkbox" id="include-dividends" /> {m.dividends_toggle()}
-        <span class="muted small">{m.dividends_toggle_here()}</span>
-      </label>
-    )
-  }
-
-  {
-    moves.length > 0 && (
-      <p class="notice moves">
-        <span>
-          <strong>{moves.length === 1 ? m.moves_title_one() : m.moves_title_many()}</strong>{' '}
-          {moves.slice(0, 3).map((move, index) => (
-            <>
-              {index > 0 && '; '}
-              {m.moves_item({ change: formatChange(move.change, locale, 1), date: formatDate(move.date, locale) })}
-            </>
-          ))}
-          {moves.length > 3 && `; ${m.moves_more({ count: moves.length - 3 })}`}. {moves.length === 1 ? m.moves_note_one() : m.moves_note_many()}
-        </span>
+    ojk?.status === 'zero_aum' && (
+      <p class="notice fund-notice">
+        <Fragment set:html={icon('info')} />
+        <span>{m.ojk_zero_notice({ month: ojkMonth })}</span>
       </p>
     )
   }
 
-  <div class="fund-grid">
-    <div class="fund-main">
-      <section class="section">
-        <h2 class="section-title">
-          {m.chart_nav_title()}
-          <span class="aside" id="range-readout"></span>
-        </h2>
-        <div class="chart-bar">
-          <div class="seg" role="group" aria-label={m.chart_range_label()} id="range-buttons">
-            {[['1M', '1m'], ['3M', '3m'], ['6M', '6m'], ['YTD', 'ytd'], ['1Y', '1y'], ['3Y', '3y'], ['5Y', '5y'], ['All', 'all']].map(([range, period]) => (
-              <button type="button" data-range={range} aria-pressed={range === '1Y' ? 'true' : 'false'}>{PERIOD_LABELS[period]}</button>
-            ))}
-          </div>
-          {
-            dividends.length > 0 && (
-              <span class="chart-legend">
-                {total ? <span data-view="nav">{m.chart_nav_only()}</span> : m.chart_nav_only()}
-                {total && <span data-view="total">{m.chart_total()}</span>}
-              </span>
-            )
-          }
+  <nav class="section-nav" aria-label={m.section_nav_label()}>
+    <ul class="section-nav-list">
+      {sectionLinks.map(([key, label]) => <li><a href={`#${key}`}>{label}</a></li>)}
+    </ul>
+  </nav>
+
+  <div class="fund-body">
+  <div class="fund-main">
+  <section class="fund-section" id="overview">
+    <dl class="figures">
+      {figures.map((figure) => (
+        <div class="figure">
+          <dt>
+            <span class="figure-label">{figureViews(figure).map((shown) => <span data-view={shown.view}>{shown.label}</span>)}</span>
+            <button class="info-btn" type="button" popovertarget={`info-${figure.key}`} aria-label={m.info_about({ term: figure.label })}><Fragment set:html={icon('info', { size: 16 })} /></button>
+          </dt>
+          <dd class="figure-value">{figureViews(figure).map((shown) => <span data-view={shown.view} class={shown.className ?? ''}>{shown.value}{shown.unit && shown.value !== '—' && <span class="unit">{shown.unit}</span>}</span>)}</dd>
+          <dd class="figure-sub">
+            {
+              figureViews(figure).map((shown) => (
+                <span data-view={shown.view}>
+                  {shown.sub}
+                  {shown.change !== null && shown.change !== undefined && <span class={changeClass(shown.change)}> · {m.figure_one_day({ change: formatChange(shown.change, locale) })}</span>}
+                </span>
+              ))
+            }
+          </dd>
         </div>
-        <div class="chart" id="nav-chart" data-fund-id={id}></div>
-        <p class="chart-empty" id="nav-empty" hidden>{m.chart_nav_empty()}</p>
+      ))}
+    </dl>
+    {figures.map((figure) => <div class="info-pop" id={`info-${figure.key}`} popover>{figure.info}</div>)}
 
-        <h3 class="chart-subtitle">{m.figure_aum()} <span class="muted">({aumCurrency ? m.chart_aum_currency_monthly({ currency: aumCurrency }) : m.chart_aum_monthly()})</span></h3>
-        <div class="chart" id="aum-chart"></div>
-        <p class="chart-empty" id="aum-empty" hidden>{m.chart_aum_empty()}</p>
+    {
+      total && (
+        <label class="dividend-toggle">
+          <input type="checkbox" id="include-dividends" /> {m.dividends_toggle()}
+          <span class="muted small">{m.dividends_toggle_here()}</span>
+        </label>
+      )
+    }
+
+    {
+      moves.length > 0 && (
+        <p class="notice fund-notice">
+          <Fragment set:html={icon('info')} />
+          <span>
+            <strong>{moves.length === 1 ? m.moves_title_one() : m.moves_title_many()}</strong>{' '}
+            {moves.slice(0, 3).map((move, index) => (
+              <>
+                {index > 0 && '; '}
+                {m.moves_item({ change: formatChange(move.change, locale, 1), date: formatDate(move.date, locale) })}
+              </>
+            ))}
+            {moves.length > 3 && `; ${m.moves_more({ count: moves.length - 3 })}`}. {moves.length === 1 ? m.moves_note_one() : m.moves_note_many()}
+          </span>
+        </p>
+      )
+    }
+  </section>
+
+  {
+    glance.length > 0 && (
+      <section class="card glance">
+        <h2 class="card-title">{m.glance_title()}</h2>
+        <ul class="glance-list">
+          {glance.map((sentence) => <li>{sentence}</li>)}
+        </ul>
       </section>
+    )
+  }
 
-      <section class="section" hidden={Object.keys(performance.simplereturn).length === 0}>
-        <h2 class="section-title">
-          {m.returns_title()}
-          {navDate && <span class="aside">{m.returns_to({ date: formatDate(navDate, locale) })}</span>}
-        </h2>
-        <div class="table-scroll">
-          <table class="tbl returns-table">
-            <thead>
-              <tr>
-                <th></th>
-                {TABLE_PERIODS.map((period) => <th class="num">{PERIOD_LABELS[period]}</th>)}
-              </tr>
-            </thead>
-            {[{ view: 'nav', returns: performance }, ...(total ? [{ view: 'total', returns: total }] : [])].map(({ view, returns }) => (
-              <tbody data-view={total ? view : undefined}>
-                <tr>
-                  <th scope="row">{m.returns_row_return()}</th>
-                  {TABLE_PERIODS.map((period) => <td class={`num ${changeClass(ret(period, returns))}`}>{formatChange(ret(period, returns), locale)}</td>)}
-                </tr>
-                <tr>
-                  <th scope="row" title={m.returns_row_per_year_title()}>{m.returns_row_per_year()}</th>
-                  {TABLE_PERIODS.map((period) => {
-                    const value = returns.cagr?.[period] ?? null;
-
-                    return <td class={`num ${changeClass(value)}`}>{formatChange(value, locale)}</td>;
-                  })}
-                </tr>
-                <tr>
-                  <th scope="row" title={m.returns_row_worst_fall_title()}>{m.returns_row_worst_fall()}</th>
-                  {TABLE_PERIODS.map((period) => {
-                    const value = returns.maxdrawdown?.[period] ?? null;
-
-                    return <td class="num">{formatPercent(value, locale)}</td>;
-                  })}
-                </tr>
-              </tbody>
-            ))}
-          </table>
-        </div>
+  {
+    summary !== null && (
+      <section class="card profile-card">
+        <h2 class="card-title">{m.profile_title()} <span class="aside muted">{m.profile_aside()}</span></h2>
         {
-          performance.source && (
-            <p class="muted small table-note">
-              {total ? <span data-view="nav">{returnsNote(false)}</span> : returnsNote(false)}
-              {total && <span data-view="total">{returnsNote(true)}</span>}
-            </p>
+          profileText === summary ? (
+            <p class="profile-text">{summary}</p>
+          ) : (
+            <details class="profile">
+              <summary>{summary}</summary>
+              <p class="profile-text">{profileText}</p>
+            </details>
           )
         }
       </section>
+    )
+  }
 
-      {
-        (assets.length > 0 || latestMix) && (
-          <section class="section">
-            <h2 class="section-title">{m.asset_mix_title()}</h2>
-            {assets.length > 0 && (
+  {
+    showPerformance && (
+      <section class="fund-section" id="performance">
+        <h2 class="section-title">{m.section_performance()}</h2>
+        <div class="card chart-card" data-fund-id={id} data-benchmarks={JSON.stringify(indexBenchmarks.map(({ id: benchmarkId, shortName, name }) => ({ id: benchmarkId, shortName, name })))}>
+          {
+            hasNavChart && (
               <>
-                <div class="mix-bar" role="img" aria-label={assets.map((asset) => `${asset.name} ${asset.percentage}%`).join(', ')}>
-                  {assets.map((asset) => (
-                    <span style={`flex-basis: ${(asset.percentage / assetTotal) * 100}%; background: ${asset.assetClass.color}`} title={`${asset.name}: ${asset.percentage}%`} />
-                  ))}
+                <div class="chart-head">
+                  <h3 class="card-title">{m.chart_nav_title()}</h3>
+                  <span id="range-readout"></span>
                 </div>
-                <ul class="mix-legend">
-                  {assets.map((asset) => (
+                <div class="chart-bar">
+                  <div class="seg" role="group" aria-label={m.chart_range_label()} id="range-buttons">
+                    {[['1M', '1m'], ['3M', '3m'], ['6M', '6m'], ['YTD', 'ytd'], ['1Y', '1y'], ['3Y', '3y'], ['5Y', '5y'], ['All', 'all']].map(([range, period]) => (
+                      <button type="button" data-range={range} aria-pressed={range === '1Y' ? 'true' : 'false'}>{PERIOD_LABELS[period]}</button>
+                    ))}
+                  </div>
+                  {
+                    dividends.length > 0 && (
+                      <span class="chart-legend small">
+                        {total ? <span data-view="nav">{m.chart_nav_only()}</span> : m.chart_nav_only()}
+                        {total && <span data-view="total">{m.chart_total()}</span>}
+                      </span>
+                    )
+                  }
+                </div>
+                {
+                  indexBenchmarks.length > 0 && (
+                    <div class="chart-bar">
+                      <span class="small muted" id="benchmark-label">{m.chart_compare_with()}</span>
+                      <div class="seg" role="group" aria-labelledby="benchmark-label" id="benchmark-buttons">
+                        <button type="button" data-benchmark="" aria-pressed="true">{m.chart_compare_none()}</button>
+                        {indexBenchmarks.map((benchmark) => <button type="button" data-benchmark={benchmark.id} title={benchmark.name} aria-pressed="false">{benchmark.shortName}</button>)}
+                      </div>
+                    </div>
+                  )
+                }
+                <div class="chart" id="nav-chart"></div>
+                <p class="chart-empty" id="benchmark-error" hidden></p>
+              </>
+            )
+          }
+          {
+            hasAumChart && (
+              <>
+                <h3 class="card-title chart-subtitle">{m.figure_aum()} <span class="muted">({aumCurrency ? m.chart_aum_currency_monthly({ currency: aumCurrency }) : m.chart_aum_monthly()})</span></h3>
+                <div class="chart" id="aum-chart"></div>
+              </>
+            )
+          }
+          <p class="chart-empty" id="chart-error" hidden></p>
+        </div>
+
+        {
+          returnPeriods.length > 0 && (
+            <>
+            <h3 class="card-title block-title">
+              {m.returns_title()}
+              {navDate && <span class="aside muted">{m.returns_to({ date: formatDate(navDate, locale) })}</span>}
+            </h3>
+            <div class="table-scroll">
+              <table class="tbl returns-table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    {returnPeriods.map((period) => <th class="num">{PERIOD_LABELS[period]}</th>)}
+                  </tr>
+                </thead>
+                {returnViews.map(({ view, rows }) => (
+                  <tbody data-view={total ? view : undefined}>
+                    {rows.map((row) => (
+                      <tr class={row.className}>
+                        <th scope="row" title={row.title}>{row.label}</th>
+                        {row.cells.map((cell) => <td class={`num ${cell.className}`}>{cell.text}</td>)}
+                      </tr>
+                    ))}
+                  </tbody>
+                ))}
+              </table>
+            </div>
+            {
+              rateBenchmark && (
+                <p class="muted small table-note">{m.benchmark_rate_note({ name: rateBenchmark.shortName, rate: `${formatNumber(rateBenchmark.value, locale, 2, 2)}%`, date: formatDate(rateBenchmark.end_date, locale) })}</p>
+              )
+            }
+            {
+              performance.source && (
+                <p class="muted small table-note">
+                  {total ? <span data-view="nav">{returnsNote(false)}</span> : returnsNote(false)}
+                  {total && <span data-view="total">{returnsNote(true)}</span>}
+                </p>
+              )
+            }
+            </>
+          )
+        }
+
+        {
+          dividends.length > 0 && (
+            <>
+              <h3 class="card-title block-title">
+                {m.dividends_title()}
+                <span class="aside muted">{dividends.length === 1 ? m.dividends_aside_one() : m.dividends_aside({ count: dividends.length })}</span>
+              </h3>
+              <div class="table-scroll dividends-scroll">
+                <table class="tbl dividends-table">
+                  <thead>
+                    <tr>
+                      <th>{m.dividends_date()}</th>
+                      <th class="num">{m.dividends_per_unit()}{currency && ` (${currency})`}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {dividends.map((dividend) => (
+                      <tr>
+                        <td>{formatDate(jakartaDate(dividend.date), locale)}</td>
+                        <td class="num">{formatNumber(dividend.value, locale, 4)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </>
+          )
+        }
+      </section>
+    )
+  }
+
+  {
+    showPortfolio && (
+      <section class="fund-section" id="portfolio">
+        <h2 class="section-title">{m.section_portfolio()}</h2>
+        <div class="portfolio-grid">
+          {
+            (assets.length > 0 || latestMix) && (
+              <div class="card mix-card">
+                <h3 class="card-title">{m.asset_mix_title()}</h3>
+                {assets.length > 0 && (
+                  <>
+                    <div class="mix-bar" role="img" aria-label={assets.map((asset) => `${assetName(asset)} ${asset.percentage}%`).join(', ')}>
+                      {assets.map((asset) => (
+                        <span style={`flex-basis: ${(asset.percentage / assetTotal) * 100}%; background: ${asset.assetClass.color}`} title={`${assetName(asset)}: ${asset.percentage}%`} />
+                      ))}
+                    </div>
+                    <ul class="mix-legend">
+                      {assets.map((asset) => (
+                        <li>
+                          <i class="key-box" style={`background: ${asset.assetClass.color}`}></i>
+                          {assetName(asset)}
+                          <span class="num">{formatNumber(asset.percentage, locale, 2, 2)}%</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+                {latestMix && (
+                  <figure class="mix-history">
+                    <figcaption>
+                      <span>{mixColumns.length === 1 ? m.asset_mix_history_one() : m.asset_mix_history({ count: mixColumns.length })} <span class="muted">(Bareksa)</span></span>
+                      <span class="mix-history-key">
+                        {ASSET_CLASSES.map((assetClass) => (
+                          <span><i class="key-box" style={`background: ${assetClass.color}`}></i> {assetClass.label}</span>
+                        ))}
+                      </span>
+                    </figcaption>
+                    <svg viewBox={`0 0 ${MIX_WIDTH} ${MIX_HEIGHT}`} preserveAspectRatio="none" role="img" aria-label={m.asset_mix_history_label()}>
+                      {mixColumns.map((column) => (
+                        <g>
+                          {column.segments.map((segment, index) => (
+                            <rect x={column.x} y={segment.y + (index > 0 ? MIX_GAP / 2 : 0)} width={mixColumnWidth} height={Math.max(segment.height - (index > 0 ? MIX_GAP / 2 : 0) - (index < column.segments.length - 1 ? MIX_GAP / 2 : 0), 0.5)} fill={segment.color}>
+                              <title>{`${formatMonth(column.date, locale)}: ${ASSET_CLASSES.find((assetClass) => assetClass.key === segment.key).label} ${formatNumber(segment.share * 100, locale, 1)}%`}</title>
+                            </rect>
+                          ))}
+                        </g>
+                      ))}
+                    </svg>
+                    <div class="mix-axis">
+                      <span>{formatMonth(mixColumns[0].date, locale)}</span>
+                      <span>{formatMonth(latestMix.date, locale)}</span>
+                    </div>
+                  </figure>
+                )}
+              </div>
+            )
+          }
+
+          {
+            holdings.length > 0 && (
+              <div class="card holdings-card">
+                <h3 class="card-title">
+                  {m.holdings_title()}
+                  <span class="aside muted">{m.holdings_aside({ date: formatDate(holdings[0].date, locale) })}</span>
+                </h3>
+                <ul class="holdings">
+                  {holdings.map((holding) => (
                     <li>
-                      <i class="key-box" style={`background: ${asset.assetClass.color}`}></i>
-                      {asset.name}
-                      <span class="num">{formatNumber(asset.percentage, locale, 2)}%</span>
+                      <span>{holding.name}</span>
+                      {holding.symbol && holding.symbol !== holding.name && <span class="mono muted">{holding.symbol}</span>}
                     </li>
                   ))}
                 </ul>
-              </>
-            )}
-            {latestMix && (
-              <figure class="mix-history">
-                <figcaption>
-                  <span>{m.asset_mix_history({ count: mixColumns.length })} <span class="muted">(Bareksa)</span></span>
-                  <span class="mix-history-key">
-                    {ASSET_CLASSES.map((assetClass) => (
-                      <span><i class="key-box" style={`background: ${assetClass.color}`}></i> {assetClass.label}</span>
-                    ))}
-                  </span>
-                </figcaption>
-                <svg viewBox={`0 0 ${MIX_WIDTH} ${MIX_HEIGHT}`} preserveAspectRatio="none" role="img" aria-label={m.asset_mix_history_label()}>
-                  {mixColumns.map((column) => (
-                    <g>
-                      {column.segments.map((segment, index) => (
-                        <rect x={column.x} y={segment.y + (index > 0 ? MIX_GAP / 2 : 0)} width={mixColumnWidth} height={Math.max(segment.height - (index > 0 ? MIX_GAP / 2 : 0) - (index < column.segments.length - 1 ? MIX_GAP / 2 : 0), 0.5)} fill={segment.color}>
-                          <title>{`${formatMonth(column.date, locale)}: ${ASSET_CLASSES.find((assetClass) => assetClass.key === segment.key).label} ${formatNumber(segment.share * 100, locale, 1)}%`}</title>
-                        </rect>
+              </div>
+            )
+          }
+        </div>
+      </section>
+    )
+  }
+
+  {
+    hasCosts && (
+      <section class="fund-section" id="costs">
+        <h2 class="section-title">{m.compare_group_costs()}</h2>
+        <div class="card costs-card">
+          {
+            costs.expenseRatios.length > 0 && (
+              <div class="expense">
+                <h3 class="card-title">{m.detail_expense_ratio()}</h3>
+                <ul class="expense-list">
+                  {costs.expenseRatios.map((item) => (
+                    <li><span class="expense-value">{item.text}</span><span class="muted small">{item.source}</span></li>
+                  ))}
+                </ul>
+                {costs.expenseRatios.length > 1 && <p class="small muted">{m.cost_sources_differ()}</p>}
+              </div>
+            )
+          }
+          {
+            costRowsWithData.length > 0 && (
+              <dl class="kv">
+                {costRowsWithData.map(([label, values]) => (
+                  <>
+                    <dt>{label}</dt>
+                    <dd>{values.map((value) => <div>{value.text} <span class="muted small">{value.source}</span></div>)}</dd>
+                  </>
+                ))}
+              </dl>
+            )
+          }
+          {costs.fees.length > 0 && <p class="small muted">{m.cost_fees_note()}</p>}
+          {missingCosts.length > 0 && <p class="small muted">{m.cost_missing({ items: missingCosts.join(', ') })}</p>}
+        </div>
+      </section>
+    )
+  }
+
+  {
+    (hasDocuments || switchables.length > 0) && (
+      <section class="fund-section" id="documents">
+        <h2 class="section-title">{m.documents_title()}</h2>
+        <div class="card-grid">
+          {
+            hasDocuments && (
+              <div class="card">
+                <h3 class="card-title"><Fragment set:html={icon('file-text')} />{m.documents_card_title()}</h3>
+                <ul class="doc-list">
+                  {prospectus.slice(0, 1).map((document) => (
+                    <li><a href={document.file}>{m.doc_prospectus()}</a> <span class="muted small">{m.documents_latest()}</span></li>
+                  ))}
+                  {factsheets.slice(0, 3).map((document) => (
+                    <li><a href={document.file}>{m.doc_factsheet()}</a> <span class="muted small">{document.date ? formatMonth(document.date, locale) : document.name}</span></li>
+                  ))}
+                  {makmurDocuments.map(([label, url]) => (
+                    <li><a href={url}>{label}</a> <span class="muted small">{m.documents_via_makmur()}</span></li>
+                  ))}
+                </ul>
+                {(factsheets.length > 3 || prospectus.length > 1) && (
+                  <details class="doc-more">
+                    <summary>{olderDocumentCount === 1 ? m.documents_older_one() : m.documents_older({ count: olderDocumentCount })}</summary>
+                    <ul class="doc-list">
+                      {prospectus.slice(1).map((document) => (
+                        <li><a href={document.file}>{m.doc_prospectus()}</a> <span class="muted small">{document.name}</span></li>
                       ))}
-                    </g>
+                      {factsheets.slice(3).map((document) => (
+                        <li><a href={document.file}>{m.doc_factsheet()}</a> <span class="muted small">{document.date ? formatMonth(document.date, locale) : document.name}</span></li>
+                      ))}
+                    </ul>
+                  </details>
+                )}
+              </div>
+            )
+          }
+
+          {
+            switchables.length > 0 && (
+              <div class="card">
+                <h3 class="card-title"><Fragment set:html={icon('arrow-left-right')} />{m.switch_title()} <span class="aside muted">{m.switch_aside()}</span></h3>
+                <ul class="doc-list">
+                  {switchables.map((target) => (
+                    <li><a href={href(`/funds/${fundIdOfBibitSymbol(target.symbol)}/`)}>{target.name}</a></li>
                   ))}
-                </svg>
-                <div class="mix-axis">
-                  <span>{formatMonth(mixColumns[0].date, locale)}</span>
-                  <span>{formatMonth(latestMix.date, locale)}</span>
-                </div>
-              </figure>
-            )}
-          </section>
-        )
-      }
+                </ul>
+              </div>
+            )
+          }
+        </div>
+      </section>
+    )
+  }
 
+  <section class="fund-section" id="data">
+    <h2 class="section-title">{m.data_title()}</h2>
+    <div class="card data-card">
+      <h3 class="card-title"><Fragment set:html={icon('database')} />{m.nav_download()}</h3>
+      <div class="downloads">
+        <a class="btn" href={`/api/funds/${id}.json`} download><Fragment set:html={icon('download')} />JSON</a>
+        {history.points.length > 0 && <a class="btn" href={`/csv/nav/${id}.csv`} download><Fragment set:html={icon('download')} />{m.data_nav_csv()}</a>}
+        {hasAumChart && <a class="btn" href={`/csv/aum/${id}.csv`} download><Fragment set:html={icon('download')} />{m.data_aum_csv()}</a>}
+      </div>
+      <ul class="source-list small">
+        {sources.map((source) => (
+          <li><a href={source.url}>{source.name}</a> <span class="muted">{source.what} · <span class="mono">{source.ids.join(', ')}</span></span></li>
+        ))}
+      </ul>
       {
-        holdings.length > 0 && (
-          <section class="section">
-            <h2 class="section-title">
-              {m.holdings_title()}
-              <span class="aside">{m.holdings_aside({ date: formatDate(holdings[0].date, locale) })}</span>
-            </h2>
-            <ol class="holdings">
-              {holdings.map((holding) => (
-                <li>
-                  <span>{holding.name}</span>
-                  {holding.symbol && holding.symbol !== holding.name && <span class="mono muted">{holding.symbol}</span>}
-                </li>
-              ))}
-            </ol>
-          </section>
-        )
-      }
-
-      {
-        dividends.length > 0 && (
-          <section class="section">
-            <h2 class="section-title">
-              {m.dividends_title()}
-              <span class="aside">{m.dividends_aside({ count: dividends.length })}</span>
-            </h2>
-            <div class="table-scroll">
-              <table class="tbl dividends-table">
-                <thead>
-                  <tr>
-                    <th>{m.dividends_date()}</th>
-                    <th class="num">{m.dividends_per_unit()}{currency && ` (${currency})`}</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {dividends.slice(0, 12).map((dividend) => (
-                    <tr>
-                      <td>{formatDate(jakartaDate(dividend.date), locale)}</td>
-                      <td class="num">{formatNumber(dividend.value, locale, 4)}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            {dividends.length > 12 && <p class="muted small table-note" set:html={m.dividends_more({ total: dividends.length, jsonLink: anchor(`/api/funds/${id}.json`, m.dividends_json_link()) })} />}
-          </section>
-        )
-      }
-
-      {
-        fund.profile && (
-          <section class="section">
-            <h2 class="section-title">
-              {m.profile_title()}
-              <span class="aside">{m.profile_aside()}</span>
-            </h2>
-            <details class="profile">
-              <summary>{fund.profile.split('\n')[0].slice(0, 220)}{fund.profile.length > 220 ? '…' : ''}</summary>
-              <p>{fund.profile}</p>
-            </details>
-          </section>
+        history.used.length > 0 && (
+          <p class="small muted">
+            {m.data_chart_prefix()}{' '}
+            {history.used.map((part, index) => (
+              <>
+                {index > 0 && m.data_chart_then()}
+                {m.data_chart_part({ source: sourceLabel(part.source), date: formatDate(part.from, locale) })}
+              </>
+            ))}
+            .{history.droppedSpikes > 0 && ` ${history.droppedSpikes === 1 ? m.data_spike_one() : m.data_spikes_many({ count: history.droppedSpikes })}`}
+          </p>
         )
       }
     </div>
+  </section>
+  </div>
 
-    <aside class="fund-side">
+  <aside class="fund-aside">
+    {
+      buyLinks.length > 0 && (
+        <section class="card buy-card" id="buy">
+          <h2 class="card-title">{m.buy_title()}</h2>
+          {buyLinks.map((link) => (
+            <div class="buy-row">
+              <a class="btn btn-primary" href={link.url} target="_blank" rel="sponsored noopener">{m.buy_open({ name: link.name })}<Fragment set:html={icon('arrow-up-right')} /></a>
+              <span class="referral small muted">
+                {m.buy_referral_code()} <code>{link.code}</code>
+                <button class="copy" type="button" data-copy={link.code} data-copied={m.buy_copied()} data-failed={m.buy_copy_failed()} hidden><Fragment set:html={icon('copy', { size: 14 })} /><span class="copy-label">{m.buy_copy()}</span></button>
+              </span>
+            </div>
+          ))}
+          <p class="small muted">{m.buy_note()}</p>
+        </section>
+      )
+    }
+
+    <section class="card details-card">
+      <h2 class="card-title">{m.details_title()}</h2>
+      <dl class="kv">
+        {details.map(([label, value, isMuted]) => (
+          <>
+            <dt>{label}</dt>
+            <dd class={isMuted ? 'muted' : undefined}>{value}</dd>
+          </>
+        ))}
+      </dl>
       {
-        buyLinks.length > 0 && (
-          <section class="side-block buy">
-            <h2 class="section-title">{m.buy_title()}</h2>
-            {buyLinks.map((link) => (
-              <div class="buy-row">
-                <a class="btn btn-ink" href={link.url} target="_blank" rel="sponsored noopener">{m.buy_open({ name: link.name })} &nearr;</a>
-                <span class="small muted">
-                  {m.buy_referral_code()} <code>{link.code}</code>
-                  <button class="copy" type="button" data-copy={link.code} data-copied={m.buy_copied()} hidden>{m.buy_copy()}</button>
-                </span>
-              </div>
-            ))}
-            <p class="small muted">{m.buy_note()}</p>
-          </section>
+        ojkSparkPath && (
+          <figure class="ojk-spark">
+            <svg viewBox="0 0 200 36" preserveAspectRatio="none" role="img" aria-label={m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}>
+              <path d={ojkSparkPath} fill="none" stroke="var(--gold)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" />
+            </svg>
+            <figcaption class="muted small">{m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}</figcaption>
+          </figure>
         )
       }
+    </section>
 
-      <section class="side-block">
-        <h2 class="section-title">{m.compare_group_costs()}</h2>
-        <dl class="kv">
-          {costRows.map(([label, values]) => (
-            <>
-              <dt>{label}</dt>
-              <dd>
-                {values.length === 0 && <span class="muted">{m.compare_not_in_sources()}</span>}
-                {values.map((value) => <div>{value.text} <span class="muted small">{value.source}</span></div>)}
-              </dd>
-            </>
-          ))}
-        </dl>
-        {costs.fees.length > 0 && <p class="small muted">{m.cost_fees_note()}</p>}
-      </section>
-
-      <section class="side-block">
-        <h2 class="section-title">{m.details_title()}</h2>
-        <dl class="kv">
-          {details.map(([label, value]) => (
-            <>
-              <dt>{label}</dt>
-              <dd>{value}</dd>
-            </>
-          ))}
-        </dl>
-      </section>
-
-      {
-        (prospectus.length > 0 || factsheets.length > 0 || makmurDocuments.length > 0) && (
-          <section class="side-block">
-            <h2 class="section-title">{m.documents_title()}</h2>
-            <ul class="doc-list">
-              {prospectus.slice(0, 1).map((document) => (
-                <li><a href={document.file}>{m.doc_prospectus()}</a> <span class="muted small">{m.documents_latest()}</span></li>
-              ))}
-              {factsheets.slice(0, 3).map((document) => (
-                <li><a href={document.file}>{m.doc_factsheet()}</a> <span class="muted small">{document.date ? formatMonth(document.date, locale) : document.name}</span></li>
-              ))}
-              {makmurDocuments.map(([label, url]) => (
-                <li><a href={url}>{label}</a> <span class="muted small">{m.documents_via_makmur()}</span></li>
-              ))}
-            </ul>
-            {(factsheets.length > 3 || prospectus.length > 1) && (
-              <details class="doc-more">
-                <summary>{m.documents_older({ count: factsheets.length - Math.min(3, factsheets.length) + Math.max(prospectus.length - 1, 0) })}</summary>
-                <ul class="doc-list">
-                  {prospectus.slice(1).map((document) => (
-                    <li><a href={document.file}>{m.doc_prospectus()}</a> <span class="muted small">{document.name}</span></li>
-                  ))}
-                  {factsheets.slice(3).map((document) => (
-                    <li><a href={document.file}>{m.doc_factsheet()}</a> <span class="muted small">{document.date ? formatMonth(document.date, locale) : document.name}</span></li>
-                  ))}
-                </ul>
-              </details>
-            )}
-          </section>
-        )
-      }
-
-      {
-        switchables.length > 0 && (
-          <section class="side-block">
-            <h2 class="section-title">{m.switch_title()} <span class="aside">{m.switch_aside()}</span></h2>
-            <ul class="doc-list">
-              {switchables.map((target) => (
-                <li><a href={href(`/funds/${fundIdOfBibitSymbol(target.symbol)}/`)}>{target.name}</a></li>
-              ))}
-            </ul>
-          </section>
-        )
-      }
-
-      <section class="side-block">
-        <h2 class="section-title">{m.data_title()}</h2>
-        <div class="downloads">
-          <a class="btn" href={`/api/funds/${id}.json`} download>JSON</a>
-          {history.points.length > 0 && <a class="btn" href={`/csv/nav/${id}.csv`} download>{m.data_nav_csv()}</a>}
-          {hasAumHistory && <a class="btn" href={`/csv/aum/${id}.csv`} download>{m.data_aum_csv()}</a>}
-        </div>
-        <ul class="source-list small">
-          {sources.map((source) => (
-            <li><a href={source.url}>{source.name}</a> <span class="muted">{source.what} · <span class="mono">{source.ids.join(', ')}</span></span></li>
-          ))}
-        </ul>
-        {
-          history.used.length > 0 && (
-            <p class="small muted">
-              {m.data_chart_prefix()}{' '}
-              {history.used.map((part, index) => (
-                <>
-                  {index > 0 && m.data_chart_then()}
-                  {m.data_chart_part({ source: sourceLabel(part.source), date: formatDate(part.from, locale) })}
-                </>
-              ))}
-              .{history.droppedSpikes > 0 && ` ${history.droppedSpikes === 1 ? m.data_spike_one() : m.data_spikes_many({ count: history.droppedSpikes })}`}
-            </p>
-          )
-        }
-      </section>
-    </aside>
+  </aside>
   </div>
 </Base>
 
 <style is:global>
+  /* Header band */
+
+  .fund-hero {
+    display: grid;
+    gap: var(--s-4);
+    border-radius: var(--r-lg);
+  }
+
   .crumbs {
     display: flex;
-    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-1);
     color: var(--muted);
-    font-size: 12.5px;
+    font-size: var(--fs-sm);
   }
 
   .crumbs a {
     color: var(--ink-2);
   }
 
-  .fund-head {
-    margin: 6px 0 14px;
+  .fund-hero-main {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--s-4);
   }
 
-  .fund-head .page-title {
-    max-width: 30ch;
+  .fund-hero::before {
+    -webkit-mask-image: linear-gradient(100deg, transparent 55%, #000 100%);
+    mask-image: linear-gradient(100deg, transparent 55%, #000 100%);
+  }
+
+  .fund-tile {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--r-md);
+  }
+
+  .fund-titles {
+    min-width: 0;
+  }
+
+  .fund-titles .page-title {
+    max-width: 32ch;
   }
 
   .fund-aka {
-    margin-top: 4px;
+    margin-top: var(--s-1);
     max-width: 60ch;
   }
 
-  .fund-meta {
+  .fund-manager {
+    margin-top: var(--s-2);
+    font-weight: var(--fw-label);
+  }
+
+  .fund-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    margin: var(--s-3) 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .fund-chips .tag {
+    min-height: 28px;
+    padding: 0 var(--s-2);
+    gap: var(--s-1);
+    font-size: var(--fs-sm);
+  }
+
+  .fund-chips a.tag:hover {
+    text-decoration: none;
+    filter: brightness(0.96);
+  }
+
+  .chip-note {
+    color: inherit;
+    font-weight: var(--fw-body);
+  }
+
+  .chip-note::before {
+    content: '· ';
+  }
+
+  .fund-actions {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 4px 12px;
-    margin-top: 8px;
-    color: var(--ink-2);
+    gap: var(--s-2);
   }
 
-  .fund-meta .tag {
-    margin-right: -6px;
+  .fund-buy-jump {
+    display: none;
   }
 
-  .fund-compare {
+  .action-status:empty {
+    display: none;
+  }
+
+  .fund-notice {
+    margin-top: var(--s-3);
+  }
+
+  /* Section navigation: sticky under the site header, one link per section that has data. */
+
+  .section-nav {
+    position: sticky;
+    top: var(--header-h);
+    z-index: 10;
+    margin: var(--s-4) calc(var(--gutter) * -1) 0;
+    padding: 0 var(--gutter);
+    border-bottom: 1px solid var(--rule);
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+  }
+
+  .section-nav-list {
     display: flex;
-    gap: 8px;
-    margin-top: 10px;
+    gap: var(--s-1);
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    list-style: none;
+    scrollbar-width: none;
   }
 
-  .notice + .figures,
-  .fund-head + .notice {
-    margin-top: 14px;
+  .section-nav-list::-webkit-scrollbar {
+    display: none;
   }
+
+  .section-nav a {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 var(--s-3);
+    border-bottom: 2px solid transparent;
+    color: var(--ink-2);
+    font-weight: var(--fw-label);
+    white-space: nowrap;
+  }
+
+  .section-nav a:hover {
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .section-nav a[aria-current='location'] {
+    border-bottom-color: var(--accent);
+    color: var(--accent-strong);
+  }
+
+  .fund-section {
+    margin-top: var(--s-6);
+    scroll-margin-top: calc(var(--header-h) + 64px);
+  }
+
+  #overview {
+    margin-top: 0;
+    padding-top: var(--s-4);
+  }
+
+  .block-title {
+    display: flex;
+    align-items: baseline;
+    gap: var(--s-3);
+    margin: var(--s-5) 0 var(--s-3);
+  }
+
+  .block-title .aside,
+  .card-title .aside {
+    margin-left: auto;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-body);
+  }
+
+  .card-title {
+    display: flex;
+    align-items: center;
+    gap: var(--s-2);
+    margin-bottom: var(--s-3);
+  }
+
+  .card-title > .icon {
+    color: var(--muted);
+  }
+
+  /* Key figures */
 
   .figures {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    margin: 14px 0 0 -13px;
-    border-top: 2px solid var(--ink);
-    clip-path: inset(0 0 0 13px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--s-3);
+    margin: 0;
   }
 
-  /* Each cell draws its own left rule; the grid sits 13px left and clips it, so the first column lines up. */
-  .figures > div {
-    padding: 9px 12px 10px;
-    border-bottom: 1px solid var(--rule);
-    border-left: 1px solid var(--rule);
+  /* Four across only where the column is wide enough, so the last card is never alone on a row. */
+  @media (min-width: 880px) and (max-width: 999px), (min-width: 1280px) {
+    .figures {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
   }
 
-  .figures dt {
+  .figure {
+    padding: var(--s-4);
+    border-radius: var(--r-md);
+    background: var(--surface);
+    box-shadow: var(--shadow-1);
+  }
+
+  .figure dt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--s-2);
     color: var(--muted);
-    font-size: 12px;
+    font-size: var(--fs-sm);
   }
 
-  .figures dd {
+  .figure dd {
     margin: 0;
   }
 
   .figure-value {
-    margin-top: 2px;
-    font-size: 22px;
-    font-weight: 600;
+    margin-top: var(--s-2);
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-strong);
     letter-spacing: -0.01em;
     line-height: 1.2;
-    white-space: nowrap;
   }
 
   .figure-value .unit {
-    margin-left: 4px;
+    margin-left: var(--s-1);
     color: var(--muted);
-    font-size: 12px;
-    font-weight: 500;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-label);
     letter-spacing: 0;
   }
 
   .figure-sub {
-    margin-top: 2px;
+    margin-top: var(--s-1);
     color: var(--muted);
-    font-size: 12px;
+    font-size: var(--fs-xs);
   }
 
-  .fund-grid {
+  .info-btn {
+    display: inline-grid;
+    flex: none;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    margin: calc(var(--s-1) * -1) calc(var(--s-1) * -1) calc(var(--s-1) * -1) 0;
+    padding: 0;
+    border: 0;
+    border-radius: var(--r-pill);
+    background: none;
+    color: var(--muted);
+    cursor: pointer;
+  }
+
+  .info-btn:hover {
+    background: var(--panel);
+    color: var(--ink);
+  }
+
+  .info-pop {
+    position: fixed;
+    inset: auto;
+    margin: 0;
+    width: 280px;
+    line-height: 1.5;
+  }
+
+  .fund-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s-3);
+  }
+
+  .fund-main,
+  .fund-aside {
+    display: contents;
+  }
+
+  .fund-body .fund-section:not(#overview) {
+    margin-top: var(--s-5);
+  }
+
+  .buy-card {
+    scroll-margin-top: calc(var(--header-h) + 64px);
+  }
+
+  /* One column: the buy card sits right under the key figures, the rest of the details follow the summary. */
+  @media (max-width: 999px) {
+    .fund-body #overview {
+      order: 0;
+    }
+
+    .buy-card {
+      order: 1;
+    }
+
+    .glance {
+      order: 2;
+    }
+
+    .details-card {
+      order: 3;
+    }
+
+    .profile-card {
+      order: 4;
+    }
+
+    .fund-body .fund-section:not(#overview) {
+      order: 5;
+    }
+  }
+
+  .glance-list {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 300px;
-    gap: 0 36px;
+    gap: var(--s-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .glance-list li {
+    position: relative;
+    padding-left: var(--s-5);
+  }
+
+  .glance-list li::before {
+    content: '';
+    position: absolute;
+    top: 0.55em;
+    left: var(--s-1);
+    width: 8px;
+    height: 8px;
+    border-radius: var(--r-pill);
+    background: var(--gold);
+  }
+
+  /* Performance */
+
+  .chart-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--s-1) var(--s-4);
+  }
+
+  .chart-head .card-title {
+    margin-bottom: var(--s-2);
   }
 
   .chart-bar {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px 16px;
-    margin-bottom: 8px;
+    gap: var(--s-2) var(--s-4);
+    margin-bottom: var(--s-3);
   }
 
   .chart-legend {
     display: flex;
-    gap: 14px;
-    color: var(--ink-2);
-    font-size: 12.5px;
+    gap: var(--s-4);
+    color: var(--muted);
   }
 
   #range-readout {
+    min-width: 0;
     color: var(--ink-2);
   }
 
   #range-readout b {
-    font-weight: 650;
+    font-weight: var(--fw-strong);
+  }
+
+  /* Index names can be long ("Bareksa Fixed Income Fund Index"), so these pills wrap instead of scrolling. */
+  #benchmark-buttons {
+    flex-wrap: wrap;
+    border-radius: var(--r-md);
+  }
+
+  #benchmark-buttons button {
+    height: auto;
+    min-height: 30px;
+    padding-top: var(--s-1);
+    padding-bottom: var(--s-1);
+    white-space: normal;
+    text-align: center;
+  }
+
+  .benchmark-key,
+  .nav-key {
+    width: 14px;
+    height: 3px;
+    border-radius: var(--r-pill);
+  }
+
+  .benchmark-key {
+    background: var(--gold);
+  }
+
+  .nav-key {
+    background: var(--accent);
+  }
+
+  .benchmark-readout {
+    display: inline-block;
+    margin-left: var(--s-2);
   }
 
   .chart-subtitle {
-    margin: 14px 0 4px;
-    font-size: 12.5px;
-    font-weight: 600;
-  }
-
-  .notice.moves {
-    margin-top: 12px;
+    margin: var(--s-5) 0 var(--s-2);
   }
 
   .returns-table td,
   .returns-table th {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: var(--s-2);
+    padding-bottom: var(--s-2);
   }
 
   .returns-table tbody th {
     width: 1%;
   }
 
+  /* The table scrolls sideways on a phone, and the row label stays in view. */
+  .returns-table thead th:first-child,
+  .returns-table tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    box-shadow: 1px 0 0 var(--rule);
+  }
+
+  .returns-table tbody th {
+    min-width: 160px;
+    max-width: 240px;
+    background: var(--surface);
+    white-space: normal;
+  }
+
+  .returns-table .row-reference > * {
+    background: var(--panel);
+    color: var(--muted);
+    font-style: italic;
+  }
+
   .table-note {
-    margin-top: 6px;
+    margin-top: var(--s-2);
+  }
+
+  .ojk-spark {
+    margin: var(--s-3) 0 0;
+  }
+
+  .ojk-spark svg {
+    display: block;
+    width: 100%;
+    height: 36px;
+  }
+
+  .ojk-spark figcaption {
+    margin-top: var(--s-1);
+  }
+
+  .dividends-scroll {
+    max-width: 420px;
+  }
+
+  /* Portfolio */
+
+  .portfolio-grid,
+  .card-grid {
+    display: grid;
+    gap: var(--s-3);
   }
 
   .mix-bar {
     display: flex;
     gap: 2px;
     height: 14px;
+    overflow: hidden;
+    border-radius: var(--r-pill);
   }
 
   .mix-bar span {
@@ -773,18 +1374,18 @@ const sources = [
   .mix-legend {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 0 24px;
-    margin: 8px 0 0;
+    gap: 0 var(--s-5);
+    margin: var(--s-3) 0 0;
     padding: 0;
     list-style: none;
-    font-size: 13px;
+    font-size: var(--fs-sm);
   }
 
   .mix-legend li {
     display: flex;
     align-items: center;
-    gap: 7px;
-    padding: 4px 0;
+    gap: var(--s-2);
+    padding: var(--s-1) 0;
     border-bottom: 1px solid var(--rule);
   }
 
@@ -793,30 +1394,32 @@ const sources = [
   }
 
   .mix-history {
-    margin: 18px 0 0;
+    margin: var(--s-5) 0 0;
   }
 
   .mix-history figcaption {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 4px 16px;
-    margin-bottom: 6px;
-    font-size: 12.5px;
-    font-weight: 600;
+    gap: var(--s-1) var(--s-4);
+    margin-bottom: var(--s-2);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-strong);
   }
 
   .mix-history-key {
     display: flex;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: var(--s-3);
     color: var(--ink-2);
-    font-weight: 400;
+    font-weight: var(--fw-body);
   }
 
   .mix-history svg {
     display: block;
     width: 100%;
     height: 120px;
+    border-radius: var(--r-xs);
   }
 
   .mix-history rect:hover {
@@ -826,86 +1429,85 @@ const sources = [
   .mix-axis {
     display: flex;
     justify-content: space-between;
-    margin-top: 4px;
+    margin-top: var(--s-1);
     color: var(--muted);
-    font-size: 11.5px;
+    font-size: var(--fs-xs);
   }
 
   .holdings {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 0 24px;
+    columns: 2 260px;
+    column-gap: var(--s-5);
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 13px;
+    font-size: var(--fs-sm);
   }
 
   .holdings li {
     display: flex;
     justify-content: space-between;
-    gap: 8px;
-    padding: 4px 0;
+    gap: var(--s-2);
+    padding: var(--s-2) 0;
     border-bottom: 1px solid var(--rule);
+    break-inside: avoid;
   }
 
-  .dividends-table {
-    max-width: 360px;
-  }
+  /* Costs */
 
-  .profile summary {
-    color: var(--ink-2);
-    cursor: pointer;
-  }
-
-  .profile p {
-    max-width: 72ch;
-    margin-top: 8px;
-    color: var(--ink-2);
-    font-size: 13.5px;
-    line-height: 1.6;
-    white-space: pre-line;
-  }
-
-  .side-block {
-    margin-top: 28px;
-  }
-
-  .buy-row {
+  .costs-card {
     display: grid;
-    gap: 4px;
-    margin-bottom: 10px;
+    gap: var(--s-4);
   }
 
-  .buy-row .btn {
-    justify-content: center;
+  .expense .card-title {
+    margin-bottom: var(--s-2);
   }
 
-  .copy {
-    margin-left: 4px;
+  .expense-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+    margin: 0;
     padding: 0;
-    border: 0;
-    background: none;
-    color: var(--accent);
-    font: inherit;
-    cursor: pointer;
+    list-style: none;
   }
+
+  .expense-list li {
+    display: grid;
+    gap: 0;
+    min-width: 120px;
+    padding: var(--s-3) var(--s-4);
+    border-radius: var(--r-sm);
+    background: var(--panel);
+  }
+
+  .expense-value {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-strong);
+    letter-spacing: -0.01em;
+  }
+
+  .expense .small {
+    margin-top: var(--s-2);
+  }
+
+  /* Documents and data */
 
   .doc-list {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 13.5px;
+    font-size: var(--fs-sm);
   }
 
   .doc-list li {
-    padding: 4px 0;
+    padding: var(--s-2) 0;
     border-bottom: 1px solid var(--rule);
   }
 
   .doc-more {
-    margin-top: 6px;
-    font-size: 12.5px;
+    margin-top: var(--s-2);
+    font-size: var(--fs-sm);
   }
 
   .doc-more summary {
@@ -916,32 +1518,179 @@ const sources = [
   .downloads {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: var(--s-2);
   }
 
   .source-list {
-    margin: 10px 0 6px;
+    margin: var(--s-4) 0 var(--s-2);
     padding: 0;
     list-style: none;
   }
 
   .source-list li {
-    padding: 2px 0;
+    padding: var(--s-1) 0;
   }
 
-  @media (max-width: 1000px) {
-    .fund-grid {
-      grid-template-columns: minmax(0, 1fr);
+  /* Overview cards and the buy card */
+
+  .buy-row {
+    display: grid;
+    gap: var(--s-2);
+    margin-bottom: var(--s-3);
+  }
+
+  .buy-row .btn {
+    justify-content: center;
+  }
+
+  .referral {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-1) var(--s-2);
+  }
+
+  .copy {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-1);
+    min-height: 32px;
+    padding: 0 var(--s-2);
+    border: 0;
+    border-radius: var(--r-xs);
+    background: none;
+    color: var(--accent);
+    font: inherit;
+    font-weight: var(--fw-label);
+    cursor: pointer;
+  }
+
+  .copy:hover {
+    background: var(--accent-wash);
+  }
+
+  .profile summary {
+    color: var(--ink-2);
+    cursor: pointer;
+  }
+
+  .profile-text {
+    max-width: 72ch;
+    color: var(--ink-2);
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+
+  .profile .profile-text {
+    margin-top: var(--s-2);
+  }
+
+  @media (min-width: 720px) {
+    .card-grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      align-items: start;
     }
   }
 
-  @media (max-width: 560px) {
+  @media (min-width: 1000px) {
+    .fund-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: var(--s-5);
+      align-items: start;
+    }
+
+    .fund-main,
+    .fund-aside {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--s-3);
+      min-width: 0;
+    }
+
+    .fund-aside {
+      grid-column: 2;
+      padding-top: var(--s-4);
+    }
+  }
+
+  @media (min-width: 1000px) and (min-height: 900px) {
+    .fund-aside {
+      position: sticky;
+      top: calc(var(--header-h) + 48px + var(--s-2));
+    }
+  }
+
+  @media (max-width: 719px) {
+    .fund-tile {
+      width: 44px;
+      height: 44px;
+    }
+
+    .fund-hero-main {
+      gap: var(--s-3);
+    }
+
+    .fund-actions .btn {
+      flex: 1 1 auto;
+    }
+
+    .fund-buy-jump {
+      display: inline-flex;
+    }
+
+    .returns-table tbody th {
+      min-width: 112px;
+      max-width: 120px;
+    }
+
     .figures {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--s-2);
+    }
+
+    .figure {
+      padding: var(--s-3);
     }
 
     .figure-value {
-      font-size: 19px;
+      font-size: var(--fs-lg);
+    }
+
+    .section-nav {
+      --fade-end: 28px;
+      --fade-start: 0px;
+    }
+
+    .section-nav-list {
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 var(--fade-start), #000 calc(100% - var(--fade-end)), transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 var(--fade-start), #000 calc(100% - var(--fade-end)), transparent);
+    }
+
+    .info-btn {
+      width: 44px;
+      height: 44px;
+      margin: calc(var(--s-3) * -1) calc(var(--s-3) * -1) calc(var(--s-3) * -1) 0;
+    }
+
+    .chart-bar .seg {
+      display: flex;
+      width: 100%;
+    }
+
+    .chart-bar .seg button {
+      flex: 1 1 0;
+      padding: 0;
+    }
+
+    .chart-bar #benchmark-buttons button {
+      flex: 0 1 auto;
+      padding: var(--s-1) var(--s-3);
+    }
+
+    .copy {
+      min-height: 44px;
     }
   }
 </style>
@@ -951,14 +1700,26 @@ const sources = [
   for (const button of document.querySelectorAll('[data-copy]')) {
     button.hidden = false;
 
-    const label = button.textContent;
+    const label = button.querySelector('.copy-label');
+    const original = label.textContent;
+    const code = button.parentElement.querySelector('code');
+
+    function showFor(text) {
+      label.textContent = text;
+      setTimeout(() => {
+        label.textContent = original;
+      }, 2500);
+    }
 
     button.addEventListener('click', async () => {
-      await navigator.clipboard.writeText(button.dataset.copy);
-      button.textContent = button.dataset.copied;
-      setTimeout(() => {
-        button.textContent = label;
-      }, 1500);
+      try {
+        await navigator.clipboard.writeText(button.dataset.copy);
+        showFor(button.dataset.copied);
+      } catch {
+        // Clipboard access can be blocked: select the code so the reader can copy it by hand.
+        getSelection().selectAllChildren(code);
+        showFor(button.dataset.failed);
+      }
     });
   }
 </script>
@@ -979,7 +1740,11 @@ const sources = [
     });
   }
 
-  mountFundCharts(document.getElementById('nav-chart').dataset.fundId, includeDividends);
+  const chartCard = document.querySelector('.chart-card');
+
+  if (chartCard) {
+    mountFundCharts(chartCard.dataset.fundId, includeDividends);
+  }
 </script>
 
 <script>
@@ -994,14 +1759,18 @@ const sources = [
   setLocale(locale, { reload: false });
 
   const toggle = document.getElementById('compare-toggle');
+  const toggleLabel = document.getElementById('compare-toggle-label');
   const open = document.getElementById('compare-open');
+  const share = document.getElementById('share-button');
+  const status = document.getElementById('action-status');
+  let statusTimer = null;
 
   function sync() {
     const tray = readTray();
     const isCompared = tray.includes(toggle.dataset.fundId);
 
     toggle.hidden = false;
-    toggle.textContent = isCompared ? m.compare_button_remove() : m.compare_button_add();
+    toggleLabel.textContent = isCompared ? m.compare_button_remove() : m.compare_button_add();
     toggle.disabled = !isCompared && tray.length >= MAX_FUNDS;
     toggle.title = toggle.disabled ? m.compare_full({ count: MAX_FUNDS }) : '';
     open.hidden = tray.length === 0;
@@ -1009,10 +1778,104 @@ const sources = [
     open.href = localizeHref(`/compare/${selectionQuery(tray)}`, locale);
   }
 
+  function say(text) {
+    status.textContent = text;
+    clearTimeout(statusTimer);
+    statusTimer = setTimeout(() => {
+      status.textContent = '';
+    }, 3000);
+  }
+
   toggle.addEventListener('click', () => {
     toggleInTray(toggle.dataset.fundId);
     sync();
   });
 
+  share.addEventListener('click', async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: document.title, url: location.href });
+
+        return;
+      } catch (error) {
+        if (error.name === 'AbortError') {
+          return;
+        }
+      }
+    }
+
+    try {
+      await navigator.clipboard.writeText(location.href);
+      say(m.fund_share_copied());
+    } catch {
+      say(m.fund_share_failed());
+    }
+  });
+
   sync();
+</script>
+
+<script>
+  import { mountInfoPopovers } from '../../../lib/info-popover.js';
+
+  mountInfoPopovers();
+
+  // The section nav marks the section being read, and fades at the edge where it scrolls on a phone.
+  const nav = document.querySelector('.section-nav');
+  const list = nav.querySelector('.section-nav-list');
+  const links = [...nav.querySelectorAll('a')];
+  const sections = links.map((link) => document.getElementById(link.hash.slice(1)));
+  const FADE_WIDTH = 28;
+  const READING_LINE = 140;
+  let frame = null;
+
+  function markCurrent() {
+    frame = null;
+
+    let current = 0;
+
+    sections.forEach((section, index) => {
+      if (section.getBoundingClientRect().top <= READING_LINE) {
+        current = index;
+      }
+    });
+
+    // At the bottom of the page the last section may be too short to reach the reading line.
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+      current = sections.length - 1;
+    }
+
+    links.forEach((link, index) => {
+      if (index === current) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+
+    const link = links[current];
+
+    list.scrollTo({ left: link.offsetLeft - (list.clientWidth - link.offsetWidth) / 2, behavior: 'auto' });
+  }
+
+  function showFades() {
+    const atStart = list.scrollLeft <= 1;
+    const atEnd = list.scrollLeft + list.clientWidth >= list.scrollWidth - 1;
+
+    nav.style.setProperty('--fade-start', atStart ? '0px' : `${FADE_WIDTH}px`);
+    nav.style.setProperty('--fade-end', atEnd ? '0px' : `${FADE_WIDTH}px`);
+  }
+
+  function schedule() {
+    frame ??= requestAnimationFrame(markCurrent);
+  }
+
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', () => {
+    schedule();
+    showFades();
+  });
+  list.addEventListener('scroll', showFades, { passive: true });
+  markCurrent();
+  showFades();
 </script>

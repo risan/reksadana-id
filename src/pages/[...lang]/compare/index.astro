@@ -4,6 +4,7 @@ import { loadFundSummaries } from '../../../lib/data.js';
 import { formatCount } from '../../../lib/format.js';
 import { CHART_RANGES } from '../../../lib/compare.js';
 import { localePaths } from '../../../lib/i18n.js';
+import { icon } from '../../../lib/icons.js';
 import * as m from '../../../paraglide/messages.js';
 
 export const getStaticPaths = () => localePaths();
@@ -19,38 +20,42 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     <p class="lede">{m.compare_lede()}</p>
   </div>
 
-  <div class="picker">
-    <label class="search">
-      <span class="visually-hidden">{m.compare_picker_label()}</span>
-      <input id="picker-input" type="search" placeholder={m.search_placeholder()} autocomplete="off" spellcheck="false" />
-    </label>
+  <section class="card picker" id="picker">
+    <div class="picker-field">
+      <label class="search">
+        <span class="visually-hidden">{m.compare_picker_label()}</span>
+        <Fragment set:html={icon('search')} />
+        <input id="picker-input" type="search" role="combobox" aria-expanded="false" aria-controls="picker-results" aria-autocomplete="list" placeholder={m.search_placeholder()} autocomplete="off" spellcheck="false" />
+      </label>
+      <ul class="picker-results" id="picker-results" aria-label={m.compare_results_label()} hidden></ul>
+    </div>
     <p class="muted small" id="picker-note" aria-live="polite"></p>
-    <ul class="picker-results" id="picker-results" hidden></ul>
-  </div>
-
-  <label class="dividend-toggle">
-    <input type="checkbox" id="include-dividends" /> {m.dividends_toggle()}
-    <span class="muted small">{m.dividends_toggle_help({ count: formatCount(dividendFundCount, locale) })}</span>
-  </label>
+    <ul class="selected-chips" id="selected-chips" aria-label={m.compare_selected_label()}></ul>
+    <label class="dividend-toggle">
+      <input type="checkbox" id="include-dividends" /> {m.dividends_toggle()}
+      <span class="muted small">{m.dividends_toggle_help({ count: formatCount(dividendFundCount, locale) })}</span>
+    </label>
+  </section>
 
   <div id="compare-notices"></div>
-  <p class="compare-empty" id="compare-empty">{m.compare_loading()}</p>
+  <div class="empty-state kawung-bg" id="compare-empty">{m.compare_loading()}</div>
 
   <section class="section" id="compare-chart-section" hidden>
     <h2 class="section-title">{m.compare_chart_title()}</h2>
-    <div class="chart-bar">
-      <div class="seg" role="group" aria-label={m.chart_range_label()}>
-        {CHART_RANGES.map((range) => <button type="button" data-range={range} aria-pressed="false">{RANGE_LABELS[range]}</button>)}
+    <div class="card chart-card">
+      <div class="chart-bar">
+        <div class="seg" role="group" aria-label={m.chart_range_label()}>
+          {CHART_RANGES.map((range) => <button type="button" data-range={range} aria-pressed="false">{RANGE_LABELS[range]}</button>)}
+        </div>
+        <span class="muted small" id="chart-start"></span>
       </div>
-      <span class="muted" id="chart-start"></span>
+      <div class="chart" id="compare-chart"></div>
+      <p class="chart-empty" id="chart-message" hidden></p>
+      <p class="muted small">
+        <span data-view="nav">{m.compare_chart_caption()}</span>
+        <span data-view="total">{m.compare_chart_caption_total()}</span>
+      </p>
     </div>
-    <ul class="compare-legend" id="compare-legend"></ul>
-    <div class="chart" id="compare-chart"></div>
-    <p class="chart-empty" id="chart-message" hidden></p>
-    <p class="muted small">
-      <span data-view="nav">{m.compare_chart_caption()}</span>
-      <span data-view="total">{m.compare_chart_caption_total()}</span>
-    </p>
   </section>
 
   <section class="section" id="compare-table-section" hidden>
@@ -58,6 +63,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     <div class="table-scroll">
       <table class="tbl compare-table" id="compare-table"></table>
     </div>
+    <p class="muted small table-note"><span class="best-dot" aria-hidden="true"></span> {m.compare_best_note()}</p>
     <p class="muted small table-note" id="table-end"></p>
   </section>
 </Base>
@@ -65,124 +71,208 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
 <style is:global>
   .picker {
     display: grid;
-    gap: 6px;
-    max-width: 560px;
+    gap: var(--s-3);
   }
 
-  .picker .search input {
-    width: 100%;
+  .picker-field {
+    position: relative;
+    max-width: 640px;
   }
 
   .picker-results {
+    position: absolute;
+    top: calc(100% + var(--s-1));
+    right: 0;
+    left: 0;
+    z-index: 30;
+    max-height: min(60vh, 440px);
     margin: 0;
-    padding: 0;
-    border: 1px solid var(--rule-strong);
+    padding: var(--s-1);
+    overflow-y: auto;
+    border-radius: var(--r-md);
+    background: var(--surface);
+    box-shadow: var(--shadow-2);
     list-style: none;
   }
 
-  .picker-results li {
+  .picker-results .nil {
+    padding: var(--s-3);
+  }
+
+  .pick {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 6px 10px;
+    gap: var(--s-3);
+    width: 100%;
+    min-height: 52px;
+    padding: var(--s-2) var(--s-3);
+    border: 0;
+    border-radius: var(--r-sm);
+    background: none;
+    color: var(--ink);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
   }
 
-  .picker-results li + li {
-    border-top: 1px solid var(--rule);
+  .pick:hover:not(:disabled),
+  .pick:focus-visible {
+    background: var(--panel);
   }
 
-  .picker-results .sub {
-    display: block;
+  .pick:disabled {
     color: var(--muted);
-    font-size: 12px;
+    cursor: default;
   }
 
-  .picker-results .mono {
-    color: var(--faint);
-    font-size: 11px;
-  }
-
-  #compare-notices {
+  .pick-text {
     display: grid;
-    gap: 6px;
-    margin-top: 14px;
+    flex: 1;
+    min-width: 0;
   }
 
-  .compare-empty {
-    margin-top: 18px;
-    color: var(--ink-2);
+  .pick-name {
+    overflow: hidden;
+    font-weight: var(--fw-label);
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
-  .compare-empty .chosen {
+  .pick-sub {
+    overflow: hidden;
+    color: var(--muted);
+    font-size: var(--fs-xs);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .pick-state {
+    color: var(--accent);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-label);
+  }
+
+  .pick:disabled .pick-state {
+    color: var(--muted);
+  }
+
+  .selected-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--s-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .selected-chips:empty {
+    display: none;
+  }
+
+  .selected-chip {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    margin-left: 6px;
-    padding: 0 4px 0 6px;
+    gap: var(--s-2);
+    max-width: 100%;
+    min-height: 40px;
+    padding: 0 var(--s-1) 0 var(--s-3);
     border: 1px solid var(--rule-strong);
-    border-radius: 2px;
+    border-radius: var(--r-pill);
+    background: var(--surface);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-label);
+  }
+
+  .selected-chip .chip-dot {
+    flex: none;
+    width: 10px;
+    height: 10px;
+    border-radius: var(--r-pill);
+  }
+
+  .selected-chip a {
+    overflow: hidden;
+    color: var(--ink);
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .remove {
-    padding: 0 3px;
+    display: inline-grid;
+    flex: none;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
     border: 0;
+    border-radius: var(--r-pill);
     background: none;
     color: var(--muted);
-    font: inherit;
-    font-size: 16px;
-    line-height: 1;
     cursor: pointer;
   }
 
   .remove:hover {
+    background: var(--panel);
     color: var(--ink);
+  }
+
+  #compare-notices {
+    display: grid;
+    gap: var(--s-2);
+    margin-top: var(--s-3);
+  }
+
+  .empty-state {
+    margin-top: var(--s-4);
+    color: var(--ink-2);
   }
 
   .chart-bar {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 8px 16px;
-    margin-bottom: 8px;
+    gap: var(--s-2) var(--s-4);
+    margin-bottom: var(--s-3);
   }
 
-  .compare-legend {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 16px;
-    margin: 0 0 6px;
-    padding: 0;
-    color: var(--ink-2);
-    font-size: 12.5px;
-    list-style: none;
-  }
-
-  .compare-legend .key-line,
-  .compare-table .key-line,
-  .chart-tip .key-line {
-    width: 14px;
-    height: 3px;
+  .chart-card .chart {
+    margin-bottom: var(--s-2);
   }
 
   .chart-tip {
     min-width: 200px;
   }
 
-  .chart-tip .tip-row b {
-    max-width: 180px;
-    overflow: hidden;
-    font-weight: 600;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  .chart-tip .key-line {
+    width: 14px;
+    height: 3px;
   }
 
   .chart-tip .tip-note {
-    margin: -2px 0 2px 20px;
+    margin: -2px 0 var(--s-1) 20px;
   }
 
   .table-note {
-    margin-top: 8px;
+    margin-top: var(--s-2);
+  }
+
+  .best-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: var(--r-pill);
+    background: var(--gold);
+  }
+
+  /* In the cell's left gutter, so the value keeps its place whether the cell has one line or several. */
+  .compare-table td {
+    position: relative;
+  }
+
+  .compare-table td .best-dot {
+    position: absolute;
+    top: calc(var(--s-2) + 0.5em);
+    left: calc(var(--s-1) / 2);
   }
 
   .compare-table {
@@ -192,7 +282,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
 
   .compare-table th,
   .compare-table td {
-    min-width: 160px;
+    min-width: 168px;
     max-width: 240px;
   }
 
@@ -204,9 +294,13 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
   .compare-table thead th {
     border-bottom: 1px solid var(--rule-strong);
     color: var(--ink);
-    font-size: 13.5px;
-    font-weight: 500;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-label);
     white-space: normal;
+  }
+
+  .compare-table thead th.c-fund {
+    border-top: 3px solid var(--column-color, transparent);
   }
 
   .compare-table tbody th[scope='row'],
@@ -214,63 +308,95 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     position: sticky;
     left: 0;
     z-index: 1;
-    min-width: 120px;
+    min-width: 112px;
     max-width: 150px;
-    padding-right: 12px;
-    background: var(--paper);
+    padding-right: var(--s-3);
+    box-shadow: 1px 0 0 var(--rule);
     white-space: normal;
+  }
+
+  .compare-table tbody th[scope='row'] {
+    background: var(--surface);
   }
 
   .compare-table .col-head {
     display: flex;
-    align-items: baseline;
-    gap: 6px;
+    align-items: flex-start;
+    gap: var(--s-2);
   }
 
-  .compare-table .col-head .key-line {
-    flex: none;
-    transform: translateY(-3px);
+  .compare-table .col-head .icon-tile {
+    width: 28px;
+    height: 28px;
+    border-radius: var(--r-xs);
   }
 
   .compare-table .col-head a {
-    font-weight: 600;
+    flex: 1;
+    min-width: 0;
+    font-weight: var(--fw-strong);
   }
 
   .compare-table .col-head .remove {
-    margin-left: auto;
+    width: 28px;
+    height: 28px;
+    margin: 0 calc(var(--s-1) * -1) 0 0;
   }
 
   .compare-table .sub {
     margin-top: 1px;
     color: var(--muted);
-    font-size: 12px;
-    font-weight: 400;
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-body);
   }
 
   .compare-table .mono {
-    font-size: 11.5px;
+    font-size: var(--fs-xs);
   }
 
   .compare-table .group th {
     position: static;
-    padding-top: 14px;
+    padding-top: var(--s-4);
     border-bottom: 1px solid var(--rule-strong);
     background: none;
+    box-shadow: none;
     color: var(--ink);
-    font-size: 12.5px;
-    font-weight: 650;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-strong);
     text-align: left;
   }
 
   .compare-table .tag {
-    font-size: 11px;
-    line-height: 15px;
+    font-size: var(--fs-xs);
+    line-height: 20px;
   }
 
-  @media (max-width: 720px) {
+  @media (max-width: 719px) {
     .compare-table th,
     .compare-table td {
-      min-width: 140px;
+      min-width: 148px;
+    }
+
+    .compare-table tbody th[scope='row'],
+    .compare-table thead th:first-child {
+      min-width: 96px;
+      max-width: 104px;
+      padding-right: var(--s-2);
+    }
+
+    .compare-table .col-head .remove {
+      width: 44px;
+      height: 44px;
+      margin: calc(var(--s-3) * -1) calc(var(--s-3) * -1) 0 0;
+    }
+
+    .remove {
+      width: 44px;
+      height: 44px;
+    }
+
+    .selected-chip {
+      min-height: 44px;
     }
   }
 </style>

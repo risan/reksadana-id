@@ -6,6 +6,7 @@ const MAX_FILES = 19000;
 const MAX_FILE_BYTES = 24 * 1024 * 1024;
 // Cloudflare allows 2,000 static redirects in _redirects.
 const MAX_REDIRECTS = 2000;
+const WARN_REDIRECTS = 1800;
 const DIST_DIR = 'dist';
 
 function listFiles(dir) {
@@ -39,8 +40,12 @@ const redirectCount = readFileSync(path.join(DIST_DIR, '_redirects'), 'utf8').sp
 console.log(`${DIST_DIR}/_redirects has ${redirectCount} redirects (limit ${MAX_REDIRECTS}).`);
 
 if (redirectCount > MAX_REDIRECTS) {
-  console.error(`Too many redirects: ${redirectCount} > ${MAX_REDIRECTS}. Drop the no-slash form first.`);
+  console.error(`Too many redirects: ${redirectCount} > ${MAX_REDIRECTS}.`);
   process.exit(1);
+}
+
+if (redirectCount > WARN_REDIRECTS) {
+  console.warn(`Close to the redirect limit: ${redirectCount} of ${MAX_REDIRECTS}. Each retired ID costs up to five lines.`);
 }
 
 // Cloudflare serves the nearest 404.html up the path, one per language.

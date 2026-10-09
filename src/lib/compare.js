@@ -1,6 +1,6 @@
 // Runs both at build time and in the browser, so it must not import Node modules.
 // The rules of the compare page. Every history is the object pickNavHistory returns.
-import { computeReturns, daysBetween, indexAtOrBefore, maxStartGapDays, periodStartDate } from './series.js';
+import { daysBetween, indexAtOrBefore, maxStartGapDays, periodStartDate } from './series.js';
 
 export const MIN_FUNDS = 2;
 export const MAX_FUNDS = 5;
@@ -98,11 +98,6 @@ export function analyzeFunds(entries) {
   return { commonEnd, eligible, excluded };
 }
 
-// Returns, CAGR, and max drawdown of an eligible fund, measured back from the common end.
-export function returnsAtCommonEnd(entry, commonEnd) {
-  return computeReturns(entry.history, commonEnd);
-}
-
 // Where a chart range starts, and the NAV each eligible fund is indexed from: its last NAV on or before the start.
 // Null when the range cannot be drawn for every fund. Max starts at the latest first NAV among the funds.
 export function chartRange(period, analysis) {
@@ -159,4 +154,24 @@ export function indexedSeries(analysis, range) {
   });
 
   return { dates: sortedDates, series };
+}
+
+// The ids that hold the best value of a table row: the highest for 'high', the lowest for 'low'. `entries` are
+// { id, value }, with a null value where a fund has none. Nothing is marked when fewer than two funds have a value
+// or when they all tie, since then no fund stands out.
+export function bestIds(entries, prefer) {
+  const known = entries.filter((entry) => entry.value !== null && entry.value !== undefined);
+
+  if (known.length < 2) {
+    return new Set();
+  }
+
+  const values = known.map((entry) => entry.value);
+  const best = prefer === 'high' ? Math.max(...values) : Math.min(...values);
+
+  if (values.every((value) => value === best)) {
+    return new Set();
+  }
+
+  return new Set(known.filter((entry) => entry.value === best).map((entry) => entry.id));
 }

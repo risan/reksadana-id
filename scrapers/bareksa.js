@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { HttpError, decodeHtml, matchBibitSymbols, readCsvRows, reportMatches, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
+import { HttpError, decodeHtml, matchBibitSymbols, mergeRowsByDate, readCsvRows, reportFailures, reportMatches, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
 
 const BASE_URL = 'https://www.bareksa.com';
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'bareksa');
@@ -12,6 +12,12 @@ const REQUEST_TIMEOUT_MS = 90 * 1000;
 const LIST_PAGE_SIZE = 100;
 const FIRST_DATE = '2000-01-01';
 const PROFILES_PER_RUN = 400;
+// The NAV endpoint answers without a login for the last month and the last year; longer periods need one.
+const NAV_MONTH_MAX_AGE_DAYS = 25;
+const RECENT_NAV_MAX_AGE_DAYS = 60;
+// Bareksa answers an empty list for a fund that has a NAV when it is struggling; a few empty funds are real.
+const MAX_EMPTY_MONTH_SHARE = 0.2;
+const DAY_IN_MS = 24 * 60 * 60 * 1000;
 const FUND_HEADER = [
   'bareksa_id', 'name', 'slug', 'type', 'manager', 'launch_date', 'bibit_symbol',
   'currency', 'custodian', 'min_purchase', 'min_topup', 'min_redemption', 'fee_purchase', 'fee_redemption', 'fee_switch', 'profile_date',
@@ -29,7 +35,7 @@ const AUM_HEADER = ['date', 'aum_idr', 'aum_usd'];
 const UNITS_HEADER = ['date', 'units'];
 // Bareksa's allocation chart (drawAlokasiDana in its chart.js) names these columns in this order.
 const ALLOCATION_HEADER = ['date', 'saham', 'obligasi', 'pasar_uang', 'lainnya'];
-const NAV_HEADER = ['date', 'nav'];
+export const NAV_HEADER = ['date', 'nav'];
 
 const INDONESIAN_MONTHS = ['januari', 'februari', 'maret', 'april', 'mei', 'juni', 'juli', 'agustus', 'september', 'oktober', 'november', 'desember'];
 
@@ -41,6 +47,7 @@ let requestCount = 0;
 export class CookieError extends Error {
   constructor() {
     super('BAREKSA_COOKIE missing or expired: Bareksa did not accept the login for the NAV history');
+    this.retryable = false;
   }
 }
 
@@ -51,7 +58,7 @@ export const assertCookieIsValid = (value) => {
   }
 };
 
-const fetchText = (url, { sendCookie = false, acceptDatabaseError = false } = {}) => withRetries(async () => {
+const fetchText = (url, { sendCookie = false, acceptDatabaseError = false, parse = (text) => text } = {}) => withRetries(async () => {
   requestCount++;
 
   try {
@@ -75,7 +82,7 @@ const fetchText = (url, { sendCookie = false, acceptDatabaseError = false } = {}
       throw new HttpError(url, response.status, response.statusText);
     }
 
-    return text;
+    return parse(text);
   } catch (error) {
     // The error message of an invalid header repeats the whole cookie.
     if (sendCookie && !(error instanceof HttpError)) {
@@ -174,7 +181,7 @@ export const parseFundPage = (html) => {
   const type = cellValue('Jenis Reksa Dana');
 
   if (type === undefined) {
-    throw new Error('Fund page has no profile table');
+    throw new Error(`Fund page has no profile table (${html.length} characters, title "${html.match(/<title>([^<]*)<\/title>/)?.[1].trim() ?? ''}")`);
   }
 
   const manager = html.match(/<a itemprop="brand"[^>]*><span itemprop="name">([^<]*)<\/span>/)?.[1] ?? '';
@@ -301,20 +308,6 @@ const writeFundIndex = async (funds, bibitRows) => {
   return symbolsById;
 };
 
-// A new row replaces the stored row of the same date, column by column. A missing value in a new row
-// never erases the stored value of that column.
-export const mergeRowsByDate = (storedRows, newRows) => {
-  const rowsByDate = new Map(storedRows.map((row) => [row[0], row]));
-
-  for (const row of newRows) {
-    const storedRow = rowsByDate.get(row[0]);
-
-    rowsByDate.set(row[0], storedRow ? row.map((value, column) => (value === '' ? storedRow[column] ?? '' : value)) : row);
-  }
-
-  return [...rowsByDate.values()].sort((a, b) => a[0].localeCompare(b[0]));
-};
-
 // New rows replace stored ones on the same date. Returns how many rows the file holds.
 const updateSeries = async (directory, header, id, fetchRows) => {
   const file = path.join(DATA_DIR, directory, `${id}.csv`);
@@ -359,16 +352,40 @@ const fetchNavRows = async (id) => parseNavRows(await fetchJson(
 
 const today = () => new Date().toISOString().slice(0, 10);
 
-const fetchProfile = async ({ id, slug }) => ({
-  ...parseFundPage(await fetchText(`${BASE_URL}/id/data/reksadana/${id}/${slug}`)),
+// Which period to ask for to bring a fund's stored NAV up to date: the last month when the stored file ends
+// within 25 days, else the last year. Null when the fund is skipped: the daily run only asks for funds with a
+// recent NAV (or none yet), and a fund that stopped long ago waits for the run over all funds.
+export const navPeriodFor = (lastDate, todayDate, { all = false } = {}) => {
+  if (lastDate === undefined) {
+    return '1y';
+  }
+
+  const ageDays = (Date.parse(todayDate) - Date.parse(lastDate)) / DAY_IN_MS;
+
+  if (ageDays <= NAV_MONTH_MAX_AGE_DAYS) {
+    return '1m';
+  }
+
+  return all || ageDays <= RECENT_NAV_MAX_AGE_DAYS ? '1y' : null;
+};
+
+// Parsed inside the retry: now and then the answer has no NAV list for a fund that has one.
+export const fetchRecentNavRows = (id, period) => fetchText(
+  `${BASE_URL}/ajax/mutualfund/nav/product1/?id=${id}&cperiod=${period}&startdate=&enddate=&requested_page=profile.graph`,
+  { parse: (text) => parseNavRows(JSON.parse(text)) },
+);
+
+// The page is parsed inside the retry: a throttled request can answer 200 with a page that has no profile.
+export const fetchProfile = async ({ id, slug }) => ({
+  ...await fetchText(`${BASE_URL}/id/data/reksadana/${id}/${slug}`, { parse: parseFundPage }),
   profileDate: today(),
 });
 
 // Never-fetched funds first, then the oldest profile.
 const byOldestProfile = ([idA, a], [idB, b]) => a.profileDate.localeCompare(b.profileDate) || idA - idB;
 
-// Fund pages only, for the costs and minimums. A failed page gets today's date and keeps its old values,
-// so it moves to the back of the queue and cannot starve the funds behind it.
+// Fund pages only, for the costs and minimums. A failed page keeps its old values and date,
+// so the next run tries it again first.
 const mainProfiles = async ({ all }) => {
   const startedAt = Date.now();
   const funds = await readStoredFunds();
@@ -379,13 +396,7 @@ const mainProfiles = async ({ all }) => {
   const failures = await runPool({
     items: queue.map(([id]) => id),
     worker: async (id) => {
-      try {
-        funds.set(id, { ...funds.get(id), ...await fetchProfile({ id, slug: funds.get(id).slug }) });
-      } catch (error) {
-        funds.set(id, { ...funds.get(id), profileDate: today() });
-
-        throw error;
-      }
+      funds.set(id, { ...funds.get(id), ...await fetchProfile({ id, slug: funds.get(id).slug }) });
     },
     concurrency: CONCURRENCY,
     label: 'Profiles fetched',
@@ -398,10 +409,80 @@ const mainProfiles = async ({ all }) => {
   reportMatches('Bareksa', funds.size, symbolsById, bibitRows);
   console.log(`${requestCount} requests in ${Math.round((Date.now() - startedAt) / 1000)} seconds`);
 
-  if (failures.length > 0) {
-    console.error(`${failures.length} funds failed:\n${failures.join('\n')}`);
+  reportFailures(failures, queue.length);
+};
+
+// Daily NAV without a login: the last month or year of every fund, merged into the stored files by date.
+// A full history still needs BAREKSA_COOKIE (see `main`).
+const mainNav = async ({ all }) => {
+  const startedAt = Date.now();
+  const funds = await readStoredFunds();
+  const todayDate = today();
+  const queue = [];
+  let loggedOutError = null;
+
+  await fs.mkdir(path.join(DATA_DIR, 'nav'), { recursive: true });
+
+  for (const id of funds.keys()) {
+    const storedRows = await readCsvRows(path.join(DATA_DIR, 'nav', `${id}.csv`));
+    const period = navPeriodFor(storedRows.at(-1)?.[0], todayDate, { all });
+
+    if (period !== null) {
+      queue.push({ id, period, storedCount: storedRows.length });
+    }
+  }
+
+  console.log(`NAV: ${queue.length} of ${funds.size} funds (${queue.filter(({ period }) => period === '1m').length} for the last month)`);
+
+  let addedRows = 0;
+  let emptyMonthCount = 0;
+
+  const failures = await runPool({
+    items: queue,
+    worker: async ({ id, period, storedCount }) => {
+      if (loggedOutError) {
+        return;
+      }
+
+      try {
+        const rowCount = await updateSeries('nav', NAV_HEADER, id, async () => {
+          const rows = await fetchRecentNavRows(id, period);
+
+          if (period === '1m' && rows.length === 0) {
+            emptyMonthCount++;
+          }
+
+          return rows;
+        });
+
+        addedRows += rowCount - storedCount;
+      } catch (error) {
+        if (!(error instanceof CookieError)) {
+          throw error;
+        }
+
+        loggedOutError = error;
+      }
+    },
+    concurrency: CONCURRENCY,
+    label: 'NAV refreshed',
+    describeItem: ({ id }) => `Bareksa ${id}`,
+  });
+
+  console.log(`${addedRows} new NAV rows, ${requestCount} requests in ${Math.round((Date.now() - startedAt) / 1000)} seconds`);
+
+  if (loggedOutError) {
+    console.error(`Bareksa asked for a login even for the last month or year: ${loggedOutError.message}`);
     process.exitCode = 1;
   }
+
+  const monthCount = queue.filter(({ period }) => period === '1m').length;
+
+  if (emptyMonthCount > monthCount * MAX_EMPTY_MONTH_SHARE) {
+    console.log(`::warning::${emptyMonthCount} of ${monthCount} funds with a recent NAV got no rows for the last month; Bareksa may be answering empty lists`);
+  }
+
+  reportFailures(failures, queue.length);
 };
 
 const main = async () => {
@@ -498,6 +579,8 @@ const main = async () => {
 if (process.argv[1] === import.meta.filename) {
   if (process.argv.includes('--profiles') || process.argv.includes('--profiles-all')) {
     await mainProfiles({ all: process.argv.includes('--profiles-all') });
+  } else if (process.argv.includes('--nav') || process.argv.includes('--nav-all')) {
+    await mainNav({ all: process.argv.includes('--nav-all') });
   } else {
     await main();
   }

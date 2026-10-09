@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { linkFunds, makeNavSeries } from './link-funds.js';
+import { linkFunds, makeNavSeries, matchOjkFunds, recordKeyOfId } from './link-funds.js';
 
 const TODAY = '2026-10-02';
 const MANAGER = 'Alpha Asset Management, PT';
@@ -612,4 +612,199 @@ test('a redirect to a record that vanished follows the fund that absorbed its ta
 
   assert.equal(targets.BRK9, 'RD2');
   assert.equal(targets.RD1, 'RD2');
+});
+
+test('days in which a source served another fund\'s NAV do not stop two records from linking', () => {
+  const history = fourDecimalNav(30);
+  const withForeignDays = history.map(([date, value], day) => [date, day >= 10 && day < 17 ? 1.0234 : value]);
+  const result = link([
+    record('bareksa', '1', { name: 'Alpha Dana Utama', nav: history }),
+    record('kontan', '2', { name: 'ALPHA DANA UTAMA FUND', nav: withForeignDays }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+  assert.equal(result.report.linksByRule['nav'], 1);
+  assert.equal(result.report.refused.length, 0);
+});
+
+test('a NAV series loses a short run far from the NAV around it and keeps the rest', () => {
+  const rows = [['2026-04-24', 1.02], ['2026-04-27', 1654.73], ['2026-04-28', 1654.9], ['2026-04-29', 1.02], ['2026-04-30', 1.03]];
+  const cleaned = makeNavSeries(rows);
+
+  assert.deepEqual(Array.from(cleaned.dates), [20260424, 20260429, 20260430]);
+  assert.deepEqual(Array.from(cleaned.values), [1.02, 1.02, 1.03]);
+});
+
+const typeFor = (types) => {
+  const nav = fourDecimalNav(5);
+  const result = link(Object.entries(types).map(([source, type]) => record(source, '1', { name: 'Alpha Dana Utama', type, nav })));
+
+  return result.funds[0].type;
+};
+
+test('Bibit\'s type wins unless two other sources agree on another', () => {
+  assert.equal(typeFor({ bibit: 'Saham' }), 'Saham');
+  assert.equal(typeFor({ bibit: 'Saham', bareksa: 'Pasar Uang' }), 'Saham');
+  assert.equal(typeFor({ bibit: 'Saham', bareksa: 'Pasar Uang', kontan: 'Obligasi' }), 'Saham');
+  assert.equal(typeFor({ bibit: 'Saham', bareksa: 'Pasar Uang', kontan: 'Pasar Uang' }), 'Pasar Uang');
+  assert.equal(typeFor({ bibit: 'Saham', bareksa: 'Saham', kontan: 'Pasar Uang' }), 'Saham');
+});
+
+test('Bibit\'s specialised types are not overruled by the general ones other sources use', () => {
+  assert.equal(typeFor({ bibit: 'Reksadana Global', bareksa: 'Saham', kontan: 'Saham' }), 'Reksadana Global');
+  assert.equal(typeFor({ bibit: 'Penyertaan Terbatas', bareksa: 'Obligasi', kontan: 'Obligasi' }), 'Penyertaan Terbatas');
+});
+
+test('a type no source can name is left to the first source that can', () => {
+  assert.equal(typeFor({ bibit: 'Benchmark', bareksa: 'ETF', kontan: 'Indeks & ETF' }), 'Benchmark');
+  assert.equal(typeFor({ bareksa: 'Saham', kontan: 'ETF' }), 'Saham');
+});
+
+test('records of one fund link when a source repeats its last value for days the other has moved on', () => {
+  const bareksa = fourDecimalNav(30);
+  const kontan = bareksa.map(([date, value], day) => [date, day >= 25 ? bareksa[24][1] : value]);
+  const result = link([
+    record('bareksa', '1', { name: 'Alpha Dana Utama', nav: bareksa }),
+    record('kontan', '2', { name: 'ALPHA DANA UTAMA FUND', nav: kontan }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+});
+
+test('one stray date does not stop NAV evidence, two do', () => {
+  const nav = fourDecimalNav(10);
+  const linkWith = (strayDays) => link([
+    record('bareksa', '1', { name: 'Alpha Dana Utama', nav }),
+    record('kontan', '2', { name: 'ALPHA DANA UTAMA FUND', nav: nav.map(([date, value], day) => [date, strayDays.includes(day) ? value + 40 : value]) }),
+  ]).funds.length;
+
+  assert.equal(linkWith([4]), 1);
+  assert.equal(linkWith([4, 6]), 2);
+});
+
+test('a latest NAV that is only a rounding apart, or one odd last day, does not refuse a link of the same name', () => {
+  const dollar = [['2026-09-28', 0.7461], ['2026-09-29', 0.7455], ['2026-09-30', 0.7459]];
+  const rounded = [['2026-09-28', 0.75], ['2026-09-29', 0.75], ['2026-09-30', 0.75]];
+  const history = fourDecimalNav(10);
+  const oddLastDay = history.map(([date, value], day) => [date, day === 9 ? value * 1.04 : value]);
+  const differentFund = history.map(([date, value], day) => [date, day >= 8 ? value * 1.04 : value]);
+  const linkNames = (a, b) => link([
+    record('bareksa', '1', { name: 'Alpha Dana Utama', nav: a }),
+    record('kontan', '2', { name: 'ALPHA DANA UTAMA', nav: b }),
+  ]).funds.length;
+
+  assert.equal(linkNames(dollar, rounded), 1);
+  assert.equal(linkNames(history, oddLastDay), 1);
+  assert.equal(linkNames(history, differentFund), 2);
+});
+
+const ojkFund = (name, fields = {}) => ({ name, manager: 'PT Alpha Asset Management', currency: 'IDR', count: 1, ...fields });
+
+const linkedFund = (id, name, fields = {}) => ({ id, name, otherNames: [], manager: 'Alpha Asset Management, PT', currency: 'IDR', ...fields });
+
+const matchOjk = (funds, ojkFunds) => Object.fromEntries(matchOjkFunds(funds, ojkFunds));
+
+test('an OJK fund joins the fund with the same name once "Reksa Dana" is dropped and the manager is the same company', () => {
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju')], [ojkFund('REKSA DANA ALPHA SAHAM MAJU')]), { RD1: 'REKSA DANA ALPHA SAHAM MAJU' });
+});
+
+test('an OJK fund of another manager does not join, and neither does one in another currency', () => {
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju')], [ojkFund('RD ALPHA SAHAM MAJU', { manager: 'Beta Asset Management, PT' })]), {});
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju')], [ojkFund('RD ALPHA SAHAM MAJU', { currency: 'USD' })]), {});
+});
+
+test('the type word OJK puts after "Reksa Dana" is ignored, unless the name as written matches', () => {
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Index IDX30')], [ojkFund('REKSA DANA INDEKS ALPHA INDEX IDX30')]), { RD1: 'REKSA DANA INDEKS ALPHA INDEX IDX30' });
+  assert.deepEqual(
+    matchOjk([linkedFund('RD1', 'Alpha Dana Berimbang')], [ojkFund('REKSA DANA CAMPURAN ALPHA DANA BERIMBANG'), ojkFund('REKSA DANA ALPHA DANA BERIMBANG')]),
+    { RD1: 'REKSA DANA ALPHA DANA BERIMBANG' },
+  );
+});
+
+test('the name of the fund counts before its other names', () => {
+  const fund = linkedFund('RD1', 'Alpha Value Kelas A', { otherNames: ['Alpha Value'] });
+
+  assert.deepEqual(matchOjk([fund], [ojkFund('REKSA DANA ALPHA VALUE KELAS A'), ojkFund('REKSA DANA ALPHA VALUE')]), { RD1: 'REKSA DANA ALPHA VALUE KELAS A' });
+  assert.deepEqual(matchOjk([fund], [ojkFund('REKSA DANA ALPHA VALUE')]), { RD1: 'REKSA DANA ALPHA VALUE' });
+});
+
+test('two funds with the same name get no OJK fund, and an OJK name listed twice joins no fund', () => {
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju'), linkedFund('BRK2', 'Alpha Saham Maju')], [ojkFund('REKSA DANA ALPHA SAHAM MAJU')]), {});
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju')], [ojkFund('REKSA DANA ALPHA SAHAM MAJU', { count: 2 })]), {});
+});
+
+test('a fund without a manager joins no OJK fund', () => {
+  assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju', { manager: '' })], [ojkFund('REKSA DANA ALPHA SAHAM MAJU', { manager: '' })]), {});
+});
+
+test('an excluded record joins no fund and gets no ID, while a null alias keeps it as a fund of its own', () => {
+  const nav = fourDecimalNav(5);
+  const records = [
+    record('bareksa', '10', { name: 'Alpha Dana Utama', nav }),
+    record('kontan', '20', { name: 'ALPHA DANA UTAMA', nav }),
+  ];
+  const excluded = link(records, { aliases: { 'kontan:20': 'exclude' } });
+  const blocked = link(records, { aliases: { 'kontan:20': null } });
+
+  assert.deepEqual(excluded.funds.map((fund) => fund.id), ['BRK10']);
+  assert.equal(excluded.funds[0].sources.kontan.length, 0);
+  assert.deepEqual(blocked.funds.map((fund) => fund.id), ['BRK10', 'KTN20']);
+});
+
+test('the ID of an excluded record that was published keeps pointing at the fund it was set to', () => {
+  const registry = [
+    { id: 'BRK10', first_published: '2026-10-01', current_id: 'BRK10' },
+    { id: 'KTN20', first_published: '2026-10-02', current_id: 'BRK10' },
+  ];
+  const result = link([record('bareksa', '10', { nav: fourDecimalNav(5) })], { aliases: { 'kontan:20': 'exclude' }, registry });
+
+  assert.deepEqual(result.registry.map((entry) => [entry.id, entry.current_id]), [['BRK10', 'BRK10'], ['KTN20', 'BRK10']]);
+});
+
+test('two empty Bibit shells with one name and no manager are one fund, but a shell never joins a fund with a manager', () => {
+  const shells = link([
+    record('bibit', 'RD2053', { name: 'Principal Index Idx30', manager: '' }),
+    record('bibit', 'RD2944', { name: 'Principal Index Idx30', manager: '' }),
+  ]);
+  const withManager = link([
+    record('bibit', 'RD2053', { name: 'Principal Index Idx30', manager: '' }),
+    record('bibit', 'RD2944', { name: 'Principal Index Idx30', manager: MANAGER }),
+  ]);
+  const withNav = link([
+    record('bibit', 'RD2053', { name: 'Principal Index Idx30', manager: '', nav: fourDecimalNav(3) }),
+    record('bibit', 'RD2944', { name: 'Principal Index Idx30', manager: '' }),
+  ]);
+  const spelledTwice = link([
+    record('bibit', 'RD2053', { name: 'Terproteksi Mandiri Seri 81', manager: '' }),
+    record('bibit', 'RD2944', { name: 'Terproteksi Mandiri Seri 81 ', manager: '' }),
+  ]);
+
+  assert.equal(shells.funds.length, 1);
+  assert.equal(withManager.funds.length, 2);
+  assert.equal(withNav.funds.length, 2);
+  assert.equal(spelledTwice.funds.length, 1);
+});
+
+test('a fund ID names the record it was made from', () => {
+  assert.equal(recordKeyOfId('KTN14357'), 'kontan:14357');
+  assert.equal(recordKeyOfId('BRK248'), 'bareksa:248');
+  assert.equal(recordKeyOfId('MKR68c7bd9b'), 'makmur:68c7bd9b');
+  assert.equal(recordKeyOfId('RD1983'), 'bibit:RD1983');
+});
+
+test('a published ID of an excluded record can keep no fund at all', () => {
+  const registry = [{ id: 'KTN20', first_published: '2026-10-02', current_id: '' }];
+  const result = link([record('bareksa', '10', { nav: fourDecimalNav(5) })], { aliases: { 'kontan:20': 'exclude' }, registry });
+
+  assert.equal(result.registry.find((entry) => entry.id === 'KTN20').current_id, '');
+});
+
+test('excluding a record whose ID is already live empties its registry entry instead of throwing', () => {
+  const registry = [
+    { id: 'BRK10', first_published: '2026-10-01', current_id: 'BRK10' },
+    { id: 'KTN20', first_published: '2026-10-02', current_id: 'KTN20' },
+  ];
+  const result = link([record('bareksa', '10', { nav: fourDecimalNav(5) })], { aliases: { 'kontan:20': 'exclude' }, registry });
+
+  assert.deepEqual(result.registry.map((entry) => [entry.id, entry.current_id]), [['BRK10', 'BRK10'], ['KTN20', '']]);
 });

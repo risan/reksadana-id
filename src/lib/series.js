@@ -1,5 +1,6 @@
 // Runs both at build time and in the browser, so it must not import Node modules.
 // Every function takes a fund in the shape of /api/funds/<symbol>.json.
+import { agreeAtPrecision, precisionOf } from './precision.js';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -9,7 +10,6 @@ export const SOURCE_LABELS = {
   bibit: 'Bibit',
   bareksa: 'Bareksa',
   kontan: 'Kontan',
-  'bareksa-monthly': 'Bareksa (monthly AUM ÷ units)',
 };
 
 function toTime(date) {
@@ -66,33 +66,70 @@ function areNeighbours(earlier, later) {
 
 const SPIKE_MOVE = 0.15;
 const SPIKE_RETURN = 0.05;
+const MAX_EXCURSION_ROWS = 10;
 
-// A point far from both neighbours while the neighbours agree is a source error, not a market move.
-// Across a gap in the history nothing is known about the days between, so nothing is dropped there.
-function dropSpikes(points) {
-  return points.filter((point, index) => {
-    const previous = points[index - 1];
-    const next = points[index + 1];
+// How many rows from `start` on are an excursion: every one of them far from the NAV before it, followed by a
+// return to within a few percent of that NAV. Zero when they are not, or when a gap hides the days between.
+function excursionLength(points, start, before) {
+  if (!areNeighbours(before, points[start])) {
+    return 0;
+  }
 
-    if (!previous || !next || !areNeighbours(previous, point) || !areNeighbours(point, next)) {
-      return true;
+  for (let length = 1; length <= MAX_EXCURSION_ROWS; length++) {
+    const member = points[start + length - 1];
+    const next = points[start + length];
+
+    if (Math.abs(member.value / before.value - 1) <= SPIKE_MOVE || !next || !areNeighbours(member, next)) {
+      return 0;
     }
 
-    const moveIn = point.value / previous.value - 1;
-    const moveOut = next.value / point.value - 1;
-    const netMove = next.value / previous.value - 1;
+    if (Math.abs(next.value / before.value - 1) < SPIKE_RETURN) {
+      return length;
+    }
+  }
 
-    return !(Math.abs(moveIn) > SPIKE_MOVE && Math.abs(moveOut) > SPIKE_MOVE && Math.abs(netMove) < SPIKE_RETURN);
-  });
+  return 0;
+}
+
+// A few rows far from both sides, while the NAV on either side agrees, are a source error and not a market move:
+// one wrong day, or a stretch of days in which a source served another fund's NAV.
+// Across a gap in the history nothing is known about the days between, so nothing is dropped there.
+export function dropSpikes(points) {
+  const kept = [];
+  let index = 0;
+
+  while (index < points.length) {
+    const length = kept.length > 0 ? excursionLength(points, index, kept.at(-1)) : 0;
+
+    if (length > 0) {
+      index += length;
+    } else {
+      kept.push(points[index]);
+      index++;
+    }
+  }
+
+  return kept;
 }
 
 const FROZEN_AFTER_DAYS = 31;
 
+// Two NAVs of one source are the same only when they are equal. From two sources they are the same when they agree
+// at the coarser source's precision, which is the most decimals that source shows anywhere in the series: a Bibit
+// NAV of 1.0500 is stored as 1.05 and is still a four-decimal NAV.
+function isSameNav(a, b, precisions) {
+  if (a.source === b.source) {
+    return a.value === b.value;
+  }
+
+  return agreeAtPrecision(a.value, b.value, Math.min(precisions[a.source], precisions[b.source]));
+}
+
 // The date the series' final value first appeared, counting only the unbroken run at its end.
-function startOfFinalRun(points) {
+function startOfFinalRun(points, precisions) {
   let index = points.length - 1;
 
-  while (index > 0 && points[index - 1].value === points.at(-1).value) {
+  while (index > 0 && isSameNav(points[index - 1], points.at(-1), precisions)) {
     index--;
   }
 
@@ -103,13 +140,13 @@ function startOfFinalRun(points) {
 // so a NAV unchanged for longer means the fund stopped when that NAV first appeared. Another source can
 // show it earlier, as long as the chosen history has no other value after that date.
 // Returns the point the history ends on, or null.
-function frozenEnd(points, sourceLists) {
+function frozenEnd(points, sourceLists, precisions) {
   if (points.length < 2) {
     return null;
   }
 
-  const finalValue = points.at(-1).value;
-  const lastChange = startOfFinalRun(points);
+  const finalPoint = points.at(-1);
+  const lastChange = startOfFinalRun(points, precisions);
 
   if (daysBetween(lastChange, points.at(-1).date) <= FROZEN_AFTER_DAYS) {
     return null;
@@ -118,13 +155,13 @@ function frozenEnd(points, sourceLists) {
   const candidates = [points.find((point) => point.date === lastChange)];
 
   for (const list of sourceLists) {
-    if (list.length === 0 || list.at(-1).value !== finalValue) {
+    if (list.length === 0 || !isSameNav(list.at(-1), finalPoint, precisions)) {
       continue;
     }
 
-    const start = startOfFinalRun(list);
+    const start = startOfFinalRun(list, precisions);
 
-    if (points.every((point) => point.date < start || point.value === finalValue)) {
+    if (points.every((point) => point.date < start || isSameNav(point, finalPoint, precisions))) {
       candidates.push(list.find((point) => point.date === start));
     }
   }
@@ -165,13 +202,95 @@ function continues(lastPoint, firstNewPoint) {
   return !areNeighbours(lastPoint, firstNewPoint) || Math.abs(ratio - 1) <= NEXT_DAY_MISMATCH;
 }
 
+const OVERLAP_TOLERANCE = 0.005;
+const OVERLAP_AGREEING_SHARE = 0.95;
+
+// Two sources agree when they share days and almost all of them carry the same NAV. Sources that never
+// overlap cannot show they are the same fund on the same scale, so they do not agree.
+function agreeOnOverlap(base, other) {
+  const baseByDate = new Map(base.map((point) => [point.date, point.value]));
+  const shared = other.filter((point) => baseByDate.has(point.date));
+  const agreeing = shared.filter((point) => Math.abs(point.value / baseByDate.get(point.date) - 1) <= OVERLAP_TOLERANCE);
+
+  return shared.length > 0 && agreeing.length / shared.length >= OVERLAP_AGREEING_SHARE;
+}
+
+const LONG_GAP_DAYS = 365;
+
+// After a gap of over a year a similar-looking value proves nothing (a source can carry another fund's NAV),
+// so a newer source joins only if it also agrees with the history where the two overlap.
+function isVouchedAcrossGap(base, other, firstNewPoint) {
+  return daysBetween(base.at(-1).date, firstNewPoint.date) <= LONG_GAP_DAYS || agreeOnOverlap(base, other);
+}
+
+const LAG_MIN_CHANGES = 5;
+const LAG_DOMINANCE = 3;
+
+// Kontan stamps some funds' NAV with the next trading day's date. The tell is a NAV that equals the
+// reference's NAV of the previous Kontan row's date, far more often than the NAV of its own date.
+function lagsBehind(kontan, reference, precisions) {
+  const referenceByDate = new Map(reference.map((point) => [point.date, point]));
+  let sameDay = 0;
+  let nextDay = 0;
+
+  for (let index = 1; index < kontan.length; index++) {
+    if (kontan[index].value === kontan[index - 1].value) {
+      continue;
+    }
+
+    const sameDayPoint = referenceByDate.get(kontan[index].date);
+    const previousDayPoint = referenceByDate.get(kontan[index - 1].date);
+
+    if (sameDayPoint && isSameNav(sameDayPoint, kontan[index], precisions)) {
+      sameDay++;
+    }
+
+    if (previousDayPoint && isSameNav(previousDayPoint, kontan[index], precisions)) {
+      nextDay++;
+    }
+  }
+
+  return sameDay + nextDay >= LAG_MIN_CHANGES && nextDay > sameDay * LAG_DOMINANCE;
+}
+
+// Every NAV moves back to the date of the row before it. The first row is dropped: its own day is unknown.
+function alignKontan(kontan, reference, precisions) {
+  if (!lagsBehind(kontan, reference, precisions)) {
+    return kontan;
+  }
+
+  return kontan.slice(1).map((point, index) => ({ ...point, date: kontan[index].date }));
+}
+
 // The canonical currency of data/funds.csv: 'IDR', 'USD', or null when no source says.
 export function fundCurrency(fund) {
   return fund.fund?.currency || null;
 }
 
+// Older days from the other sources, which join the primary history only where the two agree and the join continues.
+function olderPoints(base, primary, sources) {
+  const olderByDate = new Map();
+
+  for (const name of ['bibit', 'bareksa', 'kontan']) {
+    const older = sources[name].filter((point) => point.date < base[0].date);
+
+    if (name === primary || older.length === 0 || !agreeOnOverlap(base, sources[name]) || !continues(older.at(-1), base[0])) {
+      continue;
+    }
+
+    for (const point of older) {
+      if (!olderByDate.has(point.date)) {
+        olderByDate.set(point.date, point);
+      }
+    }
+  }
+
+  return [...olderByDate.values()].sort((a, b) => a.date.localeCompare(b.date));
+}
+
 // Bibit only gives a daily history (with nav_adjusted) for funds you can buy in its app. For the others it
-// has one row per scrape, so a longer daily source wins, and newer rows from any source extend it.
+// has one row per scrape, so a longer daily source wins, and the other sources extend it on both ends:
+// newer rows always, older rows when they agree with the primary history where they overlap.
 export function pickNavHistory(fund) {
   const bibitRows = fund.nav ?? [];
   // Only Bibit's daily history fills nav_adjusted, so it tells a daily history from one row per scrape.
@@ -179,8 +298,12 @@ export function pickNavHistory(fund) {
   const sources = {
     bibit: cleanPoints(bibitRows, 'nav', 'bibit'),
     bareksa: cleanPoints(fund.bareksa?.nav ?? [], 'nav', 'bareksa'),
-    kontan: cleanPoints(fund.kontan?.nav ?? [], 'nav', 'kontan'),
   };
+
+  const rawKontan = cleanPoints(fund.kontan?.nav ?? [], 'nav', 'kontan');
+  const precisions = Object.fromEntries(Object.entries({ ...sources, kontan: rawKontan }).map(([name, points]) => [name, precisionOf(points.map((point) => point.value))]));
+
+  sources.kontan = alignKontan(rawKontan, [...sources.bibit, ...sources.bareksa], precisions);
 
   let primary = null;
 
@@ -193,23 +316,25 @@ export function pickNavHistory(fund) {
   } else if (fund.bareksa && monthlyNavFromBareksa(fund).length > 1) {
     primary = 'bareksa-monthly';
     sources['bareksa-monthly'] = monthlyNavFromBareksa(fund);
+    precisions['bareksa-monthly'] = precisionOf(sources['bareksa-monthly'].map((point) => point.value));
   } else if (sources.bibit.length > 0) {
     primary = 'bibit';
   }
 
   if (primary === null) {
-    return { points: [], primary: null, used: [], droppedSpikes: 0, frozenSince: null };
+    return { points: [], primary: null, primaryFrom: null, used: [], droppedSpikes: 0, frozenSince: null };
   }
 
   const base = sources[primary];
   const baseEnd = base.at(-1);
   const newerByDate = new Map();
 
-  // Every source may fill days after the primary history ends; on a date two sources share, the first wins.
-  for (const name of ['bibit', 'kontan', 'bareksa']) {
+  // Every source may fill days after the primary history ends; on a date two sources share, the first wins, so the
+  // sources with four decimals come before Kontan's two.
+  for (const name of ['bibit', 'bareksa', 'kontan']) {
     const newer = sources[name].filter((point) => point.date > baseEnd.date);
 
-    if (name === primary || newer.length === 0 || !continues(baseEnd, newer[0])) {
+    if (name === primary || newer.length === 0 || !continues(baseEnd, newer[0]) || !isVouchedAcrossGap(base, sources[name], newer[0])) {
       continue;
     }
 
@@ -220,14 +345,19 @@ export function pickNavHistory(fund) {
     }
   }
 
-  const points = [...base, ...[...newerByDate.values()].sort((a, b) => a.date.localeCompare(b.date))];
+  const points = [
+    ...olderPoints(base, primary, sources),
+    ...base,
+    ...[...newerByDate.values()].sort((a, b) => a.date.localeCompare(b.date)),
+  ];
   const cleaned = dropSpikes(points);
-  const end = frozenEnd(cleaned, Object.values(sources));
+  const end = frozenEnd(cleaned, Object.values(sources), precisions);
   const final = end ? [...cleaned.filter((point) => point.date < end.date), end] : cleaned;
 
   return {
     points: final,
     primary,
+    primaryFrom: base[0].date,
     used: sourceRuns(final),
     droppedSpikes: points.length - cleaned.length,
     frozenSince: end?.date ?? null,
@@ -242,6 +372,34 @@ function isFarOff(value, reference) {
   return ratio > UNIT_ERROR_RATIO || ratio < 1 / UNIT_ERROR_RATIO;
 }
 
+const AUM_SPIKE_RATIO = 8;
+const AUM_NEIGHBOURS_AGREE_RATIO = 3;
+const ABSURD_AUM = 1e6;
+const ABSURD_AUM_RATIO = 1000;
+
+const isOffBy = (value, reference, factor) => value / reference > factor || value / reference < 1 / factor;
+
+// A month that jumps far from both neighbours while the neighbours agree is a unit or class error (Bareksa has
+// hundreds), and so is a figure under a million in a series that otherwise runs a thousand times higher.
+function dropAumErrors(points) {
+  const sortedValues = points.map((point) => point.value).sort((a, b) => a - b);
+  const median = sortedValues[sortedValues.length >> 1];
+
+  return points.filter((point, index) => {
+    const previous = points[index - 1];
+    const next = points[index + 1];
+
+    if (point.value < ABSURD_AUM && median >= point.value * ABSURD_AUM_RATIO) {
+      return false;
+    }
+
+    return !(previous && next
+      && isOffBy(point.value, previous.value, AUM_SPIKE_RATIO)
+      && isOffBy(point.value, next.value, AUM_SPIKE_RATIO)
+      && !isOffBy(next.value, previous.value, AUM_NEIGHBOURS_AGREE_RATIO));
+  });
+}
+
 // Some Bibit AUM figures are in the wrong unit: a USD fund in rupiah, a figure 1,000 times too big, or the
 // NAV in place of the AUM. Bareksa's figure for the same month catches those; smaller differences are real.
 function hasUnitError(bibitPoint, bareksaByMonth) {
@@ -254,9 +412,9 @@ function hasUnitError(bibitPoint, bareksaByMonth) {
 // (null when no source states it, which the pages then show without a currency).
 export function pickAumHistory(fund) {
   const key = fundCurrency(fund) === 'USD' ? 'aum_usd' : 'aum_idr';
-  const bareksa = cleanPoints(fund.bareksa?.aum ?? [], key, 'bareksa', key === 'aum_usd' ? 'USD' : 'IDR');
+  const bareksa = dropAumErrors(cleanPoints(fund.bareksa?.aum ?? [], key, 'bareksa', key === 'aum_usd' ? 'USD' : 'IDR'));
   const bareksaByMonth = new Map(bareksa.map((point) => [point.date.slice(0, 7), point.value]));
-  const bibitAll = cleanPoints(fund.aum ?? [], 'aum', 'bibit', fundCurrency(fund));
+  const bibitAll = dropAumErrors(cleanPoints(fund.aum ?? [], 'aum', 'bibit', fundCurrency(fund)));
   const bibit = bibitAll.filter((point) => !hasUnitError(point, bareksaByMonth));
   const latestIsWrong = bibitAll.length > 0 && hasUnitError(bibitAll.at(-1), bareksaByMonth);
 
@@ -437,11 +595,14 @@ export function dividendEvents(fund, history) {
 
 // The same history with every dividend reinvested on its ex-date, scaled like an adjusted close: it ends at
 // the latest NAV and every earlier point is lowered by the dividends paid after it. Returns are ratios,
-// so the scale does not change them.
+// so the scale does not change them. Dividends are known only from the primary history on, so older days
+// from another source are left out: with them, a payout before that date would count as a loss.
 export function withDividendsReinvested(history, events) {
   const growthAt = (date) => events.filter((event) => event.date <= date).reduce((growth, event) => growth * event.factor, 1);
   const latestGrowth = growthAt(history.points.at(-1)?.date);
-  const points = history.points.map((point) => ({ ...point, value: (point.value * growthAt(point.date)) / latestGrowth }));
+  const points = history.points
+    .filter((point) => point.date >= history.primaryFrom)
+    .map((point) => ({ ...point, value: (point.value * growthAt(point.date)) / latestGrowth }));
 
   return { ...history, points };
 }

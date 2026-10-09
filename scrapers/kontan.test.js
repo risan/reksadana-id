@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { parseChart } from './kontan.js';
+import { isBlockedByKontan, parseChart } from './kontan.js';
 
 const chartPage = (pushes) => `<script>
   var pausecontent = new Array();
@@ -39,4 +39,22 @@ test('days without a price are skipped', () => {
     pausecontent.push('2026-10-01'); data1.push('1501.5');`);
 
   assert.deepEqual(parseChart(html).rows, [['2026-10-01', '1501.5']]);
+});
+
+test('a 403 on the probe means this network is blocked', async (t) => {
+  t.mock.method(globalThis, 'fetch', async () => new Response('Forbidden', { status: 403, statusText: 'Forbidden' }));
+
+  assert.equal(await isBlockedByKontan(8), true);
+});
+
+test('an answered probe means Kontan is reachable', async (t) => {
+  t.mock.method(globalThis, 'fetch', async () => new Response(chartPage('')));
+
+  assert.equal(await isBlockedByKontan(8), false);
+});
+
+test('a probe that fails some other way is an error, not a skip', async (t) => {
+  t.mock.method(globalThis, 'fetch', async () => new Response('Not found', { status: 404, statusText: 'Not Found' }));
+
+  await assert.rejects(isBlockedByKontan(8), /failed with 404/);
 });

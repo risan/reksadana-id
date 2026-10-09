@@ -24,6 +24,18 @@ test('a change shows its sign, and a rounded zero shows none', () => {
   assert.equal(formatChange(null, 'id'), '—');
 });
 
+test('a small non-zero percentage keeps two decimals and never shows a minus on zero', () => {
+  assert.equal(formatChange(0.0002, 'en', 1), '+0.02%');
+  assert.equal(formatChange(-0.0002, 'id', 1), '−0,02%');
+  assert.equal(formatPercent(0.0003, 'en', 1), '0.03%');
+  assert.equal(formatPercent(-0.0003, 'en', 0), '−0.03%');
+  assert.equal(formatChange(0.0006, 'en', 1), '+0.1%');
+  assert.equal(formatChange(0, 'en', 1), '0.0%');
+  assert.equal(formatChange(-0, 'en', 1), '0.0%');
+  assert.equal(formatPercent(-0.0000001, 'en', 1), '0.00%');
+  assert.equal(formatChange(-0.0000001, 'en', 1), '0.00%');
+});
+
 test('compact amounts use the short words of each language', () => {
   assert.equal(formatCompact(194240467107.88, 'id'), '194,2\u00a0M');
   assert.equal(formatCompact(194240467107.88, 'en'), '194.2B');

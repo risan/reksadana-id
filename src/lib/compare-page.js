@@ -3,35 +3,25 @@ import uPlot from 'uplot';
 import 'uplot/dist/uPlot.min.css';
 import * as m from '../paraglide/messages.js';
 import { setLocale } from '../paraglide/runtime.js';
-import { CHART_RANGES, MAX_FUNDS, MIN_FUNDS, analyzeFunds, chartRange, indexedSeries, resolveSelection, returnsAtCommonEnd, selectionQuery, selectionText } from './compare.js';
+import { CHART_RANGES, MAX_FUNDS, MIN_FUNDS, analyzeFunds, bestIds, chartRange, indexedSeries, resolveSelection, selectionQuery, selectionText } from './compare.js';
 import { describeCosts } from './costs-text.js';
 import { readTrayText, writeTray } from './compare-tray.js';
 import { DEFAULT_STATE, escapeHtml, filterFunds, prepareFunds, sortFunds } from './explorer.js';
+import { fetchFundRecord, getJson } from './fetch-json.js';
 import { attachTooltip, axes, chartHeight, cssColor, toSeconds } from './fund-charts.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from './format.js';
-import { shariaText, typeName } from './fund-types.js';
+import { shariaText, typeLook, typeName } from './fund-types.js';
+import { icon } from './icons.js';
 import { anchor, localizeHref } from './i18n.js';
 import { readIncludeDividends, showIncludeDividends, writeIncludeDividends } from './dividend-setting.js';
-import { dividendEvents, indexAtOrBefore, pickNavHistory, withDividendsReinvested } from './series.js';
+import { computeReturns, dividendEvents, indexAtOrBefore, pickNavHistory, withDividendsReinvested } from './series.js';
 
 const PICKER_RESULT_LIMIT = 8;
-const RETURN_PERIODS = ['1m', 'ytd', '1y', '3y', '5y'];
+const TABLE_PERIODS = ['1m', 'ytd', '1y', '3y', '5y'];
 const CAGR_PERIODS = ['3y', '5y'];
 const DRAWDOWN_PERIODS = ['1y', '3y'];
 const DEFAULT_RANGE = '1y';
 const CHART_HEIGHT = 320;
-
-async function getJson(url, options) {
-  try {
-    const response = await fetch(url, options);
-
-    return response.ok ? await response.json() : null;
-  } catch {
-    return null;
-  }
-}
-
-const hasCurrentShape = (record) => Boolean(record?.fund && record.costs);
 
 export async function mountComparePage() {
   const locale = document.documentElement.lang;
@@ -48,7 +38,8 @@ export async function mountComparePage() {
   const chartContainer = document.getElementById('compare-chart');
   const chartMessage = document.getElementById('chart-message');
   const chartStart = document.getElementById('chart-start');
-  const legend = document.getElementById('compare-legend');
+  const picker = document.getElementById('picker');
+  const chips = document.getElementById('selected-chips');
   const rangeButtons = [...document.querySelectorAll('[data-range]')];
   const tableSection = document.getElementById('compare-table-section');
   const table = document.getElementById('compare-table');
@@ -87,15 +78,9 @@ export async function mountComparePage() {
 
     loaded.set(id, { status: 'loading' });
 
-    const url = `/api/funds/${encodeURIComponent(id)}.json`;
-    let record = await getJson(url);
+    const record = await fetchFundRecord(id);
 
-    // The browser may hold a record from before a deploy for an hour; it lacks the fields added since.
-    if (record !== null && !hasCurrentShape(record)) {
-      record = await getJson(url, { cache: 'reload' });
-    }
-
-    if (hasCurrentShape(record)) {
+    if (record !== null) {
       const history = pickNavHistory(record);
       const events = dividendEvents(record, history);
 
@@ -119,14 +104,34 @@ export async function mountComparePage() {
     renderPicker();
   }
 
+  function typeTile(fund) {
+    const { tone, icon: iconName } = typeLook(fund.type);
+
+    return `<span class="icon-tile type-${tone}">${icon(iconName, { size: 16 })}</span>`;
+  }
+
+  function renderChips() {
+    chips.innerHTML = ids
+      .map(
+        (id, slot) =>
+          `<li class="selected-chip"><i class="chip-dot" style="background: var(--series-${slot + 1})"></i><a href="${fundHref(id)}">${escapeHtml(fundName(id))}</a><button type="button" class="remove" data-remove="${escapeHtml(id)}" aria-label="${escapeHtml(m.compare_remove({ name: fundName(id) }))}">${icon('x', { size: 16 })}</button></li>`,
+      )
+      .join('');
+  }
+
+  function closePicker() {
+    pickerResults.hidden = true;
+    pickerInput.setAttribute('aria-expanded', 'false');
+  }
+
   function renderPicker() {
     const query = pickerInput.value.trim();
     const isFull = ids.length >= MAX_FUNDS;
 
-    pickerNote.textContent = isFull ? m.compare_full({ count: MAX_FUNDS }) : '';
+    pickerNote.textContent = isFull ? m.compare_full({ count: MAX_FUNDS }) : m.compare_count({ count: ids.length, max: MAX_FUNDS });
 
     if (query === '') {
-      pickerResults.hidden = true;
+      closePicker();
       pickerResults.innerHTML = '';
 
       return;
@@ -135,6 +140,7 @@ export async function mountComparePage() {
     const matches = sortFunds(filterFunds(funds, { ...DEFAULT_STATE, q: query, inactive: true }), 'aum', -1).slice(0, PICKER_RESULT_LIMIT);
 
     pickerResults.hidden = false;
+    pickerInput.setAttribute('aria-expanded', 'true');
     pickerResults.innerHTML =
       matches.length === 0
         ? `<li class="nil">${escapeHtml(m.compare_no_match())}</li>`
@@ -142,7 +148,7 @@ export async function mountComparePage() {
             .map((fund) => {
               const isSelected = ids.includes(fund.id);
 
-              return `<li><span><b>${escapeHtml(fund.name)}</b><span class="sub">${escapeHtml(fund.manager ?? m.unknown_manager())} · <span class="mono">${escapeHtml(fund.id)}</span>${fund.active ? '' : ` · ${escapeHtml(m.tag_inactive())}`}</span></span><button type="button" class="btn" data-add="${escapeHtml(fund.id)}"${isSelected || isFull ? ' disabled' : ''}>${escapeHtml(isSelected ? m.compare_added() : m.compare_add())}</button></li>`;
+              return `<li><button type="button" class="pick" data-add="${escapeHtml(fund.id)}"${isSelected || isFull ? ' disabled' : ''}>${typeTile(fund)}<span class="pick-text"><span class="pick-name">${escapeHtml(fund.name)}</span><span class="pick-sub">${escapeHtml(fund.manager ?? m.unknown_manager())} · ${escapeHtml(fund.id)}${fund.active ? '' : ` · ${escapeHtml(m.tag_inactive())}`}</span></span><span class="pick-state">${escapeHtml(isSelected ? m.compare_added() : m.compare_add())}</span></button></li>`;
             })
             .join('');
   }
@@ -159,10 +165,6 @@ export async function mountComparePage() {
     }
 
     return m.compare_excluded_no_history({ name });
-  }
-
-  function renderLegend(analysis) {
-    legend.innerHTML = analysis.eligible.map((entry) => `<li>${keyHtml(ids.indexOf(entry.id))} ${escapeHtml(fundName(entry.id))}</li>`).join('');
   }
 
   function rangeFor(ranges) {
@@ -194,7 +196,7 @@ export async function mountComparePage() {
         height: chartHeight(CHART_HEIGHT),
         padding: [8, 0, 0, 16],
         legend: { show: false },
-        cursor: { points: { size: 7, width: 2, fill: () => cssColor('--paper') }, drag: { x: false, y: false } },
+        cursor: { points: { size: 7, width: 2, fill: () => cssColor('--surface') }, drag: { x: false, y: false } },
         scales: {
           x: { time: true },
           y: {
@@ -272,7 +274,6 @@ export async function mountComparePage() {
     chart?.destroy();
     chart = null;
     chartStart.textContent = '';
-    legend.innerHTML = '';
 
     if (analysis.eligible.length < MIN_FUNDS || period === null) {
       chartMessage.textContent = analysis.eligible.length < MIN_FUNDS ? m.compare_chart_few() : m.compare_chart_none();
@@ -284,7 +285,6 @@ export async function mountComparePage() {
 
     chartMessage.hidden = true;
     chartContainer.hidden = false;
-    renderLegend(analysis);
     drawChart(analysis, period, ranges[period]);
   }
 
@@ -298,7 +298,7 @@ export async function mountComparePage() {
     const lines = (items) => (items.length === 0 ? notInSources : items.map(line).join(''));
 
     return {
-      expense: lines(costs.expenseRatio === null ? [] : [costs.expenseRatio]),
+      expense: lines(costs.expenseRatios),
       minimum: lines(costs.minPurchases),
       fees: lines(costs.fees),
       custodian: lines(costs.custodian === null ? [] : [costs.custodian]),
@@ -309,7 +309,7 @@ export async function mountComparePage() {
     const eligibleById = new Map(analysis?.eligible.map((entry) => [entry.id, entry]));
     const columns = ids.map((id, slot) => {
       const entry = loaded.get(id) ?? { status: 'loading' };
-      const returns = eligibleById.has(id) ? returnsAtCommonEnd(eligibleById.get(id), analysis.commonEnd) : null;
+      const returns = eligibleById.has(id) ? computeReturns(eligibleById.get(id).history, analysis.commonEnd) : null;
 
       return { id, slot, fund: fundsById.get(id), returns, inChart: eligibleById.has(id), ...entry };
     });
@@ -324,8 +324,8 @@ export async function mountComparePage() {
               ? ''
               : `<div class="sub"><span class="tag tag-quiet">${escapeHtml(m.compare_not_in_chart())}</span></div>`;
 
-      return `<th scope="col" class="c-fund">
-        <div class="col-head">${column.inChart ? keyHtml(column.slot) : ''}<a href="${fundHref(column.id)}">${escapeHtml(column.fund.name)}</a><button type="button" class="remove" data-remove="${escapeHtml(column.id)}" aria-label="${escapeHtml(m.compare_remove({ name: column.fund.name }))}">&times;</button></div>
+      return `<th scope="col" class="c-fund"${column.inChart ? ` style="--column-color: var(--series-${column.slot + 1})"` : ''}>
+        <div class="col-head">${typeTile(column.fund)}<a href="${fundHref(column.id)}">${escapeHtml(column.fund.name)}</a><button type="button" class="remove" data-remove="${escapeHtml(column.id)}" aria-label="${escapeHtml(m.compare_remove({ name: column.fund.name }))}">${icon('x', { size: 16 })}</button></div>
         <div class="sub mono">${escapeHtml(column.id)}</div>${state}
       </th>`;
     };
@@ -339,12 +339,22 @@ export async function mountComparePage() {
         return missing;
       }
     };
-    const row = (label, cell, { title = '', className = '' } = {}) => `<tr><th scope="row"${title ? ` title="${escapeHtml(title)}"` : ''}>${escapeHtml(label)}</th>${columns.map((column) => `<td class="${className}">${safeCell(cell, column)}</td>`).join('')}</tr>`;
+    const bestMark = `<span class="best-dot" role="img" aria-label="${escapeHtml(m.compare_best())}" title="${escapeHtml(m.compare_best())}"></span>`;
+    // `best` says how to read a number from a column and whether the highest or the lowest wins the row.
+    const row = (label, cell, { title = '', className = '', best = null } = {}) => {
+      const winners = best ? bestIds(columns.map((column) => ({ id: column.id, value: best.read(column) })), best.prefer) : new Set();
+
+      return `<tr><th scope="row"${title ? ` title="${escapeHtml(title)}"` : ''}>${escapeHtml(label)}</th>${columns.map((column) => `<td class="${className}">${winners.has(column.id) ? bestMark : ''}${safeCell(cell, column)}</td>`).join('')}</tr>`;
+    };
+    // Values that read the same in the table are tied, so the best is judged on what is shown: a return to a tenth of a percent.
+    const roundedTo = (value, decimals) => (value === null ? null : Number(value.toFixed(decimals)));
+    const returnOf = (read) => (column) => roundedTo(column.returns ? (read(column.returns) ?? null) : null, 3);
     const returnCell = (read, format, colored) => (column) => {
-      const value = column.returns ? (read(column.returns) ?? null) : null;
+      const value = returnOf(read)(column);
 
       return value === null ? missing : `<span class="${colored ? changeClass(value) : ''}">${format(value, locale, 1)}</span>`;
     };
+    const expenseRatioOf = (column) => roundedTo(column.status === 'ready' ? (column.record.costs.expense_ratio?.value ?? null) : null, 4);
     const buyOn = (column) =>
       [column.fund.bibit && '<span class="tag">Bibit</span>', column.fund.makmur && '<span class="tag">Makmur</span>'].filter(Boolean).join(' ') || missing;
 
@@ -359,11 +369,11 @@ export async function mountComparePage() {
         ${row(m.compare_row_nav(), (column) => `${formatNav(column.fund.nav, locale)}${column.fund.currency === 'USD' ? ' USD' : ''}<div class="sub">${formatDate(column.fund.nav_date, locale)}</div>`)}
         ${row(m.figure_aum(), (column) => `${formatMoney(column.fund.aum, locale, column.fund.aum_currency)}<div class="sub">${column.fund.aum_date ? formatMonth(column.fund.aum_date, locale) : ''}</div>`)}
         ${analysis?.commonEnd ? group(m.compare_group_returns({ date: formatDate(analysis.commonEnd, locale) })) : ''}
-        ${analysis ? RETURN_PERIODS.map((period) => row(`${m.returns_row_return()} ${periodLabels[period]}`, returnCell((returns) => returns.simplereturn[period], formatChange, true), { className: 'num' })).join('') : ''}
-        ${analysis ? CAGR_PERIODS.map((period) => row(`${m.returns_row_per_year()} ${periodLabels[period]}`, returnCell((returns) => returns.cagr[period], formatChange, true), { title: m.returns_row_per_year_title(), className: 'num' })).join('') : ''}
-        ${analysis ? DRAWDOWN_PERIODS.map((period) => row(`${m.returns_row_worst_fall()} ${periodLabels[period]}`, returnCell((returns) => returns.maxdrawdown[period], formatPercent, false), { title: m.returns_row_worst_fall_title(), className: 'num' })).join('') : ''}
+        ${analysis ? TABLE_PERIODS.map((period) => row(`${m.returns_row_return()} ${periodLabels[period]}`, returnCell((returns) => returns.simplereturn[period], formatChange, true), { className: 'num', best: { read: returnOf((returns) => returns.simplereturn[period]), prefer: 'high' } })).join('') : ''}
+        ${analysis ? CAGR_PERIODS.map((period) => row(`${m.returns_row_per_year()} ${periodLabels[period]}`, returnCell((returns) => returns.cagr[period], formatChange, true), { title: m.returns_row_per_year_title(), className: 'num', best: { read: returnOf((returns) => returns.cagr[period]), prefer: 'high' } })).join('') : ''}
+        ${analysis ? DRAWDOWN_PERIODS.map((period) => row(`${m.returns_row_worst_fall()} ${periodLabels[period]}`, returnCell((returns) => returns.maxdrawdown[period], formatPercent, false), { title: m.returns_row_worst_fall_title(), className: 'num', best: { read: returnOf((returns) => returns.maxdrawdown[period]), prefer: 'high' } })).join('') : ''}
         ${group(m.compare_group_costs())}
-        ${row(m.detail_expense_ratio(), (column) => costRows(column).expense)}
+        ${row(m.detail_expense_ratio(), (column) => costRows(column).expense, { best: { read: expenseRatioOf, prefer: 'low' } })}
         ${row(m.compare_row_min_purchase(), (column) => costRows(column).minimum)}
         ${row(m.compare_row_max_fees(), (column) => costRows(column).fees)}
         ${row(m.detail_custodian(), (column) => costRows(column).custodian)}
@@ -383,11 +393,10 @@ export async function mountComparePage() {
     }
 
     emptyState.hidden = enough;
-    emptyState.innerHTML = enough
-      ? ''
-      : `${m.compare_empty({ link: anchor(localizeHref('/', locale), escapeHtml(m.compare_empty_link())) })}${ids.map((id) => ` <span class="chosen">${escapeHtml(m.compare_selected_one({ name: fundName(id) }))} <button type="button" class="remove" data-remove="${escapeHtml(id)}" aria-label="${escapeHtml(m.compare_remove({ name: fundName(id) }))}">&times;</button></span>`).join('')}`;
+    emptyState.innerHTML = enough ? '' : m.compare_empty({ link: anchor(localizeHref('/', locale), escapeHtml(m.compare_empty_link())) });
     chartSection.hidden = !enough;
     tableSection.hidden = !enough;
+    renderChips();
 
     if (!enough) {
       chart?.destroy();
@@ -424,16 +433,54 @@ export async function mountComparePage() {
     commit();
   }
 
+  function pickButtons() {
+    return [...pickerResults.querySelectorAll('.pick:not(:disabled)')];
+  }
+
   pickerInput.addEventListener('input', renderPicker);
+  pickerInput.addEventListener('focus', renderPicker);
+  pickerInput.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      pickButtons()[0]?.focus();
+    } else if (event.key === 'Enter') {
+      pickButtons()[0]?.click();
+    } else if (event.key === 'Escape') {
+      closePicker();
+    }
+  });
+  pickerResults.addEventListener('keydown', (event) => {
+    const buttons = pickButtons();
+    const index = buttons.indexOf(document.activeElement);
+
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      buttons[Math.min(index + 1, buttons.length - 1)]?.focus();
+    } else if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      (index <= 0 ? pickerInput : buttons[index - 1]).focus();
+    } else if (event.key === 'Escape') {
+      closePicker();
+      pickerInput.focus();
+    }
+  });
   pickerResults.addEventListener('click', (event) => {
     const button = event.target.closest('[data-add]');
 
     if (button) {
       addFund(button.dataset.add);
+      pickerInput.value = '';
+      pickerInput.focus();
+      renderPicker();
+    }
+  });
+  document.addEventListener('click', (event) => {
+    if (!picker.contains(event.target)) {
+      closePicker();
     }
   });
 
-  for (const container of [emptyState, table]) {
+  for (const container of [chips, table]) {
     container.addEventListener('click', (event) => {
       const button = event.target.closest('[data-remove]');
 
@@ -462,7 +509,10 @@ export async function mountComparePage() {
     chart?.setSize({ width: chartContainer.clientWidth, height: chartHeight(CHART_HEIGHT) });
   }).observe(chartContainer);
 
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => chart?.redraw(false));
+  const redrawChart = () => chart?.redraw(false);
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', redrawChart);
+  window.addEventListener('themechange', redrawChart);
 
   commit();
 }

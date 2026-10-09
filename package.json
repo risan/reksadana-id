@@ -13,6 +13,12 @@
     "scrape:makmur": "node scrapers/makmur.js",
     "scrape:bareksa": "node scrapers/bareksa.js",
     "scrape:bareksa:profiles": "node scrapers/bareksa.js --profiles",
+    "scrape:bareksa:nav": "node scrapers/bareksa.js --nav",
+    "scrape:bareksa:nav:all": "node scrapers/bareksa.js --nav-all",
+    "scrape:benchmarks": "node scrapers/benchmarks.js",
+    "scrape:macro": "node scrapers/macro.js",
+    "scrape:ojk": "node scrapers/ojk.js",
+    "sync:bareksa-nav": "node scripts/bareksa-nav-sync.js",
     "link": "node scripts/link-funds.js",
     "pretest": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide --strategy globalVariable baseLocale --silent",
     "test": "node --test scrapers/*.test.js scripts/*.test.js src/*.test.js src/lib/*.test.js",
@@ -22,14 +28,14 @@
   },
   "dependencies": {
     "@fontsource-variable/newsreader": "^5.3.0",
-    "@fontsource-variable/schibsted-grotesk": "^5.3.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
     "@fontsource/spline-sans-mono": "^5.3.0",
-    "@inlang/paraglide-js": "^2.25.4",
-    "astro": "^7.3.5",
+    "@inlang/paraglide-js": "^2.26.0",
+    "astro": "^7.3.8",
     "fflate": "^0.8.3",
     "uplot": "^1.6.32"
   },
   "devDependencies": {
-    "wrangler": "^4.145.0"
+    "wrangler": "^4.149.0"
   }
 }
