@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { HttpError, createTextFetcher, matchBibitSymbols, mergeRowsByDate, reportFailures, stopAfterForbidden } from './lib.js';
+import { HttpError, createTextFetcher, matchBibitSymbols, mergeRowsByDate, reportFailures, stopAfterForbidden, withRetries } from './lib.js';
 
 const bibitRows = [['RD1', 'Alpha Fund', '', 'AAA Asset Management, PT']];
 
@@ -207,4 +207,16 @@ test('a new row replaces the stored row of its date, keeps older rows, and never
   const added = [['2026-01-03', '4', ''], ['2026-01-02', '2', 'y']];
 
   assert.deepEqual(mergeRowsByDate(stored, added), [['2026-01-01', '1', 'x'], ['2026-01-02', '2', 'y'], ['2026-01-03', '4', 'z']]);
+});
+
+test('an error marked as not retryable is thrown at once', async () => {
+  let attempts = 0;
+  const error = Object.assign(new Error('logged out'), { retryable: false });
+
+  await assert.rejects(withRetries(async () => {
+    attempts++;
+
+    throw error;
+  }), /logged out/);
+  assert.equal(attempts, 1);
 });

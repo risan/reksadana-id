@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { CookieError, assertCookieIsValid, fetchProfile, fetchRecentNavRows, navPeriodFor, mergeRowsByDate, parseAllocationRows, parseAumRows, parseFundList, parseFundPage, parseNavRows, parseUnitsRows } from './bareksa.js';
+import { CookieError, assertCookieIsValid, fetchProfile, fetchRecentNavRows, navPeriodFor, parseAllocationRows, parseAumRows, parseFundList, parseFundPage, parseNavRows, parseUnitsRows } from './bareksa.js';
 
 // Built from the response shapes Bareksa sends for a logged-in and an anonymous request.
 const LOGGED_IN_NAV = {
@@ -223,14 +223,6 @@ test('parseFundPage keeps an explicit zero fee, and an amount in another currenc
   assert.equal(fund.feeRedemption, '');
 });
 
-test('mergeRowsByDate corrects a whole row, and keeps a stored value that the new row leaves empty', () => {
-  const stored = [['2026-01-01', '100', ''], ['2026-02-01', '5', '7']];
-
-  assert.deepEqual(mergeRowsByDate(stored, [['2026-01-01', '120', '']]), [['2026-01-01', '120', ''], ['2026-02-01', '5', '7']]);
-  assert.deepEqual(mergeRowsByDate(stored, [['2026-02-01', '6', '']]), [['2026-01-01', '100', ''], ['2026-02-01', '6', '7']]);
-  assert.deepEqual(mergeRowsByDate(stored, [['2026-03-01', '', '']]), [...stored, ['2026-03-01', '', '']]);
-});
-
 test('a 200 page without a profile table is fetched again, and a good page is stamped with today', async (t) => {
   const pages = ['<html><title>Please wait</title></html>', readFixture('fund-440.html')];
   const fetchMock = t.mock.method(globalThis, 'fetch', async () => new Response(pages.shift()));
@@ -275,4 +267,8 @@ test('an answer without a NAV list is asked again, and the last month is asked w
   assert.equal(fetchMock.mock.callCount(), 2);
   assert.match(String(fetchMock.mock.calls[0].arguments[0]), /cperiod=1m/);
   assert.equal(fetchMock.mock.calls[0].arguments[1].headers.Cookie, undefined);
+});
+
+test('a login refusal is not retried', () => {
+  assert.equal(new CookieError().retryable, false);
 });

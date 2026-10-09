@@ -12,13 +12,13 @@ export class HttpError extends Error {
   }
 }
 
-// Timeouts, dropped connections, and truncated bodies are worth a retry too.
+// Timeouts, dropped connections, and truncated bodies are worth a retry too. An error with `retryable = false` is not.
 export const withRetries = async (task) => {
   for (let attempt = 1; ; attempt++) {
     try {
       return await task();
     } catch (error) {
-      const retryable = !(error instanceof HttpError) || error.status === 429 || error.status >= 500;
+      const retryable = error.retryable !== false && (!(error instanceof HttpError) || error.status === 429 || error.status >= 500);
 
       if (!retryable || attempt === MAX_ATTEMPTS) {
         throw error;

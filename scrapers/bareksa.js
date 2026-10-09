@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { HttpError, decodeHtml, matchBibitSymbols, readCsvRows, reportFailures, reportMatches, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
+import { HttpError, decodeHtml, matchBibitSymbols, mergeRowsByDate, readCsvRows, reportFailures, reportMatches, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
 
 const BASE_URL = 'https://www.bareksa.com';
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'bareksa');
@@ -15,6 +15,8 @@ const PROFILES_PER_RUN = 400;
 // The NAV endpoint answers without a login for the last month and the last year; longer periods need one.
 const NAV_MONTH_MAX_AGE_DAYS = 25;
 const RECENT_NAV_MAX_AGE_DAYS = 60;
+// Bareksa answers an empty list for a fund that has a NAV when it is struggling; a few empty funds are real.
+const MAX_EMPTY_MONTH_SHARE = 0.2;
 const DAY_IN_MS = 24 * 60 * 60 * 1000;
 const FUND_HEADER = [
   'bareksa_id', 'name', 'slug', 'type', 'manager', 'launch_date', 'bibit_symbol',
@@ -45,6 +47,7 @@ let requestCount = 0;
 export class CookieError extends Error {
   constructor() {
     super('BAREKSA_COOKIE missing or expired: Bareksa did not accept the login for the NAV history');
+    this.retryable = false;
   }
 }
 
@@ -305,20 +308,6 @@ const writeFundIndex = async (funds, bibitRows) => {
   return symbolsById;
 };
 
-// A new row replaces the stored row of the same date, column by column. A missing value in a new row
-// never erases the stored value of that column.
-export const mergeRowsByDate = (storedRows, newRows) => {
-  const rowsByDate = new Map(storedRows.map((row) => [row[0], row]));
-
-  for (const row of newRows) {
-    const storedRow = rowsByDate.get(row[0]);
-
-    rowsByDate.set(row[0], storedRow ? row.map((value, column) => (value === '' ? storedRow[column] ?? '' : value)) : row);
-  }
-
-  return [...rowsByDate.values()].sort((a, b) => a[0].localeCompare(b[0]));
-};
-
 // New rows replace stored ones on the same date. Returns how many rows the file holds.
 const updateSeries = async (directory, header, id, fetchRows) => {
   const file = path.join(DATA_DIR, directory, `${id}.csv`);
@@ -446,6 +435,7 @@ const mainNav = async ({ all }) => {
   console.log(`NAV: ${queue.length} of ${funds.size} funds (${queue.filter(({ period }) => period === '1m').length} for the last month)`);
 
   let addedRows = 0;
+  let emptyMonthCount = 0;
 
   const failures = await runPool({
     items: queue,
@@ -455,7 +445,15 @@ const mainNav = async ({ all }) => {
       }
 
       try {
-        const rowCount = await updateSeries('nav', NAV_HEADER, id, () => fetchRecentNavRows(id, period));
+        const rowCount = await updateSeries('nav', NAV_HEADER, id, async () => {
+          const rows = await fetchRecentNavRows(id, period);
+
+          if (period === '1m' && rows.length === 0) {
+            emptyMonthCount++;
+          }
+
+          return rows;
+        });
 
         addedRows += rowCount - storedCount;
       } catch (error) {
@@ -476,6 +474,12 @@ const mainNav = async ({ all }) => {
   if (loggedOutError) {
     console.error(`Bareksa asked for a login even for the last month or year: ${loggedOutError.message}`);
     process.exitCode = 1;
+  }
+
+  const monthCount = queue.filter(({ period }) => period === '1m').length;
+
+  if (emptyMonthCount > monthCount * MAX_EMPTY_MONTH_SHARE) {
+    console.log(`::warning::${emptyMonthCount} of ${monthCount} funds with a recent NAV got no rows for the last month; Bareksa may be answering empty lists`);
   }
 
   reportFailures(failures, queue.length);

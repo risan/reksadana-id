@@ -8,8 +8,8 @@
 import fs from 'node:fs/promises';
 import http from 'node:http';
 import path from 'node:path';
-import { CookieError, NAV_HEADER, mergeRowsByDate, parseNavRows } from '../scrapers/bareksa.js';
-import { readCsvRecords, readCsvRows, toCsv, writeFileAtomic } from '../scrapers/lib.js';
+import { CookieError, NAV_HEADER, parseNavRows } from '../scrapers/bareksa.js';
+import { mergeRowsByDate, readCsvRecords, readCsvRows, toCsv, writeFileAtomic } from '../scrapers/lib.js';
 
 const PORT = 8787;
 const RECEIVER_ORIGIN = `http://127.0.0.1:${PORT}`;
@@ -191,11 +191,40 @@ const sendJson = (response, status, body) => {
   response.end(JSON.stringify(body));
 };
 
+// Any web page can send a request to localhost, and a text/plain POST needs no permission from the browser. So a
+// request is served only for the receiver's own host name (against DNS rebinding), and a save only from the
+// receiver's own page, as JSON.
+export const rejectionFor = ({ method, url, headers }) => {
+  if (headers.host !== `127.0.0.1:${PORT}`) {
+    return 'Wrong host';
+  }
+
+  if (method === 'POST' && url === '/save') {
+    if (headers.origin !== RECEIVER_ORIGIN) {
+      return 'Wrong origin';
+    }
+
+    if (!headers['content-type']?.startsWith('application/json')) {
+      return 'Body must be JSON';
+    }
+  }
+
+  return null;
+};
+
 let savedCount = 0;
 let addedRows = 0;
 
 const server = http.createServer(async (request, response) => {
   try {
+    const rejection = rejectionFor(request);
+
+    if (rejection) {
+      sendJson(response, 403, { error: rejection });
+
+      return;
+    }
+
     if (request.method === 'GET' && request.url === '/') {
       response.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
       response.end(RECEIVER_PAGE);
@@ -239,15 +268,17 @@ const server = http.createServer(async (request, response) => {
   }
 });
 
-await fs.mkdir(NAV_DIR, { recursive: true });
+if (process.argv[1] === import.meta.filename) {
+  await fs.mkdir(NAV_DIR, { recursive: true });
 
-server.listen(PORT, '127.0.0.1', () => {
-  console.log(`Receiver ready on ${RECEIVER_ORIGIN}. Paste this into the console of a logged-in bareksa.com tab, then click its button:\n`);
-  console.log(BROWSER_SNIPPET);
-  console.log('\nPress Ctrl+C when the button says "done".');
-});
+  server.listen(PORT, '127.0.0.1', () => {
+    console.log(`Receiver ready on ${RECEIVER_ORIGIN}. Paste this into the console of a logged-in bareksa.com tab, then click its button:\n`);
+    console.log(BROWSER_SNIPPET);
+    console.log('\nPress Ctrl+C when the button says "done".');
+  });
 
-process.on('SIGINT', () => {
-  console.log(`\n${savedCount} funds saved, ${addedRows} new rows.`);
-  process.exit(0);
-});
+  process.on('SIGINT', () => {
+    console.log(`\n${savedCount} funds saved, ${addedRows} new rows.`);
+    process.exit(0);
+  });
+}
