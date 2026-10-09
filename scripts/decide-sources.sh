@@ -6,7 +6,7 @@
 set -euo pipefail
 
 requested="${1:-}"
-# The cron fires at 23:00 UTC, but a queued run can start after midnight. A run before noon UTC
+# The cron fires at 22:17 UTC, but GitHub can start a run hours late, even after midnight. A run before noon UTC
 # belongs to the previous evening, so the day is taken 12 hours back.
 run_day=$(date -u -d "$(date -u -d "${2:-now}" +%Y-%m-%dT%H:%M:%SZ) - 12 hours" +%Y-%m-%d)
 weekday=$(date -u -d "$run_day" +%u)
@@ -28,7 +28,7 @@ case "$requested" in
   bareksa-profiles) bareksa_profiles=true ;;
   all) bibit=true; kontan=true; makmur=true; bareksa=true; bareksa_profiles=true ;;
   "")
-    # The run starts at 23:00 UTC, so Saturday here is Sunday morning in Jakarta.
+    # The run starts in the evening UTC, so Saturday here is Sunday morning in Jakarta.
     bibit=true
     bareksa_profiles=true
 
