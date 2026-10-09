@@ -29,7 +29,7 @@ const AUM_HEADER = ['date', 'aum_idr', 'aum_usd'];
 const UNITS_HEADER = ['date', 'units'];
 // Bareksa's allocation chart (drawAlokasiDana in its chart.js) names these columns in this order.
 const ALLOCATION_HEADER = ['date', 'saham', 'obligasi', 'pasar_uang', 'lainnya'];
-const NAV_HEADER = ['date', 'nav'];
+export const NAV_HEADER = ['date', 'nav'];
 
 const INDONESIAN_MONTHS = ['januari', 'februari', 'maret', 'april', 'mei', 'juni', 'juli', 'agustus', 'september', 'oktober', 'november', 'desember'];
 
