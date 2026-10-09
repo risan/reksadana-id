@@ -29,6 +29,30 @@ export const withRetries = async (task) => {
   }
 };
 
+// A GET that retries, waits `delayMs` after every request, and returns the body text. Each source brings its own
+// headers and limits.
+export const createTextFetcher = ({ headers, timeoutMs, delayMs }) => {
+  let requestCount = 0;
+
+  const fetchText = (url) => withRetries(async () => {
+    requestCount++;
+
+    try {
+      const response = await fetch(url, { headers, signal: AbortSignal.timeout(timeoutMs) });
+
+      if (!response.ok) {
+        throw new HttpError(url, response.status, response.statusText);
+      }
+
+      return await response.text();
+    } finally {
+      await sleep(delayMs);
+    }
+  });
+
+  return { fetchText, getRequestCount: () => requestCount };
+};
+
 // Write to a temporary file first, so an interrupted run never leaves a half-written file.
 export const writeFileAtomic = async (file, text) => {
   const temporaryFile = `${file}.tmp`;
@@ -147,6 +171,51 @@ export const runPool = async ({ items, worker, concurrency, label, describeItem 
   await Promise.all(Array.from({ length: concurrency }, runWorker));
 
   return failures;
+};
+
+// Wraps a worker so it stops taking work once `limit` calls in a row were refused with HTTP 403.
+// A site that blocks this network refuses every request, so asking on would only waste the run.
+export const stopAfterForbidden = (worker, limit) => {
+  let forbiddenInARow = 0;
+
+  const guardedWorker = async (item) => {
+    if (forbiddenInARow >= limit) {
+      return;
+    }
+
+    try {
+      await worker(item);
+      forbiddenInARow = 0;
+    } catch (error) {
+      forbiddenInARow = error instanceof HttpError && error.status === 403 ? forbiddenInARow + 1 : 0;
+
+      throw error;
+    }
+  };
+
+  return { worker: guardedWorker, hasStopped: () => forbiddenInARow >= limit };
+};
+
+const FAILURE_TOLERANCE = 0.05;
+
+// A few transient failures are retried by the next run, so they only warn. The run fails
+// when more than 5% of the attempted funds failed, which means something real is wrong.
+export const reportFailures = (failures, attemptedCount) => {
+  if (failures.length === 0) {
+    return;
+  }
+
+  const summary = `${failures.length} of ${attemptedCount} funds failed`;
+
+  if (failures.length > attemptedCount * FAILURE_TOLERANCE) {
+    console.error(`${summary}:\n${failures.join('\n')}`);
+    process.exitCode = 1;
+
+    return;
+  }
+
+  console.log(`::warning::${summary}; they are retried next run`);
+  console.log(failures.join('\n'));
 };
 
 export const decodeHtml = (text) => text

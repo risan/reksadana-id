@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { HttpError, decodeHtml, matchBibitSymbols, readCsvRows, reportMatches, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
+import { HttpError, createTextFetcher, decodeHtml, matchBibitSymbols, readCsvRows, reportFailures, reportMatches, runPool, stopAfterForbidden, toCsv, writeFileAtomic } from './lib.js';
 
 const BASE_URL = 'https://pusatdata.kontan.co.id';
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'kontan');
@@ -17,30 +17,35 @@ const NAV_HEADER = ['date', 'nav'];
 const FIRST_SCAN_END_ID = 18000;
 const LOOKAHEAD_IDS = 500;
 const SCAN_CHUNK_SIZE = 1000;
+const MAX_FORBIDDEN_IN_A_ROW = 25;
+const PROBE_ID = 8;
 
-let requestCount = 0;
+const { fetchText, getRequestCount } = createTextFetcher({
+  headers: {
+    Accept: 'text/html',
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) reksadana-id-scraper',
+  },
+  timeoutMs: REQUEST_TIMEOUT_MS,
+  delayMs: REQUEST_DELAY_MS,
+});
 
-const fetchText = (url) => withRetries(async () => {
-  requestCount++;
+const chartUrl = (id) => `${BASE_URL}/reksadana/get_chart_product/?produk_id=${id}&select=nab&periode=12&start_date=&end_date=`;
 
+// GitHub's runners get HTTP 403 for every request, while a home connection works. Any other error means
+// Kontan itself has a problem, which the run should not hide.
+export const isBlockedByKontan = async (probeId) => {
   try {
-    const response = await fetch(url, {
-      headers: {
-        Accept: 'text/html',
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) reksadana-id-scraper',
-      },
-      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
-    });
+    await fetchText(chartUrl(probeId));
 
-    if (!response.ok) {
-      throw new HttpError(url, response.status, response.statusText);
+    return false;
+  } catch (error) {
+    if (error instanceof HttpError && error.status === 403) {
+      return true;
     }
 
-    return await response.text();
-  } finally {
-    await sleep(REQUEST_DELAY_MS);
+    throw error;
   }
-});
+};
 
 // The chart endpoint answers with a page whose inline script declares two arrays and pushes every point
 // into them. An unknown fund ID gives the same page with no pushes. A page without the declarations is
@@ -122,6 +127,13 @@ const writeFundIndex = async (funds, bibitRows) => {
 
 const main = async () => {
   const startedAt = Date.now();
+
+  if (await isBlockedByKontan(PROBE_ID)) {
+    console.log('::warning::Kontan refuses requests from this network (it blocks GitHub-hosted runners), so it was skipped and no data changed. Run `npm run scrape:kontan` from a home connection instead.');
+
+    return;
+  }
+
   const funds = await readStoredFunds();
   const isFullScan = funds.size === 0 || process.argv.includes('--full');
   const conflictingIds = [];
@@ -134,8 +146,7 @@ const main = async () => {
   // New values replace stored ones on the same date; older stored rows are kept,
   // so the history grows past the 12 months Kontan serves.
   const scrapeFund = async (id) => {
-    const chartUrl = `${BASE_URL}/reksadana/get_chart_product/?produk_id=${id}&select=nab&periode=12&start_date=&end_date=`;
-    const { rows, hasConflict } = parseChart(await fetchText(chartUrl));
+    const { rows, hasConflict } = parseChart(await fetchText(chartUrl(id)));
 
     if (rows.length === 0) {
       return;
@@ -162,24 +173,31 @@ const main = async () => {
     }
   };
 
+  // A block that starts in the middle of a run refuses every later request too.
+  const { worker: scrapeFundUnlessBlocked, hasStopped: isBlocked } = stopAfterForbidden(scrapeFund, MAX_FORBIDDEN_IN_A_ROW);
+
   const scrapeAll = async (ids, label) => {
     failures.push(...await runPool({
       items: ids,
-      worker: scrapeFund,
+      worker: scrapeFundUnlessBlocked,
       concurrency: CONCURRENCY,
       label,
       describeItem: (id) => `Kontan ${id}`,
     }));
   };
 
-  await scrapeAll([...funds.keys()], 'Known funds scraped');
+  const knownIds = [...funds.keys()];
+  let attemptedCount = knownIds.length;
+
+  await scrapeAll(knownIds, 'Known funds scraped');
 
   const scanEndId = () => Math.max(highestId() + LOOKAHEAD_IDS, isFullScan ? FIRST_SCAN_END_ID : 0);
 
-  for (let fromId = isFullScan ? 1 : highestId() + 1; fromId <= scanEndId(); fromId += SCAN_CHUNK_SIZE) {
+  for (let fromId = isFullScan ? 1 : highestId() + 1; fromId <= scanEndId() && !isBlocked(); fromId += SCAN_CHUNK_SIZE) {
     const toId = Math.min(fromId + SCAN_CHUNK_SIZE - 1, scanEndId());
     const ids = Array.from({ length: toId - fromId + 1 }, (_, index) => fromId + index).filter((id) => !funds.has(id));
 
+    attemptedCount += ids.length;
     await scrapeAll(ids, `New IDs ${fromId}-${toId} scanned`);
   }
 
@@ -192,12 +210,14 @@ const main = async () => {
     console.log(`Skipped ${conflictingIds.length} funds with two different NAVs on one date: ${conflictingIds.sort((a, b) => a - b).join(', ')}`);
   }
 
-  console.log(`${requestCount} requests in ${Math.round((Date.now() - startedAt) / 1000)} seconds`);
+  console.log(`${getRequestCount()} requests in ${Math.round((Date.now() - startedAt) / 1000)} seconds`);
 
-  if (failures.length > 0) {
-    console.error(`${failures.length} funds failed:\n${failures.join('\n')}`);
+  if (isBlocked()) {
+    console.error(`Kontan refused ${MAX_FORBIDDEN_IN_A_ROW} requests in a row with HTTP 403, so the run stopped early`);
     process.exitCode = 1;
   }
+
+  reportFailures(failures, attemptedCount);
 };
 
 if (process.argv[1] === import.meta.filename) {

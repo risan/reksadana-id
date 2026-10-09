@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { HttpError, matchBibitSymbols, readCsvRows, reportMatches, runPool, sleep, toCsv, withRetries, writeFileAtomic } from './lib.js';
+import { createTextFetcher, matchBibitSymbols, readCsvRows, reportFailures, reportMatches, runPool, toCsv, writeFileAtomic } from './lib.js';
 
 const BASE_URL = 'https://www.makmur.id';
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'makmur');
@@ -10,28 +10,13 @@ const REQUEST_DELAY_MS = 200;
 const REQUEST_TIMEOUT_MS = 30 * 1000;
 const FUND_HEADER = ['makmur_id', 'name', 'manager', 'category', 'route_category', 'url', 'currency', 'last_price', 'as_of', 'last_aum', 'inception_date', 'bibit_symbol'];
 
-let requestCount = 0;
-
-const fetchText = (url) => withRetries(async () => {
-  requestCount++;
-
-  try {
-    const response = await fetch(url, {
-      headers: {
-        Accept: 'text/html,application/xml',
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) reksadana-id-scraper',
-      },
-      signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
-    });
-
-    if (!response.ok) {
-      throw new HttpError(url, response.status, response.statusText);
-    }
-
-    return await response.text();
-  } finally {
-    await sleep(REQUEST_DELAY_MS);
-  }
+const { fetchText, getRequestCount } = createTextFetcher({
+  headers: {
+    Accept: 'text/html,application/xml',
+    'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) reksadana-id-scraper',
+  },
+  timeoutMs: REQUEST_TIMEOUT_MS,
+  delayMs: REQUEST_DELAY_MS,
 });
 
 const parseSitemapUrls = (xml) => [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/g)].map((match) => match[1]);
@@ -147,19 +132,16 @@ const main = async () => {
   });
 
   const bibitRows = await readCsvRows(BIBIT_FUNDS_FILE);
-  const sortedRows = [...keepFundsOfFailedPages(rowsById, storedRowsById, failedPageUrls).values()].sort((a, b) => a[1].localeCompare(b[1]) || a[0].localeCompare(b[0]));
+  const sortedRows = [...keepFundsOfFailedPages(rowsById, storedRowsById, failedPageUrls).values()].sort((a, b) => a[1].localeCompare(b[1], 'en') || a[0].localeCompare(b[0]));
   const symbolsById = matchBibitSymbols('makmur', sortedRows.map((row) => [row[0], { name: row[1], manager: row[2] }]), bibitRows);
   const rows = sortedRows.map((row) => [...row.slice(0, -1), symbolsById.get(row[0])]);
 
   await writeFileAtomic(path.join(DATA_DIR, 'funds.csv'), toCsv(FUND_HEADER, rows));
 
   reportMatches('Makmur', rows.length, symbolsById, bibitRows);
-  console.log(`${requestCount} requests in ${Math.round((Date.now() - startedAt) / 1000)} seconds`);
+  console.log(`${getRequestCount()} requests in ${Math.round((Date.now() - startedAt) / 1000)} seconds`);
 
-  if (failures.length > 0) {
-    console.error(`${failures.length} funds failed:\n${failures.join('\n')}`);
-    process.exitCode = 1;
-  }
+  reportFailures(failures, pageUrls.length);
 };
 
 if (process.argv[1] === import.meta.filename) {

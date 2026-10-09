@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 import test from 'node:test';
-import { CookieError, assertCookieIsValid, mergeRowsByDate, parseAllocationRows, parseAumRows, parseFundList, parseFundPage, parseNavRows, parseUnitsRows } from './bareksa.js';
+import { CookieError, assertCookieIsValid, fetchProfile, mergeRowsByDate, parseAllocationRows, parseAumRows, parseFundList, parseFundPage, parseNavRows, parseUnitsRows } from './bareksa.js';
 
 // Built from the response shapes Bareksa sends for a logged-in and an anonymous request.
 const LOGGED_IN_NAV = {
@@ -229,4 +229,19 @@ test('mergeRowsByDate corrects a whole row, and keeps a stored value that the ne
   assert.deepEqual(mergeRowsByDate(stored, [['2026-01-01', '120', '']]), [['2026-01-01', '120', ''], ['2026-02-01', '5', '7']]);
   assert.deepEqual(mergeRowsByDate(stored, [['2026-02-01', '6', '']]), [['2026-01-01', '100', ''], ['2026-02-01', '6', '7']]);
   assert.deepEqual(mergeRowsByDate(stored, [['2026-03-01', '', '']]), [...stored, ['2026-03-01', '', '']]);
+});
+
+test('a 200 page without a profile table is fetched again, and a good page is stamped with today', async (t) => {
+  const pages = ['<html><title>Please wait</title></html>', readFixture('fund-440.html')];
+  const fetchMock = t.mock.method(globalThis, 'fetch', async () => new Response(pages.shift()));
+
+  const profile = await fetchProfile({ id: 440, slug: 'x' });
+
+  assert.equal(fetchMock.mock.callCount(), 2);
+  assert.equal(profile.profileDate, new Date().toISOString().slice(0, 10));
+  assert.equal(profile.type, parseFundPage(readFixture('fund-440.html')).type);
+});
+
+test('the profile error says what came back instead', () => {
+  assert.throws(() => parseFundPage('<html><title>Please wait</title></html>'), /no profile table \(\d+ characters, title "Please wait"\)/);
 });

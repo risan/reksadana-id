@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { matchBibitSymbols } from './lib.js';
+import { HttpError, createTextFetcher, matchBibitSymbols, reportFailures, stopAfterForbidden } from './lib.js';
 
 const bibitRows = [['RD1', 'Alpha Fund', '', 'AAA Asset Management, PT']];
 
@@ -114,4 +114,90 @@ test('Kelas A is not dropped when two Bibit funds have the name without it', () 
 test('a fund without a manager does not match and does not throw', () => {
   assert.equal(matchOne({ name: 'Alpha Fund', manager: undefined }), undefined);
   assert.equal(matchOne({ name: 'Alpha Fund Kelas A', manager: null }), undefined);
+});
+
+const forbidden = () => new HttpError('https://example.test', 403, 'Forbidden');
+
+test('stopAfterForbidden stops taking work after the limit of 403s in a row', async () => {
+  const attempted = [];
+  const { worker, hasStopped } = stopAfterForbidden(async (item) => {
+    attempted.push(item);
+
+    throw forbidden();
+  }, 3);
+
+  for (const item of [1, 2, 3, 4, 5]) {
+    await worker(item).catch(() => {});
+  }
+
+  assert.deepEqual(attempted, [1, 2, 3]);
+  assert.equal(hasStopped(), true);
+});
+
+test('stopAfterForbidden starts counting again after a success or another error', async () => {
+  const outcomes = [forbidden(), forbidden(), null, forbidden(), new Error('timeout'), forbidden(), forbidden()];
+  const { worker, hasStopped } = stopAfterForbidden(async (index) => {
+    if (outcomes[index]) {
+      throw outcomes[index];
+    }
+  }, 3);
+
+  for (const index of outcomes.keys()) {
+    await worker(index).catch(() => {});
+  }
+
+  assert.equal(hasStopped(), false);
+});
+
+test('a text fetcher gives the body, counts requests, and throws HttpError without retrying a 403', async (t) => {
+  const responses = [new Response('hello'), new Response('no', { status: 403, statusText: 'Forbidden' })];
+  const fetchMock = t.mock.method(globalThis, 'fetch', async () => responses.shift());
+  const { fetchText, getRequestCount } = createTextFetcher({ headers: { Accept: 'text/html' }, timeoutMs: 1000, delayMs: 0 });
+
+  assert.equal(await fetchText('https://example.test/a'), 'hello');
+  await assert.rejects(fetchText('https://example.test/b'), (error) => error instanceof HttpError && error.status === 403);
+  assert.equal(getRequestCount(), 2);
+  assert.deepEqual(fetchMock.mock.calls[0].arguments[1].headers, { Accept: 'text/html' });
+});
+
+const withLoggedOutput = (t) => {
+  const logged = { log: [], error: [] };
+
+  t.mock.method(console, 'log', (message) => logged.log.push(message));
+  t.mock.method(console, 'error', (message) => logged.error.push(message));
+  t.after(() => {
+    process.exitCode = undefined;
+  });
+
+  return logged;
+};
+
+test('a few failures only warn, and the run stays green', (t) => {
+  const logged = withLoggedOutput(t);
+
+  reportFailures(['Fund 1: boom', 'Fund 2: boom'], 100);
+
+  assert.equal(process.exitCode, undefined);
+  assert.match(logged.log[0], /^::warning::2 of 100 funds failed/);
+  assert.match(logged.log[1], /Fund 1: boom\nFund 2: boom/);
+  assert.deepEqual(logged.error, []);
+});
+
+test('more than 5% failures fail the run', (t) => {
+  const logged = withLoggedOutput(t);
+
+  reportFailures(Array.from({ length: 6 }, (_, index) => `Fund ${index}: boom`), 100);
+
+  assert.equal(process.exitCode, 1);
+  assert.match(logged.error[0], /^6 of 100 funds failed:/);
+});
+
+test('exactly 5% failures still only warn, and no failures print nothing', (t) => {
+  const logged = withLoggedOutput(t);
+
+  reportFailures(Array.from({ length: 5 }, (_, index) => `Fund ${index}: boom`), 100);
+  reportFailures([], 100);
+
+  assert.equal(process.exitCode, undefined);
+  assert.equal(logged.log.length, 2);
 });
