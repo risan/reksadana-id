@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { matchBibitSymbols } from './lib.js';
+import { matchBibitSymbols, mergeRowsByDate } from './lib.js';
 
 const bibitRows = [['RD1', 'Alpha Fund', '', 'AAA Asset Management, PT']];
 
@@ -114,4 +114,11 @@ test('Kelas A is not dropped when two Bibit funds have the name without it', () 
 test('a fund without a manager does not match and does not throw', () => {
   assert.equal(matchOne({ name: 'Alpha Fund', manager: undefined }), undefined);
   assert.equal(matchOne({ name: 'Alpha Fund Kelas A', manager: null }), undefined);
+});
+
+test('a new row replaces the stored row of its date, keeps older rows, and never erases a stored value with an empty one', () => {
+  const stored = [['2026-01-01', '1', 'x'], ['2026-01-03', '3', 'z']];
+  const added = [['2026-01-03', '4', ''], ['2026-01-02', '2', 'y']];
+
+  assert.deepEqual(mergeRowsByDate(stored, added), [['2026-01-01', '1', 'x'], ['2026-01-02', '2', 'y'], ['2026-01-03', '4', 'z']]);
 });

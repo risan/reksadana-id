@@ -119,6 +119,20 @@ export const readCsvRecords = async (file) => {
   }
 };
 
+// A new row replaces the stored row of the same date, column by column. A missing value in a new row
+// never erases the stored value of that column.
+export const mergeRowsByDate = (storedRows, newRows) => {
+  const rowsByDate = new Map(storedRows.map((row) => [row[0], row]));
+
+  for (const row of newRows) {
+    const storedRow = rowsByDate.get(row[0]);
+
+    rowsByDate.set(row[0], storedRow ? row.map((value, column) => (value === '' ? storedRow[column] ?? '' : value)) : row);
+  }
+
+  return [...rowsByDate.values()].sort((a, b) => a[0].localeCompare(b[0]));
+};
+
 // Runs `worker` over `items` with a fixed number of parallel workers.
 // Returns one message per item that threw, so one bad item never stops the run.
 export const runPool = async ({ items, worker, concurrency, label, describeItem }) => {
