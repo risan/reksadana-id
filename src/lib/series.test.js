@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { computeReturns, dividendEvents, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, withDividendsReinvested } from './series.js';
+import { computeReturns, periodStartIndex, dividendEvents, largeMoves, periodStartDate, pickAumHistory, pickNavHistory, withDividendsReinvested } from './series.js';
 
 function dailyRows(startDate, values) {
   const start = Date.parse(`${startDate}T00:00:00Z`);
@@ -525,4 +525,19 @@ test('on a day Bareksa and Kontan both have after the primary history, the four-
 
   assert.equal(history.points.at(-1).value, 2.0638);
   assert.equal(history.points.at(-1).source, 'bareksa');
+});
+
+test('a total-return history can start later and be shorter than the NAV history, so a chart must use its own dates', () => {
+  const fund = {
+    nav: adjustedRows('2026-01-10', [100, 100, 90, 90], [1, 1, 1.1, 1.1]),
+    bareksa: { nav: plainRows('2026-01-01', [85, 85, 85, 85, 85, 85, 85, 85, 85, 100, 100, 90, 90]), aum: [], units: [] },
+  };
+  const history = pickNavHistory(fund);
+  const total = withDividendsReinvested(history, dividendEvents(fund, history));
+
+  assert.equal(history.points.length, 13);
+  assert.equal(total.points.length, 4);
+  assert.notEqual(total.points[0].date, history.points[0].date);
+  // The 1y range exists on neither, but "all" starts at the first point of the history that is drawn.
+  assert.equal(periodStartIndex(total, 'all'), 0);
 });

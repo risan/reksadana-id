@@ -313,9 +313,17 @@ export async function mountFundCharts(symbol, includeToggle) {
     }
   }
 
-  if (navChart) {
+  // A range is offered only when the history being drawn reaches back that far.
+  const disableUnavailableRanges = () => {
     for (const button of rangeButtons) {
       button.disabled = periodStartIndex(history, RANGE_PERIODS[button.dataset.range]) < 0;
+    }
+  };
+
+  if (navChart) {
+    disableUnavailableRanges();
+
+    for (const button of rangeButtons) {
       button.addEventListener('click', () => applyRange(button.dataset.range));
     }
 
@@ -356,12 +364,15 @@ export async function mountFundCharts(symbol, includeToggle) {
       });
     }
 
-    // Both histories share their dates, so the range buttons and the x axis stay as they are.
+    // The total return starts where the primary history does, which can be later than the NAV history, so it
+    // brings its own dates and its own ranges.
     includeToggle?.addEventListener('change', () => {
       history = chosenHistory();
       points = history.points;
+      data[0] = points.map((point) => toSeconds(point.date));
       data[1] = points.map((point) => point.value);
-      applyRange(range);
+      disableUnavailableRanges();
+      applyRange(periodStartIndex(history, RANGE_PERIODS[range]) < 0 ? 'All' : range);
     });
   }
 
