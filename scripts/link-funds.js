@@ -735,6 +735,9 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
       entry.current_id = entry.id;
     } else if (record) {
       entry.current_id = fundIdByKey.get(record.key);
+    } else if (aliases[recordKeyOfId(entry.id)] === EXCLUDED && entry.current_id === entry.id) {
+      // A published ID whose record is now excluded has no fund to redirect to.
+      entry.current_id = '';
     }
   }
 

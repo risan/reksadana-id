@@ -798,3 +798,13 @@ test('a published ID of an excluded record can keep no fund at all', () => {
 
   assert.equal(result.registry.find((entry) => entry.id === 'KTN20').current_id, '');
 });
+
+test('excluding a record whose ID is already live empties its registry entry instead of throwing', () => {
+  const registry = [
+    { id: 'BRK10', first_published: '2026-10-01', current_id: 'BRK10' },
+    { id: 'KTN20', first_published: '2026-10-02', current_id: 'KTN20' },
+  ];
+  const result = link([record('bareksa', '10', { nav: fourDecimalNav(5) })], { aliases: { 'kontan:20': 'exclude' }, registry });
+
+  assert.deepEqual(result.registry.map((entry) => [entry.id, entry.current_id]), [['BRK10', 'BRK10'], ['KTN20', '']]);
+});
