@@ -137,7 +137,6 @@ const main = async () => {
   const funds = await readStoredFunds();
   const isFullScan = funds.size === 0 || process.argv.includes('--full');
   const conflictingIds = [];
-  const failures = [];
 
   await fs.mkdir(path.join(DATA_DIR, 'nav'), { recursive: true });
 
@@ -176,20 +175,19 @@ const main = async () => {
   // A block that starts in the middle of a run refuses every later request too.
   const { worker: scrapeFundUnlessBlocked, hasStopped: isBlocked } = stopAfterForbidden(scrapeFund, MAX_FORBIDDEN_IN_A_ROW);
 
-  const scrapeAll = async (ids, label) => {
-    failures.push(...await runPool({
-      items: ids,
-      worker: scrapeFundUnlessBlocked,
-      concurrency: CONCURRENCY,
-      label,
-      describeItem: (id) => `Kontan ${id}`,
-    }));
-  };
+  const scrapeAll = (ids, label) => runPool({
+    items: ids,
+    worker: scrapeFundUnlessBlocked,
+    concurrency: CONCURRENCY,
+    label,
+    describeItem: (id) => `Kontan ${id}`,
+  });
 
+  // The failure limit of the known funds must not be diluted by the many IDs the scan asks for that hold no fund.
   const knownIds = [...funds.keys()];
-  let attemptedCount = knownIds.length;
-
-  await scrapeAll(knownIds, 'Known funds scraped');
+  const knownFailures = await scrapeAll(knownIds, 'Known funds scraped');
+  const scanFailures = [];
+  let scannedCount = 0;
 
   const scanEndId = () => Math.max(highestId() + LOOKAHEAD_IDS, isFullScan ? FIRST_SCAN_END_ID : 0);
 
@@ -197,8 +195,8 @@ const main = async () => {
     const toId = Math.min(fromId + SCAN_CHUNK_SIZE - 1, scanEndId());
     const ids = Array.from({ length: toId - fromId + 1 }, (_, index) => fromId + index).filter((id) => !funds.has(id));
 
-    attemptedCount += ids.length;
-    await scrapeAll(ids, `New IDs ${fromId}-${toId} scanned`);
+    scannedCount += ids.length;
+    scanFailures.push(...await scrapeAll(ids, `New IDs ${fromId}-${toId} scanned`));
   }
 
   const bibitRows = await readCsvRows(BIBIT_FUNDS_FILE);
@@ -217,7 +215,8 @@ const main = async () => {
     process.exitCode = 1;
   }
 
-  reportFailures(failures, attemptedCount);
+  reportFailures(knownFailures, knownIds.length);
+  reportFailures(scanFailures, scannedCount);
 };
 
 if (process.argv[1] === import.meta.filename) {
