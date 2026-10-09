@@ -659,3 +659,41 @@ test('a type no source can name is left to the first source that can', () => {
   assert.equal(typeFor({ bibit: 'Benchmark', bareksa: 'ETF', kontan: 'Indeks & ETF' }), 'Benchmark');
   assert.equal(typeFor({ bareksa: 'Saham', kontan: 'ETF' }), 'Saham');
 });
+
+test('records of one fund link when a source repeats its last value for days the other has moved on', () => {
+  const bareksa = fourDecimalNav(30);
+  const kontan = bareksa.map(([date, value], day) => [date, day >= 25 ? bareksa[24][1] : value]);
+  const result = link([
+    record('bareksa', '1', { name: 'Alpha Dana Utama', nav: bareksa }),
+    record('kontan', '2', { name: 'ALPHA DANA UTAMA FUND', nav: kontan }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+});
+
+test('one stray date does not stop NAV evidence, two do', () => {
+  const nav = fourDecimalNav(10);
+  const linkWith = (strayDays) => link([
+    record('bareksa', '1', { name: 'Alpha Dana Utama', nav }),
+    record('kontan', '2', { name: 'ALPHA DANA UTAMA FUND', nav: nav.map(([date, value], day) => [date, strayDays.includes(day) ? value + 40 : value]) }),
+  ]).funds.length;
+
+  assert.equal(linkWith([4]), 1);
+  assert.equal(linkWith([4, 6]), 2);
+});
+
+test('a latest NAV that is only a rounding apart, or one odd last day, does not refuse a link of the same name', () => {
+  const dollar = [['2026-09-28', 0.7461], ['2026-09-29', 0.7455], ['2026-09-30', 0.7459]];
+  const rounded = [['2026-09-28', 0.75], ['2026-09-29', 0.75], ['2026-09-30', 0.75]];
+  const history = fourDecimalNav(10);
+  const oddLastDay = history.map(([date, value], day) => [date, day === 9 ? value * 1.04 : value]);
+  const differentFund = history.map(([date, value], day) => [date, day >= 8 ? value * 1.04 : value]);
+  const linkNames = (a, b) => link([
+    record('bareksa', '1', { name: 'Alpha Dana Utama', nav: a }),
+    record('kontan', '2', { name: 'ALPHA DANA UTAMA', nav: b }),
+  ]).funds.length;
+
+  assert.equal(linkNames(dollar, rounded), 1);
+  assert.equal(linkNames(history, oddLastDay), 1);
+  assert.equal(linkNames(history, differentFund), 2);
+});

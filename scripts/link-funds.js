@@ -32,6 +32,8 @@ const MIN_SHORT_HISTORY_DIGITS = 7;
 const MIN_RENAMED_MANAGER_DATES = 10;
 const MIN_RENAMED_FUNDS_PER_MANAGER_PAIR = 2;
 const MIN_AGREEMENT = 0.95;
+// One stray date is no disagreement: a source has a stale or odd day now and then, and few shared dates make one stray look large.
+const MAX_STRAY_DATES = 1;
 const MAX_LATEST_DIFFERENCE = 0.005;
 const ROUND_NAV_TOLERANCE = 0.001;
 const ROUND_NAVS = [1, 10, 100, 1000, 10000];
@@ -85,6 +87,26 @@ const seriesFrom = (dates, values) => {
 
 // Rows are [isoDate, nav].
 export const makeNavSeries = (rows) => withoutSpikes(seriesFrom(rows.map(([date]) => toDateNumber(date)), rows.map(([, value]) => value)));
+
+const MAX_STALE_TAIL_ROWS = 10;
+
+// Kontan repeats a fund's last value for the days it has not updated yet, while the other sources move on. Those
+// days say nothing, and one of them as the latest shared date would refuse a link between two records of one fund.
+// A longer run is a fund that really stopped, which other sources show the same way.
+const withoutStaleTail = (series) => {
+  const { dates, values } = series;
+  let runLength = 1;
+
+  while (runLength < values.length && values[values.length - 1 - runLength] === values.at(-1)) {
+    runLength++;
+  }
+
+  if (runLength < 2 || runLength - 1 > MAX_STALE_TAIL_ROWS) {
+    return series;
+  }
+
+  return { dates: dates.slice(0, dates.length - runLength + 1), values: values.slice(0, values.length - runLength + 1) };
+};
 
 const toIsoDate = (dateNumber) => `${String(dateNumber).slice(0, 4)}-${String(dateNumber).slice(4, 6)}-${String(dateNumber).slice(6)}`;
 
@@ -161,8 +183,12 @@ const valueOn = (record, date) => {
   return undefined;
 };
 
+// How far two values are apart beyond rounding: a source that keeps two decimals is not wrong by half a unit.
+const differenceBeyondRounding = (x, y) => (valuesClose(x, y) ? 0 : Math.abs(x - y) / Math.max(x, y));
+
 const compareSeries = (a, b) => {
   const comparison = { shared: 0, close: 0, distinctive: 0, strong: 0, latestDifference: 0 };
+  let previousDifference = null;
   let i = 0;
   let j = 0;
 
@@ -176,7 +202,8 @@ const compareSeries = (a, b) => {
       const y = b.nav.values[j];
 
       comparison.shared++;
-      comparison.latestDifference = Math.abs(x - y) / Math.max(x, y);
+      previousDifference = comparison.shared > 1 ? comparison.latestDifference : null;
+      comparison.latestDifference = differenceBeyondRounding(x, y);
 
       if (valuesClose(x, y)) {
         comparison.close++;
@@ -197,6 +224,11 @@ const compareSeries = (a, b) => {
       i++;
       j++;
     }
+  }
+
+  // One odd last day (a source's stale or wrong latest value) is not a different fund: both of the last two must differ.
+  if (previousDifference !== null) {
+    comparison.latestDifference = Math.min(comparison.latestDifference, previousDifference);
   }
 
   return comparison;
@@ -228,6 +260,8 @@ const alignNav = (a, b) => {
 };
 
 const compareNav = (a, b) => alignNav(a, b).comparison;
+
+const agreeOnDates = ({ shared, close }) => shared > 0 && (close / shared >= MIN_AGREEMENT || (shared >= MIN_SHARED_EQUAL_DATES && shared - close <= MAX_STRAY_DATES));
 
 const shareClassOf = (record) => record.name.match(/\bkelas\s+([a-z0-9]+)\b/i)?.[1].toLowerCase() ?? '';
 
@@ -355,7 +389,7 @@ const candidateId = (record) => `${ID_PREFIXES[record.source]}${record.id}`;
 const resolveAliasTarget = (target) => (target.includes(':') ? target : `bibit:${target}`);
 
 export const linkFunds = ({ records: inputRecords, aliases, registry, today }) => {
-  const records = inputRecords.map((record) => ({ ...record, key: `${record.source}:${record.id}` }));
+  const records = inputRecords.map((record) => ({ ...record, nav: record.source === 'kontan' ? withoutStaleTail(record.nav) : record.nav, key: `${record.source}:${record.id}` }));
   const recordsByKey = new Map(records.map((record) => [record.key, record]));
   const parent = new Map(records.map((record) => [record.key, record.key]));
   const membersByRoot = new Map(records.map((record) => [record.key, [record]]));
@@ -404,7 +438,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
       return `NAV differs by ${(comparison.latestDifference * 100).toFixed(1)}% on their latest shared date`;
     }
 
-    if (!isTrustedLink && comparison.shared >= MIN_SHARED_EQUAL_DATES && comparison.close / comparison.shared < MIN_AGREEMENT) {
+    if (!isTrustedLink && comparison.shared >= MIN_SHARED_EQUAL_DATES && !agreeOnDates(comparison)) {
       return `NAV is close on only ${comparison.close} of ${comparison.shared} shared dates`;
     }
 
@@ -489,7 +523,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
 
   for (const { a, b } of candidates) {
     const comparison = compareNav(a, b);
-    const agrees = comparison.close / comparison.shared >= MIN_AGREEMENT && comparison.latestDifference <= MAX_LATEST_DIFFERENCE;
+    const agrees = agreeOnDates(comparison) && comparison.latestDifference <= MAX_LATEST_DIFFERENCE;
 
     if (!hasCompatibleManager(a, b)) {
       if (comparison.distinctive >= MIN_RENAMED_MANAGER_DATES && agrees) {
