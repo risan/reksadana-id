@@ -379,3 +379,115 @@ test('Kontan rows dated on the right day are left alone', () => {
 
   assert.deepEqual(history.points.slice(-2).map((point) => [point.date, point.value]), [['2026-01-09', 109], ['2026-01-10', 111]]);
 });
+
+const farRun = (length) => Array.from({ length }, (_, index) => 1600 + index);
+
+test('a stretch of up to ten rows far from the NAV, then back to it, is dropped as a source error', () => {
+  const values = [1.02, 1.02, ...farRun(8), 1.02, 1.03];
+  const history = pickNavHistory({ nav: dailyRows('2026-04-20', values) });
+
+  assert.deepEqual(history.points.map((point) => point.value), [1.02, 1.02, 1.02, 1.03]);
+  assert.equal(history.droppedSpikes, 8);
+});
+
+test('a far stretch longer than ten rows, or one that never returns, is a real move and stays', () => {
+  const longRun = pickNavHistory({ nav: dailyRows('2026-04-01', [100, 100, ...farRun(11), 100, 100]) });
+  const noReturn = pickNavHistory({ nav: dailyRows('2026-04-01', [100, 100, ...farRun(4), 130, 131]) });
+
+  assert.equal(longRun.points.length, 15);
+  assert.equal(noReturn.points.length, 8);
+});
+
+test('a stretch with a row near the NAV, or with a gap inside it, is not treated as an excursion', () => {
+  const nearRow = pickNavHistory({ nav: dailyRows('2026-04-01', [100, 100, 150, 110, 112, 111, 100]) });
+  const withGap = pickNavHistory({
+    nav: [
+      { date: '2026-04-01', nav: 100, nav_adjusted: null },
+      { date: '2026-04-02', nav: 150, nav_adjusted: null },
+      { date: '2026-05-02', nav: 150, nav_adjusted: null },
+      { date: '2026-05-03', nav: 100, nav_adjusted: null },
+    ],
+  });
+
+  assert.equal(nearRow.points.length, 7);
+  assert.equal(withGap.points.length, 4);
+});
+
+test('two excursions in a row are both dropped', () => {
+  const history = pickNavHistory({ nav: dailyRows('2026-04-01', [100, 100.5, 500, 501, 100.2, 800, 100.4, 100.6]) });
+
+  assert.deepEqual(history.points.map((point) => point.value), [100, 100.5, 100.2, 100.4, 100.6]);
+});
+
+test('a source that starts over a year after the history ended joins only when it agrees where they overlap', () => {
+  const ended = plainRows('2021-01-01', [100, 101, 102, 103, 104]);
+  const later = plainRows('2025-01-01', [105, 106, 107, 108]);
+  const overlapping = [...ended, ...plainRows('2025-01-01', [105, 106, 107, 108])];
+
+  const unvouched = pickNavHistory({ bareksa: { nav: ended, aum: [], units: [] }, kontan: { nav: later } });
+  const vouched = pickNavHistory({ bareksa: { nav: ended, aum: [], units: [] }, kontan: { nav: overlapping } });
+
+  assert.equal(unvouched.points.length, 5);
+  assert.equal(vouched.points.length, 9);
+});
+
+test('a source that starts within a year of the end of the history still joins without overlap', () => {
+  const ended = plainRows('2025-06-01', [100, 101, 102, 103, 104]);
+  const later = plainRows('2026-01-01', [105, 106, 107, 108]);
+  const history = pickNavHistory({ bareksa: { nav: ended, aum: [], units: [] }, kontan: { nav: later } });
+
+  assert.equal(history.points.length, 9);
+});
+
+test('a NAV that Kontan holds at two decimals for months and Bibit later lists at four is frozen from its first day', () => {
+  const kontan = plainRows('2026-01-01', Array.from({ length: 60 }, () => 1268.36));
+  const history = pickNavHistory({
+    nav: [{ date: '2026-03-02', nav: 1268.3561, nav_adjusted: null }, { date: '2026-03-03', nav: 1268.3561, nav_adjusted: null }],
+    kontan: { nav: kontan },
+  });
+
+  assert.equal(history.frozenSince, '2026-01-01');
+  assert.equal(history.points.at(-1).date, '2026-01-01');
+});
+
+test('a money-market NAV that moves a little each day is not frozen, at two decimals or four', () => {
+  const fourDecimals = pickNavHistory({ nav: dailyRows('2026-01-01', Array.from({ length: 60 }, (_, day) => 1000 + day * 0.0123)).map((row) => ({ ...row, nav_adjusted: null })) });
+  const twoDecimals = pickNavHistory({ kontan: { nav: plainRows('2026-01-01', Array.from({ length: 60 }, (_, day) => Number((1000 + day * 0.07).toFixed(2)))) } });
+
+  assert.equal(fourDecimals.frozenSince, null);
+  assert.equal(twoDecimals.frozenSince, null);
+});
+
+test('a fund whose Bareksa NAV stopped moving long ago is frozen even if a re-dated Bibit row repeats it', () => {
+  const bareksa = plainRows('2026-01-01', [1268.3561, 1268.3561, 1268.3561, 1268.3561, 1268.3561, 1268.3561, 1268.3561].concat(Array.from({ length: 50 }, () => 1268.3561)));
+  const history = pickNavHistory({
+    nav: [{ date: '2026-03-10', nav: 1268.36, nav_adjusted: null }],
+    bareksa: { nav: bareksa, aum: [], units: [] },
+  });
+
+  assert.equal(history.frozenSince, '2026-01-01');
+});
+
+const monthlyAum = (values) => values.map((aum, index) => ({ date: `2026-${String(index + 1).padStart(2, '0')}-01`, aum }));
+
+test('a month far from both neighbours, which agree with each other, is dropped from the fund size', () => {
+  const history = pickAumHistory({ aum: monthlyAum([8.87e6, 527.37, 6.57e6, 77.7e9, 5.22e6, 5.5e6]) });
+
+  assert.deepEqual(history.points.map((point) => point.value), [8.87e6, 6.57e6, 5.22e6, 5.5e6]);
+});
+
+test('a latest figure of a few rupiah after months in the billions is dropped, a real change is kept', () => {
+  const absurd = pickAumHistory({ aum: monthlyAum([3.0e9, 3.05e9, 3.1e9, 1.38]) });
+  const halved = pickAumHistory({ aum: monthlyAum([3.0e9, 3.05e9, 3.1e9, 1.1e9]) });
+
+  assert.deepEqual(absurd.points.map((point) => point.value), [3.0e9, 3.05e9, 3.1e9]);
+  assert.equal(halved.points.length, 4);
+});
+
+test('a fund that is small all along, or two odd months in a row, keeps its figures', () => {
+  const small = pickAumHistory({ fund: { currency: 'USD' }, aum: monthlyAum([4.5e5, 4.7e5, 4.9e5]) });
+  const twoMonths = pickAumHistory({ aum: monthlyAum([1e9, 1.1e9, 5e10, 5.1e10, 1.2e9]) });
+
+  assert.equal(small.points.length, 3);
+  assert.equal(twoMonths.points.length, 5);
+});

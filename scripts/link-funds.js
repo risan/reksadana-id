@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import ALIASES from '../scrapers/fund-aliases.json' with { type: 'json' };
+import { dropSpikes } from '../src/lib/series.js';
 import { isSameManager, normalizeManager, normalizeName, readCsvRecords, toCsv, writeFileAtomic } from '../scrapers/lib.js';
 
 const DATA_DIR = 'data';
@@ -20,6 +21,8 @@ const SHARIA_PRIORITY = ['bibit', 'makmur'];
 const LAUNCH_DATE_PRIORITY = ['bareksa', 'bibit', 'kontan', 'makmur'];
 
 const ACTIVE_DAYS = 31;
+const MIN_AGREEING_TYPE_SOURCES = 2;
+const GENERAL_TYPES = new Set(['Pasar Uang', 'Obligasi', 'Saham', 'Campuran', 'Terproteksi']);
 const MIN_SHARED_EQUAL_DATES = 3;
 const MIN_DISTINCTIVE_DIGITS = 5;
 const MIN_SHORT_HISTORY_DIGITS = 7;
@@ -30,6 +33,8 @@ const MIN_SHORT_HISTORY_DIGITS = 7;
 const MIN_RENAMED_MANAGER_DATES = 10;
 const MIN_RENAMED_FUNDS_PER_MANAGER_PAIR = 2;
 const MIN_AGREEMENT = 0.95;
+// One stray date is no disagreement: a source has a stale or odd day now and then, and few shared dates make one stray look large.
+const MAX_STRAY_DATES = 1;
 const MAX_LATEST_DIFFERENCE = 0.005;
 const ROUND_NAV_TOLERANCE = 0.001;
 const ROUND_NAVS = [1, 10, 100, 1000, 10000];
@@ -82,7 +87,46 @@ const seriesFrom = (dates, values) => {
 };
 
 // Rows are [isoDate, nav].
-export const makeNavSeries = (rows) => seriesFrom(rows.map(([date]) => toDateNumber(date)), rows.map(([, value]) => value));
+export const makeNavSeries = (rows) => withoutSpikes(seriesFrom(rows.map(([date]) => toDateNumber(date)), rows.map(([, value]) => value)));
+
+const MAX_STALE_TAIL_ROWS = 10;
+
+// Kontan repeats a fund's last value for the days it has not updated yet, while the other sources move on. Those
+// days say nothing, and one of them as the latest shared date would refuse a link between two records of one fund.
+// A longer run is a fund that really stopped, which other sources show the same way.
+const withoutStaleTail = (series) => {
+  const { dates, values } = series;
+  let runLength = 1;
+
+  while (runLength < values.length && values[values.length - 1 - runLength] === values.at(-1)) {
+    runLength++;
+  }
+
+  if (runLength < 2 || runLength - 1 > MAX_STALE_TAIL_ROWS) {
+    return series;
+  }
+
+  return { dates: dates.slice(0, dates.length - runLength + 1), values: values.slice(0, values.length - runLength + 1) };
+};
+
+const toIsoDate = (dateNumber) => `${String(dateNumber).slice(0, 4)}-${String(dateNumber).slice(4, 6)}-${String(dateNumber).slice(6)}`;
+
+const SPIKE_SCREEN = 0.15;
+
+// A source that served another fund's NAV for a few days would put wrong values into the evidence, so the
+// series is cleaned as the site's history is. Only a series with a big jump can hold such a stretch.
+const withoutSpikes = (series) => {
+  const { dates, values } = series;
+  const hasJump = values.some((value, index) => index > 0 && Math.abs(value / values[index - 1] - 1) > SPIKE_SCREEN);
+
+  if (!hasJump) {
+    return series;
+  }
+
+  const kept = dropSpikes(Array.from(dates, (date, index) => ({ date: toIsoDate(date), value: values[index] })));
+
+  return seriesFrom(kept.map(({ date }) => toDateNumber(date)), kept.map(({ value }) => value));
+};
 
 const integerDigits = (value) => (value >= 1 ? Math.floor(Math.log10(value)) + 1 : 0);
 
@@ -140,8 +184,12 @@ const valueOn = (record, date) => {
   return undefined;
 };
 
+// How far two values are apart beyond rounding: a source that keeps two decimals is not wrong by half a unit.
+const differenceBeyondRounding = (x, y) => (valuesClose(x, y) ? 0 : Math.abs(x - y) / Math.max(x, y));
+
 const compareSeries = (a, b) => {
   const comparison = { shared: 0, close: 0, distinctive: 0, strong: 0, latestDifference: 0 };
+  let previousDifference = null;
   let i = 0;
   let j = 0;
 
@@ -155,7 +203,8 @@ const compareSeries = (a, b) => {
       const y = b.nav.values[j];
 
       comparison.shared++;
-      comparison.latestDifference = Math.abs(x - y) / Math.max(x, y);
+      previousDifference = comparison.shared > 1 ? comparison.latestDifference : null;
+      comparison.latestDifference = differenceBeyondRounding(x, y);
 
       if (valuesClose(x, y)) {
         comparison.close++;
@@ -176,6 +225,11 @@ const compareSeries = (a, b) => {
       i++;
       j++;
     }
+  }
+
+  // One odd last day (a source's stale or wrong latest value) is not a different fund: both of the last two must differ.
+  if (previousDifference !== null) {
+    comparison.latestDifference = Math.min(comparison.latestDifference, previousDifference);
   }
 
   return comparison;
@@ -207,6 +261,8 @@ const alignNav = (a, b) => {
 };
 
 const compareNav = (a, b) => alignNav(a, b).comparison;
+
+const agreeOnDates = ({ shared, close }) => shared > 0 && (close / shared >= MIN_AGREEMENT || (shared >= MIN_SHARED_EQUAL_DATES && shared - close <= MAX_STRAY_DATES));
 
 const shareClassOf = (record) => record.name.match(/\bkelas\s+([a-z0-9]+)\b/i)?.[1].toLowerCase() ?? '';
 
@@ -334,7 +390,7 @@ const candidateId = (record) => `${ID_PREFIXES[record.source]}${record.id}`;
 const resolveAliasTarget = (target) => (target.includes(':') ? target : `bibit:${target}`);
 
 export const linkFunds = ({ records: inputRecords, aliases, registry, today }) => {
-  const records = inputRecords.map((record) => ({ ...record, key: `${record.source}:${record.id}` }));
+  const records = inputRecords.map((record) => ({ ...record, nav: record.source === 'kontan' ? withoutStaleTail(record.nav) : record.nav, key: `${record.source}:${record.id}` }));
   const recordsByKey = new Map(records.map((record) => [record.key, record]));
   const parent = new Map(records.map((record) => [record.key, record.key]));
   const membersByRoot = new Map(records.map((record) => [record.key, [record]]));
@@ -383,7 +439,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
       return `NAV differs by ${(comparison.latestDifference * 100).toFixed(1)}% on their latest shared date`;
     }
 
-    if (!isTrustedLink && comparison.shared >= MIN_SHARED_EQUAL_DATES && comparison.close / comparison.shared < MIN_AGREEMENT) {
+    if (!isTrustedLink && comparison.shared >= MIN_SHARED_EQUAL_DATES && !agreeOnDates(comparison)) {
       return `NAV is close on only ${comparison.close} of ${comparison.shared} shared dates`;
     }
 
@@ -468,7 +524,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
 
   for (const { a, b } of candidates) {
     const comparison = compareNav(a, b);
-    const agrees = comparison.close / comparison.shared >= MIN_AGREEMENT && comparison.latestDifference <= MAX_LATEST_DIFFERENCE;
+    const agrees = agreeOnDates(comparison) && comparison.latestDifference <= MAX_LATEST_DIFFERENCE;
 
     if (!hasCompatibleManager(a, b)) {
       if (comparison.distinctive >= MIN_RENAMED_MANAGER_DATES && agrees) {
@@ -612,7 +668,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
 
     const mappedTypes = TYPE_PRIORITY
       .flatMap((source) => ordered.filter((member) => member.source === source))
-      .map((member) => ({ raw: member.type, mapped: TYPES[member.type.toLowerCase()] }))
+      .map((member) => ({ source: member.source, raw: member.type, mapped: TYPES[member.type.toLowerCase()] }))
       .filter(({ raw }) => raw !== '');
 
     for (const { raw, mapped } of mappedTypes) {
@@ -620,6 +676,21 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
         unmappedTypes.set(raw, (unmappedTypes.get(raw) ?? 0) + 1);
       }
     }
+
+    // Bibit's label wins unless two other sources agree on a different one. Its specialised labels (global, private
+    // placement, real estate, gold ETF) have no counterpart elsewhere, so only a general label can be overruled.
+    const typeBySource = new Map();
+
+    for (const { source, mapped } of mappedTypes) {
+      if (mapped && !typeBySource.has(source)) {
+        typeBySource.set(source, mapped);
+      }
+    }
+
+    const agreedOtherType = [...Map.groupBy([...typeBySource].filter(([source]) => source !== 'bibit'), ([, type]) => type)]
+      .find(([type, votes]) => votes.length >= MIN_AGREEING_TYPE_SOURCES && type !== typeBySource.get('bibit'))?.[0];
+    const bibitType = typeBySource.get('bibit');
+    const overrulingType = bibitType === undefined || GENERAL_TYPES.has(bibitType) ? agreedOtherType : undefined;
 
     const launchSource = LAUNCH_DATE_PRIORITY.find((source) => ordered.some((member) => member.source === source && member.launchDate !== ''));
     const launchDates = ordered.filter((member) => member.source === launchSource && member.launchDate !== '').map((member) => member.launchDate);
@@ -629,7 +700,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
       name: names[0] ?? '',
       otherNames,
       manager: firstFrom(ordered, MANAGER_PRIORITY, 'manager'),
-      type: mappedTypes.find(({ mapped }) => mapped)?.mapped ?? '',
+      type: overrulingType ?? mappedTypes.find(({ mapped }) => mapped)?.mapped ?? '',
       currency: firstFrom(ordered, CURRENCY_PRIORITY, 'currency') || (USD_IN_NAME.test(allNames) ? 'USD' : ''),
       sharia: firstFrom(ordered, SHARIA_PRIORITY, 'sharia') || (SHARIA_IN_NAME.test(allNames) ? 'true' : ''),
       launchDate: launchDates.sort()[0] ?? '',
@@ -774,7 +845,7 @@ const readNavSeries = (file, valueColumn) => {
     }
   }
 
-  return seriesFrom(dates, values);
+  return withoutSpikes(seriesFrom(dates, values));
 };
 
 const readMakmurSharia = (id) => {

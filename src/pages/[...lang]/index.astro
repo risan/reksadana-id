@@ -1,9 +1,13 @@
 ---
+import '../../styles/explorer.css';
 import Base from '../../layouts/Base.astro';
 import { loadFundSummaries } from '../../lib/data.js';
-import { DEFAULT_STATE, PAGE_SIZE, filterFunds, fundCountLabel, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../../lib/explorer.js';
-import { formatCount } from '../../lib/format.js';
-import { anchor, localePaths, localizeHref } from '../../lib/i18n.js';
+import { COLUMNS, COLUMN_KEYS, COLUMN_PRESETS, DEFAULT_COLUMNS } from '../../lib/explorer-columns.js';
+import { DENSITIES } from '../../lib/explorer-preferences.js';
+import { renderRows, renderTypeCards } from '../../lib/explorer-render.js';
+import { DEFAULT_STATE, PAGE_SIZES, escapeHtml, filterFunds, fundCountLabel, managerOptions, prepareFunds, sortFunds } from '../../lib/explorer.js';
+import { formatCount, formatDate } from '../../lib/format.js';
+import { localePaths, localizeHref } from '../../lib/i18n.js';
 import { icon } from '../../lib/icons.js';
 import * as m from '../../paraglide/messages.js';
 
@@ -15,471 +19,307 @@ const funds = prepareFunds(data);
 const initial = sortFunds(filterFunds(funds, DEFAULT_STATE), DEFAULT_STATE.sort, DEFAULT_STATE.dir);
 const inactiveCount = funds.filter((fund) => !fund.active).length;
 const dividendFundCount = funds.filter((fund) => fund.total).length;
+const managers = managerOptions(funds);
+const pageCount = Math.ceil(initial.length / DEFAULT_STATE.size);
 
-const COLUMNS = [
-  { key: null, label: m.compare_col_header(), className: 'c-compare', hidden: true },
-  { key: 'name', label: m.col_fund(), className: 'c-fund' },
-  { key: null, label: m.col_nav(), className: 'num c-nav' },
-  { key: 'return_1m', label: m.period_1m(), className: 'num c-1m', title: m.col_1m_title() },
-  { key: 'return_ytd', label: m.period_ytd(), className: 'num c-ytd', title: m.col_ytd_title() },
-  { key: 'return_1y', label: m.period_1y(), className: 'num c-1y', title: m.col_1y_title() },
-  { key: null, label: m.col_spark(), className: 'c-spark' },
-  { key: 'return_3y', label: m.period_3y(), className: 'num c-3y', title: m.col_3y_title() },
-  { key: 'aum', label: m.col_aum(), className: 'num c-aum', title: m.col_aum_title() },
-  { key: null, label: m.col_buy(), className: 'c-buy' },
+const STATS = [
+  [formatCount(funds.length, locale), m.stat_funds()],
+  [formatCount(funds.length - inactiveCount, locale), m.stat_active()],
+  [formatDate(data.date, locale), m.stat_updated()],
+  ['4', m.stat_sources()],
 ];
+
+const QUICK_FILTERS = [
+  { key: 'sharia', label: m.filter_sharia(), icon: 'moon-star' },
+  { key: 'bibit', label: m.filter_bibit() },
+  { key: 'makmur', label: m.filter_makmur() },
+  { key: 'dividends', label: m.tag_pays_dividends(), icon: 'coins' },
+  { key: 'inactive', label: m.filter_inactive({ count: formatCount(inactiveCount, locale) }), title: m.filter_inactive_title() },
+];
+
+// Each row of the filter panel: a label, and one or two limits named like the URL parameters.
+const FILTER_SECTIONS = [
+  {
+    title: m.filters_group_returns(),
+    rows: [
+      { label: m.filter_r1y(), unit: '%', inputs: [['r1y_min', m.field_min()], ['r1y_max', m.field_max()]] },
+      { label: m.filter_cagr3(), unit: '%', inputs: [['r3y_min', m.field_min()]] },
+    ],
+  },
+  {
+    title: m.filters_group_risk(),
+    rows: [{ label: m.filter_dd1(), unit: '%', inputs: [['dd_max', m.field_no_worse()], ['dd_min', m.field_worse()]] }],
+  },
+  {
+    title: m.filters_group_size(),
+    rows: [
+      { label: m.filter_aum(), unit: m.unit_billion(), inputs: [['aum_min', m.field_min()]] },
+      { label: m.filter_er(), unit: m.unit_percent_year(), inputs: [['er_max', m.field_max()]] },
+      { label: m.filter_minbuy(), unit: 'Rp', inputs: [['minbuy_max', m.field_max()]] },
+    ],
+  },
+  {
+    title: m.filters_group_history(),
+    rows: [
+      { label: m.filter_launched(), unit: '', inputs: [['since', m.field_since()], ['before', m.field_before()]] },
+      { label: m.filter_history(), unit: m.unit_years(), inputs: [['years', m.field_min()]] },
+    ],
+  },
+];
+
+const SORT_OPTIONS = [{ key: 'name', label: m.col_fund() }, ...COLUMNS.filter((column) => column.sortable !== false).map((column) => ({ key: column.key, label: column.label() }))];
+
+// A column that is not showing is hidden by the table's `data-show` list, so choosing columns needs no new rows.
+const hideColumnsCss = `${COLUMN_KEYS.map((key) => `.funds-table:not([data-show~='${key}']) .col-${key}`).join(',')} { display: none; }`;
+
+const sortIcons = `<span class="sort-up">${icon('arrow-up', { size: 14 })}</span><span class="sort-down">${icon('arrow-down', { size: 14 })}</span>`;
 ---
 
 <Base title="Reksadana ID" section="funds">
-  <div class="intro">
+  <style is:inline set:html={hideColumnsCss}></style>
+
+  <section class="hero kawung-bg">
     <h1 class="page-title">{m.home_title()}</h1>
-    <p class="lede" set:html={m.home_lede({ count: formatCount(funds.length, locale), downloadLink: anchor(localizeHref('/download/', locale), m.home_lede_download()) })} />
-  </div>
+    <p class="lede">{m.home_lede()}</p>
+    <form class="hero-search" role="search" onsubmit="return false" data-needs-js>
+      <label class="search search-large">
+        <span class="visually-hidden">{m.search_label()}</span>
+        <Fragment set:html={icon('search', { size: 20 })} />
+        <input id="q" name="q" type="search" placeholder={m.search_placeholder()} autocomplete="off" spellcheck="false" />
+        <kbd aria-hidden="true">/</kbd>
+        <button type="button" class="icon-btn search-clear" id="search-clear" aria-label={m.search_clear()} hidden><Fragment set:html={icon('x')} /></button>
+      </label>
+    </form>
+    <dl class="hero-stats">
+      {STATS.map(([value, label]) => (
+        <div>
+          <dt>{label}</dt>
+          <dd>{value}</dd>
+        </div>
+      ))}
+    </dl>
+    <a class="hero-link" href={localizeHref('/download/', locale)}><Fragment set:html={icon('download', { size: 16 })} />{m.home_lede_download()}</a>
+  </section>
 
-  <div class="type-strip" id="type-strip" role="group" aria-label={m.type_strip_label()} set:html={renderTypeStrip(funds, DEFAULT_STATE, locale)} />
+  <div class="type-cards" id="type-cards" role="group" aria-label={m.type_strip_label()} data-needs-js set:html={renderTypeCards(funds, DEFAULT_STATE, locale)} />
 
-  <form class="controls" id="controls" onsubmit="return false">
-    <label class="search">
-      <span class="visually-hidden">{m.search_label()}</span>
-      <Fragment set:html={icon('search')} />
-      <input id="q" name="q" type="search" placeholder={m.search_placeholder()} autocomplete="off" spellcheck="false" />
-      <kbd aria-hidden="true">/</kbd>
-    </label>
-    <div class="seg" role="group" aria-label={m.currency_label()}>
-      <button type="button" data-currency="" aria-pressed="true">{m.currency_all()}</button>
-      <button type="button" data-currency="IDR" aria-pressed="false">IDR</button>
-      <button type="button" data-currency="USD" aria-pressed="false">USD</button>
+  <section class="explorer" id="explorer">
+    <div class="toolbar" id="toolbar" data-needs-js>
+      <div class="seg" role="group" aria-label={m.currency_label()}>
+        <button type="button" data-currency="" aria-pressed="true">{m.currency_all()}</button>
+        <button type="button" data-currency="IDR" aria-pressed="false">IDR</button>
+        <button type="button" data-currency="USD" aria-pressed="false">USD</button>
+      </div>
+      <div class="toolbar-actions">
+        <button type="button" class="btn" id="filters-open" aria-haspopup="dialog">
+          <Fragment set:html={icon('sliders-horizontal')} />{m.filters_button()}<span class="badge" id="filters-badge" hidden></span>
+        </button>
+        <button type="button" class="btn btn-columns" id="columns-button" popovertarget="columns-menu">
+          <Fragment set:html={icon('columns-3')} />{m.columns_button()}
+        </button>
+        <div class="menu-popover columns-menu" id="columns-menu" popover>
+          <div class="menu-section">
+            <p class="menu-title">{m.columns_presets()}</p>
+            <div class="preset-list">
+              {COLUMN_PRESETS.map((preset) => <button type="button" class="chip" data-preset={preset.key} aria-pressed="false">{preset.label()}</button>)}
+            </div>
+          </div>
+          <div class="menu-section">
+            <p class="menu-title">{m.columns_show()}</p>
+            <div class="column-list">
+              {COLUMNS.map((column) => (
+                <label><input type="checkbox" data-column={column.key} /> {column.label()}</label>
+              ))}
+            </div>
+          </div>
+          <div class="menu-section">
+            <p class="menu-title">{m.columns_density()}</p>
+            <div class="seg" role="group" aria-label={m.columns_density()}>
+              {DENSITIES.map((density) => <button type="button" data-density={density} aria-pressed="false">{density === 'compact' ? m.density_compact() : m.density_comfortable()}</button>)}
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-csv" id="csv-button" title={m.csv_title()} disabled>
+          <Fragment set:html={icon('download')} /><span>CSV</span>
+        </button>
+      </div>
+      <span class="dividends-switch">
+        <label class="switch">
+          <input type="checkbox" id="include-dividends" role="switch" />
+          {m.dividends_toggle()}
+        </label>
+        <button type="button" class="icon-btn info-btn" popovertarget="dividends-info" aria-label={m.dividends_info_label()}><Fragment set:html={icon('info', { size: 16 })} /></button>
+        <div class="info-popover" id="dividends-info" popover>{m.dividends_toggle_help({ count: formatCount(dividendFundCount, locale) })}</div>
+      </span>
     </div>
-    <label class="check"><input type="checkbox" name="sharia" /> {m.filter_sharia()}</label>
-    <label class="check"><input type="checkbox" name="bibit" /> {m.filter_bibit()}</label>
-    <label class="check"><input type="checkbox" name="makmur" /> {m.filter_makmur()}</label>
-    <label class="check" title={m.filter_inactive_title()}><input type="checkbox" name="inactive" /> {m.filter_inactive({ count: formatCount(inactiveCount, locale) })}</label>
-    <label class="check" title={m.dividends_toggle_help({ count: formatCount(dividendFundCount, locale) })}><input type="checkbox" id="include-dividends" /> {m.dividends_toggle()}</label>
-    <span class="result-count" id="count" aria-live="polite">{fundCountLabel(initial.length, locale)}</span>
-  </form>
 
-  <div class="table-scroll">
-    <table class="tbl funds-table">
-      <thead>
-        <tr>
-          {COLUMNS.map((column) => (
-            <th class={column.className} title={column.title} aria-sort={column.key === DEFAULT_STATE.sort ? 'descending' : undefined}>
-              {column.key ? <button type="button" class="sort" data-sort={column.key}>{column.label}</button> : column.hidden ? <span class="visually-hidden">{column.label}</span> : column.label}
+    <div class="quick-filters" role="group" aria-label={m.quick_filters_label()} data-needs-js>
+      {QUICK_FILTERS.map((filter) => (
+        <button type="button" class="chip" data-toggle={filter.key} aria-pressed="false" title={filter.title}>
+          {filter.icon && <Fragment set:html={icon(filter.icon, { size: 16 })} />}
+          {filter.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="results-bar" data-needs-js>
+      <div class="results-main">
+        <span class="result-count" id="count" aria-live="polite">{fundCountLabel(initial.length, locale)}</span>
+        <div class="filter-chips" id="filter-chips" aria-label={m.filter_chips_label()}></div>
+        <button type="button" class="link-button" id="clear-all" hidden>{m.clear_all()}</button>
+      </div>
+      <div class="results-side">
+        <div class="sort-picker">
+          <label class="visually-hidden" for="sort-select">{m.sort_by()}</label>
+          <select id="sort-select">
+            {SORT_OPTIONS.map((option) => <option value={option.key} selected={option.key === DEFAULT_STATE.sort}>{option.label}</option>)}
+          </select>
+          <button type="button" class="icon-btn" id="sort-direction" aria-label={m.sort_direction()}>
+            <span class="sort-up"><Fragment set:html={icon('arrow-up')} /></span><span class="sort-down"><Fragment set:html={icon('arrow-down')} /></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-frame table-scroll" id="table-frame">
+      <table class="tbl funds-table" id="funds-table" data-show={DEFAULT_COLUMNS.join(' ')} data-density={DENSITIES[0]} aria-label={m.table_label()}>
+        <thead>
+          <tr>
+            <th class="c-compare"><span class="visually-hidden">{m.compare_col_header()}</span></th>
+            <th class="c-fund" aria-sort={DEFAULT_STATE.sort === 'name' ? 'descending' : undefined}>
+              <button type="button" class="sort" data-sort="name">{m.col_fund()}<Fragment set:html={sortIcons} /></button>
             </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody id="rows" set:html={renderRows(initial, DEFAULT_STATE, data.date, locale)} />
-    </table>
-  </div>
+            {COLUMNS.map((column) => (
+              <th class={`col-${column.key} ${column.numeric ? 'num' : ''}`} title={column.title?.()} aria-sort={column.key === DEFAULT_STATE.sort ? 'descending' : undefined}>
+                {column.sortable === false ? column.label() : <button type="button" class="sort" data-sort={column.key}>{column.label()}<Fragment set:html={sortIcons} /></button>}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody id="rows" set:html={renderRows(initial, DEFAULT_STATE, data.date, locale)} />
+      </table>
+    </div>
 
-  <div class="pager">
-    <span class="muted" id="page-label">{m.pager_range({ first: formatCount(Math.min(1, initial.length), locale), last: formatCount(Math.min(PAGE_SIZE, initial.length), locale), total: formatCount(initial.length, locale) })}</span>
-    <button class="btn" type="button" id="previous-page" disabled>&larr; {m.pager_previous()}</button>
-    <button class="btn" type="button" id="next-page" disabled={initial.length <= PAGE_SIZE}>{m.pager_next()} &rarr;</button>
-  </div>
+    <div class="empty-state kawung-bg" id="empty-state" hidden>
+      <Fragment set:html={icon('search', { size: 28 })} />
+      <p id="empty-text"></p>
+      <button type="button" class="btn" id="empty-clear">{m.clear_all()}</button>
+    </div>
+
+    <nav class="pager" aria-label={m.pager_label()} data-needs-js>
+      <span class="muted" id="page-label">{m.pager_range({ first: formatCount(Math.min(1, initial.length), locale), last: formatCount(Math.min(DEFAULT_STATE.size, initial.length), locale), total: formatCount(initial.length, locale) })}</span>
+      <div class="pager-steps">
+        <button class="btn" type="button" id="previous-page" disabled><span class="flip"><Fragment set:html={icon('chevron-right', { size: 16 })} /></span>{m.pager_previous()}</button>
+        <span id="page-of">{m.pager_page({ page: 1, pages: formatCount(pageCount, locale) })}</span>
+        <button class="btn" type="button" id="next-page" disabled={initial.length <= DEFAULT_STATE.size}>{m.pager_next()}<Fragment set:html={icon('chevron-right', { size: 16 })} /></button>
+      </div>
+      <label class="page-size">
+        {m.page_size_label()}
+        <select id="page-size">
+          {PAGE_SIZES.map((size) => <option value={size} selected={size === DEFAULT_STATE.size}>{size}</option>)}
+        </select>
+      </label>
+    </nav>
+  </section>
 
   <div class="compare-bar" id="compare-bar" hidden>
     <a class="btn btn-primary" id="compare-link" href={localizeHref('/compare/', locale)}></a>
     <button class="btn" type="button" id="compare-clear">{m.compare_clear()}</button>
   </div>
 
-  <details class="method">
+  <details class="method card">
     <summary>{m.method_title()}</summary>
     <ul>
       <li set:html={m.method_nav()} />
       <li set:html={m.method_returns()} />
+      <li set:html={m.method_fall()} />
+      <li set:html={m.method_costs()} />
       <li set:html={m.method_median()} />
       <li set:html={m.method_aum()} />
       <li set:html={m.method_inactive()} />
       <li set:html={m.method_flag()} />
     </ul>
   </details>
+
+  <dialog class="filters-dialog" id="filters-dialog" aria-labelledby="filters-title" data-needs-js>
+    <form method="dialog" class="sheet">
+      <header class="sheet-head">
+        <h2 id="filters-title">{m.filters_button()}</h2>
+        <button type="submit" class="icon-btn" aria-label={m.filters_close()}><Fragment set:html={icon('x')} /></button>
+      </header>
+      <div class="sheet-body">
+        <fieldset class="filter-section">
+          <legend>{m.filter_manager()}</legend>
+          <input type="search" id="manager-search" placeholder={m.manager_search()} aria-label={m.manager_search()} autocomplete="off" />
+          <ul class="manager-list" id="manager-list">
+            {managers.map((manager) => (
+              <li data-name={manager.name.toLowerCase()}>
+                <label><input type="checkbox" name="manager" value={manager.name} /> <span>{manager.name}</span> <span class="muted">{manager.count}</span></label>
+              </li>
+            ))}
+          </ul>
+          <p class="muted small" id="manager-none" hidden>{m.manager_none()}</p>
+        </fieldset>
+        {FILTER_SECTIONS.map((section) => (
+          <fieldset class="filter-section">
+            <legend>{section.title}</legend>
+            {section.rows.map((row) => (
+              <div class="filter-row">
+                <p class="filter-label">{row.label}{row.unit && <span class="muted"> ({row.unit})</span>}</p>
+                <div class="filter-inputs">
+                  {row.inputs.map(([name, hint]) => (
+                    <label class="field">
+                      <span class="field-hint">{hint}</span>
+                      <input type="number" name={name} inputmode="decimal" step="any" />
+                    </label>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </fieldset>
+        ))}
+        <p class="muted small">{m.filters_note()}</p>
+      </div>
+      <footer class="sheet-foot">
+        <button type="button" class="btn" id="filters-reset">{m.filters_reset()}</button>
+        <button type="submit" class="btn btn-primary" id="filters-show">{m.filters_show({ funds: fundCountLabel(initial.length, locale) })}</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <noscript><style>[data-needs-js] { display: none; }</style></noscript>
 </Base>
 
-<style is:global>
-  .type-strip {
-    display: grid;
-    grid-template-columns: repeat(8, minmax(118px, 1fr));
-    overflow-x: auto;
-    border-top: 2px solid var(--ink);
-    border-bottom: 1px solid var(--rule);
-  }
+<script is:inline>
+  // Before the table paints, apply the columns and density this reader chose. The keys are the ones of explorer-preferences.js.
+  try {
+    const table = document.getElementById('funds-table');
+    const columns = localStorage.getItem('explorer-columns');
+    const density = localStorage.getItem('explorer-density');
 
-  .type-cell {
-    display: grid;
-    gap: 1px;
-    padding: 8px 10px 9px;
-    border: 0;
-    border-left: 1px solid var(--rule);
-    background: none;
-    color: var(--ink);
-    font: inherit;
-    text-align: left;
-    cursor: pointer;
-  }
-
-  .type-cell:first-child {
-    border-left: 0;
-    padding-left: 0;
-  }
-
-  .type-cell:hover {
-    background: var(--panel);
-  }
-
-  .type-cell[aria-pressed='true'] {
-    background: var(--accent-wash);
-    color: var(--accent-strong);
-  }
-
-  .type-cell:first-child[aria-pressed='true'] {
-    padding-left: 10px;
-  }
-
-  .type-name {
-    display: flex;
-    align-items: baseline;
-    gap: 6px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-
-  .type-count {
-    margin-left: auto;
-    color: var(--muted);
-    font-size: var(--fs-xs);
-    font-weight: 400;
-  }
-
-  .type-en {
-    color: var(--muted);
-    font-size: var(--fs-xs);
-    white-space: nowrap;
-  }
-
-  .type-median {
-    margin-top: 5px;
-    font-size: var(--fs-base);
-    font-weight: 600;
-    white-space: nowrap;
-  }
-
-  .type-median small {
-    margin-left: 5px;
-    color: var(--muted);
-    font-size: var(--fs-xs);
-    font-weight: 400;
-  }
-
-  .type-cell[aria-pressed='true'] .type-count,
-  .type-cell[aria-pressed='true'] .type-en,
-  .type-cell[aria-pressed='true'] .type-median small {
-    color: inherit;
-    opacity: 0.7;
-  }
-
-  .type-cell[aria-pressed='true'] .type-median {
-    color: inherit;
-  }
-
-  .controls {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 8px 16px;
-    padding: 12px 0;
-  }
-
-  .search {
-    position: relative;
-    flex: 0 1 340px;
-  }
-
-  .search kbd {
-    position: absolute;
-    top: 50%;
-    right: var(--s-3);
-    transform: translateY(-50%);
-  }
-
-  .search input:focus + kbd,
-  .search input:not(:placeholder-shown) + kbd {
-    display: none;
-  }
-
-  .check {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    color: var(--ink-2);
-    white-space: nowrap;
-    cursor: pointer;
-  }
-
-  .check input {
-    width: 16px;
-    height: 16px;
-    margin: 0;
-  }
-
-  .result-count {
-    margin-left: auto;
-    color: var(--muted);
-  }
-
-  .funds-table {
-    min-width: 860px;
-  }
-
-  .funds-table thead th {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-  }
-
-  .funds-table .sort {
-    padding: 0;
-    border: 0;
-    background: none;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
-  }
-
-  .funds-table .sort:hover {
-    color: var(--ink);
-  }
-
-  .funds-table th[aria-sort] {
-    color: var(--ink);
-    font-weight: 650;
-  }
-
-  .funds-table th[aria-sort='descending'] .sort::after {
-    content: ' \2193';
-  }
-
-  .funds-table th[aria-sort='ascending'] .sort::after {
-    content: ' \2191';
-  }
-
-  .funds-table tbody tr {
-    cursor: pointer;
-  }
-
-  .funds-table .c-compare {
-    width: 24px;
-    padding-right: 4px;
-    cursor: default;
-  }
-
-  .funds-table .c-compare input {
-    width: 16px;
-    height: 16px;
-    margin: 2px 0 0;
-    cursor: pointer;
-  }
-
-  .funds-table .c-compare input:disabled {
-    cursor: default;
-  }
-
-  .compare-bar {
-    position: sticky;
-    bottom: var(--tabbar-h);
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    gap: var(--s-2);
-    padding: var(--s-3) 0;
-    border-top: 1px solid var(--rule-strong);
-    background: var(--paper);
-  }
-
-  .funds-table tbody tr:hover {
-    background: var(--panel);
-  }
-
-  .funds-table td {
-    padding-top: 7px;
-    padding-bottom: 7px;
-  }
-
-  .funds-table .c-fund {
-    min-width: 260px;
-  }
-
-  .funds-table .c-fund a {
-    color: var(--ink);
-    font-weight: 550;
-  }
-
-  .funds-table .sub {
-    margin-top: 1px;
-    color: var(--muted);
-    font-size: var(--fs-xs);
-    font-weight: 400;
-  }
-
-  .funds-table .c-fund .sub .mono {
-    color: var(--muted);
-    font-size: var(--fs-xs);
-  }
-
-  .funds-table .c-1y {
-    font-weight: 650;
-  }
-
-  .funds-table .c-spark {
-    width: 84px;
-    padding-top: 6px;
-  }
-
-  .funds-table .c-buy {
-    white-space: nowrap;
-  }
-
-  .funds-table .tag {
-    font-size: var(--fs-xs);
-    line-height: 15px;
-  }
-
-  .flag {
-    display: inline-block;
-    width: 13px;
-    height: 13px;
-    margin-left: 4px;
-    border-radius: 50%;
-    background: var(--warn);
-    color: var(--paper);
-    font-size: var(--fs-xs);
-    font-weight: 700;
-    line-height: 13px;
-    text-align: center;
-    vertical-align: 1px;
-  }
-
-  .spark {
-    display: block;
-    overflow: visible;
-  }
-
-  .spark polyline {
-    fill: none;
-    stroke-width: 1.4;
-    stroke-linejoin: round;
-    stroke-linecap: round;
-  }
-
-  .spark line {
-    stroke: var(--rule-strong);
-    stroke-width: 1;
-  }
-
-  .spark.up polyline {
-    stroke: var(--up);
-  }
-
-  .spark.down polyline {
-    stroke: var(--down);
-  }
-
-  .spark.flat polyline {
-    stroke: var(--muted);
-  }
-
-  .empty-row td {
-    padding: 28px 0;
-    color: var(--muted);
-    text-align: center;
-    cursor: default;
-  }
-
-  .pager {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 8px;
-    padding: 12px 0;
-  }
-
-  .pager .muted {
-    margin-right: 8px;
-  }
-
-  .method {
-    margin-top: 12px;
-    padding-top: 10px;
-    border-top: 1px solid var(--rule);
-    color: var(--ink-2);
-    font-size: var(--fs-sm);
-  }
-
-  .method summary {
-    color: var(--ink);
-    font-weight: 600;
-    cursor: pointer;
-  }
-
-  .method ul {
-    max-width: 80ch;
-    margin: 8px 0 0;
-    padding-left: 18px;
-    line-height: 1.55;
-  }
-
-  .method li + li {
-    margin-top: 4px;
-  }
-
-  @media (max-width: 960px) {
-    .funds-table {
-      min-width: 0;
+    if (columns && /^[a-z0-9_ ]+$/.test(columns)) {
+      table.dataset.show = columns;
     }
 
-    .funds-table .c-1m,
-    .funds-table .c-3y,
-    .funds-table .c-buy {
-      display: none;
+    if (density === 'compact') {
+      table.dataset.density = density;
     }
-  }
-
-  @media (max-width: 480px) {
-    .funds-table .c-spark {
-      display: none;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .funds-table .c-nav,
-    .funds-table .c-ytd,
-    .funds-table .c-aum {
-      display: none;
-    }
-
-    .funds-table .c-fund {
-      min-width: 0;
-    }
-
-    .result-count {
-      margin-left: 0;
-    }
-
-    .search {
-      flex-basis: 100%;
-    }
-  }
-</style>
+  } catch {}
+</script>
 
 <script>
-  import { DEFAULT_STATE, PAGE_SIZE, filterFunds, fundCountLabel, parseSortKey, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../../lib/explorer.js';
+  import { buildCsv } from '../../lib/explorer-csv.js';
+  import { COLUMN_PRESETS } from '../../lib/explorer-columns.js';
+  import { readColumns, readDensity, writeColumns, writeDensity } from '../../lib/explorer-preferences.js';
+  import { renderRows, renderSkeletonRows, renderTypeCards } from '../../lib/explorer-render.js';
+  import { activeFilters, advancedFilterCount, clearedFilters, defaultDirection, escapeHtml, filterFunds, fundCountLabel, hasActiveFilters, parseState, prepareFunds, serializeState, sortFunds } from '../../lib/explorer.js';
   import { MAX_FUNDS, selectionQuery } from '../../lib/compare.js';
   import { readTray, toggleInTray, writeTray } from '../../lib/compare-tray.js';
   import { readIncludeDividends, writeIncludeDividends } from '../../lib/dividend-setting.js';
   import { getJson } from '../../lib/fetch-json.js';
   import { formatCount } from '../../lib/format.js';
   import { localizeHref } from '../../lib/i18n.js';
+  import { icon } from '../../lib/icons.js';
   import * as m from '../../paraglide/messages.js';
   import { setLocale } from '../../paraglide/runtime.js';
 
@@ -487,87 +327,92 @@ const COLUMNS = [
 
   setLocale(locale, { reload: false });
 
-  const typeStrip = document.getElementById('type-strip');
-  const controls = document.getElementById('controls');
-  const searchInput = document.getElementById('q');
-  const rows = document.getElementById('rows');
-  const count = document.getElementById('count');
-  const pageLabel = document.getElementById('page-label');
-  const previousPage = document.getElementById('previous-page');
-  const nextPage = document.getElementById('next-page');
-  const currencyButtons = controls.querySelectorAll('[data-currency]');
-  const sortButtons = document.querySelectorAll('[data-sort]');
-  const checkboxes = controls.querySelectorAll('input[type="checkbox"][name]');
-  const includeDividends = document.getElementById('include-dividends');
-  const compareBar = document.getElementById('compare-bar');
-  const compareLink = document.getElementById('compare-link');
-  const compareClear = document.getElementById('compare-clear');
+  const byId = (id) => document.getElementById(id);
 
-  const TEXT_SORTS = new Set(['name']);
-  const BOOLEAN_KEYS = ['sharia', 'bibit', 'makmur', 'inactive'];
+  const explorer = byId('explorer');
+  const typeCards = byId('type-cards');
+  const toolbar = byId('toolbar');
+  const searchInput = byId('q');
+  const searchClear = byId('search-clear');
+  const rows = byId('rows');
+  const table = byId('funds-table');
+  const frame = byId('table-frame');
+  const emptyState = byId('empty-state');
+  const count = byId('count');
+  const filterChips = byId('filter-chips');
+  const clearAll = byId('clear-all');
+  const pageLabel = byId('page-label');
+  const pageOf = byId('page-of');
+  const previousPage = byId('previous-page');
+  const nextPage = byId('next-page');
+  const pageSize = byId('page-size');
+  const sortSelect = byId('sort-select');
+  const sortDirection = byId('sort-direction');
+  const includeDividends = byId('include-dividends');
+  const filtersDialog = byId('filters-dialog');
+  const filtersOpen = byId('filters-open');
+  const filtersBadge = byId('filters-badge');
+  const filtersShow = byId('filters-show');
+  const columnsMenu = byId('columns-menu');
+  const csvButton = byId('csv-button');
+  const compareBar = byId('compare-bar');
+  const compareLink = byId('compare-link');
+  const compareClear = byId('compare-clear');
+  const currencyButtons = document.querySelectorAll('[data-currency]');
+  const toggleButtons = document.querySelectorAll('[data-toggle]');
+  const sortButtons = table.querySelectorAll('[data-sort]');
 
-  let state = readStateFromUrl();
+  let state = parseState(location.search);
   let compared = readTray();
+  let columns = readColumns();
   let data = null;
   let funds = [];
-  let dataDate = '';
-
-  function readStateFromUrl() {
-    const params = new URLSearchParams(location.search);
-    const next = { ...DEFAULT_STATE };
-
-    next.q = params.get('q') ?? '';
-    next.type = params.get('type') ?? '';
-    next.currency = params.get('currency') ?? '';
-    next.sort = parseSortKey(params.get('sort'));
-    next.dir = params.get('dir') === 'asc' ? 1 : params.get('dir') === 'desc' ? -1 : TEXT_SORTS.has(next.sort) ? 1 : -1;
-    next.page = Math.max(0, Number(params.get('page') ?? 1) - 1) || 0;
-
-    for (const key of BOOLEAN_KEYS) {
-      next[key] = params.get(key) === '1';
-    }
-
-    return next;
-  }
+  let matching = [];
+  let chips = [];
 
   function writeStateToUrl() {
-    const params = new URLSearchParams();
-
-    for (const key of ['q', 'type', 'currency']) {
-      if (state[key]) {
-        params.set(key, state[key]);
-      }
-    }
-
-    for (const key of BOOLEAN_KEYS) {
-      if (state[key]) {
-        params.set(key, '1');
-      }
-    }
-
-    if (state.sort !== DEFAULT_STATE.sort || state.dir !== DEFAULT_STATE.dir) {
-      params.set('sort', state.sort);
-      params.set('dir', state.dir === 1 ? 'asc' : 'desc');
-    }
-
-    if (state.page > 0) {
-      params.set('page', String(state.page + 1));
-    }
-
-    const query = params.toString();
+    const query = serializeState(state);
 
     history.replaceState(null, '', query ? `?${query}` : location.pathname);
   }
 
+  function parseLimit(text) {
+    return text.trim() === '' || !Number.isFinite(Number(text)) ? null : Number(text);
+  }
+
+  // The panel's fields are filled when it opens, not on every change: rewriting a field the reader is typing in would eat the keystrokes.
+  function syncFiltersDialog() {
+    for (const input of filtersDialog.querySelectorAll('input[type="number"]')) {
+      input.value = state[input.name] ?? '';
+    }
+
+    const managerList = byId('manager-list');
+
+    for (const box of filtersDialog.querySelectorAll('input[name="manager"]')) {
+      box.checked = state.managers.includes(box.value);
+    }
+
+    // The chosen managers come first, so they are in view when the panel opens.
+    for (const box of [...managerList.querySelectorAll('input:checked')].reverse()) {
+      managerList.prepend(box.closest('li'));
+    }
+  }
+
   function syncControls() {
     searchInput.value = state.q;
+    searchClear.hidden = state.q === '';
+    includeDividends.checked = readIncludeDividends();
+    sortSelect.value = state.sort;
+    pageSize.value = String(state.size);
+    sortDirection.dataset.dir = state.dir === 1 ? 'asc' : 'desc';
+    sortDirection.title = state.dir === 1 ? m.sort_asc() : m.sort_desc();
 
     for (const button of currencyButtons) {
       button.setAttribute('aria-pressed', String(button.dataset.currency === state.currency));
     }
 
-    for (const checkbox of checkboxes) {
-      checkbox.checked = state[checkbox.name];
+    for (const button of toggleButtons) {
+      button.setAttribute('aria-pressed', String(state[button.dataset.toggle]));
     }
 
     for (const button of sortButtons) {
@@ -579,22 +424,47 @@ const COLUMNS = [
         th.removeAttribute('aria-sort');
       }
     }
+
+    const advancedCount = advancedFilterCount(state);
+
+    filtersBadge.hidden = advancedCount === 0;
+    filtersBadge.textContent = String(advancedCount);
+
+    chips = activeFilters(state, locale);
+    filterChips.innerHTML = chips
+      .map((chip, index) => `<button type="button" class="chip filter-chip" data-clear-chip="${index}" aria-label="${escapeHtml(m.remove_filter({ label: chip.label }))}">${escapeHtml(chip.label)}${icon('x', { size: 14 })}</button>`)
+      .join('');
+    clearAll.hidden = !hasActiveFilters(state);
   }
 
-  // On a narrow screen the strip scrolls sideways, and the selected type may start out of view.
-  function revealSelectedType() {
-    const selected = typeStrip.querySelector('[aria-pressed="true"]');
+  function syncColumns() {
+    table.dataset.show = columns.length > 0 ? columns.join(' ') : 'none';
 
-    if (!selected) {
-      return;
+    for (const box of columnsMenu.querySelectorAll('[data-column]')) {
+      box.checked = columns.includes(box.dataset.column);
     }
 
-    const left = selected.offsetLeft - typeStrip.offsetLeft;
-    const right = left + selected.offsetWidth;
+    for (const button of columnsMenu.querySelectorAll('[data-preset]')) {
+      const preset = COLUMN_PRESETS.find((candidate) => candidate.key === button.dataset.preset);
+      const isShowing = preset.columns.length === columns.length && preset.columns.every((key) => columns.includes(key));
 
-    if (left < typeStrip.scrollLeft || right > typeStrip.scrollLeft + typeStrip.clientWidth) {
-      typeStrip.scrollLeft = left;
+      button.setAttribute('aria-pressed', String(isShowing));
     }
+
+    syncWidth();
+  }
+
+  function syncDensity() {
+    const density = table.dataset.density;
+
+    for (const button of columnsMenu.querySelectorAll('[data-density]')) {
+      button.setAttribute('aria-pressed', String(button.dataset.density === density));
+    }
+  }
+
+  // A table wider than the page scrolls inside its frame, and its header sticks to the frame instead of the page.
+  function syncWidth() {
+    frame.classList.toggle('is-wide', table.offsetWidth > frame.offsetWidth);
   }
 
   function syncCompare() {
@@ -612,23 +482,30 @@ const COLUMNS = [
   }
 
   function render() {
-    const matching = sortFunds(filterFunds(funds, state), state.sort, state.dir);
-    const pageCount = Math.max(1, Math.ceil(matching.length / PAGE_SIZE));
+    matching = sortFunds(filterFunds(funds, state), state.sort, state.dir);
+
+    const pageCount = Math.max(1, Math.ceil(matching.length / state.size));
 
     state.page = Math.min(state.page, pageCount - 1);
 
-    const first = matching.length === 0 ? 0 : state.page * PAGE_SIZE + 1;
-    const last = Math.min(matching.length, (state.page + 1) * PAGE_SIZE);
+    const first = matching.length === 0 ? 0 : state.page * state.size + 1;
+    const last = Math.min(matching.length, (state.page + 1) * state.size);
 
-    typeStrip.innerHTML = renderTypeStrip(funds, state, locale);
-    revealSelectedType();
-    rows.innerHTML = renderRows(matching, state, dataDate, locale, new Set(compared));
+    typeCards.innerHTML = renderTypeCards(funds, state, locale);
+    rows.innerHTML = renderRows(matching, state, data.date, locale, new Set(compared));
+    table.hidden = matching.length === 0;
+    emptyState.hidden = matching.length > 0;
+    byId('empty-text').textContent = m.empty_text({ hint: state.inactive ? m.empty_hint() : m.empty_hint_inactive() });
     count.textContent = fundCountLabel(matching.length, locale);
     pageLabel.textContent = m.pager_range({ first: formatCount(first, locale), last: formatCount(last, locale), total: formatCount(matching.length, locale) });
+    pageOf.textContent = m.pager_page({ page: state.page + 1, pages: formatCount(pageCount, locale) });
     previousPage.disabled = state.page === 0;
     nextPage.disabled = state.page >= pageCount - 1;
+    filtersShow.textContent = m.filters_show({ funds: fundCountLabel(matching.length, locale) });
+    csvButton.disabled = matching.length === 0;
     syncControls();
     syncCompare();
+    syncWidth();
     writeStateToUrl();
   }
 
@@ -641,32 +518,62 @@ const COLUMNS = [
     }
   }
 
-  typeStrip.addEventListener('click', (event) => {
-    const cell = event.target.closest('[data-type]');
+  typeCards.addEventListener('click', (event) => {
+    const card = event.target.closest('[data-type]');
 
-    if (cell) {
-      update({ type: cell.dataset.type });
+    if (card) {
+      update({ type: card.dataset.type });
     }
   });
 
   searchInput.addEventListener('input', () => update({ q: searchInput.value }));
 
+  searchInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      explorer.scrollIntoView({ block: 'start' });
+    }
+  });
+
+  searchClear.addEventListener('click', () => {
+    update({ q: '' });
+    searchInput.focus();
+  });
+
   for (const button of currencyButtons) {
     button.addEventListener('click', () => update({ currency: button.dataset.currency }));
   }
 
-  for (const checkbox of checkboxes) {
-    checkbox.addEventListener('change', () => update({ [checkbox.name]: checkbox.checked }));
+  for (const button of toggleButtons) {
+    button.addEventListener('click', () => update({ [button.dataset.toggle]: !state[button.dataset.toggle] }));
   }
 
   for (const button of sortButtons) {
     button.addEventListener('click', () => {
       const key = button.dataset.sort;
-      const dir = key === state.sort ? -state.dir : TEXT_SORTS.has(key) ? 1 : -1;
 
-      update({ sort: key, dir });
+      update({ sort: key, dir: key === state.sort ? -state.dir : defaultDirection(key) });
     });
   }
+
+  sortSelect.addEventListener('change', () => update({ sort: sortSelect.value, dir: defaultDirection(sortSelect.value) }));
+  sortDirection.addEventListener('click', () => update({ dir: -state.dir }));
+  pageSize.addEventListener('change', () => update({ size: Number(pageSize.value) }));
+
+  filterChips.addEventListener('click', (event) => {
+    const chip = event.target.closest('[data-clear-chip]');
+
+    if (chip) {
+      update(chips[Number(chip.dataset.clearChip)].clear);
+    }
+  });
+
+  function clearEverything() {
+    update(clearedFilters(state));
+    syncFiltersDialog();
+  }
+
+  clearAll.addEventListener('click', clearEverything);
+  byId('empty-clear').addEventListener('click', clearEverything);
 
   function turnPage(step) {
     // The build-time page has no data behind it yet; turning it would render an empty table.
@@ -676,7 +583,7 @@ const COLUMNS = [
 
     state.page += step;
     render();
-    rows.closest('table').scrollIntoView({ block: 'start' });
+    explorer.scrollIntoView({ block: 'start' });
   }
 
   previousPage.addEventListener('click', () => turnPage(-1));
@@ -724,13 +631,138 @@ const COLUMNS = [
 
     if (data) {
       funds = prepareFunds(data, includeDividends.checked);
-      update({});
+      update({ page: state.page });
     }
   });
 
-  includeDividends.checked = readIncludeDividends();
+  // The filter panel: a modal dialog, so the browser traps focus, closes it on Escape, and returns focus to the button.
+  filtersOpen.addEventListener('click', () => {
+    syncFiltersDialog();
+    filtersDialog.showModal();
+  });
+
+  filtersDialog.addEventListener('click', (event) => {
+    if (event.target === filtersDialog) {
+      filtersDialog.close();
+    }
+  });
+
+  let limitTimer;
+
+  filtersDialog.addEventListener('input', (event) => {
+    const input = event.target;
+
+    if (input.type !== 'number') {
+      return;
+    }
+
+    clearTimeout(limitTimer);
+    limitTimer = setTimeout(() => update({ [input.name]: parseLimit(input.value) }), 250);
+  });
+
+  filtersDialog.addEventListener('change', (event) => {
+    if (event.target.name === 'manager') {
+      update({ managers: [...filtersDialog.querySelectorAll('input[name="manager"]:checked')].map((box) => box.value) });
+    }
+  });
+
+  byId('manager-search').addEventListener('keydown', (event) => {
+    // Enter would submit the panel's form and close it.
+    if (event.key === 'Enter') {
+      event.preventDefault();
+    }
+  });
+
+  byId('manager-search').addEventListener('input', (event) => {
+    const words = event.target.value.toLowerCase().split(/\s+/).filter(Boolean);
+    let shown = 0;
+
+    for (const item of byId('manager-list').children) {
+      item.hidden = !words.every((word) => item.dataset.name.includes(word));
+      shown += item.hidden ? 0 : 1;
+    }
+
+    byId('manager-none').hidden = shown > 0;
+  });
+
+  byId('filters-reset').addEventListener('click', () => {
+    update({ managers: [], ...Object.fromEntries([...filtersDialog.querySelectorAll('input[type="number"]')].map((input) => [input.name, null])) });
+    syncFiltersDialog();
+  });
+
+  // The columns menu and the info popover are native popovers; this places them under their buttons.
+  function placeUnder(popover) {
+    popover.addEventListener('beforetoggle', (event) => {
+      if (event.newState !== 'open') {
+        return;
+      }
+
+      const button = document.querySelector(`[popovertarget="${popover.id}"]`);
+      const rect = button.getBoundingClientRect();
+      const alignRight = rect.left > innerWidth / 2;
+
+      popover.style.top = `${rect.bottom + 8}px`;
+      popover.style.left = alignRight ? 'auto' : `${Math.max(rect.left, 8)}px`;
+      popover.style.right = alignRight ? `${Math.max(innerWidth - rect.right, 8)}px` : 'auto';
+    });
+  }
+
+  placeUnder(columnsMenu);
+  placeUnder(byId('dividends-info'));
+
+  columnsMenu.addEventListener('change', (event) => {
+    if (event.target.dataset.column) {
+      columns = [...columnsMenu.querySelectorAll('[data-column]')].filter((box) => box.checked).map((box) => box.dataset.column);
+      writeColumns(columns);
+      syncColumns();
+    }
+  });
+
+  columnsMenu.addEventListener('click', (event) => {
+    const preset = event.target.closest('[data-preset]');
+    const density = event.target.closest('[data-density]');
+
+    if (preset) {
+      columns = COLUMN_PRESETS.find((candidate) => candidate.key === preset.dataset.preset).columns;
+      writeColumns(columns);
+      syncColumns();
+    }
+
+    if (density) {
+      table.dataset.density = density.dataset.density;
+      writeDensity(density.dataset.density);
+      syncDensity();
+    }
+  });
+
+  csvButton.addEventListener('click', () => {
+    const file = new Blob([buildCsv(matching, columns)], { type: 'text/csv;charset=utf-8' });
+    const link = document.createElement('a');
+
+    link.href = URL.createObjectURL(file);
+    link.download = `reksadana-id-${data.date}.csv`;
+    link.click();
+    URL.revokeObjectURL(link.href);
+  });
+
+  // The toolbar sticks under the header, and the table header sticks under the toolbar.
+  new ResizeObserver(() => {
+    document.documentElement.style.setProperty('--toolbar-h', `${toolbar.offsetHeight}px`);
+    syncWidth();
+  }).observe(toolbar);
+
+  new ResizeObserver(syncWidth).observe(frame);
+
+  table.dataset.density = readDensity();
+  syncColumns();
+  syncDensity();
   syncControls();
   syncCompare();
+
+  // A shared link opens a filtered view, so the build-time rows, which are the default view, would flash first.
+  if (serializeState(state) !== '') {
+    rows.innerHTML = renderSkeletonRows(state.size);
+  }
 
   data = await getJson('/explorer.json');
 
@@ -738,7 +770,6 @@ const COLUMNS = [
     count.textContent = m.fund_list_failed();
   } else {
     funds = prepareFunds(data, includeDividends.checked);
-    dataDate = data.date;
     render();
   }
 </script>

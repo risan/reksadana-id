@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Decides which sources the scrape workflow runs and prints one `name=true|false` line per source.
 # Usage: decide-sources.sh [requested-source] [date]
-#   requested-source: bibit, kontan, kontan-full, makmur, bareksa, bareksa-profiles, benchmarks, macro, ojk, or all.
-#     Empty means "by the date".
+#   requested-source: bibit, kontan, kontan-full, makmur, bareksa, bareksa-nav, bareksa-nav-all, bareksa-profiles,
+#     benchmarks, macro, ojk, or all. Empty means "by the date".
 #   date: any `date -d` value, to try another moment than now (UTC).
 set -euo pipefail
 
@@ -18,6 +18,8 @@ kontan=false
 kontan_full=false
 makmur=false
 bareksa=false
+bareksa_nav=false
+bareksa_nav_all=false
 bareksa_profiles=false
 benchmarks=false
 macro=false
@@ -29,11 +31,13 @@ case "$requested" in
   kontan-full) kontan_full=true ;;
   makmur) makmur=true ;;
   bareksa) bareksa=true ;;
+  bareksa-nav) bareksa_nav=true ;;
+  bareksa-nav-all) bareksa_nav_all=true ;;
   bareksa-profiles) bareksa_profiles=true ;;
   benchmarks) benchmarks=true ;;
   macro) macro=true ;;
   ojk) ojk=true ;;
-  all) bibit=true; kontan=true; makmur=true; bareksa=true; bareksa_profiles=true; benchmarks=true; macro=true; ojk=true ;;
+  all) bibit=true; kontan=true; makmur=true; bareksa=true; bareksa_nav=true; bareksa_profiles=true; benchmarks=true; macro=true; ojk=true ;;
   "")
     # The run starts in the evening UTC, so Saturday here is Sunday morning in Jakarta.
     bibit=true
@@ -48,12 +52,16 @@ case "$requested" in
 
     if [ "$weekday" = 6 ]; then
       makmur=true
+      # Every day the NAV of the funds that have a recent one; on Saturday all funds, which includes those.
+      bareksa_nav_all=true
 
       if [ "$day_of_month" -le 7 ]; then
         kontan_full=true
       else
         kontan=true
       fi
+    else
+      bareksa_nav=true
     fi
 
     if [ "$day_of_month" = 1 ]; then
@@ -66,6 +74,6 @@ case "$requested" in
     ;;
 esac
 
-for output in bibit=$bibit kontan=$kontan kontan_full=$kontan_full makmur=$makmur bareksa=$bareksa bareksa_profiles=$bareksa_profiles benchmarks=$benchmarks macro=$macro ojk=$ojk; do
+for output in bibit=$bibit kontan=$kontan kontan_full=$kontan_full makmur=$makmur bareksa=$bareksa bareksa_nav=$bareksa_nav bareksa_nav_all=$bareksa_nav_all bareksa_profiles=$bareksa_profiles benchmarks=$benchmarks macro=$macro ojk=$ojk; do
   echo "$output"
 done

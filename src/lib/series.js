@@ -65,33 +65,69 @@ function areNeighbours(earlier, later) {
 
 const SPIKE_MOVE = 0.15;
 const SPIKE_RETURN = 0.05;
+const MAX_EXCURSION_ROWS = 10;
 
-// A point far from both neighbours while the neighbours agree is a source error, not a market move.
-// Across a gap in the history nothing is known about the days between, so nothing is dropped there.
-function dropSpikes(points) {
-  return points.filter((point, index) => {
-    const previous = points[index - 1];
-    const next = points[index + 1];
+// How many rows from `start` on are an excursion: every one of them far from the NAV before it, followed by a
+// return to within a few percent of that NAV. Zero when they are not, or when a gap hides the days between.
+function excursionLength(points, start, before) {
+  if (!areNeighbours(before, points[start])) {
+    return 0;
+  }
 
-    if (!previous || !next || !areNeighbours(previous, point) || !areNeighbours(point, next)) {
-      return true;
+  for (let length = 1; length <= MAX_EXCURSION_ROWS; length++) {
+    const member = points[start + length - 1];
+    const next = points[start + length];
+
+    if (Math.abs(member.value / before.value - 1) <= SPIKE_MOVE || !next || !areNeighbours(member, next)) {
+      return 0;
     }
 
-    const moveIn = point.value / previous.value - 1;
-    const moveOut = next.value / point.value - 1;
-    const netMove = next.value / previous.value - 1;
+    if (Math.abs(next.value / before.value - 1) < SPIKE_RETURN) {
+      return length;
+    }
+  }
 
-    return !(Math.abs(moveIn) > SPIKE_MOVE && Math.abs(moveOut) > SPIKE_MOVE && Math.abs(netMove) < SPIKE_RETURN);
-  });
+  return 0;
+}
+
+// A few rows far from both sides, while the NAV on either side agrees, are a source error and not a market move:
+// one wrong day, or a stretch of days in which a source served another fund's NAV.
+// Across a gap in the history nothing is known about the days between, so nothing is dropped there.
+export function dropSpikes(points) {
+  const kept = [];
+  let index = 0;
+
+  while (index < points.length) {
+    const length = kept.length > 0 ? excursionLength(points, index, kept.at(-1)) : 0;
+
+    if (length > 0) {
+      index += length;
+    } else {
+      kept.push(points[index]);
+      index++;
+    }
+  }
+
+  return kept;
 }
 
 const FROZEN_AFTER_DAYS = 31;
+
+const decimalsOf = (value) => (String(value).split('.')[1] ?? '').length;
+
+// Sources round differently (Kontan keeps two decimals, Bibit four), so two NAVs are the same when they agree at
+// the coarser of their two precisions. Two values of one source are compared as they are.
+function isSameNav(a, b) {
+  const scale = 10 ** Math.min(decimalsOf(a), decimalsOf(b));
+
+  return Math.round(a * scale) === Math.round(b * scale);
+}
 
 // The date the series' final value first appeared, counting only the unbroken run at its end.
 function startOfFinalRun(points) {
   let index = points.length - 1;
 
-  while (index > 0 && points[index - 1].value === points.at(-1).value) {
+  while (index > 0 && isSameNav(points[index - 1].value, points.at(-1).value)) {
     index--;
   }
 
@@ -117,13 +153,13 @@ function frozenEnd(points, sourceLists) {
   const candidates = [points.find((point) => point.date === lastChange)];
 
   for (const list of sourceLists) {
-    if (list.length === 0 || list.at(-1).value !== finalValue) {
+    if (list.length === 0 || !isSameNav(list.at(-1).value, finalValue)) {
       continue;
     }
 
     const start = startOfFinalRun(list);
 
-    if (points.every((point) => point.date < start || point.value === finalValue)) {
+    if (points.every((point) => point.date < start || isSameNav(point.value, finalValue))) {
       candidates.push(list.find((point) => point.date === start));
     }
   }
@@ -175,6 +211,14 @@ function agreeOnOverlap(base, other) {
   const agreeing = shared.filter((point) => Math.abs(point.value / baseByDate.get(point.date) - 1) <= OVERLAP_TOLERANCE);
 
   return shared.length > 0 && agreeing.length / shared.length >= OVERLAP_AGREEING_SHARE;
+}
+
+const LONG_GAP_DAYS = 365;
+
+// After a gap of over a year a similar-looking value proves nothing (a source can carry another fund's NAV),
+// so a newer source joins only if it also agrees with the history where the two overlap.
+function isVouchedAcrossGap(base, other, firstNewPoint) {
+  return daysBetween(base.at(-1).date, firstNewPoint.date) <= LONG_GAP_DAYS || agreeOnOverlap(base, other);
 }
 
 const LAG_MIN_CHANGES = 5;
@@ -280,7 +324,7 @@ export function pickNavHistory(fund) {
   for (const name of ['bibit', 'kontan', 'bareksa']) {
     const newer = sources[name].filter((point) => point.date > baseEnd.date);
 
-    if (name === primary || newer.length === 0 || !continues(baseEnd, newer[0])) {
+    if (name === primary || newer.length === 0 || !continues(baseEnd, newer[0]) || !isVouchedAcrossGap(base, sources[name], newer[0])) {
       continue;
     }
 
@@ -318,6 +362,34 @@ function isFarOff(value, reference) {
   return ratio > UNIT_ERROR_RATIO || ratio < 1 / UNIT_ERROR_RATIO;
 }
 
+const AUM_SPIKE_RATIO = 8;
+const AUM_NEIGHBOURS_AGREE_RATIO = 3;
+const ABSURD_AUM = 1e6;
+const ABSURD_AUM_RATIO = 1000;
+
+const isOffBy = (value, reference, factor) => value / reference > factor || value / reference < 1 / factor;
+
+// A month that jumps far from both neighbours while the neighbours agree is a unit or class error (Bareksa has
+// hundreds), and so is a figure under a million in a series that otherwise runs a thousand times higher.
+function dropAumErrors(points) {
+  const sortedValues = points.map((point) => point.value).sort((a, b) => a - b);
+  const median = sortedValues[sortedValues.length >> 1];
+
+  return points.filter((point, index) => {
+    const previous = points[index - 1];
+    const next = points[index + 1];
+
+    if (point.value < ABSURD_AUM && median >= point.value * ABSURD_AUM_RATIO) {
+      return false;
+    }
+
+    return !(previous && next
+      && isOffBy(point.value, previous.value, AUM_SPIKE_RATIO)
+      && isOffBy(point.value, next.value, AUM_SPIKE_RATIO)
+      && !isOffBy(next.value, previous.value, AUM_NEIGHBOURS_AGREE_RATIO));
+  });
+}
+
 // Some Bibit AUM figures are in the wrong unit: a USD fund in rupiah, a figure 1,000 times too big, or the
 // NAV in place of the AUM. Bareksa's figure for the same month catches those; smaller differences are real.
 function hasUnitError(bibitPoint, bareksaByMonth) {
@@ -330,9 +402,9 @@ function hasUnitError(bibitPoint, bareksaByMonth) {
 // (null when no source states it, which the pages then show without a currency).
 export function pickAumHistory(fund) {
   const key = fundCurrency(fund) === 'USD' ? 'aum_usd' : 'aum_idr';
-  const bareksa = cleanPoints(fund.bareksa?.aum ?? [], key, 'bareksa', key === 'aum_usd' ? 'USD' : 'IDR');
+  const bareksa = dropAumErrors(cleanPoints(fund.bareksa?.aum ?? [], key, 'bareksa', key === 'aum_usd' ? 'USD' : 'IDR'));
   const bareksaByMonth = new Map(bareksa.map((point) => [point.date.slice(0, 7), point.value]));
-  const bibitAll = cleanPoints(fund.aum ?? [], 'aum', 'bibit', fundCurrency(fund));
+  const bibitAll = dropAumErrors(cleanPoints(fund.aum ?? [], 'aum', 'bibit', fundCurrency(fund)));
   const bibit = bibitAll.filter((point) => !hasUnitError(point, bareksaByMonth));
   const latestIsWrong = bibitAll.length > 0 && hasUnitError(bibitAll.at(-1), bareksaByMonth);
 
