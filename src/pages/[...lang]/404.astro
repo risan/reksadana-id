@@ -1,14 +1,74 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { anchor, localePaths, localizeHref } from '../../lib/i18n.js';
+import { localePaths, localizeHref } from '../../lib/i18n.js';
+import { icon } from '../../lib/icons.js';
 import * as m from '../../paraglide/messages.js';
 
 export const getStaticPaths = () => localePaths();
 
 const locale = Astro.currentLocale ?? 'id';
+
+const LINKS = [
+  ['/', m.nav_funds(), 'table-2'],
+  ['/compare/', m.nav_compare(), 'git-compare'],
+  ['/download/', m.nav_download(), 'download'],
+  ['/api/', m.nav_api(), 'braces'],
+];
 ---
 
-<Base title={m.not_found_title()} indexable={false}>
-  <h1 class="page-title">{m.not_found_title()}</h1>
-  <p class="lede" set:html={m.not_found_text({ fundList: anchor(localizeHref('/', locale), m.not_found_fund_list()), downloadPage: anchor(localizeHref('/download/', locale), m.not_found_download_page()) })} />
+<Base title={m.not_found_title()} indexable={false} alternatePath="/">
+  <section class="empty-state kawung-bg">
+    <p class="not-found-code" aria-hidden="true">404</p>
+    <h1 class="page-title">{m.not_found_title()}</h1>
+    <p class="lede">{m.not_found_text()}</p>
+    <form class="not-found-search" action={localizeHref('/', locale)} method="get" role="search">
+      <label class="search">
+        <span class="visually-hidden">{m.search_label()}</span>
+        <Fragment set:html={icon('search')} />
+        <input name="q" type="search" placeholder={m.search_placeholder()} autocomplete="off" spellcheck="false" />
+      </label>
+      <button class="btn btn-primary" type="submit">{m.search_button()}</button>
+    </form>
+    <nav class="not-found-links">
+      {LINKS.map(([href, label, iconName]) => <a class="btn" href={localizeHref(href, locale)}><Fragment set:html={icon(iconName)} />{label}</a>)}
+    </nav>
+  </section>
 </Base>
+
+<style>
+  .empty-state {
+    margin-top: var(--s-5);
+  }
+
+  .not-found-code {
+    color: var(--gold);
+    font-family: var(--serif);
+    font-size: var(--fs-4xl);
+    font-weight: var(--fw-hero);
+    line-height: 1;
+  }
+
+  .not-found-search {
+    display: flex;
+    gap: var(--s-2);
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .not-found-search .search {
+    flex: 1;
+  }
+
+  .not-found-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--s-2);
+  }
+
+  @media (max-width: 719px) {
+    .not-found-search {
+      flex-direction: column;
+    }
+  }
+</style>

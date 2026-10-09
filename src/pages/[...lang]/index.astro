@@ -4,6 +4,7 @@ import { loadFundSummaries } from '../../lib/data.js';
 import { DEFAULT_STATE, PAGE_SIZE, filterFunds, fundCountLabel, prepareFunds, renderRows, renderTypeStrip, sortFunds } from '../../lib/explorer.js';
 import { formatCount } from '../../lib/format.js';
 import { anchor, localePaths, localizeHref } from '../../lib/i18n.js';
+import { icon } from '../../lib/icons.js';
 import * as m from '../../paraglide/messages.js';
 
 export const getStaticPaths = () => localePaths();
@@ -40,6 +41,7 @@ const COLUMNS = [
   <form class="controls" id="controls" onsubmit="return false">
     <label class="search">
       <span class="visually-hidden">{m.search_label()}</span>
+      <Fragment set:html={icon('search')} />
       <input id="q" name="q" type="search" placeholder={m.search_placeholder()} autocomplete="off" spellcheck="false" />
       <kbd aria-hidden="true">/</kbd>
     </label>
@@ -78,7 +80,7 @@ const COLUMNS = [
   </div>
 
   <div class="compare-bar" id="compare-bar" hidden>
-    <a class="btn btn-ink" id="compare-link" href={localizeHref('/compare/', locale)}></a>
+    <a class="btn btn-primary" id="compare-link" href={localizeHref('/compare/', locale)}></a>
     <button class="btn" type="button" id="compare-clear">{m.compare_clear()}</button>
   </div>
 
@@ -127,8 +129,8 @@ const COLUMNS = [
   }
 
   .type-cell[aria-pressed='true'] {
-    background: var(--ink);
-    color: var(--paper);
+    background: var(--accent-wash);
+    color: var(--accent-strong);
   }
 
   .type-cell:first-child[aria-pressed='true'] {
@@ -146,19 +148,19 @@ const COLUMNS = [
   .type-count {
     margin-left: auto;
     color: var(--muted);
-    font-size: 12px;
+    font-size: var(--fs-xs);
     font-weight: 400;
   }
 
   .type-en {
     color: var(--muted);
-    font-size: 12px;
+    font-size: var(--fs-xs);
     white-space: nowrap;
   }
 
   .type-median {
     margin-top: 5px;
-    font-size: 15px;
+    font-size: var(--fs-base);
     font-weight: 600;
     white-space: nowrap;
   }
@@ -166,7 +168,7 @@ const COLUMNS = [
   .type-median small {
     margin-left: 5px;
     color: var(--muted);
-    font-size: 11px;
+    font-size: var(--fs-xs);
     font-weight: 400;
   }
 
@@ -194,15 +196,11 @@ const COLUMNS = [
     flex: 0 1 340px;
   }
 
-  .search input {
-    width: 100%;
-    padding-right: 30px;
-  }
-
   .search kbd {
     position: absolute;
-    top: 7px;
-    right: 8px;
+    top: 50%;
+    right: var(--s-3);
+    transform: translateY(-50%);
   }
 
   .search input:focus + kbd,
@@ -220,10 +218,9 @@ const COLUMNS = [
   }
 
   .check input {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     margin: 0;
-    accent-color: var(--ink);
   }
 
   .result-count {
@@ -239,7 +236,6 @@ const COLUMNS = [
     position: sticky;
     top: 0;
     z-index: 1;
-    background: var(--paper);
   }
 
   .funds-table .sort {
@@ -279,10 +275,9 @@ const COLUMNS = [
   }
 
   .funds-table .c-compare input {
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     margin: 2px 0 0;
-    accent-color: var(--ink);
     cursor: pointer;
   }
 
@@ -292,12 +287,12 @@ const COLUMNS = [
 
   .compare-bar {
     position: sticky;
-    bottom: 0;
+    bottom: var(--tabbar-h);
     z-index: 2;
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 0;
+    gap: var(--s-2);
+    padding: var(--s-3) 0;
     border-top: 1px solid var(--rule-strong);
     background: var(--paper);
   }
@@ -323,13 +318,13 @@ const COLUMNS = [
   .funds-table .sub {
     margin-top: 1px;
     color: var(--muted);
-    font-size: 12px;
+    font-size: var(--fs-xs);
     font-weight: 400;
   }
 
   .funds-table .c-fund .sub .mono {
-    color: var(--faint);
-    font-size: 11px;
+    color: var(--muted);
+    font-size: var(--fs-xs);
   }
 
   .funds-table .c-1y {
@@ -346,13 +341,8 @@ const COLUMNS = [
   }
 
   .funds-table .tag {
-    font-size: 11px;
+    font-size: var(--fs-xs);
     line-height: 15px;
-  }
-
-  .tag-stale {
-    border-color: var(--warn);
-    color: var(--warn);
   }
 
   .flag {
@@ -363,7 +353,7 @@ const COLUMNS = [
     border-radius: 50%;
     background: var(--warn);
     color: var(--paper);
-    font-size: 10px;
+    font-size: var(--fs-xs);
     font-weight: 700;
     line-height: 13px;
     text-align: center;
@@ -423,7 +413,7 @@ const COLUMNS = [
     padding-top: 10px;
     border-top: 1px solid var(--rule);
     color: var(--ink-2);
-    font-size: 13.5px;
+    font-size: var(--fs-sm);
   }
 
   .method summary {
@@ -451,6 +441,12 @@ const COLUMNS = [
     .funds-table .c-1m,
     .funds-table .c-3y,
     .funds-table .c-buy {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .funds-table .c-spark {
       display: none;
     }
   }

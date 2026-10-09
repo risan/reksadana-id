@@ -307,8 +307,11 @@ export async function mountFundCharts(symbol, includeToggle) {
     });
   }
 
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+  const redrawCharts = () => {
     navChart?.redraw(false);
     aumChart?.redraw(false);
-  });
+  };
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', redrawCharts);
+  window.addEventListener('themechange', redrawCharts);
 }

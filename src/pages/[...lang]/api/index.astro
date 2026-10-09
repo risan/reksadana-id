@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import { anchor, localePaths, localizeHref } from '../../../lib/i18n.js';
+import { icon } from '../../../lib/icons.js';
 import * as m from '../../../paraglide/messages.js';
 
 export const getStaticPaths = () => localePaths();
@@ -60,19 +61,21 @@ const TOC = [
 ];
 ---
 
-<Base title="API" description={m.api_description()} section="api">
-  <h1 class="page-title">API</h1>
+<Base title={m.nav_api()} description={m.api_description()} section="api">
+  <h1 class="page-title">{m.nav_api()}</h1>
   <p class="lede">{m.api_lede()}</p>
 
   <div class="api-layout">
-    <nav class="api-toc" aria-label={m.api_toc_label()}>
-      <p class="small muted">{m.api_toc_title()}</p>
-      <ul>
-        {TOC.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}
-      </ul>
-    </nav>
+    <details class="api-toc" open>
+      <summary>{m.api_toc_title()}<Fragment set:html={icon('chevron-down')} /></summary>
+      <nav aria-label={m.api_toc_label()}>
+        <ul>
+          {TOC.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}
+        </ul>
+      </nav>
+    </details>
 
-    <div class="api-content">
+    <div class="api-content" data-copy-label={m.code_copy()} data-copied-label={m.code_copied()}>
       <div class="section">
         <h2 class="section-title">{m.api_quickstart_title()}</h2>
         <p set:html={m.api_quickstart_text()} />
@@ -84,66 +87,68 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
       <div class="section">
         <h2 class="section-title">{m.api_endpoints_title()}</h2>
         <p set:html={m.api_endpoints_text({ listLink: anchor('/api/funds.json', 'funds.json') })} />
-        <table class="tbl">
-          <thead>
-            <tr>
-              <th>{m.api_col_group()}</th>
-              <th>{m.api_col_path()}</th>
-              <th>{m.api_col_format()}</th>
-              <th>{m.api_col_purpose()}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th rowspan="1">{m.api_group_list()}</th>
-              <td><a href="#funds-json"><code>/api/funds.json</code></a></td>
-              <td>JSON</td>
-              <td>{m.api_purpose_list()}</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th rowspan="1">{m.api_group_fund()}</th>
-              <td><a href="#one-fund"><code>/api/funds/&lt;id&gt;.json</code></a></td>
-              <td>JSON</td>
-              <td>{m.api_purpose_fund()}</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th rowspan="1">{m.api_group_types()}</th>
-              <td><a href="#types-json"><code>/api/types.json</code></a></td>
-              <td>JSON</td>
-              <td>{m.api_purpose_types()}</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th rowspan="3">CSV</th>
-              <td><a href="#csv-funds"><code>/csv/funds.csv</code></a></td>
-              <td>CSV</td>
-              <td>{m.api_purpose_csv_funds()}</td>
-            </tr>
-            <tr>
-              <td><a href="#csv-nav"><code>/csv/nav/&lt;id&gt;.csv</code></a></td>
-              <td>CSV</td>
-              <td>{m.api_purpose_csv_nav()}</td>
-            </tr>
-            <tr>
-              <td><a href="#csv-aum"><code>/csv/aum/&lt;id&gt;.csv</code></a></td>
-              <td>CSV</td>
-              <td>{m.api_purpose_csv_aum()}</td>
-            </tr>
-          </tbody>
-          <tbody>
-            <tr>
-              <th rowspan="1">Zip</th>
-              <td><a href="#zip"><code>/download/&lt;name&gt;.zip</code></a></td>
-              <td>ZIP</td>
-              <td>{m.api_purpose_zip()}</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-scroll">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th>{m.api_col_group()}</th>
+                <th>{m.api_col_path()}</th>
+                <th>{m.api_col_format()}</th>
+                <th>{m.api_col_purpose()}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="1">{m.api_group_list()}</th>
+                <td><a href="#funds-json"><code>/api/funds.json</code></a></td>
+                <td>JSON</td>
+                <td>{m.api_purpose_list()}</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th rowspan="1">{m.api_group_fund()}</th>
+                <td><a href="#one-fund"><code>/api/funds/&lt;id&gt;.json</code></a></td>
+                <td>JSON</td>
+                <td>{m.api_purpose_fund()}</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th rowspan="1">{m.api_group_types()}</th>
+                <td><a href="#types-json"><code>/api/types.json</code></a></td>
+                <td>JSON</td>
+                <td>{m.api_purpose_types()}</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th rowspan="3">CSV</th>
+                <td><a href="#csv-funds"><code>/csv/funds.csv</code></a></td>
+                <td>CSV</td>
+                <td>{m.api_purpose_csv_funds()}</td>
+              </tr>
+              <tr>
+                <td><a href="#csv-nav"><code>/csv/nav/&lt;id&gt;.csv</code></a></td>
+                <td>CSV</td>
+                <td>{m.api_purpose_csv_nav()}</td>
+              </tr>
+              <tr>
+                <td><a href="#csv-aum"><code>/csv/aum/&lt;id&gt;.csv</code></a></td>
+                <td>CSV</td>
+                <td>{m.api_purpose_csv_aum()}</td>
+              </tr>
+            </tbody>
+            <tbody>
+              <tr>
+                <th rowspan="1">{m.api_group_zip()}</th>
+                <td><a href="#zip"><code>/download/&lt;name&gt;.zip</code></a></td>
+                <td>ZIP</td>
+                <td>{m.api_purpose_zip()}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div class="section">
@@ -167,26 +172,28 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
       <div class="section" id="funds-json">
         <h2 class="section-title"><code>GET /api/funds.json</code></h2>
         <p set:html={m.api_funds_text({ csvLink: anchor('#csv-funds', 'funds.csv') })} />
-        <table class="tbl">
-          <thead>
-            <tr>
-              <th>{m.api_col_field()}</th>
-              <th>{m.api_col_type()}</th>
-              <th>{m.api_col_meaning()}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              FUNDS_JSON_FIELDS.map(([field, type, meaning]) => (
-                <tr>
-                  <td><code>{field}</code></td>
-                  <td class="muted">{typeLabel(type)}</td>
-                  <td>{meaning}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
+        <div class="table-scroll">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th>{m.api_col_field()}</th>
+                <th>{m.api_col_type()}</th>
+                <th>{m.api_col_meaning()}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                FUNDS_JSON_FIELDS.map(([field, type, meaning]) => (
+                  <tr>
+                    <td><code>{field}</code></td>
+                    <td class="muted">{typeLabel(type)}</td>
+                    <td>{meaning}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
         <details>
           <summary>{m.api_example_response()}</summary>
           <pre><code>{`[
@@ -216,26 +223,28 @@ curl -s {ORIGIN}/api/funds.json | jq 'map(select(.active)) | length'</code></pre
       <div class="section" id="one-fund">
         <h2 class="section-title"><code>GET /api/funds/&lt;id&gt;.json</code></h2>
         <p set:html={m.api_fund_text()} />
-        <table class="tbl">
-          <thead>
-            <tr>
-              <th>{m.api_col_field()}</th>
-              <th>{m.api_col_type()}</th>
-              <th>{m.api_col_meaning()}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              ONE_FUND_FIELDS.map(([field, type, meaning]) => (
-                <tr>
-                  <td><code>{field}</code></td>
-                  <td class="muted">{typeLabel(type)}</td>
-                  <td>{meaning}</td>
-                </tr>
-              ))
-            }
-          </tbody>
-        </table>
+        <div class="table-scroll">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th>{m.api_col_field()}</th>
+                <th>{m.api_col_type()}</th>
+                <th>{m.api_col_meaning()}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                ONE_FUND_FIELDS.map(([field, type, meaning]) => (
+                  <tr>
+                    <td><code>{field}</code></td>
+                    <td class="muted">{typeLabel(type)}</td>
+                    <td>{meaning}</td>
+                  </tr>
+                ))
+              }
+            </tbody>
+          </table>
+        </div>
         <p class="muted small">{m.api_fund_more()}</p>
 
         <details>
@@ -366,66 +375,171 @@ RD1983,Insight Renewable Energy Fund,Insight-meti Renewable Energy Fund,"Insight
 </Base>
 
 <script>
+  import { icon } from '../../../lib/icons.js';
+
   // Show the real host in the examples instead of the placeholder.
   for (const node of document.querySelectorAll('[data-origin]')) {
     node.textContent = node.textContent.replaceAll('https://your-site.example', location.origin);
   }
+
+  const COPIED_MILLISECONDS = 1500;
+  const content = document.querySelector('.api-content');
+
+  for (const code of content.querySelectorAll('pre')) {
+    const block = document.createElement('div');
+    const button = document.createElement('button');
+    const status = document.createElement('span');
+
+    block.className = 'code-block';
+    button.type = 'button';
+    button.className = 'icon-btn code-copy';
+    button.title = content.dataset.copyLabel;
+    button.setAttribute('aria-label', content.dataset.copyLabel);
+    button.innerHTML = icon('copy');
+    status.className = 'visually-hidden';
+    status.setAttribute('role', 'status');
+
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(code.textContent);
+      } catch {
+        return;
+      }
+
+      button.innerHTML = icon('check');
+      status.textContent = content.dataset.copiedLabel;
+
+      setTimeout(() => {
+        button.innerHTML = icon('copy');
+        status.textContent = '';
+      }, COPIED_MILLISECONDS);
+    });
+
+    code.replaceWith(block);
+    block.append(code, button, status);
+  }
+
+  // The table of contents is always open beside the text on a wide screen, and folded away on a narrow one.
+  const toc = document.querySelector('.api-toc');
+  const wideScreen = window.matchMedia('(min-width: 1100px)');
+
+  const syncToc = () => {
+    toc.open = wideScreen.matches;
+  };
+
+  syncToc();
+  wideScreen.addEventListener('change', syncToc);
 </script>
 
 <style>
+  .api-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-5);
+    margin-top: var(--s-5);
+  }
+
   .api-toc {
+    border-radius: var(--r-md);
+    background: var(--surface);
+    box-shadow: var(--shadow-1);
+  }
+
+  .api-toc summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 44px;
+    padding: 0 var(--s-4);
+    font-weight: var(--fw-strong);
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .api-toc summary::-webkit-details-marker {
     display: none;
   }
 
-  .api-layout {
-    margin-top: 20px;
+  .api-toc[open] summary .icon {
+    transform: rotate(180deg);
+  }
+
+  .api-toc ul {
+    display: grid;
+    gap: var(--s-1);
+    margin: 0;
+    padding: 0 var(--s-4) var(--s-3);
+    list-style: none;
+  }
+
+  .api-toc a {
+    display: block;
+    padding: var(--s-1) 0;
+    color: var(--ink-2);
+  }
+
+  .api-content > .section:first-child {
+    margin-top: 0;
+  }
+
+  .api-content [id] {
+    scroll-margin-top: calc(var(--header-h) + var(--s-4));
+  }
+
+  .api-content p + .table-scroll,
+  .api-content p + pre,
+  .api-content p + :global(.code-block) {
+    margin-top: var(--s-3);
+  }
+
+  .api-content .table-scroll + .table-scroll,
+  .api-content .table-scroll + details,
+  .api-content .table-scroll + p {
+    margin-top: var(--s-3);
+  }
+
+  .api-content .tbl {
+    min-width: 560px;
+  }
+
+  details {
+    margin-top: var(--s-3);
+  }
+
+  details summary {
+    cursor: pointer;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-label);
+  }
+
+  details :global(.code-block),
+  details pre,
+  details p {
+    margin-top: var(--s-2);
   }
 
   @media (min-width: 1100px) {
     .api-layout {
-      display: grid;
-      grid-template-columns: 170px 1fr;
-      gap: 32px;
+      grid-template-columns: 200px minmax(0, 1fr);
+      gap: var(--s-6);
       align-items: start;
     }
 
     .api-toc {
       position: sticky;
-      top: 20px;
-      display: block;
+      top: calc(var(--header-h) + var(--s-5));
     }
 
-    .api-toc ul {
-      margin: 6px 0 0;
-      padding: 0;
-      list-style: none;
+    .api-toc summary {
+      min-height: 0;
+      padding-top: var(--s-4);
+      color: var(--muted);
+      font-size: var(--fs-sm);
+      pointer-events: none;
     }
 
-    .api-toc li + li {
-      margin-top: 6px;
+    .api-toc summary .icon {
+      display: none;
     }
-
-    .api-toc a {
-      color: var(--ink-2);
-    }
-  }
-
-  details {
-    margin-top: 10px;
-  }
-
-  details + details {
-    margin-top: 6px;
-  }
-
-  details summary {
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 13px;
-  }
-
-  details pre,
-  details p {
-    margin-top: 8px;
   }
 </style>

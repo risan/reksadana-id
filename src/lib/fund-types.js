@@ -1,17 +1,27 @@
 import * as m from '../paraglide/messages.js';
 
-// Bibit's type labels, in the order a reader looks for them, with an English name for each.
+// Bibit's type labels, in the order a reader looks for them, with an English name, a color tone (the
+// `.type-<tone>` classes in global.css), and an icon (src/lib/icons.js) for each.
 export const FUND_TYPES = [
-  { label: 'Pasar Uang', english: 'Money market' },
-  { label: 'Obligasi', english: 'Bonds' },
-  { label: 'Saham', english: 'Equity' },
-  { label: 'Campuran', english: 'Mixed' },
-  { label: 'Reksadana Global', english: 'Global' },
-  { label: 'Terproteksi', english: 'Capital protected' },
-  { label: 'Penyertaan Terbatas', english: 'Private placement' },
-  { label: 'Dana Investasi Real Estate', english: 'Real estate (DIRE)' },
-  { label: 'Benchmark', english: 'Gold ETFs', indonesian: 'ETF Emas' },
+  { label: 'Pasar Uang', english: 'Money market', tone: 'money', icon: 'wallet' },
+  { label: 'Obligasi', english: 'Bonds', tone: 'bond', icon: 'landmark' },
+  { label: 'Saham', english: 'Equity', tone: 'equity', icon: 'trending-up' },
+  { label: 'Campuran', english: 'Mixed', tone: 'mixed', icon: 'chart-pie' },
+  { label: 'Reksadana Global', english: 'Global', tone: 'global', icon: 'globe' },
+  { label: 'Terproteksi', english: 'Capital protected', tone: 'protected', icon: 'shield-check' },
+  { label: 'Penyertaan Terbatas', english: 'Private placement', tone: 'other', icon: 'layers' },
+  { label: 'Dana Investasi Real Estate', english: 'Real estate (DIRE)', tone: 'other', icon: 'layers' },
+  { label: 'Benchmark', english: 'Gold ETFs', indonesian: 'ETF Emas', tone: 'other', icon: 'layers' },
 ];
+
+const OTHER_TYPE_LOOK = { tone: 'other', icon: 'layers' };
+
+// The tone and icon of a type label; an unknown or empty label looks like the "other" group.
+export function typeLook(label) {
+  const type = FUND_TYPES.find((candidate) => candidate.label === label);
+
+  return type ? { tone: type.tone, icon: type.icon } : OTHER_TYPE_LOOK;
+}
 
 export function englishTypeName(label) {
   return FUND_TYPES.find((type) => type.label === label)?.english ?? null;

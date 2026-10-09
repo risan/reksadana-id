@@ -111,6 +111,7 @@ const holdings = fund.holding ?? [];
 const dividends = [...(fund.dividends ?? [])].sort((a, b) => b.date.localeCompare(a.date));
 const factsheets = [...(fund.documents?.factsheets ?? [])].filter((document) => isWebUrl(document.file)).sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
 const prospectus = [...(fund.documents?.prospectus ?? [])].filter((document) => isWebUrl(document.file)).reverse();
+const olderDocumentCount = factsheets.length - Math.min(3, factsheets.length) + Math.max(prospectus.length - 1, 0);
 const makmurDocuments = [
   [m.doc_prospectus(), makmur?.data.prospectus],
   [m.doc_factsheet(), makmur?.data.factsheet],
@@ -218,7 +219,7 @@ const sources = [
     </p>
     <p class="fund-compare">
       <button class="btn" type="button" id="compare-toggle" data-fund-id={id} hidden></button>
-      <a class="btn btn-ink" id="compare-open" href={href('/compare/')} hidden></a>
+      <a class="btn btn-primary" id="compare-open" href={href('/compare/')} hidden></a>
     </p>
   </header>
 
@@ -395,7 +396,7 @@ const sources = [
             {latestMix && (
               <figure class="mix-history">
                 <figcaption>
-                  <span>{m.asset_mix_history({ count: mixColumns.length })} <span class="muted">(Bareksa)</span></span>
+                  <span>{mixColumns.length === 1 ? m.asset_mix_history_one() : m.asset_mix_history({ count: mixColumns.length })} <span class="muted">(Bareksa)</span></span>
                   <span class="mix-history-key">
                     {ASSET_CLASSES.map((assetClass) => (
                       <span><i class="key-box" style={`background: ${assetClass.color}`}></i> {assetClass.label}</span>
@@ -447,7 +448,7 @@ const sources = [
           <section class="section">
             <h2 class="section-title">
               {m.dividends_title()}
-              <span class="aside">{m.dividends_aside({ count: dividends.length })}</span>
+              <span class="aside">{dividends.length === 1 ? m.dividends_aside_one() : m.dividends_aside({ count: dividends.length })}</span>
             </h2>
             <div class="table-scroll">
               <table class="tbl dividends-table">
@@ -494,7 +495,7 @@ const sources = [
             <h2 class="section-title">{m.buy_title()}</h2>
             {buyLinks.map((link) => (
               <div class="buy-row">
-                <a class="btn btn-ink" href={link.url} target="_blank" rel="sponsored noopener">{m.buy_open({ name: link.name })} &nearr;</a>
+                <a class="btn btn-primary" href={link.url} target="_blank" rel="sponsored noopener">{m.buy_open({ name: link.name })} &nearr;</a>
                 <span class="small muted">
                   {m.buy_referral_code()} <code>{link.code}</code>
                   <button class="copy" type="button" data-copy={link.code} data-copied={m.buy_copied()} hidden>{m.buy_copy()}</button>
@@ -551,7 +552,7 @@ const sources = [
             </ul>
             {(factsheets.length > 3 || prospectus.length > 1) && (
               <details class="doc-more">
-                <summary>{m.documents_older({ count: factsheets.length - Math.min(3, factsheets.length) + Math.max(prospectus.length - 1, 0) })}</summary>
+                <summary>{olderDocumentCount === 1 ? m.documents_older_one() : m.documents_older({ count: olderDocumentCount })}</summary>
                 <ul class="doc-list">
                   {prospectus.slice(1).map((document) => (
                     <li><a href={document.file}>{m.doc_prospectus()}</a> <span class="muted small">{document.name}</span></li>
@@ -615,7 +616,7 @@ const sources = [
     display: flex;
     gap: 6px;
     color: var(--muted);
-    font-size: 12.5px;
+    font-size: var(--fs-sm);
   }
 
   .crumbs a {
@@ -676,7 +677,7 @@ const sources = [
 
   .figures dt {
     color: var(--muted);
-    font-size: 12px;
+    font-size: var(--fs-xs);
   }
 
   .figures dd {
@@ -685,7 +686,7 @@ const sources = [
 
   .figure-value {
     margin-top: 2px;
-    font-size: 22px;
+    font-size: var(--fs-xl);
     font-weight: 600;
     letter-spacing: -0.01em;
     line-height: 1.2;
@@ -695,7 +696,7 @@ const sources = [
   .figure-value .unit {
     margin-left: 4px;
     color: var(--muted);
-    font-size: 12px;
+    font-size: var(--fs-xs);
     font-weight: 500;
     letter-spacing: 0;
   }
@@ -703,7 +704,7 @@ const sources = [
   .figure-sub {
     margin-top: 2px;
     color: var(--muted);
-    font-size: 12px;
+    font-size: var(--fs-xs);
   }
 
   .fund-grid {
@@ -724,7 +725,7 @@ const sources = [
     display: flex;
     gap: 14px;
     color: var(--ink-2);
-    font-size: 12.5px;
+    font-size: var(--fs-sm);
   }
 
   #range-readout {
@@ -737,7 +738,7 @@ const sources = [
 
   .chart-subtitle {
     margin: 14px 0 4px;
-    font-size: 12.5px;
+    font-size: var(--fs-sm);
     font-weight: 600;
   }
 
@@ -776,7 +777,7 @@ const sources = [
     margin: 8px 0 0;
     padding: 0;
     list-style: none;
-    font-size: 13px;
+    font-size: var(--fs-sm);
   }
 
   .mix-legend li {
@@ -801,7 +802,7 @@ const sources = [
     justify-content: space-between;
     gap: 4px 16px;
     margin-bottom: 6px;
-    font-size: 12.5px;
+    font-size: var(--fs-sm);
     font-weight: 600;
   }
 
@@ -827,7 +828,7 @@ const sources = [
     justify-content: space-between;
     margin-top: 4px;
     color: var(--muted);
-    font-size: 11.5px;
+    font-size: var(--fs-xs);
   }
 
   .holdings {
@@ -837,7 +838,7 @@ const sources = [
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 13px;
+    font-size: var(--fs-sm);
   }
 
   .holdings li {
@@ -861,7 +862,7 @@ const sources = [
     max-width: 72ch;
     margin-top: 8px;
     color: var(--ink-2);
-    font-size: 13.5px;
+    font-size: var(--fs-sm);
     line-height: 1.6;
     white-space: pre-line;
   }
@@ -894,7 +895,7 @@ const sources = [
     margin: 0;
     padding: 0;
     list-style: none;
-    font-size: 13.5px;
+    font-size: var(--fs-sm);
   }
 
   .doc-list li {
@@ -904,7 +905,7 @@ const sources = [
 
   .doc-more {
     margin-top: 6px;
-    font-size: 12.5px;
+    font-size: var(--fs-sm);
   }
 
   .doc-more summary {
@@ -940,7 +941,7 @@ const sources = [
     }
 
     .figure-value {
-      font-size: 19px;
+      font-size: var(--fs-xl);
     }
   }
 </style>

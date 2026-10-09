@@ -12,7 +12,7 @@ const MAIN_TYPES = [
   { key: 'Saham', label: 'Saham', english: 'Equity' },
   { key: 'Campuran', label: 'Campuran', english: 'Mixed' },
   { key: 'Reksadana Global', label: 'Global', english: 'Global' },
-  { key: 'Terproteksi', label: 'Terproteksi', english: 'Protected' },
+  { key: 'Terproteksi', label: 'Terproteksi', english: 'Capital protected' },
 ];
 
 export const TYPE_GROUPS = [{ key: '' }, ...MAIN_TYPES, { key: 'other' }];
@@ -24,7 +24,7 @@ function typeNames(group, locale) {
   }
 
   if (group.key === 'other') {
-    return { name: m.type_other(), note: 'RDPT, DIRE, ETF' };
+    return { name: m.type_other(), note: m.type_other_note() };
   }
 
   return locale === 'en' ? { name: group.english, note: group.label } : { name: group.label, note: '' };

@@ -189,6 +189,11 @@ Cloudflare's own docs: [Workers Builds](https://developers.cloudflare.com/worker
 
 The build fails if `dist/` has more than 19,000 files or a file over 24 MiB, because the free plan allows 20,000 files and 25 MiB per file. That is why the download page has one zip per source, and Bareksa's daily NAV is split into several zips by size (see `src/lib/archives.js`).
 
+## Credits
+
+- Icons are from [Lucide](https://lucide.dev) (ISC license). `src/lib/icons.js` holds the markup of the ones the site uses.
+- Fonts, through [Fontsource](https://fontsource.org): Plus Jakarta Sans (text and numbers), Newsreader (page titles), and Spline Sans Mono (code). All three are under the SIL Open Font License.
+
 ## Referral codes
 
 **Costs and minimums.** `loadFundRecord` merges them into `costs`, and every value keeps its `source`. The expense ratio is Bibit's `expenseratio.percentage` when it is a fraction between 0 and 0.1 (a few funds carry a raw number such as 4343.1, which is rejected), else Makmur's `expenseRatio` divided by 10,000, else unknown. The minimum purchase is listed per distributor: Bibit's `minbuy` only when the fund is buyable on Bibit, Makmur's `minFirstBuy` (both are rupiah amounts, also for USD funds, whose minimums there are of the size of rupiah ones), and Bareksa's `min_purchase` (the prospectus value). Each amount carries its own `currency`. The next purchase and the redemption minimum are Bareksa's. The maximum fees are Bareksa's, as `{ min, max }` fractions; Bibit's `fee` values are placeholders and are ignored. The custodian is Bareksa's, else Bibit's `custodian_bank`. A value no source has is `null` or an empty list, never 0, and the pages say "Not in our sources".
