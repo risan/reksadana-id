@@ -12,7 +12,7 @@ const MAIN_TYPES = [
   { key: 'Saham', label: 'Saham', english: 'Equity' },
   { key: 'Campuran', label: 'Campuran', english: 'Mixed' },
   { key: 'Reksadana Global', label: 'Global', english: 'Global' },
-  { key: 'Terproteksi', label: 'Terproteksi', english: 'Protected' },
+  { key: 'Terproteksi', label: 'Terproteksi', english: 'Capital protected' },
 ];
 
 export const TYPE_GROUPS = [{ key: '' }, ...MAIN_TYPES, { key: 'other' }];
