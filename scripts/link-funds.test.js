@@ -760,3 +760,27 @@ test('the ID of an excluded record that was published keeps pointing at the fund
 
   assert.deepEqual(result.registry.map((entry) => [entry.id, entry.current_id]), [['BRK10', 'BRK10'], ['KTN20', 'BRK10']]);
 });
+
+test('two empty Bibit shells with one name and no manager are one fund, but a shell never joins a fund with a manager', () => {
+  const shells = link([
+    record('bibit', 'RD2053', { name: 'Principal Index Idx30', manager: '' }),
+    record('bibit', 'RD2944', { name: 'Principal Index Idx30', manager: '' }),
+  ]);
+  const withManager = link([
+    record('bibit', 'RD2053', { name: 'Principal Index Idx30', manager: '' }),
+    record('bibit', 'RD2944', { name: 'Principal Index Idx30', manager: MANAGER }),
+  ]);
+  const withNav = link([
+    record('bibit', 'RD2053', { name: 'Principal Index Idx30', manager: '', nav: fourDecimalNav(3) }),
+    record('bibit', 'RD2944', { name: 'Principal Index Idx30', manager: '' }),
+  ]);
+  const spelledTwice = link([
+    record('bibit', 'RD2053', { name: 'Terproteksi Mandiri Seri 81', manager: '' }),
+    record('bibit', 'RD2944', { name: 'Terproteksi Mandiri Seri 81 ', manager: '' }),
+  ]);
+
+  assert.equal(shells.funds.length, 1);
+  assert.equal(withManager.funds.length, 2);
+  assert.equal(withNav.funds.length, 2);
+  assert.equal(spelledTwice.funds.length, 1);
+});

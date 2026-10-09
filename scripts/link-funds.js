@@ -505,6 +505,10 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
     }
   }
 
+  // Bibit lists about 65 old funds twice as empty shells: no manager, no NAV, and a fund file that is the same
+  // apart from the symbol. Nothing tells the two apart, so they are one fund.
+  const areEmptyShells = (a, b) => a.manager === '' && b.manager === '' && a.nav.dates.length === 0 && b.nav.dates.length === 0;
+
   // Bibit gives a fund a new symbol when it lists it again (RD846 and RD3820 are both Mandiri Dana Optima).
   // A manager never runs two funds of one name, so these merge unless their NAVs disagree.
   const namedBibitRecords = records.filter((record) => isFree(record) && record.source === 'bibit' && normalizeName(record.name) !== '');
@@ -512,7 +516,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
   for (const sameName of Map.groupBy(namedBibitRecords, (record) => normalizeName(record.name)).values()) {
     for (let first = 0; first < sameName.length; first++) {
       for (let second = first + 1; second < sameName.length; second++) {
-        if (hasSameKnownManager(sameName[first], sameName[second])) {
+        if (hasSameKnownManager(sameName[first], sameName[second]) || areEmptyShells(sameName[first], sameName[second])) {
           tryMerge(sameName[first], sameName[second], 'bibit-relisted');
         }
       }
