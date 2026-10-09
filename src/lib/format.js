@@ -136,3 +136,8 @@ export function formatMonth(date, locale) {
 export function formatCount(value, locale) {
   return formatDecimal(value, locale, 0);
 }
+
+// Text made safe to put into HTML.
+export function escapeHtml(text) {
+  return String(text ?? '').replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
+}

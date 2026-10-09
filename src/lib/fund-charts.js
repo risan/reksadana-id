@@ -4,7 +4,7 @@ import * as m from '../paraglide/messages.js';
 import { setLocale } from '../paraglide/runtime.js';
 import { rebaseBenchmark } from './benchmarks.js';
 import { fetchFundRecord, getJson } from './fetch-json.js';
-import { changeClass, formatChange, formatCompact, formatDate, formatMoney, formatMonth, formatMonthName, formatNav, formatNumber } from './format.js';
+import { changeClass, escapeHtml, formatChange, formatCompact, formatDate, formatMoney, formatMonth, formatMonthName, formatNav, formatNumber } from './format.js';
 import { dividendEvents, periodStartIndex, pickAumHistory, pickNavHistory, withDividendsReinvested } from './series.js';
 
 const RANGE_PERIODS = { '1M': '1m', '3M': '3m', '6M': '6m', YTD: 'ytd', '1Y': '1y', '3Y': '3y', '5Y': '5y', All: 'all' };
@@ -28,10 +28,6 @@ export function toSeconds(date) {
 
 export function toDate(seconds) {
   return new Date(seconds * 1000).toISOString().slice(0, 10);
-}
-
-function escapeHtml(text) {
-  return String(text).replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
 }
 
 function dateTicks(locale) {

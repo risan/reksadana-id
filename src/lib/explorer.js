@@ -2,7 +2,7 @@
 // and the filtering and sorting of the fund list. Runs at build time and in the browser.
 import * as m from '../paraglide/messages.js';
 import { decodeSummaries } from './explorer-data.js';
-import { formatCount, formatNumber } from './format.js';
+import { escapeHtml, formatCount, formatNumber } from './format.js';
 import { typeLook } from './fund-types.js';
 
 export const PAGE_SIZES = [25, 50, 100];
@@ -152,9 +152,8 @@ export function fundCountLabel(count, locale) {
   return count === 1 ? m.count_fund_one() : m.count_funds({ count: formatCount(count, locale) });
 }
 
-export function escapeHtml(text) {
-  return String(text ?? '').replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
-}
+// Other modules take it from here too.
+export { escapeHtml };
 
 export function searchTerms(query) {
   return query.toLowerCase().split(/\s+/).filter(Boolean);
