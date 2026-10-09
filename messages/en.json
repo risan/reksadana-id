@@ -101,7 +101,7 @@
   "inactive_since": "No NAV since {date}.",
   "inactive_no_nav": "No NAV reported.",
   "inactive_reason": "The fund may be closed, merged, or no longer reported.",
-  "data_freshness": "NAV from {source}, which is not updated daily: its data runs up to {date}.",
+  "data_freshness": "Latest NAV is from {date} ({source}).",
   "figure_nav": "NAV per unit",
   "figure_last_nav": "Last NAV",
   "figure_no_nav": "No NAV yet",
@@ -432,5 +432,20 @@
   "compare_count": "{count} of {max} picked",
   "compare_results_label": "Matching funds",
   "compare_best": "Best of the funds compared",
-  "compare_best_note": "A gold dot marks the best value in a row: the highest return, the smallest fall, the lowest expense ratio. It is not an overall ranking."
+  "compare_best_note": "A gold dot marks the best value in a row: the highest return, the smallest fall, the lowest expense ratio. It is not an overall ranking.",
+
+  "detail_ojk": "OJK",
+  "detail_ojk_aum": "Fund size per OJK",
+  "ojk_registered": "Registered",
+  "ojk_zero_row": "Zero assets in {month}",
+  "ojk_not_listed": "Not in OJK's newest list; last listed in {month}",
+  "ojk_zero_notice": "OJK reports zero assets for this fund in {month}: it may be dissolved, matured, or not launched yet.",
+  "ojk_spark_label": "OJK month-end fund size, {from} to {to}",
+  "glance_benchmark": "Over the same year, {name} moved {change}.",
+  "chart_compare_with": "Compare with",
+  "chart_compare_none": "None",
+  "benchmark_rate_note": "{name} is {rate} a year (as of {date}).",
+  "benchmark_load_failed": "The index failed to load. Try again.",
+
+  "benchmark_no_range": "This index has no data at the start of this range."
 }

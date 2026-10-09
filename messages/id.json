@@ -101,7 +101,7 @@
   "inactive_since": "Tidak ada NAB sejak {date}.",
   "inactive_no_nav": "Tidak ada NAB yang dilaporkan.",
   "inactive_reason": "Reksa dana ini mungkin sudah ditutup, digabung, atau tidak lagi dilaporkan.",
-  "data_freshness": "NAB dari {source}, yang tidak diperbarui setiap hari: datanya sampai {date}.",
+  "data_freshness": "NAB terbaru berasal dari {date} ({source}).",
   "figure_nav": "NAB per unit",
   "figure_last_nav": "NAB terakhir",
   "figure_no_nav": "Belum ada NAB",
@@ -432,5 +432,20 @@
   "compare_count": "{count} dari {max} dipilih",
   "compare_results_label": "Reksa dana yang cocok",
   "compare_best": "Terbaik di antara dana yang dibandingkan",
-  "compare_best_note": "Titik emas menandai nilai terbaik di satu baris: imbal hasil tertinggi, penurunan terkecil, expense ratio terendah. Ini bukan peringkat keseluruhan."
+  "compare_best_note": "Titik emas menandai nilai terbaik di satu baris: imbal hasil tertinggi, penurunan terkecil, expense ratio terendah. Ini bukan peringkat keseluruhan.",
+
+  "detail_ojk": "OJK",
+  "detail_ojk_aum": "Dana kelolaan menurut OJK",
+  "ojk_registered": "Terdaftar",
+  "ojk_zero_row": "Dana kelolaan nol pada {month}",
+  "ojk_not_listed": "Tidak ada di daftar OJK terbaru; terakhir tercatat {month}",
+  "ojk_zero_notice": "OJK mencatat dana kelolaan reksa dana ini nol pada {month}: mungkin sudah dibubarkan, jatuh tempo, atau belum diluncurkan.",
+  "ojk_spark_label": "Dana kelolaan akhir bulan menurut OJK, {from} sampai {to}",
+  "glance_benchmark": "Dalam setahun yang sama, {name} bergerak {change}.",
+  "chart_compare_with": "Bandingkan dengan",
+  "chart_compare_none": "Tidak ada",
+  "benchmark_rate_note": "{name} {rate} per tahun (per {date}).",
+  "benchmark_load_failed": "Data indeks gagal dimuat. Coba lagi.",
+
+  "benchmark_no_range": "Indeks ini belum punya data pada awal periode ini."
 }

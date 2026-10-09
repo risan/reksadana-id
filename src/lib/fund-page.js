@@ -106,3 +106,34 @@ export function profileSummary(profile) {
 
   return summary.length > MAX_SUMMARY_LENGTH ? `${summary.slice(0, MAX_SUMMARY_LENGTH)}…` : summary;
 }
+
+// "IHSG (Jakarta Composite Index)" is "IHSG" and "Jakarta Islamic Index (JII)" is "JII": the short name is the
+// abbreviation, whichever side of the brackets it is on. A name without brackets is already short.
+export function shortBenchmarkName(name) {
+  const [, outside, inside] = name.match(/^(.+?) \((.+)\)$/) ?? [];
+
+  if (outside === undefined) {
+    return name;
+  }
+
+  return inside.includes(' ') ? outside : inside;
+}
+
+// The points of a line through `values` (oldest first) that fills a box, as an SVG path. Null for fewer than two values.
+export function linePath(values, width, height) {
+  if (values.length < 2) {
+    return null;
+  }
+
+  const low = Math.min(...values);
+  const range = Math.max(...values) - low || 1;
+
+  return values
+    .map((value, index) => {
+      const x = (index / (values.length - 1)) * width;
+      const y = height - ((value - low) / range) * height;
+
+      return `${index === 0 ? 'M' : 'L'}${x.toFixed(1)} ${y.toFixed(1)}`;
+    })
+    .join('');
+}

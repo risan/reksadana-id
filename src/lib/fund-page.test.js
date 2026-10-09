@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { MIN_PEERS, TABLE_PERIODS, median, medianReturns, peerReturns, profileSummary, shareBeaten } from './fund-page.js';
+import { MIN_PEERS, TABLE_PERIODS, linePath, median, medianReturns, peerReturns, profileSummary, shareBeaten, shortBenchmarkName } from './fund-page.js';
 
 const fund = (type, return_1y, extra = {}) => ({ type, active: true, return_1y, total: null, ...extra });
 const bondFunds = [0.01, 0.02, 0.03, 0.04, 0.05].map((value) => fund('Obligasi', value));
@@ -68,4 +68,19 @@ test('a long summary is cut with an ellipsis', () => {
 
   assert.equal(summary.length, 221);
   assert.ok(summary.endsWith('…'));
+});
+
+test('a benchmark has a short name: the abbreviation, on either side of the brackets', () => {
+  assert.equal(shortBenchmarkName('IHSG (Jakarta Composite Index)'), 'IHSG');
+  assert.equal(shortBenchmarkName('IHSG (Indeks Harga Saham Gabungan)'), 'IHSG');
+  assert.equal(shortBenchmarkName('Jakarta Islamic Index (JII)'), 'JII');
+  assert.equal(shortBenchmarkName('BI-Rate (Bank Indonesia policy rate)'), 'BI-Rate');
+  assert.equal(shortBenchmarkName('Bareksa Fixed Income Fund Index'), 'Bareksa Fixed Income Fund Index');
+  assert.equal(shortBenchmarkName('LQ45'), 'LQ45');
+});
+
+test('a line path fills its box from the lowest to the highest value, and needs two values', () => {
+  assert.equal(linePath([1, 3, 2], 100, 10), 'M0.0 10.0L50.0 0.0L100.0 5.0');
+  assert.equal(linePath([5, 5], 10, 10), 'M0.0 10.0L10.0 10.0');
+  assert.equal(linePath([5], 10, 10), null);
 });

@@ -1,9 +1,9 @@
 ---
 import Base from '../../../layouts/Base.astro';
-import { fundIdOfBibitSymbol, fundPerformance, isActive, latestAum, listFundIds, loadFundRecord, loadFundSummaries, shortManagerName, staleSourceDate } from '../../../lib/data.js';
+import { fundBenchmarks, fundIdOfBibitSymbol, fundPerformance, isActive, latestAum, latestNavDate, listFundIds, loadBenchmarks, loadFundRecord, loadFundSummaries, shortManagerName, staleSourceDate } from '../../../lib/data.js';
 import { describeCosts } from '../../../lib/costs-text.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from '../../../lib/format.js';
-import { TABLE_PERIODS, medianReturns, peerReturns, profileSummary, shareBeaten } from '../../../lib/fund-page.js';
+import { TABLE_PERIODS, linePath, medianReturns, peerReturns, profileSummary, shareBeaten, shortBenchmarkName } from '../../../lib/fund-page.js';
 import { shariaText, typeLook, typeName } from '../../../lib/fund-types.js';
 import { localePaths, localizeHref } from '../../../lib/i18n.js';
 import { icon } from '../../../lib/icons.js';
@@ -31,6 +31,9 @@ const navValue = lastPoint?.value ?? null;
 const navDate = history.frozenSince ?? lastPoint?.date ?? null;
 const active = isActive(navDate, lastPoint?.source);
 const sourceDataDate = staleSourceDate(lastPoint?.source);
+// A source that refreshes daily is never worth a notice; one that trails the site's newest data by days is.
+const STALE_SOURCE_DAYS = 5;
+const isSourceBehind = sourceDataDate !== null && daysBetween(sourceDataDate, latestNavDate()) > STALE_SOURCE_DAYS;
 const currency = fundCurrency(fund);
 const aum = latestAum(fund);
 const aumPoints = pickAumHistory(fund).points;
@@ -142,6 +145,39 @@ const returnsNote = (isTotal) =>
     .filter(Boolean)
     .join(' ');
 
+const benchmarkMetadata = new Map(loadBenchmarks().map((series) => [series.id, series]));
+const benchmarks = fundBenchmarks(info, history).map((benchmark) => {
+  const name = benchmarkMetadata.get(benchmark.id).name[locale];
+
+  return { ...benchmark, name, shortName: shortBenchmarkName(name) };
+});
+const indexBenchmarks = benchmarks.filter((benchmark) => benchmark.returns !== null);
+const rateBenchmark = benchmarks.find((benchmark) => benchmark.returns === null);
+
+const ojk = fund.ojk;
+const ojkLatest = ojk?.months.at(-1) ?? null;
+const ojkMonth = ojkLatest ? formatMonth(`${ojkLatest.month}-01`, locale) : null;
+const ojkSparkPath = ojk && ojk.months.some((month) => month.aum > 0) ? linePath(ojk.months.map((month) => month.aum), 200, 36) : null;
+
+function ojkDetails() {
+  if (!ojk) {
+    return [];
+  }
+
+  if (ojk.status === 'registered') {
+    return [
+      [m.detail_ojk(), m.ojk_registered()],
+      [m.detail_ojk_aum(), `${formatMoney(ojkLatest.aum, locale, 'IDR')} · ${ojkMonth}`],
+    ];
+  }
+
+  if (ojk.status === 'zero_aum') {
+    return [[m.detail_ojk(), m.ojk_zero_row({ month: ojkMonth })]];
+  }
+
+  return [[m.detail_ojk(), m.ojk_not_listed({ month: ojkMonth }), true]];
+}
+
 const details = [
   [m.detail_type(), typeLabel === null ? null : `${typeLabel}${typeNote ? ` (${typeNote})` : ''}`],
   [m.detail_manager(), info.manager],
@@ -149,6 +185,7 @@ const details = [
   [m.compare_row_sharia(), shariaText(info.sharia)],
   [m.detail_launched(), launchDate ? formatDate(launchDate, locale) : null],
   [m.detail_risk(), riskProfile],
+  ...ojkDetails(),
 ].filter(([, value]) => value !== null && value !== undefined && value !== '');
 
 function threeYearSub(returns) {
@@ -218,6 +255,12 @@ if (active && oneYear !== null) {
   glance.push([sentence, rank].filter(Boolean).join(' '));
 }
 
+const indexOneYear = indexBenchmarks[0]?.returns.simplereturn?.['1y'] ?? null;
+
+if (active && oneYear !== null && indexOneYear !== null) {
+  glance.push(m.glance_benchmark({ name: indexBenchmarks[0].shortName, change: formatChange(indexOneYear, locale, 1) }));
+}
+
 const oneYearFall = performance.maxdrawdown?.['1y'] ?? null;
 
 if (active && oneYear !== null && oneYearFall !== null && oneYearFall < 0) {
@@ -245,6 +288,7 @@ const medians = { nav: medianReturns(peers?.nav), total: medianReturns(peers?.to
 const hasMedians = active && Object.values(medians.nav).some((value) => value !== null);
 
 // Every row of the returns table comes from here; a row for another yardstick is one more entry in the list.
+// The rows after the fund's own are yardsticks: muted, with no gain or loss color.
 function returnRows(returns, medianOfType) {
   const percentCell = (value) => ({ text: formatPercent(value, locale), className: '' });
   const changeCell = (value) => ({ text: formatChange(value, locale), className: changeClass(value) });
@@ -253,7 +297,13 @@ function returnRows(returns, medianOfType) {
     { label: m.returns_row_return(), cells: returnPeriods.map((period) => changeCell(ret(period, returns))) },
     { label: m.returns_row_per_year(), title: m.returns_row_per_year_title(), cells: returnPeriods.map((period) => changeCell(returns.cagr?.[period] ?? null)) },
     { label: m.returns_row_worst_fall(), title: m.returns_row_worst_fall_title(), cells: returnPeriods.map((period) => percentCell(returns.maxdrawdown?.[period] ?? null)) },
-    hasMedians && { label: m.returns_row_median({ type: typeLabel }), className: 'row-median', cells: returnPeriods.map((period) => ({ text: formatChange(medianOfType[period], locale), className: '' })) },
+    hasMedians && { label: m.returns_row_median({ type: typeLabel }), className: 'row-reference', cells: returnPeriods.map((period) => ({ text: formatChange(medianOfType[period], locale), className: '' })) },
+    ...indexBenchmarks.map((benchmark) => ({
+      label: benchmark.shortName,
+      title: benchmark.name,
+      className: 'row-reference',
+      cells: returnPeriods.map((period) => ({ text: formatChange(benchmark.returns.simplereturn?.[period] ?? null, locale), className: '' })),
+    })),
   ].filter(Boolean);
 }
 
@@ -335,10 +385,19 @@ const sources = [
   }
 
   {
-    sourceDataDate && (
+    isSourceBehind && (
       <p class="notice fund-notice">
         <Fragment set:html={icon('calendar')} />
         <span>{m.data_freshness({ source: sourceLabel(lastPoint.source), date: formatDate(sourceDataDate, locale) })}</span>
+      </p>
+    )
+  }
+
+  {
+    ojk?.status === 'zero_aum' && (
+      <p class="notice fund-notice">
+        <Fragment set:html={icon('info')} />
+        <span>{m.ojk_zero_notice({ month: ojkMonth })}</span>
       </p>
     )
   }
@@ -454,13 +513,23 @@ const sources = [
         <section class="card details-card">
           <h2 class="card-title">{m.details_title()}</h2>
           <dl class="kv">
-            {details.map(([label, value]) => (
+            {details.map(([label, value, isMuted]) => (
               <>
                 <dt>{label}</dt>
-                <dd>{value}</dd>
+                <dd class={isMuted ? 'muted' : undefined}>{value}</dd>
               </>
             ))}
           </dl>
+          {
+            ojkSparkPath && (
+              <figure class="ojk-spark">
+                <svg viewBox="0 0 200 36" preserveAspectRatio="none" role="img" aria-label={m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}>
+                  <path d={ojkSparkPath} fill="none" stroke="var(--gold)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" />
+                </svg>
+                <figcaption class="muted small">{m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}</figcaption>
+              </figure>
+            )
+          }
         </section>
       </div>
     </div>
@@ -470,7 +539,7 @@ const sources = [
     showPerformance && (
       <section class="fund-section" id="performance">
         <h2 class="section-title">{m.section_performance()}</h2>
-        <div class="card chart-card" data-fund-id={id}>
+        <div class="card chart-card" data-fund-id={id} data-benchmarks={JSON.stringify(indexBenchmarks.map(({ id: benchmarkId, shortName, name }) => ({ id: benchmarkId, shortName, name })))}>
           {
             hasNavChart && (
               <>
@@ -493,7 +562,19 @@ const sources = [
                     )
                   }
                 </div>
+                {
+                  indexBenchmarks.length > 0 && (
+                    <div class="chart-bar">
+                      <span class="small muted" id="benchmark-label">{m.chart_compare_with()}</span>
+                      <div class="seg" role="group" aria-labelledby="benchmark-label" id="benchmark-buttons">
+                        <button type="button" data-benchmark="" aria-pressed="true">{m.chart_compare_none()}</button>
+                        {indexBenchmarks.map((benchmark) => <button type="button" data-benchmark={benchmark.id} title={benchmark.name} aria-pressed="false">{benchmark.shortName}</button>)}
+                      </div>
+                    </div>
+                  )
+                }
                 <div class="chart" id="nav-chart"></div>
+                <p class="chart-empty" id="benchmark-error" hidden></p>
               </>
             )
           }
@@ -535,6 +616,11 @@ const sources = [
                 ))}
               </table>
             </div>
+            {
+              rateBenchmark && (
+                <p class="muted small table-note">{m.benchmark_rate_note({ name: rateBenchmark.shortName, rate: `${formatNumber(rateBenchmark.value, locale, 2, 2)}%`, date: formatDate(rateBenchmark.end_date, locale) })}</p>
+              )
+            }
             {
               performance.source && (
                 <p class="muted small table-note">
@@ -1140,6 +1226,26 @@ const sources = [
     font-weight: var(--fw-strong);
   }
 
+  .benchmark-key,
+  .nav-key {
+    width: 14px;
+    height: 3px;
+    border-radius: var(--r-pill);
+  }
+
+  .benchmark-key {
+    background: var(--gold);
+  }
+
+  .nav-key {
+    background: var(--accent);
+  }
+
+  .benchmark-readout {
+    margin-left: var(--s-3);
+    white-space: nowrap;
+  }
+
   .chart-subtitle {
     margin: var(--s-5) 0 var(--s-2);
   }
@@ -1154,7 +1260,22 @@ const sources = [
     width: 1%;
   }
 
-  .returns-table .row-median > * {
+  /* The table scrolls sideways on a phone, and the row label stays in view. */
+  .returns-table thead th:first-child,
+  .returns-table tbody th {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    box-shadow: 1px 0 0 var(--rule);
+  }
+
+  .returns-table tbody th {
+    max-width: 150px;
+    background: var(--surface);
+    white-space: normal;
+  }
+
+  .returns-table .row-reference > * {
     background: var(--panel);
     color: var(--muted);
     font-style: italic;
@@ -1162,6 +1283,20 @@ const sources = [
 
   .table-note {
     margin-top: var(--s-2);
+  }
+
+  .ojk-spark {
+    margin: var(--s-3) 0 0;
+  }
+
+  .ojk-spark svg {
+    display: block;
+    width: 100%;
+    height: 36px;
+  }
+
+  .ojk-spark figcaption {
+    margin-top: var(--s-1);
   }
 
   .dividends-scroll {

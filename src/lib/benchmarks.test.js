@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { benchmarkAt, suggestBenchmarkIds } from './benchmarks.js';
+import { benchmarkAt, rebaseBenchmark, suggestBenchmarkIds } from './benchmarks.js';
 
 test('each fund type is compared with its own category index', () => {
   assert.deepEqual(suggestBenchmarkIds({ type: 'Pasar Uang', currency: 'IDR', sharia: false }), ['bareksa-money-market', 'bi-rate']);
@@ -41,4 +41,29 @@ test('a rate has the value in force on the end date and no returns', () => {
 
 test('a series that starts after the end date gives nothing', () => {
   assert.equal(benchmarkAt({ id: 'ihsg', kind: 'stock', points: [{ date: '2026-01-01', value: 1 }] }, '2025-12-31'), null);
+});
+
+test('an index drawn over a fund starts at the fund NAV of the range start and keeps its own growth', () => {
+  const fund = dailyPoints('2026-01-01', [10, 11, 12, 13]);
+  const levels = dailyPoints('2026-01-01', [100, 100, 150, 300]);
+
+  assert.deepEqual(rebaseBenchmark(fund, levels, 1), [null, 11, 16.5, 33]);
+});
+
+test('an index uses its last level on or before a fund date, and has none when it stops long before', () => {
+  const fund = dailyPoints('2026-01-01', [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]);
+  const levels = [{ date: '2026-01-01', value: 100 }, { date: '2026-01-02', value: 110 }];
+  const rebased = rebaseBenchmark(fund, levels, 0);
+
+  assert.equal(rebased[0], 10);
+  assert.ok(Math.abs(rebased[3] - 11) < 1e-9);
+  assert.equal(rebased[9], null);
+  assert.equal(rebased[10], null);
+});
+
+test('an index with no level near the range start draws nothing', () => {
+  const fund = dailyPoints('2026-03-01', [10, 11]);
+  const levels = [{ date: '2026-03-15', value: 100 }];
+
+  assert.deepEqual(rebaseBenchmark(fund, levels, 0), [null, null]);
 });

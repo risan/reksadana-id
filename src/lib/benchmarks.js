@@ -1,4 +1,4 @@
-import { computeReturns, indexAtOrBefore } from './series.js';
+import { computeReturns, daysBetween, indexAtOrBefore } from './series.js';
 
 // The series a fund is usually compared with, by its type. A global or USD fund has no suitable series here:
 // they are all in rupiah and track the Indonesian market.
@@ -39,4 +39,34 @@ export function benchmarkAt(series, endDate) {
   }
 
   return { ...entry, returns: computeReturns({ points: series.points, primary: 'benchmark' }, endDate) };
+}
+
+// A series that stops more than this many days before a date has nothing to say about that date.
+const MAX_LEVEL_GAP_DAYS = 7;
+
+// The level of a series on a date, or -1 when it has none close enough.
+function levelIndexOn(levels, date) {
+  const index = indexAtOrBefore(levels, date);
+
+  return index >= 0 && daysBetween(levels[index].date, date) <= MAX_LEVEL_GAP_DAYS ? index : -1;
+}
+
+// An index drawn over a fund's NAV chart: for each fund point from `startIndex` on, the index's level on that day
+// scaled to start at the fund's NAV at the start, so the two lines show the same growth from the same point.
+// Null before the start, and wherever the index has no level.
+export function rebaseBenchmark(fundPoints, levels, startIndex) {
+  const start = fundPoints[startIndex];
+  const startLevelIndex = levelIndexOn(levels, start.date);
+
+  if (startLevelIndex < 0) {
+    return fundPoints.map(() => null);
+  }
+
+  const scale = start.value / levels[startLevelIndex].value;
+
+  return fundPoints.map((point, index) => {
+    const levelIndex = index < startIndex ? -1 : levelIndexOn(levels, point.date);
+
+    return levelIndex < 0 ? null : levels[levelIndex].value * scale;
+  });
 }
