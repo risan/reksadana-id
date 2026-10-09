@@ -172,14 +172,52 @@ const updateChart = async ({ file, pathname, header, toRow, forceFull }) => {
 
 const fileExists = (file) => fs.access(file).then(() => true, () => false);
 
-// Older document links point straight at Bibit's S3 bucket, which now answers 403.
-// The same files are still served from Bibit's CDN host.
-const withWorkingUrl = (document) => {
+// Document links come in two shapes. The region form of the S3 host ("bibit.s3.ap-southeast-1.amazonaws.com") is
+// what older files carry, and it now answers 403 while the same file is served from Bibit's CDN host. The plain
+// form ("bibit.s3.amazonaws.com") is what newer files carry, and only that one serves them: the CDN host answers 403.
+export const withWorkingUrl = (document) => {
   if (!document.file) {
     return document;
   }
 
-  return { ...document, file: document.file.replace(/^https:\/\/bibit\.s3[.-][^/]*amazonaws\.com\//, 'https://assets.bibit.id/') };
+  return { ...document, file: document.file.replace(/^https:\/\/bibit\.s3[.-][a-z0-9-]+\.amazonaws\.com\//, 'https://assets.bibit.id/') };
+};
+
+const DOCUMENT_CHECK_TIMEOUT_MS = 30 * 1000;
+
+const statusOf = async (url) => {
+  try {
+    return (await fetch(url, { method: 'HEAD', signal: AbortSignal.timeout(DOCUMENT_CHECK_TIMEOUT_MS) })).status;
+  } catch {
+    return null;
+  }
+};
+
+// A link that carries its folder as "%2F" (".../factsheets%2Fname.pdf") says nothing reliable about the host: the CDN
+// host serves about half of those files and the S3 host the other half. So ask the CDN host, and move the link to the
+// S3 host when the CDN host refuses and the S3 host serves the file. Anything else leaves the link as it is.
+export const withServingHost = async (document) => {
+  if (!document.file?.startsWith('https://assets.bibit.id/') || !document.file.includes('%2F')) {
+    return document;
+  }
+
+  if (![403, 404].includes(await statusOf(document.file))) {
+    return document;
+  }
+
+  const s3File = document.file.replace('https://assets.bibit.id/', 'https://bibit.s3.amazonaws.com/').replace('%2F', '/');
+
+  return await statusOf(s3File) === 200 ? { ...document, file: s3File } : document;
+};
+
+const withWorkingUrls = async (documents) => {
+  const working = [];
+
+  for (const document of documents) {
+    working.push(await withServingHost(withWorkingUrl(document)));
+  }
+
+  return working;
 };
 
 // Bibit has no NAV chart for most funds you cannot buy in the app, but the fund
@@ -243,8 +281,8 @@ const scrapeFund = async (fund) => {
     const { data: prospectus } = await get(`/products/${symbol}/prospectus`);
 
     await writeJson(documentsFile, {
-      factsheets: factsheets.map(withWorkingUrl),
-      prospectus: prospectus.map(withWorkingUrl),
+      factsheets: await withWorkingUrls(factsheets),
+      prospectus: await withWorkingUrls(prospectus),
     });
   }
 

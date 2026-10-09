@@ -1,6 +1,6 @@
 # Reksadana ID
 
-Raw data for Indonesian mutual funds (reksa dana), and a website that reads it: [reksadana.risanb.com](https://reksadana.risanb.com). The data comes from four fund sources: the public API behind [Bibit](https://app.bibit.id/), the [Kontan pusatdata](https://pusatdata.kontan.co.id/reksadana) pages, [Bareksa](https://www.bareksa.com/id/data/reksadana/daftar), and the public fund pages of [Makmur](https://www.makmur.id/). Three more folders hold what the funds are measured against: benchmark index levels (from Bareksa), the exchange rate, policy rate and inflation (from Bank Indonesia), and the official monthly size of every fund (from OJK, the regulator). The data lives in this repository, so you can read it without calling any of the sites.
+Raw data for Indonesian mutual funds (reksa dana), and a website that reads it: [reksadana.risanb.com](https://reksadana.risanb.com). The data comes from four fund sources: the public API behind [Bibit](https://app.bibit.id/), the [Kontan pusatdata](https://pusatdata.kontan.co.id/reksadana) pages, [Bareksa](https://www.bareksa.com/id/data/reksadana/daftar), and the public fund pages of [Makmur](https://www.makmur.id/). The prospectus PDFs that Bareksa links give one more figure for each fund that has a readable one: its audited operating expenses. Three more folders hold what the funds are measured against: benchmark index levels (from Bareksa), the exchange rate, policy rate and inflation (from Bank Indonesia), and the official monthly size of every fund (from OJK, the regulator). The data lives in this repository, so you can read it without calling any of the sites.
 
 If you want the data, read [Get the data](#get-the-data) and [What is where](#what-is-where). If you maintain the project, start at [Run it yourself](#run-it-yourself).
 
@@ -44,7 +44,7 @@ Conventions: returns and ratios are fractions (`0.0106` is 1.06%), dates are ISO
 | Bibit | `data/bibit/` | 3,046 (the master list) | Fees, returns, documents, daily NAV for buyable funds, AUM | Daily |
 | Kontan | `data/kontan/` | 1,660 | Daily NAV for the last 12 months, growing every run | By hand from a home connection (GitHub is blocked) |
 | Makmur | `data/makmur/` | 141 | Latest price, returns, asset allocation, top holdings, and factsheet and prospectus links | Weekly |
-| Bareksa | `data/bareksa/` | 3,812 | Monthly AUM, units, and asset allocation, back to each fund's launch. Daily NAV: the last year every day, older history loaded by hand. Fund pages: custodian, minimums, maximum fees | Daily (NAV, fund pages), monthly (the rest) |
+| Bareksa | `data/bareksa/` | 3,812 | Monthly AUM, units, and asset allocation, back to each fund's launch. Daily NAV: the last year every day, older history loaded by hand. Fund pages: custodian, minimums, maximum fees. Prospectus: the audited operating expenses | Daily (NAV, fund pages), weekly (prospectus), monthly (the rest) |
 | Benchmarks | `data/benchmarks/` | 10 series | Daily levels of IHSG, LQ45, IDX30, JII, ISSI, SRI-KEHATI and four Bareksa fund category indices | Daily |
 | Macro | `data/macro/` | 3 series | USD/IDR (JISDOR), the BI-Rate, and monthly inflation, from Bank Indonesia | Daily |
 | OJK | `data/ojk/` | about 2,100 per month | Month-end AUM and units of every registered fund, for the last 36 months | Daily from the 8th to the 15th of the month (UTC); from a home connection when OJK does not answer GitHub |
@@ -100,8 +100,25 @@ Kontan only serves the last 12 months of NAV per fund. Every run merges that win
 | `data/bareksa/units/<bareksa_id>.csv` | Monthly units outstanding: `date,units`. |
 | `data/bareksa/allocation/<bareksa_id>.csv` | Asset allocation in percent: `date,saham,obligasi,pasar_uang,lainnya` (equity, bonds, money market, other). Bareksa's own chart uses these four names in this order. Only some funds have it (1,337). |
 | `data/bareksa/nav/<bareksa_id>.csv` | Daily NAV per unit: `date,nav`. 3,635 of the 3,812 files reach back more than a year, the oldest to 2001. See "Bareksa daily NAV". |
+| `data/bareksa/prospectus.csv` | One row per fund: the audited operating expenses in its prospectus. See "Operating expenses from the prospectus". |
 
 `data/bareksa/funds.csv` also holds, from each fund's public Bareksa page: `currency`, `custodian`, `min_purchase`, `min_topup`, `min_redemption` (plain numbers) with `min_purchase_currency`, `min_topup_currency`, `min_redemption_currency` (the currency of each amount, which can differ from the fund's), `fee_purchase`, `fee_redemption`, `fee_switch` (maximum per prospectus, as `min-max` fractions: `-0.02` is at most 2%, `0.005-0.03` is 0.5% to 3%, `0` is free, empty is unknown) and `profile_date` (when the page was last fetched). Rows fetched before the amount currencies were stored have them empty until the next fetch; until then a rupiah fund's amounts count as rupiah and any other fund's have no currency.
+
+**Operating expenses from the prospectus (`data/bareksa/prospectus.csv`).** OJK rule POJK 25/POJK.04/2020 (Lampiran 1.c) makes every prospectus print a table "Ikhtisar Keuangan Singkat", and one of its rows is "Biaya operasi (%)" (also "Beban operasi", in English "Operating expenses"): the fund's total operating expenses for a calendar year divided by its average NAV, from the audited annual report. The columns are `bareksa_id`, `url` (the PDF on Bareksa's media host), `uploaded` (the month in that address), `status`, `year`, `operating_expense_pct`, and `checked` (the date the row was last worked out). `year` and `operating_expense_pct` (a percent, `2.03` is 2.03%) are empty unless `status` is `parsed`; they are the newest calendar year the prospectus gives, which is 2025 for a prospectus of 2026. The other statuses say why a fund has no value:
+
+| `status` | Meaning |
+|---|---|
+| `parsed` | One value, read from the column under its year, in a table that no other table of the prospectus contradicts |
+| `share_classes` | The prospectus has share classes (Kelas A, B, ...) and its tables cannot be tied to this fund's class with certainty |
+| `conflict` | Two tables of the prospectus give different figures for the newest year, or the audited report shows another figure than the summary |
+| `partial_year` | The fund (or its share class) was launched during the year the figure covers, so the figure is for part of the year and is not stored |
+| `no_row` | No table gives a usable figure: new funds, tables of an older layout, a different label, or a figure that cannot be a ratio (zero, or 15% and over) |
+| `scanned` | The prospectus has no text layer (a scan), or the table is probably a picture |
+| `unreadable` | The file is damaged, protected, or not a PDF |
+| `not_found` | Bareksa has no prospectus for the fund |
+| `error` | The download failed; it is tried again on the next run |
+
+The figure is not the "expense ratio" (TER) that Bibit and Makmur show. It includes transaction costs (brokerage) and sometimes tax, so it is usually higher than the fee caps. There is one value per calendar year, it is published once a year (the prospectus is updated by the end of March to May), and `year` tells how old it is. Treat a year older than the last closed one as stale: the fund may not have updated its prospectus.
 
 Bareksa's list of all funds holds 3,812 funds. 3,656 of them have AUM data, and 1,850 are matched to a Bibit fund (1,729 of those are not buyable in the Bibit app). In a sample of 175 IDs outside the list, 39 still answered with AUM data, but they have no fund page, so there is no name to match or show. The scraper ignores them.
 
@@ -179,7 +196,7 @@ The home page reads `/explorer.json`, a compact summary built by `loadFundSummar
 - **Overview:** key figures, "At a glance" in sentences (the 1-year change, how it ranks among funds of its type, the worst fall, the costs, how long its history is), the profile, and a "Buy this fund" block (see [Referral codes](#referral-codes)). The profile shows the OJK status and the fund size per OJK with a small month-end chart.
 - **Performance:** the NAV chart with time ranges and an "Include dividends" toggle, a "Compare with" choice that overlays a benchmark (an index rebased to start at the fund's NAV; the BI-Rate is shown as a note, since a rate has no price), the monthly fund size chart, and a returns table (changes, per-year rates, and worst falls) with the median of the fund's type as a muted row and the benchmark returns beside it.
 - **Portfolio:** the asset mix and the top holdings.
-- **Costs:** the expense ratio from each source, the minimum purchase per distributor, the next purchase and redemption minimums, the maximum fees, and the custodian. See "Costs and minimums".
+- **Costs:** the audited operating expenses from the prospectus, the expense ratio from each source, the minimum purchase per distributor, the next purchase and redemption minimums, the maximum fees, and the custodian. See "Costs and minimums".
 - **Documents:** monthly factsheets and prospectus files, and the funds you can switch to.
 - **Data:** links to the fund's JSON and CSV files, the sources with the fund's ID in each, and which sources the chart's history came from.
 
@@ -202,7 +219,7 @@ The site draws one NAV history per fund (`src/lib/series.js`, which runs at buil
 - **Flags.** A fund with no NAV in the 31 days before its source's newest date is inactive and hidden by default. A one-day move over 20% is shown on the fund page, since it can be a real event or a source error.
 - **Fund size.** Bibit's AUM, unless Bareksa's figure for the same month differs more than tenfold (a unit error), then Bareksa's. In both series a month that is more than 8 times off both neighbours, while the neighbours agree within 3 times, is dropped, and so is a figure under a million in a series whose median is a thousand times higher.
 
-**Costs and minimums.** `loadFundRecord` merges them into `costs`, and every value keeps its `source`. The expense ratio is Bibit's `expenseratio.percentage` when it is a fraction between 0 and 0.1 (a few funds carry a raw number such as 4343.1, which is rejected), and Makmur's `expenseRatio` divided by 10,000. `expense_ratio` is the first valid one (Bibit before Makmur) and `expense_ratios` lists every valid one with its source, because the two disagree by up to 2x on the same fund and neither says as of when; the fund page shows each. The minimum purchase is listed per distributor: Bibit's `minbuy` only when the fund is buyable on Bibit, Makmur's `minFirstBuy` (both are rupiah amounts, also for USD funds, whose minimums there are of the size of rupiah ones), and Bareksa's `min_purchase` (the prospectus value). Each amount carries its own `currency`. The next purchase and the redemption minimum are Bareksa's. The maximum fees are Bareksa's, as `{ min, max }` fractions; Bibit's `fee` values are placeholders and are ignored. The custodian is Bareksa's, else Bibit's `custodian_bank`. A value no source has is `null` or an empty list, never 0, and the pages say "Not in our sources".
+**Costs and minimums.** `loadFundRecord` merges them into `costs`, and every value keeps its `source`. `operating_expense` is the audited figure of the prospectus (`{ value, year, url, uploaded, source: 'prospectus' }`, a fraction), taken from the first of the fund's Bareksa records that has a `parsed` row in `data/bareksa/prospectus.csv`; the fund page shows it first, with a link to the PDF, and the explorer has it as a column (off by default, in the "Costs" set). The expense ratio is Bibit's `expenseratio.percentage` when it is a fraction between 0 and 0.1 (a few funds carry a raw number such as 4343.1, which is rejected), and Makmur's `expenseRatio` divided by 10,000. `expense_ratio` is the first valid one (Bibit before Makmur) and `expense_ratios` lists every valid one with its source, because the two disagree by up to 2x on the same fund and neither says as of when; the fund page shows each. The minimum purchase is listed per distributor: Bibit's `minbuy` only when the fund is buyable on Bibit, Makmur's `minFirstBuy` (both are rupiah amounts, also for USD funds, whose minimums there are of the size of rupiah ones), and Bareksa's `min_purchase` (the prospectus value). Each amount carries its own `currency`. The next purchase and the redemption minimum are Bareksa's. The maximum fees are Bareksa's, as `{ min, max }` fractions; Bibit's `fee` values are placeholders and are ignored. The custodian is Bareksa's, else Bibit's `custodian_bank`. A value no source has is `null` or an empty list, never 0, and the pages say "Not in our sources".
 
 **OJK in the fund record.** `ojk.status` is `registered` when the fund is in OJK's newest month with assets, `zero_aum` when its AUM there is 0 (dissolved or not launched, per OJK), and `not_listed` when OJK's newest month no longer lists it. `ojk.months` is a list of `{ month, aum, units }`. The explorer summary has the same status as `ojk_status`, and leaves it out for a fund without an OJK match.
 
@@ -248,12 +265,13 @@ The GitHub Actions workflow `.github/workflows/scrape.yml` runs once a day at **
 | Saturday | Sunday morning | Makmur (`scrape:makmur`); Bareksa NAV of all funds (`scrape:bareksa:nav:all`), instead of the daily one; Kontan (see below) |
 | Saturday, day 1 to 7 of the month | Sunday morning | Kontan as a full rescan (`scrape:kontan:full`), instead of the normal Kontan run |
 | Saturday, day 8 or later | Sunday morning | The normal Kontan run (`scrape:kontan`) |
+| Sunday | Monday morning | Prospectuses (`scrape:prospectus`): the link of every fund is asked for, and only a fund whose link changed is read again |
 | Day 1 of the month, any weekday | The 2nd, 05:17 | Bareksa full run (`scrape:bareksa`): fund list, AUM, units, allocation |
 | Day 8 to 15 of the month | The 9th to the 16th, 05:17 | OJK (`scrape:ojk`): nothing is new before the 8th, and when nothing is new it asks for only the newest two months |
 
 Kontan answers 403 to GitHub's runners, so its scheduled steps print a warning, change no data, and end green. Kontan is refreshed from home (below).
 
-You can also start the workflow by hand from the Actions tab. The `sources` input picks one of `bibit` (the default), `kontan`, `kontan-full`, `makmur`, `bareksa`, `bareksa-nav`, `bareksa-nav-all`, `bareksa-profiles`, `benchmarks`, `macro`, `ojk`, or `all` (everything except the Kontan full rescan).
+You can also start the workflow by hand from the Actions tab. The `sources` input picks one of `bibit` (the default), `kontan`, `kontan-full`, `makmur`, `bareksa`, `bareksa-nav`, `bareksa-nav-all`, `bareksa-profiles`, `prospectus`, `benchmarks`, `macro`, `ojk`, or `all` (everything except the Kontan full rescan).
 
 ### What you do by hand
 
@@ -281,6 +299,7 @@ npm run scrape:bareksa            # fund list, AUM, units, allocation
 npm run scrape:bareksa:profiles   # up to 400 Bareksa fund pages: custodian, minimums, fees
 npm run scrape:bareksa:nav        # the last month or year of NAV for funds with a recent NAV
 npm run scrape:bareksa:nav:all    # the same for every fund
+npm run scrape:prospectus         # the audited operating expenses of the prospectuses Bareksa links (the first run: about 2 hours)
 npm run scrape:benchmarks         # the last year of every benchmark index, merged into data/benchmarks/
 npm run scrape:macro              # JISDOR, BI-Rate, inflation; the first run takes the whole history
 npm run scrape:ojk                # the OJK months of the last 36 that are not stored yet (about 30 minutes the first time)
@@ -295,7 +314,7 @@ npm run link
 node scrapers/bibit.js RD8807 RD216
 ```
 
-`scrapers/bibit.js`, `scrapers/kontan.js`, `scrapers/makmur.js`, `scrapers/bareksa.js`, `scrapers/benchmarks.js`, `scrapers/macro.js`, and `scrapers/ojk.js` hold the source-specific code. `scrapers/lib.js` holds what they share (atomic file writes, CSV, retries, the worker pool, the failure limit, and the name matching against Bibit). A scraper that makes many requests sends at most 2 at a time (Bibit: 4), with a short pause after each one.
+`scrapers/bibit.js`, `scrapers/kontan.js`, `scrapers/makmur.js`, `scrapers/bareksa.js`, `scrapers/prospectus.js`, `scrapers/benchmarks.js`, `scrapers/macro.js`, and `scrapers/ojk.js` hold the source-specific code. `scrapers/lib.js` holds what they share (atomic file writes, CSV, retries, the worker pool, the failure limit, and the name matching against Bibit). A scraper that makes many requests sends at most 2 at a time (Bibit: 4), with a short pause after each one.
 
 ### Bibit
 
@@ -306,6 +325,7 @@ The first run downloads the full history and takes a few minutes. Later runs onl
 - `GET /products/<symbol>/chart?period=ALL` gives the NAV history. Other periods: `1D`, `1W`, `1M`, `3M`, `YTD`, `1Y`, `3Y`, `5Y`, `10Y`.
 - `GET /products/<symbol>/chart/aum?period=ALL` gives the AUM history.
 - `GET /products/<symbol>/dividends`, `/factsheets`, `/prospectus`, and `/switchables` give the other per-fund data.
+- A document link names the host that serves the file. Older files are on `assets.bibit.id` or on the region form of the S3 host (`bibit.s3.ap-southeast-1.amazonaws.com`, which answers 403 now), newer files on `bibit.s3.amazonaws.com` (where `assets.bibit.id` answers 403). The scraper moves only the region form to `assets.bibit.id` (`withWorkingUrl`) and keeps the rest as given. The API gives about 2,700 links with an encoded slash (`assets.bibit.id/factsheets%2Fname.pdf`) that say nothing about the host: `assets.bibit.id` serves about half of those files and the S3 host the other half. For these, `withServingHost` asks `assets.bibit.id` and moves the link to `bibit.s3.amazonaws.com/factsheets/name.pdf` when that host refuses and S3 serves the file.
 - Endpoints that need a login (`/products/<symbol>/history`, `/stats`, `/watchlist`) only describe the logged-in user's own account, so the scraper does not use them.
 - Most responses put an encrypted string in `data`. The first 32 hex characters are the IV, the last 32 characters are the AES-256-CBC key, and the rest is the ciphertext. See `decrypt()` in `scrapers/bibit.js`.
 
@@ -351,6 +371,20 @@ All requests go to `https://www.bareksa.com` with the header `X-Requested-With: 
   With the cookie set, the full run also asks for each fund's whole daily NAV (`cperiod=all`) and merges it by date. It adds about 3,800 requests with large answers; expect one to three hours (not measured). If Bareksa does not accept the cookie, the run stops at the first NAV request with `BAREKSA_COOKIE missing or expired`; log in again and copy a new cookie. The cookie is never printed or written to a file. Never put it in GitHub; the scheduled run does not have it. Prefer the browser sync.
 
 The NAV files you commit are public, because this repository is public.
+
+### Prospectuses (operating expenses)
+
+`scrapers/prospectus.js` (`npm run scrape:prospectus`) reads the audited operating expenses from the prospectus PDF of every Bareksa fund. It keeps `data/bareksa/prospectus.csv` (see [Bareksa](#bareksa-databareksa)).
+
+1. **The link.** `GET https://www.bareksa.com/id/data/mutualfund/prospectus/<bareksa_id>/<slug>` answers 302 to `https://media.bareksa.com/uploads//file_doc/<YYYY>/<MM>/<CODE>_prospectus.pdf` (the upload month), or 404. The fund page and the profile data carry only this redirecting address, so every run asks once per fund (about 3,800 requests, 3 at a time with a pause, about 30 minutes). A redirect to an empty folder counts as no prospectus.
+2. **The file.** A fund is read again only when its link now points at another file than the stored row, or the row is `error`; `--all` reads every fund again, and `--ids=3,19` limits a run to some funds (for trying out the parser). Funds that share one PDF share one download. A PDF is never stored. The first run downloads about 1,400 files (about 5 GB) and takes about 30 minutes plus the links; a normal weekly run reads only the files that changed.
+3. **The table.** `pdfjs-dist` gives every text piece of the pages that contain "Biaya operasi", "Beban operasi" or "Operating expenses", with its position. A row is a line that *starts* with that label ("Jumlah Beban Operasi" of the financial statements is another row). Its numbers are matched to the year header above by column: each calendar year is paired with the cell right under it (the nearest, within half a column, and each cell with one year), so a year-to-date or 12, 36 or 60 month column is never taken for a year, years in ascending order work, and a year without a number stays empty.
+4. **What is stored.** The newest calendar year up to last year, when every table of the prospectus that gives that year agrees, and the audited report's table (the one whose years are in its text, not in a header) shows the same figure. Nothing is stored when the figure is 0 or 15% and over, when the fund was launched during that year (`partial_year`), or when the layout is not certain: years that come twice in a header (a table of periods), columns that are not evenly spaced, or share classes. For a fund with a class in its name ("Kelas A") the table titled with the same class is used; a prospectus that names classes in any other way, or a table without a title, gives `share_classes`. The fund's name must appear in the PDF (a renamed manager is tolerated: the first word may differ), or the status is `no_row`. A prospectus without text, or one where the table is probably a picture (a quarter of the pages are empty), is `scanned`.
+5. **Tested against.** `scrapers/prospectus.test.js` parses text items saved from real prospectuses (`scrapers/fixtures/prospectus-*.json`; only the pages with the table), including the figures read by hand: Schroder Dana Prestasi Plus 2.03% (2025), BNP Paribas Rupiah Plus 0.71%, Sucorinvest Equity Fund Kelas A 3.85% and Kelas B 2.13%, Sucorinvest Maxi Fund 5.17%, and Batavia Dana Saham Syariah 6.00%.
+
+Results of the first run (2026-10-10): 3,812 funds: 2,401 `not_found` (no prospectus on Bareksa), and of the 1,411 with a PDF 702 `parsed` (256 of them for 2025, 148 for 2024, 124 for 2023, the rest older), 145 `share_classes`, 395 `no_row`, 101 `scanned`, 42 `partial_year`, 24 `conflict`, and 2 `unreadable`. A hand check of about 50 parsed funds against the PDF text found the figure under the right year every time (two reading mistakes found that way, a financial-statement row and a share-class table without a title, are fixed and tested).
+
+The label is "operating expenses", not "TER": the figure includes transaction costs, and a prospectus that was not updated shows an old year. The site and the API show the year with the figure.
 
 ### Makmur
 
@@ -458,7 +492,7 @@ This project is not affiliated with any of these sources and is not financial ad
 | Source | What we use | Notes |
 |---|---|---|
 | [Bibit](https://app.bibit.id/) | Fund list, fees, NAV, AUM, returns, documents, and dividends from its public API; buy links | No login is used. The site shows Bibit's referral code. |
-| [Bareksa](https://www.bareksa.com/id/data/reksadana/daftar) | Fund list and pages, monthly AUM, units and allocation, daily NAV, and the benchmark index levels | The paths we use are allowed by its `robots.txt`. Only the logged-in NAV history needs your own login in your own browser. The indices come from the Indonesia Stock Exchange; the category indices are Bareksa's own. |
+| [Bareksa](https://www.bareksa.com/id/data/reksadana/daftar) | Fund list and pages, monthly AUM, units and allocation, daily NAV, the benchmark index levels, and the prospectus PDFs it links | The paths we use are allowed by its `robots.txt`. Only the logged-in NAV history needs your own login in your own browser. The indices come from the Indonesia Stock Exchange; the category indices are Bareksa's own. |
 | [Kontan](https://pusatdata.kontan.co.id/reksadana) | Fund names and daily NAV for the last 12 months | Blocks GitHub's runners, so it is refreshed from a home connection. |
 | [Makmur](https://www.makmur.id/) | Latest price, returns, asset allocation, top holdings, and document links | Only its public website. The site shows Makmur's referral code. |
 | [Bank Indonesia](https://www.bi.go.id/) | USD/IDR (JISDOR), the BI-Rate, and inflation | Sumber: Bank Indonesia. |

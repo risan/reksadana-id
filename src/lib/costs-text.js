@@ -41,6 +41,9 @@ export function describeCosts(costs, locale) {
   const withSource = (item, text) => (item === null ? null : { text, source: sourceLabel(item.source) });
 
   return {
+    operatingExpense: costs.operating_expense
+      ? { text: formatPercent(costs.operating_expense.value, locale), year: costs.operating_expense.year, url: costs.operating_expense.url }
+      : null,
     expenseRatio: withSource(costs.expense_ratio, costs.expense_ratio && formatPercent(costs.expense_ratio.value, locale)),
     expenseRatios: groupBySameText(costs.expense_ratios.map((item) => withSource(item, formatPercent(item.value, locale)))),
     minPurchases: costs.min_purchase.map((item) => withSource(item, money(item))),

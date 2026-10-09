@@ -15,6 +15,7 @@
     "scrape:bareksa:profiles": "node scrapers/bareksa.js --profiles",
     "scrape:bareksa:nav": "node scrapers/bareksa.js --nav",
     "scrape:bareksa:nav:all": "node scrapers/bareksa.js --nav-all",
+    "scrape:prospectus": "node scrapers/prospectus.js",
     "scrape:benchmarks": "node scrapers/benchmarks.js",
     "scrape:macro": "node scrapers/macro.js",
     "scrape:ojk": "node scrapers/ojk.js",
@@ -36,6 +37,7 @@
     "uplot": "^1.6.32"
   },
   "devDependencies": {
+    "pdfjs-dist": "^6.4.299",
     "wrangler": "^4.149.0"
   }
 }

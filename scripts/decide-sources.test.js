@@ -30,8 +30,8 @@ test('a weekday scrapes Bibit, the Bareksa NAV of recent funds, the Bareksa prof
 });
 
 test('the first of the month also scrapes Bareksa, even when the run starts after midnight UTC', () => {
-  assert.deepEqual(decide('', '2026-11-01T22:17:00Z'), ['bibit', 'bareksa', 'bareksa_nav', 'bareksa_profiles', 'benchmarks', 'macro']);
-  assert.deepEqual(decide('', '2026-11-02T02:10:00Z'), ['bibit', 'bareksa', 'bareksa_nav', 'bareksa_profiles', 'benchmarks', 'macro']);
+  assert.deepEqual(decide('', '2026-12-01T22:17:00Z'), ['bibit', 'bareksa', 'bareksa_nav', 'bareksa_profiles', 'benchmarks', 'macro']);
+  assert.deepEqual(decide('', '2026-12-02T02:10:00Z'), ['bibit', 'bareksa', 'bareksa_nav', 'bareksa_profiles', 'benchmarks', 'macro']);
 });
 
 test('a requested source runs alone', () => {
@@ -43,4 +43,13 @@ test('the NAV of all Bareksa funds runs on Saturday only, and either NAV run can
   assert.equal(decide('', '2026-10-14T22:17:00Z').includes('bareksa_nav_all'), false);
   assert.deepEqual(decide('bareksa-nav', '2026-10-14T22:17:00Z'), ['bareksa_nav']);
   assert.deepEqual(decide('bareksa-nav-all', '2026-10-14T22:17:00Z'), ['bareksa_nav_all']);
+});
+
+// 2026-10-18 is the Sunday after 2026-10-17.
+test('the prospectuses are read on Sunday evening only, and can be requested alone', () => {
+  assert.deepEqual(decide('', '2026-10-18T22:17:00Z'), ['bibit', 'bareksa_nav', 'bareksa_profiles', 'prospectus', 'benchmarks', 'macro']);
+  assert.equal(decide('', '2026-10-17T22:17:00Z').includes('prospectus'), false);
+  assert.equal(decide('', '2026-10-14T22:17:00Z').includes('prospectus'), false);
+  assert.deepEqual(decide('prospectus', '2026-10-14T22:17:00Z'), ['prospectus']);
+  assert.equal(decide('all', '2026-10-14T22:17:00Z').includes('prospectus'), true);
 });
