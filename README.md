@@ -157,7 +157,7 @@ The site draws one NAV history per fund (`src/lib/series.js`, which runs at buil
 - **Flags.** A fund with no NAV in the 31 days before its source's newest date is inactive and hidden by default. A one-day move over 20% is shown on the fund page, since it can be a real event or a source error.
 - **Fund size.** Bibit's AUM, unless Bareksa's figure for the same month differs more than tenfold (a unit error), then Bareksa's.
 
-The home page reads `/explorer.json`, a compact summary built by `loadFundSummaries()` in `src/lib/data.js`. It is not part of the public API.
+The home page reads `/explorer.json`, a compact summary built by `loadFundSummaries()` in `src/lib/data.js` and shrunk by `src/lib/explorer-data.js` (a `columns` header and one array per fund; the browser expands it with `decodeSummaries()`). It is not part of the public API.
 
 You need Node.js 22.12 or newer. Cloudflare builds with Node 24 (see `.node-version`).
 
