@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import ALIASES from '../scrapers/fund-aliases.json' with { type: 'json' };
 import { readCsvRecords } from '../scrapers/lib.js';
+import { EXCLUDED } from './link-funds.js';
 
 const SOURCES = ['bibit', 'bareksa', 'kontan', 'makmur'];
 const SOURCE_ID_COLUMNS = { bibit: 'symbol', bareksa: 'bareksa_id', kontan: 'kontan_id', makmur: 'makmur_id' };
@@ -20,7 +22,10 @@ const ojkNames = funds.map((fund) => fund.ojk).filter((name) => name !== '');
 assert.equal(ojkNames.length, new Set(ojkNames).size, 'an OJK fund is in two funds');
 
 for (const source of SOURCES) {
-  const sourceIds = (await readCsvRecords(`data/${source}/funds.csv`)).map((row) => row[SOURCE_ID_COLUMNS[source]]);
+  // A record the aliases exclude (it carries another fund's NAV) is in no fund.
+  const sourceIds = (await readCsvRecords(`data/${source}/funds.csv`))
+    .map((row) => row[SOURCE_ID_COLUMNS[source]])
+    .filter((id) => ALIASES[`${source}:${id}`] !== EXCLUDED);
   const linkedIds = funds.flatMap((fund) => fund[source].split(' ').filter((id) => id !== ''));
 
   assert.equal(linkedIds.length, new Set(linkedIds).size, `a ${source} record is in two funds`);

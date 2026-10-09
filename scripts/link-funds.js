@@ -386,11 +386,16 @@ const findEqualNavPairs = (records) => {
 
 const candidateId = (record) => `${ID_PREFIXES[record.source]}${record.id}`;
 
-// Aliases name a Bibit symbol ("RD1983") or a record ("bareksa:440"). `null` blocks automatic links.
+// Aliases name a Bibit symbol ("RD1983") or a record ("bareksa:440"). `null` blocks automatic links and keeps the
+// record as a fund of its own. "exclude" drops a record that carries another fund's NAV: it joins no fund and gets no page.
+export const EXCLUDED = 'exclude';
+
 const resolveAliasTarget = (target) => (target.includes(':') ? target : `bibit:${target}`);
 
 export const linkFunds = ({ records: inputRecords, aliases, registry, today }) => {
-  const records = inputRecords.map((record) => ({ ...record, nav: record.source === 'kontan' ? withoutStaleTail(record.nav) : record.nav, key: `${record.source}:${record.id}` }));
+  const records = inputRecords
+    .map((record) => ({ ...record, nav: record.source === 'kontan' ? withoutStaleTail(record.nav) : record.nav, key: `${record.source}:${record.id}` }))
+    .filter((record) => aliases[record.key] !== EXCLUDED);
   const recordsByKey = new Map(records.map((record) => [record.key, record]));
   const parent = new Map(records.map((record) => [record.key, record.key]));
   const membersByRoot = new Map(records.map((record) => [record.key, [record]]));
@@ -500,6 +505,10 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
     }
   }
 
+  // Bibit lists about 65 old funds twice as empty shells: no manager, no NAV, and a fund file that is the same
+  // apart from the symbol. Nothing tells the two apart, so they are one fund.
+  const areEmptyShells = (a, b) => a.manager === '' && b.manager === '' && a.nav.dates.length === 0 && b.nav.dates.length === 0;
+
   // Bibit gives a fund a new symbol when it lists it again (RD846 and RD3820 are both Mandiri Dana Optima).
   // A manager never runs two funds of one name, so these merge unless their NAVs disagree.
   const namedBibitRecords = records.filter((record) => isFree(record) && record.source === 'bibit' && normalizeName(record.name) !== '');
@@ -507,7 +516,7 @@ export const linkFunds = ({ records: inputRecords, aliases, registry, today }) =
   for (const sameName of Map.groupBy(namedBibitRecords, (record) => normalizeName(record.name)).values()) {
     for (let first = 0; first < sameName.length; first++) {
       for (let second = first + 1; second < sameName.length; second++) {
-        if (hasSameKnownManager(sameName[first], sameName[second])) {
+        if (hasSameKnownManager(sameName[first], sameName[second]) || areEmptyShells(sameName[first], sameName[second])) {
           tryMerge(sameName[first], sameName[second], 'bibit-relisted');
         }
       }

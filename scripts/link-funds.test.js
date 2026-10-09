@@ -736,3 +736,51 @@ test('two funds with the same name get no OJK fund, and an OJK name listed twice
 test('a fund without a manager joins no OJK fund', () => {
   assert.deepEqual(matchOjk([linkedFund('RD1', 'Alpha Saham Maju', { manager: '' })], [ojkFund('REKSA DANA ALPHA SAHAM MAJU', { manager: '' })]), {});
 });
+
+test('an excluded record joins no fund and gets no ID, while a null alias keeps it as a fund of its own', () => {
+  const nav = fourDecimalNav(5);
+  const records = [
+    record('bareksa', '10', { name: 'Alpha Dana Utama', nav }),
+    record('kontan', '20', { name: 'ALPHA DANA UTAMA', nav }),
+  ];
+  const excluded = link(records, { aliases: { 'kontan:20': 'exclude' } });
+  const blocked = link(records, { aliases: { 'kontan:20': null } });
+
+  assert.deepEqual(excluded.funds.map((fund) => fund.id), ['BRK10']);
+  assert.equal(excluded.funds[0].sources.kontan.length, 0);
+  assert.deepEqual(blocked.funds.map((fund) => fund.id), ['BRK10', 'KTN20']);
+});
+
+test('the ID of an excluded record that was published keeps pointing at the fund it was set to', () => {
+  const registry = [
+    { id: 'BRK10', first_published: '2026-10-01', current_id: 'BRK10' },
+    { id: 'KTN20', first_published: '2026-10-02', current_id: 'BRK10' },
+  ];
+  const result = link([record('bareksa', '10', { nav: fourDecimalNav(5) })], { aliases: { 'kontan:20': 'exclude' }, registry });
+
+  assert.deepEqual(result.registry.map((entry) => [entry.id, entry.current_id]), [['BRK10', 'BRK10'], ['KTN20', 'BRK10']]);
+});
+
+test('two empty Bibit shells with one name and no manager are one fund, but a shell never joins a fund with a manager', () => {
+  const shells = link([
+    record('bibit', 'RD2053', { name: 'Principal Index Idx30', manager: '' }),
+    record('bibit', 'RD2944', { name: 'Principal Index Idx30', manager: '' }),
+  ]);
+  const withManager = link([
+    record('bibit', 'RD2053', { name: 'Principal Index Idx30', manager: '' }),
+    record('bibit', 'RD2944', { name: 'Principal Index Idx30', manager: MANAGER }),
+  ]);
+  const withNav = link([
+    record('bibit', 'RD2053', { name: 'Principal Index Idx30', manager: '', nav: fourDecimalNav(3) }),
+    record('bibit', 'RD2944', { name: 'Principal Index Idx30', manager: '' }),
+  ]);
+  const spelledTwice = link([
+    record('bibit', 'RD2053', { name: 'Terproteksi Mandiri Seri 81', manager: '' }),
+    record('bibit', 'RD2944', { name: 'Terproteksi Mandiri Seri 81 ', manager: '' }),
+  ]);
+
+  assert.equal(shells.funds.length, 1);
+  assert.equal(withManager.funds.length, 2);
+  assert.equal(withNav.funds.length, 2);
+  assert.equal(spelledTwice.funds.length, 1);
+});
