@@ -6,7 +6,7 @@ const BASE_URL = 'https://www.bareksa.com';
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'bareksa');
 const FUNDS_FILE = path.join(DATA_DIR, 'funds.csv');
 const PROSPECTUS_FILE = path.join(DATA_DIR, 'prospectus.csv');
-const USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
+export const USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
 const CONCURRENCY = 3;
 const REQUEST_DELAY_MS = 250;
 const REQUEST_TIMEOUT_MS = 120 * 1000;
@@ -573,7 +573,7 @@ export const evaluateFund = (pdf, fund, lastYear) => {
   return result;
 };
 
-const fetchWithPause = async (url, options) => {
+export const fetchWithPause = async (url, options) => {
   try {
     return await fetch(url, { headers: { 'User-Agent': USER_AGENT, Accept: '*/*' }, signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS), ...options });
   } finally {
@@ -605,14 +605,20 @@ const resolvePdfUrl = ({ bareksa_id: id, slug }) => withRetries(async () => {
 });
 
 // A file we got but cannot read as a prospectus. Asking again would give the same file.
-class UnreadableFileError extends Error {
+export class UnreadableFileError extends Error {
   constructor(url, reason) {
     super(`GET ${url} ${reason}`);
     this.retryable = false;
   }
 }
 
-const downloadPdf = (url) => withRetries(async () => {
+const assertPdf = (url, bytes) => {
+  if (new TextDecoder().decode(bytes.slice(0, 5)) !== '%PDF-') {
+    throw new UnreadableFileError(url, 'is not a PDF');
+  }
+};
+
+export const downloadPdf = (url) => withRetries(async () => {
   const response = await fetchWithPause(url);
 
   if (!response.ok) {
@@ -625,15 +631,13 @@ const downloadPdf = (url) => withRetries(async () => {
 
   const bytes = new Uint8Array(await response.arrayBuffer());
 
-  if (new TextDecoder().decode(bytes.slice(0, 5)) !== '%PDF-') {
-    throw new UnreadableFileError(url, 'is not a PDF');
-  }
+  assertPdf(url, bytes);
 
   return bytes;
 });
 
-const downloadAndReadPdf = async (url) => {
-  const bytes = await downloadPdf(url);
+export const readPdfBytes = async (url, bytes) => {
+  assertPdf(url, bytes);
 
   try {
     return await readPdf(bytes);
@@ -641,6 +645,8 @@ const downloadAndReadPdf = async (url) => {
     throw new UnreadableFileError(url, `cannot be read: ${error.message}`);
   }
 };
+
+const downloadAndReadPdf = async (url) => readPdfBytes(url, await downloadPdf(url));
 
 // "https://media.bareksa.com/uploads//file_doc/2026/08/AAKESSS_prospectus.pdf" was uploaded in 2026-08.
 export const uploadMonthOf = (url) => url.match(/\/file_doc\/(\d{4})\/(\d{2})\//)?.slice(1).join('-') ?? '';
