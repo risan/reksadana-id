@@ -458,7 +458,7 @@ const sources = [
                   </tr>
                 </thead>
                 <tbody>
-                  {dividends.slice(0, 12).map((dividend) => (
+                  {dividends.map((dividend) => (
                     <tr>
                       <td>{formatDate(jakartaDate(dividend.date), locale)}</td>
                       <td class="num">{formatNumber(dividend.value, locale, 4)}</td>
@@ -467,7 +467,6 @@ const sources = [
                 </tbody>
               </table>
             </div>
-            {dividends.length > 12 && <p class="muted small table-note" set:html={m.dividends_more({ total: dividends.length, jsonLink: anchor(`/api/funds/${id}.json`, m.dividends_json_link()) })} />}
           </section>
         )
       }

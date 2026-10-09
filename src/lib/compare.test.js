@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { analyzeFunds, chartRange, indexedSeries, resolveSelection, returnsAtCommonEnd, selectionQuery, selectionText } from './compare.js';
+import { analyzeFunds, chartRange, indexedSeries, resolveSelection, selectionQuery, selectionText } from './compare.js';
+import { computeReturns } from './series.js';
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -165,7 +166,7 @@ test('returns are measured back from the common end, not from each fund\'s own e
     { id: 'A', history: dailyHistory('2025-09-01', 400, 100) },
     { id: 'B', history: dailyHistory('2025-09-01', 395, 100) },
   ]);
-  const result = returnsAtCommonEnd(analysis.eligible[0], analysis.commonEnd);
+  const result = computeReturns(analysis.eligible[0].history, analysis.commonEnd);
 
   assert.equal(analysis.commonEnd, '2026-09-30');
   assert.ok(Math.abs(result.simplereturn['1m'] - (494 / 463 - 1)) < 1e-12);

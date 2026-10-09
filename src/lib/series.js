@@ -9,7 +9,6 @@ export const SOURCE_LABELS = {
   bibit: 'Bibit',
   bareksa: 'Bareksa',
   kontan: 'Kontan',
-  'bareksa-monthly': 'Bareksa (monthly AUM ÷ units)',
 };
 
 function toTime(date) {
