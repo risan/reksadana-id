@@ -160,6 +160,11 @@ export function searchTerms(query) {
   return query.toLowerCase().split(/\s+/).filter(Boolean);
 }
 
+// The explorer's type filter for a Bibit type label: the label itself for a main type, "other" for the rest.
+export function explorerTypeKey(label) {
+  return MAIN_TYPE_KEYS.has(label) ? label : 'other';
+}
+
 function matchesType(fund, typeKey) {
   if (typeKey === '') {
     return true;

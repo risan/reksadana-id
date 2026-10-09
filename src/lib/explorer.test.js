@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { DEFAULT_STATE, parseSortKey, sortFunds } from './explorer.js';
+import { DEFAULT_STATE, explorerTypeKey, parseSortKey, parseState, sortFunds } from './explorer.js';
 
 const funds = [
   { id: 'A', aum_idr: 10, return_1y: 0.1 },
@@ -27,4 +27,11 @@ test('funds without a value sort last in either direction', () => {
 
   assert.equal(sortFunds(withMissing, 'return_1y', 1).at(-1).id, 'D');
   assert.equal(sortFunds(withMissing, 'return_1y', -1).at(-1).id, 'D');
+});
+
+test('a type link for a Bibit-only label opens the filter for the other types, and one for a main type its own', () => {
+  assert.equal(explorerTypeKey('Saham'), 'Saham');
+  assert.equal(explorerTypeKey('Benchmark'), 'other');
+  assert.equal(explorerTypeKey('Penyertaan Terbatas'), 'other');
+  assert.equal(parseState(`?type=${explorerTypeKey('Dana Investasi Real Estate')}`).type, 'other');
 });

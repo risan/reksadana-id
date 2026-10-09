@@ -2,6 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import { fundBenchmarks, fundIdOfBibitSymbol, fundPerformance, isActive, latestAum, latestNavDate, listFundIds, loadBenchmarks, loadFundRecord, loadFundSummaries, shortManagerName, staleSourceDate } from '../../../lib/data.js';
 import { describeCosts } from '../../../lib/costs-text.js';
+import { explorerTypeKey } from '../../../lib/explorer.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from '../../../lib/format.js';
 import { TABLE_PERIODS, linePath, medianReturns, peerReturns, profileSummary, shareBeaten, shortBenchmarkName } from '../../../lib/fund-page.js';
 import { shariaText, typeLook, typeName } from '../../../lib/fund-types.js';
@@ -332,7 +333,7 @@ const sources = [
   <header class="fund-hero card kawung-bg">
     <nav class="crumbs" aria-label={m.crumbs_label()}>
       <a href={href('/')}>{m.nav_funds()}</a>
-      {info.type && <><Fragment set:html={icon('chevron-right', { size: 14 })} /><a href={href(`/?type=${encodeURIComponent(info.type)}`)}>{typeLabel}</a></>}
+      {info.type && <><Fragment set:html={icon('chevron-right', { size: 14 })} /><a href={href(`/?type=${encodeURIComponent(explorerTypeKey(info.type))}`)}>{typeLabel}</a></>}
       <Fragment set:html={icon('chevron-right', { size: 14 })} /><span class="mono">{id}</span>
     </nav>
     <div class="fund-hero-main">
@@ -348,7 +349,7 @@ const sources = [
           )
         }
         <ul class="fund-chips">
-          {info.type && <li><a class={`tag tag-type type-${look.tone}`} href={href(`/?type=${encodeURIComponent(info.type)}`)}><Fragment set:html={icon(look.icon, { size: 14 })} />{typeLabel}{typeNote && <span class="chip-note">{typeNote}</span>}</a></li>}
+          {info.type && <li><a class={`tag tag-type type-${look.tone}`} href={href(`/?type=${encodeURIComponent(explorerTypeKey(info.type))}`)}><Fragment set:html={icon(look.icon, { size: 14 })} />{typeLabel}{typeNote && <span class="chip-note">{typeNote}</span>}</a></li>}
           {info.sharia ? <li><span class="tag"><Fragment set:html={icon('moon-star', { size: 14 })} />{m.tag_sharia()}</span></li> : null}
           {currency === 'USD' && <li><span class="tag">USD</span></li>}
           {info.etf ? <li><span class="tag">ETF</span></li> : null}
