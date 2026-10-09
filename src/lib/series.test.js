@@ -379,3 +379,42 @@ test('Kontan rows dated on the right day are left alone', () => {
 
   assert.deepEqual(history.points.slice(-2).map((point) => [point.date, point.value]), [['2026-01-09', 109], ['2026-01-10', 111]]);
 });
+
+const farRun = (length) => Array.from({ length }, (_, index) => 1600 + index);
+
+test('a stretch of up to ten rows far from the NAV, then back to it, is dropped as a source error', () => {
+  const values = [1.02, 1.02, ...farRun(8), 1.02, 1.03];
+  const history = pickNavHistory({ nav: dailyRows('2026-04-20', values) });
+
+  assert.deepEqual(history.points.map((point) => point.value), [1.02, 1.02, 1.02, 1.03]);
+  assert.equal(history.droppedSpikes, 8);
+});
+
+test('a far stretch longer than ten rows, or one that never returns, is a real move and stays', () => {
+  const longRun = pickNavHistory({ nav: dailyRows('2026-04-01', [100, 100, ...farRun(11), 100, 100]) });
+  const noReturn = pickNavHistory({ nav: dailyRows('2026-04-01', [100, 100, ...farRun(4), 130, 131]) });
+
+  assert.equal(longRun.points.length, 15);
+  assert.equal(noReturn.points.length, 8);
+});
+
+test('a stretch with a row near the NAV, or with a gap inside it, is not treated as an excursion', () => {
+  const nearRow = pickNavHistory({ nav: dailyRows('2026-04-01', [100, 100, 150, 110, 112, 111, 100]) });
+  const withGap = pickNavHistory({
+    nav: [
+      { date: '2026-04-01', nav: 100, nav_adjusted: null },
+      { date: '2026-04-02', nav: 150, nav_adjusted: null },
+      { date: '2026-05-02', nav: 150, nav_adjusted: null },
+      { date: '2026-05-03', nav: 100, nav_adjusted: null },
+    ],
+  });
+
+  assert.equal(nearRow.points.length, 7);
+  assert.equal(withGap.points.length, 4);
+});
+
+test('two excursions in a row are both dropped', () => {
+  const history = pickNavHistory({ nav: dailyRows('2026-04-01', [100, 100.5, 500, 501, 100.2, 800, 100.4, 100.6]) });
+
+  assert.deepEqual(history.points.map((point) => point.value), [100, 100.5, 100.2, 100.4, 100.6]);
+});

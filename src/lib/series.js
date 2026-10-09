@@ -65,24 +65,50 @@ function areNeighbours(earlier, later) {
 
 const SPIKE_MOVE = 0.15;
 const SPIKE_RETURN = 0.05;
+const MAX_EXCURSION_ROWS = 10;
 
-// A point far from both neighbours while the neighbours agree is a source error, not a market move.
-// Across a gap in the history nothing is known about the days between, so nothing is dropped there.
-function dropSpikes(points) {
-  return points.filter((point, index) => {
-    const previous = points[index - 1];
-    const next = points[index + 1];
+// How many rows from `start` on are an excursion: every one of them far from the NAV before it, followed by a
+// return to within a few percent of that NAV. Zero when they are not, or when a gap hides the days between.
+function excursionLength(points, start, before) {
+  if (!areNeighbours(before, points[start])) {
+    return 0;
+  }
 
-    if (!previous || !next || !areNeighbours(previous, point) || !areNeighbours(point, next)) {
-      return true;
+  for (let length = 1; length <= MAX_EXCURSION_ROWS; length++) {
+    const member = points[start + length - 1];
+    const next = points[start + length];
+
+    if (Math.abs(member.value / before.value - 1) <= SPIKE_MOVE || !next || !areNeighbours(member, next)) {
+      return 0;
     }
 
-    const moveIn = point.value / previous.value - 1;
-    const moveOut = next.value / point.value - 1;
-    const netMove = next.value / previous.value - 1;
+    if (Math.abs(next.value / before.value - 1) < SPIKE_RETURN) {
+      return length;
+    }
+  }
 
-    return !(Math.abs(moveIn) > SPIKE_MOVE && Math.abs(moveOut) > SPIKE_MOVE && Math.abs(netMove) < SPIKE_RETURN);
-  });
+  return 0;
+}
+
+// A few rows far from both sides, while the NAV on either side agrees, are a source error and not a market move:
+// one wrong day, or a stretch of days in which a source served another fund's NAV.
+// Across a gap in the history nothing is known about the days between, so nothing is dropped there.
+export function dropSpikes(points) {
+  const kept = [];
+  let index = 0;
+
+  while (index < points.length) {
+    const length = kept.length > 0 ? excursionLength(points, index, kept.at(-1)) : 0;
+
+    if (length > 0) {
+      index += length;
+    } else {
+      kept.push(points[index]);
+      index++;
+    }
+  }
+
+  return kept;
 }
 
 const FROZEN_AFTER_DAYS = 31;

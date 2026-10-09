@@ -613,3 +613,24 @@ test('a redirect to a record that vanished follows the fund that absorbed its ta
   assert.equal(targets.BRK9, 'RD2');
   assert.equal(targets.RD1, 'RD2');
 });
+
+test('days in which a source served another fund\'s NAV do not stop two records from linking', () => {
+  const history = fourDecimalNav(30);
+  const withForeignDays = history.map(([date, value], day) => [date, day >= 10 && day < 17 ? 1.0234 : value]);
+  const result = link([
+    record('bareksa', '1', { name: 'Alpha Dana Utama', nav: history }),
+    record('kontan', '2', { name: 'ALPHA DANA UTAMA FUND', nav: withForeignDays }),
+  ]);
+
+  assert.equal(result.funds.length, 1);
+  assert.equal(result.report.linksByRule['nav'], 1);
+  assert.equal(result.report.refused.length, 0);
+});
+
+test('a NAV series loses a short run far from the NAV around it and keeps the rest', () => {
+  const rows = [['2026-04-24', 1.02], ['2026-04-27', 1654.73], ['2026-04-28', 1654.9], ['2026-04-29', 1.02], ['2026-04-30', 1.03]];
+  const cleaned = makeNavSeries(rows);
+
+  assert.deepEqual(Array.from(cleaned.dates), [20260424, 20260429, 20260430]);
+  assert.deepEqual(Array.from(cleaned.values), [1.02, 1.02, 1.03]);
+});

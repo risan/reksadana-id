@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import { pathToFileURL } from 'node:url';
 import ALIASES from '../scrapers/fund-aliases.json' with { type: 'json' };
+import { dropSpikes } from '../src/lib/series.js';
 import { isSameManager, normalizeManager, normalizeName, readCsvRecords, toCsv, writeFileAtomic } from '../scrapers/lib.js';
 
 const DATA_DIR = 'data';
@@ -81,7 +82,26 @@ const seriesFrom = (dates, values) => {
 };
 
 // Rows are [isoDate, nav].
-export const makeNavSeries = (rows) => seriesFrom(rows.map(([date]) => toDateNumber(date)), rows.map(([, value]) => value));
+export const makeNavSeries = (rows) => withoutSpikes(seriesFrom(rows.map(([date]) => toDateNumber(date)), rows.map(([, value]) => value)));
+
+const toIsoDate = (dateNumber) => `${String(dateNumber).slice(0, 4)}-${String(dateNumber).slice(4, 6)}-${String(dateNumber).slice(6)}`;
+
+const SPIKE_SCREEN = 0.15;
+
+// A source that served another fund's NAV for a few days would put wrong values into the evidence, so the
+// series is cleaned as the site's history is. Only a series with a big jump can hold such a stretch.
+const withoutSpikes = (series) => {
+  const { dates, values } = series;
+  const hasJump = values.some((value, index) => index > 0 && Math.abs(value / values[index - 1] - 1) > SPIKE_SCREEN);
+
+  if (!hasJump) {
+    return series;
+  }
+
+  const kept = dropSpikes(Array.from(dates, (date, index) => ({ date: toIsoDate(date), value: values[index] })));
+
+  return seriesFrom(kept.map(({ date }) => toDateNumber(date)), kept.map(({ value }) => value));
+};
 
 const integerDigits = (value) => (value >= 1 ? Math.floor(Math.log10(value)) + 1 : 0);
 
@@ -728,7 +748,7 @@ const readNavSeries = (file, valueColumn) => {
     }
   }
 
-  return seriesFrom(dates, values);
+  return withoutSpikes(seriesFrom(dates, values));
 };
 
 const readMakmurSharia = (id) => {
