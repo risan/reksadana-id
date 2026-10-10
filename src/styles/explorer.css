@@ -644,7 +644,7 @@ th[aria-sort='descending'] .sort-down {
 
 .fund-id::before {
   content: '·';
-  margin: 0 var(--s-2) 0 var(--s-3);
+  margin: 0 var(--s-2);
   font-family: var(--sans);
 }
 
