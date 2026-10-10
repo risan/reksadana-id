@@ -1067,9 +1067,8 @@ th[aria-sort='descending'] .sort-down {
   }
 
   .type-strip-list {
-    grid-auto-columns: 148px;
+    grid-auto-columns: 160px;
   }
-
 
   .toolbar {
     position: static;
