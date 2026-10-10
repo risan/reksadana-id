@@ -287,7 +287,9 @@ if (active && oneYear !== null && oneYearFall !== null && oneYearFall < 0) {
   glance.push(m.glance_drawdown({ drop: formatPercent(Math.abs(oneYearFall), locale, 1) }));
 }
 
-if (costs.expenseRatios.length > 0) {
+if (costs.operatingExpense !== null) {
+  glance.push(m.glance_operating({ value: costs.operatingExpense.text, year: costs.operatingExpense.year }));
+} else if (costs.expenseRatios.length > 0) {
   glance.push(m.glance_costs({ value: costs.expenseRatios.map((item) => `${item.text} (${item.source})`).join(', ') }));
 }
 
@@ -1540,7 +1542,9 @@ const sources = [
     margin-right: var(--s-3);
   }
 
+  /* The median is no line on the chart: an empty box keeps its label on the same left edge as the lines' labels. */
   .returns-table .key-none {
+    border: 1px solid var(--faint);
     background: none;
   }
 

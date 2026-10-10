@@ -526,6 +526,7 @@
   "glance_rank_behind": "That is worse than {percent} of similar funds ({type}).",
   "glance_drawdown": "Its biggest drop in that year was {drop}.",
   "glance_costs": "Costs: expense ratio {value} a year.",
+  "glance_operating": "Operating expense {value} a year (audited, {year}).",
   "glance_history_one": "Its price history goes back 1 year.",
   "glance_history": "Its price history goes back {count} years.",
   "returns_row_median": "Category median ({type})",

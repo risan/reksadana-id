@@ -526,6 +526,7 @@
   "glance_rank_behind": "Hasilnya di bawah {percent} reksa dana sejenis ({type}).",
   "glance_drawdown": "Penurunan terbesarnya dalam setahun itu {drop}.",
   "glance_costs": "Biaya: expense ratio {value} per tahun.",
+  "glance_operating": "Biaya operasi {value} per tahun (diaudit, {year}).",
   "glance_history_one": "Riwayat harganya sudah 1 tahun.",
   "glance_history": "Riwayat harganya sudah {count} tahun.",
   "returns_row_median": "Median kategori ({type})",
