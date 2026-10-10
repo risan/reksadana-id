@@ -38,7 +38,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
   </section>
 
   <div id="compare-notices"></div>
-  <div class="empty-state kawung-bg" id="compare-empty">{m.compare_loading()}</div>
+  <div class="empty-state" id="compare-empty">{m.compare_loading()}</div>
 
   <section class="section" id="compare-chart-section" hidden>
     <h2 class="section-title">{m.compare_chart_title()}</h2>
@@ -89,9 +89,10 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     margin: 0;
     padding: var(--s-1);
     overflow-y: auto;
-    border-radius: var(--r-md);
+    border: 1px solid var(--rule-strong);
+    border-radius: var(--r-2);
     background: var(--surface);
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow-pop);
     list-style: none;
   }
 
@@ -107,7 +108,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     min-height: 52px;
     padding: var(--s-2) var(--s-3);
     border: 0;
-    border-radius: var(--r-sm);
+    border-radius: var(--r-1);
     background: none;
     color: var(--ink);
     font: inherit;
@@ -177,7 +178,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     min-height: 40px;
     padding: 0 var(--s-1) 0 var(--s-3);
     border: 1px solid var(--rule-strong);
-    border-radius: var(--r-pill);
+    border-radius: var(--r-1);
     background: var(--surface);
     font-size: var(--fs-sm);
     font-weight: var(--fw-label);
@@ -187,7 +188,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     flex: none;
     width: 10px;
     height: 10px;
-    border-radius: var(--r-pill);
+    border-radius: 50%;
   }
 
   .selected-chip a {
@@ -205,7 +206,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     height: 32px;
     padding: 0;
     border: 0;
-    border-radius: var(--r-pill);
+    border-radius: var(--r-1);
     background: none;
     color: var(--muted);
     cursor: pointer;
@@ -260,8 +261,8 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     display: inline-block;
     width: 8px;
     height: 8px;
-    border-radius: var(--r-pill);
-    background: var(--gold);
+    border-radius: 50%;
+    background: var(--soga);
   }
 
   /* In the cell's left gutter, so the value keeps its place whether the cell has one line or several. */
@@ -271,7 +272,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
 
   .compare-table td .best-dot {
     position: absolute;
-    top: calc(var(--s-2) + 0.5em);
+    top: calc(var(--s-3) + 0.5em);
     left: calc(var(--s-1) / 2);
   }
 
@@ -292,11 +293,17 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
   }
 
   .compare-table thead th {
+    height: auto;
+    padding-top: var(--s-3);
+    padding-bottom: var(--s-3);
     border-bottom: 1px solid var(--rule-strong);
     color: var(--ink);
     font-size: var(--fs-sm);
     font-weight: var(--fw-label);
+    letter-spacing: 0;
+    text-transform: none;
     white-space: normal;
+    vertical-align: top;
   }
 
   .compare-table thead th.c-fund {
@@ -328,7 +335,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
   .compare-table .col-head .icon-tile {
     width: 28px;
     height: 28px;
-    border-radius: var(--r-xs);
+    border-radius: var(--r-1);
   }
 
   .compare-table .col-head a {

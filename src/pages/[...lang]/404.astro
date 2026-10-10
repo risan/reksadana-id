@@ -10,14 +10,14 @@ const locale = Astro.currentLocale ?? 'id';
 
 const LINKS = [
   ['/', m.nav_funds(), 'table-2'],
-  ['/compare/', m.nav_compare(), 'git-compare'],
+  ['/compare/', m.nav_compare(), 'scale'],
   ['/download/', m.nav_download(), 'download'],
   ['/api/', m.nav_api(), 'braces'],
 ];
 ---
 
 <Base title={m.not_found_title()} indexable={false} alternatePath="/">
-  <section class="empty-state kawung-bg">
+  <section class="empty-state">
     <p class="not-found-code" aria-hidden="true">404</p>
     <h1 class="page-title">{m.not_found_title()}</h1>
     <p class="lede">{m.not_found_text()}</p>
@@ -41,9 +41,8 @@ const LINKS = [
   }
 
   .not-found-code {
-    color: var(--gold);
-    font-family: var(--serif);
-    font-size: var(--fs-4xl);
+    color: var(--soga);
+    font-size: var(--fs-2xl);
     font-weight: var(--fw-hero);
     line-height: 1;
   }

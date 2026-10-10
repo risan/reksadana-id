@@ -334,14 +334,14 @@ const sources = [
 ---
 
 <Base title={`${info.name} (${id})`} description={manager ? m.fund_description({ name: info.name, manager }) : m.fund_description_no_manager({ name: info.name })} section="funds">
-  <header class="fund-hero card kawung-bg">
+  <header class="fund-hero card">
     <nav class="crumbs" aria-label={m.crumbs_label()}>
       <a href={href('/')}>{m.nav_funds()}</a>
       {info.type && <><Fragment set:html={icon('chevron-right', { size: 14 })} /><a href={href(`/?type=${encodeURIComponent(explorerTypeKey(info.type))}`)}>{typeLabel}</a></>}
       <Fragment set:html={icon('chevron-right', { size: 14 })} /><span class="mono">{id}</span>
     </nav>
     <div class="fund-hero-main">
-      <span class={`icon-tile fund-tile type-${look.tone}`} set:html={icon(look.icon, { size: 28 })} />
+      <span class={`icon-tile fund-tile type-${look.tone}`} set:html={icon(look.icon, { size: 16 })} />
       <div class="fund-titles">
         <h1 class="page-title">{info.name}</h1>
         {info.other_names.length > 0 && <p class="fund-aka muted small">{m.fund_also_known_as()} {info.other_names.join(' · ')}</p>}
@@ -358,7 +358,7 @@ const sources = [
           {currency === 'USD' && <li><span class="tag">USD</span></li>}
           {info.etf ? <li><span class="tag">ETF</span></li> : null}
           {info.index ? <li><span class="tag">{m.tag_index()}</span></li> : null}
-          {dividends.length > 0 && <li><span class="tag"><Fragment set:html={icon('coins', { size: 14 })} />{m.tag_pays_dividends()}</span></li>}
+          {dividends.length > 0 && <li><span class="tag"><Fragment set:html={icon('hand-coins', { size: 14 })} />{m.tag_pays_dividends()}</span></li>}
           {riskProfile && <li><span class="tag">{m.tag_risk({ level: riskProfile })}</span></li>}
         </ul>
       </div>
@@ -878,7 +878,7 @@ const sources = [
         ojkSparkPath && (
           <figure class="ojk-spark">
             <svg viewBox="0 0 200 36" preserveAspectRatio="none" role="img" aria-label={m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}>
-              <path d={ojkSparkPath} fill="none" stroke="var(--gold)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" />
+              <path d={ojkSparkPath} fill="none" stroke="var(--soga)" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round" />
             </svg>
             <figcaption class="muted small">{m.ojk_spark_label({ from: formatMonth(`${ojk.months[0].month}-01`, locale), to: ojkMonth })}</figcaption>
           </figure>
@@ -896,7 +896,6 @@ const sources = [
   .fund-hero {
     display: grid;
     gap: var(--s-4);
-    border-radius: var(--r-lg);
   }
 
   .crumbs {
@@ -918,15 +917,9 @@ const sources = [
     gap: var(--s-4);
   }
 
-  .fund-hero::before {
-    -webkit-mask-image: linear-gradient(100deg, transparent 55%, #000 100%);
-    mask-image: linear-gradient(100deg, transparent 55%, #000 100%);
-  }
-
   .fund-tile {
-    width: 56px;
-    height: 56px;
-    border-radius: var(--r-md);
+    width: 32px;
+    height: 32px;
   }
 
   .fund-titles {
@@ -1005,9 +998,7 @@ const sources = [
     margin: var(--s-4) calc(var(--gutter) * -1) 0;
     padding: 0 var(--gutter);
     border-bottom: 1px solid var(--rule);
-    background: color-mix(in srgb, var(--paper) 88%, transparent);
-    -webkit-backdrop-filter: blur(14px);
-    backdrop-filter: blur(14px);
+    background: var(--paper);
   }
 
   .section-nav-list {
@@ -1027,8 +1018,8 @@ const sources = [
   .section-nav a {
     display: flex;
     align-items: center;
-    height: 48px;
-    padding: 0 var(--s-3);
+    height: 36px;
+    padding: 0 var(--s-4);
     border-bottom: 2px solid transparent;
     color: var(--ink-2);
     font-weight: var(--fw-label);
@@ -1098,9 +1089,9 @@ const sources = [
 
   .figure {
     padding: var(--s-4);
-    border-radius: var(--r-md);
+    border: 1px solid var(--rule);
+    border-radius: var(--r-2);
     background: var(--surface);
-    box-shadow: var(--shadow-1);
   }
 
   .figure dt {
@@ -1118,8 +1109,8 @@ const sources = [
 
   .figure-value {
     margin-top: var(--s-2);
-    font-size: var(--fs-xl);
-    font-weight: var(--fw-strong);
+    font-size: var(--fs-lg);
+    font-weight: 650;
     letter-spacing: -0.01em;
     line-height: 1.2;
   }
@@ -1147,7 +1138,7 @@ const sources = [
     margin: calc(var(--s-1) * -1) calc(var(--s-1) * -1) calc(var(--s-1) * -1) 0;
     padding: 0;
     border: 0;
-    border-radius: var(--r-pill);
+    border-radius: var(--r-1);
     background: none;
     color: var(--muted);
     cursor: pointer;
@@ -1228,12 +1219,11 @@ const sources = [
   .glance-list li::before {
     content: '';
     position: absolute;
-    top: 0.55em;
-    left: var(--s-1);
-    width: 8px;
-    height: 8px;
-    border-radius: var(--r-pill);
-    background: var(--gold);
+    top: 0.6em;
+    left: var(--s-2);
+    width: 4px;
+    height: 4px;
+    background: var(--soga);
   }
 
   /* Performance */
@@ -1276,7 +1266,6 @@ const sources = [
   /* Index names can be long ("Bareksa Fixed Income Fund Index"), so these pills wrap instead of scrolling. */
   #benchmark-buttons {
     flex-wrap: wrap;
-    border-radius: var(--r-md);
   }
 
   #benchmark-buttons button {
@@ -1292,11 +1281,11 @@ const sources = [
   .nav-key {
     width: 14px;
     height: 3px;
-    border-radius: var(--r-pill);
+    border-radius: var(--r-1);
   }
 
   .benchmark-key {
-    background: var(--gold);
+    background: var(--series-2);
   }
 
   .nav-key {
@@ -1341,7 +1330,6 @@ const sources = [
   .returns-table .row-reference > * {
     background: var(--panel);
     color: var(--muted);
-    font-style: italic;
   }
 
   .table-note {
@@ -1377,9 +1365,9 @@ const sources = [
   .mix-bar {
     display: flex;
     gap: 2px;
-    height: 14px;
+    height: 10px;
     overflow: hidden;
-    border-radius: var(--r-pill);
+    border-radius: var(--r-1);
   }
 
   .mix-bar span {
@@ -1434,7 +1422,7 @@ const sources = [
     display: block;
     width: 100%;
     height: 120px;
-    border-radius: var(--r-xs);
+    border-radius: var(--r-1);
   }
 
   .mix-history rect:hover {
@@ -1492,13 +1480,13 @@ const sources = [
     gap: 0;
     min-width: 120px;
     padding: var(--s-3) var(--s-4);
-    border-radius: var(--r-sm);
+    border-radius: var(--r-1);
     background: var(--panel);
   }
 
   .expense-value {
-    font-size: var(--fs-xl);
-    font-weight: var(--fw-strong);
+    font-size: var(--fs-lg);
+    font-weight: 650;
     letter-spacing: -0.01em;
   }
 
@@ -1572,7 +1560,7 @@ const sources = [
     min-height: 32px;
     padding: 0 var(--s-2);
     border: 0;
-    border-radius: var(--r-xs);
+    border-radius: var(--r-1);
     background: none;
     color: var(--accent);
     font: inherit;
@@ -1638,11 +1626,6 @@ const sources = [
   }
 
   @media (max-width: 719px) {
-    .fund-tile {
-      width: 44px;
-      height: 44px;
-    }
-
     .fund-hero-main {
       gap: var(--s-3);
     }
@@ -1667,10 +1650,6 @@ const sources = [
 
     .figure {
       padding: var(--s-3);
-    }
-
-    .figure-value {
-      font-size: var(--fs-lg);
     }
 
     .section-nav {

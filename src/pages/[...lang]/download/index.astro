@@ -124,7 +124,7 @@ const SOURCES = [
 
   <section class="section">
     <div class="card featured">
-      <span class="icon-tile" set:html={icon('table-2', { size: 20 })} />
+      <span class="icon-tile" set:html={icon('table-2', { size: 14 })} />
       <div class="featured-text">
         <h2 class="card-title"><code>funds.csv</code></h2>
         <p class="muted small" set:html={m.download_funds_csv_note({ apiLink: anchor(localizeHref('/api/', locale), m.nav_api()) })} />
@@ -141,7 +141,7 @@ const SOURCES = [
         archives.map((archive) => (
           <li class="card archive">
             <div class="archive-head">
-              <span class="icon-tile" set:html={icon('layers', { size: 20 })} />
+              <span class="icon-tile" set:html={icon('archive', { size: 14 })} />
               <h3 class="card-title"><code>{archive.name}.zip</code></h3>
             </div>
             <p class="muted small">{archiveDescription(archive)}</p>
@@ -184,7 +184,7 @@ const SOURCES = [
   <section class="section">
     <h2 class="section-title">{m.download_notes_title()}</h2>
     <div class="card notes">
-      <span class="icon-tile" set:html={icon('info', { size: 20 })} />
+      <span class="icon-tile" set:html={icon('info', { size: 14 })} />
       <ul class="prose">
         <li set:html={m.download_note_history()} />
         <li set:html={m.download_note_units()} />

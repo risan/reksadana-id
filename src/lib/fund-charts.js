@@ -178,7 +178,7 @@ export async function mountFundCharts(symbol, includeToggle) {
         series: [
           {},
           { label: m.chart_series_nav(), stroke: () => cssColor('--accent'), width: 1.8, fill: () => withAlpha(cssColor('--accent'), 0.08) },
-          { label: m.chart_compare_with(), show: false, stroke: () => cssColor('--gold'), width: 1.8, dash: [6, 4], points: { show: false } },
+          { label: m.chart_compare_with(), show: false, stroke: () => cssColor('--series-2'), width: 1.8, dash: [6, 4], points: { show: false } },
         ],
         axes: axes((value) => (value >= 100000 ? formatCompact(value, locale) : formatNumber(value, locale, value < 10 ? 4 : 2)), locale),
         tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),
@@ -245,7 +245,7 @@ export async function mountFundCharts(symbol, includeToggle) {
         scales: { x: { time: true }, y: { range: (_, __, max) => [0, max * 1.05] } },
         series: [
           {},
-          { label: m.figure_aum(), stroke: () => cssColor('--gold'), fill: () => withAlpha(cssColor('--gold'), 0.14), width: 1.6, points: { show: false } },
+          { label: m.figure_aum(), stroke: () => cssColor('--soga'), fill: () => withAlpha(cssColor('--soga'), 0.14), width: 1.6, points: { show: false } },
         ],
         axes: axes((value) => formatCompact(value, locale), locale),
         tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),

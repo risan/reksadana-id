@@ -1,9 +1,8 @@
 ---
-import '@fontsource-variable/plus-jakarta-sans';
-import '@fontsource-variable/newsreader/opsz.css';
-import '@fontsource/spline-sans-mono/400.css';
+import '@fontsource-variable/schibsted-grotesk';
+import '@fontsource/fragment-mono/400.css';
 import '../styles/global.css';
-import mainFont from '@fontsource-variable/plus-jakarta-sans/files/plus-jakarta-sans-latin-wght-normal.woff2?url';
+import mainFont from '@fontsource-variable/schibsted-grotesk/files/schibsted-grotesk-latin-wght-normal.woff2?url';
 import { latestNavDate } from '../lib/data.js';
 import { formatDate } from '../lib/format.js';
 import { LOCALES, localizeHref, unlocalizedPath } from '../lib/i18n.js';
@@ -19,7 +18,7 @@ const absoluteUrl = (targetLocale) => new URL(localizeHref(pagePath, targetLocal
 
 const NAV_LINKS = [
   ['funds', '/', m.nav_funds(), 'table-2'],
-  ['compare', '/compare/', m.nav_compare(), 'git-compare'],
+  ['compare', '/compare/', m.nav_compare(), 'scale'],
   ['download', '/download/', m.nav_download(), 'download'],
   ['api', '/api/', m.nav_api(), 'braces'],
 ];
@@ -35,8 +34,8 @@ const CREDITS = [
 
 // Four ellipses around a point: the kawung motif, drawn on a 24 x 24 grid.
 const KAWUNG_SHAPES = '<ellipse cx="12" cy="6.5" rx="3.6" ry="5"/><ellipse cx="12" cy="17.5" rx="3.6" ry="5"/><ellipse cx="6.5" cy="12" rx="5" ry="3.6"/><ellipse cx="17.5" cy="12" rx="5" ry="3.6"/>';
-const logoMark = `<svg class="logo-mark" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">${KAWUNG_SHAPES}<circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none"/></svg>`;
-const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="8" fill="#2440a8"/><g transform="translate(4 4)" fill="none" stroke="#e2ae4a" stroke-width="1.7">${KAWUNG_SHAPES}<circle cx="12" cy="12" r="1.4" fill="#e2ae4a" stroke="none"/></g></svg>`;
+const logoMark = `<svg class="logo-mark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">${KAWUNG_SHAPES}<circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none"/></svg>`;
+const faviconSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="#2e3a8c"/><g transform="translate(4 4)" fill="none" stroke="#dc9a66" stroke-width="1.7">${KAWUNG_SHAPES}<circle cx="12" cy="12" r="1.4" fill="#dc9a66" stroke="none"/></g></svg>`;
 
 const dataDate = latestNavDate();
 const themeLabel = (mode) => m.theme_label({ mode });
@@ -49,8 +48,8 @@ const themeLabel = (mode) => m.theme_label({ mode });
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="description" content={description} />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f7f5ef" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f3f1ec" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#121315" media="(prefers-color-scheme: dark)" />
     <script is:inline>
       // Set before the CSS paints, so a reader who picked a theme never sees the other one flash.
       try {
@@ -76,7 +75,7 @@ const themeLabel = (mode) => m.theme_label({ mode });
         <a class="wordmark" href={localizeHref('/', locale)}><Fragment set:html={logoMark} />Reksadana<span>ID</span></a>
         <nav class="site-nav" aria-label={m.nav_main()}>
           {NAV_LINKS.map(([key, href, label, iconName]) => (
-            <a href={localizeHref(href, locale)} aria-current={section === key ? 'page' : undefined}><Fragment set:html={icon(iconName)} />{label}</a>
+            <a href={localizeHref(href, locale)} aria-current={section === key ? 'page' : undefined}><Fragment set:html={icon(iconName, { size: 14 })} />{label}</a>
           ))}
         </nav>
         <div class="header-actions">
@@ -90,9 +89,9 @@ const themeLabel = (mode) => m.theme_label({ mode });
             data-label-light={themeLabel(m.theme_light())}
             data-label-dark={themeLabel(m.theme_dark())}
           >
-            <span class="theme-icon theme-icon-system" set:html={icon('monitor', { size: 20 })} />
-            <span class="theme-icon theme-icon-light" set:html={icon('sun', { size: 20 })} />
-            <span class="theme-icon theme-icon-dark" set:html={icon('moon', { size: 20 })} />
+            <span class="theme-icon theme-icon-system" set:html={icon('monitor', { size: 16 })} />
+            <span class="theme-icon theme-icon-light" set:html={icon('sun', { size: 16 })} />
+            <span class="theme-icon theme-icon-dark" set:html={icon('moon', { size: 16 })} />
           </button>
           <nav class="seg lang-switch" aria-label={m.language_label()}>
             {LOCALES.map((target) => (
@@ -113,7 +112,6 @@ const themeLabel = (mode) => m.theme_label({ mode });
       <slot />
     </main>
     <footer class="site-footer">
-      <div class="kawung-band" aria-hidden="true"></div>
       <div class="wrap footer-body">
         <div class="footer-top">
           <p>{m.footer_disclaimer()}</p>
@@ -133,7 +131,7 @@ const themeLabel = (mode) => m.theme_label({ mode });
     </footer>
     <nav class="tab-bar" aria-label={m.nav_main()}>
       {NAV_LINKS.map(([key, href, label, iconName]) => (
-        <a href={localizeHref(href, locale)} aria-current={section === key ? 'page' : undefined}><Fragment set:html={icon(iconName, { size: 22 })} />{label}</a>
+        <a href={localizeHref(href, locale)} aria-current={section === key ? 'page' : undefined}><Fragment set:html={icon(iconName, { size: 18 })} />{label}</a>
       ))}
     </nav>
     <script>
