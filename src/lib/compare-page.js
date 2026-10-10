@@ -114,7 +114,7 @@ export async function mountComparePage() {
     chips.innerHTML = ids
       .map(
         (id, slot) =>
-          `<li class="selected-chip"><i class="chip-dot" style="background: var(--series-${slot + 1})"></i><a href="${fundHref(id)}">${escapeHtml(fundName(id))}</a><button type="button" class="remove" data-remove="${escapeHtml(id)}" aria-label="${escapeHtml(m.compare_remove({ name: fundName(id) }))}">${icon('x', { size: 16 })}</button></li>`,
+          `<li class="selected-chip" style="--series: var(--series-${slot + 1})"><a href="${fundHref(id)}">${escapeHtml(fundName(id))}</a><button type="button" class="remove" data-remove="${escapeHtml(id)}" aria-label="${escapeHtml(m.compare_remove({ name: fundName(id) }))}">${icon('x', { size: 16 })}</button></li>`,
       )
       .join('');
   }
@@ -326,9 +326,9 @@ export async function mountComparePage() {
               ? ''
               : `<div class="sub"><span class="tag tag-quiet">${escapeHtml(m.compare_not_in_chart())}</span></div>`;
 
-      return `<th scope="col" class="c-fund"${column.inChart ? ` style="--column-color: var(--series-${column.slot + 1})"` : ''}>
-        <div class="col-head">${typeTile(column.fund)}<a href="${fundHref(column.id)}">${escapeHtml(column.fund.name)}</a><button type="button" class="remove" data-remove="${escapeHtml(column.id)}" aria-label="${escapeHtml(m.compare_remove({ name: column.fund.name }))}">${icon('x', { size: 16 })}</button></div>
-        <div class="sub mono">${escapeHtml(column.id)}</div>${state}
+      return `<th scope="col" class="c-fund">
+        <div class="col-head"><i class="key-box" style="background: var(--series-${column.slot + 1})"></i><a href="${fundHref(column.id)}">${escapeHtml(column.fund.name)}</a><button type="button" class="remove" data-remove="${escapeHtml(column.id)}" aria-label="${escapeHtml(m.compare_remove({ name: column.fund.name }))}">${icon('x', { size: 14 })}</button></div>
+        <div class="col-sub"><span class="sub mono">${escapeHtml(column.id)}</span>${state}</div>
       </th>`;
     };
 

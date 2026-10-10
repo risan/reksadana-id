@@ -442,7 +442,7 @@
   "nav_compare": "Bandingkan",
   "compare_title": "Bandingkan reksa dana",
   "compare_description": "Bandingkan pertumbuhan NAB, imbal hasil, dan biaya 2 sampai 5 reksa dana Indonesia berdampingan.",
-  "compare_lede": "Pilih 2 sampai 5 reksa dana untuk melihat pertumbuhannya berdampingan, lalu bandingkan profil, imbal hasil, dan biayanya. Tidak ada peringkat \"terbaik\": dana berbeda jenis dan risiko tidak bisa diadu begitu saja.",
+  "compare_lede": "Pilih 2 sampai 5 reksa dana untuk membandingkan pertumbuhan, profil, imbal hasil, dan biayanya. Tidak ada peringkat \"terbaik\": jenis dan risikonya berbeda.",
   "compare_picker_label": "Tambah reksa dana",
   "compare_add": "Tambah",
   "compare_added": "Dipilih",
@@ -539,7 +539,7 @@
   "compare_count": "{count} dari {max} dipilih",
   "compare_results_label": "Reksa dana yang cocok",
   "compare_best": "Terbaik di antara dana yang dibandingkan",
-  "compare_best_note": "Titik emas menandai nilai terbaik di satu baris: imbal hasil tertinggi, penurunan terkecil, expense ratio terendah. Ini bukan peringkat keseluruhan.",
+  "compare_best_note": "Titik cokelat menandai nilai terbaik di satu baris: imbal hasil tertinggi, penurunan terkecil, expense ratio terendah. Ini bukan peringkat keseluruhan.",
 
   "detail_ojk": "OJK",
   "detail_ojk_aum": "Dana kelolaan menurut OJK",

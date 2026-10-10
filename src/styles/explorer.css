@@ -424,51 +424,6 @@
   gap: var(--s-2);
 }
 
-.switch {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--s-3);
-  color: var(--ink-2);
-  font-size: var(--fs-sm);
-  font-weight: var(--fw-label);
-  white-space: nowrap;
-  cursor: pointer;
-}
-
-.switch input {
-  position: relative;
-  flex: none;
-  width: 28px;
-  height: 16px;
-  margin: 0;
-  border-radius: 8px;
-  background: var(--rule-strong);
-  appearance: none;
-  cursor: pointer;
-  transition: background var(--t-fast) var(--ease);
-}
-
-.switch input::after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--surface);
-  transition: transform var(--t-fast) var(--ease);
-}
-
-.switch input:checked {
-  background: var(--accent);
-}
-
-.switch input:checked::after {
-  transform: translateX(12px);
-  background: var(--on-accent);
-}
-
 .icon-btn.info-btn {
   width: 24px;
   height: 24px;

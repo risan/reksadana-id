@@ -20,34 +20,40 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     <p class="lede">{m.compare_lede()}</p>
   </div>
 
-  <section class="card picker" id="picker">
-    <div class="picker-field">
-      <label class="search">
-        <span class="visually-hidden">{m.compare_picker_label()}</span>
-        <Fragment set:html={icon('search')} />
-        <input id="picker-input" type="search" role="combobox" aria-expanded="false" aria-controls="picker-results" aria-autocomplete="list" placeholder={m.search_placeholder()} autocomplete="off" spellcheck="false" />
-      </label>
-      <ul class="picker-results" id="picker-results" aria-label={m.compare_results_label()} hidden></ul>
+  <section class="picker" id="picker">
+    <div class="picker-bar">
+      <div class="picker-field">
+        <label class="search">
+          <span class="visually-hidden">{m.compare_picker_label()}</span>
+          <Fragment set:html={icon('search')} />
+          <input id="picker-input" type="search" role="combobox" aria-expanded="false" aria-controls="picker-results" aria-autocomplete="list" placeholder={m.search_placeholder()} autocomplete="off" spellcheck="false" />
+        </label>
+        <ul class="picker-results" id="picker-results" aria-label={m.compare_results_label()} hidden></ul>
+      </div>
+      <p class="muted small" id="picker-note" aria-live="polite"></p>
+      <span class="picker-dividends">
+        <label class="switch">
+          <input type="checkbox" id="include-dividends" role="switch" />
+          {m.dividends_toggle()}
+        </label>
+        <button class="info-btn" type="button" popovertarget="dividends-info" aria-label={m.dividends_info_label()}><Fragment set:html={icon('info', { size: 14 })} /></button>
+        <div class="info-pop" id="dividends-info" popover>{m.dividends_toggle_help({ count: formatCount(dividendFundCount, locale) })}</div>
+      </span>
     </div>
-    <p class="muted small" id="picker-note" aria-live="polite"></p>
     <ul class="selected-chips" id="selected-chips" aria-label={m.compare_selected_label()}></ul>
-    <label class="dividend-toggle">
-      <input type="checkbox" id="include-dividends" /> {m.dividends_toggle()}
-      <span class="muted small">{m.dividends_toggle_help({ count: formatCount(dividendFundCount, locale) })}</span>
-    </label>
   </section>
 
   <div id="compare-notices"></div>
   <div class="empty-state" id="compare-empty">{m.compare_loading()}</div>
 
   <section class="section" id="compare-chart-section" hidden>
-    <h2 class="section-title">{m.compare_chart_title()}</h2>
+    <h2 class="section-title">
+      {m.compare_chart_title()}
+      <span class="aside" id="chart-start"></span>
+    </h2>
     <div class="card chart-card">
-      <div class="chart-bar">
-        <div class="seg" role="group" aria-label={m.chart_range_label()}>
-          {CHART_RANGES.map((range) => <button type="button" data-range={range} aria-pressed="false">{RANGE_LABELS[range]}</button>)}
-        </div>
-        <span class="muted small" id="chart-start"></span>
+      <div class="seg" role="group" aria-label={m.chart_range_label()}>
+        {CHART_RANGES.map((range) => <button type="button" data-range={range} aria-pressed="false">{RANGE_LABELS[range]}</button>)}
       </div>
       <div class="chart" id="compare-chart"></div>
       <p class="chart-empty" id="chart-message" hidden></p>
@@ -74,9 +80,24 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     gap: var(--s-3);
   }
 
+  .picker-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--s-2) var(--s-5);
+  }
+
   .picker-field {
     position: relative;
-    max-width: 640px;
+    flex: 0 1 480px;
+    min-width: 0;
+  }
+
+  .picker-bar .picker-dividends {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+    margin-left: auto;
   }
 
   .picker-results {
@@ -105,7 +126,7 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     align-items: center;
     gap: var(--s-3);
     width: 100%;
-    min-height: 52px;
+    min-height: 44px;
     padding: var(--s-2) var(--s-3);
     border: 0;
     border-radius: var(--r-1);
@@ -175,20 +196,14 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     align-items: center;
     gap: var(--s-2);
     max-width: 100%;
-    min-height: 40px;
-    padding: 0 var(--s-1) 0 var(--s-3);
+    height: var(--control-h);
+    padding: 0 0 0 var(--s-3);
     border: 1px solid var(--rule-strong);
+    border-left: 3px solid var(--series);
     border-radius: var(--r-1);
     background: var(--surface);
     font-size: var(--fs-sm);
     font-weight: var(--fw-label);
-  }
-
-  .selected-chip .chip-dot {
-    flex: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
   }
 
   .selected-chip a {
@@ -202,8 +217,8 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     display: inline-grid;
     flex: none;
     place-items: center;
-    width: 32px;
-    height: 32px;
+    width: var(--control-h);
+    height: 100%;
     padding: 0;
     border: 0;
     border-radius: var(--r-1);
@@ -223,16 +238,14 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     margin-top: var(--s-3);
   }
 
-  .empty-state {
+  #compare-empty {
+    display: block;
     margin-top: var(--s-4);
+    padding: var(--s-5) var(--panel-pad);
     color: var(--ink-2);
   }
 
-  .chart-bar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--s-2) var(--s-4);
+  .chart-card .seg {
     margin-bottom: var(--s-3);
   }
 
@@ -306,10 +319,6 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     vertical-align: top;
   }
 
-  .compare-table thead th.c-fund {
-    border-top: 3px solid var(--column-color, transparent);
-  }
-
   .compare-table tbody th[scope='row'],
   .compare-table thead th:first-child {
     position: sticky;
@@ -329,25 +338,32 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
   .compare-table .col-head {
     display: flex;
     align-items: flex-start;
-    gap: var(--s-2);
+    gap: var(--s-3);
   }
 
-  .compare-table .col-head .icon-tile {
-    width: 28px;
-    height: 28px;
-    border-radius: var(--r-1);
+  .compare-table .col-head .key-box {
+    margin-top: 4px;
   }
 
   .compare-table .col-head a {
     flex: 1;
     min-width: 0;
+    color: var(--ink);
     font-weight: var(--fw-strong);
   }
 
   .compare-table .col-head .remove {
-    width: 28px;
-    height: 28px;
-    margin: 0 calc(var(--s-1) * -1) 0 0;
+    width: 24px;
+    height: 24px;
+    margin: -2px calc(var(--s-1) * -1) 0 0;
+  }
+
+  .compare-table .col-sub {
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+    margin-top: var(--s-1);
+    padding-left: 16px;
   }
 
   .compare-table .sub {
@@ -357,20 +373,27 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     font-weight: var(--fw-body);
   }
 
+  .compare-table .col-sub .sub {
+    margin-top: 0;
+  }
+
   .compare-table .mono {
     font-size: var(--fs-xs);
   }
 
   .compare-table .group th {
     position: static;
-    padding-top: var(--s-4);
-    border-bottom: 1px solid var(--rule-strong);
-    background: none;
+    padding-top: var(--s-2);
+    padding-bottom: var(--s-2);
+    border-bottom: 1px solid var(--rule);
+    background: var(--panel);
     box-shadow: none;
-    color: var(--ink);
-    font-size: var(--fs-sm);
+    color: var(--muted);
+    font-size: var(--fs-2xs);
     font-weight: var(--fw-strong);
+    letter-spacing: 0.04em;
     text-align: left;
+    text-transform: uppercase;
   }
 
   .compare-table .tag {
@@ -379,6 +402,28 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
   }
 
   @media (max-width: 719px) {
+    .picker-field {
+      flex-basis: 100%;
+    }
+
+    .picker-bar .picker-dividends {
+      margin-left: 0;
+    }
+
+    #compare-chart-section .section-title {
+      flex-wrap: wrap;
+      gap: 0 var(--s-4);
+    }
+
+    #compare-chart-section .section-title .aside {
+      flex-basis: 100%;
+      margin-left: 0;
+    }
+
+    .chart-card .seg button {
+      padding: 0 var(--s-3);
+    }
+
     .compare-table th,
     .compare-table td {
       min-width: 148px;
@@ -392,24 +437,17 @@ const RANGE_LABELS = { '1m': m.period_1m(), '6m': m.period_6m(), ytd: m.period_y
     }
 
     .compare-table .col-head .remove {
-      width: 44px;
-      height: 44px;
+      width: 36px;
+      height: 36px;
       margin: calc(var(--s-3) * -1) calc(var(--s-3) * -1) 0 0;
-    }
-
-    .remove {
-      width: 44px;
-      height: 44px;
-    }
-
-    .selected-chip {
-      min-height: 44px;
     }
   }
 </style>
 
 <script>
+  import { mountInfoPopovers } from '../../../lib/info-popover.js';
   import { mountComparePage } from '../../../lib/compare-page.js';
 
+  mountInfoPopovers();
   mountComparePage();
 </script>

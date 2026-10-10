@@ -674,14 +674,21 @@ main.wrap {
 }
 
 .intro {
-  display: grid;
-  gap: var(--s-2);
-  margin-bottom: var(--s-5);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-2) var(--s-5);
+  margin-bottom: var(--s-4);
+}
+
+.intro .lede {
+  flex: 1 1 360px;
+  min-width: 0;
+  max-width: none;
 }
 
 .lede {
   max-width: 68ch;
-  margin-top: var(--s-2);
   color: var(--ink-2);
   font-size: var(--fs-base);
 }
@@ -1175,6 +1182,82 @@ dialog {
 
 dialog::backdrop {
   background: rgb(18 19 21 / 55%);
+}
+
+/* The "Include dividends" switch of the explorer and the compare page */
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  color: var(--ink-2);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-label);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.switch input {
+  position: relative;
+  flex: none;
+  width: 28px;
+  height: 16px;
+  margin: 0;
+  border-radius: 8px;
+  background: var(--rule-strong);
+  appearance: none;
+  cursor: pointer;
+  transition: background var(--t-fast) var(--ease);
+}
+
+.switch input::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--surface);
+  transition: transform var(--t-fast) var(--ease);
+}
+
+.switch input:checked {
+  background: var(--accent);
+}
+
+.switch input:checked::after {
+  transform: translateX(12px);
+  background: var(--on-accent);
+}
+
+/* The info button beside a label, and the popover it opens (see info-popover.js) */
+
+.info-btn {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-1);
+  background: none;
+  color: var(--faint);
+  cursor: pointer;
+}
+
+.info-btn:hover,
+.info-btn[aria-expanded='true'] {
+  color: var(--ink);
+}
+
+.info-pop {
+  position: fixed;
+  inset: auto;
+  margin: 0;
+  width: 280px;
+  line-height: 1.5;
 }
 
 /* Key/value lists */

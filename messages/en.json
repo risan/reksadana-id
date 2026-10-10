@@ -442,7 +442,7 @@
   "nav_compare": "Compare",
   "compare_title": "Compare funds",
   "compare_description": "Compare the NAV growth, returns, and costs of 2 to 5 Indonesian mutual funds side by side.",
-  "compare_lede": "Pick 2 to 5 funds to see their growth side by side, then compare their profile, returns, and costs. There is no \"best\" ranking: funds of different types and risk are not simply comparable.",
+  "compare_lede": "Pick 2 to 5 funds to compare their growth, profile, returns, and costs. There is no \"best\" ranking: funds differ in type and risk.",
   "compare_picker_label": "Add a fund",
   "compare_add": "Add",
   "compare_added": "Added",
@@ -539,7 +539,7 @@
   "compare_count": "{count} of {max} picked",
   "compare_results_label": "Matching funds",
   "compare_best": "Best of the funds compared",
-  "compare_best_note": "A gold dot marks the best value in a row: the highest return, the smallest fall, the lowest expense ratio. It is not an overall ranking.",
+  "compare_best_note": "A brown dot marks the best value in a row: the highest return, the smallest fall, the lowest expense ratio. It is not an overall ranking.",
 
   "detail_ojk": "OJK",
   "detail_ojk_aum": "Fund size per OJK",
