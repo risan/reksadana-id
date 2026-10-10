@@ -1030,6 +1030,24 @@ th[aria-sort='descending'] .sort-down {
   }
 }
 
+/* Eight segments only fit one row on a wide desktop; tablets get two rows of four instead of cut-off names. */
+
+@media (min-width: 720px) and (max-width: 1359px) {
+  .type-strip-list {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    overflow-x: visible;
+  }
+
+  .type-seg:nth-child(4n + 1) {
+    border-left: 0;
+  }
+
+  .type-seg:nth-child(n + 5) {
+    border-top: 1px solid var(--rule);
+  }
+}
+
 /* Phones: the table becomes a list in one panel, sorted from the select above it */
 
 @media (max-width: 719px) {
