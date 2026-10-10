@@ -1,31 +1,38 @@
-// The markup of the explorer's type cards, table rows, and skeleton rows. The home page renders the first page
+// The markup of the explorer's type strip, table rows, and skeleton rows. The home page renders the first page
 // with it at build time, and the browser script renders every later view, so both draw the same thing.
 import * as m from '../paraglide/messages.js';
 import { MAX_FUNDS } from './compare.js';
 import { COLUMNS, renderSpark } from './explorer-columns.js';
-import { escapeHtml, searchTerms, summarizeTypes, typeNames } from './explorer.js';
-import { changeClass, formatChange, formatCount, formatMoney, formatNav, formatShortDate } from './format.js';
+import { TYPE_GROUPS, escapeHtml, searchTerms, summarizeTypes, typeNames } from './explorer.js';
+import { changeClass, formatChange, formatCount, formatMoney, tightenSeparators } from './format.js';
 import { typeLook } from './fund-types.js';
 import { icon } from './icons.js';
 import { localizeHref } from './i18n.js';
 
-function typeTile(tone, iconName, size) {
-  return `<span class="icon-tile ${tone ? `type-${tone}` : ''}">${icon(iconName, { size })}</span>`;
+const PHONE_SPARK_SIZE = { width: 64, height: 18 };
+
+function typeTile(tone, iconName) {
+  return `<span class="icon-tile ${tone ? `type-${tone}` : ''}">${icon(iconName, { size: 14 })}</span>`;
 }
 
-export function renderTypeCards(funds, state, locale) {
+// The sentence under the strip: what the chosen type is for.
+export function typeNote(state) {
+  return TYPE_GROUPS.find((group) => group.key === state.type).description();
+}
+
+export function renderTypeSegments(funds, state, locale) {
   return summarizeTypes(funds, state)
     .map(({ group, count, returnCount, median }) => {
       const { name, note } = typeNames(group, locale);
       const medianTitle = m.type_median_title({ count: formatCount(returnCount, locale) });
+      const title = [note && `${name} (${note})`, group.description()].filter(Boolean).join(': ');
 
-      return `<button type="button" class="type-card" data-type="${escapeHtml(group.key)}" aria-pressed="${state.type === group.key}">
-        ${typeTile(group.tone, group.icon, 20)}
-        <span class="type-card-body">
-          <span class="type-name">${escapeHtml(name)}${note ? `<span class="type-note">${escapeHtml(note)}</span>` : ''}</span>
-          <span class="type-desc">${escapeHtml(group.description())}</span>
+      return `<button type="button" class="type-seg ${group.tone ? `type-${group.tone}` : ''}" data-type="${escapeHtml(group.key)}" aria-pressed="${state.type === group.key}" title="${escapeHtml(title)}">
+        <span class="type-seg-top">
+          ${icon(group.icon, { size: 14 })}
+          <span class="type-name">${escapeHtml(name)}</span>
+          <span class="type-count">${formatCount(count, locale)}</span>
         </span>
-        <span class="type-count">${formatCount(count, locale)}</span>
         <span class="type-median ${changeClass(median)}" title="${escapeHtml(medianTitle)}">${median === null ? '&mdash;' : formatChange(median, locale, 1)}<small>${escapeHtml(m.type_median())}</small></span>
       </button>`;
     })
@@ -46,7 +53,7 @@ function highlight(text, terms) {
 }
 
 function renderTags(fund) {
-  const tag = (label, title, extraClass = 'tag-quiet') => `<span class="tag ${extraClass}"${title ? ` title="${escapeHtml(title)}"` : ''}>${escapeHtml(label)}</span>`;
+  const tag = (label, title, extraClass = '') => `<span class="tag ${extraClass}"${title ? ` title="${escapeHtml(title)}"` : ''}>${escapeHtml(label)}</span>`;
 
   return [
     fund.sharia && tag(m.tag_sharia(), m.tag_sharia_title()),
@@ -60,19 +67,22 @@ function renderTags(fund) {
     .join('');
 }
 
-// The same figures as the columns, laid out for a phone: the table turns into a list of cards there.
-function renderCardStats(fund, { dataDate, locale }) {
-  const figure = (value) => (value === null ? '<span class="nil">&mdash;</span>' : formatChange(value, locale, 1));
-  const navDate = fund.nav_date ? formatShortDate(fund.nav_date, dataDate, locale) : '';
+// The same figures as the columns, laid out for a phone: the table turns into a list there.
+function renderCardStats(fund, { locale }) {
+  const direction = changeClass(fund.return_1y);
+  const change = (value) => (value === null ? '<span class="nil">&mdash;</span>' : `<b class="${changeClass(value)}">${formatChange(value, locale, 1)}</b>`);
   const buy = [fund.bibit && '<span class="tag">Bibit</span>', fund.makmur && '<span class="tag">Makmur</span>'].filter(Boolean).join('');
 
-  return `<div class="card-stats">
-    <div class="card-figure card-figure-main ${changeClass(fund.return_1y)}"><b>${figure(fund.return_1y)}</b><small>${escapeHtml(m.period_1y())}</small></div>
-    <div class="card-figure ${changeClass(fund.return_ytd)}"><b>${figure(fund.return_ytd)}</b><small>${escapeHtml(m.period_ytd())}</small></div>
-    <div class="card-figure"><b>${formatMoney(fund.aum, locale, fund.aum_currency)}</b><small>${escapeHtml(m.col_aum())}</small></div>
-    <div class="card-spark">${renderSpark(fund.spark, changeClass(fund.return_1y) || 'flat')}</div>
-    <div class="card-meta"><span>${escapeHtml(m.col_nav())} ${formatNav(fund.nav, locale)}${navDate ? ` · ${navDate}` : ''}</span><span class="card-buy">${buy}</span></div>
-  </div>`;
+  return `<div class="card-return ${direction}">
+      <b>${fund.return_1y === null ? '<span class="nil">&mdash;</span>' : formatChange(fund.return_1y, locale, 1)}</b>
+      ${renderSpark(fund.spark, direction || 'flat', PHONE_SPARK_SIZE)}
+      <span class="card-buy">${buy}</span>
+    </div>
+    <div class="card-line">
+      <span><small>${escapeHtml(m.period_ytd())}</small> ${change(fund.return_ytd)}</span>
+      <span><small>${escapeHtml(m.col_cagr_3y())}</small> ${change(fund.cagr_3y)}</span>
+      <span>${formatMoney(fund.aum, locale, fund.aum_currency)}</span>
+    </div>`;
 }
 
 export function renderRow(fund, context) {
@@ -81,17 +91,16 @@ export function renderRow(fund, context) {
   const { tone, icon: iconName } = typeLook(fund.type);
   const isCompared = comparedIds.has(fund.id);
   const compareDisabled = !isCompared && comparedIds.size >= MAX_FUNDS;
-  const cells = COLUMNS.map((column) => `<td class="col-${column.key} ${column.numeric ? 'num' : ''} ${column.cellClass?.(fund) ?? ''}">${column.cell(fund, context)}</td>`).join('');
+  const cells = COLUMNS.map((column) => `<td class="col-${column.key} ${column.numeric ? 'num' : ''} ${column.cellClass?.(fund) ?? ''}">${column.numeric ? tightenSeparators(column.cell(fund, context)) : column.cell(fund, context)}</td>`).join('');
 
   return `<tr data-href="${href}">
-    <td class="c-compare"><input type="checkbox" data-compare="${escapeHtml(fund.id)}" aria-label="${escapeHtml(m.compare_checkbox_label({ name: fund.name }))}"${compareDisabled ? ` disabled title="${escapeHtml(m.compare_full({ count: MAX_FUNDS }))}"` : ''}${isCompared ? ' checked' : ''} /></td>
+    <td class="c-compare"><label class="compare-hit"><input type="checkbox" data-compare="${escapeHtml(fund.id)}" aria-label="${escapeHtml(m.compare_checkbox_label({ name: fund.name }))}"${compareDisabled ? ` disabled title="${escapeHtml(m.compare_full({ count: MAX_FUNDS }))}"` : ''}${isCompared ? ' checked' : ''} /></label></td>
     <td class="c-fund">
       <div class="fund-cell">
-        ${typeTile(tone, iconName, 16)}
+        ${typeTile(tone, iconName)}
         <div class="fund-text">
-          <a href="${href}">${highlight(fund.name, terms)}</a>
-          <div class="sub">${highlight(fund.manager ?? m.unknown_manager(), terms)} · <span class="mono">${highlight(fund.id, terms)}</span></div>
-          <div class="fund-tags">${renderTags(fund)}</div>
+          <div class="fund-line"><a href="${href}">${highlight(fund.name, terms)}</a><span class="fund-tags">${renderTags(fund)}</span></div>
+          <div class="sub"><span class="fund-manager">${highlight(fund.manager ?? m.unknown_manager(), terms)}</span><span class="mono fund-id">${highlight(fund.id, terms)}</span></div>
         </div>
       </div>
       ${renderCardStats(fund, context)}
@@ -100,8 +109,8 @@ export function renderRow(fund, context) {
   </tr>`;
 }
 
-export function renderRows(funds, state, dataDate, locale, comparedIds = new Set()) {
-  const context = { terms: searchTerms(state.q), dataDate, locale, comparedIds };
+export function renderRows(funds, state, dataDate, locale, comparedIds = new Set(), latestAumDate = '') {
+  const context = { terms: searchTerms(state.q), dataDate, locale, comparedIds, latestAumDate };
 
   return funds
     .slice(state.page * state.size, (state.page + 1) * state.size)
