@@ -364,7 +364,7 @@ const sources = [
       </div>
     </div>
     <div class="fund-actions">
-      <button class="btn" type="button" id="compare-toggle" data-fund-id={id} hidden><Fragment set:html={icon('git-compare')} /><span id="compare-toggle-label"></span></button>
+      <button class="btn" type="button" id="compare-toggle" data-fund-id={id} hidden><Fragment set:html={icon('scale', { size: 14 })} /><span id="compare-toggle-label"></span></button>
       <a class="btn btn-primary" id="compare-open" href={href('/compare/')} hidden></a>
       <button class="btn" type="button" id="share-button"><Fragment set:html={icon('share-2')} />{m.fund_share()}</button>
       {buyLinks.length > 0 && <a class="btn btn-primary fund-buy-jump" href="#buy">{m.fund_buy_jump()}</a>}

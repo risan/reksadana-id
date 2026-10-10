@@ -58,7 +58,7 @@
   display: none;
 }
 
-.search-clear {
+.icon-btn.search-clear {
   position: absolute;
   top: 50%;
   right: var(--s-2);
@@ -367,7 +367,7 @@
   display: contents;
 }
 
-.filter-chip {
+.chip.filter-chip {
   min-height: 24px;
   padding: 0 var(--s-2) 0 var(--s-3);
   border-color: color-mix(in srgb, var(--accent) 35%, transparent);
@@ -469,7 +469,7 @@
   background: var(--on-accent);
 }
 
-.info-btn {
+.icon-btn.info-btn {
   width: 24px;
   height: 24px;
   color: var(--muted);
