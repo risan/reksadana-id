@@ -4,12 +4,14 @@ import * as m from '../paraglide/messages.js';
 import { setLocale } from '../paraglide/runtime.js';
 import { rebaseBenchmark } from './benchmarks.js';
 import { fetchFundRecord, getJson } from './fetch-json.js';
-import { changeClass, escapeHtml, formatChange, formatCompact, formatDate, formatMoney, formatMonth, formatMonthName, formatNav, formatNumber } from './format.js';
+import { changeClass, escapeHtml, formatChange, formatCompact, formatDate, formatMoney, formatMonth, formatMonthName, formatNav, formatNumber, tightenSeparators } from './format.js';
 import { dividendEvents, periodStartIndex, pickAumHistory, pickNavHistory, withDividendsReinvested } from './series.js';
 
 const RANGE_PERIODS = { '1M': '1m', '3M': '3m', '6M': '6m', YTD: 'ytd', '1Y': '1y', '3Y': '3y', '5Y': '5y', All: 'all' };
 const DEFAULT_RANGE = '1Y';
 const DAY_SECONDS = 24 * 60 * 60;
+const PRICE_HEIGHT = 280;
+const AUM_HEIGHT = 92;
 
 export function cssColor(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -30,20 +32,31 @@ export function toDate(seconds) {
   return new Date(seconds * 1000).toISOString().slice(0, 10);
 }
 
+// Month names inside a year, the year alone over several years, and the day within a month.
+// A label too close to an edge of the plot would be cut off, so it is left out.
 function dateTicks(locale) {
-  return (_, ticks) => {
+  const EDGE_PIXELS = 20;
+
+  return (chart, ticks) => {
     if (ticks.length === 0) {
       return [];
     }
 
     const spanDays = (ticks.at(-1) - ticks[0]) / DAY_SECONDS;
+    const plotWidth = chart.bbox.width / uPlot.pxRatio;
 
     return ticks.map((tick) => {
+      const position = chart.valToPos(tick, 'x');
+
+      if (position < EDGE_PIXELS || plotWidth - position < EDGE_PIXELS) {
+        return null;
+      }
+
       const date = new Date(tick * 1000);
       const month = formatMonthName(date.getUTCFullYear(), date.getUTCMonth() + 1, locale);
 
-      if (spanDays > 3 * 365) {
-        return String(date.getUTCFullYear());
+      if (spanDays > 2 * 365) {
+        return date.getUTCMonth() === 0 ? String(date.getUTCFullYear()) : null;
       }
 
       if (spanDays > 75) {
@@ -55,14 +68,79 @@ function dateTicks(locale) {
   };
 }
 
-export function axes(valueFormatter, locale) {
-  const grid = { stroke: () => cssColor('--rule'), width: 1 };
-  const ticks = { show: false };
-  const font = `12px ${cssColor('--sans')}`;
+function dateAxis(locale, show) {
+  return {
+    show,
+    stroke: () => cssColor('--muted'),
+    grid: { show: false },
+    ticks: { show: false },
+    border: { show: true, stroke: () => cssColor('--rule-strong'), width: 1 },
+    font: `11px ${cssColor('--sans')}`,
+    values: dateTicks(locale),
+    space: 56,
+    size: 22,
+    gap: 4,
+  };
+}
+
+const TICK_STEPS = [1, 2, 5, 10];
+const TICK_SPACE_PIXELS = 56;
+
+// Round values between `min` and `max`, about one per `TICK_SPACE_PIXELS` of height.
+function roundTicks(min, max, heightPixels) {
+  const rawStep = (max - min) / Math.max(2, Math.round(heightPixels / TICK_SPACE_PIXELS));
+  const magnitude = 10 ** Math.floor(Math.log10(rawStep));
+  const step = TICK_STEPS.map((factor) => factor * magnitude).find((candidate) => candidate >= rawStep);
+  const decimals = Math.max(0, -Math.floor(Math.log10(step)));
+  const ticks = [];
+
+  for (let tick = Math.ceil(min / step) * step; tick <= max; tick += step) {
+    ticks.push(Number(tick.toFixed(decimals)));
+  }
+
+  return { ticks, decimals };
+}
+
+// The value axis sits inside the plot: each label is right-aligned at the plot's edge, just above its gridline.
+// `valueFormatter` gets a value and the decimals its step needs. When `percentBase()` gives a number, the ticks are
+// round percents of that base instead, so a chart of rebased lines reads in percent.
+export function axes(valueFormatter, locale, { showDates = true, percentBase = () => null } = {}) {
+  const font = `11px ${cssColor('--sans')}`;
+  let decimals = 0;
 
   return [
-    { stroke: () => cssColor('--muted'), grid: { show: false }, ticks: { show: true, stroke: () => cssColor('--rule-strong'), width: 1, size: 4 }, font, values: dateTicks(locale), space: 64, gap: 4 },
-    { side: 1, stroke: () => cssColor('--muted'), grid, ticks, font, size: 64, gap: 6, values: (_, values) => values.map(valueFormatter) },
+    dateAxis(locale, showDates),
+    {
+      side: 1,
+      size: 0,
+      gap: -6,
+      align: 2,
+      lineGap: -0.62,
+      stroke: () => cssColor('--muted'),
+      grid: { stroke: () => cssColor('--rule'), width: 1 },
+      ticks: { show: false },
+      font,
+      splits: (chart, _axis, min, max) => {
+        const heightPixels = chart.bbox.height / uPlot.pxRatio;
+        const base = percentBase();
+
+        if (base === null) {
+          const rounded = roundTicks(min, max, heightPixels);
+
+          decimals = rounded.decimals;
+
+          return rounded.ticks;
+        }
+
+        const rounded = roundTicks((min / base - 1) * 100, (max / base - 1) * 100, heightPixels);
+
+        decimals = rounded.decimals;
+
+        return rounded.ticks.map((percent) => base * (1 + percent / 100));
+      },
+      // The leading line break puts the label on the line above its gridline.
+      values: (_, values) => values.map((value) => `\n${percentBase() === null ? valueFormatter(value, decimals) : formatChange(value / percentBase() - 1, locale, decimals)}`),
+    },
   ];
 }
 
@@ -99,7 +177,7 @@ export function attachTooltip(chart, container, renderTooltip) {
       return;
     }
 
-    tip.innerHTML = renderTooltip(index);
+    tip.innerHTML = tightenSeparators(renderTooltip(index));
     tip.hidden = false;
 
     const left = chart.cursor.left + chart.over.offsetLeft;
@@ -110,11 +188,55 @@ export function attachTooltip(chart, container, renderTooltip) {
   };
 }
 
-export function observeWidth(chart, container, baseHeight) {
+export function observeWidth(chart, container, height) {
   new ResizeObserver(() => {
-    chart.setSize({ width: container.clientWidth, height: chartHeight(baseHeight) });
+    chart.setSize({ width: container.clientWidth, height: height() });
   }).observe(container);
 }
+
+// The monthly asset mix is drawn by the server; this adds a tooltip with the shares of the month under the pointer.
+export function mountMixTooltip(figure) {
+  const svg = figure.querySelector('svg');
+  const columns = [...svg.querySelectorAll('[data-tip]')];
+  const tip = document.createElement('div');
+  let active = null;
+
+  tip.className = 'chart-tip';
+  tip.hidden = true;
+  figure.append(tip);
+
+  function show(event) {
+    const bounds = svg.getBoundingClientRect();
+    const index = Math.min(columns.length - 1, Math.max(0, Math.floor(((event.clientX - bounds.left) / bounds.width) * columns.length)));
+
+    if (columns[index] !== active) {
+      active?.classList.remove('is-active');
+      active = columns[index];
+      active.classList.add('is-active');
+      tip.innerHTML = tightenSeparators(active.dataset.tip);
+    }
+
+    tip.hidden = false;
+
+    const left = event.clientX - figure.getBoundingClientRect().left;
+    const flip = left + tip.offsetWidth + 16 > figure.clientWidth;
+
+    tip.style.left = `${Math.max(flip ? left - tip.offsetWidth - 10 : left + 10, 0)}px`;
+    tip.style.top = `${svg.offsetTop}px`;
+  }
+
+  function hide() {
+    active?.classList.remove('is-active');
+    active = null;
+    tip.hidden = true;
+  }
+
+  svg.addEventListener('pointermove', show);
+  svg.addEventListener('pointerdown', show);
+  svg.addEventListener('pointerleave', hide);
+}
+
+const swatch = (color) => `<i class="key-box" style="background: ${color}"></i>`;
 
 // `includeToggle` is the page's "Include dividends" checkbox, present only for a fund with dividends.
 export async function mountFundCharts(symbol, includeToggle) {
@@ -163,24 +285,49 @@ export async function mountFundCharts(symbol, includeToggle) {
   const benchmarkLevels = new Map();
   let benchmarkId = '';
 
+  const hasBenchmarkLine = () => benchmarkId !== '' && data[2].at(-1) !== null;
+  const benchmarkColor = () => cssColor(benchmarks.get(benchmarkId)?.color ?? '--series-2');
+  const hasAumChart = aumContainer !== null && aumHistory.points.length >= 2;
+
   // The page leaves out a chart it has no data for, so a missing container means there is nothing to draw.
   if (navContainer && points.length >= 2) {
     data = [points.map((point) => toSeconds(point.date)), points.map((point) => point.value), points.map(() => null)];
 
+    // The dates are written under the size chart when there is one, so the two read as one figure.
     navChart = new uPlot(
       {
         width: navContainer.clientWidth,
-        height: chartHeight(300),
-        padding: [8, 0, 0, 16],
+        height: chartHeight(PRICE_HEIGHT),
+        padding: [8, 0, 0, 0],
         legend: { show: false },
-        cursor: { sync, points: { size: 7, width: 2, fill: () => cssColor('--surface') }, drag: { x: false, y: false } },
+        cursor: {
+          sync,
+          points: { size: 6, width: 1.5, stroke: () => cssColor('--surface'), fill: (_, seriesIndex) => (seriesIndex === 1 ? cssColor('--accent') : benchmarkColor()) },
+          drag: { x: false, y: false },
+        },
         scales: { x: { time: true } },
         series: [
           {},
-          { label: m.chart_series_nav(), stroke: () => cssColor('--accent'), width: 1.8, fill: () => withAlpha(cssColor('--accent'), 0.08) },
-          { label: m.chart_compare_with(), show: false, stroke: () => cssColor('--series-2'), width: 1.8, dash: [6, 4], points: { show: false } },
+          {
+            label: m.chart_series_nav(),
+            stroke: () => cssColor('--accent'),
+            width: 1.5,
+            fill: (chart) => {
+              const gradient = chart.ctx.createLinearGradient(0, chart.bbox.top, 0, chart.bbox.top + chart.bbox.height);
+
+              gradient.addColorStop(0, withAlpha(cssColor('--accent'), 0.12));
+              gradient.addColorStop(1, withAlpha(cssColor('--accent'), 0));
+
+              return gradient;
+            },
+            points: { show: false },
+          },
+          { label: m.chart_compare_with(), show: false, stroke: () => benchmarkColor(), width: 1.25, points: { show: false } },
         ],
-        axes: axes((value) => (value >= 100000 ? formatCompact(value, locale) : formatNumber(value, locale, value < 10 ? 4 : 2)), locale),
+        axes: axes((value, decimals) => (value >= 100000 ? formatCompact(value, locale) : formatNumber(value, locale, decimals, decimals)), locale, {
+          showDates: !hasAumChart,
+          percentBase: () => (hasBenchmarkLine() ? points[startIndex].value : null),
+        }),
         tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),
         hooks: {
           // A hairline at the range's starting NAV shows at a glance whether the fund is above or below it.
@@ -215,39 +362,44 @@ export async function mountFundCharts(symbol, includeToggle) {
     const updateNavTip = attachTooltip(navChart, navContainer, (index) => {
       const value = data[1][index];
       const change = value / points[startIndex].value - 1;
-
       const benchmarkValue = data[2][index];
+      const benchmarkChange = benchmarkValue === null ? null : benchmarkValue / points[startIndex].value - 1;
       const benchmarkRow =
-        benchmarkValue === null
+        benchmarkChange === null
           ? ''
-          : `<div class="tip-row"><i class="key-line benchmark-key"></i><b>${escapeHtml(benchmarks.get(benchmarkId).shortName)}</b><span class="${changeClass(benchmarkValue / points[startIndex].value - 1)}">${formatChange(benchmarkValue / points[startIndex].value - 1, locale)}</span></div>`;
+          : `<div class="tip-row">${swatch(benchmarkColor())}<span class="tip-label">${escapeHtml(benchmarks.get(benchmarkId).shortName)}</span><span class="tip-change ${changeClass(benchmarkChange)}">${formatChange(benchmarkChange, locale)}</span></div>`;
 
       return `<div class="tip-date">${formatDate(toDate(data[0][index]), locale)}</div>
-        <div class="tip-row">${benchmarkRow === '' ? '' : '<i class="key-line nav-key"></i>'}<b>${formatNav(value, locale)}</b><span class="${changeClass(change)}">${formatChange(change, locale)}</span></div>
+        <div class="tip-row">${swatch('var(--accent)')}<span class="tip-label">${escapeHtml(m.chart_series_nav())}</span><b>${formatNav(value, locale)}</b><span class="tip-change ${changeClass(change)}">${formatChange(change, locale)}</span></div>
         ${benchmarkRow}
         <div class="tip-note">${escapeHtml(m.chart_tip_since({ date: formatDate(points[startIndex].date, locale) }))}</div>`;
     });
 
     navChart.hooks.setCursor.push(updateNavTip);
-    observeWidth(navChart, navContainer, 300);
+    observeWidth(navChart, navContainer, () => chartHeight(PRICE_HEIGHT));
   }
 
-  if (aumContainer && aumHistory.points.length >= 2) {
+  if (hasAumChart) {
     const aumData = [aumHistory.points.map((point) => toSeconds(point.date)), aumHistory.points.map((point) => point.value)];
 
     aumChart = new uPlot(
       {
         width: aumContainer.clientWidth,
-        height: chartHeight(130),
-        padding: [6, 0, 0, 16],
+        height: AUM_HEIGHT,
+        padding: [6, 0, 0, 0],
         legend: { show: false },
         cursor: { sync, points: { show: false }, drag: { x: false, y: false } },
         scales: { x: { time: true }, y: { range: (_, __, max) => [0, max * 1.05] } },
         series: [
           {},
-          { label: m.figure_aum(), stroke: () => cssColor('--soga'), fill: () => withAlpha(cssColor('--soga'), 0.14), width: 1.6, points: { show: false } },
+          {
+            label: m.figure_aum(),
+            fill: () => withAlpha(cssColor('--soga'), 0.7),
+            paths: uPlot.paths.bars({ size: [1, 40], gap: 1 }),
+            points: { show: false },
+          },
         ],
-        axes: axes((value) => formatCompact(value, locale), locale),
+        axes: [dateAxis(locale, true), { show: false }],
         tzDate: (seconds) => uPlot.tzDate(new Date(seconds * 1000), 'UTC'),
         hooks: { setCursor: [] },
       },
@@ -256,10 +408,10 @@ export async function mountFundCharts(symbol, includeToggle) {
     );
 
     const updateAumTip = attachTooltip(aumChart, aumContainer, (index) => `<div class="tip-date">${formatMonth(toDate(aumData[0][index]), locale)}</div>
-      <div class="tip-row"><b>${escapeHtml(formatMoney(aumData[1][index], locale, aumCurrency))}</b></div>`);
+      <div class="tip-row">${swatch('var(--soga)')}<span class="tip-label">${escapeHtml(m.figure_aum())}</span><b>${escapeHtml(formatMoney(aumData[1][index], locale, aumCurrency))}</b></div>`);
 
     aumChart.hooks.setCursor.push(updateAumTip);
-    observeWidth(aumChart, aumContainer, 130);
+    observeWidth(aumChart, aumContainer, () => AUM_HEIGHT);
   }
 
   function applyRange(chosenRange) {
@@ -290,19 +442,20 @@ export async function mountFundCharts(symbol, includeToggle) {
       benchmarkError.textContent = hasBenchmark ? '' : m.benchmark_no_range();
     }
 
-    readout.innerHTML = `<b class="${changeClass(change)}">${formatChange(change, locale)}</b> <span class="muted">${formatDate(start.date, locale)} – ${formatDate(end.date, locale)}</span>${
-      hasBenchmark ? ` <span class="benchmark-readout"><i class="key-line benchmark-key"></i>${escapeHtml(benchmarks.get(benchmarkId).shortName)} <b class="${changeClass(benchmarkChange)}">${formatChange(benchmarkChange, locale)}</b></span>` : ''
-    }`;
+    readout.innerHTML = tightenSeparators(`<b class="${changeClass(change)}">${formatChange(change, locale)}</b> <span class="muted">${formatDate(start.date, locale)} – ${formatDate(end.date, locale)}</span>${
+      hasBenchmark ? ` <span class="benchmark-readout">${swatch(benchmarkColor())}${escapeHtml(benchmarks.get(benchmarkId).shortName)} <b class="${changeClass(benchmarkChange)}">${formatChange(benchmarkChange, locale)}</b></span>` : ''
+    }`);
     navChart.setSeries(2, { show: hasBenchmark });
     navChart.setData(data);
-    navChart.setScale('x', { min, max });
 
-    if (aumChart) {
-      const aumDates = aumChart.data[0];
+    // On "All" the size chart keeps its own full history, which can start or end outside the NAV's, so both charts
+    // show the stretch that holds either, and their dates stay in line.
+    const aumDates = aumChart?.data[0];
+    const xMin = range === 'All' && aumChart ? Math.min(min, aumDates[0]) : min;
+    const xMax = range === 'All' && aumChart ? Math.max(max, aumDates.at(-1)) : max;
 
-      // On "All" the size chart keeps its own full history, which can start or end outside the NAV's.
-      aumChart.setScale('x', range === 'All' ? { min: Math.min(min, aumDates[0]), max: Math.max(max, aumDates.at(-1)) } : { min, max });
-    }
+    navChart.setScale('x', { min: xMin, max: xMax });
+    aumChart?.setScale('x', { min: xMin, max: xMax });
 
     for (const button of rangeButtons) {
       button.setAttribute('aria-pressed', String(button.dataset.range === range));

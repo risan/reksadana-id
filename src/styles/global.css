@@ -1224,8 +1224,8 @@ dialog::backdrop {
   opacity: 0.6;
 }
 
-.chart .u-cursor-x {
-  border-right: 1px solid var(--ink-2);
+.chart .uplot .u-cursor-x {
+  border-right: 1px solid color-mix(in srgb, var(--ink-2) 40%, transparent);
 }
 
 .chart .u-cursor-y {
@@ -1236,13 +1236,14 @@ dialog::backdrop {
   position: absolute;
   top: 0;
   z-index: 2;
-  min-width: 132px;
+  min-width: 160px;
   padding: var(--s-3) var(--s-4);
   border: 1px solid var(--rule-strong);
   border-radius: var(--r-2);
   background: var(--surface);
   box-shadow: var(--shadow-pop);
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
+  font-variant-numeric: tabular-nums;
   line-height: 1.5;
   pointer-events: none;
 }
@@ -1251,31 +1252,44 @@ dialog::backdrop {
   display: none;
 }
 
+.chart-tip .sep {
+  font-variant-numeric: normal;
+}
+
 .chart-tip .tip-date {
+  margin-bottom: var(--s-1);
   color: var(--muted);
+  font-size: var(--fs-xs);
 }
 
 .chart-tip .tip-row {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--s-3);
 }
 
-.chart-tip .tip-row b {
+.chart-tip .tip-label {
+  flex: 1;
   max-width: 180px;
   overflow: hidden;
-  font-weight: var(--fw-strong);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.chart-tip .tip-row span:last-child {
+.chart-tip .tip-row b {
+  font-weight: var(--fw-strong);
+}
+
+.chart-tip .tip-change {
+  min-width: 60px;
   margin-left: auto;
-  padding-left: 10px;
+  text-align: right;
 }
 
 .chart-tip .tip-note {
+  margin-top: var(--s-1);
   color: var(--muted);
+  font-size: var(--fs-xs);
 }
 
 .key-line {
@@ -1285,12 +1299,18 @@ dialog::backdrop {
   vertical-align: middle;
 }
 
+.chart-tip .tip-row > span:last-child:not(.tip-label, .tip-change) {
+  margin-left: auto;
+  padding-left: 10px;
+}
+
 .key-box {
   display: inline-block;
-  width: 9px;
-  height: 9px;
+  flex: none;
+  width: 8px;
+  height: 8px;
   border-radius: var(--r-1);
-  vertical-align: -1px;
+  vertical-align: 0;
 }
 
 /* The "Include dividends" checkbox of the fund and compare pages */
