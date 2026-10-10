@@ -19,7 +19,6 @@
   },
   "released_date": "2017-08-29",
   "is_top_product": 1,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -213,7 +212,7 @@
     "3y": 0.0511420715063331,
     "5y": 0.0448060509188799,
     "10y": null,
-    "all": 0.05004150579234623
+    "all": 0.050026099293573045
   },
   "cagr_adjusted": {
     "1y": 0.048056518118569924,
@@ -269,7 +268,7 @@
     "value": 1560.64
   },
   "trade": {
-    "total_trades": 4183,
+    "total_trades": 4098,
     "period": "1d"
   }
 }
