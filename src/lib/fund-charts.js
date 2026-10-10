@@ -116,7 +116,8 @@ export function axes(valueFormatter, locale, { showDates = true, percentBase = (
       gap: -6,
       align: 2,
       lineGap: -0.62,
-      stroke: () => cssColor('--muted'),
+      // uPlot draws axes under the lines, so `drawValueLabels` draws the labels instead, on top of them.
+      stroke: 'transparent',
       grid: { stroke: () => cssColor('--rule'), width: 1 },
       ticks: { show: false },
       font,
@@ -142,6 +143,33 @@ export function axes(valueFormatter, locale, { showDates = true, percentBase = (
       values: (_, values) => values.map((value) => `\n${percentBase() === null ? valueFormatter(value, decimals) : formatChange(value / percentBase() - 1, locale, decimals)}`),
     },
   ];
+}
+
+// Draws the value labels over the lines, each on a halo in the surface color, so a line crossing a label does not hide it.
+// Put it in the `draw` hooks of a chart that uses `axes()`.
+export function drawValueLabels(chart) {
+  const axis = chart.axes[1];
+  const { ctx, bbox } = chart;
+  const ratio = uPlot.pxRatio;
+
+  ctx.save();
+  ctx.font = `${11 * ratio}px ${cssColor('--sans')}`;
+  ctx.textAlign = 'right';
+  ctx.lineJoin = 'round';
+  ctx.lineWidth = 3 * ratio;
+  ctx.strokeStyle = cssColor('--surface');
+  ctx.fillStyle = cssColor('--muted');
+
+  axis._splits.forEach((split, index) => {
+    const label = axis._values[index].trim();
+    const x = bbox.left + bbox.width - 6 * ratio;
+    const y = chart.valToPos(split, 'y', true) - 4 * ratio;
+
+    ctx.strokeText(label, x, y);
+    ctx.fillText(label, x, y);
+  });
+
+  ctx.restore();
 }
 
 export function chartHeight(base) {
@@ -351,6 +379,7 @@ export async function mountFundCharts(symbol, includeToggle) {
               ctx.stroke();
               ctx.restore();
             },
+            drawValueLabels,
           ],
           setCursor: [],
         },

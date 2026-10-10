@@ -8,7 +8,7 @@ import { describeCosts } from './costs-text.js';
 import { readTrayText, writeTray } from './compare-tray.js';
 import { DEFAULT_STATE, escapeHtml, filterFunds, prepareFunds, sortFunds } from './explorer.js';
 import { fetchFundRecord, getJson } from './fetch-json.js';
-import { attachTooltip, axes, chartHeight, cssColor, toSeconds } from './fund-charts.js';
+import { attachTooltip, axes, chartHeight, cssColor, drawValueLabels, toSeconds } from './fund-charts.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent } from './format.js';
 import { shariaText, typeLook, typeName } from './fund-types.js';
 import { icon } from './icons.js';
@@ -231,6 +231,7 @@ export async function mountComparePage() {
               ctx.stroke();
               ctx.restore();
             },
+            drawValueLabels,
           ],
           setCursor: [],
         },
