@@ -75,7 +75,8 @@ test('a benchmark has a short name: the abbreviation, on either side of the brac
   assert.equal(shortBenchmarkName('IHSG (Indeks Harga Saham Gabungan)'), 'IHSG');
   assert.equal(shortBenchmarkName('Jakarta Islamic Index (JII)'), 'JII');
   assert.equal(shortBenchmarkName('BI-Rate (Bank Indonesia policy rate)'), 'BI-Rate');
-  assert.equal(shortBenchmarkName('Bareksa Fixed Income Fund Index'), 'Bareksa Fixed Income Fund Index');
+  assert.equal(shortBenchmarkName('Bareksa Fixed Income Fund Index'), 'Bareksa Fixed Income Index');
+  assert.equal(shortBenchmarkName('Indeks Reksa Dana Saham Bareksa'), 'Indeks Saham Bareksa');
   assert.equal(shortBenchmarkName('LQ45'), 'LQ45');
 });
 

@@ -108,12 +108,13 @@ export function profileSummary(profile) {
 }
 
 // "IHSG (Jakarta Composite Index)" is "IHSG" and "Jakarta Islamic Index (JII)" is "JII": the short name is the
-// abbreviation, whichever side of the brackets it is on. A name without brackets is already short.
+// abbreviation, whichever side of the brackets it is on. A name without brackets stays as it is, except that
+// "Indeks Reksa Dana Saham Bareksa" and "Bareksa Equity Fund Index" lose the words every fund index has.
 export function shortBenchmarkName(name) {
   const [, outside, inside] = name.match(/^(.+?) \((.+)\)$/) ?? [];
 
   if (outside === undefined) {
-    return name;
+    return name.replace(/ Reksa Dana | Fund /, ' ');
   }
 
   return inside.includes(' ') ? outside : inside;
