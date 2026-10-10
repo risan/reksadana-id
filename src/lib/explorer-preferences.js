@@ -1,7 +1,7 @@
 // Which columns the table shows and how dense its rows are, kept per viewer in localStorage.
 // Storage can be blocked or full, so a failure falls back to the defaults rather than breaking the page.
 // The inline script in index.astro reads the same two keys before the table paints; keep them in step.
-import { COLUMN_KEYS, DEFAULT_COLUMNS } from './explorer-columns.js';
+import { COLUMN_KEYS, defaultColumns } from './explorer-columns.js';
 
 const COLUMNS_KEY = 'explorer-columns';
 const DENSITY_KEY = 'explorer-density';
@@ -18,7 +18,7 @@ export function parseColumns(text) {
 
   const keys = (text ?? '').split(' ').filter((key) => COLUMN_KEYS.includes(key));
 
-  return keys.length > 0 ? COLUMN_KEYS.filter((key) => keys.includes(key)) : DEFAULT_COLUMNS;
+  return keys.length > 0 ? COLUMN_KEYS.filter((key) => keys.includes(key)) : defaultColumns();
 }
 
 function readValue(key) {

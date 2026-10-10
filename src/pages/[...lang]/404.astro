@@ -10,15 +10,14 @@ const locale = Astro.currentLocale ?? 'id';
 
 const LINKS = [
   ['/', m.nav_funds(), 'table-2'],
-  ['/compare/', m.nav_compare(), 'git-compare'],
+  ['/compare/', m.nav_compare(), 'scale'],
   ['/download/', m.nav_download(), 'download'],
-  ['/api/', m.nav_api(), 'braces'],
 ];
 ---
 
 <Base title={m.not_found_title()} indexable={false} alternatePath="/">
-  <section class="empty-state kawung-bg">
-    <p class="not-found-code" aria-hidden="true">404</p>
+  <section class="not-found">
+    <p class="not-found-code mono" aria-hidden="true">404</p>
     <h1 class="page-title">{m.not_found_title()}</h1>
     <p class="lede">{m.not_found_text()}</p>
     <form class="not-found-search" action={localizeHref('/', locale)} method="get" role="search">
@@ -30,29 +29,30 @@ const LINKS = [
       <button class="btn btn-primary" type="submit">{m.search_button()}</button>
     </form>
     <nav class="not-found-links">
-      {LINKS.map(([href, label, iconName]) => <a class="btn" href={localizeHref(href, locale)}><Fragment set:html={icon(iconName)} />{label}</a>)}
+      {LINKS.map(([href, label, iconName]) => <a href={localizeHref(href, locale)}><Fragment set:html={icon(iconName, { size: 14 })} />{label}</a>)}
     </nav>
   </section>
 </Base>
 
 <style>
-  .empty-state {
-    margin-top: var(--s-5);
+  .not-found {
+    display: grid;
+    justify-items: start;
+    gap: var(--s-4);
+    max-width: 520px;
+    padding-top: var(--s-6);
   }
 
   .not-found-code {
-    color: var(--gold);
-    font-family: var(--serif);
-    font-size: var(--fs-4xl);
-    font-weight: var(--fw-hero);
+    color: var(--soga);
+    font-size: var(--fs-md);
     line-height: 1;
   }
 
   .not-found-search {
     display: flex;
-    gap: var(--s-2);
+    gap: var(--s-3);
     width: 100%;
-    max-width: 520px;
   }
 
   .not-found-search .search {
@@ -62,13 +62,19 @@ const LINKS = [
   .not-found-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--s-2);
+    gap: var(--s-2) var(--s-5);
   }
 
-  @media (max-width: 719px) {
+  @media (max-width: 479px) {
     .not-found-search {
       flex-direction: column;
     }
+  }
+
+  .not-found-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-3);
+    font-weight: var(--fw-label);
   }
 </style>

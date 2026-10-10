@@ -18,11 +18,19 @@ function place(popover, button) {
 
 export function mountInfoPopovers() {
   for (const popover of document.querySelectorAll('.info-pop')) {
-    const button = document.querySelector(`[popovertarget="${popover.id}"]`);
+    // More than one button can open the same popover, so it opens beside the one that was pressed last.
+    const buttons = [...document.querySelectorAll(`[popovertarget="${popover.id}"]`)];
+    let opener = buttons[0];
+
+    for (const button of buttons) {
+      button.addEventListener('click', () => {
+        opener = button;
+      });
+    }
 
     popover.addEventListener('beforetoggle', (event) => {
       if (event.newState === 'open') {
-        place(popover, button);
+        place(popover, opener);
         // The popover stays where it opened, so it would drift away from its button on scroll.
         window.addEventListener('scroll', () => popover.hidePopover(), { once: true, passive: true });
       }

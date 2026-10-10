@@ -150,6 +150,15 @@ export function formatCount(value, locale) {
   return formatDecimal(value, locale, 0);
 }
 
+// Tabular figures give the decimal comma and the thousands period the width of a digit, which reads as gaps in "16 , 9".
+// Setting those marks in a span with normal widths keeps the digits in their columns without the gaps. Text inside tags is left alone.
+export function tightenSeparators(html) {
+  return html
+    .split(/(<[^>]*>)/)
+    .map((part) => (part.startsWith('<') ? part : part.replace(/(\d)([.,])(?=\d)/g, '$1<span class="sep">$2</span>')))
+    .join('');
+}
+
 // Text made safe to put into HTML.
 export function escapeHtml(text) {
   return String(text ?? '').replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);

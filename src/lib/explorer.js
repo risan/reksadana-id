@@ -13,7 +13,7 @@ const MAIN_TYPES = [
   { key: 'Saham', label: 'Saham', english: 'Equity', description: () => m.type_desc_equity() },
   { key: 'Campuran', label: 'Campuran', english: 'Mixed', description: () => m.type_desc_mixed() },
   { key: 'Reksadana Global', label: 'Global', english: 'Global', description: () => m.type_desc_global() },
-  { key: 'Terproteksi', label: 'Terproteksi', english: 'Capital protected', description: () => m.type_desc_protected() },
+  { key: 'Terproteksi', label: 'Terproteksi', english: 'Protected', description: () => m.type_desc_protected() },
 ].map((type) => ({ ...type, ...typeLook(type.key) }));
 
 export const TYPE_GROUPS = [
@@ -290,6 +290,11 @@ export function summarizeTypes(funds, state) {
 
     return { group, count: members.length, returnCount: returns.length, median: median(returns) };
   });
+}
+
+// The newest month any fund's size is from; a row shows its own month only when it is older.
+export function latestAumDate(funds) {
+  return funds.reduce((latest, fund) => (fund.aum_date !== null && fund.aum_date > latest ? fund.aum_date : latest), '');
 }
 
 // Managers with at least one active fund, the biggest first.

@@ -1,6 +1,13 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { formatChange, formatCompact, formatCount, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent, formatShortDate } from './format.js';
+import { formatChange, formatCompact, formatCount, formatDate, formatMoney, formatMonth, formatNav, formatNumber, formatPercent, formatShortDate, tightenSeparators } from './format.js';
+
+test('tightenSeparators wraps the comma and period between digits, outside tags only', () => {
+  assert.equal(tightenSeparators('+3,9%'), '+3<span class="sep">,</span>9%');
+  assert.equal(tightenSeparators('1.234,56'), '1<span class="sep">.</span>234<span class="sep">,</span>56');
+  assert.equal(tightenSeparators('<span title="1,5">Rp 2,5</span>'), '<span title="1,5">Rp 2<span class="sep">,</span>5</span>');
+  assert.equal(tightenSeparators('a, b'), 'a, b');
+});
 
 test('numbers use the decimal and thousands separators of the page language', () => {
   assert.equal(formatNumber(1234.5, 'id'), '1.234,5');

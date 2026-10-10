@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { buildCsv } from './explorer-csv.js';
-import { COLUMN_KEYS, COLUMN_PRESETS, DEFAULT_COLUMNS } from './explorer-columns.js';
+import { COLUMN_KEYS, COLUMN_PRESETS, DEFAULT_COLUMNS, WIDE_COLUMNS, defaultColumns } from './explorer-columns.js';
 import { parseColumns } from './explorer-preferences.js';
 
 const funds = [
@@ -65,4 +65,9 @@ test('every preset names only columns that exist, and the first one is the defau
   }
 
   assert.equal(COLUMN_PRESETS[0].columns, DEFAULT_COLUMNS);
+});
+
+test('the wide default names only columns that exist, and a screen without a window gets the narrow default', () => {
+  assert.ok(WIDE_COLUMNS.every((key) => COLUMN_KEYS.includes(key)));
+  assert.equal(defaultColumns(), DEFAULT_COLUMNS);
 });

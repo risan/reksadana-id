@@ -3,18 +3,18 @@ import * as m from '../paraglide/messages.js';
 // Bibit's type labels, in the order a reader looks for them, with an English name, a color tone (the
 // `.type-<tone>` classes in global.css), and an icon (src/lib/icons.js) for each.
 export const FUND_TYPES = [
-  { label: 'Pasar Uang', english: 'Money market', tone: 'money', icon: 'wallet' },
-  { label: 'Obligasi', english: 'Bonds', tone: 'bond', icon: 'landmark' },
-  { label: 'Saham', english: 'Equity', tone: 'equity', icon: 'trending-up' },
+  { label: 'Pasar Uang', english: 'Money market', tone: 'money', icon: 'banknote' },
+  { label: 'Obligasi', english: 'Bonds', tone: 'bond', icon: 'scroll-text' },
+  { label: 'Saham', english: 'Equity', tone: 'equity', icon: 'chart-candlestick' },
   { label: 'Campuran', english: 'Mixed', tone: 'mixed', icon: 'chart-pie' },
-  { label: 'Reksadana Global', english: 'Global', tone: 'global', icon: 'globe' },
+  { label: 'Reksadana Global', english: 'Global', tone: 'global', icon: 'earth' },
   { label: 'Terproteksi', english: 'Capital protected', tone: 'protected', icon: 'shield-check' },
-  { label: 'Penyertaan Terbatas', english: 'Private placement', tone: 'other', icon: 'layers' },
-  { label: 'Dana Investasi Real Estate', english: 'Real estate (DIRE)', tone: 'other', icon: 'layers' },
-  { label: 'Benchmark', english: 'Gold ETFs', indonesian: 'ETF Emas', tone: 'other', icon: 'layers' },
+  { label: 'Penyertaan Terbatas', english: 'Private placement', tone: 'other', icon: 'blocks' },
+  { label: 'Dana Investasi Real Estate', english: 'Real estate (DIRE)', tone: 'other', icon: 'blocks' },
+  { label: 'Benchmark', english: 'Gold ETFs', indonesian: 'ETF Emas', tone: 'other', icon: 'blocks' },
 ];
 
-const OTHER_TYPE_LOOK = { tone: 'other', icon: 'layers' };
+const OTHER_TYPE_LOOK = { tone: 'other', icon: 'blocks' };
 
 // The tone and icon of a type label; an unknown or empty label looks like the "other" group.
 export function typeLook(label) {

@@ -4,19 +4,22 @@ import * as m from '../paraglide/messages.js';
 import { escapeHtml } from './explorer.js';
 import { changeClass, formatChange, formatDate, formatMoney, formatNav, formatNumber, formatPercent, formatShortDate, formatMonth, withCurrency } from './format.js';
 
-const SPARK_WIDTH = 76;
-const SPARK_HEIGHT = 22;
+const SPARK_SIZE = { width: 88, height: 24 };
+const SPARK_DOT_RADIUS = 2.5;
 
-export function renderSpark(spark, direction) {
+// A year of NAV as a line, a dashed rule at where it started, and a dot where it ended.
+export function renderSpark(spark, direction, { width, height } = SPARK_SIZE) {
   if (!spark) {
     return '';
   }
 
-  const step = SPARK_WIDTH / (spark.length - 1);
-  const y = (value) => (1.5 + ((100 - value) / 100) * (SPARK_HEIGHT - 3)).toFixed(1);
+  const margin = SPARK_DOT_RADIUS + 0.5;
+  const step = (width - margin) / (spark.length - 1);
+  const y = (value) => (margin + ((100 - value) / 100) * (height - 2 * margin)).toFixed(1);
   const points = spark.map((value, index) => `${(index * step).toFixed(1)},${y(value)}`).join(' ');
+  const end = spark.length - 1;
 
-  return `<svg class="spark ${direction}" width="${SPARK_WIDTH}" height="${SPARK_HEIGHT}" viewBox="0 0 ${SPARK_WIDTH} ${SPARK_HEIGHT}" preserveAspectRatio="none" aria-hidden="true"><line x1="0" x2="${SPARK_WIDTH}" y1="${y(spark[0])}" y2="${y(spark[0])}" /><polyline points="${points}" /></svg>`;
+  return `<svg class="spark ${direction}" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" aria-hidden="true"><line x1="0" x2="${width}" y1="${y(spark[0])}" y2="${y(spark[0])}" /><polyline points="${points}" /><circle cx="${(end * step).toFixed(1)}" cy="${y(spark[end])}" r="${SPARK_DOT_RADIUS}" /></svg>`;
 }
 
 const nil = '<span class="nil">&mdash;</span>';
@@ -79,7 +82,7 @@ export const COLUMNS = [
     label: () => m.col_aum(),
     title: () => m.col_aum_title(),
     numeric: true,
-    cell: (fund, { locale }) => `${formatMoney(fund.aum, locale, fund.aum_currency)}<div class="sub">${fund.aum_date ? formatMonth(fund.aum_date, locale) : ''}</div>`,
+    cell: (fund, { locale, latestAumDate }) => `${formatMoney(fund.aum, locale, fund.aum_currency)}${fund.aum_date && fund.aum_date !== latestAumDate ? `<div class="sub">${formatMonth(fund.aum_date, locale)}</div>` : ''}`,
     csv: [
       { header: () => m.col_aum(), value: (fund) => fund.aum },
       { header: () => m.csv_aum_currency(), value: (fund) => fund.aum_currency },
@@ -135,3 +138,13 @@ export const COLUMN_PRESETS = [
 ];
 
 export const DEFAULT_COLUMNS = COLUMN_PRESETS[0].columns;
+
+// A wide screen has room for a short return, the 5-year rate, and the cost; a narrower one keeps the default.
+// The inline script in index.astro repeats the query before the table paints; keep them in step.
+export const WIDE_COLUMNS = ['return_1m', 'return_ytd', 'return_1y', 'spark', 'cagr_3y', 'cagr_5y', 'aum', 'operating_expense'];
+const WIDE_QUERY = '(min-width: 1280px)';
+
+// What a viewer who has not chosen columns sees on this screen.
+export function defaultColumns() {
+  return typeof matchMedia === 'function' && matchMedia(WIDE_QUERY).matches ? WIDE_COLUMNS : DEFAULT_COLUMNS;
+}
