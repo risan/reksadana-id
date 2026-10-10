@@ -365,18 +365,26 @@ pre code {
   font-size: 0.78125rem;
 }
 
+/* The copy button sits in its own column beside the scrolling code, so long lines never slide under it. */
 .code-block {
-  position: relative;
+  display: flex;
+  align-items: flex-start;
+  background: var(--panel);
+  border: 1px solid var(--rule);
+  border-radius: var(--r-1);
 }
 
 .code-block pre {
-  padding-right: 44px;
+  flex: 1;
+  min-width: 0;
+  padding-right: var(--s-3);
+  background: none;
+  border: 0;
 }
 
 .code-block .code-copy {
-  position: absolute;
-  top: var(--s-2);
-  right: var(--s-2);
+  flex: none;
+  margin: var(--s-2) var(--s-2) 0 var(--s-3);
   width: 24px;
   height: 24px;
   background: var(--surface);
