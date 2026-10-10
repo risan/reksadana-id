@@ -107,6 +107,14 @@ jobs:
         if: (success() || failure()) && steps.decide.outputs.prospectus == 'true'
         run: npm run scrape:prospectus
 
+      # The same figure from the prospectuses on the managers' own websites. Each manager is asked for its list; a manager
+      # that is blocked or changed its page is skipped with a warning and its stored rows are kept. A file is read again
+      # only when its version changed (ETag, modification time, or size), or after 30 days when the server gives none.
+      - name: Scrape manager prospectuses
+        id: manager_prospectus
+        if: (success() || failure()) && steps.decide.outputs.prospectus == 'true'
+        run: npm run scrape:prospectus:managers
+
       # Index levels, Bank Indonesia's rates, and OJK's monthly statistics do not depend on Bibit. They run before
       # the linker, which reads the OJK files.
       - name: Scrape benchmarks
@@ -156,6 +164,7 @@ jobs:
             source_row "Bareksa NAV" "${{ steps.bareksa_nav.outcome }}" bareksa
             source_row "Bareksa profiles" "${{ steps.bareksa_profiles.outcome }}" bareksa
             source_row Prospectuses "${{ steps.prospectus.outcome }}" bareksa/prospectus.csv
+            source_row "Manager prospectuses" "${{ steps.manager_prospectus.outcome }}" managers
             source_row Benchmarks "${{ steps.benchmarks.outcome }}" benchmarks
             source_row "Bank Indonesia" "${{ steps.macro.outcome }}" macro
             source_row OJK "${{ steps.ojk.outcome }}" ojk

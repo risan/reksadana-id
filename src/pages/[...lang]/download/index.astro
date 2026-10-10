@@ -71,6 +71,13 @@ const SOURCES = [
     ],
   },
   {
+    name: m.download_source_managers(),
+    url: null,
+    site: m.download_site_managers(),
+    rhythm: m.download_rhythm_weekly(),
+    files: [['data/managers/prospectus.csv', m.download_managers_prospectus()]],
+  },
+  {
     name: 'Makmur',
     url: 'https://www.makmur.id/',
     site: 'makmur.id',
@@ -156,7 +163,7 @@ const SOURCES = [
           <div class="table-scroll">
             <div class="source-head">
               <h3 class="card-title">{source.name}</h3>
-              <span class="muted small"><a href={source.url}>{source.site}</a> · {source.rhythm}</span>
+              <span class="muted small">{source.url ? <a href={source.url}>{source.site}</a> : source.site} · {source.rhythm}</span>
             </div>
             <table class="tbl files-table">
               <tbody>

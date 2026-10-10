@@ -6,7 +6,7 @@ const BASE_URL = 'https://www.bareksa.com';
 const DATA_DIR = path.join(import.meta.dirname, '..', 'data', 'bareksa');
 const FUNDS_FILE = path.join(DATA_DIR, 'funds.csv');
 const PROSPECTUS_FILE = path.join(DATA_DIR, 'prospectus.csv');
-const USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
+export const USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
 const CONCURRENCY = 3;
 const REQUEST_DELAY_MS = 250;
 const REQUEST_TIMEOUT_MS = 120 * 1000;
@@ -34,11 +34,17 @@ const HEADER_REACH = 320;
 const LABEL_PAGE_PATTERN = /(biaya|beban)\s*operasi|operating\s*(expenses?|charges?)/i;
 const NUMBER_PATTERN = /^\(?-?\d{1,3}(?:[.,]\d{1,4})?\)?%?$/;
 const YEAR_PATTERN = /^\(?(20\d\d)[),.:*]*$/;
-const CLASS_PATTERN = /\b(?:[Kk][Ee][Ll][Aa][Ss]|[Cc][Ll][Aa][Ss][Ss])\s+([A-Z0-9])\b/;
+// A share class is named with a letter or two and maybe a digit: "A", "B1", "IB", "RK1".
+const CLASS_NAME = '[A-Z][A-Z]?\\d?|\\d';
+const CLASS_PATTERN = new RegExp(`\\b(?:[Kk][Ee][Ll][Aa][Ss]|[Cc][Ll][Aa][Ss][Ss])\\s+(${CLASS_NAME})\\b`);
 // "Kelas/Class" over the columns of an audited table, whose letters stand on the next line.
 const CLASS_MENTION_PATTERN = new RegExp(`${CLASS_PATTERN.source}|[Kk]elas\\s*/\\s*[Cc]lass`);
 const CLASS_PATTERN_EVERYWHERE = new RegExp(CLASS_PATTERN, 'g');
-const FUND_CLASS_PATTERN = /\b(?:kelas|class)\s+([a-z0-9])\s*$/i;
+const FUND_CLASS_PATTERN = /\b(?:kelas|class)\s+([a-z][a-z]?\d?|\d)\s*$/i;
+const CLASS_KEYWORD_PATTERN = /^(?:kelas|class)\/?$/i;
+const JOINED_CLASS_KEYWORD_PATTERN = /^(.+\/)(kelas|class)$/i;
+const CLASS_NAME_PATTERN = new RegExp(`^(?:${CLASS_NAME})[/,.]?$`);
+const PLACEHOLDER_PATTERN = /^(?:-|\u2013|\u2014|n\/a)$/i;
 
 const splitIntoWords = (item) => {
   const characterWidth = item.str.length === 0 ? 0 : item.width / item.str.length;
@@ -56,6 +62,21 @@ const splitIntoWords = (item) => {
   }
 
   return words;
+};
+
+// "Kelas/Class" or "Kelas G/Class G" in two languages leaves no gap between the slash and the second language, so the
+// reader joins them into one word.
+const splitJoinedClassKeyword = (word) => {
+  const [, before, keyword] = word.text.match(JOINED_CLASS_KEYWORD_PATTERN) ?? [];
+
+  if (before === undefined) {
+    return [word];
+  }
+
+  const characterWidth = (word.x1 - word.x0) / word.text.length;
+  const boundary = word.x0 + before.length * characterWidth;
+
+  return [{ ...word, text: before, x1: boundary, endsItem: false }, { ...word, text: keyword, x0: boundary, startsItem: false }];
 };
 
 // Words of one page, in reading order per line. Pieces of one word that pdf.js split are joined again.
@@ -85,7 +106,7 @@ const toLines = (items) => {
       }
 
       return joined;
-    }, []);
+    }, []).flatMap(splitJoinedClassKeyword);
   }
 
   return lines.sort((a, b) => b.y - a.y);
@@ -202,6 +223,142 @@ const findClassTitle = (lines, fromIndex, boundaryY) => {
   return null;
 };
 
+// How far from the line of the class names its neighbours still belong to the header (the letter under "Kelas", the
+// years above the names).
+const CLASS_HEADER_REACH = 30;
+const YEAR_LINE_REACH = 60;
+// A line of running text that mentions a class is not a header.
+const MAX_HEADER_LINE_WORDS = 16;
+// "Kelas A/ Class A" side by side names one column twice; two columns of one class are further apart.
+const BILINGUAL_HEADER_GAP = 20;
+// The "Class" of "Kelas/ Class" starts where "Kelas/" ends.
+const TOUCHING_GAP = 2;
+
+// The share classes named in the header lines of a table, left to right: "Kelas A" or "Class A" side by side, or
+// "Kelas/ Class" with the letters in a line below. Each is { name, center }; a class named in both languages comes once.
+const readClassHeaders = (headerLines) => {
+  const headers = [];
+  const usedNames = new Set();
+
+  for (const line of headerLines) {
+    line.words.forEach((word, index) => {
+      const next = line.words[index + 1];
+
+      if (CLASS_KEYWORD_PATTERN.test(word.text) && next && CLASS_NAME_PATTERN.test(next.text) && next.x0 - word.x1 < 12) {
+        usedNames.add(next);
+        headers.push({ name: next.text.replace(/[/,.]$/, ''), x0: word.x0, x1: next.x1, center: (word.x0 + next.x1) / 2 });
+      }
+    });
+  }
+
+  for (const line of headerLines) {
+    line.words.forEach((word, index) => {
+      const previous = line.words[index - 1];
+      const next = line.words[index + 1];
+      const isPartOfPair = next && usedNames.has(next);
+      const isSecondOfBilingualPair = previous && CLASS_KEYWORD_PATTERN.test(previous.text) && word.x0 - previous.x1 < TOUCHING_GAP;
+
+      if (!CLASS_KEYWORD_PATTERN.test(word.text) || isPartOfPair || isSecondOfBilingualPair) {
+        return;
+      }
+
+      const letter = headerLines
+        .filter((other) => other.y < line.y)
+        .flatMap((other) => other.words)
+        .filter((candidate) => CLASS_NAME_PATTERN.test(candidate.text) && !usedNames.has(candidate) && candidate.x0 >= word.x0 - 8 && candidate.x0 <= word.x0 + 45)
+        .sort((a, b) => Math.abs(a.x0 - word.x0) - Math.abs(b.x0 - word.x0))[0];
+
+      if (letter) {
+        usedNames.add(letter);
+        headers.push({ name: letter.text.replace(/[/,.]$/, ''), x0: letter.x0, x1: letter.x1, center: center(letter) });
+      }
+    });
+  }
+
+  headers.sort((a, b) => a.center - b.center);
+
+  return headers.filter((header, index) => !(index > 0 && headers[index - 1].name === header.name && header.x0 - headers[index - 1].x1 < BILINGUAL_HEADER_GAP));
+};
+
+const standaloneYearsOf = (line) => line.words
+  .filter((word) => word.startsItem && word.endsItem && YEAR_PATTERN.test(word.text))
+  .map((word) => ({ year: Number(word.text.match(YEAR_PATTERN)[1]), center: center(word) }));
+
+// Reads one row of a table whose columns are share classes, maybe under years: a table of one year with the classes
+// side by side, or a table of several years with the classes repeated under each. `columns` are the cells of the row
+// (numbers and "-"). Null when the table has no class header. Otherwise `classCount` is the number of classes in the
+// header, and `pairs` the { class, year, percent } of every cell that sits under a class and a year with certainty
+// (`percent` is null for a "-": the class has no ratio that year), or none at all when any cell cannot be placed: a
+// shifted column would put a wrong value under a class.
+const readClassColumns = (lines, lineIndex, columns) => {
+  const rowY = lines[lineIndex].y;
+  const classLineIndex = lines.findLastIndex((other, index) => index < lineIndex && other.y - rowY <= HEADER_REACH && other.words.length <= MAX_HEADER_LINE_WORDS && other.words.some((word) => CLASS_KEYWORD_PATTERN.test(word.text)));
+
+  if (classLineIndex === -1) {
+    return null;
+  }
+
+  const classLineY = lines[classLineIndex].y;
+  const headerLines = lines.filter((other, index) => index < lineIndex && Math.abs(other.y - classLineY) <= CLASS_HEADER_REACH && other.words.length <= MAX_HEADER_LINE_WORDS);
+  const headers = readClassHeaders(headerLines);
+
+  if (headers.length === 0) {
+    return null;
+  }
+
+  const result = { classCount: headers.length, pairs: [] };
+  const bottomY = headerLines.at(-1).y;
+  const topY = headerLines[0].y;
+
+  // Another year or another row of the ratio between the header and the row means the row has a header of its own,
+  // which this one is not.
+  if (lines.some((other, index) => index < lineIndex && other.y < bottomY && (standaloneYearsOf(other).length > 0 || other.words.some((word, wordIndex) => isLabelAt(other.words, wordIndex))))) {
+    return result;
+  }
+
+  const yearLines = lines.filter((other, index) => index < lineIndex && other.y <= topY + YEAR_LINE_REACH && standaloneYearsOf(other).length > 0);
+  const yearsInHeader = headerLines.flatMap(standaloneYearsOf);
+  const years = yearsInHeader.length > 0 ? yearsInHeader : yearLines.slice(-1).flatMap(standaloneYearsOf);
+  const spacings = headers.slice(1).map((header, index) => header.center - headers[index].center);
+  const smallestSpacing = spacings.length > 0 ? Math.min(...spacings) : 60;
+  const tolerance = Math.max(smallestSpacing / 2, 12);
+
+  if (years.length === 0 || columns.length === 0 || smallestSpacing < 8) {
+    return result;
+  }
+
+  // The cell under each class: the nearest, and the class is that cell's nearest too.
+  const nearest = (position, candidates) => candidates.reduce((best, candidate) => (Math.abs(candidate.center - position) < Math.abs(best.center - position) ? candidate : best));
+  const cells = columns.map((column) => ({ ...column, center: center(column) }));
+  const cellOfHeader = headers.map((header) => nearest(header.center, cells));
+  const placed = headers.map((header, index) => Math.abs(cellOfHeader[index].center - header.center) <= tolerance && nearest(cellOfHeader[index].center, headers) === header);
+  const placedCells = cellOfHeader.filter((cell, index) => placed[index]);
+  const firstCenter = headers[0].center - tolerance;
+
+  // A class without a cell has no figure. A number that no class claims could belong to any of them.
+  if (cells.some((cell) => !placedCells.includes(cell) && cell.center >= firstCenter && NUMBER_PATTERN.test(cell.text))) {
+    return result;
+  }
+
+  // The year over each class: the year header nearest to it. Every year must have classes under it, and sit over
+  // the middle of them.
+  const yearOfHeader = headers.map((header) => nearest(header.center, years));
+  const groups = Map.groupBy(headers.map((header, index) => ({ header, year: yearOfHeader[index] })), ({ year }) => year);
+  const isCentered = [...groups].every(([year, group]) => Math.abs(year.center - group.reduce((sum, { header }) => sum + header.center, 0) / group.length) <= tolerance);
+
+  if (groups.size !== years.length || !isCentered || new Set(years.map(({ year }) => year)).size !== years.length) {
+    return result;
+  }
+
+  headers.forEach((header, index) => {
+    if (placed[index]) {
+      result.pairs.push({ class: header.name, year: yearOfHeader[index].year, percent: NUMBER_PATTERN.test(cellOfHeader[index].text) ? toPercent(cellOfHeader[index].text) : null });
+    }
+  });
+
+  return result;
+};
+
 // Every row labelled "Biaya operasi" on the pages that have one. Each is one table row with the (year, percent)
 // pairs that sit under a year header, the share class named in the title above its table, and whether the
 // table lays out several share classes side by side.
@@ -232,7 +389,21 @@ export const findOperatingExpenseRows = (pages) => {
         }
 
         const headerIndex = lines.findLastIndex((other, index) => index < lineIndex && other.y - line.y <= HEADER_REACH && readYearHeader(other.words) !== null);
-        const row = { page: page.number, cells: cells.map((cell) => cell.text), pairs: [], classTitle: null, hasYearHeader: false, hasClassColumns: false, hasUnevenColumns: false, mentionsClass };
+        const columns = line.words
+          .slice(wordIndex + 2, nextLabelIndex === -1 ? undefined : nextLabelIndex)
+          .filter((other) => NUMBER_PATTERN.test(other.text) || PLACEHOLDER_PATTERN.test(other.text));
+        const classColumns = readClassColumns(lines, lineIndex, columns);
+        const row = {
+          page: page.number,
+          cells: cells.map((cell) => cell.text),
+          pairs: [],
+          classPairs: classColumns?.pairs ?? [],
+          classTitle: null,
+          hasYearHeader: false,
+          hasClassColumns: (classColumns?.classCount ?? 0) >= 2,
+          hasUnevenColumns: false,
+          mentionsClass,
+        };
 
         if (headerIndex !== -1) {
           const header = readYearHeader(lines[headerIndex].words);
@@ -240,7 +411,7 @@ export const findOperatingExpenseRows = (pages) => {
           const headerRegionLines = lines.slice(Math.max(headerIndex - 1, 0), lineIndex);
 
           row.hasYearHeader = true;
-          row.hasClassColumns = headerRegionLines.some((other) => [...other.words.map((candidate) => candidate.text).join(' ').matchAll(CLASS_PATTERN_EVERYWHERE)].length >= 2);
+          row.hasClassColumns ||= headerRegionLines.some((other) => [...other.words.map((candidate) => candidate.text).join(' ').matchAll(CLASS_PATTERN_EVERYWHERE)].length >= 2);
           row.classTitle = findClassTitle(lines, headerIndex, boundaryY);
 
           const { pairs, ambiguous } = header.runs.length > 0 ? pairYearsWithCells(header.runs, cells) : { pairs: [], ambiguous: true };
@@ -271,17 +442,24 @@ export const chooseOperatingExpense = (rows, { fundClass, lastYear }) => {
   // A page of the ratios that names share classes anywhere makes an untitled table one we cannot assign to a class.
   const hasClassEvidence = rows.some((row) => row.classTitle !== null || row.hasClassColumns || row.mentionsClass);
   let pool = rows.filter((row) => !row.hasClassColumns);
+  let classColumnPairs = [];
 
   if (hasClassEvidence) {
+    const allClassColumnPairs = rows.flatMap((row) => row.classPairs);
+    const newestClassYear = Math.max(...allClassColumnPairs.map(({ year }) => year).filter((year) => year <= lastYear));
+    const ownClassColumnPairs = fundClass === null ? [] : allClassColumnPairs.filter((pair) => pair.class === fundClass);
+
     pool = fundClass === null ? [] : pool.filter((row) => row.classTitle === fundClass);
 
-    if (pool.length === 0) {
+    if (pool.length === 0 && ownClassColumnPairs.length === 0) {
       return { status: 'share_classes' };
     }
+
+    // A "-" under the newest year of the tables says the class had no ratio then, and an older year would not stand in.
+    classColumnPairs = ownClassColumnPairs.filter(({ year, percent }) => year === newestClassYear && percent !== null);
   }
 
-  const pairs = pool
-    .flatMap((row) => row.pairs)
+  const pairs = [...pool.flatMap((row) => row.pairs), ...classColumnPairs]
     .filter(({ year }) => year >= FIRST_PLAUSIBLE_YEAR && year <= lastYear);
 
   if (pairs.length === 0) {
@@ -304,10 +482,11 @@ export const chooseOperatingExpense = (rows, { fundClass, lastYear }) => {
   }
 
   // The audited report has the same ratio in a table without a year header (the year is in its text). When the
-  // prospectus has such tables and none shows this figure, one of the two readings is wrong.
+  // prospectus has such tables and none shows this figure, one of the two readings is wrong. The tables of share
+  // classes check each other instead, in the figures of one class and year above.
   const reportPercents = rows.filter((row) => !row.hasYearHeader).flatMap((row) => row.cells.map((cell) => roundPercent(toPercent(cell))));
 
-  if (reportPercents.length > 0 && !reportPercents.includes(percent)) {
+  if (classColumnPairs.length === 0 && reportPercents.length > 0 && !reportPercents.includes(percent)) {
     return { status: 'conflict' };
   }
 
@@ -359,7 +538,7 @@ const normalizeText = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').t
 
 // Names differ in the "Reksa Dana" prefix and the share class, which the prospectus does not repeat. A manager that
 // changed its name also changed the first word of its funds ("Henan Ultima Obligasi Plus" is now "HPAM Ultima ...").
-const coreNameOf = (fundName) => normalizeText(fundName).replace(/^(reksa dana|reksadana|rd) /, '').replace(/ (kelas|class) [a-z0-9]$/, '');
+const coreNameOf = (fundName) => normalizeText(fundName).replace(/^(reksa dana|reksadana|rd) /, '').replace(/ (kelas|class) ([a-z][a-z]?\d?|\d)$/, '');
 
 export const isAboutFund = (documentText, fundName) => {
   const coreName = coreNameOf(fundName);
@@ -394,7 +573,7 @@ export const evaluateFund = (pdf, fund, lastYear) => {
   return result;
 };
 
-const fetchWithPause = async (url, options) => {
+export const fetchWithPause = async (url, options) => {
   try {
     return await fetch(url, { headers: { 'User-Agent': USER_AGENT, Accept: '*/*' }, signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS), ...options });
   } finally {
@@ -426,14 +605,20 @@ const resolvePdfUrl = ({ bareksa_id: id, slug }) => withRetries(async () => {
 });
 
 // A file we got but cannot read as a prospectus. Asking again would give the same file.
-class UnreadableFileError extends Error {
+export class UnreadableFileError extends Error {
   constructor(url, reason) {
     super(`GET ${url} ${reason}`);
     this.retryable = false;
   }
 }
 
-const downloadPdf = (url) => withRetries(async () => {
+const assertPdf = (url, bytes) => {
+  if (new TextDecoder().decode(bytes.slice(0, 5)) !== '%PDF-') {
+    throw new UnreadableFileError(url, 'is not a PDF');
+  }
+};
+
+export const downloadPdf = (url) => withRetries(async () => {
   const response = await fetchWithPause(url);
 
   if (!response.ok) {
@@ -446,15 +631,13 @@ const downloadPdf = (url) => withRetries(async () => {
 
   const bytes = new Uint8Array(await response.arrayBuffer());
 
-  if (new TextDecoder().decode(bytes.slice(0, 5)) !== '%PDF-') {
-    throw new UnreadableFileError(url, 'is not a PDF');
-  }
+  assertPdf(url, bytes);
 
   return bytes;
 });
 
-const downloadAndReadPdf = async (url) => {
-  const bytes = await downloadPdf(url);
+export const readPdfBytes = async (url, bytes) => {
+  assertPdf(url, bytes);
 
   try {
     return await readPdf(bytes);
@@ -462,6 +645,8 @@ const downloadAndReadPdf = async (url) => {
     throw new UnreadableFileError(url, `cannot be read: ${error.message}`);
   }
 };
+
+const downloadAndReadPdf = async (url) => readPdfBytes(url, await downloadPdf(url));
 
 // "https://media.bareksa.com/uploads//file_doc/2026/08/AAKESSS_prospectus.pdf" was uploaded in 2026-08.
 export const uploadMonthOf = (url) => url.match(/\/file_doc\/(\d{4})\/(\d{2})\//)?.slice(1).join('-') ?? '';
@@ -472,13 +657,15 @@ const main = async () => {
   const startedAt = Date.now();
   const rereadAll = process.argv.includes('--all');
   const onlyIds = process.argv.find((argument) => argument.startsWith('--ids='))?.slice('--ids='.length).split(',');
+  // After the reader learned something new, the funds it gave up on are worth another look: --status=share_classes,no_row
+  const rereadStatuses = process.argv.find((argument) => argument.startsWith('--status='))?.slice('--status='.length).split(',');
   const todayDate = today();
   const lastYear = new Date().getUTCFullYear() - 1;
   const allFunds = await readCsvRecords(FUNDS_FILE);
-  const funds = onlyIds ? allFunds.filter((fund) => onlyIds.includes(fund.bareksa_id)) : allFunds;
   const storedRecords = await readCsvRecords(PROSPECTUS_FILE);
   const knownIds = new Set(allFunds.map((fund) => fund.bareksa_id));
   const rows = new Map(storedRecords.filter((record) => knownIds.has(record.bareksa_id)).map((record) => [record.bareksa_id, record]));
+  const funds = allFunds.filter((fund) => (!onlyIds || onlyIds.includes(fund.bareksa_id)) && (!rereadStatuses || rereadStatuses.includes(rows.get(fund.bareksa_id)?.status)));
   const urls = new Map();
 
   const setRow = (id, { url = '', status, year = '', percent }) => {
@@ -509,7 +696,7 @@ const main = async () => {
 
     if (url === null && row?.status !== 'not_found') {
       setRow(fund.bareksa_id, { status: 'not_found' });
-    } else if (url && (rereadAll || row === undefined || row.url !== url || row.status === 'error')) {
+    } else if (url && (rereadAll || rereadStatuses || row === undefined || row.url !== url || row.status === 'error')) {
       fundsToRead.push(fund);
     }
   }

@@ -722,7 +722,7 @@ const sources = [
                 <ul class="expense-list">
                   <li><span class="expense-value">{costs.operatingExpense.text}</span><span class="muted small">{m.cost_operating_expense_year({ year: costs.operatingExpense.year })}</span></li>
                 </ul>
-                <p class="small"><a href={costs.operatingExpense.url}>{m.cost_operating_expense_link()}</a></p>
+                <p class="small"><a href={costs.operatingExpense.url}>{costs.operatingExpense.provider === 'manager' ? m.cost_operating_expense_link_manager() : m.cost_operating_expense_link()}</a></p>
                 <div class="info-pop" id="info-operating-expense" popover>{m.cost_operating_expense_info()}</div>
               </div>
             )
