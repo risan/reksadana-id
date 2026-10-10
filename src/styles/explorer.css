@@ -1312,3 +1312,20 @@ th[aria-sort='descending'] .sort-down {
     padding: 0 var(--s-3);
   }
 }
+
+/* On the narrowest phones the count, the sort select, and two icon buttons no longer fit in one row: the sort gets a row of its own. */
+@media (max-width: 379px) {
+  .toolbar-actions {
+    order: 2;
+  }
+
+  .sort-picker {
+    order: 3;
+    flex: 1 1 100%;
+  }
+
+  .sort-picker select {
+    flex: 1;
+    max-width: none;
+  }
+}
