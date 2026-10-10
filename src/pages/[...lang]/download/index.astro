@@ -2,7 +2,8 @@
 import Base from '../../../layouts/Base.astro';
 import { listArchives, zipArchive } from '../../../lib/archives.js';
 import { FUND_TYPES } from '../../../lib/fund-types.js';
-import { formatNumber } from '../../../lib/format.js';
+import { readFundsCsv } from '../../../lib/data.js';
+import { formatNumber, tightenSeparators } from '../../../lib/format.js';
 import { anchor, localePaths, localizeHref } from '../../../lib/i18n.js';
 import { icon } from '../../../lib/icons.js';
 import * as m from '../../../paraglide/messages.js';
@@ -28,6 +29,11 @@ function archiveDescription(archive) {
 
   return m.download_zip_everything({ folder: `data/${archive.name}/` });
 }
+
+const FILES = [
+  { name: 'funds.csv', icon: 'table-2', description: m.download_funds_csv_note({ apiLink: anchor(localizeHref('/api/', locale), m.nav_api()) }), bytes: Buffer.byteLength(readFundsCsv()), format: 'CSV', href: '/csv/funds.csv' },
+  ...archives.map((archive) => ({ name: `${archive.name}.zip`, icon: 'archive', description: archiveDescription(archive), bytes: archive.bytes, format: 'ZIP', href: `/download/${archive.name}.zip` })),
+];
 
 const SOURCES = [
   {
@@ -119,40 +125,40 @@ const SOURCES = [
 ---
 
 <Base title={m.download_title()} description={m.download_description()} section="download">
-  <h1 class="page-title">{m.download_title()}</h1>
-  <p class="lede">{m.download_lede()}</p>
+  <div class="intro">
+    <h1 class="page-title">{m.download_title()}</h1>
+    <p class="lede">{m.download_lede()}</p>
+  </div>
 
   <section class="section">
-    <div class="card featured">
-      <span class="icon-tile" set:html={icon('table-2', { size: 14 })} />
-      <div class="featured-text">
-        <h2 class="card-title"><code>funds.csv</code></h2>
-        <p class="muted small" set:html={m.download_funds_csv_note({ apiLink: anchor(localizeHref('/api/', locale), m.nav_api()) })} />
-      </div>
-      <a class="btn btn-primary" href="/csv/funds.csv" download><Fragment set:html={icon('download')} />{m.download_funds_csv()}</a>
+    <h2 class="section-title">{m.download_files_title()}</h2>
+    <p class="prose muted small" set:html={m.download_zip_text()} />
+    <div class="table-scroll">
+      <table class="tbl files-list">
+        <thead>
+          <tr>
+            <th>{m.download_col_file()}</th>
+            <th>{m.download_col_contents()}</th>
+            <th class="num">{m.download_col_size()}</th>
+            <th>{m.download_col_format()}</th>
+            <th><span class="visually-hidden">{m.download_button()}</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            FILES.map((file) => (
+              <tr>
+                <td class="file-name"><span class="icon-tile" set:html={icon(file.icon, { size: 14 })} /><code>{file.name}</code></td>
+                <td class="file-what" set:html={file.description} />
+                <td class="num tnum file-size" set:html={tightenSeparators(formatSize(file.bytes))} />
+                <td class="file-format">{file.format}</td>
+                <td class="file-action"><a class="btn btn-sm" href={file.href} download><Fragment set:html={icon('download', { size: 14 })} />{m.download_button()}</a></td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
     </div>
-  </section>
-
-  <section class="section">
-    <h2 class="section-title">{m.download_zip_title()}</h2>
-    <p class="prose" set:html={m.download_zip_text()} />
-    <ul class="archive-grid">
-      {
-        archives.map((archive) => (
-          <li class="card archive">
-            <div class="archive-head">
-              <span class="icon-tile" set:html={icon('archive', { size: 14 })} />
-              <h3 class="card-title"><code>{archive.name}.zip</code></h3>
-            </div>
-            <p class="muted small">{archiveDescription(archive)}</p>
-            <div class="archive-foot">
-              <span class="muted small">{formatSize(archive.bytes)}</span>
-              <a class="btn btn-sm" href={`/download/${archive.name}.zip`} download><Fragment set:html={icon('download', { size: 16 })} />{m.download_button()}</a>
-            </div>
-          </li>
-        ))
-      }
-    </ul>
   </section>
 
   <section class="section">
@@ -184,7 +190,6 @@ const SOURCES = [
   <section class="section">
     <h2 class="section-title">{m.download_notes_title()}</h2>
     <div class="card notes">
-      <span class="icon-tile" set:html={icon('info', { size: 14 })} />
       <ul class="prose">
         <li set:html={m.download_note_history()} />
         <li set:html={m.download_note_units()} />
@@ -219,43 +224,33 @@ const SOURCES = [
 </Base>
 
 <style>
-  .featured {
-    display: flex;
-    align-items: center;
-    gap: var(--s-4);
+  .section-title + .prose {
+    margin-bottom: var(--s-3);
   }
 
-  .featured-text {
-    flex: 1;
-    min-width: 0;
+  .files-list td {
+    vertical-align: middle;
   }
 
-  .archive-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: var(--s-4);
-    margin: var(--s-4) 0 0;
-    padding: 0;
-    list-style: none;
+  .file-name {
+    white-space: nowrap;
   }
 
-  .archive {
-    display: flex;
-    flex-direction: column;
-    gap: var(--s-3);
+  .file-name .icon-tile {
+    margin-right: var(--s-3);
+    vertical-align: middle;
   }
 
-  .archive-head {
-    display: flex;
-    align-items: center;
-    gap: var(--s-3);
+  .file-what {
+    color: var(--ink-2);
   }
 
-  .archive-foot {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: auto;
+  .file-format {
+    color: var(--muted);
+  }
+
+  .file-action {
+    text-align: right;
   }
 
   .source-list {
@@ -268,19 +263,22 @@ const SOURCES = [
     flex-wrap: wrap;
     align-items: baseline;
     gap: var(--s-1) var(--s-3);
-    padding: var(--s-4);
+    padding: var(--s-3) var(--s-4);
     border-bottom: 1px solid var(--rule-strong);
     background: var(--panel);
   }
 
-  .files-table td:first-child {
-    width: 1%;
-    white-space: nowrap;
+  .source-head h3 {
+    font-size: var(--fs-base);
   }
 
-  .notes {
-    display: flex;
-    gap: var(--s-4);
+  .files-table {
+    table-layout: fixed;
+  }
+
+  .files-table td:first-child {
+    width: 21rem;
+    white-space: nowrap;
   }
 
   .notes ul {
@@ -293,9 +291,62 @@ const SOURCES = [
   }
 
   @media (max-width: 719px) {
-    .featured {
-      flex-direction: column;
-      align-items: stretch;
+    .files-list thead {
+      display: none;
+    }
+
+    .files-list,
+    .files-list tbody {
+      display: block;
+    }
+
+    .files-list tr {
+      display: grid;
+      grid-template-columns: auto auto 1fr auto;
+      grid-template-areas:
+        'name name name action'
+        'what what what what'
+        'size format . .';
+      gap: var(--s-1) var(--s-4);
+      padding: var(--s-3) var(--panel-pad);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .files-list tr:last-child {
+      border-bottom: 0;
+    }
+
+    .files-list td {
+      padding: 0;
+      border-bottom: 0;
+    }
+
+    .file-name {
+      grid-area: name;
+      align-self: center;
+    }
+
+    .file-what {
+      grid-area: what;
+    }
+
+    .file-size {
+      grid-area: size;
+      font-size: var(--fs-xs);
+      text-align: left;
+    }
+
+    .file-format {
+      grid-area: format;
+      font-size: var(--fs-xs);
+    }
+
+    .file-action {
+      grid-area: action;
+    }
+
+    .files-table {
+      table-layout: auto;
     }
 
     .files-table,
@@ -325,10 +376,6 @@ const SOURCES = [
       width: auto;
       white-space: normal;
       overflow-wrap: anywhere;
-    }
-
-    .notes .icon-tile {
-      display: none;
     }
   }
 </style>

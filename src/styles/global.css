@@ -362,7 +362,7 @@ pre {
 pre code {
   padding: 0;
   background: none;
-  font-size: var(--fs-sm);
+  font-size: 0.78125rem;
 }
 
 .code-block {
