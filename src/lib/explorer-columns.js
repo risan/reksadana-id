@@ -138,3 +138,13 @@ export const COLUMN_PRESETS = [
 ];
 
 export const DEFAULT_COLUMNS = COLUMN_PRESETS[0].columns;
+
+// A wide screen has room for a short return, the 5-year rate, and the cost; a narrower one keeps the default.
+// The inline script in index.astro repeats the query before the table paints; keep them in step.
+export const WIDE_COLUMNS = ['return_1m', 'return_ytd', 'return_1y', 'spark', 'cagr_3y', 'cagr_5y', 'aum', 'operating_expense'];
+const WIDE_QUERY = '(min-width: 1280px)';
+
+// What a viewer who has not chosen columns sees on this screen.
+export function defaultColumns() {
+  return typeof matchMedia === 'function' && matchMedia(WIDE_QUERY).matches ? WIDE_COLUMNS : DEFAULT_COLUMNS;
+}

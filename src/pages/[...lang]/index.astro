@@ -2,7 +2,7 @@
 import '../../styles/explorer.css';
 import Base from '../../layouts/Base.astro';
 import { loadFundSummaries } from '../../lib/data.js';
-import { COLUMNS, COLUMN_KEYS, COLUMN_PRESETS, DEFAULT_COLUMNS } from '../../lib/explorer-columns.js';
+import { COLUMNS, COLUMN_KEYS, COLUMN_PRESETS, DEFAULT_COLUMNS, WIDE_COLUMNS } from '../../lib/explorer-columns.js';
 import { DENSITIES } from '../../lib/explorer-preferences.js';
 import { renderRows, renderTypeSegments, typeNote } from '../../lib/explorer-render.js';
 import { DEFAULT_STATE, PAGE_SIZES, filterFunds, fundCountLabel, latestAumDate, managerOptions, prepareFunds, sortFunds } from '../../lib/explorer.js';
@@ -188,7 +188,7 @@ const sortIcons = `<span class="sort-up">${icon('chevron-up', { size: 12 })}</sp
     </div>
 
     <div class="table-frame table-scroll" id="table-frame">
-      <table class="tbl funds-table" id="funds-table" data-show={DEFAULT_COLUMNS.join(' ')} data-density={DENSITIES[0]} data-sort={DEFAULT_STATE.sort} aria-label={m.table_label()}>
+      <table class="tbl funds-table" id="funds-table" data-show={DEFAULT_COLUMNS.join(' ')} data-show-wide={WIDE_COLUMNS.join(' ')} data-density={DENSITIES[0]} data-sort={DEFAULT_STATE.sort} aria-label={m.table_label()}>
         <thead>
           <tr>
             <th class="c-compare"><span class="visually-hidden">{m.compare_col_header()}</span></th>
@@ -306,6 +306,8 @@ const sortIcons = `<span class="sort-up">${icon('chevron-up', { size: 12 })}</sp
 
     if (columns && /^[a-z0-9_ ]+$/.test(columns)) {
       table.dataset.show = columns;
+    } else if (matchMedia('(min-width: 1280px)').matches) {
+      table.dataset.show = table.dataset.showWide;
     }
 
     if (density === 'compact') {
