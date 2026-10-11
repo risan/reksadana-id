@@ -19,33 +19,33 @@
       "instrument": "AMMAN MINERAL INTERNASIONAL TBK"
     },
     {
+      "instrument": "ANEKA TAMBANG Tbk"
+    },
+    {
+      "instrument": "ASTRA INTERNATIONAL TBK"
+    },
+    {
       "instrument": "BANK CENTRAL ASIA TBK"
     },
     {
       "instrument": "BANK RAKYAT INDONESIA (PERSERO) TBK"
-    },
-    {
-      "instrument": "MAYORA INDAH TBK"
-    },
-    {
-      "instrument": "OBLIGASI BERKELANJUTAN VII TOWER BERSAMA INFRASTRUCTURE TAHAP IV TAHUN 2026 SERI A"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 2054
+      "weight": 1043
     },
     {
       "asset": "Obligasi",
-      "weight": 3003
+      "weight": 3159
     },
     {
       "asset": "Saham",
-      "weight": 4943
+      "weight": 5798
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 88,
   "return5d": 99,
   "return1m": -446,
@@ -76,7 +76,7 @@
   "asof": 20261009,
   "url": "batavia-dana-dinamis-6459c51d3d89",
   "currency": "IDR",
-  "lastAum": 19274241654,
+  "lastAum": 71053107399,
   "factsheet": "https://cache.makmur.id/files/products/6205d80beefd610a89bb060c/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6205d80beefd610a89bb060c/prospectus.pdf",
   "inceptionDate": 20020603,

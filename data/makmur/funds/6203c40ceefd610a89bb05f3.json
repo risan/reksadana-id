@@ -16,6 +16,9 @@
   },
   "topHoldings": [
     {
+      "instrument": "ADARO ANDALAN INDONESIA TBK"
+    },
+    {
       "instrument": "ALAMTRI RESOURCES INDONESIA TBK"
     },
     {
@@ -26,22 +29,19 @@
     },
     {
       "instrument": "INDOFOOD SUKSES MAKMUR TBK"
-    },
-    {
-      "instrument": "KALBE FARMA TBK"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 702
+      "weight": 1160
     },
     {
       "asset": "Saham",
-      "weight": 9298
+      "weight": 8840
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 121,
   "return5d": 182,
   "return1m": -715,
@@ -72,7 +72,7 @@
   "asof": 20261009,
   "url": "batavia-dana-saham-syariah-e23668324807",
   "currency": "IDR",
-  "lastAum": 26317693798,
+  "lastAum": 25806286055,
   "factsheet": "https://cache.makmur.id/files/products/6203c40ceefd610a89bb05f3/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6203c40ceefd610a89bb05f3/prospectus.pdf",
   "inceptionDate": 20070719,

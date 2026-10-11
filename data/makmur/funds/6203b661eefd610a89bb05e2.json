@@ -19,29 +19,29 @@
       "instrument": "PT BANK ALADIN SYARIAH"
     },
     {
+      "instrument": "PT. BANK DKI UNIT USAHA SYARIAH"
+    },
+    {
       "instrument": "PT. BANK JABAR BANTEN SYARIAH"
     },
     {
       "instrument": "PT. BPD RIAU UNIT USAHA SYARIAH"
     },
     {
-      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN III PEGADAIAN TAHAP V TAHUN 2025 SERI A"
-    },
-    {
-      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN VI ADIRA FINANCE TAHAP III TAHUN 2026 SERI A"
+      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN IV PEGADAIAN TAHAP II TAHUN 2026 SERI A"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 4316
+      "weight": 5075
     },
     {
       "asset": "Obligasi",
-      "weight": 5684
+      "weight": 4925
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 1,
   "return5d": 11,
   "return1m": 42,
@@ -72,7 +72,7 @@
   "asof": 20261009,
   "url": "batavia-dana-kas-syariah-kelas-a-97a0722f7709",
   "currency": "IDR",
-  "lastAum": 224967533510,
+  "lastAum": 194112033760,
   "factsheet": "https://cache.makmur.id/files/products/6203b661eefd610a89bb05e2/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6203b661eefd610a89bb05e2/prospectus.pdf",
   "inceptionDate": 20211122,

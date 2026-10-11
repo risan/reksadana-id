@@ -16,7 +16,7 @@
   },
   "topHoldings": [
     {
-      "instrument": "OBLIGASI BERKELANJUTAN I OTO MULTIARTHA TAHAP II TAHUN 2024 SERI B"
+      "instrument": "OBLIGASI BERKELANJUTAN V SUMMARECON AGUNG TAHAP I TAHUN 2025 SERI A"
     },
     {
       "instrument": "OBLIGASI BERKELANJUTAN VII FEDERAL INTERNATIONAL FINANCE TAHAP I TAHUN 2025 SERI B"
@@ -34,14 +34,14 @@
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 2160
+      "weight": 1320
     },
     {
       "asset": "Obligasi",
-      "weight": 7840
+      "weight": 8680
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 2,
   "return5d": 0,
   "return1m": 11,
@@ -72,7 +72,7 @@
   "asof": 20261009,
   "url": "batavia-dana-obligasi-ultima-cff013796527",
   "currency": "IDR",
-  "lastAum": 801921683814,
+  "lastAum": 553309667149,
   "factsheet": "https://cache.makmur.id/files/products/630f2237d7f1440a7614e621/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/630f2237d7f1440a7614e621/prospectus.pdf",
   "inceptionDate": 20070220,

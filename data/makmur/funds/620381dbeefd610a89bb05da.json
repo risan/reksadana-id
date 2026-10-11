@@ -34,14 +34,14 @@
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 5802
+      "weight": 5671
     },
     {
       "asset": "Obligasi",
-      "weight": 4198
+      "weight": 4329
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 1,
   "return5d": 10,
   "return1m": 41,
@@ -72,7 +72,7 @@
   "asof": 20261009,
   "url": "batavia-dana-kas-maxima-ba1a494c4c9c",
   "currency": "IDR",
-  "lastAum": 14658993559006,
+  "lastAum": 13437438074227,
   "factsheet": "https://cache.makmur.id/files/products/620381dbeefd610a89bb05da/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/620381dbeefd610a89bb05da/prospectus.pdf",
   "inceptionDate": 20070220,

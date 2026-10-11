@@ -19,9 +19,6 @@
       "instrument": "AMMAN MINERAL INTERNASIONAL TBK"
     },
     {
-      "instrument": "ANEKA TAMBANG TBK"
-    },
-    {
       "instrument": "ASTRA INTERNATIONAL TBK"
     },
     {
@@ -29,19 +26,22 @@
     },
     {
       "instrument": "BANK NEGARA INDONESIA Tbk"
+    },
+    {
+      "instrument": "BANK RAKYAT INDONESIA (PERSERO) TBK"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 666
+      "weight": 1636
     },
     {
       "asset": "Saham",
-      "weight": 9334
+      "weight": 8364
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 111,
   "return5d": 117,
   "return1m": -774,
@@ -72,7 +72,7 @@
   "asof": 20261009,
   "url": "batavia-dana-saham-66bb3ddad78a",
   "currency": "IDR",
-  "lastAum": 926672909491,
+  "lastAum": 1117894366518,
   "factsheet": "https://cache.makmur.id/files/products/6203b94feefd610a89bb05ea/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6203b94feefd610a89bb05ea/prospectus.pdf",
   "inceptionDate": 19961216,

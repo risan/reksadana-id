@@ -16,7 +16,7 @@
   },
   "topHoldings": [
     {
-      "instrument": "ALAMTRI RESOURCES INDONESIA TBK"
+      "instrument": "AMMAN MINERAL INTERNASIONAL TBK"
     },
     {
       "instrument": "ASTRA OTOPARTS Tbk"
@@ -34,14 +34,14 @@
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 812
+      "weight": 1144
     },
     {
       "asset": "Saham",
-      "weight": 9188
+      "weight": 8856
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 102,
   "return5d": 133,
   "return1m": -730,
@@ -72,7 +72,7 @@
   "asof": 20261009,
   "url": "batavia-dana-saham-optimal-fa35aa7289a1",
   "currency": "IDR",
-  "lastAum": 192878601696,
+  "lastAum": 178037522948,
   "factsheet": "https://cache.makmur.id/files/products/6203bca9eefd610a89bb05eb/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6203bca9eefd610a89bb05eb/prospectus.pdf",
   "inceptionDate": 20061019,

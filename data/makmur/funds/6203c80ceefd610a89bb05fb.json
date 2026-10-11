@@ -34,14 +34,14 @@
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 133
+      "weight": 97
     },
     {
       "asset": "Saham",
-      "weight": 9867
+      "weight": 9903
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 133,
   "return5d": 99,
   "return1m": -932,
@@ -61,7 +61,7 @@
   "cagr3y": -1116,
   "cagr5y": -762,
   "cagr10y": -430,
-  "cagrsi": -271,
+  "cagrsi": -270,
   "rating": 0,
   "description": "Reksa Dana BATAVIA LQ45 PLUS adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Reksa Dana BATAVIA LQ45 PLUS (selanjutnya disebut “BATAVIA LQ45 PLUS “) bertujuan untuk memberikan hasil investasi yang setara dengan kinerja Indeks LQ45 yang diterbitkan oleh Bursa Efek Indonesia. BATAVIA LQ45 PLUS akan menginvestasikan dananya dengan komposisi investasi sebagai berikut: BATAVIA LQ45 PLUS menginvestasikan dananya dengan komposisi investasi sebesar minimum 80% (delapan puluh per seratus) dan maksimum 100% (seratus per seratus) pada Efek bersifat ekuitas yang berasal dari kumpulan Efek yang terdaftar pada indeks LQ45 dan minimum 0% (nol per seratus) serta maksimum 20% (dua puluh per seratus) pada Efek bersifat ekuitas dan/atau instrumen pasar uang dan/atau setara kas yang sesuai dengan peraturan dan perundang-undangan yang berlaku di Indonesia. Investasi pada saham-saham yang terdaftar pada Indeks LQ45 tersebut akan berjumlah sekurang-kurangnya 80% (delapan puluh per seratus) dari keseluruhan saham yang terdaftar dalam Indeks LQ45. Sedangkan porsi tiap-tiap saham akan ditentukan secara prorata mengikuti bobot (weighting) masing-masing saham terhadap indeks LQ45, dimana pembobotannya atas masing-masing saham adalah paling kurang 80% (delapan puluh per seratus) dan paling banyak 120% (seratus dua puluh per seratus) dari bobot masing-masing saham yang bersangkutan dalam Indeks LQ45.",
   "isSyariah": false,
@@ -72,7 +72,7 @@
   "asof": 20261009,
   "url": "batavia-lq45-plus-be26c916fc71",
   "currency": "IDR",
-  "lastAum": 12597149845,
+  "lastAum": 13644054437,
   "factsheet": "https://cache.makmur.id/files/products/6203c80ceefd610a89bb05fb/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6203c80ceefd610a89bb05fb/prospectus.pdf",
   "inceptionDate": 20140502,
