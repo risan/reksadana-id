@@ -19,6 +19,7 @@
   },
   "released_date": "2008-04-11",
   "is_top_product": 1,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -212,7 +213,7 @@
     "3y": 0.049461810688935515,
     "5y": 0.04505843708811619,
     "10y": 0.049007201131336275,
-    "all": 0.03989125852298603
+    "all": 0.039885236846717076
   },
   "cagr_adjusted": {
     "1y": 0.04383466361514743,
@@ -268,7 +269,7 @@
     "value": 2062.2745
   },
   "trade": {
-    "total_trades": 2536,
+    "total_trades": 2152,
     "period": "1d"
   }
 }
