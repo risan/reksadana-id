@@ -283,7 +283,7 @@ BRK1997,Batavia Proteksi Cemerlang 12,,"Batavia Prosperindo Aset Manajemen, PT",
 BRK1998,Batavia Proteksi Gebyar I,,"Batavia Prosperindo Aset Manajemen, PT",Terproteksi,IDR,,2015-08-28,,1998,,,
 BRK2000,Premier Proteksi VIII,,"Indo Premier Investment Management, PT",Terproteksi,IDR,,2015-09-03,,2000,,,
 BRK2002,Batavia Proteksi Cemerlang 27,,"Batavia Prosperindo Aset Manajemen, PT",Terproteksi,IDR,,2015-09-27,,2002,,,
-BRK2005,RDT Maybank CPF 3,,"Maybank Asset Management, PT",Terproteksi,IDR,,2015-09-10,,2005,,,
+BRK2005,RDT Maybank CPF 3,,"Maybank Asset Management, PT",Terproteksi,,,2015-09-10,,2005,,,
 BRK2010,RDPT Bowsprit Infrastructure Fund I,,"Bowsprit Asset Management, PT",Penyertaan Terbatas,,,2015-04-29,,2010,,,
 BRK2011,Syailendra Market Leader Fund,,"Syailendra Capital, PT",Saham,IDR,,2015-09-16,,2011,,,
 BRK2013,BNIAM Proteksi LIX,,"BNI Asset Management, PT",Terproteksi,IDR,,2015-09-16,,2013,,,
@@ -3341,7 +3341,7 @@ RD3863,PNM Dana Maxima,,"PNM Investment Management, PT",Pasar Uang,IDR,false,202
 RD3864,Rdpt Ekuitas Danareksa Toll Road 01,,PT BRI Manajemen Investasi,Penyertaan Terbatas,IDR,false,2020-12-07,RD3864,,,,
 RD3865,Batavia Proteksi Maxima 15,,"Batavia Prosperindo Aset Manajemen, PT",Terproteksi,IDR,false,2020-12-08,RD3865,4284,,,REKSA DANA TERPROTEKSI BATAVIA PROTEKSI MAXIMA 15
 RD3866,Batavia Proteksi Maxima 27,,"Batavia Prosperindo Aset Manajemen, PT",Terproteksi,IDR,false,2020-12-08,RD3866,4285,,,REKSA DANA TERPROTEKSI BATAVIA PROTEKSI MAXIMA 27
-RD3867,BNP Paribas Prima II Kelas IK1,,"BNP Paribas Asset Management, PT",Obligasi,IDR,false,2020-12-08,RD3867,4283,16164,,REKSA DANA BNP PARIBAS PRIMA II KELAS IK1
+RD3867,Bnp Paribas Prima Ii Kelas Ik1,,"BNP Paribas Asset Management, PT",Obligasi,IDR,false,2020-12-08,RD3867,4283,16164,,REKSA DANA BNP PARIBAS PRIMA II KELAS IK1
 RD3868,Nusadana Proteksi 9,,"Nusadana Investama Indonesia, PT",Terproteksi,IDR,false,2020-12-08,RD3868,4286,,,REKSA DANA TERPROTEKSI NUSADANA PROTEKSI 9
 RD3869,Insight Pendapatan Tetap 1,,"Insight Investments Management, PT",Obligasi,IDR,false,2020-12-08,RD3869,4287,,,
 RD3870,Panin 20,Reksa Dana Terproteksi Panin 20,"Panin Asset Management, PT",Terproteksi,IDR,false,2020-12-10,RD3870,4288,,,
@@ -3484,7 +3484,7 @@ RD4006,Bahana Protected Fund 217,,"Bahana TCW Investment Management, PT",Terprot
 RD4007,Syailendra Sharia Money Market Fund 2,,"Syailendra Capital, PT",Pasar Uang,IDR,true,2021-08-27,RD4007,4402,16273,,
 RD4008,Syailendra Money Market Fund 7,,"Syailendra Capital, PT",Pasar Uang,IDR,false,2021-08-31,RD4008,4403,,,REKSA DANA SYAILENDRA MONEY MARKET FUND 7
 RD4009,STAR Protected XI,,"Surya Timur Alam Raya Asset Management, PT",Terproteksi,IDR,false,2021-09-03,RD4009,4404,16276,,REKSA DANA TERPROTEKSI STAR PROTECTED XI
-RD4010,RDT Kisi Premier Protected Fund,Kisi Premier Protected Fund,"Korea Investment Management Indonesia, PT",Terproteksi,IDR,false,2021-09-07,RD4010,4407,16279,,Reksa Dana Terproteksi KISI Premier Protected Fund
+RD4010,Kisi Premier Protected Fund,RDT Kisi Premier Protected Fund,"Korea Investment Management Indonesia, PT",Terproteksi,IDR,false,2021-09-07,RD4010,4407,16279,,Reksa Dana Terproteksi KISI Premier Protected Fund
 RD4011,Kisi Premier Protected Fund I,,"Kisi Asset Management, PT",Terproteksi,IDR,false,2021-09-07,RD4011,,,,REKSA DANA TERPROTEKSI KISI PREMIER PROTECTED FUND I
 RD4012,Syailendra Money Market Fund 8,,"Syailendra Capital, PT",Pasar Uang,IDR,false,2021-09-07,RD4012,4408,,,REKSA DANA SYAILENDRA MONEY MARKET FUND 8
 RD4013,Reksa Dana Syariah Bahana MES Syariah Fund Kelas O,Bahana Mes Syariah Fund Kelas O,"Bahana TCW Investment Management, PT",Obligasi,IDR,true,2021-09-08,RD4013,4405,16282,,REKSA DANA SYARIAH BAHANA MES SYARIAH FUND KELAS O
