@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Obligasi &/ Sukuk Pemerintah RI (dgn. jangka waktu <= 1 thn &/ sisa jatuh tempo <= 1 thn)",
-      "percentage": 2.94
+      "percentage": 0
     },
     {
       "name": "Obligasi &/ Sukuk Korporasi (dgn. sisa JT < 1 tahun)",
-      "percentage": 74.08
+      "percentage": 78.3
     },
     {
       "name": "Deposito dan Setara Kas",
-      "percentage": 22.98
+      "percentage": 21.7
     }
   ],
   "holding": [
@@ -77,7 +77,7 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -87,7 +87,27 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap II Tahun 2023 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II Provident Investasi Bersama Tahap III Tahun 2024 Seri B",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Buma Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -97,7 +117,7 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan V Chandra Asri Pacific Tahap III Tahun 2026 Seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -105,29 +125,19 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan VII Astra Sedaya Finance Tahap III Tahun 2026 Seri A",
+      "name": "Obligasi II Pindo Deli Pulp And Paper Mills Tahun 2022 Seri C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "PBS003",
-      "name": "FR Syariah",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 6020,
-      "product_type": "FR",
       "serie_id": null
     },
     {
       "symbol": "",
       "name": "TD Bank Capital",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -137,17 +147,7 @@
       "symbol": "",
       "name": "TD Bank Ganesha",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "TD PT Bank Aladin Syariah",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -157,7 +157,7 @@
       "symbol": "",
       "name": "TD PT Bank Mnc Internasional Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -167,7 +167,7 @@
       "symbol": "",
       "name": "TD PT Bank Victoria International Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -200,7 +200,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 9303349319518,
+    "value": 9300000000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -208,44 +208,44 @@
     "percentage": 0.0119
   },
   "avg_yield": {
-    "date": "2026-08-31",
-    "percentage": 0.0761
+    "date": "2026-09-30",
+    "percentage": 0.0793
   },
   "cagr": {
-    "1y": 0.042886160819186836,
-    "3y": 0.04968097077049505,
-    "5y": 0.04577834932400071,
-    "10y": 0.05619319964961367,
-    "all": 0.05900168947922002
+    "1y": 0.042553191489361764,
+    "3y": 0.049666437209512804,
+    "5y": 0.04569373434641988,
+    "10y": 0.055916558498078084,
+    "all": 0.05899738050090009
   },
   "cagr_adjusted": {
-    "1y": 0.042886160819186836,
-    "3y": 0.04968097077049505,
-    "5y": 0.04577834932400071,
-    "10y": 0.05619319964961367,
-    "all": 0.059043357445050404
+    "1y": 0.042553191489361764,
+    "3y": 0.049666437209512804,
+    "5y": 0.04569373434641988,
+    "10y": 0.055916558498078084,
+    "all": 0.05901125590057488
   },
   "simplereturn": {
-    "1d": 0.00016525862975558248,
-    "1m": 0.004036859594705344,
-    "3m": 0.01110739851968856,
-    "ytd": 0.031627556212131314,
-    "1y": 0.042886160819186836,
-    "3y": 0.15657013139683706,
-    "5y": 0.2508298365378594,
-    "10y": 0.7275621064286211,
-    "all": 0.9876987997372559
+    "1d": 0.00016521477921283,
+    "1m": 0.003975233940758605,
+    "3m": 0.011222134483386936,
+    "ytd": 0.031901320784929466,
+    "1y": 0.042553191489361764,
+    "3y": 0.15652209151537622,
+    "5y": 0.2503238889201824,
+    "10y": 0.7230425557606388,
+    "all": 0.9882262783892992
   },
   "changesvalue": {
-    "1d": 0.3300000000001546,
-    "1m": 8.029999999999973,
-    "3m": 21.940000000000055,
-    "ytd": 61.23000000000002,
-    "1y": 82.13000000000011,
+    "1d": 0.32999999999992724,
+    "1m": 7.910000000000082,
+    "3m": 22.170000000000073,
+    "ytd": 61.75999999999999,
+    "1y": 81.53999999999996,
     "3y": 270.3700000000001,
-    "5y": 400.5,
-    "10y": 841.1200000000001,
-    "all": 992.4200000000001
+    "5y": 399.96000000000004,
+    "10y": 838.31,
+    "all": 992.95
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -267,12 +267,12 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2014-10-21",
-    "value": 1997.2
+    "value": 1997.73
   },
   "trade": {
-    "total_trades": 3414,
+    "total_trades": 3893,
     "period": "1d"
   }
 }

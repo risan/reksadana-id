@@ -19,7 +19,6 @@
   },
   "released_date": "2009-01-23",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -68,9 +67,9 @@
   "holding": [
     {
       "symbol": "",
-      "name": "TD PT Bank Rakyat Indonesia (Persero) Tbk",
+      "name": "TD PT Bank KB Bukopin",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -78,9 +77,19 @@
     },
     {
       "symbol": "",
-      "name": "TD PT Bank Tabungan Negara (Persero) Tbk",
+      "name": "TD PT Bank Rakyat Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Victoria International",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -90,27 +99,7 @@
       "symbol": "",
       "name": "INDOGB 5 1/8 04/15/27",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "BBKPIJ 6.45 09/09/26",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "TD PT Bank KB Bukopin",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -120,7 +109,7 @@
       "symbol": "",
       "name": "IMASIJ 4.95 03/04/27",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -128,29 +117,9 @@
     },
     {
       "symbol": "",
-      "name": "TD PT Bank DKI",
+      "name": "ASIIIJ 7.15 09/28/27",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "PPGDIJ 6.1 09/13/26",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "TD PT Bank Syariah Nasional",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -160,7 +129,37 @@
       "symbol": "",
       "name": "TD PT Bank Aladin Syariah Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "WOMFIJ 4.95 03/13/27",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PPGDIJ 7.3 09/18/27",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BMRIIJ 4.85 12/29/26",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -193,7 +192,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 2316928001800.56,
+    "value": 5120472925187.71,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -205,40 +204,40 @@
     "percentage": 0.0686
   },
   "cagr": {
-    "1y": 0.0386200981049134,
-    "3y": 0.04497912985100605,
-    "5y": 0.03828217422860436,
-    "10y": 0.04405059952151236,
-    "all": 0.038031762116347956
+    "1y": 0.038887549232376806,
+    "3y": 0.045056134920587576,
+    "5y": 0.0383561475985994,
+    "10y": 0.04402609196492846,
+    "all": 0.038059976670032025
   },
   "cagr_adjusted": {
-    "1y": 0.0386200981049134,
-    "3y": 0.04497912985100605,
-    "5y": 0.03828217422860436,
-    "10y": 0.04405059952151236,
-    "all": 0.03804974462286226
+    "1y": 0.038887549232376806,
+    "3y": 0.045056134920587576,
+    "5y": 0.0383561475985994,
+    "10y": 0.04402609196492846,
+    "all": 0.038065971622383676
   },
   "simplereturn": {
-    "1d": 0.00014970832688043778,
-    "1m": 0.004380644291683611,
-    "3m": 0.013300487457896581,
-    "ytd": 0.029393168160589234,
-    "1y": 0.0386200981049134,
-    "3y": 0.1410977541921159,
-    "5y": 0.2066379755980594,
-    "10y": 0.5389179700221616,
-    "all": 0.9373900000000002
+    "1d": 0.00024764735017335227,
+    "1m": 0.004830517259251543,
+    "3m": 0.013434255784048332,
+    "ytd": 0.030099836881731346,
+    "1y": 0.038887549232376806,
+    "3y": 0.14135003708893112,
+    "5y": 0.2070678770219283,
+    "10y": 0.5385567697545415,
+    "all": 0.93872
   },
   "changesvalue": {
-    "1d": 0.290000000000191,
-    "1m": 8.450000000000045,
-    "3m": 25.430000000000064,
-    "ytd": 55.320000000000164,
-    "1y": 72.04000000000019,
-    "3y": 239.56000000000017,
-    "5y": 331.7800000000002,
-    "10y": 678.46,
-    "all": 937.3900000000001
+    "1d": 0.4800000000000182,
+    "1m": 9.319999999999936,
+    "3m": 25.700000000000045,
+    "ytd": 56.65000000000009,
+    "1y": 72.56999999999994,
+    "3y": 240.10000000000014,
+    "5y": 332.5799999999999,
+    "10y": 678.6300000000001,
+    "all": 938.72
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -260,9 +259,9 @@
     "quota_limit": 3
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2009-01-27",
-    "value": 1937.39
+    "value": 1938.72
   },
   "trade": null
 }

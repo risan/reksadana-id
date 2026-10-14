@@ -59,44 +59,64 @@
   },
   "asset": [
     {
-      "name": "Money Market",
-      "percentage": 20.39
+      "name": "Ekuitas",
+      "percentage": 76.4
     },
     {
-      "name": "Equity",
-      "percentage": 77.81
+      "name": "Obligasi",
+      "percentage": 1.9
     },
     {
-      "name": "Bonds",
-      "percentage": 1.8
+      "name": "Pasar Uang",
+      "percentage": 21.7
     }
   ],
   "holding": [
     {
-      "symbol": "ADMR",
-      "name": "Alamtri Minerals Indonesia Tbk.",
+      "symbol": "AKRA",
+      "name": "AKR Corporindo Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 4548,
+      "company_id": 4475,
       "product_type": "Saham",
       "serie_id": null
     },
     {
       "symbol": "",
-      "name": "TD - PT Allo Bank Indonesia, Tbk",
+      "name": "TD-PT Allo Bank Indonesia, Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
       "symbol": "ARCI",
       "name": "Archi Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4850,
       "product_type": "Saham",
@@ -104,41 +124,31 @@
     },
     {
       "symbol": "",
-      "name": "TD - PT Bank Panin Dubai Syariah, Tbk",
+      "name": "TD-PT Bank Panin Dubai Syariah, Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "BRMS",
-      "name": "Bumi Resources Minerals Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4633,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "DEWA",
-      "name": "Darma Henwa Tbk",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4966,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
       "symbol": "ENRG",
       "name": "Energi Mega Persada Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4594,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "HRTA",
+      "name": "Hartadinata Abadi Tbk",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4911,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -146,19 +156,9 @@
       "symbol": "INDY",
       "name": "Indika Energy Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4452,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "MDKA",
-      "name": "Merdeka Copper Gold Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4563,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -166,7 +166,7 @@
       "symbol": "WINS",
       "name": "Wintermar Offshore Marine Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4397,
       "product_type": "Saham",
@@ -199,7 +199,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 100635556432.87,
+    "value": 100635556433,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -211,40 +211,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.08563250640121856,
-    "3y": 0.0317339674753514,
-    "5y": 0.0027988772444889065,
+    "1y": -0.14452571914539436,
+    "3y": 0.020606411413954584,
+    "5y": 0.00158861678386657,
     "10y": null,
-    "all": 0.09369968765588288
+    "all": 0.08993140538978506
   },
   "cagr_adjusted": {
-    "1y": -0.08563250640121856,
-    "3y": 0.0317339674753514,
-    "5y": 0.0027988772444889065,
+    "1y": -0.14452571914539436,
+    "3y": 0.020606411413954584,
+    "5y": 0.00158861678386657,
     "10y": null,
-    "all": 0.09380869733001851
+    "all": 0.08996616860531503
   },
   "simplereturn": {
-    "1d": 0.01887912734609798,
-    "1m": -0.06529608830830791,
-    "3m": 0.026565585443456774,
-    "ytd": -0.1645742499181415,
-    "1y": -0.08563250640121856,
-    "3y": 0.09825499402472793,
-    "5y": 0.014072942923783138,
+    "1d": 0.004525656007648982,
+    "1m": -0.07828926526136226,
+    "3m": -0.013525990454083092,
+    "ytd": -0.1852413531631827,
+    "1y": -0.14452571914539436,
+    "3y": 0.06310185679673053,
+    "5y": 0.007968361076021724,
     "10y": null,
-    "all": 0.939245139611169
+    "all": 0.8912713017041363
   },
   "changesvalue": {
-    "1d": 35.929999999999836,
-    "1m": -135.46000000000026,
-    "3m": 50.179999999999836,
-    "ytd": -381.99,
-    "1y": -181.60000000000014,
-    "3y": 173.48000000000002,
-    "5y": 26.909999999999854,
+    "1d": 8.519999999999982,
+    "1m": -160.6300000000001,
+    "3m": -25.930000000000064,
+    "ytd": -429.96000000000004,
+    "1y": -319.49000000000024,
+    "3y": 112.25,
+    "5y": 14.949999999999818,
     "10y": null,
-    "all": 939.17
+    "all": 891.1999999999999
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -266,9 +266,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2019-05-23",
-    "value": 1939.09
+    "value": 1891.12
   },
   "trade": null
 }

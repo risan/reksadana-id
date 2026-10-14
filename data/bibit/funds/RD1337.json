@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Kas / Pasar Uang",
-      "percentage": 9.8
+      "percentage": 17.2
     },
     {
       "name": "Saham",
-      "percentage": 90.2
+      "percentage": 82.8
     }
   ],
   "holding": [
@@ -250,9 +250,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2011-07-04",
-    "value": 944.1528
+    "value": 930.1624
   },
   "trade": null
 }

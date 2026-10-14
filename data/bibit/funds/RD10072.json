@@ -59,15 +59,15 @@
   "asset": [
     {
       "name": "Instrumen Pasar Uang/Kas",
-      "percentage": 34.61
+      "percentage": 54.76
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 52.57
+      "percentage": 35.22
     },
     {
       "name": "Efek Bersifat Hutang",
-      "percentage": 12.82
+      "percentage": 10.02
     }
   ],
   "investment_manager": {
@@ -144,9 +144,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2025-11-27",
-    "value": 1043.4718
+    "value": 1014.7316
   },
   "trade": null
 }

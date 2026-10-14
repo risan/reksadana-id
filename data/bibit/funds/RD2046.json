@@ -61,11 +61,11 @@
   },
   "asset": [
     {
-      "name": "Short Term Fixed Income",
+      "name": "Pendapatan tetap jangka pendek",
       "percentage": 0
     },
     {
-      "name": "Deposito",
+      "name": "Deposito Berjangka",
       "percentage": 100
     }
   ],
@@ -74,7 +74,7 @@
       "symbol": "",
       "name": "PT Allobank Indonesia, Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -84,7 +84,7 @@
       "symbol": "",
       "name": "PT Bank BTPN Syariah, Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -94,7 +94,7 @@
       "symbol": "",
       "name": "PT Bank Hibank Indonesia",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -104,7 +104,7 @@
       "symbol": "",
       "name": "PT Bank ICBC Indonesia",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -114,7 +114,7 @@
       "symbol": "",
       "name": "PT Bank Ina Perdana, Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -124,7 +124,7 @@
       "symbol": "",
       "name": "PT Bank Jago, Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,7 +134,7 @@
       "symbol": "",
       "name": "PT Bank Nano Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,7 +144,7 @@
       "symbol": "",
       "name": "PT Bank Panin Dubai Syariah, Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -154,7 +154,7 @@
       "symbol": "",
       "name": "PT Bank SulutGo",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -164,7 +164,7 @@
       "symbol": "",
       "name": "PT BPD Lampung",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +197,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 60022969739.4,
+    "value": 60022969739,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -209,40 +209,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.03163087410974641,
-    "3y": 0.03402052845948811,
-    "5y": 0.03145938443300289,
+    "1y": 0.031673960612691676,
+    "3y": 0.0340345096675021,
+    "5y": 0.031463493590186076,
     "10y": null,
-    "all": 0.03733214455365652
+    "all": 0.03736068929312175
   },
   "cagr_adjusted": {
-    "1y": 0.03163087410974641,
-    "3y": 0.03402052845948811,
-    "5y": 0.03145938443300289,
+    "1y": 0.031673960612691676,
+    "3y": 0.0340345096675021,
+    "5y": 0.031463493590186076,
     "10y": null,
-    "all": 0.037373501950758836
+    "all": 0.0373744656580155
   },
   "simplereturn": {
-    "1d": 0.00009852515422958952,
-    "1m": 0.0030785836994693394,
-    "3m": 0.009223497740013631,
-    "ytd": 0.02461390336131175,
-    "1y": 0.03163087410974641,
-    "3y": 0.10557314968414344,
-    "5y": 0.16751013041247131,
+    "1d": 0.00009848484848484773,
+    "1m": 0.003283148782879053,
+    "3m": 0.009265984205013789,
+    "ytd": 0.025033193828665423,
+    "1y": 0.031673960612691676,
+    "3y": 0.10561799634847002,
+    "5y": 0.1675333863978068,
     "10y": null,
-    "all": 0.3194976351655383
+    "all": 0.3200375973681844
   },
   "changesvalue": {
-    "1d": 0.12999999999988177,
-    "1m": 4.0499999999999545,
-    "3m": 12.059999999999945,
-    "ytd": 31.699999999999818,
-    "1y": 40.45999999999981,
-    "3y": 126.00999999999999,
-    "5y": 189.32999999999993,
+    "1d": 0.13000000000010914,
+    "1m": 4.320000000000164,
+    "3m": 12.120000000000118,
+    "ytd": 32.24000000000001,
+    "1y": 40.5300000000002,
+    "3y": 126.11000000000013,
+    "5y": 189.43000000000006,
     "10y": null,
-    "all": 319.51999999999987
+    "all": 320.06000000000006
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -264,9 +264,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2019-03-22",
-    "value": 1319.59
+    "value": 1320.13
   },
   "trade": null
 }

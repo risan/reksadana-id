@@ -61,23 +61,23 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 23.5
+      "percentage": 13.2
     },
     {
       "name": "Obligasi Pemerintah",
-      "percentage": 54.9
+      "percentage": 54.99
     },
     {
       "name": "Obligasi Korporasi",
-      "percentage": 23.5
+      "percentage": 31.81
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "OBLIGASI BERKELANJUTAN I OTO MULTIARTHA TAHAP II TAHUN 2024 SERI B",
+      "name": "OBLIGASI BERKELANJUTAN V SUMMARECON AGUNG TAHAP I TAHUN 2025 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -87,7 +87,7 @@
       "symbol": "",
       "name": "OBLIGASI BERKELANJUTAN VII FEDERAL INTERNATIONAL FINANCE TAHAP I TAHUN 2025 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -97,7 +97,7 @@
       "symbol": "",
       "name": "OBLIGASI BERKELANJUTAN VII SARANA MULTIGRIYA FINANSIAL TAHAP VI TAHUN 2024 SERI C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -107,7 +107,7 @@
       "symbol": "",
       "name": "OBLIGASI BERKELANJUTAN VII TOWER BERSAMA INFRASTRUCTURE TAHAP IV TAHUN 2026 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -117,7 +117,7 @@
       "symbol": "",
       "name": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0082",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -127,7 +127,7 @@
       "symbol": "FR0091",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 5802,
       "product_type": "FR",
@@ -137,19 +137,9 @@
       "symbol": "FR0104",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 8733,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
-      "symbol": "FR0109",
-      "name": "Obligasi FR",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 9551,
       "product_type": "FR",
       "serie_id": null
     },
@@ -157,20 +147,30 @@
       "symbol": "FR0110",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 10929,
       "product_type": "FR",
       "serie_id": null
     },
     {
-      "symbol": "PBS030",
-      "name": "FR Syariah",
+      "symbol": "",
+      "name": "PT. BPD DKI",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 6385,
-      "product_type": "FR",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "STANDARD CHARTERED BANK",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
       "serie_id": null
     }
   ],
@@ -212,40 +212,40 @@
     "percentage": 0.0666
   },
   "cagr": {
-    "1y": -0.03858662624130993,
-    "3y": 0.0021801684770104135,
-    "5y": -0.003278768154383771,
-    "10y": 0.025957009974695966,
-    "all": 0.0544843264342727
+    "1y": -0.038848205285679005,
+    "3y": 0.0005539249255159806,
+    "5y": -0.0034491899979814944,
+    "10y": 0.02587309717994235,
+    "all": 0.05448341374660015
   },
   "cagr_adjusted": {
-    "1y": -0.0010999387348655798,
-    "3y": 0.03841070570835625,
-    "5y": 0.030139799042453896,
-    "10y": 0.045358211822561056,
-    "all": 0.06470982258238056
+    "1y": -0.001371717067243483,
+    "3y": 0.03672567065470189,
+    "5y": 0.029963663210179847,
+    "10y": 0.04527271220784068,
+    "all": 0.0646792710059847
   },
   "simplereturn": {
-    "1d": 0.00023622758443408998,
-    "1m": 0.001111562763261631,
-    "3m": 0.016297090727402486,
-    "ytd": -0.006637781966710499,
-    "1y": -0.0010999387348655798,
-    "3y": 0.11971493453994286,
-    "5y": 0.1600610131586211,
-    "10y": 0.5583010092342144,
-    "all": 2.387296300987503
+    "1d": -0.00023261465819535143,
+    "1m": 0.0023905343763523934,
+    "3m": 0.01656284450026102,
+    "ytd": -0.006510129715551427,
+    "1y": -0.001371717067243483,
+    "3y": 0.1142728712814336,
+    "5y": 0.15906960184209828,
+    "10y": 0.5570269473122853,
+    "all": 2.3877315863147626
   },
   "changesvalue": {
-    "1d": 0.680000000000291,
-    "1m": 3.2061138249582655,
-    "3m": 46.579855804339786,
-    "ytd": -19.845375012792374,
-    "1y": -3.2941185219501676,
-    "3y": 342.44576740085176,
-    "5y": 468.48738124436295,
-    "10y": 1244.106802957339,
-    "all": 2447.336802957339
+    "1d": -0.6700000000000728,
+    "1m": 6.887177348959085,
+    "3m": 47.333131384400986,
+    "ytd": -19.463725418367176,
+    "1y": -4.109691767802815,
+    "3y": 328.51736400342907,
+    "5y": 466.0437101729981,
+    "10y": 1242.4430357105794,
+    "all": 2447.783035710579
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -263,9 +263,9 @@
     "all": -0.0844505805249676
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2007-04-30",
-    "value": 2879.26
+    "value": 2879.63
   },
   "trade": null
 }

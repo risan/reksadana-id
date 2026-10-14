@@ -61,19 +61,19 @@
   "asset": [
     {
       "name": "Efek Syariah Bersifat Ekuitas",
-      "percentage": 89.61
+      "percentage": 89.49
     },
     {
       "name": "Pasar Uang Syariah",
-      "percentage": 10.39
+      "percentage": 10.51
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "TD PT Bank CIMB Niaga, Tbk. - Unit Syariah",
+      "name": "PT Bank CIMB Niaga, Tbk. - Unit Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,39 +83,9 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4623,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BRMS",
-      "name": "Bumi Resources Minerals Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4633,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "INDF",
-      "name": "Indofood Sukses Makmur Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4919,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "ADRO",
-      "name": "Alamtri Resources Indonesia Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 5007,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -123,29 +93,29 @@
       "symbol": "TINS",
       "name": "Timah Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4493,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "TAPG",
-      "name": "Triputra Agro Persada Tbk",
+      "symbol": "INDF",
+      "name": "Indofood Sukses Makmur Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 4961,
+      "company_id": 4919,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "ANTM",
-      "name": "Aneka Tambang Tbk.",
+      "symbol": "BRMS",
+      "name": "Bumi Resources Minerals Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 4396,
+      "company_id": 4633,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -153,19 +123,49 @@
       "symbol": "UNTR",
       "name": "United Tractors Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4571,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "CMRY",
-      "name": "Cisarua Mountain Dairy Tbk.",
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 4898,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TAPG",
+      "name": "Triputra Agro Persada Tbk",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4961,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ADRO",
+      "name": "Alamtri Resources Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 5007,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "INKP",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4514,
       "product_type": "Saham",
       "serie_id": null
     }
@@ -208,40 +208,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.1062681667974491,
-    "3y": -0.03149810632422656,
-    "5y": -0.020866166975976652,
-    "10y": -0.020468302613267375,
-    "all": 0.06845115769015497
+    "1y": -0.12928945645055667,
+    "3y": -0.03433597032373992,
+    "5y": -0.023605174274182517,
+    "10y": -0.021306768348119176,
+    "all": 0.06761120401929244
   },
   "cagr_adjusted": {
-    "1y": -0.1062681667974491,
-    "3y": -0.03149810632422656,
-    "5y": -0.020866166975976652,
-    "10y": -0.020468302613267375,
-    "all": 0.06848396492152942
+    "1y": -0.12928945645055667,
+    "3y": -0.03433597032373992,
+    "5y": -0.023605174274182517,
+    "10y": -0.021306768348119176,
+    "all": 0.067621994588837
   },
   "simplereturn": {
-    "1d": 0.007264970572665286,
-    "1m": -0.0747837578087458,
-    "3m": 0.0694865546690826,
-    "ytd": -0.13281162031302773,
-    "1y": -0.1062681667974491,
-    "3y": -0.09154917710498223,
-    "5y": -0.10006677238961692,
-    "10y": -0.18682327032483026,
-    "all": 2.2349211429028615
+    "1d": 0.00001566941299246949,
+    "1m": -0.06832972750444533,
+    "3m": 0.03468200595326887,
+    "ytd": -0.1445139704344749,
+    "1y": -0.12928945645055667,
+    "3y": -0.09951151509336531,
+    "5y": -0.11258381282659535,
+    "10y": -0.1937572008974593,
+    "all": 2.1912672140492644
   },
   "changesvalue": {
-    "1d": 23.329999999999927,
-    "1m": -261.4499999999998,
-    "3m": 210.1600000000003,
-    "ytd": -495.3899999999999,
-    "1y": -384.6099999999997,
-    "3y": -325.9699999999998,
-    "5y": -359.6700000000001,
-    "10y": -743.1399999999999,
-    "all": 2234.7200000000003
+    "1d": 0.0500000000001819,
+    "1m": -234.0300000000002,
+    "3m": 106.96000000000004,
+    "ytd": -539.04,
+    "1y": -473.82000000000016,
+    "3y": -352.6300000000001,
+    "5y": -404.8299999999999,
+    "10y": -766.8600000000001,
+    "all": 2191.07
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -263,9 +263,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2009-01-22",
-    "value": 3234.63
+    "value": 3190.98
   },
   "trade": null
 }

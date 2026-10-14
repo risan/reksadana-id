@@ -74,7 +74,7 @@
       "symbol": "FR0104",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 8733,
       "product_type": "FR",
@@ -84,7 +84,7 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan I Bumi Tahap V Tahun 2026 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -94,7 +94,7 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan I Petrindo Jaya Kreasi Tahap II Tahun 2025 Seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -104,7 +104,7 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,19 +112,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Wahana Inti Selaras Tahap III Tahun 2026 Seri A",
+      "name": "Obligasi Berwawasan Lingkungan Berkelanjutan 1 Oki Pulp & Paper Mills Tahap I Tahun 2023 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Obligasi Berwawasan Lingkungan Berkelanjutan I Oki Pulp & Paper Mills Tahap I Tahun 2023 Seri B",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,7 +124,7 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan II Lontar Papyrus Pulp & Paper Industry Tahap II Tahun 2023 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,7 +134,17 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan II Oki Pulp & Paper Mills Tahap IV Tahun 2026 Seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan I Wahana Inti Selaras Tahap III Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -154,7 +154,7 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan II Provident Investasi Bersama Tahap V Tahun 2025 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,9 +162,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap II Tahun 2025 Seri B",
+      "name": "Obligasi Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap 11 Tahun 2025 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +197,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 6955494906930.32,
+    "value": 6955490000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -205,44 +205,44 @@
     "percentage": 0.0224
   },
   "avg_yield": {
-    "date": "2026-08-31",
+    "date": "2026-09-30",
     "percentage": 0.07
   },
   "cagr": {
-    "1y": -0.011350108546746118,
-    "3y": 0.012885612756297071,
-    "5y": 0.017222162802183805,
+    "1y": -0.010787490396774957,
+    "3y": 0.013121930238868762,
+    "5y": 0.017237200148145115,
     "10y": null,
-    "all": 0.022747149694950508
+    "all": 0.022885444964973578
   },
   "cagr_adjusted": {
-    "1y": 0.028980093243289096,
-    "3y": 0.05434995804424658,
-    "5y": 0.05889583190660619,
+    "1y": 0.029565662393118863,
+    "3y": 0.054595949619896,
+    "5y": 0.058911485304205646,
     "10y": null,
-    "all": 0.06390016565816015
+    "all": 0.06396416760046852
   },
   "simplereturn": {
-    "1d": 0.0005815647039026928,
-    "1m": 0.0046300659584270765,
-    "3m": 0.022715281564785972,
-    "ytd": 0.019751471354924943,
-    "1y": 0.028980093243289096,
-    "3y": 0.17207217326704694,
-    "5y": 0.33127014930709353,
+    "1d": 0.0002163240844423875,
+    "1m": 0.005934328000620548,
+    "3m": 0.023477635439218325,
+    "ytd": 0.020898113711355082,
+    "1y": 0.029565662393118863,
+    "3y": 0.17289273711857622,
+    "5y": 0.3313685514182989,
     "10y": null,
-    "all": 0.580148783150642
+    "all": 0.581925554820131
   },
   "changesvalue": {
-    "1d": 0.6863999999998214,
-    "1m": 5.497106000000031,
-    "3m": 26.49210599999992,
-    "ytd": 23.568919204723898,
-    "1y": 34.6169648118921,
-    "3y": 195.55150734542212,
-    "5y": 359.198873054876,
+    "1d": 0.2556999999999334,
+    "1m": 7.04438499999992,
+    "3m": 27.39158499999985,
+    "ytd": 24.937177830614928,
+    "1y": 35.33603411431113,
+    "3y": 196.56735455479202,
+    "5y": 359.6830000313382,
     "10y": null,
-    "all": 580.148783150642
+    "all": 581.9255548201311
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -260,9 +260,9 @@
     "all": -0.0353275337501689
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2019-05-23",
-    "value": 1180.9506
+    "value": 1182.2785
   },
   "trade": null
 }

@@ -59,11 +59,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 0.72
+      "percentage": 0.08
     },
     {
       "name": "Efek Hutang",
-      "percentage": 99.28
+      "percentage": 99.92
     }
   ],
   "investment_manager": {
@@ -140,9 +140,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2025-05-07",
-    "value": 1062.4054
+    "value": 1063.3654
   },
   "trade": null
 }

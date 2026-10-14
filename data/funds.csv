@@ -526,7 +526,7 @@ BRK2414,EMCO XV,,"Emco Asset Management, PT",Terproteksi,IDR,,2016-11-08,,2414,,
 BRK2415,Pacific Equity Growth Fund IV,,"Pacific Capital Investment, PT",Saham,IDR,,2016-11-07,,2415,,,REKSA DANA PACIFIC EQUITY GROWTH FUND IV
 BRK2416,Reksa Dana Premier Likuid II,,"Indo Premier Investment Management, PT",Pasar Uang,IDR,,2016-11-08,,2416,,,
 BRK2418,Principal Sukuk Syariah,,"Principal Asset Management, PT",Obligasi,IDR,true,2016-11-03,,2418,,,
-BRK2419,Pinnacle Indonesia Bond Fund,,"Pinnacle Persada Investama, PT",Obligasi,,,2016-11-15,,2419,14617,,REKSA DANA PINNACLE INDONESIA BOND FUND
+BRK2419,Pinnacle Indonesia Bond Fund,,"Pinnacle Persada Investama, PT",Obligasi,IDR,,2016-11-15,,2419,14617,,REKSA DANA PINNACLE INDONESIA BOND FUND
 BRK2420,BNI-AM Proteksi Dananjaya,,"BNI Asset Management, PT",Terproteksi,IDR,,2016-11-10,,2420,,,
 BRK2421,BNI-AM PROTEKSI Lokatara,,"BNI Asset Management, PT",Terproteksi,IDR,,2016-11-09,,2421,,,
 BRK2422,SAM Dana Obligasi Terproteksi 4,,"Samuel Aset Manajemen, PT",Terproteksi,IDR,,2016-11-15,,2422,,,REKSA DANA TERPROTEKSI SAM DANA OBLIGASI TERPROTEKSI 4
@@ -641,7 +641,7 @@ BRK2582,Mandiri Seri 92,,"Mandiri Manajemen Investasi, PT",Terproteksi,IDR,,2017
 BRK2583,Mandiri Seri 97,,"Mandiri Manajemen Investasi, PT",Terproteksi,IDR,,2017-04-05,,2583,,,
 BRK2584,MNC Dana Terproteksi XIV,,"MNC Asset Management, PT",Terproteksi,IDR,,2017-02-13,,2584,,,
 BRK2585,SAM Dana Obligasi Terproteksi V,,"Samuel Aset Manajemen, PT",Terproteksi,IDR,,2017-04-10,,2585,,,REKSA DANA TERPROTEKSI SAM DANA OBLIGASI TERPROTEKSI V
-BRK2586,Cipta Proteksi IV,,"Ciptadana Asset Management, PT",Terproteksi,IDR,,2017-03-14,,2586,14717,,
+BRK2586,Cipta Proteksi IV,,"Ciptadana Asset Management, PT",Terproteksi,,,2017-03-14,,2586,14717,,
 BRK2587,BNIAM Proteksi Rayshiva,,"BNI Asset Management, PT",Terproteksi,IDR,,2017-04-07,,2587,,,
 BRK2588,BNIAM Poteksi Wasesa,,"BNI Asset Management, PT",Terproteksi,IDR,,2017-03-30,,2588,,,
 BRK2589,Danakita Proteksi Pendapatan Berkala,,"Danakita Investama, PT",Terproteksi,IDR,,2017-01-26,,2589,,,REKSA DANA TERPROTEKSI DANAKITA PROTEKSI PENDAPATAN BERKALA
@@ -2349,7 +2349,7 @@ RD1640,Simas Terproteksi 5,,"Sinarmas Asset Management, PT",Terproteksi,IDR,fals
 RD1643,STAR Balanced,,"Surya Timur Alam Raya Asset Management, PT",Campuran,IDR,false,2005-10-03,RD1643,315,500,6a8d40fba6ff74278d1a7cdb,REKSA DANA STAR BALANCED
 RD1653,Reksa Dana Sucorinvest Equity Fund Kelas A,,"Sucorinvest Asset Management, PT",Saham,IDR,false,2012-05-08,RD1653,136,17063,622ac5e0bf54c80a4005d957,REKSA DANA SUCORINVEST EQUITY FUND KELAS A
 RD1655,Sucorinvest Flexi Fund,,"Sucorinvest Asset Management, PT",Campuran,IDR,false,2006-12-06,RD1655,316,223,6242d9e3bf54c80a4005d9b3,Reksa Dana Sucorinvest Flexi Fund
-RD1656,Sucorinvest Maxi Fund,,"Sucorinvest Asset Management, PT",Saham,IDR,false,2014-10-01,RD1656,1727,15873,622ad4cbbf54c80a4005d95f,Reksa Dana Sucorinvest Maxi Fund
+RD1656,Sucorinvest Maxi Fund,Sucorinvest Maxi Fund Kelas A,"Sucorinvest Asset Management, PT",Saham,IDR,false,2014-10-01,RD1656,1727,15873,622ad4cbbf54c80a4005d95f,Reksa Dana Sucorinvest Maxi Fund
 RD1657,Sucorinvest Money Market Fund,,"Sucorinvest Asset Management, PT",Pasar Uang,IDR,false,2014-10-20,RD1657,1742,1241,622b24d0bf54c80a4005d98d,Reksa Dana Sucorinvest Money Market Fund
 RD1658,Sucorinvest Premium Fund Kelas A,,"Sucorinvest Asset Management, PT",Campuran,IDR,false,2014-01-28,RD1658,520,1107,63ad565c79f48d91c48f66f8,REKSA DANA SUCORINVEST PREMIUM FUND KELAS A
 RD1659,Sucorinvest Proteksi 10,,"Sucorinvest Asset Management, PT",Terproteksi,IDR,false,2014-03-17,RD1659,1572,,,
@@ -2358,7 +2358,7 @@ RD1661,Sucorinvest Proteksi 14,,"Sucorinvest Asset Management, PT",Terproteksi,I
 RD1665,Sucorinvest Proteksi 8,,"Sucorinvest Asset Management, PT",Terproteksi,IDR,false,2013-11-11,RD1665,1368,,,REKSA DANA TERPROTEKSI SUCORINVEST PROTEKSI 8
 RD1666,Sucorinvest Proteksi USD 1,,"Sucorinvest Asset Management, PT",Terproteksi,USD,false,2014-04-24,RD1666,1379,,,
 RD1667,Sucorinvest Saham Dinamis,,"Sucorinvest Asset Management, PT",Saham,IDR,false,2015-10-19,RD1667,2047,1489,,REKSA DANA SUCORINVEST SAHAM DINAMIS
-RD1668,Sucorinvest Sharia Equity Fund,,"Sucorinvest Asset Management, PT",Saham,IDR,true,2013-11-08,RD1668,482,1062,6242e43bbf54c80a4005d9bc,Reksa Dana Sucorinvest Sharia Equity Fund
+RD1668,Sucorinvest Sharia Equity Fund,Sucorinvest Sharia Equity Fund Kelas A,"Sucorinvest Asset Management, PT",Saham,IDR,true,2013-11-08,RD1668,482,1062,6242e43bbf54c80a4005d9bc,Reksa Dana Sucorinvest Sharia Equity Fund
 RD1669,Sucorinvest Sharia Money Market Fund,,"Sucorinvest Asset Management, PT",Pasar Uang,IDR,true,2018-10-01,RD1669,3397,15736,622b1c2fbf54c80a4005d986,
 RD1671,Reksa Dana Syailendra Balanced Opportunity Fund Kelas A,Syailendra Balanced Opportunity Fund,"Syailendra Capital, PT",Campuran,IDR,false,2008-04-22,RD1671,318,501,61260b68e93d4a5743f947a5,REKSA DANA SYAILENDRA BALANCED OPPORTUNITY FUND KELAS A
 RD1673,Syailendra Capital Protected Fund 10,,"Syailendra Capital, PT",Terproteksi,IDR,false,2015-05-06,RD1673,1975,,,
@@ -3047,7 +3047,7 @@ RD3557,Pinnacle Dana Obligasi Prima,,"Pinnacle Persada Investama, PT",Obligasi,I
 RD3558,Insight Terproteksi 48,,"Insight Investments Management, PT",Terproteksi,IDR,false,2020-02-24,RD3558,4098,,,REKSA DANA TERPROTEKSI INSIGHT TERPROTEKSI 48
 RD3559,Lautandhana Pasar Uang Optima,,"Lautandhana Investment Management, PT",Pasar Uang,IDR,false,2020-02-24,RD3559,4105,,,REKSA DANA LAUTANDHANA PASAR UANG OPTIMA
 RD3560,Cipta Proteksi Xviii,,"Ciptadana Asset Management, PT",Terproteksi,IDR,false,2020-02-26,RD3560,4101,,,REKSA DANA TERPROTEKSI CIPTA PROTEKSI XVIII
-RD3561,Sucorinvest Stable Fund,,"Sucorinvest Asset Management, PT",Obligasi,IDR,false,2020-02-26,RD3561,4100,16217,622b0bb8bf54c80a4005d977,REKSA DANA PENDAPATAN TETAP SUCORINVEST STABLE FUND
+RD3561,Sucorinvest Stable Fund,Sucorinvest Stable Fund Kelas A,"Sucorinvest Asset Management, PT",Obligasi,IDR,false,2020-02-26,RD3561,4100,16217,622b0bb8bf54c80a4005d977,REKSA DANA PENDAPATAN TETAP SUCORINVEST STABLE FUND
 RD3562,Bahana Terproteksi Alhami Syariah,,PT Bahana TCW Investment Management,Terproteksi,IDR,true,2020-02-27,RD3562,,,,
 RD3563,Danareksa Proteksi Syariah Iii,,"BRI Manajemen Investasi, PT",Terproteksi,IDR,true,2020-02-27,RD3563,4104,,,
 RD3564,Mandiri Syariah Seri 217,,PT Mandiri Manajemen Investasi,Terproteksi,IDR,true,2020-02-27,RD3564,,,,
@@ -4513,3 +4513,6 @@ RD11068,Recapital Tactical Liquidity,,"Recapital Asset Management, PT",Pasar Uan
 RD11071,Syailendra Sharia Fixed Income Fund Kelas D,,"Syailendra Capital, PT",Obligasi,IDR,true,2026-09-30,RD11071,5299,17107,,
 RD11087,Recapital Alpha Rotation,,"Recapital Asset Management, PT",Campuran,IDR,false,2026-10-01,RD11087,5300,,,REKSA DANA CAMPURAN RECAPITAL ALPHA ROTATION
 RD11089,Panin Cahaya Amanah 1,,"Panin Asset Management, PT",Terproteksi,IDR,true,2026-10-02,RD11089,5301,,,
+RD11110,Sequis Equity Indonesia Kelas B,,"Sequis Aset Manajemen, PT",Saham,IDR,false,2026-10-12,RD11110,,,,
+RD11111,Sequis Equity Indonesia Kelas C,,"Sequis Aset Manajemen, PT",Saham,IDR,false,2026-10-12,RD11111,,,,
+RD11112,Sucorinvest Premium Sovereign Balanced Fund Kelas B,,"Sucorinvest Asset Management, PT",Campuran,IDR,false,2026-10-12,RD11112,,,,REKSA DANA SUCORINVEST PREMIUM SOVEREIGN BALANCED FUND KELAS B

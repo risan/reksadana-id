@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Money Market Sharia",
-      "percentage": 15.18
+      "percentage": 13.36
     },
     {
       "name": "Bonds Sharia",
-      "percentage": 84.82
+      "percentage": 86.64
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2025-07-31",
-    "value": 1056.1582
+    "value": 1057.3169
   },
   "trade": null
 }

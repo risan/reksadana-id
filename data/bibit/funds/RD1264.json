@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Deposito",
-      "percentage": 0.32
+      "percentage": 2.2
     },
     {
       "name": "fixed income",
-      "percentage": 97.77
+      "percentage": 95.97
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2013-07-03",
-    "value": 1618.1104
+    "value": 1617.2614
   },
   "trade": null
 }

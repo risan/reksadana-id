@@ -19,7 +19,6 @@
   },
   "released_date": "2008-04-11",
   "is_top_product": 1,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,11 +61,11 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 48.88
+      "percentage": 51.12
     },
     {
       "name": "Lainnya",
-      "percentage": 51.12
+      "percentage": 48.88
     }
   ],
   "holding": [
@@ -74,7 +73,7 @@
       "symbol": "",
       "name": "Bank Seabank Indonesia",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -84,7 +83,7 @@
       "symbol": "",
       "name": "Bank Sulutgo",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -94,7 +93,7 @@
       "symbol": "",
       "name": "BPD Lampung",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,19 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri A",
+      "name": "Obligasi Berkelanjutan I Merdeka Battery Materials. Tahap IV Tahun 2026 Seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Bank Sahabat Sampoerna",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -124,7 +113,17 @@
       "symbol": "",
       "name": "Bank Nagari",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan IV Pegadaian Tahap II Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,7 +133,7 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan V Merdeka Copper Gold Tahap III Tahun 2026",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,7 +143,7 @@
       "symbol": "",
       "name": "Bank Sulteng",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -154,7 +153,7 @@
       "symbol": "",
       "name": "Bank Riau Kepri Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,9 +161,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Jtrust Indonesia",
+      "name": "Obligasi Berkelanjutan I Bumi Tahap V Tahun 2026 Seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +196,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 8357371511996,
+    "value": 9475760000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -205,44 +204,44 @@
     "percentage": 0.0072
   },
   "avg_yield": {
-    "date": "2026-08-31",
+    "date": "2026-09-30",
     "percentage": 0.055
   },
   "cagr": {
-    "1y": 0.04383466361514743,
-    "3y": 0.049461810688935515,
-    "5y": 0.04505843708811619,
-    "10y": 0.049007201131336275,
-    "all": 0.039885236846717076
+    "1y": 0.04389705540879807,
+    "3y": 0.0495053720966403,
+    "5y": 0.04508462975227201,
+    "10y": 0.048959124023203016,
+    "all": 0.03990662400009515
   },
   "cagr_adjusted": {
-    "1y": 0.04383466361514743,
-    "3y": 0.049461810688935515,
-    "5y": 0.04505843708811619,
-    "10y": 0.049007201131336275,
-    "all": 0.03990330733122671
+    "1y": 0.04389705540879807,
+    "3y": 0.0495053720966403,
+    "5y": 0.04508462975227201,
+    "10y": 0.048959124023203016,
+    "all": 0.03991264718325738
   },
   "simplereturn": {
-    "1d": 0.00014554011921763532,
-    "1m": 0.0043276278689048375,
-    "3m": 0.012412528424902147,
-    "ytd": 0.032819196060785094,
-    "1y": 0.04383466361514743,
-    "3y": 0.15584585108813287,
-    "5y": 0.2465304131976338,
-    "10y": 0.6135584242436574,
-    "all": 1.0622745
+    "1d": 0.00014826511159071742,
+    "1m": 0.004643410115247493,
+    "3m": 0.012558808460616078,
+    "ytd": 0.03343394718298742,
+    "1y": 0.04389705540879807,
+    "3y": 0.1559897887574262,
+    "5y": 0.24668663216104014,
+    "10y": 0.6128190658711088,
+    "all": 1.0635020000000002
   },
   "changesvalue": {
-    "1d": 0.3000999999999294,
-    "1m": 8.88630000000012,
-    "3m": 25.284200000000055,
-    "ytd": 65.53150000000005,
-    "1y": 86.60290000000009,
-    "3y": 278.0621000000001,
-    "5y": 407.8627999999999,
-    "10y": 784.1835000000001,
-    "all": 1062.2745
+    "1d": 0.30589999999983775,
+    "1m": 9.537400000000162,
+    "3m": 25.5936999999999,
+    "ytd": 66.75900000000001,
+    "1y": 86.77260000000001,
+    "3y": 278.44989999999984,
+    "5y": 408.3129999999999,
+    "10y": 784.0639999999999,
+    "all": 1063.502
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -264,12 +263,12 @@
     "quota_limit": 3
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2008-04-14",
-    "value": 2062.2745
+    "value": 2063.502
   },
   "trade": {
-    "total_trades": 2152,
+    "total_trades": 2525,
     "period": "1d"
   }
 }

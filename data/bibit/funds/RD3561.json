@@ -2,7 +2,7 @@
   "id": 3561,
   "custodian_bank_id": 2,
   "symbol": "RD3561",
-  "name": "Sucorinvest Stable Fund",
+  "name": "Sucorinvest Stable Fund Kelas A",
   "type": "Obligasi",
   "profile": "Reksa Dana Sucorinvest Stable Fund bertujuan untuk memberikan suatu tingkat pengembalian yang menarik dengan memelihara\nstabilitas modal yang optimal.",
   "instrument_group": 0,
@@ -60,19 +60,19 @@
   "asset": [
     {
       "name": "Obligasi &/ Sukuk",
-      "percentage": 82.11
+      "percentage": 83.54
     },
     {
       "name": "Efek Ekuitas &/ Inst. Psr. Uang Dalam Negeri &/ Deposito",
-      "percentage": 17.89
+      "percentage": 16.46
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap III Tahun 2025 Seri B",
+      "name": "Obligasi Berkelanjutan Merdeka Battery Materials Tahap III Tahun 2025 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -80,9 +80,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Oki Pulp Paper Mills Tahap VI Tahun 2024 Seri B",
+      "name": "Obligasi Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap II Tahun 2025 Seri C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -90,39 +90,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Petrosea Tahap I Tahun 2024 Seri D",
+      "name": "Obligasi Berkelanjutan I Tbs Energi Utama Tahap III Tahun 2026",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Obligasi Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap III Tahun 2025",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Obligasi Berkelanjutan I Tbs Energi Utama Tahap II Tahun 2026 Seri B",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Obligasi Berkelanjutan II Provident Investasi Bersama Tahap III Tahun 2024 Seri B",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -132,7 +102,7 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan III Buma Tahun 2025 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -140,9 +110,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan III Lontar Papyrus Pulp Paper Industry Tahap I Tahun 2024 Seri B",
+      "name": "Obligasi Berkelanjutan III Sinar Mas Multiartha Tahap I Tahun 2024",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -150,9 +120,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan IV Bumi Serpong Damai Tahap II Tahun 2025 Seri C",
+      "name": "Obligasi Berkelanjutan IV Bumi Serpong Damai Tahap II Tahun 2025 Seri D",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,7 +132,37 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan V Indah Kiat Pulp Paper Tahap II Tahun 2024 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap III Tahun 2024 Seri C",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan I Lontar Papyrus Pulp Paper Industry Tahap I Tahun 2024",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp Paper Mills Tahap II Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -174,7 +174,7 @@
       "id": 31,
       "bank": "BCA",
       "account": "4992175391",
-      "name": "Reksa Dana Pendapatan Tetap Sucorinvest Stable Fund"
+      "name": "Reksa Dana Pendapatan Tetap Sucorinvest Stable Fund Kelas A"
     }
   ],
   "exitload": [],
@@ -191,7 +191,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 2037402560967,
+    "value": 2040000000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -199,44 +199,44 @@
     "percentage": 0.0131
   },
   "avg_yield": {
-    "date": "2026-08-31",
-    "percentage": 0.071
+    "date": "2026-09-30",
+    "percentage": 0.067
   },
   "cagr": {
-    "1y": 0.04907064258834781,
-    "3y": 0.048582719503891925,
-    "5y": 0.049740677611048056,
+    "1y": 0.0485690433889161,
+    "3y": 0.049330469469414995,
+    "5y": 0.049621862040975406,
     "10y": null,
-    "all": 0.05973674234666193
+    "all": 0.059732705469403014
   },
   "cagr_adjusted": {
-    "1y": 0.04907064258834781,
-    "3y": 0.048582719503891925,
-    "5y": 0.049740677611048056,
+    "1y": 0.0485690433889161,
+    "3y": 0.049330469469414995,
+    "5y": 0.049621862040975406,
     "10y": null,
-    "all": 0.05981306260974817
+    "all": 0.05975810115032343
   },
   "simplereturn": {
-    "1d": 0.00020424141335073642,
-    "1m": 0.0018001922932677772,
-    "3m": 0.010315304473403675,
-    "ytd": 0.031539849602943315,
-    "1y": 0.04907064258834781,
-    "3y": 0.15294366926686864,
-    "5y": 0.27470630086591363,
+    "1d": 0.00021098913065675795,
+    "1m": 0.001847471146045665,
+    "3m": 0.009888743050735505,
+    "ytd": 0.03184176713030884,
+    "1y": 0.0485690433889161,
+    "3y": 0.15541193952402277,
+    "5y": 0.2739850719097032,
     "10y": null,
-    "all": 0.4691500000000002
+    "all": 0.4695799999999999
   },
   "changesvalue": {
-    "1d": 0.3000000000001819,
-    "1m": 2.6400000000001,
-    "3m": 15,
-    "ytd": 44.92000000000007,
-    "1y": 68.72000000000003,
-    "3y": 194.8900000000001,
-    "5y": 316.6100000000001,
+    "1d": 0.30999999999994543,
+    "1m": 2.7100000000000364,
+    "3m": 14.389999999999873,
+    "ytd": 45.34999999999991,
+    "1y": 68.06999999999994,
+    "3y": 197.66999999999985,
+    "5y": 316.04999999999995,
     "10y": null,
-    "all": 469.1500000000001
+    "all": 469.5799999999999
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -258,9 +258,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2020-02-26",
-    "value": 1469.15
+    "value": 1469.58
   },
   "trade": null
 }

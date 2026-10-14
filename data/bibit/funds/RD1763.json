@@ -19,7 +19,6 @@
   },
   "released_date": "2008-05-21",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -74,7 +73,7 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan I Petrindo Jaya Kreasi Tahap II Tahun 2025 Seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -84,7 +83,7 @@
       "symbol": "FR0104",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 8733,
       "product_type": "FR",
@@ -94,37 +93,17 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan IV Lontar Papyrus Pulp & Paper Industry Tahap II Tahun 2026 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Obligasi Berkelanjutan I Bumi Tahap III Tahun 2025",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "FR0101",
-      "name": "Obligasi FR",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 6261,
-      "product_type": "FR",
       "serie_id": null
     },
     {
       "symbol": "",
       "name": "Obligasi Berkelanjutan III Provident Investasi Bersama Tahap II Tahun 2026 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,7 +113,17 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan III Provident Investasi Bersama Tahap II Tahun 2026 Seri C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan  I Bumi Tahap III Tahun 2025",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,7 +133,7 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan I Bumi Tahap IV Tahun 2026",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -152,9 +141,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan II Oki Pulp & Paper Mills Tahap I Tahun 2025 Seri B",
+      "name": "Obligasi Berkelanjutan II Oki Pulp & Paper Mills Tahap 1 Tahun 2025 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -164,7 +153,17 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan III Lontar Papyrus Pulp & Paper Industry Tahap III Tahun 2025 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0087",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +196,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 1517431154849.12,
+    "value": 2543070000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -205,44 +204,44 @@
     "percentage": 0.0192
   },
   "avg_yield": {
-    "date": "2026-08-31",
+    "date": "2026-09-30",
     "percentage": 0.072
   },
   "cagr": {
-    "1y": 0.022955494508685614,
-    "3y": 0.05412157036462606,
-    "5y": 0.050601344441064455,
-    "10y": 0.0572842574530561,
-    "all": 0.07077423121502902
+    "1y": 0.023484751744233368,
+    "3y": 0.05435404064595306,
+    "5y": 0.050390440461856256,
+    "10y": 0.05736946892513095,
+    "all": 0.07081663503773994
   },
   "cagr_adjusted": {
-    "1y": 0.022955494508685614,
-    "3y": 0.05412157036462606,
-    "5y": 0.050601344441064455,
-    "10y": 0.0572842574530561,
-    "all": 0.07080694916284602
+    "1y": 0.023484751744233368,
+    "3y": 0.05435404064595306,
+    "5y": 0.050390440461856256,
+    "10y": 0.05736946892513095,
+    "all": 0.07082754115950052
   },
   "simplereturn": {
-    "1d": 0.000678923267467324,
-    "1m": 0.005506111241144307,
-    "3m": 0.02643395154358319,
-    "ytd": 0.013647978269126781,
-    "1y": 0.022955494508685614,
-    "3y": 0.17131067412367917,
-    "5y": 0.27994044067794155,
-    "10y": 0.7454911765900918,
-    "all": 2.519840048600925
+    "1d": 0.0001956963813187773,
+    "1m": 0.006814762368351213,
+    "3m": 0.0271633705181602,
+    "ytd": 0.014767325422129218,
+    "1y": 0.023484751744233368,
+    "3y": 0.1720857886392868,
+    "5y": 0.2786562419915386,
+    "10y": 0.7468984596942174,
+    "all": 2.523726923553463
   },
   "changesvalue": {
-    "1d": 2.3899999999998727,
-    "1m": 19.289999999999964,
-    "3m": 90.72000000000025,
-    "ytd": 47.43000000000029,
-    "1y": 79.05000000000018,
-    "3y": 515.21,
-    "5y": 770.4560000000001,
-    "10y": 1504.516,
-    "all": 2521.866
+    "1d": 0.6900000000000546,
+    "1m": 23.86999999999989,
+    "3m": 93.25999999999976,
+    "ytd": 51.320000000000164,
+    "1y": 80.92000000000007,
+    "3y": 517.77,
+    "5y": 768.5396000000001,
+    "10y": 1507.8049999999998,
+    "all": 2525.756
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -264,9 +263,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2008-05-22",
-    "value": 3522.67
+    "value": 3526.56
   },
   "trade": null
 }

@@ -59,20 +59,16 @@
   },
   "asset": [
     {
-      "name": "Obligasi Pemerintah",
-      "percentage": 21
+      "name": "Obligasi",
+      "percentage": 77.81
     },
     {
-      "name": "Obligasi Korporasi",
-      "percentage": 54
+      "name": "Deposito",
+      "percentage": 3.22
     },
     {
       "name": "Saham",
-      "percentage": 18
-    },
-    {
-      "name": "Kas & Deposito",
-      "percentage": 7
+      "percentage": 16.88
     }
   ],
   "holding": [
@@ -207,9 +203,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2016-05-13",
-    "value": 1499.022
+    "value": 1497.9221
   },
   "trade": null
 }

@@ -19,10 +19,11 @@
   },
   "released_date": "2013-11-15",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17830,
+    "exchange_rate": 17845,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Obligasi Pemerintah",
-      "percentage": 83.77
+      "percentage": 69.04
     },
     {
       "name": "Pasar Uang",
-      "percentage": 16.23
+      "percentage": 30.96
     }
   ],
   "holding": [
@@ -73,7 +74,7 @@
       "symbol": "",
       "name": "INDON 5.03 05/29/31",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,19 +82,9 @@
     },
     {
       "symbol": "",
-      "name": "INDON 3.55 03/31/32",
+      "name": "TD PT Bank CIMB Niaga, Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "INDON 4.35 02/21/31",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,17 +94,7 @@
       "symbol": "",
       "name": "TD Hongkong & Shanghai Banking Corp Ltd",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "INDOIS 5 05/25/30",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +104,7 @@
       "symbol": "",
       "name": "INDOIS 5.4 11/15/28",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +114,7 @@
       "symbol": "",
       "name": "INDON 4.55 01/11/28",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -141,9 +122,19 @@
     },
     {
       "symbol": "",
-      "name": "INDOIS 4.55 07/23/30",
+      "name": "INDOIS 5 05/25/30",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDON 3.55 03/31/32",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,7 +144,7 @@
       "symbol": "",
       "name": "INDON 3 1/2 01/11/28",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -163,7 +154,17 @@
       "symbol": "",
       "name": "INDON 4.3 04/16/31",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOIS 4.45 02/20/29",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -198,7 +199,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 87253591.97862,
+    "value": 123906505.1,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -210,40 +211,40 @@
     "percentage": 0.042
   },
   "cagr": {
-    "1y": -0.013082911951199927,
-    "3y": 0.030231437505514824,
-    "5y": 0.0005702651365813161,
-    "10y": 0.00621751824464023,
-    "all": 0.016934363936464747
+    "1y": -0.011479489443686264,
+    "3y": 0.02884650282201795,
+    "5y": 0.001533749541666074,
+    "10y": 0.006766160386251663,
+    "all": 0.017042330043226528
   },
   "cagr_adjusted": {
-    "1y": -0.013082911951199927,
-    "3y": 0.030231437505514824,
-    "5y": 0.0005702651365813161,
-    "10y": 0.00621751824464023,
-    "all": 0.0169488759989449
+    "1y": -0.011391897312474919,
+    "3y": 0.02952217833094606,
+    "5y": 0.0014671185451844426,
+    "10y": 0.006822226409879395,
+    "all": 0.017099878203080898
   },
   "simplereturn": {
-    "1d": -0.00008132064731236621,
-    "1m": -0.009265973732978883,
-    "3m": -0.008467059108136388,
-    "ytd": -0.018831790616023025,
-    "1y": -0.013082911951199927,
-    "3y": 0.0934637616718541,
-    "5y": 0.0028545795612104907,
-    "10y": 0.06394393008566235,
-    "all": 0.24202020202020202
+    "1d": 0.0007308754263439798,
+    "1m": -0.00396055609440682,
+    "3m": -0.005728578344360247,
+    "ytd": -0.016677306096393396,
+    "1y": -0.011391897312474919,
+    "3y": 0.09120694235367033,
+    "5y": 0.0073571486961496735,
+    "10y": 0.07035525058629366,
+    "all": 0.2447474747474747
   },
   "changesvalue": {
-    "1d": -0.00009999999999998899,
-    "1m": -0.011500000000000066,
-    "3m": -0.010499999999999954,
-    "ytd": -0.023600000000000065,
-    "1y": -0.01629999999999998,
-    "3y": 0.10509999999999997,
-    "5y": 0.0035000000000000586,
-    "10y": 0.07390000000000008,
-    "all": 0.23960000000000004
+    "1d": 0.0008999999999999009,
+    "1m": -0.0049000000000001265,
+    "3m": -0.007100000000000106,
+    "ytd": -0.02090000000000014,
+    "1y": -0.01419999999999999,
+    "3y": 0.10299999999999998,
+    "5y": 0.008999999999999897,
+    "10y": 0.08099999999999996,
+    "all": 0.24229999999999996
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -261,9 +262,9 @@
     "all": -0.1164200824642251
   },
   "nav": {
-    "date": "2026-10-08",
+    "date": "2026-10-13",
     "first_date": "2013-11-18",
-    "value": 1.2296
+    "value": 1.2323
   },
   "trade": null
 }

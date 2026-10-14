@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Money Market",
-      "percentage": 66.45
+      "percentage": 67.08
     },
     {
       "name": "Equities",
-      "percentage": 11.07
+      "percentage": 10.48
     },
     {
       "name": "Bonds",
-      "percentage": 22.49
+      "percentage": 22.45
     }
   ],
   "holding": [
@@ -203,9 +203,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2018-01-26",
-    "value": 1242.24
+    "value": 1239.82
   },
   "trade": null
 }

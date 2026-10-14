@@ -19,7 +19,6 @@
   },
   "released_date": "2018-10-01",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,29 +61,29 @@
   "asset": [
     {
       "name": "Deposito Syariah dan Setara Kas",
-      "percentage": 36.85
+      "percentage": 37.53
     },
     {
       "name": "Sukuk (dgn. sisa jt. tempo dan/atau jk. waktu < 1 tahun)",
-      "percentage": 63.15
+      "percentage": 62.47
     }
   ],
   "holding": [
     {
-      "symbol": "",
-      "name": "SBSN Seri PBS003",
+      "symbol": "PBS003",
+      "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
       "serie_id": null
     },
     {
       "symbol": "",
-      "name": "Sukuk ljarah Berkelanjutan II Moratelindo Tahap II Tahun 2024 Seri A",
+      "name": "Sukuk Ijarah Berkelanjutan II Moratelindo Tahap II Tahun 2024 Seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -94,7 +93,7 @@
       "symbol": "",
       "name": "Sukuk Mudharabah Berkelanjutan III Sarana Multi Infrastruktur Tahap II Tahun 2025 Seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,19 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berwawasan Sosial Berkelanjutan | Pegadaian Tahap III Tahun 2025 Seri A",
+      "name": "Sukuk Mudharabah Berwawasan Sosial Berkelanjutan Pegadaian Tahap III Tahun 2025 Seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Sukuk Wakalah Bi Al-istitsmar Berkelanjutan I Cimb Niaga Auto Finance Tahap III Tahun 2025 Seri A",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -124,7 +113,17 @@
       "symbol": "",
       "name": "TD Cimb Niaga Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Aladin Syariah",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,7 +133,7 @@
       "symbol": "",
       "name": "TD PT Bank Jabar Banten Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,7 +143,7 @@
       "symbol": "",
       "name": "TD PT Bank Panin Dubai Syariah Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -154,7 +153,7 @@
       "symbol": "",
       "name": "TD PT BPD Sumatera Selatan Dan Bangka Belitung",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -164,7 +163,7 @@
       "symbol": "",
       "name": "TD PT. Bank Syariah Indonesia",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -193,7 +192,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 6360661623137,
+    "value": 6360000000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -201,44 +200,44 @@
     "percentage": 0.0174
   },
   "avg_yield": {
-    "date": "2026-08-31",
-    "percentage": 0.065
+    "date": "2026-09-30",
+    "percentage": 0.0663
   },
   "cagr": {
-    "1y": 0.04129308730835635,
-    "3y": 0.047683855527482555,
-    "5y": 0.044037415542293346,
+    "1y": 0.04103598358837868,
+    "3y": 0.04768827444700885,
+    "5y": 0.04397543969469209,
     "10y": null,
-    "all": 0.05189274282188694
+    "all": 0.051892190396912286
   },
   "cagr_adjusted": {
-    "1y": 0.04129308730835635,
-    "3y": 0.047683855527482555,
-    "5y": 0.044037415542293346,
+    "1y": 0.04103598358837868,
+    "3y": 0.04768827444700885,
+    "5y": 0.04397543969469209,
     "10y": null,
-    "all": 0.05194725068751893
+    "all": 0.05191033439484394
   },
   "simplereturn": {
-    "1d": 0.00015984654731449055,
-    "1m": 0.003917583666483981,
-    "3m": 0.010341045946000493,
-    "ytd": 0.030962940586854337,
-    "1y": 0.04129308730835635,
-    "3y": 0.14998123798656815,
-    "5y": 0.2404530022550988,
+    "1d": 0.00017312212434172913,
+    "1m": 0.0039030910609858527,
+    "3m": 0.010365377888987393,
+    "ytd": 0.031244421864916383,
+    "1y": 0.04103598358837868,
+    "3y": 0.1499957892157988,
+    "5y": 0.2400848688990158,
     "10y": null,
-    "all": 0.501391732787305
+    "all": 0.5018016540824162
   },
   "changesvalue": {
-    "1d": 0.2400000000000091,
-    "1m": 5.860000000000127,
-    "3m": 15.370000000000118,
-    "ytd": 45.100000000000136,
-    "1y": 59.549999999999955,
-    "3y": 195.85000000000014,
-    "5y": 291.09000000000015,
+    "1d": 0.2599999999999909,
+    "1m": 5.839999999999918,
+    "3m": 15.409999999999854,
+    "ytd": 45.50999999999999,
+    "1y": 59.20999999999981,
+    "3y": 195.91999999999985,
+    "5y": 290.80999999999995,
     "10y": null,
-    "all": 501.48800000000006
+    "all": 501.8979999999999
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -260,9 +259,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2018-10-02",
-    "value": 1501.68
+    "value": 1502.09
   },
   "trade": null
 }

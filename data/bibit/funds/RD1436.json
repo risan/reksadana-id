@@ -60,34 +60,24 @@
   },
   "asset": [
     {
+      "name": "Obligasi &/Sukuk Pemerintah RI & BUMN Infrastruktur",
+      "percentage": 47.01
+    },
+    {
+      "name": "Obligasi &/Sukuk Korporasi",
+      "percentage": 50.36
+    },
+    {
       "name": "Inst. Psr. Uang termasuk Setara Kas",
-      "percentage": 8.49
-    },
-    {
-      "name": "Obligasi &/ Sukuk Pemerintah RI & BUMN Infrastruktur",
-      "percentage": 51.15
-    },
-    {
-      "name": "Obligasi &/ Sukuk Korporasi",
-      "percentage": 40.36
+      "percentage": 2.63
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Angkasa Pura II Tahap II Tahun 2020 Seri C",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "Obligasi Berkelanjutan III Buma Tahun 2025 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -95,9 +85,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan III Lontar Papyrus Pulp Paper Industry Tahap I Tahun 2024 Seri A",
+      "name": "Obligasi Berkelanjutan IV Bumi Serpong Damai Tahap II Tahun 2025 Seri C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -105,9 +95,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan V Indah Kiat Pulp Paper Tahap III Tahun 2025 Seri C",
+      "name": "Obligasi Berkelanjutan IV Bumi Serpong Damai Tahap II Tahun 2025 Seri D",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -115,9 +105,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan V Indah Kiat Pulp Paper Tahap IV Tahun 2025 Seri C",
+      "name": "Obligasi Berkelanjutan V Indiah Kiat Pulp Paper Tahap IV Tahun 2025 Seri C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -125,41 +115,41 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Negara Republik Indonesia Seri FR0059",
+      "name": "Obligasi Berwawasan Lingkungan Berkelanjutan I Bank Mandiri Tahap II Tahun 2025 Seri B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "FR0090",
+      "symbol": "",
+      "name": "Obligasi Negara Republik Indonesia Seri FR0105",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0107",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 5806,
+      "company_id": 9239,
       "product_type": "FR",
       "serie_id": null
     },
     {
-      "symbol": "FR0103",
+      "symbol": "FR0111",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 8710,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
-      "symbol": "FR0108",
-      "name": "Obligasi FR",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 9548,
+      "company_id": 10996,
       "product_type": "FR",
       "serie_id": null
     },
@@ -167,10 +157,20 @@
       "symbol": "PBS003",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6020,
       "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SBSN Seri PBS021",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
       "serie_id": null
     }
   ],
@@ -200,7 +200,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 382886262767,
+    "value": 382890000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -208,44 +208,44 @@
     "percentage": 0.0149
   },
   "avg_yield": {
-    "date": "2026-08-31",
-    "percentage": 0.076
+    "date": "2026-09-30",
+    "percentage": 0.0806
   },
   "cagr": {
-    "1y": 0.02915837902869889,
-    "3y": 0.032940321420507956,
-    "5y": 0.02012515342848631,
+    "1y": 0.027612566646338044,
+    "3y": 0.03330196463248125,
+    "5y": 0.02012405718617516,
     "10y": null,
-    "all": 0.05554862121132276
+    "all": 0.055489205665467
   },
   "cagr_adjusted": {
-    "1y": 0.02915837902869889,
-    "3y": 0.032940321420507956,
-    "5y": 0.02012515342848631,
+    "1y": 0.027612566646338044,
+    "3y": 0.03330196463248125,
+    "5y": 0.02012405718617516,
     "10y": null,
-    "all": 0.05559628123481897
+    "all": 0.055505057013811365
   },
   "simplereturn": {
-    "1d": 0.0006230749335778274,
-    "1m": -0.006118707598173789,
-    "3m": 0.008818195825579744,
-    "ytd": -0.007034695163209537,
-    "1y": 0.02915837902869889,
-    "3y": 0.10211190096984302,
-    "5y": 0.10475831992108398,
+    "1d": -0.0015781291249890028,
+    "1m": -0.004457495846690307,
+    "3m": 0.008874319013094878,
+    "ytd": -0.007291350708136024,
+    "1y": 0.027612566646338044,
+    "3y": 0.10326988901566225,
+    "5y": 0.10475238398171993,
     "10y": null,
-    "all": 0.7031174963982711
+    "all": 0.7026772850968463
   },
   "changesvalue": {
-    "1d": 1.0599999999999454,
-    "1m": -10.480000000000018,
-    "3m": 14.879999999999882,
-    "ytd": -12.059999999999945,
-    "1y": 48.23000000000002,
-    "3y": 157.72000000000003,
-    "5y": 161.41999999999985,
+    "1d": -2.6900000000000546,
+    "1m": -7.620000000000118,
+    "3m": 14.9699999999998,
+    "ytd": -12.5,
+    "1y": 45.72999999999979,
+    "3y": 159.29999999999995,
+    "5y": 161.3699999999999,
     "10y": null,
-    "all": 702.78
+    "all": 702.3399999999999
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -267,9 +267,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2016-12-08",
-    "value": 1702.3
+    "value": 1701.86
   },
   "trade": null
 }

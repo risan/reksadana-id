@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Deposito",
-      "percentage": 1.63
+      "percentage": 1.61
     },
     {
       "name": "Sukuk",
-      "percentage": 96.7
+      "percentage": 95.8
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2021-01-15",
-    "value": 1267.516
+    "value": 1268.6299
   },
   "trade": null
 }

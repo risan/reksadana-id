@@ -60,16 +60,8 @@
   },
   "asset": [
     {
-      "name": "Sukuk Korp",
-      "percentage": 69
-    },
-    {
-      "name": "Sukuk Pemerintah",
-      "percentage": 17
-    },
-    {
-      "name": "Kas & Deposito Syariah",
-      "percentage": 14
+      "name": "Sukuk",
+      "percentage": 93.23
     }
   ],
   "holding": [
@@ -205,9 +197,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2018-01-26",
-    "value": 4088.3511
+    "value": 4090.6498
   },
   "trade": null
 }

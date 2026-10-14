@@ -57,7 +57,12 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Pasar Uang",
+      "percentage": 99.13
+    }
+  ],
   "investment_manager": {
     "name": "Korea Investment Management Indonesia, PT"
   },
@@ -132,9 +137,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2022-08-24",
-    "value": 782.5302
+    "value": 759.9851
   },
   "trade": null
 }

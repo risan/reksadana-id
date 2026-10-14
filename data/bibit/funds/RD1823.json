@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Kas & Setara Kas",
-      "percentage": 0.53
+      "percentage": 0.78
     },
     {
       "name": "Sukuk & Efek Syariah",
-      "percentage": 28.71
+      "percentage": 15.93
     },
     {
       "name": "Deposito Syariah",
-      "percentage": 70.76
+      "percentage": 83.3
     }
   ],
   "holding": [
@@ -199,9 +199,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2018-01-26",
-    "value": 1470.1626
+    "value": 1471.0137
   },
   "trade": null
 }

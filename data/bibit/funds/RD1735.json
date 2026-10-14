@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17830,
+    "exchange_rate": 17845,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Efek Syariah Bersifat Ekuitas Luar Negeri",
-      "percentage": 97.47
+      "percentage": 88.02
     },
     {
       "name": "Pasar Uang Syariah",
-      "percentage": 1.32
+      "percentage": 11.04
     },
     {
       "name": "Efek Syariah Bersifat Ekuitas",
-      "percentage": 1.2
+      "percentage": 0.94
     }
   ],
   "holding": [
@@ -77,7 +77,7 @@
       "symbol": "",
       "name": "Samsung Electronics Co Ltd",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -87,17 +87,7 @@
       "symbol": "",
       "name": "SK hynix Inc",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "BHP Group Ltd",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -107,7 +97,7 @@
       "symbol": "",
       "name": "MediaTek Inc",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -115,9 +105,9 @@
     },
     {
       "symbol": "",
-      "name": "Samsung Electronics Co Ltd.",
+      "name": "BHP Group Ltd",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -127,7 +117,7 @@
       "symbol": "",
       "name": "Delta Electronics Inc",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -135,19 +125,9 @@
     },
     {
       "symbol": "",
-      "name": "Advantech Co Ltd",
+      "name": "Samsung Electronics Co Ltd Preffered Stock",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Samsung Biologics Co Ltd",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -157,7 +137,7 @@
       "symbol": "",
       "name": "Elite Material Co Ltd",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -165,9 +145,29 @@
     },
     {
       "symbol": "",
-      "name": "AAC Technologies Holdings Inc",
+      "name": "Advantech Co Ltd",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Samsung Biologics Co Ltd",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "NAURA Technology Group Co Ltd",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -202,7 +202,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 355673394.78783,
+    "value": 358080760.72,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -214,40 +214,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.44523809523809543,
-    "3y": 0.21834031429830203,
-    "5y": 0.07127869834474843,
-    "10y": 0.059524269195779356,
-    "all": 0.058809471508574074
+    "1y": 0.4143384658259597,
+    "3y": 0.21062791591148278,
+    "5y": 0.07026070309789478,
+    "10y": 0.05975170825550302,
+    "all": 0.05706050737763446
   },
   "cagr_adjusted": {
-    "1y": 0.44523809523809543,
-    "3y": 0.21834031429830203,
-    "5y": 0.07127869834474843,
-    "10y": 0.059524269195779356,
-    "all": 0.058858399171742626
+    "1y": 0.4143384658259597,
+    "3y": 0.21062791591148278,
+    "5y": 0.07026070309789478,
+    "10y": 0.05975170825550302,
+    "all": 0.05707630134282482
   },
   "simplereturn": {
-    "1d": -0.017004048582995868,
-    "1m": -0.038930800037254354,
-    "3m": -0.012724837351702933,
-    "ytd": 0.288345090205381,
-    "1y": 0.44523809523809543,
-    "3y": 0.80844724851034,
-    "5y": 0.4109523483968005,
-    "10y": 0.7828265376641328,
-    "all": 0.7883882149046795
+    "1d": -0.015996122152205694,
+    "1m": -0.042317309053167995,
+    "3m": -0.039371569184175725,
+    "ytd": 0.26724514638866337,
+    "1y": 0.4143384658259597,
+    "3y": 0.7743204265361419,
+    "5y": 0.4042612064194797,
+    "10y": 0.786657278648125,
+    "all": 0.7590987868284229
   },
   "changesvalue": {
-    "1d": -0.03569999999999984,
-    "1m": -0.08360000000000012,
-    "3m": -0.026599999999999735,
-    "ytd": 0.4619,
-    "1y": 0.6358000000000001,
-    "3y": 0.9226000000000001,
-    "5y": 0.6011000000000002,
-    "10y": 0.9062000000000001,
-    "all": 0.9098000000000002
+    "1d": -0.03300000000000036,
+    "1m": -0.08970000000000011,
+    "3m": -0.08320000000000016,
+    "ytd": 0.4280999999999997,
+    "1y": 0.5946999999999998,
+    "3y": 0.8858999999999999,
+    "5y": 0.5843999999999998,
+    "10y": 0.8937999999999997,
+    "all": 0.8759999999999999
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -265,9 +265,9 @@
     "all": -0.3994656358365073
   },
   "nav": {
-    "date": "2026-10-08",
+    "date": "2026-10-12",
     "first_date": "2016-08-12",
-    "value": 2.0638
+    "value": 2.03
   },
   "trade": null
 }

@@ -19,7 +19,6 @@
   },
   "released_date": "2008-05-26",
   "is_top_product": 1,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -74,7 +73,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -84,19 +83,9 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4327,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BMRI",
-      "name": "Bank Mandiri (Persero) Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4331,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -104,7 +93,7 @@
       "symbol": "MDKA",
       "name": "Merdeka Copper Gold Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4563,
       "product_type": "Saham",
@@ -114,19 +103,29 @@
       "symbol": "AMMN",
       "name": "Amman Mineral Internasional Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6026,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "EMAS",
-      "name": "Merdeka Gold Resources Tbk.",
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 9567,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MEDC",
+      "name": "Medco Energi Internasional Tbk",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4403,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -134,19 +133,29 @@
       "symbol": "ANTM",
       "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4396,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "BBNI",
-      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "symbol": "AADI",
+      "name": "Adaro Andalan Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 4338,
+      "company_id": 8951,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4623,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -154,19 +163,9 @@
       "symbol": "ISAT",
       "name": "Indosat Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4866,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "AMRT",
-      "name": "Sumber Alfaria Trijaya Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4422,
       "product_type": "Saham",
       "serie_id": null
     }
@@ -197,7 +196,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 574637801639.65,
+    "value": 574640000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -209,40 +208,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.12609351746818043,
-    "3y": -0.01173111046105546,
-    "5y": 0.023500237703315108,
-    "10y": 0.032666307930915295,
-    "all": 0.08084728322105073
+    "1y": -0.14794958850304984,
+    "3y": -0.022967594976086803,
+    "5y": 0.017381890966167823,
+    "10y": 0.031229889968398705,
+    "all": 0.07936425889295884
   },
   "cagr_adjusted": {
-    "1y": -0.12609351746818043,
-    "3y": -0.01173111046105546,
-    "5y": 0.023500237703315108,
-    "10y": 0.032666307930915295,
-    "all": 0.0808848591079403
+    "1y": -0.14794958850304984,
+    "3y": -0.022967594976086803,
+    "5y": 0.017381890966167823,
+    "10y": 0.031229889968398705,
+    "all": 0.07937653863556093
   },
   "simplereturn": {
-    "1d": 0.012703902826117996,
-    "1m": -0.09473048727899946,
-    "3m": 0.0590831927071116,
-    "ytd": -0.15220095307325732,
-    "1y": -0.12609351746818043,
-    "3y": -0.03478208894835311,
-    "5y": 0.12315511505529275,
-    "10y": 0.3791137178233954,
-    "all": 3.177281559386855
+    "1d": 0.00391696427914856,
+    "1m": -0.10071645474566182,
+    "3m": 0.009317719191889395,
+    "ytd": -0.17299289233502946,
+    "1y": -0.14794958850304984,
+    "3y": -0.06733236931695274,
+    "5y": 0.08998373009658023,
+    "10y": 0.36005015589037836,
+    "all": 3.0748353667697064
   },
   "changesvalue": {
-    "1d": 52.67000000000007,
-    "1m": -439.3599999999997,
-    "3m": 234.23000000000047,
-    "ytd": -753.7599999999993,
-    "1y": -605.8099999999995,
-    "3y": -151.29999999999927,
-    "5y": 460.38520000000017,
-    "10y": 1154.1920000000005,
-    "all": 3193.527
+    "1d": 15.980000000000018,
+    "1m": -458.6999999999998,
+    "3m": 37.809999999999945,
+    "ytd": -856.7299999999996,
+    "1y": -711.1700000000001,
+    "3y": -295.6800000000003,
+    "5y": 338.11850000000004,
+    "10y": 1084.259,
+    "all": 3090.557
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -264,9 +263,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2008-05-27",
-    "value": 4198.64
+    "value": 4095.67
   },
   "trade": null
 }

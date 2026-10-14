@@ -60,12 +60,12 @@
   },
   "asset": [
     {
-      "name": "Obligasi",
-      "percentage": 5.48
-    },
-    {
       "name": "Saham",
       "percentage": 90.94
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 5.48
     },
     {
       "name": "Lainnya",
@@ -74,103 +74,103 @@
   ],
   "holding": [
     {
-      "symbol": "MEDC",
-      "name": "Medco Energi Internasional Tbk",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4403,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BUMI",
-      "name": "Bumi Resources Tbk",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4498,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BRMS",
-      "name": "Bumi Resources Minerals Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4633,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "DEWA",
-      "name": "Darma Henwa Tbk",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4966,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BRIS",
-      "name": "Bank Syariah Indonesia Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4342,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp & Paper Mills Tahap III Tahun 2025 Seri A",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "ISAT",
-      "name": "Indosat Tbk",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4866,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "DSSA",
-      "name": "Dian Swastatika Sentosa Tbk",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4727,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
       "symbol": "ANTM",
       "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4396,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "INKP",
-      "name": "Indah Kiat Pulp & Paper Tbk.",
+      "symbol": "MEDC",
+      "name": "Medco Energi Internasional Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 4514,
+      "company_id": 4403,
       "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TINS",
+      "name": "Timah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4493,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MGLV",
+      "name": "NexAI Digital Infrastruktur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4642,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "AADI",
+      "name": "Adaro Andalan Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 8951,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ADRO",
+      "name": "Alamtri Resources Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 5007,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berkelanjutan 11 Oki Pulp & Paper Mills Tahap III Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PTBA",
+      "name": "Bukit Asam Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 5051,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "WINS",
+      "name": "Wintermar Offshore Marine Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4397,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Surya Esa Perkasa",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
       "serie_id": null
     }
   ],
@@ -200,7 +200,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 358845952770.84,
+    "value": 358850000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -212,40 +212,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.25609279350960545,
-    "3y": -0.054677464443994905,
-    "5y": -0.027315196918337947,
-    "10y": -0.00639209716865119,
-    "all": 0.024292057526935196
+    "1y": -0.2800167620158146,
+    "3y": -0.06021481338647483,
+    "5y": -0.0325555472681075,
+    "10y": -0.008516779438325295,
+    "all": 0.023095370700221718
   },
   "cagr_adjusted": {
-    "1y": -0.25609279350960545,
-    "3y": -0.054677464443994905,
-    "5y": -0.027315196918337947,
-    "10y": -0.00639209716865119,
-    "all": 0.024302272847549045
+    "1y": -0.2800167620158146,
+    "3y": -0.06021481338647483,
+    "5y": -0.0325555472681075,
+    "10y": -0.008516779438325295,
+    "all": 0.023098604376289522
   },
   "simplereturn": {
-    "1d": 0.008334891839660852,
-    "1m": -0.11117277912714718,
-    "3m": 0.07073963498189473,
-    "ytd": -0.2886896254502117,
-    "1y": -0.25609279350960545,
-    "3y": -0.1552269830990035,
-    "5y": -0.12931582063842384,
-    "10y": -0.06211331388909824,
-    "all": 0.6079669155292224
+    "1d": 0.008408293460925087,
+    "1m": -0.11501035776272317,
+    "3m": 0.023763107274010986,
+    "ytd": -0.304868663503274,
+    "1y": -0.2800167620158146,
+    "3y": -0.16998529720646927,
+    "5y": -0.15251856419054766,
+    "10y": -0.08197673405620753,
+    "all": 0.5713930669741827
   },
   "changesvalue": {
-    "1d": 13.370000000000118,
-    "1m": -202.30999999999995,
-    "3m": 106.86000000000013,
-    "ytd": -656.4599999999998,
-    "1y": -556.8199999999999,
-    "3y": -297.21000000000004,
-    "5y": -240.23000000000002,
-    "10y": -107.11999999999989,
-    "all": 611.5600000000001
+    "1d": 13.180000000000064,
+    "1m": -205.41999999999985,
+    "3m": 36.690000000000055,
+    "ytd": -693.2499999999998,
+    "1y": -614.76,
+    "3y": -323.72,
+    "5y": -284.47,
+    "10y": -141.14999999999986,
+    "all": 574.7700000000001
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -267,9 +267,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2007-01-02",
-    "value": 1617.47
+    "value": 1580.68
   },
   "trade": null
 }

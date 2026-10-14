@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Bonds",
-      "percentage": 27.69
+      "percentage": 27.65
     },
     {
       "name": "Cash & Equivalent",
-      "percentage": 63.25
+      "percentage": 63.26
     },
     {
       "name": "Money Markets",
-      "percentage": 9.06
+      "percentage": 9.08
     }
   ],
   "holding": [
@@ -164,9 +164,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2007-06-05",
-    "value": 2261.85
+    "value": 2260.93
   },
   "trade": null
 }

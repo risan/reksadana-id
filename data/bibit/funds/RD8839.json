@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17830,
+    "exchange_rate": 17845,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -59,12 +59,12 @@
   },
   "asset": [
     {
-      "name": "Obligasi dengan jatuh tempo < 1 tahun",
-      "percentage": 88
+      "name": "Deposito dan Setara Kas",
+      "percentage": 99.99
     },
     {
-      "name": "Deposito dan Setara Kas",
-      "percentage": 12
+      "name": "Obligasi dengan jatuh tempo < 1 tahun",
+      "percentage": 0.01
     }
   ],
   "holding": [
@@ -72,7 +72,7 @@
       "symbol": "",
       "name": "INDOIS415 032927",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -82,7 +82,57 @@
       "symbol": "",
       "name": "Indon27",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan | Merdeka Battery Materials Tahap IV Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan | Oki Pulp Paper Mills Tahap IV Tahun 2024 Seri B",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap III Tahun 2024 Seri B",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Berkelanjutan III Chandra Asri Petrochemical Tahap V Tahun 2022 Seri A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Obligasi Subordinasi Berkelanjutan II Bank Uob Indonesia Tahap II Tahun 2019",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -92,7 +142,7 @@
       "symbol": "",
       "name": "Obligasi USD Berkelanjutan II Indah Kiat Pulp Paper Tahap IV Tahun 2025 Seri A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,7 +152,7 @@
       "symbol": "",
       "name": "Republic Of Indonesia Roi 27",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,17 +162,7 @@
       "symbol": "",
       "name": "Sni0627",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "TD Bank Mega - USD Ccy",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,7 +193,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 20012221.83767,
+    "value": 20150000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -165,40 +205,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.036775241188270025,
+    "1y": 0.0368637188425176,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.041708693751633774
+    "all": 0.04173586630763482
   },
   "cagr_adjusted": {
-    "1y": 0.036775241188270025,
+    "1y": 0.03704764632865487,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.04194260272622685
+    "all": 0.04192670408999599
   },
   "simplereturn": {
-    "1d": 0,
-    "1m": 0.004070305272895425,
-    "3m": 0.010050251256281229,
-    "ytd": 0.028717657094114335,
-    "1y": 0.036775241188270025,
+    "1d": 0.00036842590034069644,
+    "1m": 0.004253351826167595,
+    "3m": 0.010231606362198997,
+    "ytd": 0.029381101317410785,
+    "1y": 0.03704764632865487,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.08539999999999992
+    "all": 0.08610000000000007
   },
   "changesvalue": {
-    "1d": 0,
-    "1m": 0.0043999999999999595,
-    "3m": 0.01079999999999992,
-    "ytd": 0.030299999999999994,
-    "1y": 0.03849999999999998,
+    "1d": 0.00039999999999995595,
+    "1m": 0.0046000000000001595,
+    "3m": 0.01100000000000012,
+    "ytd": 0.03100000000000014,
+    "1y": 0.03880000000000017,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.08539999999999992
+    "all": 0.08610000000000007
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -216,9 +256,9 @@
     "all": -0.0018327384971544
   },
   "nav": {
-    "date": "2026-10-08",
+    "date": "2026-10-13",
     "first_date": "2024-10-10",
-    "value": 1.0854
+    "value": 1.0861
   },
   "trade": null
 }

@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Obligasi &/ Sukuk",
-      "percentage": 98.4
+      "percentage": 99.46
     },
     {
       "name": "Inst. Psr. Uang Dalam Negeri &/ Deposito",
-      "percentage": 1.6
+      "percentage": 0.54
     }
   ],
   "investment_manager": {
@@ -142,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2021-10-29",
-    "value": 1086.16
+    "value": 1086.45
   },
   "trade": null
 }

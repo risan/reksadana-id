@@ -59,16 +59,16 @@
   },
   "asset": [
     {
-      "name": "Obligasi",
-      "percentage": 26.4
+      "name": "Kas & Pasar Uang",
+      "percentage": 3.8
     },
     {
-      "name": "Kas & Pasar Uang",
-      "percentage": 4.8
+      "name": "Obligasi",
+      "percentage": 27.7
     },
     {
       "name": "Saham",
-      "percentage": 68.9
+      "percentage": 68.5
     }
   ],
   "holding": [
@@ -253,9 +253,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2005-06-16",
-    "value": 4455.6139
+    "value": 4404.983
   },
   "trade": null
 }

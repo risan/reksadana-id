@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17830,
+    "exchange_rate": 17845,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -67,9 +67,9 @@
   "holding": [
     {
       "symbol": "",
-      "name": "PT Bank KB Bukopin",
+      "name": "TD PT Bank Tabungan Negara (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -77,9 +77,9 @@
     },
     {
       "symbol": "",
-      "name": "PT Bank Mega Tbk",
+      "name": "TD PT Bank Mega Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -87,9 +87,9 @@
     },
     {
       "symbol": "",
-      "name": "PT Bank Tabungan Negara (Persero) Tbk",
+      "name": "TD PT Bank Rakyat Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -97,9 +97,9 @@
     },
     {
       "symbol": "",
-      "name": "PT Bank Rakyat Indonesia (Persero) Tbk",
+      "name": "TD PT Bank Maybank Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -107,9 +107,9 @@
     },
     {
       "symbol": "",
-      "name": "PT Bank CIMB Niaga, Tbk",
+      "name": "TD PT Bank KB Bukopin",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -117,9 +117,9 @@
     },
     {
       "symbol": "",
-      "name": "PT Bank Maybank Indonesia Tbk",
+      "name": "TD PT Bank Mandiri (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -127,9 +127,9 @@
     },
     {
       "symbol": "",
-      "name": "PT Bank CTBC Indonesia",
+      "name": "TD PT Bank Victoria International",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -137,9 +137,9 @@
     },
     {
       "symbol": "",
-      "name": "PT Allo Bank Indonesia Tbk",
+      "name": "TD PT Allo Bank Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -149,7 +149,7 @@
       "symbol": "",
       "name": "INDON 3.85 07/18/27",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -157,9 +157,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Syariah Indonesia",
+      "name": "TD PT Bank Pembangunan Daerah Jawa Barat",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -190,7 +190,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 245756455.77209,
+    "value": 248047643.77,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -202,40 +202,40 @@
     "percentage": 0.0402
   },
   "cagr": {
-    "1y": 0.02429629629629626,
+    "1y": 0.024590163934426368,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.02506951377788469
+    "all": 0.025243027978401278
   },
   "cagr_adjusted": {
-    "1y": 0.02429629629629626,
+    "1y": 0.024387835703001848,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.02521211448520644
+    "all": 0.025243027978401278
   },
   "simplereturn": {
-    "1d": 0.00019288263091898905,
-    "1m": 0.0018353941267388318,
-    "3m": 0.00620937227127194,
-    "ytd": 0.018662213927904903,
-    "1y": 0.02429629629629626,
+    "1d": 0,
+    "1m": 0.00222179289026303,
+    "3m": 0.00620696343710625,
+    "ytd": 0.01905510264217658,
+    "1y": 0.024387835703001848,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.03709999999999991
+    "all": 0.03750000000000009
   },
   "changesvalue": {
-    "1d": 0.00019999999999997797,
-    "1m": 0.0019000000000000128,
-    "3m": 0.006399999999999961,
-    "ytd": 0.018999999999999906,
-    "1y": 0.024599999999999955,
+    "1d": 0,
+    "1m": 0.0023000000000001908,
+    "3m": 0.006400000000000183,
+    "ytd": 0.019400000000000084,
+    "1y": 0.024700000000000166,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.03709999999999991
+    "all": 0.03750000000000009
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -253,9 +253,9 @@
     "all": -0.0000996909580301
   },
   "nav": {
-    "date": "2026-10-08",
+    "date": "2026-10-13",
     "first_date": "2025-04-23",
-    "value": 1.0371
+    "value": 1.0375
   },
   "trade": null
 }

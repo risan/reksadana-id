@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Deposito",
-      "percentage": 17.89
+      "percentage": 32.09
     },
     {
       "name": "Kas",
-      "percentage": 1.03
+      "percentage": 2.28
     },
     {
       "name": "Efek Bersifat Hutang< 1 Tahun",
-      "percentage": 80.99
+      "percentage": 65.63
     }
   ],
   "holding": [
@@ -204,9 +204,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2019-08-02",
-    "value": 1421.4021
+    "value": 1422.2096
   },
   "trade": null
 }

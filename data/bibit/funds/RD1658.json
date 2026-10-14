@@ -61,23 +61,23 @@
   "asset": [
     {
       "name": "Obligasi &/ Sukuk",
-      "percentage": 75.85
+      "percentage": 72.68
     },
     {
       "name": "Inst. Psr. Uang Dalam Negeri",
-      "percentage": 0.86
+      "percentage": 0.81
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 23.29
+      "percentage": 26.51
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap III Tahun 2025 Seri B",
+      "name": "OBLIGASI BERKELANJUTAN I MERDEKA BATTERY MATERIALS TAHAP III TAHUN 2025 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -85,9 +85,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Oki Pulp Paper Mills Tahap VI Tahun 2024 Seri B",
+      "name": "OBLIGASI BERKELANJUTAN I PETROSEA TAHAP I TAHUN 2024 SERI D",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -95,9 +95,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap III Tahun 2025",
+      "name": "OBLIGASI BERKELANJUTAN I TBS ENERGI UTAMA TAHAP II TAHUN 2026 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -105,9 +105,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan I Tbs Energi Utama Tahap III Tahun 2026",
+      "name": "OBLIGASI BERKELANJUTAN II PROVIDENT INVESTASI BERSAMA TAHAP IV TAHUN 2025 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -115,9 +115,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan II Provident Investasi Bersama Tahap III Tahun 2024 Seri B",
+      "name": "OBLIGASI BERKELANJUTAN III BUMA TAHUN 2025 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -125,9 +125,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan III Buma Tahun 2025 Seri B",
+      "name": "OBLIGASI BERKELANJUTAN III LONTAR PAPYRUS PULP & PAPER INDUSTRY TAHAP I TAHUN 2024 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -135,9 +135,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan III Sinar Mas Multiartha Tahap I Tahun 2024",
+      "name": "OBLIGASI BERKELANJUTAN III SINAR MAS MULTIARTHA TAHAP I TAHUN 2024",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -145,9 +145,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan IV Bumi Serpong Damai Tahap II Tahun 2025 Seri C",
+      "name": "OBLIGASI BERKELANJUTAN IV BUMI SERPONG DAMAI TAHAP II TAHUN 2025 SERI C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -155,9 +155,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan V Indah Kiat Pulp Paper Tahap II Tahun 2024 Seri B",
+      "name": "OBLIGASI BERKELANJUTAN V INDAH KIAT PULP & PAPER TAHAP I TAHUN 2024 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -165,9 +165,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap III Tahun 2024 Seri C",
+      "name": "SUKUK IJARAH BERKELANJUTAN I BALI TOWERINDO SENTRA TAHAP III TAHUN 2025 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -200,7 +200,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 909919927158.18,
+    "value": 909920000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -212,40 +212,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.04594650998704286,
-    "3y": 0.056336758125897335,
-    "5y": 0.08062904109869784,
-    "10y": 0.048936382151056446,
-    "all": 0.05073604746493543
+    "1y": 0.04518226648703383,
+    "3y": 0.056501149547304896,
+    "5y": 0.08036859696899445,
+    "10y": 0.04995964011829934,
+    "all": 0.05072167191992749
   },
   "cagr_adjusted": {
-    "1y": 0.04594650998704286,
-    "3y": 0.056336758125897335,
-    "5y": 0.08062904109869784,
-    "10y": 0.048936382151056446,
-    "all": 0.0507781323835057
+    "1y": 0.04518226648703383,
+    "3y": 0.056501149547304896,
+    "5y": 0.08036859696899445,
+    "10y": 0.04995964011829934,
+    "all": 0.050735680852640686
   },
   "simplereturn": {
-    "1d": 0.0002221821399304158,
-    "1m": -0.0009096265843845375,
-    "3m": 0.009126658203108207,
-    "ytd": 0.02489248620943796,
-    "1y": 0.04594650998704286,
-    "3y": 0.17871056863695234,
-    "5y": 0.47361208164339375,
-    "10y": 0.6124694340700905,
-    "all": 0.6537487073180126
+    "1d": 0.00021874392930221198,
+    "1m": -0.0010353340506733533,
+    "3m": 0.008477230629296173,
+    "ytd": 0.025027826191331037,
+    "1y": 0.04518226648703383,
+    "3y": 0.17926096147656634,
+    "5y": 0.47183714941090704,
+    "10y": 0.6282686208331407,
+    "all": 0.6539670895611411
   },
   "changesvalue": {
-    "1d": 0.3911000000000513,
-    "1m": -1.6030000000000655,
-    "3m": 15.923600000000079,
-    "ytd": 42.762699999999995,
-    "1y": 77.34249999999997,
-    "3y": 266.94280000000003,
-    "5y": 565.8675000000001,
-    "10y": 668.7565999999999,
-    "all": 696.0116
+    "1d": 0.3850999999999658,
+    "1m": -1.8250000000000455,
+    "3m": 14.802000000000135,
+    "ytd": 42.99520000000007,
+    "1y": 76.12170000000015,
+    "3y": 267.6753000000001,
+    "5y": 564.5012000000002,
+    "10y": 679.4411,
+    "all": 696.2441000000001
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -267,9 +267,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2016-08-15",
-    "value": 1760.6586
+    "value": 1760.8911
   },
   "trade": null
 }

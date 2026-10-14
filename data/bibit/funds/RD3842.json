@@ -21,7 +21,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17830,
+    "exchange_rate": 17845,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -59,11 +59,11 @@
   "asset": [
     {
       "name": "Pasar Uang Syariah",
-      "percentage": -16.08
+      "percentage": -16.18
     },
     {
       "name": "Efek Syariah Bersifat Ekuitas Luar Negeri",
-      "percentage": 116.08
+      "percentage": 116.18
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-08",
+    "date": "2026-10-12",
     "first_date": "2020-11-11",
-    "value": 0.9703
+    "value": 0.9489
   },
   "trade": null
 }

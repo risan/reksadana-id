@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17830,
+    "exchange_rate": 17845,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,33 +60,23 @@
   "asset": [
     {
       "name": "Reksadana",
-      "percentage": 4.22
+      "percentage": 4.41
     },
     {
       "name": "Pasar Uang",
-      "percentage": 54.31
+      "percentage": 53.08
     },
     {
       "name": "Obligasi Pemerintah",
-      "percentage": 41.47
+      "percentage": 42.51
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "HSBC GLF-USD LIQUIDITY-C",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "PERUSAHAAN PENERBIT SBSN INDOIS 4.15 03/29/27",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -96,7 +86,7 @@
       "symbol": "",
       "name": "PERUSAHAAN PENERBIT SBSN INDOIS 4.4 PCT 06/06/27",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -106,7 +96,17 @@
       "symbol": "",
       "name": "PT ALLO BANK INDONESIA TBK",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK HSBC INDONESIA, TBK.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -116,17 +116,7 @@
       "symbol": "",
       "name": "PT. BANK MEGA, TBK",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "PT. BANK RAKYAT INDONESIA (PERSERO), TBK",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -136,7 +126,7 @@
       "symbol": "",
       "name": "PT. BANK TABUNGAN NEGARA (PERSERO), TBK",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -146,7 +136,7 @@
       "symbol": "",
       "name": "PT. BANK VICTORIA INTERNATIONAL TBK",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -156,7 +146,17 @@
       "symbol": "",
       "name": "REPUBLIC OF INDONESIA 3.85 PCT 18.07.2027",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "REPUBLIC OF INDONESIA 4.15 09/20/27",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -166,7 +166,7 @@
       "symbol": "",
       "name": "REPUBLIC OF INDONESIA 4.350PCT 08.01.2027",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +197,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 67926093.19116,
+    "value": 68385849.15,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -209,40 +209,40 @@
     "percentage": 0.034
   },
   "cagr": {
-    "1y": 0.023275774324035714,
+    "1y": 0.02335209222363388,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.023275774324035714
+    "all": 0.02335209222363388
   },
   "cagr_adjusted": {
-    "1y": 0.02355694223065652,
+    "1y": 0.023459293304594286,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.02355694223065652
+    "all": 0.023459293304594286
   },
   "simplereturn": {
-    "1d": 0.00009789525208026006,
-    "1m": 0.0013722799451088008,
-    "3m": 0.005709785390825006,
-    "ytd": 0.018239808631516086,
-    "1y": 0.021600000000000064,
+    "1d": 0.0000978665100801468,
+    "1m": 0.001470011760094092,
+    "3m": 0.005609132060617972,
+    "ytd": 0.01853882188777023,
+    "1y": 0.02190000000000003,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.021600000000000064
+    "all": 0.02190000000000003
   },
   "changesvalue": {
     "1d": 0.00009999999999998899,
-    "1m": 0.0014000000000000679,
-    "3m": 0.005800000000000027,
-    "ytd": 0.018299999999999983,
-    "1y": 0.021600000000000064,
+    "1m": 0.0015000000000000568,
+    "3m": 0.005700000000000038,
+    "ytd": 0.01859999999999995,
+    "1y": 0.02190000000000003,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.021600000000000064
+    "all": 0.02190000000000003
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -260,9 +260,9 @@
     "all": -0.0002977667493797
   },
   "nav": {
-    "date": "2026-10-08",
+    "date": "2026-10-13",
     "first_date": "2025-11-07",
-    "value": 1.0216
+    "value": 1.0219
   },
   "trade": null
 }

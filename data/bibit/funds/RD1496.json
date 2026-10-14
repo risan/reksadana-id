@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Obligasi (Tmsk. Bunga Berjalan)",
-      "percentage": 97.72
+      "percentage": 95.32
     },
     {
       "name": "Cash and/or Money Market",
-      "percentage": 2.28
+      "percentage": 4.68
     }
   ],
   "holding": [
@@ -194,9 +194,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2016-02-12",
-    "value": 1705.5187
+    "value": 1703.7801
   },
   "trade": null
 }

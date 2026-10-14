@@ -19,6 +19,7 @@
   },
   "released_date": "2018-08-31",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -67,19 +68,9 @@
   "holding": [
     {
       "symbol": "",
-      "name": "TD Bank Syariah Indonesia",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "TD Bank DKI Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -87,19 +78,9 @@
     },
     {
       "symbol": "",
-      "name": "TD PT Bank Muamalat Indonesia Tbk",
+      "name": "TD Bank Syariah Indonesia",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "INDOIS 6 01/15/27",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -109,7 +90,37 @@
       "symbol": "",
       "name": "TD PT Bank Syariah Nasional",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Muamalat Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOIS 6 01/15/27",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PPGDIJ 7.3 09/18/27",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -119,7 +130,7 @@
       "symbol": "",
       "name": "PNMNIJ 5 1/2 10/27/26",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -129,7 +140,7 @@
       "symbol": "",
       "name": "SMIPIJ 5 12/07/26",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -137,9 +148,9 @@
     },
     {
       "symbol": "",
-      "name": "TD PT Bank Aladin Syariah Tbk",
+      "name": "TD PT Bank Aladin Syariah Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -147,19 +158,9 @@
     },
     {
       "symbol": "",
-      "name": "PPGDIJ 6.1 09/13/26",
+      "name": "BALIIJ 8 1/4 07/18/27",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "BNGAIJ 6.15 09/13/26",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -204,40 +205,40 @@
     "percentage": 0.0687
   },
   "cagr": {
-    "1y": 0.03925155925155921,
-    "3y": 0.042513110092582185,
-    "5y": 0.03519419997702289,
+    "1y": 0.039422677296255815,
+    "3y": 0.042581873876401,
+    "5y": 0.03524878473075632,
     "10y": null,
-    "all": 0.03988242721150703
+    "all": 0.039934161322653594
   },
   "cagr_adjusted": {
-    "1y": 0.03925155925155921,
-    "3y": 0.042513110092582185,
-    "5y": 0.03519419997702289,
+    "1y": 0.039422677296255815,
+    "3y": 0.042581873876401,
+    "5y": 0.03524878473075632,
     "10y": null,
-    "all": 0.03992367282078946
+    "all": 0.039947909260537706
   },
   "simplereturn": {
-    "1d": 0.00013095766429738198,
-    "1m": 0.0041563792020336,
-    "3m": 0.01285716390857794,
-    "ytd": 0.030031695127342495,
-    "1y": 0.03925155925155921,
-    "3y": 0.1330382605542093,
-    "5y": 0.18880096856488104,
+    "1d": 0.00019632794037449663,
+    "1m": 0.004615834063686819,
+    "3m": 0.01295353957862333,
+    "ytd": 0.03066859484935458,
+    "1y": 0.039422677296255815,
+    "3y": 0.1332624797119717,
+    "5y": 0.18911442304367365,
     "10y": null,
-    "all": 0.37335158248081846
+    "all": 0.3742007672634271
   },
   "changesvalue": {
-    "1d": 0.18000000000006366,
-    "1m": 5.690000000000055,
-    "3m": 17.450000000000045,
-    "ytd": 40.080000000000155,
-    "1y": 51.92000000000007,
-    "3y": 161.41000000000008,
-    "5y": 218.32000000000016,
+    "1d": 0.2699999999999818,
+    "1m": 6.319999999999936,
+    "3m": 17.589999999999918,
+    "ytd": 40.930000000000064,
+    "1y": 52.17000000000007,
+    "3y": 161.75,
+    "5y": 218.76,
     "10y": null,
-    "all": 373.71000000000004
+    "all": 374.55999999999995
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -259,9 +260,9 @@
     "quota_limit": 3
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2018-09-03",
-    "value": 1374.67
+    "value": 1375.52
   },
   "trade": null
 }

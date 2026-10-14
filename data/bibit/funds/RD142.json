@@ -19,10 +19,11 @@
   },
   "released_date": "2014-08-27",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17830,
+    "exchange_rate": 17845,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,90 +61,20 @@
   },
   "asset": [
     {
-      "name": "Likuiditas",
-      "percentage": 70.16
+      "name": "Obligasi",
+      "percentage": 31.01
     },
     {
-      "name": "Obligasi",
-      "percentage": 29.84
+      "name": "Likuiditas",
+      "percentage": 68.99
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "ALLO BANK INDONESIA TBK, PT - TD",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "BANK CAPITAL INDONESIA PT TBK - TD",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "BANK MNC INTERNASIONAL - TD",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "BANK NATIONALNOBU TBK, PT - TD",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "BANK PEMBANGUNAN DAERAH RIAU KEPRI, PT - TD",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "BANK PEMBANGUNAN DAERAH SULAWESI SELATAN, PT - TD",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "INDON 4.35 01/08/2027",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "PERUSAHAN PENERBIT SBSN 4.4% 06JUNE27",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -151,9 +82,9 @@
     },
     {
       "symbol": "",
-      "name": "PT. BANK WOORI SAUDARA INDONESIA 1906, TBK - TD",
+      "name": "BANK NATIONALNOBU USD CCY-TD",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -161,9 +92,79 @@
     },
     {
       "symbol": "",
-      "name": "PT.BANK VICTORIA INTERNASIONAL - TD",
+      "name": "BANK JAGO CCY USD TD",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK CAPITAL INDONESIA-USD C-TD",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK ALLO INDONESIA - USD CC-TD",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD SULSELBAR CCY USD TD",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK VICTORIA INTERNASIONAL TD",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD RIAU KEPRI SYARIAH - USD-TD",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDON 3.85 07/18/27",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK WOORI SAUDARA-USD CCY-TD",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -198,7 +199,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 59727658.0816,
+    "value": 60130000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -210,60 +211,60 @@
     "percentage": 0.03
   },
   "cagr": {
-    "1y": 0.026295721174663056,
-    "3y": 0.028947561442407066,
-    "5y": 0.02231132029491323,
-    "10y": 0.014750717520501055,
-    "all": 0.00021537848491393063
+    "1y": 0.02636507663588139,
+    "3y": 0.02886258429453825,
+    "5y": 0.022343346551995102,
+    "10y": 0.014775468795947377,
+    "all": 0.00023443074577467193
   },
   "cagr_adjusted": {
-    "1y": 0.026295721174663056,
-    "3y": 0.028947561442407066,
-    "5y": 0.02231132029491323,
-    "10y": 0.014750717520501055,
-    "all": 0.00021552451995998645
+    "1y": 0.02614828479898157,
+    "3y": 0.028857898414078154,
+    "5y": 0.022352942352152017,
+    "10y": 0.014779260464718114,
+    "all": 0.00023903259402247024
   },
   "simplereturn": {
-    "1d": 0.0000568545093106998,
-    "1m": 0.0018495850674233871,
-    "3m": 0.006367738930733724,
-    "ytd": 0.019758134236515845,
-    "1y": 0.026295721174663056,
-    "3y": 0.08938082520421475,
-    "5y": 0.11664686077553688,
-    "10y": 0.15769370218210121,
-    "all": 0.0026159999999999517
+    "1d": 0.000055840909249482706,
+    "1m": 0.001957148537483633,
+    "3m": 0.0062921794761165994,
+    "ytd": 0.020052075387259727,
+    "1y": 0.02614828479898157,
+    "3y": 0.08909606237647405,
+    "5y": 0.11687419330769733,
+    "10y": 0.15801937989866643,
+    "all": 0.0029049999999999354
   },
   "changesvalue": {
-    "1d": 0.00005699999999997374,
-    "1m": 0.001851000000000047,
-    "3m": 0.006343999999999905,
-    "ytd": 0.019425999999999943,
-    "1y": 0.025688999999999962,
-    "3y": 0.08226199999999995,
-    "5y": 0.10473499999999991,
-    "10y": 0.13656999999999997,
-    "all": 0.0026159999999999517
+    "1d": 0.00005599999999983396,
+    "1m": 0.001959000000000044,
+    "3m": 0.0062709999999999155,
+    "ytd": 0.019714999999999927,
+    "1y": 0.025555999999999912,
+    "3y": 0.08204499999999992,
+    "5y": 0.10494799999999993,
+    "10y": 0.1368529999999999,
+    "all": 0.0029049999999999354
   },
   "riskprofile": "Low",
   "maxdrawdown": {
     "1y": -0.000018468869181886838,
     "3y": -0.000018468869181886838,
     "5y": -0.000027801347141975796,
-    "10y": -0.0000808229158367757,
+    "10y": -0.0000784873185268875,
     "all": -0.1413086714399363
   },
   "maxdrawdown_adjusted": {
     "1y": 0,
     "3y": -0.0000184688691819,
     "5y": -0.0000278013471421,
-    "10y": -0.0000808229158368,
+    "10y": -0.0000784873185269,
     "all": -0.1413086714399364
   },
   "nav": {
-    "date": "2026-10-08",
+    "date": "2026-10-13",
     "first_date": "2014-08-28",
-    "value": 1.002616
+    "value": 1.002905
   },
   "trade": null
 }

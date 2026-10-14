@@ -19,7 +19,6 @@
   },
   "released_date": "2016-11-11",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -71,40 +70,10 @@
   ],
   "holding": [
     {
-      "symbol": "PBS030",
-      "name": "FR Syariah",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 6385,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
-      "symbol": "PBS034",
-      "name": "FR Syariah",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 6024,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
       "symbol": "",
-      "name": "SKK IJRH BKLJT II BUMI SERPONG DAMAI THP II TH 2025 SR B",
+      "name": "SUKUK WAKALAH I RAHARIA ENERGI CEPU TAHUN 2026 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "SUKUK IJARAH BERLANJUTAN III SPINDO TAHAP I TAHUN 2026 SERI C",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -114,7 +83,7 @@
       "symbol": "",
       "name": "SUKUK MUDHARABAH BERKELANJUTAN I DIAN SWASTATIKA SENTOSA TAHAP IV TAHUN 2025 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -122,9 +91,49 @@
     },
     {
       "symbol": "",
-      "name": "SUKUK MUDHARABAH BERKELANJUTAN I MERDEKA BATTERY MATERIALS TAHAP IV TAHUN 2026 SERI A",
+      "name": "SKK URH BKLIT II BUMI SERPONG DAMAI THP II TH 2025 SR B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS034",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 6024,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN V INDAH KIAT PULP & PAPER TAHAP I TAHUN 2026 SERI C",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS030",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 6385,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK MUDHARABAH BERKELANJUTANI MERDEKA BATTERY MATERIALS TAHAP IV TAHUN 2026 SERI A",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,7 +143,7 @@
       "symbol": "",
       "name": "SUKUK MUDHARABAH BERKELANJUTAN IV INDAH KIAT PULP & PAPER TAHAP V TAHUN 2025",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -142,9 +151,9 @@
     },
     {
       "symbol": "",
-      "name": "SUKUK MUDHARABAH BERKELANJUTAN V INDAH KIAT PULP & PAPER TAHAP I TAHUN 2026 SERI C",
+      "name": "SUKUK WAKALAH BERKELANJUTAN I MEDCO POWER INDONESIA TAHAP IV TAHUN 2025 SERI C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -154,17 +163,7 @@
       "symbol": "",
       "name": "SUKUK MUDHARABAH BERKELANJUTAN V INDAH KIAT PULP & PAPER TAHAP II TAHUN 2026 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "SUKUK WAKALAH I RAHARJA ENERGI CEPU TAHUN 2026 SERI B",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +196,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 129033066747.91,
+    "value": 248120000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -209,40 +208,40 @@
     "percentage": 0.074
   },
   "cagr": {
-    "1y": 0.02345748056730268,
-    "3y": 0.035548283580867146,
-    "5y": 0.0336600575929098,
+    "1y": 0.021792770902789638,
+    "3y": 0.03308162975079343,
+    "5y": 0.03336580309152559,
     "10y": null,
-    "all": 0.04161851899007618
+    "all": 0.041497931435275914
   },
   "cagr_adjusted": {
-    "1y": 0.02345748056730268,
-    "3y": 0.035548283580867146,
-    "5y": 0.0336600575929098,
+    "1y": 0.021792770902789638,
+    "3y": 0.03308162975079343,
+    "5y": 0.03336580309152559,
     "10y": null,
-    "all": 0.04165861365623491
+    "all": 0.04151123991165773
   },
   "simplereturn": {
-    "1d": -0.00028235063037851393,
-    "1m": 0.002597722376115774,
-    "3m": 0.026172204790887,
-    "ytd": 0.010334602930412107,
-    "1y": 0.02345748056730268,
-    "3y": 0.11048081381078356,
-    "5y": 0.18001811266074985,
+    "1d": -0.0015828026649978844,
+    "1m": 0.0021490809446103043,
+    "3m": 0.026685340096142873,
+    "ytd": 0.009540587819311996,
+    "1y": 0.021792770902789638,
+    "3y": 0.10256427627790399,
+    "5y": 0.1783394756467529,
     "10y": null,
-    "all": 0.4266993693062371
+    "all": 0.42557813594954474
   },
   "changesvalue": {
-    "1d": -0.4600000000000364,
-    "1m": 4.220000000000027,
-    "3m": 41.539999999999964,
-    "ytd": 16.660000000000082,
-    "1y": 37.32999999999993,
-    "3y": 162.03999999999996,
-    "5y": 248.47000000000003,
+    "1d": -2.5799999999999272,
+    "1m": 3.490000000000009,
+    "3m": 42.299999999999955,
+    "ytd": 15.38000000000011,
+    "1y": 34.710000000000036,
+    "3y": 151.3900000000001,
+    "5y": 246.30999999999995,
     "10y": null,
-    "all": 487.1200000000001
+    "all": 485.84000000000015
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -260,9 +259,9 @@
     "all": -0.080781359495445
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2018-01-26",
-    "value": 1628.72
+    "value": 1627.44
   },
   "trade": null
 }

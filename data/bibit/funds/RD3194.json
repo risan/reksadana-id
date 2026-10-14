@@ -59,24 +59,24 @@
   },
   "asset": [
     {
+      "name": "Efek Ekuitas Syariah",
+      "percentage": 17.89
+    },
+    {
       "name": "Sukuk",
-      "percentage": 80.79
+      "percentage": 80.48
     },
     {
       "name": "Kas &/ Inst. Psr. Uang Syariah",
-      "percentage": 1.1
-    },
-    {
-      "name": "Efek Ekuitas Syariah",
-      "percentage": 18.11
+      "percentage": 1.63
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Sukuk Ijarah Berkelanjutan I Samudera Indonesia Tahap II Tahun 2025",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN I DIAN SWASTATIKA SENTOSA TAHAP III TAHUN 2024 SERI C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -84,9 +84,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Ijarah Berkelanjutan II Bumi Serpong Damai Tahap II Tahun 2025 Seri B",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN I LONTAR PAPYRUS PULP & PAPER INDUSTRY TAHAP I TAHUN 2024",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -94,9 +94,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap III Tahun 2024 Seri C",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN I MERDEKA BATTERY MATERIALS TAHAP III TAHUN 2025 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -104,9 +104,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan I Lontar Papyrus Pulp Paper Industry Tahap I Tahun 2024",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN I PINDO DELI PULP AND PAPER MILLS TAHAP III TAHUN 2025",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -114,9 +114,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap III Tahun 2025 Seri B",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN II LONTAR PAPYRUS PULP & PAPER INDUSTRY TAHAP II TAHUN 2026 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -124,9 +124,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap III Tahun 2025",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN II OKI PULP & PAPER MILLS TAHAP I TAHUN 2025 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,9 +134,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap II Tahun 2026 Seri B",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN II OKI PULP & PAPER MILLS TAHAP II TAHUN 2025 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,9 +144,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp Paper Mills Tahap I Tahun 2025 Seri A",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN II OKI PULP & PAPER MILLS TAHAP IV TAHUN 2026 SERI A",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -154,9 +154,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp Paper Mills Tahap II Tahun 2025 Seri A",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN IV INDAH KIAT PULP & PAPER TAHAP V TAHUN 2025",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -164,9 +164,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan IV Indah Kiat Pulp Paper Tahap V Tahun 2025",
+      "name": "SUKUK MUDHARABAH BERLANDASKAN KEBERLANJUTAN BERKELANJUTAN I BANK BSI TAHAP II TAHUN 2025 SERI C",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -199,7 +199,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 1493653638724,
+    "value": 1490000000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -211,40 +211,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.06518534648821572,
-    "3y": 0.0696792477214101,
-    "5y": 0.019527368830760006,
+    "1y": 0.06436256546692776,
+    "3y": 0.0697308702864321,
+    "5y": 0.020386690648738437,
     "10y": null,
-    "all": 0.03311611088211186
+    "all": 0.03313290172300376
   },
   "cagr_adjusted": {
-    "1y": 0.06518534648821572,
-    "3y": 0.0696792477214101,
-    "5y": 0.019527368830760006,
+    "1y": 0.06436256546692776,
+    "3y": 0.0697308702864321,
+    "5y": 0.020386690648738437,
     "10y": null,
-    "all": 0.03315357927353557
+    "all": 0.033145378950118154
   },
   "simplereturn": {
-    "1d": 0.0002988760686783998,
-    "1m": -0.0004872566663786104,
-    "3m": 0.014849984040855357,
-    "ytd": 0.04184381476657406,
-    "1y": 0.06518534648821572,
-    "3y": 0.22394164236702574,
-    "5y": 0.10152521674360604,
+    "1d": 0.0002673271219091333,
+    "1m": -0.0004007228726329304,
+    "3m": 0.014319542667612817,
+    "ytd": 0.042155103913232184,
+    "1y": 0.06436256546692776,
+    "3y": 0.22411885265619147,
+    "5y": 0.1061752225932111,
     "10y": null,
-    "all": 0.27229347151917715
+    "all": 0.27267361597407014
   },
   "changesvalue": {
-    "1d": 0.37999999999988177,
-    "1m": -0.6200000000001182,
-    "3m": 18.6099999999999,
-    "ytd": 51.07999999999993,
-    "1y": 77.82999999999993,
-    "3y": 232.70000000000005,
-    "5y": 117.22000000000003,
+    "1d": 0.3400000000001455,
+    "1m": -0.5099999999999909,
+    "3m": 17.960000000000036,
+    "ytd": 51.460000000000036,
+    "1y": 76.93000000000006,
+    "3y": 232.92000000000007,
+    "5y": 122.11000000000013,
     "10y": null,
-    "all": 272.18999999999994
+    "all": 272.57000000000005
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -266,9 +266,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2019-05-24",
-    "value": 1271.81
+    "value": 1272.19
   },
   "trade": null
 }

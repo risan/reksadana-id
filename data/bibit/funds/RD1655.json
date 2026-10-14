@@ -59,16 +59,16 @@
   },
   "asset": [
     {
+      "name": "Efek Ekuitas",
+      "percentage": 68.7
+    },
+    {
       "name": "Obligasi &/ Sukuk",
-      "percentage": 21.52
+      "percentage": 21.79
     },
     {
       "name": "Inst. Psr. Uang (Deposito, SBI, EBU JT <1th)",
-      "percentage": 11.56
-    },
-    {
-      "name": "Efek Ekuitas",
-      "percentage": 66.92
+      "percentage": 9.51
     }
   ],
   "holding": [
@@ -76,7 +76,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -86,7 +86,7 @@
       "symbol": "BBTN",
       "name": "Bank Tabungan Negara (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4346,
       "product_type": "Saham",
@@ -96,19 +96,9 @@
       "symbol": "BUMI",
       "name": "Bumi Resources Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4498,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "INKP",
-      "name": "Indah Kiat Pulp & Paper Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4514,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -116,17 +106,27 @@
       "symbol": "KBLI",
       "name": "KMI Wire & Cable Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4687,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "",
-      "name": "Obligasi Berkelanjutan III Buma Tahun 2025 Seri B",
+      "symbol": "INKP",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4514,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI BERKELANJUTAN III BUMA TAHUN 2025 SERI B",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,9 +134,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi | Tbs Energi Utama Tahun 2023 Seri B",
+      "name": "OBLIGASI I TBS ENERGI UTAMA TAHUN 2023 SERI B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -146,7 +146,7 @@
       "symbol": "SMGR",
       "name": "Semen Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4424,
       "product_type": "Saham",
@@ -154,9 +154,9 @@
     },
     {
       "symbol": "",
-      "name": "TD PT Bank Mandiri (persero), Tbk",
+      "name": "TD BANK JABAR BJB",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -166,7 +166,7 @@
       "symbol": "TINS",
       "name": "Timah Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4493,
       "product_type": "Saham",
@@ -199,7 +199,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 115100654045,
+    "value": 115100000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -211,40 +211,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.022955750561005184,
-    "3y": -0.005528865911593406,
-    "5y": 0.0294241954699479,
-    "10y": 0.0892346248191358,
-    "all": 0.09854363084945028
+    "1y": 0.006203489561208864,
+    "3y": -0.009970552112504638,
+    "5y": 0.028818908936010246,
+    "10y": 0.08563453805852062,
+    "all": 0.09788688165579496
   },
   "cagr_adjusted": {
-    "1y": 0.022955750561005184,
-    "3y": -0.005528865911593406,
-    "5y": 0.0294241954699479,
-    "10y": 0.0892346248191358,
-    "all": 0.09858637815630122
+    "1y": 0.006203489561208864,
+    "3y": -0.009970552112504638,
+    "5y": 0.028818908936010246,
+    "10y": 0.08563453805852062,
+    "all": 0.09790102363773401
   },
   "simplereturn": {
-    "1d": 0.004528322983102573,
-    "1m": -0.05078983088154365,
-    "3m": 0.060187825744911105,
-    "ytd": -0.16003163209125004,
-    "1y": 0.022955750561005184,
-    "3y": -0.016495061668328925,
-    "5y": 0.15603732986389107,
-    "10y": 1.350792970112804,
-    "all": 5.46610821779506
+    "1d": -0.0010121821115556262,
+    "1m": -0.05612178635733056,
+    "3m": 0.03281979232272336,
+    "ytd": -0.16952385651808066,
+    "1y": 0.006203489561208864,
+    "3y": -0.029614411800853113,
+    "5y": 0.15264265812153743,
+    "10y": 1.2742411527082385,
+    "all": 5.393036715680885
   },
   "changesvalue": {
-    "1d": 29.159999999999854,
-    "1m": -346.1199999999999,
-    "3m": 367.2300000000005,
-    "ytd": -1232.4099999999999,
-    "1y": 145.15999999999985,
-    "3y": -108.48999999999978,
-    "5y": 873.1099999999997,
-    "10y": 3716.9500000000003,
-    "all": 5468.24
+    "1d": -6.480000000000473,
+    "1m": -380.27000000000044,
+    "3m": 203.22999999999956,
+    "ytd": -1305.5100000000002,
+    "1y": 39.42999999999938,
+    "3y": -195.1800000000003,
+    "5y": 846.9499999999998,
+    "10y": 3583.37,
+    "all": 5395.139999999999
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -266,9 +266,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2006-12-07",
-    "value": 6468.63
+    "value": 6395.53
   },
   "trade": null
 }

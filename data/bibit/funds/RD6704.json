@@ -59,11 +59,11 @@
   "asset": [
     {
       "name": "Pendapatan Tetap",
-      "percentage": 98.42
+      "percentage": 99.28
     },
     {
       "name": "Pasar Uang",
-      "percentage": 1.58
+      "percentage": 0.72
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2024-07-11",
-    "value": 917.6601
+    "value": 898.9952
   },
   "trade": null
 }

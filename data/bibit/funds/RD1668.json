@@ -2,7 +2,7 @@
   "id": 1668,
   "custodian_bank_id": 2,
   "symbol": "RD1668",
-  "name": "Sucorinvest Sharia Equity Fund",
+  "name": "Sucorinvest Sharia Equity Fund Kelas A",
   "type": "Saham",
   "profile": "SUCORINVEST SHARIA EQUITY FUND bertujuan untuk memperoleh pertumbuhan nilai investasi yang optimal dalam jangka panjang dengan melakukan investasi pada Efek Syariah bersifat ekuitas serta Efek Syariah bersifat utang dan instrumen pasar uang syariah sesuai dengan prinsip-prinsip Syariah Islam dan peraturan perundang-undangan yang berlaku di Indonesia.\n\nSUCORINVEST SHARIA EQUITY FUND akan melakukan investasi dengan komposisi portofolio investasi (i) minimum 80% dan maksimum sebesar 100% dari Nilai Aktiva Bersih pada Efek Syariah bersifat ekuitas yang diterbitkan korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia yang termasuk dalam Daftar Efek Syariah; dan (ii) minimum 0% dan maksimum 20% dari Nilai Aktiva Bersih pada Surat Berharga Syariah Negara dan/atau Sukuk (Obligasi Syariah) yang diterbitkan oleh korporasi berbadan hukum Indonesia dan/atau instrumen pasar uang syariah dalam negeri dan/atau deposito syariah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
   "instrument_group": 0,
@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Efek Ekuitas Syariah",
-      "percentage": 96.57
+      "percentage": 96.76
     },
     {
       "name": "SBSN &/ Sukuk Korporasi &/ Inst. Psr. Uang Syariah Dlm Negeri &/ Deposito Syariah",
-      "percentage": 3.43
+      "percentage": 3.24
     }
   ],
   "holding": [
@@ -73,29 +73,29 @@
       "symbol": "ANTM",
       "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4396,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "",
-      "name": "BANK ALADIN SYARIAH Tbk",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
       "symbol": "BRIS",
       "name": "Bank Syariah Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4342,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BUMI",
+      "name": "Bumi Resources Tbk",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4498,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -103,39 +103,19 @@
       "symbol": "INKP",
       "name": "Indah Kiat Pulp & Paper Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4514,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "ICBP",
-      "name": "Indofood CBP Sukses Makmur Tbk.",
+      "symbol": "KLBF",
+      "name": "Kalbe Farma Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 4891,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "PTBA",
-      "name": "Bukit Asam Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 5051,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "JSMR",
-      "name": "Jasa Marga (Persero) Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4729,
+      "company_id": 4973,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -143,9 +123,19 @@
       "symbol": "MYOH",
       "name": "Samindo Resources Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4277,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "JSMR",
+      "name": "Jasa Marga (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4729,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -153,9 +143,19 @@
       "symbol": "SMGR",
       "name": "Semen Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4424,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "PTBA",
+      "name": "Bukit Asam Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 5051,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -163,7 +163,7 @@
       "symbol": "TINS",
       "name": "Timah Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4493,
       "product_type": "Saham",
@@ -175,7 +175,7 @@
       "id": 31,
       "bank": "BCA",
       "account": "4585677478",
-      "name": "Reksa Dana Sucorinvest Sharia Equity Fund"
+      "name": "Reksa Dana Sucorinvest Sharia Equity Fund Kelas A"
     }
   ],
   "exitload": [],
@@ -188,7 +188,7 @@
     "url": "www.sucorinvest.com/id/asset-management"
   },
   "custodian_bank": {
-    "name": "HSBC INDONESIA",
+    "name": "PT Bank HSBC Indonesia",
     "ojkCode": "HSBC1"
   },
   "sharia": true,
@@ -196,7 +196,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 977154918196,
+    "value": 977150000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -208,40 +208,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.02810294182121087,
-    "3y": -0.010903768748575682,
-    "5y": -0.03135457362809435,
-    "10y": 0.053641518421148504,
-    "all": 0.04537016329688148
+    "1y": -0.042383221803338644,
+    "3y": -0.015703612785822774,
+    "5y": -0.034352934937986745,
+    "10y": 0.052236553893318716,
+    "all": 0.044282410750142276
   },
   "cagr_adjusted": {
-    "1y": -0.02810294182121087,
-    "3y": -0.010903768748575682,
-    "5y": -0.03135457362809435,
-    "10y": 0.053641518421148504,
-    "all": 0.04539967643938847
+    "1y": -0.042383221803338644,
+    "3y": -0.015703612785822774,
+    "5y": -0.034352934937986745,
+    "10y": 0.052236553893318716,
+    "all": 0.04429199941811035
   },
   "simplereturn": {
-    "1d": 0.005220407769962021,
-    "1m": -0.06322333912620903,
-    "3m": 0.0703555499224442,
-    "ytd": -0.2011747430249633,
-    "1y": -0.02810294182121087,
-    "3y": -0.03235592609971949,
-    "5y": -0.14724522277679997,
-    "10y": 0.6862763742167368,
-    "all": 0.7745402149332588
+    "1d": 0.0037278123476616187,
+    "1m": -0.0640658841145485,
+    "3m": 0.04587720661176786,
+    "ytd": -0.2116654504833202,
+    "1y": -0.042383221803338644,
+    "3y": -0.046374900559048804,
+    "5y": -0.16036192495718204,
+    "10y": 0.6639253864729708,
+    "all": 0.7512357661750286
   },
   "changesvalue": {
-    "1d": 9.210000000000036,
-    "1m": -119.69000000000005,
-    "3m": 116.57000000000016,
-    "ytd": -446.6199999999999,
-    "1y": -51.27999999999997,
-    "3y": -59.299999999999955,
-    "5y": -306.2199999999998,
-    "10y": 721.75,
-    "all": 774.0600000000001
+    "1d": 6.5,
+    "1m": -119.79999999999995,
+    "3m": 76.76999999999998,
+    "ytd": -469.90999999999985,
+    "1y": -77.45999999999981,
+    "3y": -85.1099999999999,
+    "5y": -334.25999999999976,
+    "10y": 698.3300000000002,
+    "all": 750.7700000000001
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -263,9 +263,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2013-11-11",
-    "value": 1773.44
+    "value": 1750.15
   },
   "trade": null
 }

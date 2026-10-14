@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Obligasi < 1 tahun",
-      "percentage": 89.2
+      "percentage": 88.9
     },
     {
       "name": "Kas / Setara Kas",
-      "percentage": 10.8
+      "percentage": 11.1
     }
   ],
   "holding": [
@@ -194,9 +194,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2016-08-26",
-    "value": 1710.1108
+    "value": 1711.5236
   },
   "trade": null
 }

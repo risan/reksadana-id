@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Cash & Equivalent",
-      "percentage": 1.64
+      "percentage": 1.79
     },
     {
       "name": "Bonds",
-      "percentage": 58.4
+      "percentage": 57.09
     },
     {
       "name": "Equities",
-      "percentage": 39.35
+      "percentage": 39.8
     }
   ],
   "investment_manager": {
@@ -151,9 +151,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2001-08-15",
-    "value": 774.9235
+    "value": 770.2819
   },
   "trade": null
 }

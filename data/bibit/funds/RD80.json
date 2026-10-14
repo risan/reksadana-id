@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 15.46
+      "percentage": 18.78
     },
     {
       "name": "Ekuitas",
-      "percentage": 84.54
+      "percentage": 81.22
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2013-05-16",
-    "value": 685.93
+    "value": 666.68
   },
   "trade": null
 }

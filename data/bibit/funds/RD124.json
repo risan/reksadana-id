@@ -19,7 +19,6 @@
   },
   "released_date": "2004-04-16",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,20 +60,20 @@
   },
   "asset": [
     {
-      "name": "Likuiditas",
-      "percentage": 78.73
-    },
-    {
       "name": "Obligasi",
       "percentage": 21.27
+    },
+    {
+      "name": "Likuiditas",
+      "percentage": 78.73
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "BANK BENGKULU - TD",
+      "name": "BANK CAPITAL INDONESIA-TD",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -82,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK CAPITAL INDONESIA PT TBK - TD",
+      "name": "BANK NATIONALNOBU TD",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -92,9 +91,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK JAGO TBK, PT - TD",
+      "name": "BANK BENGKULU-TD",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,9 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK MANDIRI TASPEN POS, PT - TD",
+      "name": "BANK BRI-TD",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,9 +111,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK NATIONALNOBU TBK, PT - TD",
+      "name": "BANK WOORI SAUDARA INDONESIA-TD",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -122,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK SYARIAH INDONESIA - TD",
+      "name": "BANK MANDIRI TASPEN POS-TD",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -132,9 +131,9 @@
     },
     {
       "symbol": "",
-      "name": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0042",
+      "name": "BANK SYARIAH NASIONAL-TD",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -142,9 +141,9 @@
     },
     {
       "symbol": "",
-      "name": "PT. BANK SYARIAH NASIONAL - TD",
+      "name": "BANK JAGO-TO",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -152,9 +151,9 @@
     },
     {
       "symbol": "",
-      "name": "PT. BANK WOORI SAUDARA INDONESIA 1906, TBK - TD",
+      "name": "OBLIGASI BERKELANJUTAN IV INDAH KIAT PULP & PAPER TAHAP V TAHUN 2024 SERJ B",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,9 +161,9 @@
     },
     {
       "symbol": "",
-      "name": "PT.BRI (PERSERO) TBK. - TD",
+      "name": "OBLIGASI BERKELANJUTAN V MERDEKA COPPER GOLD TAHAP III TAHUN 2026",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +196,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 4083685376636.73,
+    "value": 4105850000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -209,40 +208,40 @@
     "percentage": 0.0475
   },
   "cagr": {
-    "1y": 0.039895484777130674,
-    "3y": 0.04475606735642779,
-    "5y": 0.03838065655071765,
-    "10y": 0.04569106785996069,
-    "all": 0.03160751517384108
+    "1y": 0.039921962498645325,
+    "3y": 0.04479145437383991,
+    "5y": 0.038416502855479706,
+    "10y": 0.045639812070989105,
+    "all": 0.0316238234849997
   },
   "cagr_adjusted": {
-    "1y": 0.039895484777130674,
-    "3y": 0.04475606735642779,
-    "5y": 0.03838065655071765,
-    "10y": 0.04569106785996069,
-    "all": 0.03161924837341412
+    "1y": 0.039921962498645325,
+    "3y": 0.04479145437383991,
+    "5y": 0.038416502855479706,
+    "10y": 0.045639812070989105,
+    "all": 0.03162773467938429
   },
   "simplereturn": {
-    "1d": 0.00012912453564828397,
-    "1m": 0.004098524132429171,
-    "3m": 0.01302869330757761,
-    "ytd": 0.030218698043227965,
-    "1y": 0.039895484777130674,
-    "3y": 0.14036716989252174,
-    "5y": 0.20721033953577583,
-    "10y": 0.5632699637481466,
-    "all": 1.01382
+    "1d": 0.00012905659628126287,
+    "1m": 0.0043666380874525235,
+    "3m": 0.013128717750167329,
+    "ytd": 0.030760966875559514,
+    "1y": 0.039921962498645325,
+    "3y": 0.14048305022386498,
+    "5y": 0.20741872659176042,
+    "10y": 0.5625038774117501,
+    "all": 1.0148800000000002
   },
   "changesvalue": {
-    "1d": 0.2599999999999909,
-    "1m": 8.220000000000027,
-    "3m": 25.899999999999864,
-    "ytd": 59.069999999999936,
-    "1y": 77.25999999999999,
-    "3y": 247.87999999999988,
-    "5y": 345.65999999999985,
-    "10y": 725.6099999999999,
-    "all": 1013.8199999999999
+    "1d": 0.2600000000002183,
+    "1m": 8.760000000000218,
+    "3m": 26.110000000000127,
+    "ytd": 60.13000000000011,
+    "1y": 77.35000000000014,
+    "3y": 248.19000000000005,
+    "5y": 346.1300000000001,
+    "10y": 725.3600000000001,
+    "all": 1014.8800000000001
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -264,9 +263,9 @@
     "quota_limit": 3
   },
   "nav": {
-    "date": "2026-10-09",
+    "date": "2026-10-13",
     "first_date": "2004-04-19",
-    "value": 2013.82
+    "value": 2014.88
   },
   "trade": null
 }
