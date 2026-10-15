@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -59,16 +60,12 @@
   },
   "asset": [
     {
-      "name": "Kas & Deposito",
-      "percentage": 5
+      "name": "Obligasi",
+      "percentage": 94.67
     },
     {
-      "name": "Obligasi Pemerintah",
-      "percentage": 25
-    },
-    {
-      "name": "Obligasi Korporasi",
-      "percentage": 70
+      "name": "Deposito",
+      "percentage": 3.99
     }
   ],
   "investment_manager": {
@@ -146,9 +143,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2023-02-22",
-    "value": 964.51
+    "value": 965.13
   },
   "trade": null
 }

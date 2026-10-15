@@ -60,34 +60,20 @@
   },
   "asset": [
     {
-      "name": "Kas & Deposito Syariah",
-      "percentage": 54
+      "name": "Deposito Syariah",
+      "percentage": 44.28
     },
     {
-      "name": "Sukuk Pemerintah",
-      "percentage": 8
-    },
-    {
-      "name": "Sukuk Korp.",
-      "percentage": 38
+      "name": "Sukuk",
+      "percentage": 53.09
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Bank Mega Syariah",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "BPD BJB Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -97,7 +83,7 @@
       "symbol": "",
       "name": "BPD Riau Kepri Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -107,7 +93,7 @@
       "symbol": "",
       "name": "BPD Sumselbabel UUS",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -117,7 +103,7 @@
       "symbol": "",
       "name": "CIMB Niaga Auto Finance",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -127,7 +113,7 @@
       "symbol": "",
       "name": "Indah Kiat Pulp & Paper",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -137,7 +123,7 @@
       "symbol": "",
       "name": "OKI Pulp & Paper Mills",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -147,7 +133,7 @@
       "symbol": "PBS003",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 6020,
       "product_type": "FR",
@@ -155,9 +141,9 @@
     },
     {
       "symbol": "",
-      "name": "PT Pegadaian",
+      "name": "PT PNM",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -165,9 +151,19 @@
     },
     {
       "symbol": "",
-      "name": "Sampoerna Agro",
+      "name": "PT Pegadaian",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Prime Agri Resources",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -200,7 +196,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 85826093433.04,
+    "value": 85826093433,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -212,40 +208,40 @@
     "percentage": 0.0326
   },
   "cagr": {
-    "1y": 0.03940112465874113,
-    "3y": 0.04214431954507081,
-    "5y": 0.03816552310995891,
-    "10y": 0.04395489943683373,
-    "all": 0.049892458965367315
+    "1y": 0.039467745531466036,
+    "3y": 0.04220247887561723,
+    "5y": 0.03819504444918542,
+    "10y": 0.04395558201508276,
+    "all": 0.04989514360302594
   },
   "cagr_adjusted": {
-    "1y": 0.03940112465874113,
-    "3y": 0.04214431954507081,
-    "5y": 0.03816552310995891,
-    "10y": 0.04395489943683373,
-    "all": 0.04990298772874868
+    "1y": 0.039467745531466036,
+    "3y": 0.04220247887561723,
+    "5y": 0.03819504444918542,
+    "10y": 0.04395558201508276,
+    "all": 0.04990567077797259
   },
   "simplereturn": {
-    "1d": 0.0003297393488956857,
-    "1m": 0.004646786410777981,
-    "3m": 0.011982420840834562,
-    "ytd": 0.030223808189051127,
-    "1y": 0.03940112465874113,
-    "3y": 0.13183624401134675,
-    "5y": 0.20596029833040985,
-    "10y": 0.5375079440417676,
-    "all": 0.91123
+    "1d": 0.00016743144467179505,
+    "1m": 0.00457208923456931,
+    "3m": 0.012001821185040784,
+    "ytd": 0.030396300049591263,
+    "1y": 0.039467745531466036,
+    "3y": 0.13202574898881325,
+    "5y": 0.20613177189152365,
+    "10y": 0.5375179968952841,
+    "all": 0.9115499999999999
   },
   "changesvalue": {
-    "1d": 0.6300000000001091,
-    "1m": 8.839999999999918,
-    "3m": 22.63000000000011,
-    "ytd": 56.069999999999936,
-    "1y": 72.45000000000005,
-    "3y": 222.62000000000012,
-    "5y": 326.4100000000001,
-    "10y": 668.1600000000001,
-    "all": 911.23
+    "1d": 0.31999999999993634,
+    "1m": 8.700000000000045,
+    "3m": 22.669999999999845,
+    "ytd": 56.38999999999987,
+    "1y": 72.57999999999993,
+    "3y": 222.94000000000005,
+    "5y": 326.69000000000005,
+    "10y": 668.28,
+    "all": 911.55
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -267,9 +263,9 @@
     "quota_limit": 3
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2013-06-28",
-    "value": 1911.23
+    "value": 1911.55
   },
   "trade": null
 }

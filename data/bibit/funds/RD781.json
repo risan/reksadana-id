@@ -60,20 +60,20 @@
   },
   "asset": [
     {
-      "name": "Obligasi",
-      "percentage": 95.77
-    },
-    {
       "name": "Deposito",
       "percentage": 3.15
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 95.77
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Bank BTN",
+      "name": "BPD Jawa Barat Dan Banten",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "BPD Jabar & Banten",
+      "name": "Bank Tabungan Negara Persero",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,9 +91,9 @@
     },
     {
       "symbol": "",
-      "name": "Chandra Asri Petrochemical",
+      "name": "Chandra Asri Pacific",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,29 +103,29 @@
       "symbol": "",
       "name": "Energi Mega Persada",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "FR0108",
+      "symbol": "FR0110",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 9548,
+      "company_id": 10929,
       "product_type": "FR",
       "serie_id": null
     },
     {
-      "symbol": "FR0110",
+      "symbol": "FR0111",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 10929,
+      "company_id": 10996,
       "product_type": "FR",
       "serie_id": null
     },
@@ -133,7 +133,7 @@
       "symbol": "",
       "name": "Indah Kiat Pulp & Paper",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,17 +143,7 @@
       "symbol": "",
       "name": "Mayora Indah",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Medco Energi",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -163,7 +153,17 @@
       "symbol": "",
       "name": "OKI Pulp & Paper Mills",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Tower Bersama Infrastructure",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,7 +196,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 63492705418.27,
+    "value": 63492705418,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -208,40 +208,40 @@
     "percentage": 0.0801
   },
   "cagr": {
-    "1y": -0.001215771108376118,
-    "3y": 0.04602972822148166,
-    "5y": 0.04003967845506873,
+    "1y": -0.0017205751758999632,
+    "3y": 0.04627600533326315,
+    "5y": 0.039577785726007564,
     "10y": null,
-    "all": 0.048387129169335186
+    "all": 0.04845644993775289
   },
   "cagr_adjusted": {
-    "1y": -0.001215771108376118,
-    "3y": 0.04602972822148166,
-    "5y": 0.04003967845506873,
+    "1y": -0.0017205751758999632,
+    "3y": 0.04627600533326315,
+    "5y": 0.039577785726007564,
     "10y": null,
-    "all": 0.048402697904885716
+    "all": 0.04847203659063659
   },
   "simplereturn": {
-    "1d": -0.00042741370460475103,
-    "1m": 0.002057761864567187,
-    "3m": 0.017927814466145886,
-    "ytd": -0.0090384481723772,
-    "1y": -0.001215771108376118,
-    "3y": 0.14454291714161172,
-    "5y": 0.21688501101185542,
+    "1d": 0.000706485943388957,
+    "1m": 0.003142808002035702,
+    "3m": 0.018125167469687176,
+    "ytd": -0.008338347765571963,
+    "1y": -0.0017205751758999632,
+    "3y": 0.14535152062417755,
+    "5y": 0.21418525191077542,
     "10y": null,
-    "all": 0.5099421175642695
+    "all": 0.5110088704456597
   },
   "changesvalue": {
-    "1d": -0.669399999999996,
-    "1m": 3.2147999999999683,
-    "3m": 27.57159999999999,
-    "ytd": -14.278700000000072,
-    "1y": -1.9056000000000495,
-    "3y": 197.70440000000008,
-    "5y": 279.0175999999999,
+    "1d": 1.1059999999999945,
+    "1m": 4.908099999999877,
+    "3m": 27.889400000000023,
+    "ytd": -13.172700000000077,
+    "1y": -2.7001000000000204,
+    "3y": 198.81040000000007,
+    "5y": 276.35220000000004,
     "10y": null,
-    "all": 528.7035000000001
+    "all": 529.8095000000001
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -259,9 +259,9 @@
     "all": -0.0975064346231274
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2018-01-26",
-    "value": 1565.4947
+    "value": 1566.6007
   },
   "trade": null
 }

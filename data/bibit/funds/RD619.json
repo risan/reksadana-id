@@ -19,6 +19,7 @@
   },
   "released_date": "2010-02-01",
   "is_top_product": 1,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,20 +61,20 @@
   },
   "asset": [
     {
-      "name": "Efek Utang",
-      "percentage": 59.55
+      "name": "Pasar Uang",
+      "percentage": 45.68
     },
     {
-      "name": "Pasar Uang",
-      "percentage": 40.45
+      "name": "Efek Utang",
+      "percentage": 54.32
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "BBRI01ASOCN2",
+      "name": "ADMF07ACN3",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,19 +82,9 @@
     },
     {
       "symbol": "",
-      "name": "BDKIIDJ1",
+      "name": "BBRIOJASOCN2",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "FR0056",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +94,7 @@
       "symbol": "",
       "name": "JAGBIDJA",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +104,7 @@
       "symbol": "",
       "name": "MDKA05CN3",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +114,7 @@
       "symbol": "",
       "name": "PDJBIDJA",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -131,9 +122,9 @@
     },
     {
       "symbol": "",
-      "name": "PDRIIDJA",
+      "name": "PORIIDJA",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +134,7 @@
       "symbol": "",
       "name": "SSPIIDJA",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -151,9 +142,9 @@
     },
     {
       "symbol": "",
-      "name": "SWAGIDJ1",
+      "name": "SYDKIDJI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -161,9 +152,19 @@
     },
     {
       "symbol": "",
-      "name": "SYDKIDJ1",
+      "name": "SYSSIDJI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "WISLOTACNS",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,7 +197,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 2082468378752.89,
+    "value": 2080000000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -208,40 +209,40 @@
     "percentage": 0.0706
   },
   "cagr": {
-    "1y": 0.04242155172917261,
-    "3y": 0.04941026216553257,
-    "5y": 0.04258647471804822,
-    "10y": 0.04437875172127215,
-    "all": 0.03958707471461187
+    "1y": 0.04245691381715644,
+    "3y": 0.04948243960885934,
+    "5y": 0.04260159254530205,
+    "10y": 0.044385106135001795,
+    "all": 0.039593309330705484
   },
   "cagr_adjusted": {
-    "1y": 0.04242155172917261,
-    "3y": 0.04941026216553257,
-    "5y": 0.04258647471804822,
-    "10y": 0.04437875172127215,
-    "all": 0.03959371079352891
+    "1y": 0.04245691381715644,
+    "3y": 0.04948243960885934,
+    "5y": 0.04260159254530205,
+    "10y": 0.044385106135001795,
+    "all": 0.0395999453834226
   },
   "simplereturn": {
-    "1d": 0.00034417695902089207,
-    "1m": 0.005403548954300508,
-    "3m": 0.01206444147548802,
-    "ytd": 0.03199585310288078,
-    "1y": 0.04242155172917261,
-    "3y": 0.1556755374481411,
-    "5y": 0.23185738945997758,
-    "10y": 0.5437617407892397,
-    "all": 0.9098494000000001
+    "1d": 0.00020635134895985452,
+    "1m": 0.005215297300309674,
+    "3m": 0.012143592045586793,
+    "ytd": 0.032208806839289394,
+    "1y": 0.04245691381715644,
+    "3y": 0.1559140126542533,
+    "5y": 0.2319467036212166,
+    "10y": 0.54385567193612,
+    "all": 0.9102435
   },
   "changesvalue": {
-    "1d": 0.6571000000001277,
-    "1m": 10.264499999999998,
-    "3m": 22.766600000000153,
-    "ytd": 59.21270000000004,
-    "1y": 77.72170000000006,
-    "3y": 257.2667000000001,
-    "5y": 359.4675,
-    "10y": 672.7094,
-    "all": 909.8494000000001
+    "1d": 0.39409999999998035,
+    "1m": 9.910800000000108,
+    "3m": 22.91890000000012,
+    "ytd": 59.60680000000002,
+    "1y": 77.79989999999998,
+    "3y": 257.6608000000001,
+    "5y": 359.65409999999997,
+    "10y": 672.9235000000001,
+    "all": 910.2435
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -263,9 +264,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2010-02-17",
-    "value": 1909.8494
+    "value": 1910.2435
   },
   "trade": null
 }

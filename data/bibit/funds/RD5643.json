@@ -19,6 +19,7 @@
   },
   "released_date": "2022-07-15",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -59,12 +60,12 @@
   },
   "asset": [
     {
-      "name": "Efek Ekuitas",
-      "percentage": 99.41
+      "name": "Pasar Uang",
+      "percentage": 0.42
     },
     {
-      "name": "Pasar Uang",
-      "percentage": 0.59
+      "name": "Efek Ekuitas",
+      "percentage": 99.58
     }
   ],
   "holding": [
@@ -72,7 +73,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -82,7 +83,7 @@
       "symbol": "BBNI",
       "name": "Bank Negara Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4338,
       "product_type": "Saham",
@@ -92,7 +93,7 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
@@ -102,7 +103,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -112,7 +113,7 @@
       "symbol": "BRMS",
       "name": "Bumi Resources Minerals Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4633,
       "product_type": "Saham",
@@ -122,7 +123,7 @@
       "symbol": "BRPT",
       "name": "Barito Pacific Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4586,
       "product_type": "Saham",
@@ -132,7 +133,7 @@
       "symbol": "GOTO",
       "name": "GoTo Gojek Tokopedia Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4425,
       "product_type": "Saham",
@@ -142,7 +143,7 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4623,
       "product_type": "Saham",
@@ -171,7 +172,7 @@
   "index": true,
   "is_instant_redemption": true,
   "aum": {
-    "value": 63995152773.56,
+    "value": 93700000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -183,40 +184,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.2671894905389137,
-    "3y": -0.16178335565073498,
+    "1y": -0.2398185170110375,
+    "3y": -0.15822900938793405,
     "5y": null,
     "10y": null,
-    "all": -0.10952685572362586
+    "all": -0.10669914310665163
   },
   "cagr_adjusted": {
-    "1y": -0.2671894905389137,
-    "3y": -0.16178335565073498,
+    "1y": -0.2398185170110375,
+    "3y": -0.15822900938793405,
     "5y": null,
     "10y": null,
-    "all": -0.10959590181917989
+    "all": -0.10676647042064158
   },
   "simplereturn": {
-    "1d": -0.005645775183963364,
-    "1m": -0.0894304220279416,
-    "3m": -0.04449862846693087,
-    "ytd": -0.30159508109071465,
-    "1y": -0.2671894905389137,
-    "3y": -0.4110629984125941,
+    "1d": 0.012775119617224773,
+    "1m": -0.10408025057140435,
+    "3m": -0.02155624036979975,
+    "ytd": -0.2926728747103903,
+    "1y": -0.2398185170110375,
+    "3y": -0.4035392577703052,
     "5y": null,
     "10y": null,
-    "all": -0.37859266600594643
+    "all": -0.37065411298315165
   },
   "changesvalue": {
-    "1d": -3.5599999999999454,
-    "1m": -61.58000000000004,
-    "3m": -29.200000000000045,
-    "ytd": -270.76,
-    "1y": -228.61,
-    "3y": -437.6300000000001,
+    "1d": 8.009999999999991,
+    "1m": -73.76999999999998,
+    "3m": -13.990000000000009,
+    "ytd": -262.75,
+    "1y": -200.33000000000004,
+    "3y": -429.6200000000001,
     "5y": null,
     "10y": null,
-    "all": -382
+    "all": -373.99
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -238,9 +239,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2022-09-08",
-    "value": 627
+    "value": 635.01
   },
   "trade": null
 }

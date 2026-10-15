@@ -60,12 +60,12 @@
   },
   "asset": [
     {
-      "name": "Efek Ekuitas",
-      "percentage": 99.85
-    },
-    {
       "name": "Pasar Uang",
       "percentage": 0.15
+    },
+    {
+      "name": "Efek Ekuitas",
+      "percentage": 99.85
     }
   ],
   "holding": [
@@ -73,7 +73,7 @@
       "symbol": "ADRO",
       "name": "Alamtri Resources Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 5007,
       "product_type": "Saham",
@@ -83,7 +83,7 @@
       "symbol": "ANTM",
       "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4396,
       "product_type": "Saham",
@@ -93,7 +93,7 @@
       "symbol": "BRMS",
       "name": "Bumi Resources Minerals Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4633,
       "product_type": "Saham",
@@ -103,19 +103,9 @@
       "symbol": "BUMI",
       "name": "Bumi Resources Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4498,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "ICBP",
-      "name": "Indofood CBP Sukses Makmur Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4891,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -123,7 +113,7 @@
       "symbol": "INDF",
       "name": "Indofood Sukses Makmur Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4919,
       "product_type": "Saham",
@@ -133,7 +123,7 @@
       "symbol": "INKP",
       "name": "Indah Kiat Pulp & Paper Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4514,
       "product_type": "Saham",
@@ -143,7 +133,7 @@
       "symbol": "MDKA",
       "name": "Merdeka Copper Gold Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4563,
       "product_type": "Saham",
@@ -153,9 +143,19 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TPIA",
+      "name": "Chandra Asri Pacific Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4710,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -163,7 +163,7 @@
       "symbol": "UNTR",
       "name": "United Tractors Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4571,
       "product_type": "Saham",
@@ -192,7 +192,7 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 101338277129.89,
+    "value": 101340000000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -204,40 +204,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.3645499486001089,
-    "3y": -0.1121380654352867,
-    "5y": -0.06809940970952866,
-    "10y": -0.05946997961199485,
-    "all": 0.025603852230288604
+    "1y": -0.3525957627282016,
+    "3y": -0.11252724381595292,
+    "5y": -0.07194601308088178,
+    "10y": -0.06065379440182528,
+    "all": 0.025534720292738733
   },
   "cagr_adjusted": {
-    "1y": -0.3645499486001089,
-    "3y": -0.1121380654352867,
-    "5y": -0.06809940970952866,
-    "10y": -0.05946997961199485,
-    "all": 0.025607311724937354
+    "1y": -0.3525957627282016,
+    "3y": -0.11252724381595292,
+    "5y": -0.07194601308088178,
+    "10y": -0.06065379440182528,
+    "all": 0.025538169870484184
   },
   "simplereturn": {
-    "1d": 0.0000713763137702994,
-    "1m": -0.106358891499155,
-    "3m": -0.013853616192660345,
-    "ytd": -0.3701653112368938,
-    "1y": -0.3645499486001089,
-    "3y": -0.30009948923310037,
-    "5y": -0.2971738139925678,
-    "10y": -0.4583401791841035,
-    "all": 0.6806945291336377
+    "1d": -0.0013144199601509143,
+    "1m": -0.11027627353941682,
+    "3m": -0.03641684838746695,
+    "ytd": -0.3709931785233994,
+    "1y": -0.3525957627282016,
+    "3y": -0.3010194524345723,
+    "5y": -0.31155982862179943,
+    "10y": -0.46511939043347517,
+    "all": 0.678485390697628
   },
   "changesvalue": {
-    "1d": 0.11999999999989086,
-    "1m": -200.11000000000013,
-    "3m": -23.62000000000012,
-    "ytd": -988.1600000000003,
-    "1y": -964.5700000000002,
-    "3y": -720.9200000000001,
-    "5y": -710.9200000000001,
-    "10y": -1422.7200000000003,
-    "all": 680.9599999999999
+    "1d": -2.209999999999809,
+    "1m": -208.1199999999999,
+    "3m": -63.45999999999981,
+    "ytd": -990.3700000000001,
+    "1y": -914.51,
+    "3y": -723.1299999999999,
+    "5y": -759.9100000000001,
+    "10y": -1460.14,
+    "all": 678.7500000000001
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -255,9 +255,9 @@
     "all": -0.6558351059928116
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2006-04-06",
-    "value": 1681.35
+    "value": 1679.14
   },
   "trade": null
 }

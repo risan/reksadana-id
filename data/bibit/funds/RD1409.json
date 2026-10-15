@@ -71,9 +71,9 @@
   "holding": [
     {
       "symbol": "",
-      "name": "Obligasi Bank Pan Indonesia",
+      "name": "Bank Pan Indonesia",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,49 +81,39 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Energi Mega Persada",
+      "name": "Energi Mega Persada",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "FR0103",
-      "name": "Obligasi FR",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 8710,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
-      "symbol": "FR0104",
-      "name": "Obligasi FR",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 8733,
-      "product_type": "FR",
       "serie_id": null
     },
     {
       "symbol": "FR0108",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 9548,
       "product_type": "FR",
       "serie_id": null
     },
     {
-      "symbol": "",
-      "name": "Sukuk Indah Kiat Pulp & Paper",
+      "symbol": "FR0110",
+      "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 10929,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indah Kiat Pulp & Paper",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -131,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Indonesian Paradise Property",
+      "name": "Indonesian Paradise Property",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -141,9 +131,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi OKI Pulp & Paper Mills",
+      "name": "Mayora Indah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -151,9 +141,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Pindo Deli Pulp & Paper Mills",
+      "name": "OKI Pulp & Paper Mills",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -161,9 +151,19 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Telkom",
+      "name": "Pindo Deli Pulp & Paper Mills",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Telkom Indonesia Persero",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,7 +196,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 165219295097.98,
+    "value": 165219295097,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -208,40 +208,40 @@
     "percentage": 0.0737
   },
   "cagr": {
-    "1y": -0.06233239644788291,
-    "3y": -0.003798231652265116,
-    "5y": -0.0039720715486111224,
+    "1y": -0.062363318944903545,
+    "3y": -0.0036127053326400205,
+    "5y": -0.0038786155784584775,
     "10y": null,
-    "all": 0.008404816726385711
+    "all": 0.00846674722491736
   },
   "cagr_adjusted": {
-    "1y": -0.002593973211195255,
-    "3y": 0.04485131291907729,
-    "5y": 0.042249682792943055,
+    "1y": -0.0026268657679762164,
+    "3y": 0.04504589942233439,
+    "5y": 0.042347475688568004,
     "10y": null,
-    "all": 0.053951156813698775
+    "all": 0.054001276406927756
   },
   "simplereturn": {
-    "1d": 0.000023783019584611154,
-    "1m": 0.003587905853243978,
-    "3m": 0.017131118882651064,
-    "ytd": -0.005409542646669707,
-    "1y": -0.002593973211195255,
-    "3y": 0.1406790842761827,
-    "5y": 0.2298690092296647,
+    "1d": 0.0005588050902378683,
+    "1m": 0.0036306299814776732,
+    "3m": 0.017359891137150196,
+    "ytd": -0.004853760436398402,
+    "1y": -0.0026268657679762164,
+    "3y": 0.14131650155480413,
+    "5y": 0.23044610234738339,
     "10y": null,
-    "all": 0.5810463813074391
+    "all": 0.5819298780732154
   },
   "changesvalue": {
-    "1d": 0.028799999999819192,
-    "1m": 4.350984181646027,
-    "3m": 20.707553448879935,
-    "ytd": -6.933114908253856,
-    "1y": -3.350058556655995,
-    "3y": 172.31513742729499,
-    "5y": 283.9609799400571,
+    "1d": 0.6766999999999825,
+    "1m": 4.405067681747823,
+    "3m": 20.991090814111885,
+    "ytd": -6.2207992506359915,
+    "1y": -3.3945462737410708,
+    "3y": 173.09589774095002,
+    "5y": 284.69935992933097,
     "10y": null,
-    "all": 654.1061074095501
+    "all": 655.100693468361
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -259,9 +259,9 @@
     "all": -0.0342364532294024
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2018-01-26",
-    "value": 1210.9768
+    "value": 1211.6535
   },
   "trade": null
 }

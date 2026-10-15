@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 8.96
+      "percentage": 3.5
     },
     {
       "name": "Efek Utang",
-      "percentage": 91.04
+      "percentage": 96.5
     }
   ],
   "investment_manager": {
@@ -148,9 +149,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2019-02-26",
-    "value": 1500.8386
+    "value": 1502.1059
   },
   "trade": null
 }

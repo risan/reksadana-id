@@ -19,6 +19,7 @@
   },
   "released_date": "2012-12-27",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,20 +61,50 @@
   },
   "asset": [
     {
-      "name": "Obligasi",
-      "percentage": 50.83
+      "name": "Deposito",
+      "percentage": 48.56
     },
     {
-      "name": "Deposito",
-      "percentage": 48.53
+      "name": "Obligasi",
+      "percentage": 50.83
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Bank Mega Syariah",
+      "name": "BANK CIMB Niaga",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK HiBank",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK Mega Syariah",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Aceh Syariah",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +114,7 @@
       "symbol": "",
       "name": "BPD Nagari/Sumbar",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +124,7 @@
       "symbol": "",
       "name": "BPD Riau Kepri Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -101,19 +132,9 @@
     },
     {
       "symbol": "",
-      "name": "BPD Sulselbar",
+      "name": "BPD Sumselbabel UUS",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Chandra Asri Petrochemical",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,47 +144,27 @@
       "symbol": "",
       "name": "Energi Mega Persada",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "FR0059",
-      "name": "Obligasi FR",
+      "symbol": "",
+      "name": "Indah Kiat Pulp & Paper",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 5998,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
-      "symbol": "FR0090",
-      "name": "Obligasi FR",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 5806,
-      "product_type": "FR",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
       "serie_id": null
     },
     {
       "symbol": "",
       "name": "OKI Pulp & Paper Mills",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Sampoerna Agro",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,7 +197,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 322889589007,
+    "value": 683206656200,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -208,40 +209,40 @@
     "percentage": 0.0507
   },
   "cagr": {
-    "1y": 0.042479316287696856,
-    "3y": 0.04529925650872868,
-    "5y": 0.039582892462819874,
-    "10y": 0.04741222277233481,
-    "all": 0.053850838976353455
+    "1y": 0.04262179098443508,
+    "3y": 0.045380333811504636,
+    "5y": 0.03963984019519051,
+    "10y": 0.0474180351516682,
+    "all": 0.05385763142405664
   },
   "cagr_adjusted": {
-    "1y": 0.042479316287696856,
-    "3y": 0.04529925650872868,
-    "5y": 0.039582892462819874,
-    "10y": 0.04741222277233481,
-    "all": 0.05386181291620051
+    "1y": 0.04262179098443508,
+    "3y": 0.045380333811504636,
+    "5y": 0.03963984019519051,
+    "10y": 0.0474180351516682,
+    "all": 0.05386860460463727
   },
   "simplereturn": {
-    "1d": 0.0003782955361124607,
-    "1m": 0.006038199660534094,
-    "3m": 0.016018599702483538,
-    "ytd": 0.032522563560912765,
-    "1y": 0.042479316287696856,
-    "3y": 0.1421467925468589,
-    "5y": 0.2142150745249476,
-    "10y": 0.5891920211413557,
-    "all": 1.0625981220563383
+    "1d": 0.0002327092201332981,
+    "1m": 0.005806272334160312,
+    "3m": 0.015969783967183737,
+    "ytd": 0.03276284108144889,
+    "1y": 0.04262179098443508,
+    "3y": 0.1424125806362302,
+    "5y": 0.21454768085995668,
+    "10y": 0.5892802119923581,
+    "all": 1.0630781076567701
   },
   "changesvalue": {
-    "1d": 0.7799999999997453,
-    "1m": 12.379999999999654,
-    "3m": 32.519999999999754,
-    "ytd": 64.9699999999998,
-    "1y": 84.04999999999995,
-    "3y": 256.7099999999998,
-    "5y": 363.89999999999986,
-    "10y": 764.7299999999998,
-    "all": 1062.6299999999999
+    "1d": 0.4800000000000182,
+    "1m": 11.909999999999854,
+    "3m": 32.429999999999836,
+    "ytd": 65.44999999999982,
+    "1y": 84.33999999999992,
+    "3y": 257.1899999999998,
+    "5y": 364.4499999999998,
+    "10y": 764.9799999999998,
+    "all": 1063.11
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -263,9 +264,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2012-12-28",
-    "value": 2062.66
+    "value": 2063.14
   },
   "trade": null
 }

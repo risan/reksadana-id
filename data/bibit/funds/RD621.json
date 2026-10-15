@@ -18,6 +18,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,15 +61,15 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 13.64
+      "percentage": 12.79
     },
     {
       "name": "Efek Utang",
-      "percentage": 69.94
+      "percentage": 72.62
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 16.43
+      "percentage": 14.59
     }
   ],
   "holding": [
@@ -203,9 +204,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2000-12-04",
-    "value": 5963.0186
+    "value": 5964.1645
   },
   "trade": null
 }

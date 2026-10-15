@@ -19,6 +19,7 @@
   },
   "released_date": "2024-04-02",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -66,72 +67,12 @@
   ],
   "holding": [
     {
-      "symbol": "BBCA",
-      "name": "Bank Central Asia Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4320,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BBNI",
-      "name": "Bank Negara Indonesia (Persero) Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4338,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BBRI",
-      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4327,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BBTN",
-      "name": "Bank Tabungan Negara (Persero) Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4346,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BDMN",
-      "name": "Bank Danamon Indonesia Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4880,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
       "symbol": "BJBR",
       "name": "Bank Pembangunan Daerah Jawa Barat dan Banten Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4693,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BMRI",
-      "name": "Bank Mandiri (Persero) Tbk.",
-      "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": 1,
-      "company_id": 4331,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -139,19 +80,49 @@
       "symbol": "BNGA",
       "name": "Bank CIMB Niaga Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4744,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "BRIS",
-      "name": "Bank Syariah Indonesia Tbk.",
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
-      "company_id": 4342,
+      "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BDMN",
+      "name": "Bank Danamon Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4880,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4338,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -159,9 +130,39 @@
       "symbol": "PNBN",
       "name": "Bank Pan Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": 1,
       "company_id": 4533,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4327,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BRIS",
+      "name": "Bank Syariah Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4342,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBTN",
+      "name": "Bank Tabungan Negara (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-09-30",
+      "clickable": 1,
+      "company_id": 4346,
       "product_type": "Saham",
       "serie_id": null
     }
@@ -188,7 +189,7 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 205334271747.02,
+    "value": 237977026727,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -200,40 +201,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.09014232999472849,
+    "1y": -0.06018249159204769,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.15331884486569403
+    "all": -0.14991910127518837
   },
   "cagr_adjusted": {
-    "1y": -0.09014232999472849,
+    "1y": -0.06018249159204769,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.15347133553901138
+    "all": -0.15006835664103624
   },
   "simplereturn": {
-    "1d": -0.0037971991858805065,
-    "1m": -0.06646929886987962,
-    "3m": -0.015416948134804431,
-    "ytd": -0.16711535531061106,
-    "1y": -0.09014232999472849,
+    "1d": 0.009757882539488838,
+    "1m": -0.08343828279613053,
+    "3m": 0.013807672289746886,
+    "ytd": -0.15898816477878808,
+    "1y": -0.06018249159204769,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.34412
+    "all": -0.33772
   },
   "changesvalue": {
-    "1d": -2.5,
-    "1m": -46.700000000000045,
-    "3m": -10.269999999999982,
-    "ytd": -131.60000000000002,
-    "1y": -64.98000000000002,
+    "1d": 6.399999999999977,
+    "1m": -60.29000000000008,
+    "3m": 9.019999999999982,
+    "ytd": -125.20000000000005,
+    "1y": -42.41000000000008,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -344.12
+    "all": -337.72
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -251,9 +252,9 @@
     "all": -0.4593845565749235
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2024-04-02",
-    "value": 655.88
+    "value": 662.28
   },
   "trade": null
 }

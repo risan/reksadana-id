@@ -19,10 +19,11 @@
   },
   "released_date": "2025-07-10",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17845,
+    "exchange_rate": 17875,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,11 +61,11 @@
   "asset": [
     {
       "name": "Efek Utang",
-      "percentage": 25.69
+      "percentage": 40.7
     },
     {
       "name": "Pasar Uang + Kas",
-      "percentage": 74.31
+      "percentage": 59.3
     }
   ],
   "holding": [
@@ -72,7 +73,7 @@
       "symbol": "",
       "name": "BMRIIDJA",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -82,7 +83,7 @@
       "symbol": "",
       "name": "BRINIDJA",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -92,17 +93,7 @@
       "symbol": "",
       "name": "BSSPIDSP",
       "annualDividend": 0,
-      "date": "2026-08-31",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "DBSBIDJA",
-      "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,7 +103,17 @@
       "symbol": "",
       "name": "JAGBIDJA",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "MEGAIDJA",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -122,7 +123,7 @@
       "symbol": "",
       "name": "PDJBIDJA",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -132,7 +133,7 @@
       "symbol": "",
       "name": "US71567RAH93",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -142,7 +143,7 @@
       "symbol": "",
       "name": "US71568QAC15",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -150,9 +151,9 @@
     },
     {
       "symbol": "",
-      "name": "USY20721BQ18",
+      "name": "USY207218018",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,7 +163,7 @@
       "symbol": "",
       "name": "VICTIDJ1",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -193,7 +194,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 123342322.99065,
+    "value": 124180000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -205,40 +206,40 @@
     "percentage": 0.0481
   },
   "cagr": {
-    "1y": 0.030875890736342226,
+    "1y": 0.030830282038594836,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.03279440938552458
+    "all": 0.03276692544195714
   },
   "cagr_adjusted": {
-    "1y": 0.030875890736342226,
+    "1y": 0.030830282038594836,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.03286686054036503
+    "all": 0.03283915788513081
   },
   "simplereturn": {
-    "1d": 0.00007008959947185645,
-    "1m": 0.002153250224417258,
-    "3m": 0.006928453351121133,
-    "ytd": 0.023708713932739434,
-    "1y": 0.030875890736342226,
+    "1d": 0.00005472365991843198,
+    "1m": 0.001921789514993666,
+    "3m": 0.0068949784489633625,
+    "ytd": 0.02376473502025611,
+    "1y": 0.030830282038594836,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.041597000000000106
+    "all": 0.04165400000000008
   },
   "changesvalue": {
-    "1d": 0.00007300000000021178,
-    "1m": 0.0022380000000001843,
-    "3m": 0.0071670000000001455,
-    "ytd": 0.024123000000000117,
-    "1y": 0.03119700000000014,
+    "1d": 0.00005699999999997374,
+    "1m": 0.0019980000000001663,
+    "3m": 0.007133000000000056,
+    "ytd": 0.02418000000000009,
+    "1y": 0.031154000000000126,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.041597000000000106
+    "all": 0.04165400000000008
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -256,9 +257,9 @@
     "all": -0.0000028817862464
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2025-07-10",
-    "value": 1.041597
+    "value": 1.041654
   },
   "trade": null
 }
