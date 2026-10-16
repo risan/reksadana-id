@@ -62,19 +62,19 @@
   "asset": [
     {
       "name": "Govt. Bond",
-      "percentage": 28
+      "percentage": 6
     },
     {
       "name": "Corp. Bond",
-      "percentage": 56
+      "percentage": 75
     },
     {
       "name": "Money Market",
-      "percentage": 13
+      "percentage": 14
     },
     {
       "name": "Cash",
-      "percentage": 2
+      "percentage": 5
     }
   ],
   "holding": [
@@ -209,9 +209,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2018-01-26",
-    "value": 1554.5147
+    "value": 1555.7877
   },
   "trade": null
 }

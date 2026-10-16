@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Inst. Psr. Uang Dalam Negeri",
-      "percentage": 13.92
+      "percentage": 10.35
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 86.08
+      "percentage": 89.65
     }
   ],
   "investment_manager": {
@@ -149,9 +149,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2018-01-26",
-    "value": 1100.3406
+    "value": 1080.765
   },
   "trade": null
 }

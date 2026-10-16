@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17875,
+    "exchange_rate": 17880,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,7 +61,7 @@
   "asset": [
     {
       "name": "Saham Syariah",
-      "percentage": 94.31
+      "percentage": 97.66
     },
     {
       "name": "Deposito Syariah",
@@ -143,9 +143,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "first_date": "2023-09-01",
-    "value": 1.236662
+    "value": 1.236141
   },
   "trade": null
 }

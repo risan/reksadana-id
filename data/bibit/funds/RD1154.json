@@ -66,11 +66,11 @@
     },
     {
       "name": "Deposito dan Kas",
-      "percentage": 13.9
+      "percentage": 13.8
     },
     {
       "name": "Obligasi",
-      "percentage": 86.1
+      "percentage": 86.2
     }
   ],
   "holding": [
@@ -185,9 +185,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2008-03-20",
-    "value": 3101.5595
+    "value": 3101.5325
   },
   "trade": null
 }

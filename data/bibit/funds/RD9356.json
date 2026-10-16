@@ -60,7 +60,7 @@
   "asset": [
     {
       "name": "Deposits",
-      "percentage": 0.32
+      "percentage": 0.51
     },
     {
       "name": "Cash",
@@ -68,7 +68,7 @@
     },
     {
       "name": "Bonds",
-      "percentage": 99.68
+      "percentage": 99.49
     }
   ],
   "investment_manager": {
@@ -145,9 +145,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2025-05-08",
-    "value": 1004.8754
+    "value": 1005.1033
   },
   "trade": null
 }

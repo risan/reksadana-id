@@ -60,12 +60,12 @@
   },
   "asset": [
     {
-      "name": "Obligasi",
-      "percentage": 96.03
+      "name": "Deposito",
+      "percentage": 3.03
     },
     {
-      "name": "Deposito",
-      "percentage": 2.86
+      "name": "Obligasi",
+      "percentage": 95.55
     }
   ],
   "investment_manager": {
@@ -142,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2025-11-12",
-    "value": 965.9658
+    "value": 964.0388
   },
   "trade": null
 }

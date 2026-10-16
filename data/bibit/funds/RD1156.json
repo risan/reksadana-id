@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "equity",
-      "percentage": 51.43
+      "percentage": 79.26
     },
     {
       "name": "Lainnya",
-      "percentage": 48.57
+      "percentage": 21.74
     }
   ],
   "holding": [
@@ -201,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2018-01-26",
-    "value": 106.1622
+    "value": 104.1131
   },
   "trade": null
 }

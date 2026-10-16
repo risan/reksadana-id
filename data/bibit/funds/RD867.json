@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Efek Bersifat Ekuitas",
-      "percentage": 94.22
+      "percentage": 88.92
     },
     {
       "name": "Deposito",
-      "percentage": 5.47
+      "percentage": 7.77
     }
   ],
   "holding": [
@@ -201,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2008-01-04",
-    "value": 1129.7
+    "value": 1116.97
   },
   "trade": null
 }

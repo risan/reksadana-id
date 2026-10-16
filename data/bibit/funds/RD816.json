@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Pasar Uang dan /  Kas & Setara Kas",
-      "percentage": 13.5
+      "percentage": 14.8
     },
     {
       "name": "Saham",
-      "percentage": 86.5
+      "percentage": 85.2
     }
   ],
   "investment_manager": {
@@ -149,9 +149,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2015-11-30",
-    "value": 819.569
+    "value": 817.9841
   },
   "trade": null
 }

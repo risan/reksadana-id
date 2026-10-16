@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "kas",
-      "percentage": 1
+      "percentage": 1.1
     },
     {
       "name": "Saham",
-      "percentage": 99
+      "percentage": 98.9
     }
   ],
   "holding": [
@@ -201,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2018-01-26",
-    "value": 1090.2792
+    "value": 1082.9941
   },
   "trade": null
 }

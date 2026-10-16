@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Pasar Uang Syariah  dan /  Kas & Setara Kas",
-      "percentage": 12.1
+      "percentage": 12.3
     },
     {
       "name": "Saham Syariah",
-      "percentage": 87.9
+      "percentage": 87.7
     }
   ],
   "holding": [
@@ -201,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2013-01-10",
-    "value": 659.9773
+    "value": 655.0886
   },
   "trade": null
 }

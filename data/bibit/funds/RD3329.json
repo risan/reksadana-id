@@ -62,7 +62,7 @@
   "asset": [
     {
       "name": "Setara Kas",
-      "percentage": 0.51
+      "percentage": 0.21
     },
     {
       "name": "Obligasi < 1 Tahun",
@@ -70,7 +70,7 @@
     },
     {
       "name": "Deposito",
-      "percentage": 99.49
+      "percentage": 99.79
     }
   ],
   "investment_manager": {
@@ -153,9 +153,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2019-08-28",
-    "value": 1365.0172
+    "value": 1365.1828
   },
   "trade": null
 }

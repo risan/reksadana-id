@@ -57,7 +57,24 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Cash",
+      "percentage": 3.21
+    },
+    {
+      "name": "Equity",
+      "percentage": 45.59
+    },
+    {
+      "name": "Deposits",
+      "percentage": 19.02
+    },
+    {
+      "name": "Bonds",
+      "percentage": 32.18
+    }
+  ],
   "investment_manager": {
     "name": "UOB Asset Management Indonesia, PT"
   },
@@ -132,9 +149,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2026-07-17",
-    "value": 994.9453
+    "value": 988.2359
   },
   "trade": null
 }

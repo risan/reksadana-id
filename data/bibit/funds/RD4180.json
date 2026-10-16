@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Cash",
-      "percentage": 1.8
+      "percentage": 7.89
     },
     {
       "name": "Equity",
-      "percentage": 92.89
+      "percentage": 85.48
     },
     {
       "name": "Deposito",
-      "percentage": 5.31
+      "percentage": 6.63
     }
   ],
   "investment_manager": {
@@ -146,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2022-02-11",
-    "value": 813.38
+    "value": 805.57
   },
   "trade": null
 }

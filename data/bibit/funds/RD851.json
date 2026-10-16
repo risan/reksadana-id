@@ -60,16 +60,16 @@
   },
   "asset": [
     {
+      "name": "Deposito",
+      "percentage": 2.88
+    },
+    {
       "name": "Saham",
-      "percentage": 69.91
+      "percentage": 66.39
     },
     {
       "name": "Obligasi",
-      "percentage": 26.51
-    },
-    {
-      "name": "Deposito",
-      "percentage": 3.14
+      "percentage": 28.19
     }
   ],
   "holding": [
@@ -204,9 +204,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2005-04-07",
-    "value": 3776.88
+    "value": 3758.09
   },
   "trade": null
 }

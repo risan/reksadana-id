@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 96.38
+      "percentage": 89.16
     },
     {
       "name": "Deposito",
-      "percentage": 3.1
+      "percentage": 7.68
     }
   ],
   "holding": [
@@ -201,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2013-11-25",
-    "value": 939.47
+    "value": 928.45
   },
   "trade": null
 }

@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 89.77
+      "percentage": 67.69
     },
     {
       "name": "Deposito",
-      "percentage": 9.28
+      "percentage": 30.69
     },
     {
       "name": "Kas",
-      "percentage": 0.94
+      "percentage": 1.62
     }
   ],
   "investment_manager": {
@@ -146,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2020-10-14",
-    "value": 1228.4695
+    "value": 1228.6443
   },
   "trade": null
 }

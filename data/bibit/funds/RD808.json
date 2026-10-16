@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Pasar Uang dan /  Kas & Setara Kas",
-      "percentage": 18.3
+      "percentage": 17.6
     },
     {
       "name": "Saham",
-      "percentage": 81.7
+      "percentage": 82.4
     }
   ],
   "holding": [
@@ -201,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2014-08-13",
-    "value": 722.8344
+    "value": 722.0235
   },
   "trade": null
 }

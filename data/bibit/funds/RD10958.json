@@ -57,7 +57,16 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "EGR",
+      "percentage": 96.95
+    },
+    {
+      "name": "Deposito",
+      "percentage": 0
+    }
+  ],
   "investment_manager": {
     "name": "Mandiri Manajemen Investasi, PT"
   },
@@ -132,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2026-08-07",
-    "value": 720.2375
+    "value": 719.3259
   },
   "trade": null
 }

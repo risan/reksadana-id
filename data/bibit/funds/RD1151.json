@@ -62,7 +62,7 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 52.2
+      "percentage": 96
     },
     {
       "name": "Saham",
@@ -70,7 +70,7 @@
     },
     {
       "name": "Deposito dan Setara Kas lainnya",
-      "percentage": 47.8
+      "percentage": 4
     }
   ],
   "holding": [
@@ -195,9 +195,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2012-11-13",
-    "value": 1997.3736
+    "value": 1997.6901
   },
   "trade": null
 }

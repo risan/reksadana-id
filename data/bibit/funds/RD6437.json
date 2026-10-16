@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 86.52
+      "percentage": 84.21
     },
     {
       "name": "Deposito",
-      "percentage": 12.92
+      "percentage": 10.78
     },
     {
       "name": "Cash",
-      "percentage": 0.56
+      "percentage": 5.01
     }
   ],
   "investment_manager": {
@@ -146,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2024-02-06",
-    "value": 961.4151
+    "value": 956.3461
   },
   "trade": null
 }

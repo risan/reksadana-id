@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17875,
+    "exchange_rate": 17880,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,19 +61,19 @@
   "asset": [
     {
       "name": "Deposito",
-      "percentage": 39.29
+      "percentage": 52.79
     },
     {
       "name": "Obligasi",
-      "percentage": 57.41
+      "percentage": 57.23
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Bank DBS Indonesia",
+      "name": "Bank Mandiri (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Mandiri (Persero) Tbk.",
+      "name": "Bank Maybank Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +93,7 @@
       "symbol": "",
       "name": "Bank Mega Syariah",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -101,9 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Mega Tbk.",
+      "name": "Bank Mega Tbk",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +113,7 @@
       "symbol": "",
       "name": "Bank Negara Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -121,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Tabungan Negara (Persero) Tbk.",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -131,9 +131,19 @@
     },
     {
       "symbol": "",
-      "name": "Bank Woori Saudara Indonesia 1906 Tbk.",
+      "name": "Bank Syariah Indonesia",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD Jawa Barat dan Banten Tok",
+      "annualDividend": 0,
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +153,7 @@
       "symbol": "",
       "name": "Pemerintah RI",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,7 +163,7 @@
       "symbol": "",
       "name": "Perusahaan Listrik Negara (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-08-31",
+      "date": "2026-09-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -184,7 +194,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 288337025.65504,
+    "value": 290290000,
     "date": "2026-09-01"
   },
   "shareholders": [],
@@ -196,40 +206,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.024857776135943865,
-    "3y": 0.029273262174804193,
+    "1y": 0.02503417066863678,
+    "3y": 0.029332310290212993,
     "5y": null,
     "10y": null,
-    "all": 0.023168477352294436
+    "all": 0.023193078569845982
   },
   "cagr_adjusted": {
-    "1y": 0.024857776135943865,
-    "3y": 0.029273262174804193,
+    "1y": 0.02503417066863678,
+    "3y": 0.029332310290212993,
     "5y": null,
     "10y": null,
-    "all": 0.023182611839237754
+    "all": 0.023207219705820403
   },
   "simplereturn": {
-    "1d": 0.00004595981670152405,
-    "1m": 0.001785620787587039,
-    "3m": 0.0055181737291436495,
-    "ytd": 0.01912402699257587,
-    "1y": 0.024857776135943865,
-    "3y": 0.09041564311683192,
+    "1d": 0.00017211610898648644,
+    "1m": 0.0019553307135873332,
+    "3m": 0.005607410588574169,
+    "ytd": 0.01929943465467643,
+    "1y": 0.02503417066863678,
+    "3y": 0.09060332121450321,
     "5y": null,
     "10y": null,
-    "all": 0.10971599999999992
+    "all": 0.10990699999999998
   },
   "changesvalue": {
-    "1d": 0.00005100000000002325,
-    "1m": 0.0019780000000000353,
-    "3m": 0.006089999999999929,
-    "ytd": 0.020823999999999954,
-    "1y": 0.02691599999999994,
-    "3y": 0.09201599999999988,
+    "1d": 0.00019100000000005224,
+    "1m": 0.0021659999999998902,
+    "3m": 0.006189,
+    "ytd": 0.021015000000000006,
+    "1y": 0.027106999999999992,
+    "3y": 0.09220699999999993,
     "5y": null,
     "10y": null,
-    "all": 0.10971599999999992
+    "all": 0.10990699999999998
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -247,9 +257,9 @@
     "all": -0.0009
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2022-03-31",
-    "value": 1.109716
+    "value": 1.109907
   },
   "trade": null
 }

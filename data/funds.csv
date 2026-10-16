@@ -1050,7 +1050,7 @@ BRK3099,Reksa Dana Penyertaan Terbatas BNI AM Sahakarya,,"BNI Asset Management, 
 BRK3100,Reksa Dana Syariah Penyertaan Terbatas Asia Raya Properti Syariah,,"Asia Raya Kapital, PT",Penyertaan Terbatas,,true,2017-03-24,,3100,,,
 BRK3101,Reksa Dana Penyertaan Terbatas Simas Hasjrat Multifinance I,,"Sinarmas Asset Management, PT",Penyertaan Terbatas,IDR,,2017-10-11,,3101,,,
 BRK3102,Reksa Dana Penyertaan Terbatas SAM Hasjrat Multifinance I,,"Samuel Aset Manajemen, PT",Penyertaan Terbatas,,,2016-10-06,,3102,,,
-BRK3103,Simas Putera Obligasi Andalan 1,,"Sinarmas Asset Management, PT",Obligasi,,,2018-03-02,,3103,,,
+BRK3103,Simas Putera Obligasi Andalan 1,,"Sinarmas Asset Management, PT",Obligasi,IDR,,2018-03-02,,3103,,,
 BRK3104,Reksa Dana Terproteksi Mega Asset Terproteksi 7,,"Mega Asset Management, PT",Terproteksi,IDR,,2018-03-02,,3104,,,
 BRK3105,Danareksa Proteksi 54,,"BRI Manajemen Investasi, PT",Terproteksi,IDR,,2018-03-02,,3105,,,
 BRK3106,RDT Bahana Core Plus Protected Fund 150,,"Bahana TCW Investment Management, PT",Terproteksi,IDR,,2018-03-05,,3106,,,
@@ -1068,7 +1068,7 @@ BRK3123,Reksa Dana Syariah Simas Balance Syariah,,"Sinarmas Asset Management, PT
 BRK3124,Reksa Dana Mandiri Investa Pasar Uang 2,,"Mandiri Manajemen Investasi, PT",Pasar Uang,IDR,false,2018-03-15,,3124,15851,691c7e9230df94d0758cd0e5,REKSA DANA MANDIRI INVESTA PASAR UANG 2
 BRK3125,RD Terproteksi Mandiri Seri 135,,"Mandiri Manajemen Investasi, PT",Terproteksi,IDR,,2018-03-15,,3125,,,
 BRK3127,RDT Bahana Progressive Protected Fund 159,,"Bahana TCW Investment Management, PT",Terproteksi,IDR,,2018-03-20,,3127,,,RDT Bahana Progressive Protected Fund 159
-BRK3128,Reksa Dana Terproteksi Trimegah Terproteksi 6,,"Trimegah Asset Management, PT",Terproteksi,,,2018-03-21,,3128,,,
+BRK3128,Reksa Dana Terproteksi Trimegah Terproteksi 6,,"Trimegah Asset Management, PT",Terproteksi,IDR,,2018-03-21,,3128,,,
 BRK3130,Reksa Dana Terproteksi RHB Capital Protected Fund 41,,"Allianz Global Investors Asset Management Indonesia, PT",Terproteksi,IDR,,2018-03-22,,3130,,,REKSA DANA TERPROTEKSI RHB CAPITAL PROTECTED FUND 41
 BRK3131,Reksa Dana Terproteksi OSO Dana Terproteksi VI,,"OSO Manajemen Investasi, PT",Terproteksi,IDR,,2018-03-26,,3131,,,REKSA DANA TERPROTEKSI OSO DANA TERPROTEKSI VI
 BRK3132,Reksa Dana Terproteksi BNI AM Proteksi Vishaka,,"BNI Asset Management, PT",Terproteksi,IDR,,2018-03-27,,3132,,,
@@ -1082,7 +1082,7 @@ BRK3139,Batavia Proteksi Gebyar 7,,"Batavia Prosperindo Aset Manajemen, PT",Terp
 BRK3140,Reksa Dana Terproteksi Nusadana Proteksi 1,,"Nusadana Investama Indonesia, PT",Terproteksi,IDR,,2018-04-05,,3140,,,
 BRK3141,Reksa Dana Terproteksi MNC Dana Terproteksi Seri 25,,"MNC Asset Management, PT",Terproteksi,IDR,,2018-04-05,,3141,,,
 BRK3142,Reksa Dana Penyertaan Terbatas Semesta Maxx Consumer Fund,,"Semesta Aset Manajemen, PT",Penyertaan Terbatas,,,2018-04-05,,3142,,,
-BRK3143,Reksa Dana Ayers Asia Asset Management Money Market Fund,,"Grow Investments Indonesia, PT",Pasar Uang,,,2018-04-09,,3143,,,Reksa Dana Ayers Asia Asset Management Money Market Fund
+BRK3143,Reksa Dana Ayers Asia Asset Management Money Market Fund,,"Grow Investments Indonesia, PT",Pasar Uang,IDR,,2018-04-09,,3143,,,Reksa Dana Ayers Asia Asset Management Money Market Fund
 BRK3144,Reksa Dana Ayers Asia Asset Management Government Bond Fund,,"Grow Investments Indonesia, PT",Obligasi,IDR,,2018-04-09,,3144,,,Reksa Dana Ayers Asia Asset Management Government Bond Fund
 BRK3145,Reksa Dana Terproteksi Danareksa Proteksi 57,,"BRI Manajemen Investasi, PT",Terproteksi,IDR,,2018-04-10,,3145,,,
 BRK3146,Batavia Campuran Bertumbuh,,"Batavia Prosperindo Aset Manajemen, PT",Campuran,IDR,,2018-04-10,,3146,,,Batavia Campuran Bertumbuh
@@ -4517,3 +4517,5 @@ RD11110,Sequis Equity Indonesia Kelas B,,"Sequis Aset Manajemen, PT",Saham,IDR,f
 RD11111,Sequis Equity Indonesia Kelas C,,"Sequis Aset Manajemen, PT",Saham,IDR,false,2026-10-12,RD11111,,,,
 RD11112,Sucorinvest Premium Sovereign Balanced Fund Kelas B,,"Sucorinvest Asset Management, PT",Campuran,IDR,false,2026-10-12,RD11112,,,,REKSA DANA SUCORINVEST PREMIUM SOVEREIGN BALANCED FUND KELAS B
 RD11113,Ashmore Dana Terproteksi Nusantara Vi,,"Ashmore Asset Management Indonesia, PT",Terproteksi,IDR,false,2026-10-14,RD11113,,,,REKSA DANA TERPROTEKSI ASHMORE DANA TERPROTEKSI NUSANTARA VI
+RD11114,Mandiri Investa 21,,"Mandiri Manajemen Investasi, PT",Terproteksi,IDR,false,2026-10-14,RD11114,,,,REKSA DANA TERPROTEKSI MANDIRI INVESTA 21
+RD11115,Kim Protected Sharia Fund Iii,,"Korea Investment Management Indonesia, PT",Terproteksi,IDR,true,2026-10-15,RD11115,,,,

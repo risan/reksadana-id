@@ -61,7 +61,7 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 95.11
+      "percentage": 88.06
     },
     {
       "name": "Obligasi",
@@ -69,7 +69,7 @@
     },
     {
       "name": "Deposito",
-      "percentage": 4.83
+      "percentage": 8.86
     }
   ],
   "investment_manager": {
@@ -147,9 +147,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2023-05-23",
-    "value": 734.25
+    "value": 725.94
   },
   "trade": null
 }

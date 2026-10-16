@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Time Deposit",
-      "percentage": 3
+      "percentage": 4
     },
     {
       "name": "Saham",
-      "percentage": 87
+      "percentage": 94
     },
     {
       "name": "Cash",
-      "percentage": 10
+      "percentage": 2
     }
   ],
   "investment_manager": {
@@ -146,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2023-04-10",
-    "value": 972.2894
+    "value": 965.0909
   },
   "trade": null
 }

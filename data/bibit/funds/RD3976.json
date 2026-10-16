@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "deposito",
-      "percentage": 5.55
+      "percentage": 8.24
     },
     {
       "name": "Cash",
-      "percentage": 4.24
+      "percentage": 0.25
     },
     {
       "name": "Bond",
-      "percentage": 90.22
+      "percentage": 91.5
     }
   ],
   "investment_manager": {
@@ -146,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2021-06-24",
-    "value": 1136.8827
+    "value": 1137.523
   },
   "trade": null
 }
