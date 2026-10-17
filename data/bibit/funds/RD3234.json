@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 15.8
+      "percentage": 16.49
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 3.74
+      "percentage": 3.54
     },
     {
       "name": "Efek Utang",
-      "percentage": 80.45
+      "percentage": 79.97
     }
   ],
   "holding": [
@@ -204,9 +204,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-15",
+    "date": "2026-10-16",
     "first_date": "2019-07-02",
-    "value": 1015.7235
+    "value": 1007.298
   },
   "trade": null
 }

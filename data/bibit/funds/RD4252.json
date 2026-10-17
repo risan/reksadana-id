@@ -59,11 +59,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 0.59
+      "percentage": 0.42
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 99.41
+      "percentage": 99.58
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-15",
+    "date": "2026-10-16",
     "first_date": "2022-07-15",
-    "value": 598.92
+    "value": 510.95
   },
   "trade": null
 }

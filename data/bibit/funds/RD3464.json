@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17880,
+    "exchange_rate": 17975,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Efek Ekuitas",
-      "percentage": 98.26
+      "percentage": 97.58
     },
     {
       "name": "Pasar Uang",
-      "percentage": 1.74
+      "percentage": 2.42
     }
   ],
   "investment_manager": {
@@ -148,9 +148,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-14",
+    "date": "2026-10-15",
     "first_date": "2019-11-27",
-    "value": 1.466
+    "value": 1.4505
   },
   "trade": null
 }

@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 38.62
+      "percentage": 36.89
     },
     {
       "name": "Efek Hutang",
-      "percentage": 61.38
+      "percentage": 63.11
     }
   ],
   "holding": [
@@ -201,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-15",
+    "date": "2026-10-16",
     "first_date": "2006-12-05",
-    "value": 1822.7931
+    "value": 1822.4595
   },
   "trade": null
 }
