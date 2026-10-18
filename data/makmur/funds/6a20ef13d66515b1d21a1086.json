@@ -19,16 +19,16 @@
       "instrument": "AAPL US Equity"
     },
     {
-      "instrument": "GOOGL US Equity"
-    },
-    {
       "instrument": "AMD US Equity"
     },
     {
       "instrument": "AMZN US Equity"
     },
     {
-      "instrument": "CSCO US Equity"
+      "instrument": "GOOGL US Equity"
+    },
+    {
+      "instrument": "INTC US Equity"
     }
   ],
   "assetAllocations": [
@@ -41,38 +41,38 @@
       "weight": 260
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -170,
-  "return5d": -107,
-  "return1m": 378,
-  "return3m": 496,
-  "returnytd": 3050,
-  "return1y": 3405,
+  "portfolioAsof": 20260930,
+  "return1d": -101,
+  "return5d": -531,
+  "return1m": 204,
+  "return3m": -156,
+  "returnytd": 2439,
+  "return1y": 2942,
   "return3y": null,
   "return5y": null,
   "return10y": null,
-  "returnsi": 7153,
+  "returnsi": 6350,
   "drawdownytd": -1870,
   "drawdown1y": -1870,
   "drawdown3y": null,
   "drawdown5y": null,
   "drawdownsi": -2831,
-  "cagr1y": 3405,
+  "cagr1y": 2942,
   "cagr3y": null,
   "cagr5y": null,
   "cagr10y": null,
-  "cagrsi": 3292,
+  "cagrsi": 2927,
   "rating": 0,
   "description": "REKSA DANA SYARIAH KISI GLOBAL SHARIA TRANSFORMATIVE TECHNOLOGY EQUITY FUND USD (untuk selanjutnya disebut “KISI  GLOBAL SHARIA TRANSFORMATIVE TECHNOLOGY EQUITY FUND USD”) adalah Reksa Dana Syariah Berbasis Efek Syariah Luar  Negeri berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal sebagaimana  diubah dengan Undang-undang Nomor 4 tahun 2023 tentang Pengembangan dan Penguatan Sektor Jasa Keuangan (“Undang Undang Pasar Modal”) beserta peraturan pelaksanaannya.  KISI GLOBAL SHARIA TRANSFORMATIVE TECHNOLOGY EQUITY FUND USD bertujuan untuk memberikan imbal hasil jangka panjang  yang optimal melalui penempatan investasi termasuk ke dalam Efek Syariah bersifat ekuitas yang berkaitan dengan  Transformative Technology dan memenuhi Prinsip Syariah di Pasar Modal.",
   "isSyariah": true,
-  "lastPrice": 172,
+  "lastPrice": 164,
   "expenseRatio": 270,
   "minFirstBuy": 10000,
   "minNextBuy": 1000,
-  "asof": 20261008,
+  "asof": 20261015,
   "url": "kisi-global-sharia-transformative-technology-equity-fund-usd-ffc4bc45cbee",
   "currency": "USD",
-  "lastAum": 572833,
+  "lastAum": 618620,
   "factsheet": "https://cache.makmur.id/files/products/6a20ef13d66515b1d21a1086/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6a20ef13d66515b1d21a1086/prospectus.pdf",
   "inceptionDate": 20241118,
