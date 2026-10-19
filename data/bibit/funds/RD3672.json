@@ -19,6 +19,7 @@
   },
   "released_date": "2020-04-13",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -207,7 +208,7 @@
     "3y": -0.10929095800189059,
     "5y": -0.05367666186709352,
     "10y": null,
-    "all": -0.012144275886184386
+    "all": -0.012139204346347299
   },
   "cagr_adjusted": {
     "1y": -0.23198156988639207,

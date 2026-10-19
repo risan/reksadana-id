@@ -19,6 +19,7 @@
   },
   "released_date": "2021-10-29",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -208,7 +209,7 @@
     "3y": 0.05415037170239412,
     "5y": null,
     "10y": null,
-    "all": 0.05419465464934814
+    "all": 0.05413338181289906
   },
   "cagr_adjusted": {
     "1y": 0.034515415346905165,
