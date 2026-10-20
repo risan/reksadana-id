@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17975,
+    "exchange_rate": 17990,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -210,7 +210,7 @@
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.032603032530111875
+    "all": 0.032532095292721275
   },
   "cagr_adjusted": {
     "1y": 0.030781636489561892,
@@ -257,9 +257,9 @@
     "all": -0.0000028817862464
   },
   "nav": {
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "first_date": "2025-07-10",
-    "value": 1.041811
+    "value": 1.042053
   },
   "trade": null
 }
