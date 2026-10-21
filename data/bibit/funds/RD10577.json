@@ -19,10 +19,11 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17990,
+    "exchange_rate": 17935,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,11 +61,11 @@
   "asset": [
     {
       "name": "Pasar Uang & Lain-Lain",
-      "percentage": 7
+      "percentage": 11
     },
     {
       "name": "Obligasi",
-      "percentage": 93
+      "percentage": 89.11
     }
   ],
   "investment_manager": {
@@ -141,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-19",
+    "date": "2026-10-20",
     "first_date": "2026-05-19",
-    "value": 0.9999
+    "value": 0.9996
   },
   "trade": null
 }

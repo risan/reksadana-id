@@ -19,10 +19,11 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17990,
+    "exchange_rate": 17935,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,19 +61,19 @@
   "asset": [
     {
       "name": "Surat Utang Korporasi",
-      "percentage": 32.63
+      "percentage": 32.95
     },
     {
       "name": "Kas/Setara Kas",
-      "percentage": 1.8
+      "percentage": 1.45
     },
     {
       "name": "Surat Utang Negara",
-      "percentage": 64.85
+      "percentage": 64.19
     },
     {
       "name": "Deposito",
-      "percentage": 0.72
+      "percentage": 1.41
     }
   ],
   "investment_manager": {
@@ -149,9 +150,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-19",
+    "date": "2026-10-20",
     "first_date": "2023-09-13",
-    "value": 1.1356
+    "value": 1.1357
   },
   "trade": null
 }
