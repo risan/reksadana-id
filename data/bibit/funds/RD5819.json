@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Efek Utang",
-      "percentage": 96.99
+      "percentage": 96.58
     },
     {
       "name": "pasar uang",
-      "percentage": 3.01
+      "percentage": 3.42
     }
   ],
   "investment_manager": {
@@ -142,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-20",
+    "date": "2026-10-21",
     "first_date": "2023-02-01",
-    "value": 1028.1719
+    "value": 1028.3217
   },
   "trade": null
 }

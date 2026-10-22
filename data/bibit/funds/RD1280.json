@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 36.65
+      "percentage": 36.45
     },
     {
       "name": "Deposito",
-      "percentage": 61.77
+      "percentage": 62.34
     }
   ],
   "holding": [
@@ -201,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-20",
+    "date": "2026-10-21",
     "first_date": "2004-11-10",
-    "value": 5001.97
+    "value": 5002.69
   },
   "trade": null
 }
