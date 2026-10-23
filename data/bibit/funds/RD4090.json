@@ -61,11 +61,7 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 99
-    },
-    {
-      "name": "Kas & Deposito",
-      "percentage": 1
+      "percentage": 98.57
     }
   ],
   "investment_manager": {
@@ -143,9 +139,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-21",
+    "date": "2026-10-22",
     "first_date": "2021-12-21",
-    "value": 883.65
+    "value": 901.71
   },
   "trade": null
 }

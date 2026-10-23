@@ -66,11 +66,11 @@
     },
     {
       "name": "Equity",
-      "percentage": 82
+      "percentage": 77
     },
     {
       "name": "Cash & Equivalent",
-      "percentage": 5
+      "percentage": 10
     }
   ],
   "investment_manager": {
@@ -153,9 +153,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-21",
+    "date": "2026-10-22",
     "first_date": "2014-12-02",
-    "value": 979.6123
+    "value": 994.8545
   },
   "trade": null
 }

@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 89.15
+      "percentage": 88.93
     },
     {
       "name": "Deposito dan kas",
-      "percentage": 10.85
+      "percentage": 11.07
     }
   ],
   "investment_manager": {
@@ -143,9 +143,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-21",
+    "date": "2026-10-22",
     "first_date": "2023-06-14",
-    "value": 1141.6767
+    "value": 1142.2133
   },
   "trade": null
 }

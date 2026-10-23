@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17987,
+    "exchange_rate": 18011,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 91.27
+      "percentage": 88.9
     },
     {
       "name": "Pasar Uang",
-      "percentage": 8.73
+      "percentage": 11.1
     }
   ],
   "holding": [
@@ -201,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-21",
+    "date": "2026-10-22",
     "first_date": "2018-01-26",
-    "value": 0.6818
+    "value": 0.6912
   },
   "trade": null
 }

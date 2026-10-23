@@ -59,15 +59,15 @@
   "asset": [
     {
       "name": "Sukuk",
-      "percentage": 71.09
+      "percentage": 71.48
     },
     {
       "name": "Saham Syariah",
-      "percentage": 24.92
+      "percentage": 18.46
     },
     {
       "name": "Deposito Syariah & kas",
-      "percentage": 3.39
+      "percentage": 10.06
     }
   ],
   "investment_manager": {
@@ -145,9 +145,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-21",
+    "date": "2026-10-22",
     "first_date": "2020-02-06",
-    "value": 1353.3511
+    "value": 1355.9362
   },
   "trade": null
 }

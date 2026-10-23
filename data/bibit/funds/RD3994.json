@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 17590,
+    "exchange_rate": 18038,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -68,7 +68,8 @@
     }
   ],
   "investment_manager": {
-    "name": "Schroder Investment Management Indonesia, PT"
+    "name": "PT Schroder Investment Management Indonesia",
+    "ojkCode": "SCH02"
   },
   "custodian_bank": {
     "name": ""

@@ -17,6 +17,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -57,7 +58,8 @@
   },
   "asset": [],
   "investment_manager": {
-    "name": "Batavia Prosperindo Aset Manajemen, PT"
+    "name": "PT Batavia Prosperindo Aset Manajemen",
+    "ojkCode": "BZ002"
   },
   "custodian_bank": {
     "name": ""

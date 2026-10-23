@@ -17,6 +17,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -67,8 +68,8 @@
     }
   ],
   "investment_manager": {
-    "name": "Avrist Asset Management, PT",
-    "ojkCode": "",
+    "name": "PT Avrist Asset Management",
+    "ojkCode": "TP002",
     "telepon": "",
     "fax": "",
     "email": "",
