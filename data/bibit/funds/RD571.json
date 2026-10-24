@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18032,
+    "exchange_rate": 18040,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -95,8 +95,8 @@
     }
   ],
   "investment_manager": {
-    "name": "PT BRI Manajemen Investasi",
-    "ojkCode": "OD002",
+    "name": "PT Danareksa Investment Management Indonesia",
+    "ojkCode": "CC002",
     "telepon": "+62 21 500688",
     "fax": "+62 21 3501707",
     "email": "reksadanaonline@danareksa.com",
