@@ -16,67 +16,67 @@
   },
   "topHoldings": [
     {
-      "instrument": "Obligasi Berkelanjutan I Oki Pulp Paper Mills Tahap IV Tahun 2024 Seri C"
+      "instrument": "OBLIGASI BERKELANJUTAN I OKI PULP & PAPER MILLS TAHAP IV TAHUN 2024 SERI C"
     },
     {
-      "instrument": "Obligasi Berkelanjutan II Indonesia Infrastructure Finance Tahap III Tahun 2025 Seri A"
+      "instrument": "OBLIGASI BERKELANJUTAN IV BUMI SERPONG DAMAI TAHAP II TAHUN 2025 SERI D"
     },
     {
-      "instrument": "Obligasi Berkelanjutan IV Sarana Multi Infrastruktur Tahap IV Tahun 2025 Seri A"
+      "instrument": "OBLIGASI BERKELANJUTAN IV INDOSAT TAHAP I TAHUN 2022 SERI B"
     },
     {
-      "instrument": "Obligasi Berkelanjutan V Toyota Astra Financial Services Tahap II Tahun 2025 Seri A"
+      "instrument": "OBLIGASI BERKELANJUTAN IV MAYBANK FINANCE TAHAP II TAHUN 2025 SERI B"
     },
     {
-      "instrument": "Obligasi Negara Republik Indonesia Seri FR0056"
+      "instrument": "OBLIGASI NEGARA REPUBLIK INDONESIA SERI FR0102"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 1097
+      "weight": 991
     },
     {
       "asset": "Obligasi",
-      "weight": 8622
+      "weight": 8624
     },
     {
       "asset": "Pasar Uang",
-      "weight": 281
+      "weight": 385
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -59,
-  "return5d": -54,
-  "return1m": -17,
-  "return3m": 108,
-  "returnytd": 478,
-  "return1y": 727,
+  "portfolioAsof": 20260930,
+  "return1d": 2,
+  "return5d": 48,
+  "return1m": 20,
+  "return3m": 143,
+  "returnytd": 529,
+  "return1y": 748,
   "return3y": null,
   "return5y": null,
   "return10y": null,
-  "returnsi": 1637,
+  "returnsi": 1694,
   "drawdownytd": -59,
   "drawdown1y": -59,
   "drawdown3y": null,
   "drawdown5y": null,
   "drawdownsi": -59,
-  "cagr1y": 727,
+  "cagr1y": 748,
   "cagr3y": null,
   "cagr5y": null,
   "cagr10y": null,
-  "cagrsi": 1005,
+  "cagrsi": 1026,
   "rating": 0,
   "description": "REKSA DANA SUCORINVEST PREMIUM SOVEREIGN BALANCED FUND (untuk selanjutnya disebut  “SUCORINVEST PREMIUM SOVEREIGN BALANCED FUND“) adalah Reksa Dana berbentuk Kontrak  Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal sebagaimana diubah  Undang-Undang Republik Indonesia No. 4 tahun 2023 tentang Pengembangan Dan Penguatan Sektor  Keuangan beserta peraturan pelaksanaan dan seluruh perubahannya (“Undang-Undang Pasar Modal”) beserta  peraturan pelaksanaannya.  SUCORINVEST PREMIUM SOVEREIGN BALANCED FUND bertujuan untuk memberikan tingkat pertumbuhan  modal yang optimal dalam jangka menengah dan panjang melalui investasi sesuai dengan Kebijakan Investasi.",
   "isSyariah": false,
-  "lastPrice": 106497,
+  "lastPrice": 107012,
   "expenseRatio": 125,
   "minFirstBuy": 10000000,
   "minNextBuy": 10000000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "sucorinvest-premium-sovereign-balanced-fund-kelas-a-df070ded7f54",
   "currency": "IDR",
-  "lastAum": 650860000000,
+  "lastAum": 695390000000,
   "factsheet": "https://cache.makmur.id/files/products/68a2b7ea63796eb8829b41b0/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/68a2b7ea63796eb8829b41b0/prospectus.pdf",
   "inceptionDate": 20250319,

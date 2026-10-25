@@ -19,6 +19,9 @@
       "instrument": "Bank Mandiri (Persero) Tbk"
     },
     {
+      "instrument": "Bank Syariah Indonesia"
+    },
+    {
       "instrument": "Bank Tabungan Negara (Persero) Tbk"
     },
     {
@@ -26,53 +29,50 @@
     },
     {
       "instrument": "FR0047"
-    },
-    {
-      "instrument": "FR0107"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9230
+      "weight": 9090
     },
     {
       "asset": "Pasar Uang",
-      "weight": 583
+      "weight": 806
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -61,
-  "return5d": -56,
-  "return1m": -37,
-  "return3m": 92,
-  "returnytd": -98,
-  "return1y": -74,
-  "return3y": 1261,
-  "return5y": 1738,
-  "return10y": 5317,
-  "returnsi": 22949,
+  "portfolioAsof": 20260930,
+  "return1d": -7,
+  "return5d": 5,
+  "return1m": -65,
+  "return3m": 88,
+  "returnytd": -93,
+  "return1y": -69,
+  "return3y": 1381,
+  "return5y": 1732,
+  "return10y": 5365,
+  "returnsi": 22965,
   "drawdownytd": -307,
   "drawdown1y": -307,
   "drawdown3y": -307,
   "drawdown5y": -307,
   "drawdownsi": -1578,
-  "cagr1y": -74,
-  "cagr3y": 404,
-  "cagr5y": 326,
-  "cagr10y": 436,
+  "cagr1y": -69,
+  "cagr3y": 441,
+  "cagr5y": 325,
+  "cagr10y": 439,
   "cagrsi": 644,
   "rating": 0,
   "description": "REKSA DANA MANDIRI INVESTA DANA UTAMA (selanjutnya disebut “MANDIRI INVESTA DANA UTAMA”) adalah Reksa  Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal  beserta peraturan pelaksanaannya.  MANDIRI INVESTA DANA UTAMA bertujuan untuk memperoleh tambahan nilai yang maksimal dalam jangka  panjang atas aktiva pemilik dana melalui strategi perdagangan aktif di pasar modal dan di pasar uang, sehingga  diperoleh capital gain, diskonto, bunga maupun dividen dengan memperhatikan tingkat risiko atas suatu jenis  investasi.",
   "isSyariah": false,
-  "lastPrice": 237940,
+  "lastPrice": 238054,
   "expenseRatio": 190,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "mandiri-investa-dana-utama-kelas-a-c27ef9ec71fe",
   "currency": "IDR",
-  "lastAum": 1060000000000,
+  "lastAum": 1090000000000,
   "factsheet": "https://cache.makmur.id/files/products/6911f38b43942404647042e7/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6911f38b43942404647042e7/prospectus.pdf",
   "inceptionDate": 20070917,

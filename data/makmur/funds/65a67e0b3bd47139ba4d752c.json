@@ -16,67 +16,67 @@
   },
   "topHoldings": [
     {
-      "instrument": "Sukuk Ijarah Berkelanjutan I Samudera Indonesia Tahap II Tahun 2025"
+      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN I DIAN SWASTATIKA SENTOSA TAHAP III TAHUN 2024 SERI C"
     },
     {
-      "instrument": "Sukuk Ijarah Berkelanjutan II Bumi Serpong Damai Tahap II Tahun 2025 Seri B"
+      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN I LONTAR PAPYRUS PULP & PAPER INDUSTRY TAHAP I TAHUN 2024"
     },
     {
-      "instrument": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap III Tahun 2024 Seri C"
+      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN I MERDEKA BATTERY MATERIALS TAHAP III TAHUN 2025 SERI B"
     },
     {
-      "instrument": "Sukuk Mudharabah Berkelanjutan I Lontar Papyrus Pulp Paper Industry Tahap I Tahun 2024"
+      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN I PINDO DELI PULP AND PAPER MILLS TAHAP III TAHUN 2025"
     },
     {
-      "instrument": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap III Tahun 2025 Seri B"
+      "instrument": "SUKUK MUDHARABAH BERKELANJUTAN II LONTAR PAPYRUS PULP & PAPER INDUSTRY TAHAP II TAHUN 2026 SERI B"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 1811
+      "weight": 1789
     },
     {
       "asset": "Obligasi",
-      "weight": 8079
+      "weight": 8048
     },
     {
       "asset": "Pasar Uang",
-      "weight": 110
+      "weight": 163
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -126,
-  "return5d": -135,
-  "return1m": -140,
-  "return3m": -17,
-  "returnytd": 278,
+  "portfolioAsof": 20260930,
+  "return1d": -2,
+  "return5d": 15,
+  "return1m": -129,
+  "return3m": -68,
+  "returnytd": 294,
   "return1y": 489,
-  "return3y": 2069,
-  "return5y": 864,
+  "return3y": 2075,
+  "return5y": 895,
   "return10y": null,
-  "returnsi": 2547,
+  "returnsi": 2566,
   "drawdownytd": -144,
   "drawdown1y": -144,
   "drawdown3y": -144,
   "drawdown5y": -1627,
   "drawdownsi": -3346,
   "cagr1y": 489,
-  "cagr3y": 647,
-  "cagr5y": 167,
+  "cagr3y": 649,
+  "cagr5y": 173,
   "cagr10y": null,
-  "cagrsi": 311,
+  "cagrsi": 312,
   "rating": 0,
   "description": "REKSA DANA SYARIAH SUCORINVEST SHARIA BALANCED FUND (selanjutnya disebut \"SUCORINVEST SHARIA BALANCED FUND\") adalah Reksa Dana Syariah berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. SUCORINVEST SHARIA BALANCED FUND bertujuan untuk memberikan hasil investasi yang optimal dalam jangka menengah atau panjang melalui investasi sesuai dengan Kebijakan Investasi dan Prinsip Syariah di Pasar Modal yang tercantum pada Daftar Efek Syariah  (DES). Produk ini mengalokasikan dana investasinya ke dalam berbagai efek Syariah yang mencakup ekuitas, pendapatan tetap seperti Sukuk, dan instrumen pasar uang Syariah, dengan kisaran alokasi yang fleksibel hingga 79% pada setiap kategori efek. Pengelolaan dana dilakukan dengan mematuhi regulasi pasar modal Indonesia dan prinsip Syariah, menjadikannya pilihan bagi investor yang mencari diversifikasi investasi Syariah yang seimbang.",
   "isSyariah": true,
-  "lastPrice": 125470,
+  "lastPrice": 125663,
   "expenseRatio": 402,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "sucorinvest-sharia-balanced-fund-5da1eedb398d",
   "currency": "IDR",
-  "lastAum": 1700000000000,
+  "lastAum": 1490000000000,
   "factsheet": "https://cache.makmur.id/files/products/65a67e0b3bd47139ba4d752c/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/65a67e0b3bd47139ba4d752c/prospectus.pdf",
   "inceptionDate": 20190523,

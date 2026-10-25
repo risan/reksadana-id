@@ -25,7 +25,7 @@
       "instrument": "ADRO"
     },
     {
-      "instrument": "MDKA"
+      "instrument": "AKRA"
     },
     {
       "instrument": "HRTA"
@@ -34,45 +34,45 @@
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 8563
+      "weight": 8491
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1437
+      "weight": 1509
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -1075,
-  "return5d": -1322,
-  "return1m": -1735,
-  "return3m": -1268,
-  "returnytd": -3000,
-  "return1y": -2420,
-  "return3y": -2078,
-  "return5y": -3177,
-  "return10y": -4020,
-  "returnsi": -3858,
-  "drawdownytd": -3606,
-  "drawdown1y": -3606,
-  "drawdown3y": -3606,
+  "portfolioAsof": 20260930,
+  "return1d": 104,
+  "return5d": 625,
+  "return1m": -1100,
+  "return3m": -1015,
+  "returnytd": -2562,
+  "return1y": -2003,
+  "return3y": -1310,
+  "return5y": -2711,
+  "return10y": -3624,
+  "returnsi": -3474,
+  "drawdownytd": -3798,
+  "drawdown1y": -3798,
+  "drawdown3y": -3798,
   "drawdown5y": -4379,
   "drawdownsi": -5170,
-  "cagr1y": -2420,
-  "cagr3y": -747,
-  "cagr5y": -736,
-  "cagr10y": -501,
-  "cagrsi": -388,
+  "cagr1y": -2003,
+  "cagr3y": -457,
+  "cagr5y": -613,
+  "cagr10y": -440,
+  "cagrsi": -340,
   "rating": 0,
   "description": "Reksa Dana DANAREKSA SYARIAH SAHAM (selanjutnya disebut “DANAREKSA SYARIAH SAHAM”) adalah Reksa Dana Terbuka berbentuk Kontrak Investasi Kolektif (“KIK”) berdasarkan Undang-undang Nomor 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. DANAREKSA SYARIAH SAHAM bertujuan untuk memberikan pertumbuhan yang maksimal dalam jangka panjang kepada Pemegang Unit Penyertaan melalui mayoritas investasi pada Efek bersifat ekuitas yang masuk dalam Daftar Efek Syariah. DANAREKSA SYARIAH SAHAM akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang masuk dalam Daftar Efek Syariah yang diterbitkan oleh badan hukum yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia, minimum 0% (nol persen), maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Surat Berharga Syariah Negara dan/atau Sukuk yang diterbitkan oleh badan hukum yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia, serta minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito Syariah; sesuai dengan Prinsip-prinsip Syariah di Pasar Modal serta peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": true,
-  "lastPrice": 61415,
+  "lastPrice": 65256,
   "expenseRatio": 321,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "bri-syariah-saham-cc26a013530e",
   "currency": "IDR",
-  "lastAum": 13560000000,
+  "lastAum": 12660000000,
   "factsheet": "https://cache.makmur.id/files/products/63886a6d79f48d91c48f084d/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/63886a6d79f48d91c48f084d/prospectus.pdf",
   "inceptionDate": 20140625,

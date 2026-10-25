@@ -16,63 +16,63 @@
   },
   "topHoldings": [
     {
-      "instrument": "SUKUK PBS004"
+      "instrument": "PBS004"
     },
     {
-      "instrument": "SUKUK PBS015"
+      "instrument": "PBS015"
     },
     {
-      "instrument": "SUKUK PBS023"
+      "instrument": "PBS023"
     },
     {
-      "instrument": "SUKUK PBS029"
+      "instrument": "PBS029"
     },
     {
-      "instrument": "SUKUK PBS030"
+      "instrument": "PBS030"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9200
+      "weight": 9227
     },
     {
       "asset": "Pasar Uang",
-      "weight": 800
+      "weight": 549
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -74,
-  "return5d": -78,
-  "return1m": -74,
-  "return3m": 53,
-  "returnytd": -286,
-  "return1y": -237,
-  "return3y": 822,
-  "return5y": 1608,
-  "return10y": 6989,
-  "returnsi": 6986,
+  "portfolioAsof": 20260930,
+  "return1d": -17,
+  "return5d": -36,
+  "return1m": -132,
+  "return3m": 23,
+  "returnytd": -321,
+  "return1y": -298,
+  "return3y": 930,
+  "return5y": 1561,
+  "return10y": 6967,
+  "returnsi": 6925,
   "drawdownytd": -461,
   "drawdown1y": -461,
   "drawdown3y": -461,
   "drawdown5y": -461,
   "drawdownsi": -845,
-  "cagr1y": -237,
-  "cagr3y": 267,
-  "cagr5y": 303,
-  "cagr10y": 544,
-  "cagrsi": 529,
+  "cagr1y": -298,
+  "cagr3y": 301,
+  "cagr5y": 294,
+  "cagr10y": 543,
+  "cagrsi": 524,
   "rating": 0,
   "description": "REKSA DANA SYARIAH BNI-AM DANA PENDAPATAN TETAP SYARIAH ARDHANI (selanjutnya disebut “BNI-AM ARDHANI PENDAPATAN TETAP SYARIAH”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. BNI-AM ARDHANI PENDAPATAN TETAP SYARIAH bertujuan untuk memperoleh hasil investasi yang maksimal dalam jangka panjang melalui alokasi yang strategis dalam Efek Syariah berpendapatan tetap/Sukuk dan instrumen pasar uang syariah, dengan mengontrol risiko investasi melalui pemilihan Efek Syariah berpendapatan tetap/Sukuk secara selektif dan tidak bertentangan dengan Prinsip Syariah di Pasar Modal. BNI-AM ARDHANI PENDAPATAN TETAP SYARIAH akan melakukan investasi pada portofolio investasi dengan komposisi investasi yaitu minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek Syariah berpendapatan tetap/Sukuk yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi berbadan hukum Indonesia yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia yang sudah mendapat peringkat dari perusahaan pemeringkat Efek yang telah terdaftar di OJK dan masuk dalam kategori layak investasi (investment grade); minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen Pasar Uang Syariah dalam negeri dan/atau deposito syariah; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": true,
-  "lastPrice": 153907,
+  "lastPrice": 153358,
   "expenseRatio": 194,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "bni-am-dana-pendapatan-tetap-syariah-ardhani-ef27f27f88e7",
   "currency": "IDR",
-  "lastAum": 278839123690,
+  "lastAum": 275282140845,
   "factsheet": "https://cache.makmur.id/files/products/620c725f5266fd0a65d149ad/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/620c725f5266fd0a65d149ad/prospectus.pdf",
   "inceptionDate": 20160711,

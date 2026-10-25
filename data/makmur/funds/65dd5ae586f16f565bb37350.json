@@ -16,63 +16,63 @@
   },
   "topHoldings": [
     {
-      "instrument": "ASTRA INTERNATIONAL Tbk"
+      "instrument": "Astra International  Tbk"
     },
     {
-      "instrument": "BANK CENTRAL ASIA Tbk"
+      "instrument": "Bank Central Asia Tbk"
     },
     {
-      "instrument": "BANK MANDIRI ( PERSERO ) Tbk"
+      "instrument": "Bank Mandiri (Persero) Tbk"
     },
     {
-      "instrument": "BANK NEGARA INDONESIA (Persero) Tbk"
+      "instrument": "Bank Negara Indonesia Tbk"
     },
     {
-      "instrument": "BANK RAKYAT INDONESIA (PERSERO) Tbk"
+      "instrument": "Bank Rakyat Indonesia (Persero) Tbk"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 9926
+      "weight": 9895
     },
     {
       "asset": "Pasar Uang",
-      "weight": 74
+      "weight": 105
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -1371,
-  "return5d": -1506,
-  "return1m": -2079,
-  "return3m": -1719,
-  "returnytd": -3213,
-  "return1y": -2642,
-  "return3y": -3562,
+  "portfolioAsof": 20260930,
+  "return1d": 37,
+  "return5d": 786,
+  "return1m": -1254,
+  "return3m": -1296,
+  "returnytd": -2680,
+  "return1y": -2595,
+  "return3y": -2751,
   "return5y": null,
   "return10y": null,
-  "returnsi": -3250,
-  "drawdownytd": -3474,
-  "drawdown1y": -3474,
-  "drawdown3y": -3959,
+  "returnsi": -2720,
+  "drawdownytd": -3716,
+  "drawdown1y": -3716,
+  "drawdown3y": -4182,
   "drawdown5y": null,
-  "drawdownsi": -3959,
-  "cagr1y": -2642,
-  "cagr3y": -1365,
+  "drawdownsi": -4182,
+  "cagr1y": -2595,
+  "cagr3y": -1017,
   "cagr5y": null,
   "cagr10y": null,
-  "cagrsi": -975,
+  "cagrsi": -792,
   "rating": 0,
   "description": "REKSA DANA INDEKS SUCORINVEST IDX30 (Untuk selanjutnya disebut “SUCORINVEST IDX30”) adalah Reksa Dana Indeks Berbentuk Kontrak Investasi Kolektif yang mengacu pada Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya.  SUCORINVEST IDX30 bertujuan untuk memberikan potensi pertumbuhan investasi yang setara dengan kinerja Indeks IDX30. Indeks IDX30 sendiri terdiri dari 30 saham terlikuid di Bursa Efek Indonesia dengan kapitalisasi pasar terbesar dan memiliki fundamental yang baik.  SUCORINVEST IDX30 berinvestasi minimal 80% dari Nilai Aktiva Bersih pada saham-saham yang terdaftar dalam Indeks IDX30.  Sisa portofolio bisa dialokasikan ke saham di luar negeri, efek bersifat utang, atau instrumen pasar uang dalam negeri yang jatuh temponya tidak lebih dari satu tahun.  Investasi pada saham-saham di dalam Indeks IDX30 akan mengikuti bobot masing-masing saham terhadap indeks, yang berkisar antara 80% hingga 120% dari bobot saham dalam indeks tersebut.",
   "isSyariah": false,
-  "lastPrice": 67498,
+  "lastPrice": 72803,
   "expenseRatio": 247,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "sucorinvest-idx30-c109b9c77332",
   "currency": "IDR",
-  "lastAum": 32600000000,
+  "lastAum": 30360000000,
   "factsheet": "https://cache.makmur.id/files/products/65dd5ae586f16f565bb37350/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/65dd5ae586f16f565bb37350/prospectus.pdf",
   "inceptionDate": 20221220,

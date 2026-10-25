@@ -22,46 +22,46 @@
       "instrument": "Indon27"
     },
     {
-      "instrument": "Obligasi USD Berkelanjutan II Indah Kiat Pulp Paper Tahap IV Tahun 2025 Seri A"
+      "instrument": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri A"
     },
     {
-      "instrument": "Republic Of Indonesia Roi 27"
+      "instrument": "Obligasi Berkelanjutan I Oki Pulp Paper Mills Tahap IV Tahun 2024 Seri B"
     },
     {
-      "instrument": "Sni0627"
+      "instrument": "Obligasi Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap III Tahun 2024 Seri B"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 8800
+      "weight": 1
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1200
+      "weight": 9999
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 2,
   "return5d": 8,
-  "return1m": 39,
-  "return3m": 102,
-  "returnytd": 297,
-  "return1y": 369,
+  "return1m": 36,
+  "return3m": 105,
+  "returnytd": 305,
+  "return1y": 370,
   "return3y": null,
   "return5y": null,
   "return10y": null,
-  "returnsi": 864,
+  "returnsi": 873,
   "drawdownytd": -7,
   "drawdown1y": -7,
   "drawdown3y": null,
   "drawdown5y": null,
   "drawdownsi": -18,
-  "cagr1y": 369,
+  "cagr1y": 370,
   "cagr3y": null,
   "cagr5y": null,
   "cagr10y": null,
-  "cagrsi": 418,
+  "cagrsi": 419,
   "rating": 0,
   "description": "REKSA DANA SUCORINVEST MONEY MARKET USD (selanjutnya disebut ”SUCORINVEST MONEY MARKET USD”) adalah Reksa Dana  berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal sebagaimana diubah  dengan Undang-Undang Nomor 4 tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan (“Undang-Undang Pasar Modal”)  beserta peraturan pelaksanaannya.  SUCORINVEST MONEY MARKET USD bertujuan untuk memberikan tingkat likuiditas yang tinggi sekaligus  memberikan tingkat  pendapatan investasi yang optimal dalam denominasi Dolar Amerika Serikat (USD).  SUCORINVEST MONEY MARKET USD akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) dari  Nilai Aktiva Bersih  pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau Efek  bersifat utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu)  tahun, yang ditawarkan melalui Penawaran Umum dan diperdagangkan baik di dalam maupun di luar negeri dan/atau deposito, sesuai  dengan peraturan perundang-undangan yang berlaku di Indonesia.  Dalam hal berinvestasi pada Efek luar negeri, Manajer Investasi wajib memastikan kegiatan investasi SUCORINVEST MONEY MARKET  USD pada Efek luar negeri tidak akan bertentangan dengan ketentuan hukum dan peraturan yang berlaku di Indonesia dan hukum  Negara yang mendasari penerbitan Efek luar negeri tersebut.",
   "isSyariah": false,
@@ -69,10 +69,10 @@
   "expenseRatio": 123,
   "minFirstBuy": 100,
   "minNextBuy": 100,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "sucorinvest-money-market-usd-41dd8e00f35d",
   "currency": "USD",
-  "lastAum": 18120000,
+  "lastAum": 20150000,
   "factsheet": "https://cache.makmur.id/files/products/6805eef1bf51ac8674b5fe3e/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6805eef1bf51ac8674b5fe3e/prospectus.pdf",
   "inceptionDate": 20241010,

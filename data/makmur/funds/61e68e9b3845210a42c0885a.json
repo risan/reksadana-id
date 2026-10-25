@@ -16,63 +16,63 @@
   },
   "topHoldings": [
     {
-      "instrument": "AUTO"
-    },
-    {
-      "instrument": "DEWA"
+      "instrument": "ARCI"
     },
     {
       "instrument": "ENRG"
     },
     {
-      "instrument": "ARCI"
+      "instrument": "EXCL"
     },
     {
-      "instrument": "EXCL"
+      "instrument": "INKP"
+    },
+    {
+      "instrument": "MEDC"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 9236
+      "weight": 8601
     },
     {
       "asset": "Pasar Uang",
-      "weight": 764
+      "weight": 1399
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -1057,
-  "return5d": -1390,
-  "return1m": -1803,
-  "return3m": -1283,
-  "returnytd": -2754,
-  "return1y": -1927,
-  "return3y": -2785,
-  "return5y": -3844,
-  "return10y": -3334,
-  "returnsi": 127,
-  "drawdownytd": -3471,
-  "drawdown1y": -3471,
-  "drawdown3y": -3814,
-  "drawdown5y": -4720,
+  "portfolioAsof": 20260930,
+  "return1d": 160,
+  "return5d": 652,
+  "return1m": -1150,
+  "return3m": -1112,
+  "returnytd": -2282,
+  "return1y": -1463,
+  "return3y": -2103,
+  "return5y": -3361,
+  "return10y": -2883,
+  "returnsi": 787,
+  "drawdownytd": -3667,
+  "drawdown1y": -3667,
+  "drawdown3y": -3667,
+  "drawdown5y": -4719,
   "drawdownsi": -5537,
-  "cagr1y": -1927,
-  "cagr3y": -1031,
-  "cagr5y": -925,
-  "cagr10y": -397,
-  "cagrsi": 8,
+  "cagr1y": -1463,
+  "cagr3y": -757,
+  "cagr5y": -787,
+  "cagr10y": -334,
+  "cagrsi": 46,
   "rating": 0,
   "description": "Reksa Dana DANAREKSA MAWAR FOKUS 10 (selanjutnya disebut “DANAREKSA MAWAR FOKUS 10”) adalah Reksa Dana Terbuka berbentuk Kontrak Investasi Kolektif (“KIK”) berdasarkan Undang-undang Nomor 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. DANAREKSA MAWAR FOKUS 10 bertujuan untuk memberikan hasil investasi dan pendapatan yang maksimal dalam jangka panjang. DANAREKSA MAWAR FOKUS 10 akan berinvestasi minimum sebesar 80% (Delapan Puluh per Seratus) dan maksimum sebesar 100% (Seratus per Seratus) pada Efek Bersifat Ekuitas Badan Hukum Indonesia yang tercatat pada Bursa Efek di Indonesia; dan minimum sebesar 0% (Nol per Seratus) dan maksimum sebesar 20% (Dua Puluh per Seratus) pada Instrumen Pasar Uang dalam negeri dan/atau Kas yang mempunyai jatuh tempo kurang dari 1 (Satu) tahun yang diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 101268,
+  "lastPrice": 107873,
   "expenseRatio": 442,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "bri-mawar-fokus-10-4712bb131bfc",
   "currency": "IDR",
-  "lastAum": 90920000000,
+  "lastAum": 83430000000,
   "factsheet": "https://cache.makmur.id/files/products/61e68e9b3845210a42c0885a/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/61e68e9b3845210a42c0885a/prospectus.pdf",
   "inceptionDate": 20100302,

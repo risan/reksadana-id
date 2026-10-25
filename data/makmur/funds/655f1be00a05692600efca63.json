@@ -16,63 +16,59 @@
   },
   "topHoldings": [
     {
-      "instrument": "SAHAM ADRO"
+      "instrument": "Alamtri Resources Indonesia"
     },
     {
-      "instrument": "SAHAM ASII"
+      "instrument": "Astra International"
     },
     {
-      "instrument": "SAHAM BBCA"
+      "instrument": "Bank Central Asia"
     },
     {
-      "instrument": "SAHAM BBNI"
+      "instrument": "Bank Mandiri Persero"
     },
     {
-      "instrument": "SAHAM BBRI"
+      "instrument": "Bank Negara Indonesia Persero"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 9900
-    },
-    {
-      "asset": "Pasar Uang",
-      "weight": 100
+      "weight": 9885
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -1315,
-  "return5d": -1381,
-  "return1m": -1773,
-  "return3m": -1429,
-  "returnytd": -2422,
-  "return1y": -1536,
-  "return3y": -2187,
+  "portfolioAsof": 20260930,
+  "return1d": 89,
+  "return5d": 946,
+  "return1m": -725,
+  "return3m": -745,
+  "returnytd": -1705,
+  "return1y": -1492,
+  "return3y": -1101,
   "return5y": null,
   "return10y": null,
-  "returnsi": -2049,
-  "drawdownytd": -2842,
-  "drawdown1y": -2842,
-  "drawdown3y": -3329,
+  "returnsi": -1297,
+  "drawdownytd": -3019,
+  "drawdown1y": -3019,
+  "drawdown3y": -3494,
   "drawdown5y": null,
-  "drawdownsi": -3329,
-  "cagr1y": -1536,
-  "cagr3y": -790,
+  "drawdownsi": -3494,
+  "cagr1y": -1492,
+  "cagr3y": -381,
   "cagr5y": null,
   "cagr10y": null,
-  "cagrsi": -571,
+  "cagrsi": -348,
   "rating": 0,
   "description": "REKSA DANA INDEKS BNI-AM IDX HIGH DIVIDEND 20 bertujuan untuk memperoleh pertambahan nilai investasi jangka panjang yang mencerminkan kinerja Indeks IDX High Dividend 20. Portofolio reksa dana direplikasi sesuai komposisi dan bobot saham dalam Indeks IDX High Dividend 20. Investasi minimum 80% pada saham-saham yang terdaftar dalam Indeks IDX High Dividend 20 dengan bobot tiap saham antara 80%-120% dari bobot dalam indeks. Sisanya, maksimum 20% ditempatkan di instrumen pasar uang berjangka ≤ 1 tahun dan/atau deposito. Dengan konsep tersebut, diharapkan imbal hasil berfluktuasi mengikuti pergerakan Indeks IDX High Dividend 20 yang merepresentasikan kondisi emiten-emiten berbasis dividen tinggi di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 79505,
+  "lastPrice": 87028,
   "expenseRatio": 290,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "bni-am-idx-high-dividend-20-kelas-r1-2a47bb9335a0",
   "currency": "IDR",
-  "lastAum": 156463640141,
+  "lastAum": 151303525872,
   "factsheet": "https://cache.makmur.id/files/products/655f1be00a05692600efca63/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/655f1be00a05692600efca63/prospectus.pdf",
   "inceptionDate": 20221125,

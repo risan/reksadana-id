@@ -16,59 +16,59 @@
   },
   "topHoldings": [
     {
-      "instrument": "Bank DKI"
-    },
-    {
       "instrument": "Bank Hibank Indonesia"
     },
     {
       "instrument": "Bank Jabar Banten Syariah"
     },
     {
-      "instrument": "Bank Maybank Indonesia Tbk"
+      "instrument": "Bank Nagari"
     },
     {
-      "instrument": "Bank Mega"
+      "instrument": "Bank Riau Kepri Syariah"
+    },
+    {
+      "instrument": "Bank Tabungan Negara (Persero) Tbk"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 9770
+      "weight": 4749
     }
   ],
-  "portfolioAsof": 20260731,
+  "portfolioAsof": 20260930,
   "return1d": 0,
   "return5d": 2,
-  "return1m": 22,
-  "return3m": 90,
-  "returnytd": 236,
-  "return1y": 293,
-  "return3y": 971,
-  "return5y": 1432,
+  "return1m": 16,
+  "return3m": 84,
+  "returnytd": 238,
+  "return1y": 289,
+  "return3y": 966,
+  "return5y": 1430,
   "return10y": null,
-  "returnsi": 3233,
+  "returnsi": 3236,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": 0,
   "drawdown5y": 0,
   "drawdownsi": 0,
-  "cagr1y": 293,
-  "cagr3y": 314,
+  "cagr1y": 289,
+  "cagr3y": 312,
   "cagr5y": 271,
   "cagr10y": null,
   "cagrsi": 331,
   "rating": 0,
   "description": "REKSA DANA MANDIRI INVESTA PASAR UANG 2 (selanjutnya disebut “MANDIRI INVESTA PASAR UANG  2”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Pasar Modal  beserta peraturan pelaksanaannya.  MANDIRI INVESTA PASAR UANG 2 bertujuan untuk memberikan tingkat likuiditas untuk memenuhi  kebutuhan dana tunai dalam waktu yang singkat sekaligus memberikan tingkat pendapatan investasi  yang menarik.",
   "isSyariah": false,
-  "lastPrice": 132333,
+  "lastPrice": 132355,
   "expenseRatio": 143,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "mandiri-investa-pasar-uang-2-a6131aa1e07c",
   "currency": "IDR",
-  "lastAum": 39650000000,
+  "lastAum": 18850000000,
   "factsheet": "https://cache.makmur.id/files/products/691c7e9230df94d0758cd0e5/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/691c7e9230df94d0758cd0e5/prospectus.pdf",
   "inceptionDate": 20180315,

@@ -22,57 +22,57 @@
       "instrument": "Obligasi Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap II Tahun 2023 Seri B"
     },
     {
+      "instrument": "Obligasi Berkelanjutan II Provident Investasi Bersama Tahap III Tahun 2024 Seri B"
+    },
+    {
+      "instrument": "Obligasi Berkelanjutan III Buma Tahun 2025 Seri A"
+    },
+    {
       "instrument": "Obligasi Berkelanjutan V Chandra Asri Pacific Tahap III Tahun 2026 Seri A"
-    },
-    {
-      "instrument": "Obligasi Berkelanjutan VII Astra Sedaya Finance Tahap III Tahun 2026 Seri A"
-    },
-    {
-      "instrument": "SBSN Seri PBS003"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 7702
+      "weight": 7830
     },
     {
       "asset": "Pasar Uang",
-      "weight": 2298
+      "weight": 2170
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 1,
-  "return5d": 5,
-  "return1m": 34,
-  "return3m": 112,
-  "returnytd": 322,
+  "return5d": 11,
+  "return1m": 35,
+  "return3m": 118,
+  "returnytd": 333,
   "return1y": 424,
-  "return3y": 1564,
-  "return5y": 2503,
-  "return10y": 7234,
-  "returnsi": 9983,
+  "return3y": 1574,
+  "return5y": 2504,
+  "return10y": 7235,
+  "returnsi": 10004,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": -4,
   "drawdown5y": -4,
   "drawdownsi": -136,
   "cagr1y": 424,
-  "cagr3y": 496,
+  "cagr3y": 499,
   "cagr5y": 457,
   "cagr10y": 559,
   "cagrsi": 583,
   "rating": 0,
   "description": "REKSA DANA SUCORINVEST MONEY MARKET FUND (untuk selanjutnya disebut “SUCORINVEST MONEY MARKET FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. SUCORINVEST MONEY MARKET FUND bertujuan untuk memberikan tingkat likuiditas yang tinggi untuk memenuhi kebutuhan dana tunai dalam waktu yang singkat sekaligus memberikan tingkat pendapatan investasi yang menarik. SUCORINVEST MONEY MARKET FUND akan melakukan investasi dengan komposisi portofolio investasi 100% (seratus persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri dan/atau Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia;",
   "isSyariah": false,
-  "lastPrice": 199825,
+  "lastPrice": 200040,
   "expenseRatio": 122,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "sucorinvest-money-market-fund-b7149591679c",
   "currency": "IDR",
-  "lastAum": 9710000000000,
+  "lastAum": 9300000000000,
   "factsheet": "https://cache.makmur.id/files/products/622b24d0bf54c80a4005d98d/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/622b24d0bf54c80a4005d98d/prospectus.pdf",
   "inceptionDate": 20140804,

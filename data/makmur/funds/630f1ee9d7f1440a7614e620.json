@@ -16,57 +16,53 @@
   },
   "topHoldings": [
     {
-      "instrument": "OBLIGASI FR0101"
+      "instrument": "FR0101"
     },
     {
-      "instrument": "OBLIGASI FR0109"
+      "instrument": "FR0104"
     },
     {
-      "instrument": "OBLIGASI FR0104"
+      "instrument": "FR0109"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9800
-    },
-    {
-      "asset": "Pasar Uang",
-      "weight": 200
+      "weight": 9817
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -77,
-  "return5d": -66,
-  "return1m": -45,
-  "return3m": 121,
-  "returnytd": -230,
-  "return1y": -256,
-  "return3y": 1329,
+  "portfolioAsof": 20260930,
+  "return1d": -6,
+  "return5d": 41,
+  "return1m": -52,
+  "return3m": 168,
+  "returnytd": -190,
+  "return1y": -188,
+  "return3y": 1512,
   "return5y": null,
   "return10y": null,
-  "returnsi": 2054,
+  "returnsi": 2103,
   "drawdownytd": -474,
-  "drawdown1y": -478,
+  "drawdown1y": -474,
   "drawdown3y": -478,
   "drawdown5y": null,
   "drawdownsi": -478,
-  "cagr1y": -256,
-  "cagr3y": 425,
+  "cagr1y": -188,
+  "cagr3y": 481,
   "cagr5y": null,
   "cagr10y": null,
-  "cagrsi": 384,
+  "cagrsi": 391,
   "rating": 0,
   "description": "REKSA DANA INDEKS BNI-AM SHORT DURATION BONDS INDEX adalah Reksa Dana Berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. REKSA DANA INDEKS BNI-AM SHORT DURATION BONDS INDEX bertujuan untuk memperoleh pertambahan nilai investasi yang setara dengan kinerja BNI-AM Short Duration Bonds Index. REKSA DANA INDEKS BNI-AM SHORT DURATION BONDS INDEX akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia yang ditawarkan melalui Penawaran Umum dan diperdagangkan di Bursa Efek Indonesia yang berasal dari kumpulan Efek yang terdaftar di BNI-AM Short Duration Bonds Index; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diperdagangkan baik di dalam maupun di luar negeri dan/atau instrumen pasar uang dalam negeri yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. Investasi pada Efek yang terdaftar dalam REKSA DANA INDEKS BNI-AM SHORT DURATION BONDS INDEX tersebut akan berjumlah sekurang-kurangnya 80% (delapan puluh persen) dari keseluruhan Efek yang terdaftar dalam BNI-AM Short Duration Bonds Index. Sedangkan porsi tiap-tiap Efek akan ditentukan secara prorata mengikuti bobot (weighting) masing-masing Efek terhadap BNI-AM Short Duration Bonds Index, dimana pembobotan atas masing-masing Efek adalah paling kurang 80% (delapan puluh persen) dan paling banyak 120% (seratus dua puluh persen) dari bobot masing-masing Efek yang bersangkutan dalam BNI-AM Short Duration Bonds Index.",
   "isSyariah": false,
-  "lastPrice": 105136,
+  "lastPrice": 105564,
   "expenseRatio": 10,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "bni-am-short-duration-bonds-index-kelas-r1-ba64947584ca",
   "currency": "IDR",
-  "lastAum": 205844607461,
+  "lastAum": 203806501581,
   "factsheet": "https://cache.makmur.id/files/products/630f1ee9d7f1440a7614e620/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/630f1ee9d7f1440a7614e620/prospectus.pdf",
   "inceptionDate": 20211102,

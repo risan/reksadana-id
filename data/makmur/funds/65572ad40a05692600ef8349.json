@@ -16,63 +16,63 @@
   },
   "topHoldings": [
     {
-      "instrument": "OBLIGASI Chandra Asri Petrochemical"
+      "instrument": "BPD Jawa Barat Dan Banten"
     },
     {
-      "instrument": "OBLIGASI Energi Mega Persada"
+      "instrument": "Chandra Asri Pacific"
     },
     {
-      "instrument": "OBLIGASI FR0104"
+      "instrument": "Energi Mega Persada"
     },
     {
-      "instrument": "OBLIGASI Indah Kiat Pulp & Paper"
+      "instrument": "FR0101"
     },
     {
-      "instrument": "OBLIGASI BPD Jabar & Banten"
+      "instrument": "FR0104"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 500
+      "weight": 399
     },
     {
       "asset": "Obligasi",
-      "weight": 9500
+      "weight": 9467
     }
   ],
-  "portfolioAsof": 20260831,
-  "return1d": -50,
-  "return5d": -42,
-  "return1m": -10,
-  "return3m": 112,
-  "returnytd": -110,
-  "return1y": -127,
-  "return3y": 1379,
+  "portfolioAsof": 20260930,
+  "return1d": -6,
+  "return5d": 19,
+  "return1m": -31,
+  "return3m": 127,
+  "returnytd": -91,
+  "return1y": -87,
+  "return3y": 1507,
   "return5y": null,
   "return10y": null,
-  "returnsi": 1599,
+  "returnsi": 1621,
   "drawdownytd": -345,
   "drawdown1y": -345,
   "drawdown3y": -345,
   "drawdown5y": null,
   "drawdownsi": -345,
-  "cagr1y": -127,
-  "cagr3y": 440,
+  "cagr1y": -87,
+  "cagr3y": 479,
   "cagr5y": null,
   "cagr10y": null,
-  "cagrsi": 393,
+  "cagrsi": 396,
   "rating": 0,
   "description": "REKSA DANA PENDAPATAN TETAP BNI-AM TEAKWOOD, beroperasi sesuai Undang-Undang Pasar Modal No. 8/1995, mengusung tujuan utama pertumbuhan nilai investasi yang stabil dan berkelanjutan. Portofolio investasinya diarahkan ke efek utang, dengan porsi dominan antara 80%-100% dari Nilai Aktiva Bersih, termasuk instrumen yang diperdagangkan baik domestik maupun internasional. Sementara itu, hingga 20% dari Nilai Aktiva Bersih dapat dialokasikan pada efek ekuitas dan instrumen pasar uang, atau deposito, sesuai dengan regulasi di Indonesia.  Investasi pada efek internasional dilakukan dengan kehati-hatian untuk memastikan kesesuaian dengan hukum Indonesia dan negara penerbit efek tersebut. BNI-AM TEAKWOOD menerapkan strategi investasi yang seimbang antara pencapaian return dan pengelolaan risiko, menjadikannya pilihan yang cocok untuk investor dengan visi investasi jangka panjang yang mengutamakan kestabilan.",
   "isSyariah": false,
-  "lastPrice": 95985,
+  "lastPrice": 96170,
   "expenseRatio": 188,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "bni-am-teakwood-kelas-r1-d10e782dc92b",
   "currency": "IDR",
-  "lastAum": 2301371492559,
+  "lastAum": 2206991218706,
   "factsheet": "https://cache.makmur.id/files/products/65572ad40a05692600ef8349/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/65572ad40a05692600ef8349/prospectus.pdf",
   "inceptionDate": 20221213,

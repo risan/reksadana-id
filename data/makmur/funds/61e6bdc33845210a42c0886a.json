@@ -16,13 +16,13 @@
   },
   "topHoldings": [
     {
+      "instrument": "ADMF07ACN3"
+    },
+    {
       "instrument": "BBRI01ASOCN2"
     },
     {
-      "instrument": "BDKIIDJ1"
-    },
-    {
-      "instrument": "FR0056"
+      "instrument": "JAGBIDJA"
     },
     {
       "instrument": "MDKA05CN3"
@@ -34,45 +34,45 @@
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 5955
+      "weight": 5432
     },
     {
       "asset": "Pasar Uang",
-      "weight": 4045
+      "weight": 4568
     }
   ],
-  "portfolioAsof": 20260831,
+  "portfolioAsof": 20260930,
   "return1d": 0,
   "return5d": 10,
-  "return1m": 49,
-  "return3m": 120,
-  "returnytd": 322,
-  "return1y": 420,
-  "return3y": 1555,
-  "return5y": 2318,
+  "return1m": 47,
+  "return3m": 125,
+  "returnytd": 333,
+  "return1y": 419,
+  "return3y": 1559,
+  "return5y": 2322,
   "return10y": 5439,
-  "returnsi": 9103,
+  "returnsi": 9122,
   "drawdownytd": -2,
   "drawdown1y": -2,
   "drawdown3y": -3,
   "drawdown5y": -7,
   "drawdownsi": -75,
-  "cagr1y": 420,
-  "cagr3y": 494,
+  "cagr1y": 419,
+  "cagr3y": 495,
   "cagr5y": 426,
   "cagr10y": 444,
   "cagrsi": 395,
   "rating": 0,
   "description": "Reksa Dana DANAREKSA SERUNI PASAR UANG III (selanjutnya disebut “DANAREKSA SERUNI PASAR UANG III”) adalah Reksa Dana Terbuka berbentuk Kontrak Investasi Kolektif (“KIK”) berdasarkan Undang-undang Nomor 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. DANAREKSA SERUNI PASAR UANG III bertujuan memperoleh tingkat pendapatan yang bersaing dengan tetap mempertahankan nilai modal investasi dan menjaga kestabilan likuiditas. DANAREKSA SERUNI PASAR UANG III akan dikelola secara aktif guna memperoleh pendapatan yang optimal dan risiko yang terkendali melalui investasi 100% (Seratus per Seratus) pada instrumen pasar uang dalam negeri dan/atau Efek Bersifat Utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang ditawarkan melalui Penawaran Umum dan/atau dicatatkan di Bursa Efek. Kebijakan investasi ini sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 191026,
+  "lastPrice": 191222,
   "expenseRatio": 48,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261016,
+  "asof": 20261023,
   "url": "bri-seruni-pasar-uang-iii-48674b59dd35",
   "currency": "IDR",
-  "lastAum": 2390000000000,
+  "lastAum": 2080000000000,
   "factsheet": "https://cache.makmur.id/files/products/61e6bdc33845210a42c0886a/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/61e6bdc33845210a42c0886a/prospectus.pdf",
   "inceptionDate": 20100201,
