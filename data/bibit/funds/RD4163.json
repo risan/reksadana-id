@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Obligasi Jatuh  Tempo < 1 tahun",
-      "percentage": 53
+      "percentage": 46
     },
     {
       "name": "Deposito",
-      "percentage": 44
+      "percentage": 51
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-22",
+    "date": "2026-10-26",
     "first_date": "2022-01-14",
-    "value": 1198.6451
+    "value": 1199.2677
   },
   "trade": null
 }

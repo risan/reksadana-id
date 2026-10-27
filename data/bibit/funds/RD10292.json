@@ -59,15 +59,15 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 59.41
+      "percentage": 55.66
     },
     {
       "name": "Pendapatan Tetap",
-      "percentage": 24.55
+      "percentage": 25.1
     },
     {
       "name": "Kas & Pasar Uang",
-      "percentage": 16.03
+      "percentage": 19.24
     }
   ],
   "investment_manager": {
@@ -144,9 +144,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-22",
+    "date": "2026-10-26",
     "first_date": "2026-02-09",
-    "value": 907.5948
+    "value": 903.7201
   },
   "trade": null
 }

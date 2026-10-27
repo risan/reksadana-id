@@ -64,15 +64,15 @@
     },
     {
       "name": "Pasar Uang",
-      "percentage": 9
+      "percentage": 4
     },
     {
       "name": "Kas dan Liabilitas",
-      "percentage": 0
+      "percentage": 2
     },
     {
       "name": "Saham",
-      "percentage": 81
+      "percentage": 94
     }
   ],
   "investment_manager": {
@@ -149,9 +149,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-22",
+    "date": "2026-10-26",
     "first_date": "2022-04-06",
-    "value": 1405.2211
+    "value": 1430.2551
   },
   "trade": null
 }

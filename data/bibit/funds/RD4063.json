@@ -64,11 +64,11 @@
     },
     {
       "name": "Pendapatan Tetap",
-      "percentage": 98
+      "percentage": 94
     },
     {
       "name": "Pasar Uang",
-      "percentage": 0
+      "percentage": 4
     },
     {
       "name": "Kas dan Liabilitas",
@@ -149,9 +149,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-22",
+    "date": "2026-10-26",
     "first_date": "2021-11-26",
-    "value": 1197.3301
+    "value": 1194.1146
   },
   "trade": null
 }

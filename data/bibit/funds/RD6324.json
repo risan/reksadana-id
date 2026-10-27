@@ -59,11 +59,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 1.51
+      "percentage": 1.9
     },
     {
       "name": "Efek Bersifat Utang",
-      "percentage": 98.49
+      "percentage": 98.1
     }
   ],
   "investment_manager": {
@@ -141,7 +141,7 @@
     "all": null
   },
   "nav": {
-    "date": "2026-10-22",
+    "date": "2026-10-26",
     "first_date": "2023-12-06",
     "value": 1014.482
   },
