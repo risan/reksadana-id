@@ -19,6 +19,7 @@
   },
   "released_date": "2025-07-10",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -202,14 +203,14 @@
   },
   "avg_yield": {
     "date": "2026-08-31",
-    "percentage": 0.0481
+    "percentage": null
   },
   "cagr": {
     "1y": 0.03062850999028588,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.03261553832043762
+    "all": 0.032546351212703106
   },
   "cagr_adjusted": {
     "1y": 0.03062850999028588,

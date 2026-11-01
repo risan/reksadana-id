@@ -1,0 +1,88 @@
+{
+  "_id": "634d54b279f48d91c48e70e6",
+  "name": "Danamas Dollar",
+  "category": "fixedincome",
+  "manager": {
+    "name": "PT Sinarmas Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6253dea6bf54c80a4005db7a/logo.png"
+  },
+  "custodian": {
+    "name": "Maybank",
+    "logo": "https://cache.makmur.id/images/custodians/620b22ba5266fd0a65d1498d/logo.png"
+  },
+  "holding": {
+    "name": "Sinarmas",
+    "logo": "https://cache.makmur.id/images/custodians/634d513a79f48d91c48e70e3/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "Bank Kb Indonesia Tbk, PT"
+    },
+    {
+      "instrument": "Golden Energy Resources"
+    },
+    {
+      "instrument": "Indika Energy Tbk"
+    },
+    {
+      "instrument": "Medco Energi Internasional Tbk, PT"
+    },
+    {
+      "instrument": "Pemerintah Republik Indonesia-1"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 9320
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 680
+    }
+  ],
+  "portfolioAsof": 20260930,
+  "return1d": 1,
+  "return5d": 7,
+  "return1m": 31,
+  "return3m": 95,
+  "returnytd": 327,
+  "return1y": 397,
+  "return3y": 1224,
+  "return5y": 1957,
+  "return10y": 3818,
+  "returnsi": 12587,
+  "drawdownytd": 0,
+  "drawdown1y": 0,
+  "drawdown3y": 0,
+  "drawdown5y": 0,
+  "drawdownsi": 0,
+  "cagr1y": 397,
+  "cagr3y": 392,
+  "cagr5y": 364,
+  "cagr10y": 329,
+  "cagrsi": 369,
+  "rating": 0,
+  "description": "Reksa Dana DANAMAS DOLLAR adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal serta pelaksanaannya di bidang Reksa Dana. DANAMAS DOLLAR bertujuan untuk memperoleh pendapatan yang optimal dalam jangka menengah dan panjang serta mempunyai fleksibilitas tinggi terhadap perubahan nilai tukar mata uang asing melalui penempatan dana investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) pada Efek bersifat utang serta minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) pada Instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun, dalam Denominasi Dollar Amerika Serikat maupun mata uang asing lainnya.",
+  "isSyariah": false,
+  "lastPrice": 226,
+  "expenseRatio": 145,
+  "minFirstBuy": 100,
+  "minNextBuy": 100,
+  "asof": 20261030,
+  "url": "danamas-dollar-9630be689e6f",
+  "currency": "USD",
+  "lastAum": 171000000,
+  "factsheet": "https://cache.makmur.id/files/products/634d54b279f48d91c48e70e6/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/634d54b279f48d91c48e70e6/prospectus.pdf",
+  "inceptionDate": 20040513,
+  "riskLevel": 40,
+  "traits": [
+    "ExitLoad"
+  ],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pendapatan-tetap"
+}
