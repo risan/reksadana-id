@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18127,
+    "exchange_rate": 18087,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,12 +61,12 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang dan/atau Deposito",
-      "percentage": 74.75
+      "name": "Obligasi Negara",
+      "percentage": 23.76
     },
     {
-      "name": "Obligasi Negara",
-      "percentage": 25.25
+      "name": "Pasar Uang dan/atau Deposito",
+      "percentage": 76.24
     }
   ],
   "holding": [
@@ -197,40 +197,40 @@
     "percentage": 0.041
   },
   "cagr": {
-    "1y": 0.0227681138564797,
+    "1y": 0.022838818068155797,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.0227681138564797
+    "all": 0.022838818068155797
   },
   "cagr_adjusted": {
-    "1y": 0.02288680817803468,
+    "1y": 0.02295727446919371,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.02288680817803468
+    "all": 0.02295727446919371
   },
   "simplereturn": {
-    "1d": 0.00019764798893162627,
-    "1m": 0.0025755324418028636,
-    "3m": 0.00596362190637123,
+    "1d": 0.00009880446596177705,
+    "1m": 0.0026745913818722045,
+    "3m": 0.0058630627049587325,
     "ytd": null,
-    "1y": 0.0121,
+    "1y": 0.012199999999999989,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.0121
+    "all": 0.012199999999999989
   },
   "changesvalue": {
-    "1d": 0.00019999999999997797,
-    "1m": 0.0025999999999999357,
-    "3m": 0.006000000000000005,
+    "1d": 0.00009999999999998899,
+    "1m": 0.0026999999999999247,
+    "3m": 0.005900000000000016,
     "ytd": null,
-    "1y": 0.0121,
+    "1y": 0.012199999999999989,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.0121
+    "all": 0.012199999999999989
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -248,9 +248,9 @@
     "all": -0.0003
   },
   "nav": {
-    "date": "2026-11-02",
+    "date": "2026-11-03",
     "first_date": "2026-04-22",
-    "value": 1.0121
+    "value": 1.0122
   },
   "trade": null
 }
