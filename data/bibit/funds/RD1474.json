@@ -62,15 +62,15 @@
   "asset": [
     {
       "name": "Inst. Pasar Uang",
-      "percentage": 6.4
+      "percentage": 10.13
     },
     {
       "name": "Efek Obligasi",
-      "percentage": 85.29
+      "percentage": 82.97
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 8.3
+      "percentage": 6.9
     }
   ],
   "investment_manager": {
@@ -153,9 +153,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2018-01-26",
-    "value": 1909.8665
+    "value": 1915.6494
   },
   "trade": null
 }

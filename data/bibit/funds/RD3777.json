@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18059,
+    "exchange_rate": 18039,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Saham syariah",
-      "percentage": 93.43
+      "percentage": 86.62
     },
     {
       "name": "Pasar uang syariah dan/ atau kas",
-      "percentage": 6.57
+      "percentage": 13.18
     }
   ],
   "investment_manager": {
@@ -142,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-03",
+    "date": "2026-11-04",
     "first_date": "2020-08-19",
-    "value": 1.0911
+    "value": 1.1273
   },
   "trade": null
 }

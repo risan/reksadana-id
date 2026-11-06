@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Money Market",
-      "percentage": 59.34
+      "percentage": 56.94
     },
     {
       "name": "Fixed Income",
-      "percentage": 9.96
+      "percentage": 11.22
     },
     {
       "name": "Equity",
-      "percentage": 30.69
+      "percentage": 31.84
     }
   ],
   "holding": [
@@ -247,9 +247,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2018-01-26",
-    "value": 1384.89
+    "value": 1395.08
   },
   "trade": null
 }

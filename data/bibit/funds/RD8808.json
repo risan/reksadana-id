@@ -61,24 +61,34 @@
   },
   "asset": [
     {
+      "name": "Obligasi Negara",
+      "percentage": 20.79
+    },
+    {
       "name": "Obligasi Korporasi",
       "percentage": 9.05
     },
     {
       "name": "Pasar Uang dan/atau Deposito",
       "percentage": 70.16
-    },
-    {
-      "name": "Obligasi Negara",
-      "percentage": 20.79
     }
   ],
   "holding": [
     {
       "symbol": "",
+      "name": "DEPOSITO BANK SUMUT (BPD SUMUT)",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
       "name": "DEPOSITO BPD RIAU",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -88,7 +98,7 @@
       "symbol": "",
       "name": "DEPOSITO PT BANK ALADIN SYARIAH Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -98,7 +108,7 @@
       "symbol": "",
       "name": "DEPOSITO PT BANK CAPITAL INDONESIA Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -108,17 +118,7 @@
       "symbol": "",
       "name": "DEPOSITO PT BANK JABAR BANTEN SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "DEPOSITO PT BANK MEGA TBK",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -128,7 +128,7 @@
       "symbol": "",
       "name": "DEPOSITO PT BANK SULUT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -136,9 +136,9 @@
     },
     {
       "symbol": "",
-      "name": "DEPOSITO PT BANK TABUNGAN PENSIUNAN NASIONAL SYARIAH",
+      "name": "OBL BKLJT V Merdeka Copper Gold THP IV THN 2026 Seri A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -148,7 +148,7 @@
       "symbol": "",
       "name": "OBL NEGARA REPUBLIK INDONESIA SERI FR0059",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -158,7 +158,7 @@
       "symbol": "PBS003",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6020,
       "product_type": "FR",
@@ -168,7 +168,7 @@
       "symbol": "",
       "name": "SEKURITAS RUPIAH BANK INDONESIA 07/16/27",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,8 +197,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 104167733735.56,
-    "date": "2026-09-01"
+    "value": 111073037488.68,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -209,40 +209,40 @@
     "percentage": 0.068
   },
   "cagr": {
-    "1y": 0.04168012924071096,
+    "1y": 0.04167775033251009,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.044839848427923545
+    "all": 0.04492090624548917
   },
   "cagr_adjusted": {
-    "1y": 0.04168012924071096,
+    "1y": 0.04167775033251009,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.04489991628371892
+    "all": 0.044981006236927135
   },
   "simplereturn": {
-    "1d": 0.00014598540145982497,
-    "1m": 0.004342966044236007,
-    "3m": 0.013949013949014155,
-    "ytd": 0.0362149643144114,
-    "1y": 0.04168012924071096,
+    "1d": 0.0002828054298642524,
+    "1m": 0.0041485795922853175,
+    "3m": 0.014029409044668428,
+    "ytd": 0.036508011532826234,
+    "1y": 0.04167775033251009,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.09616000000000002
+    "all": 0.09647000000000006
   },
   "changesvalue": {
-    "1d": 0.16000000000008185,
-    "1m": 4.740000000000009,
-    "3m": 15.080000000000155,
-    "ytd": 38.31000000000017,
-    "1y": 43.86000000000013,
+    "1d": 0.30999999999994543,
+    "1m": 4.529999999999973,
+    "3m": 15.170000000000073,
+    "ytd": 38.62000000000012,
+    "1y": 43.87000000000012,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 96.16000000000008
+    "all": 96.47000000000003
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -264,9 +264,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2024-10-02",
-    "value": 1096.16
+    "value": 1096.47
   },
   "trade": null
 }

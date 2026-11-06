@@ -19,11 +19,10 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18059,
+    "exchange_rate": 18005,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -142,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2023-10-02",
-    "value": 1.0984
+    "value": 1.099
   },
   "trade": null
 }

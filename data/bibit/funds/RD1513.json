@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 72.64
+      "percentage": 56.69
     },
     {
       "name": "Obligasi",
-      "percentage": 27.36
+      "percentage": 43.31
     }
   ],
   "holding": [
@@ -195,9 +195,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2017-02-13",
-    "value": 1560.7401
+    "value": 1561.1966
   },
   "trade": null
 }

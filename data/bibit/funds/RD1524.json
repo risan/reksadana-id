@@ -62,11 +62,11 @@
   "asset": [
     {
       "name": "Money Market",
-      "percentage": 4.42
+      "percentage": 14.11
     },
     {
       "name": "Equity",
-      "percentage": 95.58
+      "percentage": 85.89
     }
   ],
   "holding": [
@@ -201,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2011-10-19",
-    "value": 1338.85
+    "value": 1358.86
   },
   "trade": null
 }

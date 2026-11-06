@@ -70,7 +70,7 @@
       "symbol": "AMMN",
       "name": "Amman Mineral Internasional Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6026,
       "product_type": "Saham",
@@ -80,7 +80,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -90,7 +90,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -100,7 +100,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -110,7 +110,7 @@
       "symbol": "BBNI",
       "name": "Bank Negara Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4338,
       "product_type": "Saham",
@@ -120,7 +120,7 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
@@ -130,29 +130,19 @@
       "symbol": "BRPT",
       "name": "Barito Pacific Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4586,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "BRMS",
-      "name": "Bumi Resources Minerals Tbk.",
+      "symbol": "TPIA",
+      "name": "Chandra Asri Pacific Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4633,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "DSSA",
-      "name": "Dian Swastatika Sentosa Tbk",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4727,
+      "company_id": 4710,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -160,9 +150,19 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4623,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "UNTR",
+      "name": "United Tractors Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4571,
       "product_type": "Saham",
       "serie_id": null
     }
@@ -189,8 +189,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 15683787922.67,
-    "date": "2026-09-01"
+    "value": 12984143664.02,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -208,33 +208,33 @@
     "all": null
   },
   "cagr_adjusted": {
-    "1y": -0.5397717552771388,
+    "1y": -0.49158740495937125,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.5397717552771388
+    "all": -0.49158740495937125
   },
   "simplereturn": {
-    "1d": 0.004397897953859475,
-    "1m": -0.1877285697062252,
-    "3m": -0.21931459361330252,
+    "1d": 0.025752347025863598,
+    "1m": -0.17679349606408645,
+    "3m": -0.20519652287255974,
     "ytd": null,
-    "1y": -0.19152999999999998,
+    "1y": -0.17071000000000003,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.19152999999999998
+    "all": -0.17071000000000003
   },
   "changesvalue": {
-    "1d": 3.5400000000000773,
-    "1m": -186.85000000000002,
-    "3m": -227.1199999999999,
+    "1d": 20.819999999999936,
+    "1m": -178.10000000000002,
+    "3m": -214.10000000000014,
     "ytd": null,
-    "1y": -191.52999999999997,
+    "1y": -170.71000000000004,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -191.52999999999997
+    "all": -170.71000000000004
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -252,9 +252,9 @@
     "all": -0.2669392736148046
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2026-07-27",
-    "value": 808.47
+    "value": 829.29
   },
   "trade": null
 }

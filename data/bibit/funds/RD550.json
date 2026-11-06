@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Fixed Income",
-      "percentage": 50.2
+      "percentage": 51.15
     },
     {
       "name": "Money Market",
-      "percentage": 49.8
+      "percentage": 48.85
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2018-01-26",
-    "value": 1754.94
+    "value": 1755.4
   },
   "trade": null
 }

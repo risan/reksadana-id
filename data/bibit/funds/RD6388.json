@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Sukuk",
-      "percentage": 98.36
+      "percentage": 97.88
     },
     {
       "name": "Pasar Uang-Syariah",
-      "percentage": 1.64
+      "percentage": 2.12
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2024-01-15",
-    "value": 1018.77
+    "value": 1018.93
   },
   "trade": null
 }

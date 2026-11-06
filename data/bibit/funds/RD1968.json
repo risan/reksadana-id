@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Pendapatan Tetap",
-      "percentage": 28.3
+      "percentage": 22.47
     },
     {
       "name": "Pasar Uang",
-      "percentage": 14.89
+      "percentage": 5.35
     },
     {
       "name": "Ekuitas",
-      "percentage": 56.81
+      "percentage": 72.18
     }
   ],
   "holding": [
@@ -204,9 +204,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2018-01-26",
-    "value": 2490.41
+    "value": 2532.35
   },
   "trade": null
 }

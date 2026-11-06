@@ -74,7 +74,7 @@
       "symbol": "AMMN",
       "name": "Amman Mineral Internasional Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6026,
       "product_type": "Saham",
@@ -84,7 +84,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -94,7 +94,7 @@
       "symbol": "AUTO",
       "name": "Astra Otoparts Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4584,
       "product_type": "Saham",
@@ -104,7 +104,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -114,7 +114,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -124,7 +124,7 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
@@ -134,7 +134,7 @@
       "symbol": "",
       "name": "DEPOSITO PT BANK CIMB NIAGA",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,7 +144,7 @@
       "symbol": "",
       "name": "DEPOSITO PT Bank HSBC Indonesia",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -154,7 +154,7 @@
       "symbol": "",
       "name": "FULLERTON LUX FUNDS - Global Absolute Alpha A USD Cap",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -164,7 +164,7 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4623,
       "product_type": "Saham",
@@ -193,8 +193,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 31995509112.49,
-    "date": "2026-09-01"
+    "value": 27163944516.09,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -205,40 +205,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.24141454862510903,
+    "1y": -0.23067173637515836,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.08511697295128595
+    "all": -0.07729286703246663
   },
   "cagr_adjusted": {
-    "1y": -0.24141454862510903,
+    "1y": -0.23067173637515836,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.0852107321272434
+    "all": -0.07737827814628584
   },
   "simplereturn": {
-    "1d": 0.0038460106943911665,
-    "1m": -0.11638091077863932,
-    "3m": -0.14118770896354083,
-    "ytd": -0.2594385817186684,
-    "1y": -0.24141454862510903,
+    "1d": 0.020256324694424954,
+    "1m": -0.10536981847737747,
+    "3m": -0.12588812062557575,
+    "ytd": -0.24443752917379802,
+    "1y": -0.23067173637515836,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.19086999999999998
+    "all": -0.17447999999999997
   },
   "changesvalue": {
-    "1d": 3.1000000000000227,
-    "1m": -106.57000000000005,
-    "3m": -133.01999999999998,
-    "ytd": -283.4599999999999,
-    "1y": -257.5000000000001,
+    "1d": 16.389999999999986,
+    "1m": -97.23000000000002,
+    "3m": -118.88999999999999,
+    "ytd": -267.06999999999994,
+    "1y": -247.51999999999998,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -190.87
+    "all": -174.48000000000002
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -260,9 +260,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2024-06-19",
-    "value": 809.13
+    "value": 825.52
   },
   "trade": null
 }

@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "MONEY MARKET",
-      "percentage": 4.34
+      "percentage": 4.98
     },
     {
       "name": "FIXED INCOME",
-      "percentage": 95.66
+      "percentage": 95.02
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2021-03-25",
-    "value": 1182.44
+    "value": 1185.78
   },
   "trade": null
 }

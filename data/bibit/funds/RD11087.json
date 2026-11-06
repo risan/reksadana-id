@@ -57,7 +57,20 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Surat Utang",
+      "percentage": 69.21
+    },
+    {
+      "name": "Saham",
+      "percentage": 23.38
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 6.26
+    }
+  ],
   "investment_manager": {
     "name": "Recapital Asset Management, PT"
   },
@@ -132,9 +145,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2026-10-01",
-    "value": 969.7353
+    "value": 967.3461
   },
   "trade": null
 }

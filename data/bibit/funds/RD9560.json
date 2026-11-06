@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Surat Utang",
-      "percentage": 91.48
+      "percentage": 88.3
     },
     {
       "name": "Pasar Uang",
-      "percentage": 6.4
+      "percentage": 9.87
     }
   ],
   "investment_manager": {
@@ -142,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2025-08-25",
-    "value": 1068.8374
+    "value": 1069.1591
   },
   "trade": null
 }

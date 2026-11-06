@@ -19,10 +19,11 @@
   },
   "released_date": "2026-04-22",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18059,
+    "exchange_rate": 18039,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -73,7 +74,17 @@
       "symbol": "",
       "name": "DEPOSITO PT Bank Allo Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "DEPOSITO PT BANK CAPITAL INDONESIA Tbk",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +94,7 @@
       "symbol": "",
       "name": "DEPOSITO PT Bank China Construction Bank Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,9 +102,9 @@
     },
     {
       "symbol": "",
-      "name": "DEPOSITO PT Bank JAGO Tbk",
+      "name": "DEPOSITO PT BANK JAGO Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +114,7 @@
       "symbol": "",
       "name": "DEPOSITO PT BANK MANDIRI (PERSERO) Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +124,7 @@
       "symbol": "",
       "name": "DEPOSITO PT BANK MEGA Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +134,7 @@
       "symbol": "",
       "name": "DEPOSITO PT BANK NEGARA INDONESIA (PERSERO) Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +144,7 @@
       "symbol": "",
       "name": "DEPOSITO PT Bank Rakyat Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +154,7 @@
       "symbol": "",
       "name": "DEPOSITO PT BANK TABUNGAN NEGARA (PERSERO)",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,7 +164,7 @@
       "symbol": "",
       "name": "OBL INDON 4.35 01/08/27 REGS",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -184,8 +195,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 1683936.94,
-    "date": "2026-09-01"
+    "value": 1777225.44,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -196,40 +207,40 @@
     "percentage": 0.041
   },
   "cagr": {
-    "1y": 0.022908790785932664,
+    "1y": 0.0227917812364693,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.022908790785932664
+    "all": 0.0227917812364693
   },
   "cagr_adjusted": {
-    "1y": 0.02302700790212331,
+    "1y": 0.02297804302070605,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.02302700790212331
+    "all": 0.02297804302070605
   },
   "simplereturn": {
-    "1d": 0.00009879470460383288,
-    "1m": 0.0027736503219415454,
-    "3m": 0.0059624366491106695,
+    "1d": 0.0000987849451743461,
+    "1m": 0.002574767280649537,
+    "3m": 0.0059618441971383,
     "ytd": null,
-    "1y": 0.012299999999999978,
+    "1y": 0.012399999999999967,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.012299999999999978
+    "all": 0.012399999999999967
   },
   "changesvalue": {
     "1d": 0.00009999999999998899,
-    "1m": 0.0027999999999999137,
+    "1m": 0.0025999999999999357,
     "3m": 0.006000000000000005,
     "ytd": null,
-    "1y": 0.012299999999999978,
+    "1y": 0.012399999999999967,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.012299999999999978
+    "all": 0.012399999999999967
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -247,9 +258,9 @@
     "all": -0.0003
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2026-04-22",
-    "value": 1.0123
+    "value": 1.0124
   },
   "trade": null
 }

@@ -18,7 +18,6 @@
   },
   "released_date": "2026-05-22",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -64,52 +63,32 @@
       "percentage": 35.04
     },
     {
-      "name": "Pasar Uang dan/atau Deposito",
-      "percentage": 21.3
-    },
-    {
       "name": "Obligasi Negara",
       "percentage": 43.66
+    },
+    {
+      "name": "Pasar Uang dan/atau Deposito",
+      "percentage": 21.3
     }
   ],
   "holding": [
     {
-      "symbol": "AUTO",
-      "name": "Astra Otoparts Tbk.",
+      "symbol": "AKRA",
+      "name": "AKR Corporindo Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4584,
+      "company_id": 4475,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "AVIA",
-      "name": "Avia Avian Tbk.",
+      "symbol": "ASII",
+      "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4772,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BBCA",
-      "name": "Bank Central Asia Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4320,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BFIN",
-      "name": "BFI Finance Indonesia Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4915,
+      "company_id": 4547,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -117,27 +96,27 @@
       "symbol": "CMRY",
       "name": "Cisarua Mountain Dairy Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4898,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "MTEL",
-      "name": "Dayamitra Telekomunikasi Tbk.",
+      "symbol": "",
+      "name": "DEPOSITO PT BANK ALADIN SYARIAH Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 5043,
-      "product_type": "Saham",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
       "serie_id": null
     },
     {
       "symbol": "",
       "name": "DEPOSITO PT BANK CAPITAL INDONESIA Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -147,7 +126,7 @@
       "symbol": "",
       "name": "DEPOSITO PT BANK JABAR BANTEN SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -157,7 +136,7 @@
       "symbol": "FR0108",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 9548,
       "product_type": "FR",
@@ -167,10 +146,30 @@
       "symbol": "FR0109",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 9551,
       "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "FR0110",
+      "name": "Obligasi FR",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 10929,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "TOTL",
+      "name": "Total Bangun Persada Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 5020,
+      "product_type": "Saham",
       "serie_id": null
     }
   ],
@@ -196,8 +195,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 21153246817.72,
-    "date": "2026-09-01"
+    "value": 19860172316.84,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -208,40 +207,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.08910133715084334,
+    "1y": -0.07852205256416889,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.08910133715084334
+    "all": -0.07852205256416889
   },
   "cagr_adjusted": {
-    "1y": -0.08961329181599487,
+    "1y": -0.07897317072585008,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.08961329181599487
+    "all": -0.07897317072585008
   },
   "simplereturn": {
-    "1d": 0.0015783587159894363,
-    "1m": -0.06730001752097636,
-    "3m": -0.0658542529856202,
+    "1d": 0.0050720100187851,
+    "1m": -0.06758837026924969,
+    "3m": -0.06437259549994168,
     "ytd": null,
-    "1y": -0.04179999999999995,
+    "1y": -0.036940000000000084,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.04179999999999995
+    "all": -0.036940000000000084
   },
   "changesvalue": {
-    "1d": 1.509999999999991,
-    "1m": -69.13999999999987,
-    "3m": -67.54999999999995,
+    "1d": 4.8599999999999,
+    "1m": -69.80999999999995,
+    "3m": -66.25999999999999,
     "ytd": null,
-    "1y": -41.799999999999955,
+    "1y": -36.940000000000055,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -41.799999999999955
+    "all": -36.940000000000055
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -259,9 +258,9 @@
     "all": -0.1072238449406956
   },
   "nav": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "first_date": "2026-05-22",
-    "value": 958.2
+    "value": 963.06
   },
   "trade": null
 }
