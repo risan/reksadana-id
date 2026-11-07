@@ -61,16 +61,12 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang",
-      "percentage": 3.89
-    },
-    {
       "name": "Kas/Setara Kas",
-      "percentage": 0.6
+      "percentage": 4.31
     },
     {
       "name": "Efek Saham",
-      "percentage": 95.51
+      "percentage": 95.69
     }
   ],
   "holding": [
@@ -205,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2000-01-04",
-    "value": 14822.84
+    "value": 15018.02
   },
   "trade": null
 }

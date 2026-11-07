@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,15 +62,15 @@
   "asset": [
     {
       "name": "Time Deposit",
-      "percentage": 24
+      "percentage": 8
     },
     {
       "name": "Fixed Income - MM",
-      "percentage": 74
+      "percentage": 91
     },
     {
       "name": "Cash & Equivalent",
-      "percentage": 2
+      "percentage": 1
     }
   ],
   "holding": [
@@ -204,9 +205,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2015-08-13",
-    "value": 1775.9276
+    "value": 1776.259
   },
   "trade": null
 }

@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 10.88
+      "percentage": 10.93
     },
     {
       "name": "Kas & Setara Kas",
-      "percentage": 0.23
+      "percentage": 5
     },
     {
       "name": "Pasar Uang",
-      "percentage": 88.89
+      "percentage": 84.07
     }
   ],
   "investment_manager": {
@@ -146,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2022-04-27",
-    "value": 1238.6647
+    "value": 1238.7398
   },
   "trade": null
 }

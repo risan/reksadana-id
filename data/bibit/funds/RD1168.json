@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Deposito + Kas",
-      "percentage": 35.53
+      "percentage": 37.35
     },
     {
       "name": "Saham",
-      "percentage": 47.08
+      "percentage": 43.22
     },
     {
       "name": "Obligasi",
-      "percentage": 17.38
+      "percentage": 19.43
     }
   ],
   "investment_manager": {
@@ -152,9 +152,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2018-01-26",
-    "value": 1384.0486
+    "value": 1372.8986
   },
   "trade": null
 }

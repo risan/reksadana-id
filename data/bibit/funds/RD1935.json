@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,15 +62,15 @@
   "asset": [
     {
       "name": "Time Deposit",
-      "percentage": 5
+      "percentage": 1
     },
     {
       "name": "Fixed Income",
-      "percentage": 92
+      "percentage": 97
     },
     {
       "name": "Cash & Equivalent",
-      "percentage": 3
+      "percentage": 2
     }
   ],
   "investment_manager": {
@@ -146,9 +147,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2018-12-18",
-    "value": 1106.4167
+    "value": 1106.624
   },
   "trade": null
 }

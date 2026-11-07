@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,11 +61,11 @@
   "asset": [
     {
       "name": "Money Market",
-      "percentage": 1.62
+      "percentage": 1.87
     },
     {
       "name": "Equity",
-      "percentage": 98.38
+      "percentage": 98.13
     }
   ],
   "investment_manager": {
@@ -141,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2023-11-24",
-    "value": 692.819985
+    "value": 699.865365
   },
   "trade": null
 }

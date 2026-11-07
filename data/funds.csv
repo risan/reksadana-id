@@ -1,5 +1,6 @@
 id,name,other_names,manager,type,currency,sharia,launch_date,bibit,bareksa,kontan,makmur,ojk
 BRK3,Asiantrust Enhanced Strategy Fund,,"Simpan Asset Management, PT",Saham,IDR,,2013-02-19,,3,,,REKSA DANA ASIANTRUST ENHANCED STRATEGY FUND
+BRK11,AXA Saham Dinamis,,"BNP Paribas Asset Management, PT",Saham,IDR,,1997-08-05,,11,15,,
 BRK27,BNP Paribas Inspira,,"BNP Paribas Asset Management, PT",Saham,IDR,,2012-01-12,,27,,,
 BRK34,CIMB - Principal Equity Focus,,"Principal Asset Management, PT",Saham,IDR,,2013-04-29,,34,,,
 BRK37,Principal Islamic Equity Growth Syariah,CIMB Islamic Equity Growth Syariah,"Principal Asset Management, PT",Saham,IDR,true,2007-09-10,,37,160,,REKSA DANA PRINCIPAL ISLAMIC EQUITY GROWTH SYARIAH
@@ -949,6 +950,7 @@ BRK2870,Mandiri Seri 120,,"Danareksa Investment Management Indonesia d/h Mandiri
 BRK2871,RHB Capital Protected Fund 39,,"Allianz Global Investors Asset Management Indonesia, PT",Terproteksi,IDR,,2017-10-24,,2871,,,Reksa Dana Terproteksi RHB Capital Protected Fund 39
 BRK2872,Bahana Stellar Equity Fund Kelas I,,"Bahana TCW Investment Management, PT",Saham,IDR,,2017-10-25,,2872,16963,,REKSA DANA BAHANA STELLAR EQUITY FUND KELAS I
 BRK2873,Panin Dana Berkembang,,"Panin Asset Management, PT",Saham,IDR,,2017-10-25,,2873,14980,,REKSA DANA SAHAM PANIN DANA BERKEMBANG
+BRK2874,LIF Theologia Fixed Income Fund,LIF THEOLOGIA FIXED INCOME,"LiF Manajemen Investasi, PT",Obligasi,IDR,,2017-10-25,,2874,14983,,REKSA DANA LIF THEOLOGIA FIXED INCOME
 BRK2875,Reksa Dana Pendapatan Tetap ITB Harmoni BNI-AM,,"Danareksa Investment Management Indonesia d/h BNI AM, PT",Obligasi,IDR,,2017-10-25,,2875,,,
 BRK2876,Cipta Utama Ekuitas,,"Ciptadana Asset Management, PT",Saham,IDR,,2017-10-25,,2876,,,Reksa Dana Cipta Utama Ekuitas
 BRK2877,STAR Money Market Kelas Utama,,"Surya Timur Alam Raya Asset Management, PT",Pasar Uang,IDR,false,2017-10-25,,2877,16587,6549ec065bcdc24d0cea6a7a,REKSA DANA STAR MONEY MARKET KELAS UTAMA
@@ -1775,7 +1777,6 @@ BRK5173,Reksa Dana Terproteksi Mandiri Investa 17,,"Danareksa Investment Managem
 BRK5196,PNM Pembiayaan Mikro BUMN Seri XXI,,"Danareksa Investment Management Indonesia d/h PNM IM, PT",Penyertaan Terbatas,,,2026-02-13,,5196,,,
 BRK5202,Reksa Dana Syariah Ashmore Global EM Sukuk Fund USD,,"Ashmore Asset Management Indonesia, PT",Obligasi,USD,true,2026-02-23,,5202,,,REKSA DANA SYARIAH ASHMORE GLOBAL EM SUKUK FUND USD
 BRK5217,Reksa Dana Terproteksi Mandiri Investa 18,,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",Terproteksi,IDR,,2026-04-15,,5217,,,
-BRK5305,Mandiri Investa 21,,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",Terproteksi,,,2026-10-14,,5305,,,
 BRK5311,BNP Paribas Pasar Uang Sarana Kas Kelas B,,"BNP Paribas Asset Management, PT",Pasar Uang,,,2026-10-22,,5311,,,REKSA DANA BNP PARIBAS PASAR UANG SARANA KAS KELAS B
 KTN8,AAA Bond Fund 2,,PT. AAA Asset Management,Obligasi,,,,,,8,,
 KTN12,RD Indosurya Equity Fund,,PT. Indosurya Asset Management,Saham,,,,,,12,,
@@ -1919,7 +1920,7 @@ RD80,Avrist Equity - Cross Sectoral,,"Avrist Asset Management, PT",Saham,IDR,fal
 RD81,Avrist Equity Amar Syariah,,"Avrist Asset Management, PT",Saham,IDR,true,2013-10-23,RD81,472,,,Avrist Equity Amar Syariah
 RD82,Reksa Dana Indeks Avrist IDX30,Avrist IDX30,"Avrist Asset Management, PT",Saham,IDR,false,2017-12-18,RD82,2998,15070,,REKSA DANA INDEKS AVRIST IDX30
 RD83,Avrist Prime Bond Fund,,"Avrist Asset Management, PT",Obligasi,IDR,false,2014-05-21,RD83,1651,1161,60eebfad83d25903cd37ff6c,REKSA DANA AVRIST PRIME BOND FUND
-RD85,AXA Saham Dinamis,Axa Citradinamis,"AXA Investment Managers Select Indonesia , PT",Saham,IDR,false,1997-08-05,RD85,11,15,,REKSA DANA AXA SAHAM DINAMIS
+RD85,Axa Citradinamis,,"Axa Investment Managers Select Indonesia, PT",Saham,IDR,false,2000-01-05,RD85,,,,
 RD86,AXA Obligasi Dollar,Axa Maestrodollar,"AXA Investment Managers Select Indonesia , PT",Obligasi,USD,false,2008-12-01,RD86,397,,,REKSA DANA AXA OBLIGASI DOLLAR
 RD87,Axa Bond Income Kelas O,Axa Maestroobligasi Plus,"AXA Investment Managers Select Indonesia , PT",Obligasi,IDR,false,2011-09-08,RD87,396,731,,REKSA DANA AXA BOND INCOME KELAS O
 RD88,Axa Maestrosaham,,PT Architas Asset Management Indonesia,Saham,IDR,false,2013-08-16,RD88,,,,
@@ -3292,7 +3293,7 @@ RD3545,Hpam Ultima Protected Ii,,"Henan Putihrai Asset Management, PT",Terprotek
 RD3546,Bahana Progressive Protected Fund 199 Restrukturisasi,Bahana Progressive Protected Fund 199,"Bahana TCW Investment Management, PT",Terproteksi,IDR,false,2020-02-10,RD3546,4089,15969,,REKSA DANA TERPROTEKSI BAHANA PROGRESSIVE PROTECTED FUND 199 RESTRUKTURISASI
 RD3547,Bni-am Prioritas Agarwood,,PT Danareksa Investment Management Indonesia,Pasar Uang,IDR,false,2020-02-10,RD3547,,15968,,
 RD3548,Setiabudi Dana Proteksi 5,,"Setiabudi Investment Management, PT",Terproteksi,IDR,false,2020-02-10,RD3548,4090,,,REKSA DANA TERPROTEKSI SETIABUDI DANA PROTEKSI 5
-RD3549,LIF Theologia Fixed Income Fund,Corpus Theologia Fixed Income Fund|LIF THEOLOGIA FIXED INCOME,"LiF Manajemen Investasi, PT",Obligasi,IDR,false,2017-10-25,RD3549,2874,14983,,REKSA DANA LIF THEOLOGIA FIXED INCOME
+RD3549,Corpus Theologia Fixed Income Fund,,"LiF Manajemen Investasi, PT",Obligasi,IDR,false,2020-02-05,RD3549,,,,
 RD3550,Henan Ekuitas Syariah Berkah Kelas A,Hpam Ekuitas Syariah Berkah,"Henan Putihrai Asset Management, PT",Saham,IDR,true,2020-02-12,RD3550,4093,15974,,
 RD3551,Simas Cemerlang 12,Reksa Dana Terproteksi Simas Cemerlang 12,"Sinarmas Asset Management, PT",Terproteksi,IDR,false,2020-02-12,RD3551,4091,,,REKSA DANA TERPROTEKSI SIMAS CEMERLANG 12
 RD3552,Majoris Capital Protected Fund Indonesia Iv,,"Majoris Asset Management, PT",Terproteksi,IDR,false,2020-02-12,RD3552,4092,,,
@@ -4777,7 +4778,7 @@ RD11110,Sequis Equity Indonesia Kelas B,,"Sequis Aset Manajemen, PT",Saham,IDR,f
 RD11111,Sequis Equity Indonesia Kelas C,,"Sequis Aset Manajemen, PT",Saham,IDR,false,2026-10-12,RD11111,5304,,,
 RD11112,Sucorinvest Premium Sovereign Balanced Fund Kelas B,,"Sucorinvest Asset Management, PT",Campuran,IDR,false,2026-10-12,RD11112,5302,,,REKSA DANA SUCORINVEST PREMIUM SOVEREIGN BALANCED FUND KELAS B
 RD11113,Ashmore Dana Terproteksi Nusantara VI,,"Ashmore Asset Management Indonesia, PT",Terproteksi,IDR,false,2026-10-14,RD11113,5306,,,REKSA DANA TERPROTEKSI ASHMORE DANA TERPROTEKSI NUSANTARA VI
-RD11114,Mandiri Investa 21,,"Danareksa Investment Management Indonesia, PT",Terproteksi,IDR,false,2026-10-14,RD11114,,,,
+RD11114,Mandiri Investa 21,,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",Terproteksi,IDR,false,2026-10-14,RD11114,5305,,,
 RD11115,KIM Protected Sharia Fund III,,"Korea Investment Management Indonesia, PT",Terproteksi,IDR,true,2026-10-15,RD11115,5307,,,
 RD11116,Syailendra Sharia Strategic Balanced Fund Kelas A,,"Syailendra Capital, PT",Campuran,IDR,true,2026-10-16,RD11116,5308,,,
 RD11117,Sucorinvest Proteksi 56,,"Sucorinvest Asset Management, PT",Terproteksi,IDR,false,2026-10-19,RD11117,5309,,,REKSA DANA TERPROTEKSI SUCORINVEST PROTEKSI 56

@@ -60,20 +60,16 @@
   },
   "asset": [
     {
-      "name": "Surat Utang",
-      "percentage": 1.82
-    },
-    {
-      "name": "Pasar Uang",
-      "percentage": 2.89
-    },
-    {
       "name": "Kas/Setara Kas",
-      "percentage": 0.25
+      "percentage": 2.92
     },
     {
       "name": "Efek Saham",
-      "percentage": 95.04
+      "percentage": 95.13
+    },
+    {
+      "name": "Surat Utang",
+      "percentage": 1.95
     }
   ],
   "investment_manager": {
@@ -150,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2018-12-05",
-    "value": 3404.79
+    "value": 3449.97
   },
   "trade": null
 }

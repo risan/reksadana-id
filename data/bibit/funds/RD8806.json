@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 93
+      "percentage": 68
     },
     {
       "name": "Lain-Lain",
-      "percentage": 7
+      "percentage": 32
     }
   ],
   "investment_manager": {
@@ -142,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2024-09-26",
-    "value": 1085.0167
+    "value": 1085.1255
   },
   "trade": null
 }

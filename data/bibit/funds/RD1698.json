@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,16 +61,16 @@
   },
   "asset": [
     {
+      "name": "Deposito",
+      "percentage": 16.42
+    },
+    {
       "name": "Kas&Setara",
-      "percentage": 2.16
+      "percentage": 4.39
     },
     {
       "name": "Saham",
-      "percentage": 82.75
-    },
-    {
-      "name": "Deposito",
-      "percentage": 15.09
+      "percentage": 79.19
     }
   ],
   "holding": [
@@ -204,9 +205,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2007-06-08",
-    "value": 3498.79
+    "value": 3524.21
   },
   "trade": null
 }

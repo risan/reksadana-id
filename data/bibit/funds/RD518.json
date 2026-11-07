@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Kas/Setara Kas",
-      "percentage": 5.38
+      "percentage": 6.74
     },
     {
       "name": "Efek Saham",
-      "percentage": 94.62
+      "percentage": 93.26
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2008-04-21",
-    "value": 1620.13
+    "value": 1629.76
   },
   "trade": null
 }

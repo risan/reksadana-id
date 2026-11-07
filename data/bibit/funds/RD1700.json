@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,12 +61,12 @@
   },
   "asset": [
     {
-      "name": "Kas&Setara",
-      "percentage": 7
+      "name": "Deposito",
+      "percentage": -12.99
     },
     {
       "name": "Obligasi",
-      "percentage": 93
+      "percentage": 112.99
     }
   ],
   "holding": [
@@ -200,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2011-12-09",
-    "value": 2674.51
+    "value": 2680.36
   },
   "trade": null
 }

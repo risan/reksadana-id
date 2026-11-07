@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,11 +61,11 @@
   "asset": [
     {
       "name": "Money Market Sharia",
-      "percentage": 13.36
+      "percentage": 3.6
     },
     {
       "name": "Bonds Sharia",
-      "percentage": 86.64
+      "percentage": 96.4
     }
   ],
   "investment_manager": {
@@ -141,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2025-07-31",
-    "value": 1046.1339
+    "value": 1047.3773
   },
   "trade": null
 }

@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18039,
+    "exchange_rate": 18037,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -204,18 +204,18 @@
   },
   "shareholders": [],
   "expenseratio": {
-    "percentage": 0.0155
+    "percentage": 0.0072
   },
   "avg_yield": {
     "date": "2026-09-30",
     "percentage": 0.03
   },
   "cagr": {
-    "1y": 0.026002443539127285,
-    "3y": 0.028756321654447747,
-    "5y": 0.02261087593986577,
-    "10y": 0.014905731775008091,
-    "all": 0.0003568270946252561
+    "1y": 0.02599007751874627,
+    "3y": 0.0287805625748061,
+    "5y": 0.022623739480941873,
+    "10y": 0.014912906082159783,
+    "all": 0.0003625419411434905
   },
   "cagr_adjusted": {
     "1y": 0.02599007751874627,

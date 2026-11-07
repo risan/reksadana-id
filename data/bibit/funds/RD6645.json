@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 85
+      "percentage": 96
     },
     {
       "name": "Pasar Uang & Lain-Lain",
-      "percentage": 15
+      "percentage": 4
     }
   ],
   "investment_manager": {
@@ -142,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2024-06-13",
-    "value": 757.8069
+    "value": 755.0017
   },
   "trade": null
 }

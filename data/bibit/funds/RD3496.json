@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 26.25
+      "percentage": 19.53
     },
     {
       "name": "Obligasi dibawah 1 tahun",
-      "percentage": 73.75
+      "percentage": 80.47
     }
   ],
   "investment_manager": {
@@ -147,9 +148,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2019-12-13",
-    "value": 1408.0462
+    "value": 1408.1811
   },
   "trade": null
 }

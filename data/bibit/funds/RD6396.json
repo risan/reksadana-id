@@ -59,19 +59,19 @@
   "asset": [
     {
       "name": "Deposito Berjangka",
-      "percentage": 24
+      "percentage": 8
     },
     {
       "name": "Pendapatan Tetap",
-      "percentage": 62
+      "percentage": 83
     },
     {
       "name": "Kas & Setara Kas",
-      "percentage": 5
+      "percentage": 1
     },
     {
       "name": "Equity",
-      "percentage": 9
+      "percentage": 8
     }
   ],
   "investment_manager": {
@@ -148,9 +148,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2024-01-17",
-    "value": 992.3683
+    "value": 990.2206
   },
   "trade": null
 }
