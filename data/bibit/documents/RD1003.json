@@ -559,6 +559,11 @@
       "name": "MANULIFE_USD_FIXED_INCOME_KELAS_A_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/MANULIFE_USD_FIXED_INCOME_KELAS_A_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "MANULIFE_USD_FIXED_INCOME_KELAS_A_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/MANULIFE_USD_FIXED_INCOME_KELAS_A_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -580,7 +585,7 @@
     },
     {
       "name": "Manulife_USD_Fixed_Income_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FManulife_USD_Fixed_Income_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Manulife_USD_Fixed_Income_2020.pdf"
     },
     {
       "name": "prospektus_manulife_usd_fixed_income_fund.pdf",

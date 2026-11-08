@@ -16,63 +16,63 @@
   },
   "topHoldings": [
     {
-      "instrument": "OB BK I MERDEKA BATTERY MATERIALS IV 26B"
+      "instrument": "OBL BK I MERDEKA BATTERY MATERIALS IV 26B"
     },
     {
-      "instrument": "OB NEGARA REPUBLIK INDONESIA SERI FR0110"
+      "instrument": "OBLIGASI NEGARA REPUBLIK IND SERI FR0110"
     },
     {
-      "instrument": "OBL BKL VIII SARANA MULTI FIN III 2026"
+      "instrument": "OBL III INTEGRASI JARINGAN EKOSISTEM 26A"
     },
     {
-      "instrument": "OBL BWWSN SOS BKL II PEGADAIAN I 2026 A"
+      "instrument": "OBLIGASI NEGARA REPUBLIK IND SERI FR0078"
     },
     {
-      "instrument": "OBL I ADARO INDONESIA TAHUN 2026 SERI A"
+      "instrument": "OBLIGASI NEGARA REPUBLIK IND SERI FR0064"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9306
+      "weight": 9360
     },
     {
       "asset": "Pasar Uang",
-      "weight": 694
+      "weight": 640
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": -16,
-  "return5d": -49,
-  "return1m": -54,
-  "return3m": 83,
-  "returnytd": -161,
-  "return1y": -133,
-  "return3y": 1185,
-  "return5y": 1370,
-  "return10y": 5036,
-  "returnsi": 8936,
+  "portfolioAsof": 20261030,
+  "return1d": 12,
+  "return5d": 29,
+  "return1m": -28,
+  "return3m": 94,
+  "returnytd": -133,
+  "return1y": -83,
+  "return3y": 1122,
+  "return5y": 1403,
+  "return10y": 5145,
+  "returnsi": 8990,
   "drawdownytd": -343,
   "drawdown1y": -343,
   "drawdown3y": -343,
   "drawdown5y": -373,
   "drawdownsi": -1306,
-  "cagr1y": -133,
-  "cagr3y": 380,
-  "cagr5y": 260,
-  "cagr10y": 416,
-  "cagrsi": 487,
+  "cagr1y": -83,
+  "cagr3y": 361,
+  "cagr5y": 266,
+  "cagr10y": 424,
+  "cagrsi": 488,
   "rating": 0,
   "description": "REKSA DANA EASTSPRING INVESTMENTS YIELD DISCOVERY adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. REKSA DANA EASTSPRING INVESTMENTS YIELD DISCOVERY bertujuan untuk memperoleh kinerja yang optimal dalam jangka menengah dengan berinvestasi terutama pada Efek bersifat utang yang diterbitkan di Indonesia. REKSA DANA EASTSPRING INVESTMENTS YIELD DISCOVERY akan melakukan investasi dengan komposisi portofolio investasi yaitu minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi Indonesia yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri yang telah mendapat peringkat dari perusahaan pemeringkat Efek yang terdaftar di OJK dan masuk dalam kategori layak investasi (investment grade); dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri dan/atau instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito berdenominasi Rupiah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, REKSA DANA EASTSPRING INVESTMENTS YIELD DISCOVERY akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
   "isSyariah": false,
-  "lastPrice": 156804,
+  "lastPrice": 157251,
   "expenseRatio": 237,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "eastspring-investments-yield-discovery-kelas-a-4e34a20cd801",
   "currency": "IDR",
-  "lastAum": 254570000000,
+  "lastAum": 280560000000,
   "factsheet": "https://cache.makmur.id/files/products/615fb37206b6703faa18b149/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/615fb37206b6703faa18b149/prospectus.pdf",
   "inceptionDate": 20130529,

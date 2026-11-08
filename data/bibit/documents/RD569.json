@@ -227,12 +227,12 @@
     },
     {
       "name": "PR_Danareksa_Mawar_Konsumer__10_2019_MARET.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FPR_Danareksa_Mawar_Konsumer__10_2019_MARET.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/PR_Danareksa_Mawar_Konsumer__10_2019_MARET.pdf",
       "date": "2019-03-30"
     },
     {
       "name": "PR_DANAREKSA_MAWAR_KONSUMER_10_2017_MARET.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FPR_DANAREKSA_MAWAR_KONSUMER_10_2017_MARET.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/PR_DANAREKSA_MAWAR_KONSUMER_10_2017_MARET.pdf",
       "date": "2017-03-30"
     },
     {
@@ -242,7 +242,7 @@
     },
     {
       "name": "Danareksa_Mawar_Konsumer__10_AGUSTUS_2021.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FDanareksa_Mawar_Konsumer__10_AGUSTUS_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Danareksa_Mawar_Konsumer__10_AGUSTUS_2021.pdf",
       "date": "2021-08-30"
     },
     {
@@ -549,6 +549,11 @@
       "name": "BRI_MAWAR_KONSUMER_10_KELAS_A_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/BRI_MAWAR_KONSUMER_10_KELAS_A_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "BRI_MAWAR_KONSUMER_10_KELAS_A_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BRI_MAWAR_KONSUMER_10_KELAS_A_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -562,7 +567,7 @@
     },
     {
       "name": "Danareksa_Mawar_Konsumer_10_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FDanareksa_Mawar_Konsumer_10_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Danareksa_Mawar_Konsumer_10_2020.pdf"
     },
     {
       "name": "RD_MAWAR_KONSUMER_10_2020.pdf",

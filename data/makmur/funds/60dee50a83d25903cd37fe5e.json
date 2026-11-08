@@ -22,10 +22,10 @@
       "instrument": "Surat Berharga Perpetual Bkljt I Bank BJB Thp I Thn 2024"
     },
     {
-      "instrument": "Obligasi Bkljt IV Summarecon Agung Thp III Thn 2024 seri B"
+      "instrument": "Obligasi Bkljt I Bumi Tahap V Thn 2026 Seri B"
     },
     {
-      "instrument": "Obligasi Bkljt I Bumi Tahap V Thn 2026 Seri B"
+      "instrument": "Obligasi Bkljt IV Summarecon Agung Thp III Thn 2024 seri B"
     },
     {
       "instrument": "Obligasi Bkljt VI Indah Kiat Pulp & Paper Thp II Thn 2026 seri A"
@@ -34,24 +34,24 @@
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 8500
+      "weight": 8600
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1500
+      "weight": 1400
     }
   ],
-  "portfolioAsof": 20260930,
+  "portfolioAsof": 20261030,
   "return1d": 2,
   "return5d": 11,
-  "return1m": 48,
-  "return3m": 148,
-  "returnytd": 406,
+  "return1m": 50,
+  "return3m": 149,
+  "returnytd": 417,
   "return1y": 508,
-  "return3y": 2338,
-  "return5y": 3451,
-  "return10y": 9401,
-  "returnsi": 11101,
+  "return3y": 2336,
+  "return5y": 3452,
+  "return10y": 9455,
+  "returnsi": 11125,
   "drawdownytd": -56,
   "drawdown1y": -56,
   "drawdown3y": -56,
@@ -60,19 +60,19 @@
   "cagr1y": 508,
   "cagr3y": 725,
   "cagr5y": 611,
-  "cagr10y": 685,
+  "cagr10y": 688,
   "cagrsi": 711,
   "rating": 0,
   "description": "REKSA DANA CAPITAL FIXED INCOME FUND adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. REKSA DANA CAPITAL FIXED INCOME FUND bertujuan untuk memperoleh pendapatan investasi dalam jangka waktu menengah melalui investasi terutama pada Efek bersifat utang dengan tetap memperhatikan risiko investasi. REKSA DANA CAPITAL FIXED INCOME FUND akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat utang yang diterbitkan oleh Pemerintah Republik Indonesia dan/atau korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri dan/atau instrumen pasar uang dalam negeri dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, REKSA DANA CAPITAL FIXED INCOME FUND akan tetap memperhatikan peraturan perundang-undangan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
   "isSyariah": false,
-  "lastPrice": 211011,
+  "lastPrice": 211248,
   "expenseRatio": 120,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "capital-fixed-income-fund-09e63e2f2630",
   "currency": "IDR",
-  "lastAum": 1325961291777,
+  "lastAum": 1203658553910,
   "factsheet": "https://cache.makmur.id/files/products/60dee50a83d25903cd37fe5e/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/60dee50a83d25903cd37fe5e/prospectus.pdf",
   "inceptionDate": 20151221,

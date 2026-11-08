@@ -232,7 +232,7 @@
     },
     {
       "name": "PR_Manulife_Dana_Saham_2_OCTOBER_2017.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FPR_Manulife_Dana_Saham_2_OCTOBER_2017.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/PR_Manulife_Dana_Saham_2_OCTOBER_2017.pdf",
       "date": "2017-10-01"
     },
     {
@@ -564,6 +564,11 @@
       "name": "MANULIFE_DANA_SAHAM_KELAS_A_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/MANULIFE_DANA_SAHAM_KELAS_A_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "MANULIFE_DANA_SAHAM_KELAS_A_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/MANULIFE_DANA_SAHAM_KELAS_A_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [

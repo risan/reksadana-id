@@ -60,20 +60,20 @@
   },
   "asset": [
     {
-      "name": "Obligasi Pemerintah",
-      "percentage": 9.3
+      "name": "Ekuitas",
+      "percentage": 18.8
     },
     {
       "name": "Obligasi Korporasi",
-      "percentage": 7.2
+      "percentage": 0
+    },
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 10.1
     },
     {
       "name": "Pasar Uang & Kas",
-      "percentage": 68.9
-    },
-    {
-      "name": "Efek Ekuitas",
-      "percentage": 14.5
+      "percentage": 71.2
     }
   ],
   "holding": [
@@ -81,17 +81,7 @@
       "symbol": "",
       "name": "Bank Jabar Banten Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Bank Kb Indonesia Tbk, PT",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -101,7 +91,7 @@
       "symbol": "",
       "name": "Bank Mega Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -109,39 +99,39 @@
     },
     {
       "symbol": "",
-      "name": "Bank Tabungan Negara (Persero) Tbk, PT",
+      "name": "Bank Mega Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "ITMG",
-      "name": "Indo Tambangraya Megah Tbk.",
+      "symbol": "",
+      "name": "Bank Raya Indonesia Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4283,
-      "product_type": "Saham",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "EMAS",
-      "name": "Merdeka Gold Resources Tbk.",
+      "symbol": "",
+      "name": "Bank Victoria International Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 9567,
-      "product_type": "Saham",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
       "serie_id": null
     },
     {
       "symbol": "",
       "name": "Pemerintah Republik Indonesia",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -151,7 +141,27 @@
       "symbol": "",
       "name": "Perusahaan Listrik Negara (Persero), PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PTBA",
+      "name": "Bukit Asam Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 5051,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Bank Nano Syariah",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -159,22 +169,12 @@
     },
     {
       "symbol": "",
-      "name": "PT. Jaccs Mitra Pinasthika Mustika Finance Ir Obligasi",
+      "name": "PT Bank Syariah Nasional",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "TINS",
-      "name": "Timah Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4493,
-      "product_type": "Saham",
       "serie_id": null
     }
   ],
@@ -204,8 +204,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 70000000000,
-    "date": "2026-09-01"
+    "value": 64000000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -220,7 +220,7 @@
     "3y": 0.027118333716478205,
     "5y": 0.014944444447177574,
     "10y": 0.03474704750814328,
-    "all": 0.08486995620840698
+    "all": 0.08486057973530214
   },
   "cagr_adjusted": {
     "1y": -0.008115519793169268,

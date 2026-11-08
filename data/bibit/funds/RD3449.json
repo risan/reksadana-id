@@ -61,7 +61,7 @@
   },
   "asset": [
     {
-      "name": "kas/Pasar Uang Syariah",
+      "name": "Kas dan/atau Pasar Uang",
       "percentage": 100
     }
   ],
@@ -70,7 +70,7 @@
       "symbol": "",
       "name": "BANK CIMB NIAGA SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -80,7 +80,7 @@
       "symbol": "",
       "name": "BANK DANAMON INDONESIA UNIT USAHA SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -90,7 +90,7 @@
       "symbol": "",
       "name": "BANK PERMATA UNIT USAHA SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -100,7 +100,7 @@
       "symbol": "",
       "name": "PT BANK ALADIN SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -110,7 +110,7 @@
       "symbol": "",
       "name": "PT BANK BTPN SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -120,7 +120,7 @@
       "symbol": "",
       "name": "PT BANK SYARIAH INDONESIA TBK",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -130,11 +130,21 @@
       "symbol": "PBS003",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6020,
       "product_type": "FR",
       "serie_id": null
+    },
+    {
+      "symbol": "SR021-T3",
+      "name": "Sukuk Ritel",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 8720,
+      "product_type": "SBN",
+      "serie_id": 3923
     }
   ],
   "bank": [
@@ -163,8 +173,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 48360000000,
-    "date": "2026-09-01"
+    "value": 54200000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -179,7 +189,7 @@
     "3y": 0.03275528665932237,
     "5y": 0.026325449437746062,
     "10y": null,
-    "all": 0.027618825615685516
+    "all": 0.027609080878802983
   },
   "cagr_adjusted": {
     "1y": 0.033952599834825126,

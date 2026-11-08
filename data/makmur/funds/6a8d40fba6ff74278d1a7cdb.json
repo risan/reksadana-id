@@ -19,64 +19,64 @@
       "instrument": "OBL BKLJT II PINDO DELI PULP AND PAP"
     },
     {
+      "instrument": "OBL BKLJT II TRIMEGAH SEKURITAS INDONESIA THP I THN 2025 SERI B"
+    },
+    {
       "instrument": "OBL SUK IJARAH BKLJT I TOWER BERSAMA INFRASTRUCTURE THP I THN 2025 SERI B"
     },
     {
+      "instrument": "OBL SUK MUD BKLJT II LONTAR PAPYRUS PULP & PAPER INDUSTRY THP II THN 2026 SERI B"
+    },
+    {
       "instrument": "OBL SUK MUD BKLJT II OKI PULP & PAPER MILLS THP IV THN 2026 SERI A"
-    },
-    {
-      "instrument": "SAHAM PT ASURANSI JIWA SINARMAS MSIG TBK"
-    },
-    {
-      "instrument": "SAHAM PT BANK CENTRAL ASIA TBK"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 5492
+      "weight": 5112
     },
     {
       "asset": "Obligasi",
-      "weight": 4071
+      "weight": 4353
     },
     {
       "asset": "Pasar Uang",
-      "weight": 437
+      "weight": 535
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": -94,
-  "return5d": -442,
-  "return1m": -633,
-  "return3m": 143,
-  "returnytd": -313,
-  "return1y": -231,
-  "return3y": 4623,
-  "return5y": 5326,
-  "return10y": 13325,
-  "returnsi": 47317,
+  "portfolioAsof": 20261030,
+  "return1d": 23,
+  "return5d": -104,
+  "return1m": -1163,
+  "return3m": -164,
+  "returnytd": -414,
+  "return1y": -209,
+  "return3y": 4409,
+  "return5y": 5039,
+  "return10y": 13063,
+  "returnsi": 46720,
   "drawdownytd": -2154,
   "drawdown1y": -2154,
   "drawdown3y": -2154,
   "drawdown5y": -2154,
   "drawdownsi": -4079,
-  "cagr1y": -231,
-  "cagr3y": 1350,
-  "cagr5y": 891,
-  "cagr10y": 884,
-  "cagrsi": 839,
+  "cagr1y": -209,
+  "cagr3y": 1295,
+  "cagr5y": 850,
+  "cagr10y": 872,
+  "cagrsi": 833,
   "rating": 0,
   "description": "STAR BALANCED bertujuan untuk mengupayakan tingkat pertumbuhan yang tinggi bagi modal investor dengan  tingkat risiko yang terkendali untuk melindungi kepentingan investor. STAR BALANCED mempunyai komposisi  investasi dalam instrumen Obligasi dengan rentang alokasi antara 1% (satu persen) - 79% (tujuh puluh sembilan  persen), instrumen Saham dengan rentang alokasi antara 1% (satu persen) - 79% (tujuh puluh sembilan persen) dan  instrumen Pasar Uang dengan rentang alokasi antara 1% (satu persen) - 79% (tujuh puluh sembilan persen) dari Nilai  Aktiva Bersih STAR BALANCED.",
   "isSyariah": false,
-  "lastPrice": 573174,
+  "lastPrice": 567204,
   "expenseRatio": 250,
   "minFirstBuy": 200000,
   "minNextBuy": 100000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "star-balanced-2c76906dd89c",
   "currency": "IDR",
-  "lastAum": 111950472053,
+  "lastAum": 104726518381,
   "factsheet": "https://cache.makmur.id/files/products/6a8d40fba6ff74278d1a7cdb/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6a8d40fba6ff74278d1a7cdb/prospectus.pdf",
   "inceptionDate": 20050303,

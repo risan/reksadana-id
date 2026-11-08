@@ -192,8 +192,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 3200000000000,
-    "date": "2026-09-01"
+    "value": 2512365597464,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -208,7 +208,7 @@
     "3y": 0.053119211517188125,
     "5y": 0.05359091610316691,
     "10y": null,
-    "all": 0.053561349407418746
+    "all": 0.053531409302663535
   },
   "cagr_adjusted": {
     "1y": 0.03056176568520197,
@@ -255,7 +255,8 @@
     "all": -0.0117651535329706
   },
   "instant_redemption": {
-    "type": 2
+    "type": 2,
+    "quota_limit": null
   },
   "nav": {
     "date": "2026-11-06",

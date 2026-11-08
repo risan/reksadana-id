@@ -19,6 +19,9 @@
       "instrument": "AMMN"
     },
     {
+      "instrument": "BMRI"
+    },
+    {
       "instrument": "BVIC05CN1"
     },
     {
@@ -26,57 +29,54 @@
     },
     {
       "instrument": "MARK"
-    },
-    {
-      "instrument": "MEDC"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 5681
+      "weight": 7218
     },
     {
       "asset": "Obligasi",
-      "weight": 2830
+      "weight": 2247
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1489
+      "weight": 535
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": -20,
-  "return5d": -485,
-  "return1m": -1091,
-  "return3m": -691,
-  "returnytd": -332,
-  "return1y": 318,
-  "return3y": 2809,
-  "return5y": 3827,
-  "return10y": 11767,
-  "returnsi": 15926,
+  "portfolioAsof": 20261030,
+  "return1d": -31,
+  "return5d": -262,
+  "return1m": -1400,
+  "return3m": -1129,
+  "returnytd": -586,
+  "return1y": 97,
+  "return3y": 2431,
+  "return5y": 3482,
+  "return10y": 11620,
+  "returnsi": 15246,
   "drawdownytd": -2154,
   "drawdown1y": -2154,
   "drawdown3y": -2154,
   "drawdown5y": -2154,
   "drawdownsi": -3300,
-  "cagr1y": 318,
-  "cagr3y": 860,
-  "cagr5y": 670,
-  "cagr10y": 809,
-  "cagrsi": 718,
+  "cagr1y": 97,
+  "cagr3y": 752,
+  "cagr5y": 616,
+  "cagr10y": 802,
+  "cagrsi": 696,
   "rating": 0,
   "description": "REKSA DANA DANAPATHI BALANCE FUND (selanjutnya disebut “DANAPATHI BALANCE FUND”) adalah Reksa Dana terbuka berbentuk Kontrak Investasi Kolektif (“KIK”) berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. DANAPATHI BALANCE FUND bertujuan untuk memberikan hasil optimal untuk para investor dalam jangka panjang melalui proses investasi yang dilakukan secara mendalam dan pengelolaan yang penuh kehati-hatian di dalam pasar modal Indonesia melalui investasi pada Efek bersifat ekuitas, Efek bersifat utang dan instrumenpasar uang.",
   "isSyariah": false,
-  "lastPrice": 259256,
+  "lastPrice": 252459,
   "expenseRatio": 528,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "danapathi-balance-fund-e6c63725f98e",
   "currency": "IDR",
-  "lastAum": 104310523850,
+  "lastAum": 94230830212,
   "factsheet": "https://cache.makmur.id/files/products/6aaa5c26b99ead6273dd2846/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6aaa5c26b99ead6273dd2846/prospectus.pdf",
   "inceptionDate": 20130208,

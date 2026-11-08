@@ -167,7 +167,7 @@
     },
     {
       "name": "ITB_Harmoni_BNI-AM.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FITB_Harmoni_BNI-AM.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/ITB_Harmoni_BNI-AM.pdf",
       "date": "2017-09-27"
     },
     {
@@ -212,7 +212,7 @@
     },
     {
       "name": "Dana_Pendapatan_Tetap_ITB_Harmoni_BNI-AM_JUNI_2021.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FDana_Pendapatan_Tetap_ITB_Harmoni_BNI-AM_JUNI_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Dana_Pendapatan_Tetap_ITB_Harmoni_BNI-AM_JUNI_2021.pdf",
       "date": "2021-06-29"
     },
     {
@@ -529,6 +529,11 @@
       "name": "BNI-AM_ITB_HARMONI_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/BNI-AM_ITB_HARMONI_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "BNI-AM_ITB_HARMONI_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BNI-AM_ITB_HARMONI_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -554,7 +559,7 @@
     },
     {
       "name": "ITB_Harmoni_BNI-AM_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FITB_Harmoni_BNI-AM_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/ITB_Harmoni_BNI-AM_2020.pdf"
     },
     {
       "name": "April2020_Prospektus_ITB_HARMONI_BNI_AM.pdf",

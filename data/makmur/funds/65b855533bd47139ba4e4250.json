@@ -25,54 +25,54 @@
       "instrument": "SAHAM PT BANK DANAMON INDONESIA TBK"
     },
     {
-      "instrument": "SAHAM PT BANK JAGO TBK"
+      "instrument": "SAHAM PT BANK MANDIRI ( PERSERO ) TBK"
     },
     {
-      "instrument": "SAHAM PT BANK MANDIRI ( PERSERO ) TBK"
+      "instrument": "SAHAM PT BANK NEGARA INDONESIA TBK"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 9888
+      "weight": 9932
     },
     {
       "asset": "Pasar Uang",
-      "weight": 112
+      "weight": 68
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": 57,
-  "return5d": -339,
-  "return1m": -1078,
-  "return3m": -1444,
-  "returnytd": -2688,
-  "return1y": -2821,
-  "return3y": -3090,
+  "portfolioAsof": 20261030,
+  "return1d": 209,
+  "return5d": 156,
+  "return1m": -1022,
+  "return3m": -1394,
+  "returnytd": -2574,
+  "return1y": -2707,
+  "return3y": -3191,
   "return5y": null,
   "return10y": null,
-  "returnsi": -3424,
+  "returnsi": -3321,
   "drawdownytd": -3369,
-  "drawdown1y": -3386,
+  "drawdown1y": -3383,
   "drawdown3y": -4868,
   "drawdown5y": null,
   "drawdownsi": -4868,
-  "cagr1y": -2821,
-  "cagr3y": -1159,
+  "cagr1y": -2707,
+  "cagr3y": -1202,
   "cagr5y": null,
   "cagr10y": null,
-  "cagrsi": -1207,
+  "cagrsi": -1159,
   "rating": 0,
   "description": "Dibangun sesuai dengan Undang-Undang Pasar Modal, tujuannya adalah mencerminkan performa Indeks Infobank15. Star Infobank15 menginvestasikan sebagian besar aktiva, yakni 80% hingga 100%, pada saham yang masuk dalam Indeks Infobank15 di Bursa Efek Indonesia, menawarkan eksposur langsung pada pasar ekuitas terkemuka.   Sisa dana, hingga 20%, dialokasikan pada instrumen pasar uang dan deposito, memberikan diversifikasi dan keamanan. Ideal bagi investor yang mencari pertumbuhan modal sejalan dengan salah satu indeks pasar saham terdepan di Indonesia, Star Infobank15 menjanjikan pengelolaan yang seimbang antara potensi pertumbuhan dan risiko.",
   "isSyariah": false,
-  "lastPrice": 65759,
+  "lastPrice": 66788,
   "expenseRatio": 87,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "star-infobank-15-kelas-utama-2f518ee015d7",
   "currency": "IDR",
-  "lastAum": 44285794315,
+  "lastAum": 34867094380,
   "factsheet": "https://cache.makmur.id/files/products/65b855533bd47139ba4e4250/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/65b855533bd47139ba4e4250/prospectus.pdf",
   "inceptionDate": 20230731,

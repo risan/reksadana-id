@@ -62,19 +62,19 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 93.06
+      "percentage": 93.6
     },
     {
-      "name": "Kas dan/atau pasar uang",
-      "percentage": 6.94
+      "name": "Kas dan/atau Pasar Uang",
+      "percentage": 6.4
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "OB BK I MERDEKA BATTERY MATERIALS IV 268",
+      "name": "OBL BKI MERDEKA BATTERY MATERIALS IV 268",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -84,7 +84,7 @@
       "symbol": "FR0110",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 10929,
       "product_type": "FR",
@@ -92,39 +92,9 @@
     },
     {
       "symbol": "",
-      "name": "OBL BKL VIII SARANA MULTI FIN III 2026",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "OBL BWWSN SOS BKL II PEGADAIAN 12026 A",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "OBLI ADARO INDONESIA TAHUN 2026 SERI A",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "OBL III INTEGRASI JARINGAN EKOSISTEM 26A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -132,9 +102,39 @@
     },
     {
       "symbol": "",
-      "name": "OBL NEGARA REPUBLIK INDONESIA FR0087",
+      "name": "OBLIGASI NEGARA REPUBLIK IND SERI FR0078",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI NEGARA REPUBLIK IND SERI FR0064",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI NEGARA REPUBLIK IND SERI FR0082",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OBLIGASI NEGARA REPUBLIK IND SERI FR0087",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -144,7 +144,7 @@
       "symbol": "FR0101",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6261,
       "product_type": "FR",
@@ -154,20 +154,20 @@
       "symbol": "FR0104",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 8733,
       "product_type": "FR",
       "serie_id": null
     },
     {
-      "symbol": "",
-      "name": "SUK UR BKL SAMUDERA INDONESIA III 26",
+      "symbol": "FR0109",
+      "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 9551,
+      "product_type": "FR",
       "serie_id": null
     }
   ],
@@ -197,8 +197,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 254570000000,
-    "date": "2026-09-01"
+    "value": 280560000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -213,7 +213,7 @@
     "3y": -0.0026399311442411033,
     "5y": -0.008466130533456795,
     "10y": 0.02290541087215825,
-    "all": 0.03401554117807004
+    "all": 0.0340084968803982
   },
   "cagr_adjusted": {
     "1y": -0.008585514196441046,

@@ -16,10 +16,7 @@
   },
   "topHoldings": [
     {
-      "instrument": "DEPOSITO PT BANK MEGA SYARIAH"
-    },
-    {
-      "instrument": "OBL SUK MUD BERWAWASAN SOSIAL ORANGE BKLJT I PNM THP II THN 2025 SERI A"
+      "instrument": "DEPOSITO BANK SYARIAH NASIONAL"
     },
     {
       "instrument": "OBL SUK MUD BKLJT I DIAN SWASTATIKA SENTOSA THP I THN 2024 SERI A"
@@ -28,30 +25,33 @@
       "instrument": "OBL SUK MUD BKLJT I EAGLE HIGH PLANTATIONS THP II THN 2025 SERI A"
     },
     {
-      "instrument": "OBL SUK MUD BKLJT I OKI PULP & PAPER MILLS THP I THN 2023 SERI A"
+      "instrument": "OBL SUK MUD BKLJT I OKI PULP & PAPER MILLS THP II THN 2023 SERI B"
+    },
+    {
+      "instrument": "OBL SUK MUD BKLJT II INDAH KIAT PULP & PAPER THP I THN 2022 SERI C"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 8699
+      "weight": 8968
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1301
+      "weight": 1032
     }
   ],
-  "portfolioAsof": 20260930,
+  "portfolioAsof": 20261030,
   "return1d": 1,
   "return5d": 9,
-  "return1m": 38,
+  "return1m": 39,
   "return3m": 115,
-  "returnytd": 371,
+  "returnytd": 380,
   "return1y": 452,
   "return3y": 1627,
-  "return5y": 2625,
+  "return5y": 2630,
   "return10y": null,
-  "returnsi": 2816,
+  "returnsi": 2827,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": 0,
@@ -59,20 +59,20 @@
   "drawdownsi": -19,
   "cagr1y": 452,
   "cagr3y": 515,
-  "cagr5y": 477,
+  "cagr5y": 478,
   "cagr10y": null,
   "cagrsi": 457,
   "rating": 0,
   "description": "Reksa Dana Syariah Star Sharia Money Market adalah pilihan investasi yang mengedepankan prinsip-prinsip syariah, menyediakan likuiditas dan potensi pengembalian yang menarik.   Dibentuk sesuai dengan UU No. 8 tahun 1995 tentang Pasar Modal, produk ini terfokus pada investasi 100% di instrumen pasar uang Syariah domestik dan Efek Syariah berpendapatan tetap dengan jatuh tempo atau sisa jatuh tempo tidak lebih dari satu tahun, serta deposito Syariah.   Semua transaksi dan kegiatan investasi dilaksanakan sesuai dengan peraturan perundang-undangan di Indonesia, menjamin kepatuhan pada prinsip syariah dan regulasi lokal. Tujuan utamanya adalah memberikan alternatif investasi syariah dengan risiko terukur dan imbal hasil yang optimal.",
   "isSyariah": true,
-  "lastPrice": 128157,
+  "lastPrice": 128271,
   "expenseRatio": 266,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "star-sharia-money-market-3961c7befa8d",
   "currency": "IDR",
-  "lastAum": 16194960543,
+  "lastAum": 15241543851,
   "factsheet": "https://cache.makmur.id/files/products/65b770f93bd47139ba4e3557/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/65b770f93bd47139ba4e3557/prospectus.pdf",
   "inceptionDate": 20210416,

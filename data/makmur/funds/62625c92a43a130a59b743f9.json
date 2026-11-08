@@ -16,67 +16,67 @@
   },
   "topHoldings": [
     {
+      "instrument": "Bank Mega Syariah"
+    },
+    {
       "instrument": "Bank Panin Dubai Syariah Tbk, PT"
     },
     {
       "instrument": "Bank Pembangunan Daerah Banten Tbk"
     },
     {
-      "instrument": "Bfi Finance Indonesia Tbk, PT"
-    },
-    {
-      "instrument": "Energi Mitra Investama, PT"
-    },
-    {
       "instrument": "Lontar Papyrus Pulp & Paper Industry, PT"
+    },
+    {
+      "instrument": "Oki Pulp & Paper Mills, PT"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 400
+      "weight": 370
     },
     {
       "asset": "Obligasi",
-      "weight": 7680
+      "weight": 6620
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1910
+      "weight": 3010
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": -15,
-  "return5d": -20,
-  "return1m": 9,
-  "return3m": 94,
-  "returnytd": 219,
-  "return1y": 312,
-  "return3y": 1561,
-  "return5y": 2376,
-  "return10y": 7356,
-  "returnsi": 48408,
+  "portfolioAsof": 20261030,
+  "return1d": 1,
+  "return5d": -15,
+  "return1m": -14,
+  "return3m": 70,
+  "returnytd": 203,
+  "return1y": 286,
+  "return3y": 1549,
+  "return5y": 2346,
+  "return10y": 7308,
+  "returnsi": 48321,
   "drawdownytd": -156,
   "drawdown1y": -156,
   "drawdown3y": -156,
   "drawdown5y": -156,
   "drawdownsi": -736,
-  "cagr1y": 312,
-  "cagr3y": 495,
-  "cagr5y": 436,
-  "cagr10y": 567,
-  "cagrsi": 851,
+  "cagr1y": 286,
+  "cagr3y": 492,
+  "cagr5y": 431,
+  "cagr10y": 564,
+  "cagrsi": 850,
   "rating": 0,
   "description": "REKSA DANA DANAMAS FLEKSI (selanjutnya disebut “DANAMAS FLEKSI”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal serta pelaksanaannya. DANAMAS FLEKSI bertujuan untuk memperoleh pendapatan yang optimal dalam jangka panjang dengan tingkat fleksibilitas investasi yang cukup tinggi serta mengurangi risiko dengan berbagai jenis investasi portofolio efek yang terdiri dari Efek Ekuitas dan semua turunannya, Efek Bersifat Utang serta Instrumen Pasar Uang melalui penempatan dana investasi minimum 10% (sepuluh persen) dan maksimum 79% (tujuh puluh sembilan persen) pada Efek Bersifat Utang yang diterbitkan oleh perusahaan – perusahaan berbadan hukum Indonesia, Obligasi Pemerintah Republik Indonesia, Obligasi Pemerintah Daerah (“Municipal Bonds”), Efek Bersifat Utang lainnya sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia dan/atau Efek Beragun Aset yang telah dijual dalam Penawaran Umum, serta minimum 2% (dua persen) dan maksimum 79% (tujuh puluh sembilan persen) pada Efek Ekuitas beserta semua turunannya yang telah dijual dalam Penawaran Umum dan/atau dicatatkan di Bursa Efek baik di dalam maupun di luar negeri, serta minimum 2% (dua persen) dan maksimum 79% (tujuh puluh sembilan persen) pada Instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun. Semua investasi portofolio efek tersebut diatas dapat dalam denominasi Rupiah maupun mata uang asing. DANAMAS FLEKSI dapat mengadakan perjanjian pembelian kembali (REPO) sehubungan dengan penyelesaian transaksi Efek-efek tersebut di atas, perjanjian pembelian kembali (REPO) tersebut dapat dalam denominasi Rupiah maupun mata uang asing.",
   "isSyariah": false,
-  "lastPrice": 584082,
+  "lastPrice": 583211,
   "expenseRatio": 285,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "danamas-fleksi-dcd96cb04c99",
   "currency": "IDR",
-  "lastAum": 27000000000,
+  "lastAum": 24000000000,
   "factsheet": "https://cache.makmur.id/files/products/62625c92a43a130a59b743f9/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/62625c92a43a130a59b743f9/prospectus.pdf",
   "inceptionDate": 20050330,

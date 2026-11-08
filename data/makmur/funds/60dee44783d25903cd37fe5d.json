@@ -19,60 +19,60 @@
       "instrument": "Deposito Allo Bank"
     },
     {
-      "instrument": "PT Bank Rakyat Indonesia Tbk"
+      "instrument": "PT Bank Rakyat Indonesia Tbk (BBRI)"
     },
     {
-      "instrument": "PT Bank Central Asia Tbk"
+      "instrument": "PT Bank Mandiri Tbk (BMRI)"
     },
     {
-      "instrument": "PT Bank Mandiri Tbk"
+      "instrument": "PT Bank Central Asia Tbk (BBCA)"
     },
     {
-      "instrument": "PT Telekomunikasi Indonesia Tbk"
+      "instrument": "PT Telekomunikasi Indonesia Tbk (TLKM)"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 8500
+      "weight": 8800
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1500
+      "weight": 1200
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": -15,
-  "return5d": -603,
-  "return1m": -1391,
-  "return3m": -1468,
-  "returnytd": -2968,
-  "return1y": -2702,
-  "return3y": -2029,
-  "return5y": -2311,
+  "portfolioAsof": 20261030,
+  "return1d": 13,
+  "return5d": -108,
+  "return1m": -1589,
+  "return3m": -1759,
+  "returnytd": -3044,
+  "return1y": -2807,
+  "return3y": -2282,
+  "return5y": -2352,
   "return10y": null,
-  "returnsi": -2473,
-  "drawdownytd": -3549,
-  "drawdown1y": -3549,
-  "drawdown3y": -3549,
-  "drawdown5y": -3549,
+  "returnsi": -2554,
+  "drawdownytd": -3551,
+  "drawdown1y": -3551,
+  "drawdown3y": -3551,
+  "drawdown5y": -3551,
   "drawdownsi": -4650,
-  "cagr1y": -2702,
-  "cagr3y": -728,
-  "cagr5y": -512,
+  "cagr1y": -2807,
+  "cagr3y": -827,
+  "cagr5y": -522,
   "cagr10y": null,
-  "cagrsi": -287,
+  "cagrsi": -298,
   "rating": 0,
   "description": "REKSA DANA CAPITAL OPTIMAL EQUITY (selanjutnya disebut “CAPITAL OPTIMAL EQUITY”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal. CAPITAL OPTIMAL EQUITY bertujuan untuk memberikan pertumbuhan investasi yang sesuai dengan tingkat risiko optimal dalam jangka panjang dengan berivestasi pada Efek bersifat ekuitas yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri, dengan berinvestasi pada perusahaan dengan kapitalisasi besar maupun perusahaan yang berkapitalisasi kecil. CAPITAL OPTIMAL EQUITY akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas yang diterbitkan oleh korporasi yang ditawarkan melalui Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito, dalam mata uang Rupiah atau mata uang asing; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, CAPITAL OPTIMAL EQUITY akan mengacu pada peraturan perundang-undangan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
   "isSyariah": false,
-  "lastPrice": 75273,
+  "lastPrice": 74462,
   "expenseRatio": 300,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "capital-optimal-equity-c721d550b011",
   "currency": "IDR",
-  "lastAum": 7674296530,
+  "lastAum": 6644477289,
   "factsheet": "https://cache.makmur.id/files/products/60dee44783d25903cd37fe5d/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/60dee44783d25903cd37fe5d/prospectus.pdf",
   "inceptionDate": 20170206,

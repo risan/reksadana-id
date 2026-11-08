@@ -61,20 +61,30 @@
   },
   "asset": [
     {
-      "name": "Efek Bersifat Utang dan/atau Pasar Uang",
-      "percentage": 10.55
+      "name": "Efek Bersifat Ekuitas",
+      "percentage": 89.45
     },
     {
-      "name": "Equities",
-      "percentage": 89.45
+      "name": "Efek Bersifat Utang dan/atau Pasar Uang",
+      "percentage": 10.55
     }
   ],
   "holding": [
     {
+      "symbol": "AADI",
+      "name": "Adaro Andalan Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 8951,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
       "symbol": "ADMR",
       "name": "Alamtri Minerals Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4548,
       "product_type": "Saham",
@@ -84,19 +94,9 @@
       "symbol": "ANTM",
       "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4396,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "ARCI",
-      "name": "Archi Indonesia Tbk",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4850,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -104,7 +104,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -114,7 +114,7 @@
       "symbol": "",
       "name": "BANK BTPN SYARIAH Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -124,9 +124,19 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BDMN",
+      "name": "Bank Danamon Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4880,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -134,7 +144,7 @@
       "symbol": "GOTO",
       "name": "GoTo Gojek Tokopedia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4425,
       "product_type": "Saham",
@@ -144,29 +154,19 @@
       "symbol": "KLBF",
       "name": "Kalbe Farma Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4973,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "MDKA",
-      "name": "Merdeka Copper Gold Tbk.",
+      "symbol": "ULTJ",
+      "name": "Ultra Jaya Milk Industry & Trading Company Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4563,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "MIKA",
-      "name": "PT Mitra Keluarga Karyasehat Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 5056,
+      "company_id": 4398,
       "product_type": "Saham",
       "serie_id": null
     }
@@ -197,8 +197,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 752389582153,
-    "date": "2026-09-01"
+    "value": 655194449211,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -213,7 +213,7 @@
     "3y": -0.08445532928455335,
     "5y": -0.03485671539738877,
     "10y": -0.01245997510338015,
-    "all": 0.10776705207543325
+    "all": 0.10775548788792744
   },
   "cagr_adjusted": {
     "1y": -0.20762840971998298,

@@ -569,6 +569,11 @@
       "name": "TRIM_KAPITAL_PLUS_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/TRIM_KAPITAL_PLUS_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "TRIM_KAPITAL_PLUS_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/TRIM_KAPITAL_PLUS_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -598,7 +603,7 @@
     },
     {
       "name": "TRIM_Kapital_Plus_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FTRIM_Kapital_Plus_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/TRIM_Kapital_Plus_2020.pdf"
     },
     {
       "name": "Pembaharuan_Prospektus_TRIM_Kapital_Plus_Mar_2020.pdf",

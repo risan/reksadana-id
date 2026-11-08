@@ -16,9 +16,6 @@
   },
   "topHoldings": [
     {
-      "instrument": "Adaro Andalan Indonesia Tbk, PT"
-    },
-    {
       "instrument": "Alamtri Resources Indonesia Tbk, PT"
     },
     {
@@ -28,52 +25,55 @@
       "instrument": "Bank Jabar Banten Syariah"
     },
     {
-      "instrument": "Bank Mega Syariah"
+      "instrument": "Bank Panin Dubai Syariah"
+    },
+    {
+      "instrument": "Elnusa Tbk, PT"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 310
+      "weight": 230
     },
     {
       "asset": "Obligasi",
-      "weight": 860
+      "weight": 870
     },
     {
       "asset": "Pasar Uang",
-      "weight": 8830
+      "weight": 8900
     }
   ],
-  "portfolioAsof": 20260930,
+  "portfolioAsof": 20261030,
   "return1d": -2,
-  "return5d": -17,
-  "return1m": -46,
-  "return3m": -3,
-  "returnytd": 0,
-  "return1y": 91,
-  "return3y": -367,
-  "return5y": -631,
-  "return10y": -647,
-  "returnsi": 1145,
+  "return5d": -3,
+  "return1m": -62,
+  "return3m": -20,
+  "returnytd": -3,
+  "return1y": 34,
+  "return3y": -480,
+  "return5y": -649,
+  "return10y": -511,
+  "returnsi": 1142,
   "drawdownytd": -165,
   "drawdown1y": -165,
   "drawdown3y": -1843,
   "drawdown5y": -2453,
   "drawdownsi": -3013,
-  "cagr1y": 91,
-  "cagr3y": -124,
-  "cagr5y": -130,
-  "cagr10y": -67,
+  "cagr1y": 34,
+  "cagr3y": -163,
+  "cagr5y": -133,
+  "cagr10y": -52,
   "cagrsi": 89,
   "rating": 0,
   "description": "REKSA DANA SIMAS SYARIAH BERKEMBANG (selanjutnya disebut “SIMAS SYARIAH BERKEMBANG”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. SIMAS SYARIAH BERKEMBANG bertujuan untuk mencapai nilai investasi yang optimal dalam jangka panjang melalui peningkatan nilai modal, serta mengurangi risiko investasi dengan mengalokasikan kekayaan SIMAS SYARIAH BERKEMBANG ke dalam berbagai jenis portofolio investasi yang terdiri dari Efek Syariah bersifat ekuitas, Efek Syariah bersifat utang, dan/atau Instrumen Pasar Uang Syariah dan/atau Efek Beragun Aset Syariah sesuai dengan peraturan perundang – undangan yang berlaku dan mengikuti dengan Prinsip-prinsip Syariah di Pasar Modal. SIMAS SYARIAH BERKEMBANG akan melakukan investasi dengan komposisi portofolio investasi minimum 2% (dua persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada Efek bersifat Ekuitas yang termasuk dalam Daftar Efek Syariah yang diterbitkan oleh korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; minimum 2% (dua persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada Surat Berharga Syariah Negara dan/atau Sukuk yang diterbitkan oleh korporasi yang dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek Indonesia; dan minimum 2% (dua persen) dan maksimum 79% (tujuh puluh sembilan persen) dari Nilai Aktiva Bersih pada Efek Beragun Aset Syariah dan/atau instrumen pasar uang syariah dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan/atau deposito syariah; yang sesuai dengan prinsip-prinsip Syariah di Pasar Modal dan peraturan perundang-undangan yang berlaku.",
   "isSyariah": true,
-  "lastPrice": 111454,
+  "lastPrice": 111420,
   "expenseRatio": 504,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "simas-syariah-berkembang-515695a39818",
   "currency": "IDR",
   "lastAum": 12000000000,

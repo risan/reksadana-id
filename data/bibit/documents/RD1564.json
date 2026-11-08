@@ -559,6 +559,11 @@
       "name": "SCHRODER_SYARIAH_BALANCED_FUND_September_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/SCHRODER_SYARIAH_BALANCED_FUND_September_2026.pdf",
       "date": "2026-09-30"
+    },
+    {
+      "name": "SCHRODER_SYARIAH_BALANCED_FUND_Oktober_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/SCHRODER_SYARIAH_BALANCED_FUND_Oktober_2026.pdf",
+      "date": "2026-10-30"
     }
   ],
   "prospectus": [
@@ -580,7 +585,7 @@
     },
     {
       "name": "Schroder_Syariah_Balanced_Fund_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FSchroder_Syariah_Balanced_Fund_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Schroder_Syariah_Balanced_Fund_2020.pdf"
     },
     {
       "name": "Schroder_Syariah_Balanced_Fund_2021.pdf",

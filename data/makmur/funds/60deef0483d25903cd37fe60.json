@@ -16,9 +16,6 @@
   },
   "topHoldings": [
     {
-      "instrument": "Deposito BTPN Syariah"
-    },
-    {
       "instrument": "Sukuk Ijarah Bkljt I Metrohealth Care Indonesia Thp I Thn 2026 seri A"
     },
     {
@@ -29,50 +26,53 @@
     },
     {
       "instrument": "Sukuk Mudharabah Bkljt I OKI Pulp & Paper Mills Thp II Thn 2023 seri B"
+    },
+    {
+      "instrument": "Deposito BTPN Syariah"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 5700
+      "weight": 5200
     },
     {
       "asset": "Obligasi",
-      "weight": 4300
+      "weight": 4800
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": 1,
+  "portfolioAsof": 20261030,
+  "return1d": 2,
   "return5d": 10,
-  "return1m": 41,
-  "return3m": 128,
-  "returnytd": 406,
-  "return1y": 488,
-  "return3y": 1667,
-  "return5y": 2640,
+  "return1m": 44,
+  "return3m": 130,
+  "returnytd": 417,
+  "return1y": 491,
+  "return3y": 1670,
+  "return5y": 2645,
   "return10y": null,
-  "returnsi": 5436,
+  "returnsi": 5452,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": 0,
   "drawdown5y": 0,
   "drawdownsi": -27,
-  "cagr1y": 488,
-  "cagr3y": 527,
-  "cagr5y": 480,
+  "cagr1y": 491,
+  "cagr3y": 528,
+  "cagr5y": 481,
   "cagr10y": null,
   "cagrsi": 499,
   "rating": 0,
   "description": "REKSA DANA SYARIAH CAPITAL SHARIA MONEY MARKET (selanjutnya disebut \"CAPITAL SHARIA MONEY MARKET\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya.CAPITAL SHARIA MONEY MARKET bertujuan untuk menghasilkan tingkat pertumbuhan yang stabil dalam jangka waktu pendek dan menengah dengan likuiditas yang tinggi dengan melakukan investasi pada instrumen investasi yang sesuai dengan Prinsip Syariah di Pasar Modal dan peraturan perundang-undangan yang berlaku.CAPITAL SHARIA MONEY MARKET akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen)dari Nilai Aktiva Bersih pada instrumen pasar uang Syariah dalam negeri yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau Efek Syariah Berpendapatan Tetap yang sisa jatuh temponya tidak lebih dari 1 (satu) tahun yang diperdagangkan di Indonesia dan/atau deposito Syariah; sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": true,
-  "lastPrice": 154359,
+  "lastPrice": 154517,
   "expenseRatio": 64,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "capital-sharia-money-market-856d7acffdbe",
   "currency": "IDR",
-  "lastAum": 70927227767,
+  "lastAum": 73947505574,
   "factsheet": "https://cache.makmur.id/files/products/60deef0483d25903cd37fe60/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/60deef0483d25903cd37fe60/prospectus.pdf",
   "inceptionDate": 20171205,

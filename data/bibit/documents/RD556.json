@@ -197,7 +197,7 @@
     },
     {
       "name": "Danamas_Stabil_September_2020.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FDanamas_Stabil_September_2020.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Danamas_Stabil_September_2020.pdf",
       "date": "2020-09-30"
     },
     {
@@ -564,6 +564,11 @@
       "name": "DANAMAS_STABIL_September_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/DANAMAS_STABIL_September_2026.pdf",
       "date": "2026-09-30"
+    },
+    {
+      "name": "DANAMAS_STABIL_Oktober_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/DANAMAS_STABIL_Oktober_2026.pdf",
+      "date": "2026-10-30"
     }
   ],
   "prospectus": [
@@ -585,7 +590,7 @@
     },
     {
       "name": "Danamas_Stabil_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FDanamas_Stabil_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Danamas_Stabil_2020.pdf"
     },
     {
       "name": "RD_DANAMAS_STABIL_Mei_2021.pdf",

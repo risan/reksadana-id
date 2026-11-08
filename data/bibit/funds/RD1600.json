@@ -61,22 +61,22 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang & Kas",
-      "percentage": 17.8
+      "name": "Ekuitas",
+      "percentage": 80.5
     },
     {
-      "name": "Saham",
-      "percentage": 82.2
+      "name": "Pasar Uang & Kas",
+      "percentage": 19.5
     }
   ],
   "holding": [
     {
-      "symbol": "AADI",
-      "name": "Adaro Andalan Indonesia Tbk.",
+      "symbol": "AKRA",
+      "name": "AKR Corporindo Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 8951,
+      "company_id": 4475,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -84,17 +84,27 @@
       "symbol": "ADRO",
       "name": "Alamtri Resources Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5007,
       "product_type": "Saham",
       "serie_id": null
     },
     {
+      "symbol": "",
+      "name": "Allo Bank Indonesia Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
       "symbol": "AALI",
       "name": "Astra Agro Lestari Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5009,
       "product_type": "Saham",
@@ -104,7 +114,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -112,19 +122,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Jabar Banten Syariah",
+      "name": "Bank Kb Indonesia Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Bank Mega Syariah",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,9 +134,19 @@
       "symbol": "PTBA",
       "name": "Bukit Asam Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5051,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ERAA",
+      "name": "Erajaya Swasembada Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4420,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -144,19 +154,9 @@
       "symbol": "ITMG",
       "name": "Indo Tambangraya Megah Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4283,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "MAPI",
-      "name": "Mitra Adiperkasa Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4489,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -164,7 +164,7 @@
       "symbol": "INCO",
       "name": "Vale Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4470,
       "product_type": "Saham",
@@ -197,8 +197,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 251000000000,
-    "date": "2026-09-01"
+    "value": 243000000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -213,7 +213,7 @@
     "3y": 0.021663889028875394,
     "5y": 0.038179089514854825,
     "10y": 0.0032211652875941965,
-    "all": 0.030710092095193486
+    "all": 0.0307056216585746
   },
   "cagr_adjusted": {
     "1y": -0.17642038966647877,

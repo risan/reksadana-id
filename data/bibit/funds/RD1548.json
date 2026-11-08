@@ -61,22 +61,42 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang",
-      "percentage": 10.68
-    },
-    {
       "name": "Efek Bersifat Ekuitas",
       "percentage": 89.32
+    },
+    {
+      "name": "Pasar Uang",
+      "percentage": 10.68
     }
   ],
   "holding": [
     {
+      "symbol": "AKRA",
+      "name": "AKR Corporindo Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4475,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
       "symbol": "ADMR",
       "name": "Alamtri Minerals Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4548,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ADRO",
+      "name": "Alamtri Resources Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 5007,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -84,19 +104,9 @@
       "symbol": "ANTM",
       "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4396,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "ARCI",
-      "name": "Archi Indonesia Tbk",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4850,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -104,7 +114,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -114,7 +124,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -124,7 +134,7 @@
       "symbol": "KLBF",
       "name": "Kalbe Farma Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4973,
       "product_type": "Saham",
@@ -134,27 +144,17 @@
       "symbol": "MYOR",
       "name": "Mayora Indah Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4987,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "MIKA",
-      "name": "PT Mitra Keluarga Karyasehat Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 5056,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
       "symbol": "",
-      "name": "PT BANK BTPN SYARIAH Tbk (TD)",
+      "name": "PT BANK BTPN SYARIAH Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -164,7 +164,7 @@
       "symbol": "TAPG",
       "name": "Triputra Agro Persada Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4961,
       "product_type": "Saham",
@@ -197,8 +197,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 2282414004707,
-    "date": "2026-09-01"
+    "value": 1990975218927,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -213,7 +213,7 @@
     "3y": -0.08524504186401705,
     "5y": -0.03208646067155063,
     "10y": -0.016070438510840446,
-    "all": 0.13254073044471015
+    "all": 0.13252595330747696
   },
   "cagr_adjusted": {
     "1y": -0.2346200291164522,

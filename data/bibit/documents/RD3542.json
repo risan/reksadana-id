@@ -165,62 +165,62 @@
     },
     {
       "name": "PR_BNP_PARIBAS_PRIMA_II_2020_FEBRUARI.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FPR_BNP_PARIBAS_PRIMA_II_2020_FEBRUARI.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/PR_BNP_PARIBAS_PRIMA_II_2020_FEBRUARI.pdf",
       "date": "2020-02-27"
     },
     {
       "name": "PR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_Kelas_RK1_2020_JANUARI.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FPR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_Kelas_RK1_2020_JANUARI.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/PR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_Kelas_RK1_2020_JANUARI.pdf",
       "date": "2020-01-19"
     },
     {
       "name": "REKSA_DANA_BNP_PARIBAS_PRIMA_II_Kelas_RK1_FEBRUARI_2020.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FREKSA_DANA_BNP_PARIBAS_PRIMA_II_Kelas_RK1_FEBRUARI_2020.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/REKSA_DANA_BNP_PARIBAS_PRIMA_II_Kelas_RK1_FEBRUARI_2020.pdf",
       "date": "2020-02-27"
     },
     {
       "name": "PR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2020_JANUARI.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FPR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2020_JANUARI.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/PR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2020_JANUARI.pdf",
       "date": "2020-01-19"
     },
     {
       "name": "REKSA_DANA_BNP_PARIBAS_PRIMA_II_JANUARI_2020.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FREKSA_DANA_BNP_PARIBAS_PRIMA_II_JANUARI_2020.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/REKSA_DANA_BNP_PARIBAS_PRIMA_II_JANUARI_2020.pdf",
       "date": "2020-01-30"
     },
     {
       "name": "REKSA_DANA_BNP_PARIBAS_PRIMA_II_DESEMBER_2019.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FREKSA_DANA_BNP_PARIBAS_PRIMA_II_DESEMBER_2019.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/REKSA_DANA_BNP_PARIBAS_PRIMA_II_DESEMBER_2019.pdf",
       "date": "2019-12-29"
     },
     {
       "name": "REKSA_DANA_BNP_PARIBAS_PRIMA_II_NOVEMBER_2019.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FREKSA_DANA_BNP_PARIBAS_PRIMA_II_NOVEMBER_2019.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/REKSA_DANA_BNP_PARIBAS_PRIMA_II_NOVEMBER_2019.pdf",
       "date": "2019-11-28"
     },
     {
       "name": "PR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2019_OKTOBER.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FPR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2019_OKTOBER.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/PR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2019_OKTOBER.pdf",
       "date": "2019-10-24"
     },
     {
       "name": "PR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2019_AGUSTUS.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FPR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2019_AGUSTUS.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/PR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2019_AGUSTUS.pdf",
       "date": "2019-08-04"
     },
     {
       "name": "PR_BNP_PARIBAS_PRIMA_II_2019_MARET.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FPR_BNP_PARIBAS_PRIMA_II_2019_MARET.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/PR_BNP_PARIBAS_PRIMA_II_2019_MARET.pdf",
       "date": "2019-03-28"
     },
     {
       "name": "PR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2018_SEPTEMBER.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FPR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2018_SEPTEMBER.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/PR_REKSA_DANA_BNP_PARIBAS_PRIMA_II_2018_SEPTEMBER.pdf",
       "date": "2018-09-20"
     },
     {
       "name": "PR_BNP_Paribas_Prima_II_MARCH_2018.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FPR_BNP_Paribas_Prima_II_MARCH_2018.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/PR_BNP_Paribas_Prima_II_MARCH_2018.pdf",
       "date": "2018-03-30"
     },
     {
@@ -582,6 +582,11 @@
       "name": "BNP_Paribas_Prima_II_RK1_September_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/BNP_Paribas_Prima_II_RK1_September_2026.pdf",
       "date": "2026-09-30"
+    },
+    {
+      "name": "BNP_Paribas_Prima_II_RK1_Oktober_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BNP_Paribas_Prima_II_RK1_Oktober_2026.pdf",
+      "date": "2026-10-30"
     }
   ],
   "prospectus": [

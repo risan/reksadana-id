@@ -39,6 +39,7 @@ BRK335,Mandiri Investa Keluarga,,"Danareksa Investment Management Indonesia d/h 
 BRK349,INAMI Bond Fund,,"Ina Manajemen Investasi, PT",Obligasi,IDR,,2012-11-12,,349,874,,REKSA DANA INAMI BOND FUND
 BRK357,Bahana Obligasi Negara Indonesia Kelas G,,"Bahana TCW Investment Management, PT",Obligasi,IDR,,2005-03-30,,357,,,REKSA DANA BAHANA OBLIGASI NEGARA INDONESIA KELAS G
 BRK358,Reksa Dana Allianz Smile Fixed Income Fund,,"Allianz Global Investors Asset Management Indonesia, PT",Obligasi,IDR,,2013-07-22,,358,,,REKSA DANA ALLIANZ SMILE FIXED INCOME FUND
+BRK397,AXA Obligasi Dollar,,"BNP Paribas Asset Management, PT",Obligasi,USD,,2008-12-01,,397,,,
 BRK406,BNI-AM Dana Dompet Dhuafa,,"Danareksa Investment Management Indonesia d/h BNI AM, PT",Obligasi,IDR,,2004-04-23,,406,,,
 BRK407,BNI-AM Dana Berbunga Tiga,,"Danareksa Investment Management Indonesia d/h BNI AM, PT",Obligasi,IDR,,2006-12-05,,407,,,
 BRK408,BNP Paribas Omega,,"BNP Paribas Asset Management, PT",Obligasi,IDR,,2008-10-06,,408,14607,,REKSA DANA BNP PARIBAS OMEGA
@@ -1815,6 +1816,7 @@ KTN668,Pnm Terproteksi Dana Mantap 1,,PT. PNM Investment Management,Terproteksi,
 KTN707,Batavia Proteksi Prima 6,,PT. Batavia Prosperindo Aset Manajemen,Terproteksi,,,,,,707,,
 KTN722,Danareksa Proteksi Dinamis Fleksibel III,,PT. Danareksa Investment Management,Terproteksi,,,,,,722,,
 KTN724,OSK Capital Protected Fund 15,,PT. RHB Asset Management Indonesia,Terproteksi,,,,,,724,,
+KTN731,Axa Bond Income Kelas O,,"BNP Paribas Asset Management, PT",Obligasi,IDR,,2011-09-08,,396,731,,
 KTN762,Bahana D Optima Protected Fund 57,,PT. Bahana TCW Investment Management,Terproteksi,,,,,,762,,
 KTN763,Bahana Protected Fund G 58,,PT. Bahana TCW Investment Management,Terproteksi,,,,,,763,,
 KTN781,EMCO Dana Prima,,PT. Emco Asset Management,Obligasi,,,,,,781,,
@@ -1921,8 +1923,8 @@ RD81,Avrist Equity Amar Syariah,,"Avrist Asset Management, PT",Saham,IDR,true,20
 RD82,Reksa Dana Indeks Avrist IDX30,Avrist IDX30,"Avrist Asset Management, PT",Saham,IDR,false,2017-12-18,RD82,2998,15070,,REKSA DANA INDEKS AVRIST IDX30
 RD83,Avrist Prime Bond Fund,,"Avrist Asset Management, PT",Obligasi,IDR,false,2014-05-21,RD83,1651,1161,60eebfad83d25903cd37ff6c,REKSA DANA AVRIST PRIME BOND FUND
 RD85,Axa Citradinamis,,"Axa Investment Managers Select Indonesia, PT",Saham,IDR,false,2000-01-05,RD85,,,,
-RD86,AXA Obligasi Dollar,Axa Maestrodollar,"AXA Investment Managers Select Indonesia , PT",Obligasi,USD,false,2008-12-01,RD86,397,,,REKSA DANA AXA OBLIGASI DOLLAR
-RD87,Axa Bond Income Kelas O,Axa Maestroobligasi Plus,"AXA Investment Managers Select Indonesia , PT",Obligasi,IDR,false,2011-09-08,RD87,396,731,,REKSA DANA AXA BOND INCOME KELAS O
+RD86,Axa Maestrodollar,,"Axa Investment Managers Select Indonesia, PT",Obligasi,USD,false,2008-12-02,RD86,,,,
+RD87,Axa Maestroobligasi Plus,,"Axa Investment Managers Select Indonesia, PT",Obligasi,IDR,false,2011-09-09,RD87,,,,
 RD88,Axa Maestrosaham,,PT Architas Asset Management Indonesia,Saham,IDR,false,2013-08-16,RD88,,,,
 RD97,Bahana C Optima 74,,"Bahana TCW Investment Management, PT",Terproteksi,IDR,false,2014-03-24,RD97,1375,,,
 RD98,Bahana C Optima Protected Fund 78,,PT Bahana TCW Investment Management,Terproteksi,IDR,false,2018-01-26,RD98,,,,

@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 93
+      "percentage": 92.4
     },
     {
       "name": "Ekuitas, Pasar Uang & EBA",
-      "percentage": 7
+      "percentage": 7.6
     }
   ],
   "holding": [
@@ -73,7 +73,7 @@
       "symbol": "",
       "name": "Armadian Tritunggal, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +83,7 @@
       "symbol": "",
       "name": "Bank Kb Indonesia Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +93,7 @@
       "symbol": "",
       "name": "Energi Mitra Investama, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -101,9 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "Lontar Papyrus Pulp & Paper Industry, PT",
+      "name": "Lontar Papyrus Pulp & Paper industry, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +113,7 @@
       "symbol": "",
       "name": "Merdeka Copper Gold Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +123,7 @@
       "symbol": "",
       "name": "Oki Pulp & Paper Mills, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +133,7 @@
       "symbol": "",
       "name": "PT Indah Kiat Pulp & Paper Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +143,7 @@
       "symbol": "",
       "name": "Pyridam Farma Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,7 +153,7 @@
       "symbol": "",
       "name": "Sinar Mas Multiartha Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -163,7 +163,7 @@
       "symbol": "",
       "name": "Sinar Mas Multifinance, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -217,8 +217,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 16866000000000,
-    "date": "2026-09-01"
+    "value": 16405000000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -233,7 +233,7 @@
     "3y": 0.059587104758551446,
     "5y": 0.05773894935160717,
     "10y": 0.06478966715875267,
-    "all": 0.08040425644642246
+    "all": 0.08039368948551195
   },
   "cagr_adjusted": {
     "1y": 0.051485258103370235,

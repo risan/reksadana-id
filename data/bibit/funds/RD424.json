@@ -60,16 +60,16 @@
   },
   "asset": [
     {
+      "name": "Saham",
+      "percentage": 94.43
+    },
+    {
       "name": "Deposito",
-      "percentage": 3.72
+      "percentage": 4.35
     },
     {
       "name": "Kas",
-      "percentage": 0.81
-    },
-    {
-      "name": "Saham",
-      "percentage": 95.47
+      "percentage": 1.22
     }
   ],
   "holding": [
@@ -77,9 +77,19 @@
       "symbol": "ANTM",
       "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "CMRY",
+      "name": "Cisarua Mountain Dairy Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4898,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -87,7 +97,7 @@
       "symbol": "INKP",
       "name": "Indah Kiat Pulp & Paper Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4514,
       "product_type": "Saham",
@@ -97,7 +107,7 @@
       "symbol": "INDF",
       "name": "Indofood Sukses Makmur Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4919,
       "product_type": "Saham",
@@ -107,7 +117,7 @@
       "symbol": "ISAT",
       "name": "Indosat Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4866,
       "product_type": "Saham",
@@ -117,7 +127,7 @@
       "symbol": "KLBF",
       "name": "Kalbe Farma Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4973,
       "product_type": "Saham",
@@ -127,7 +137,7 @@
       "symbol": "MDKA",
       "name": "Merdeka Copper Gold Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4563,
       "product_type": "Saham",
@@ -135,9 +145,9 @@
     },
     {
       "symbol": "",
-      "name": "TD Bank Btpn Syariah Tbk PT",
+      "name": "TD Bank Btpn Syariah Tbk PT-MM",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -147,29 +157,19 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4623,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "UNTR",
-      "name": "United Tractors Tbk.",
+      "symbol": "TINS",
+      "name": "Timah Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4571,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "EXCL",
-      "name": "XLSMART Telecom Sejahtera Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4785,
+      "company_id": 4493,
       "product_type": "Saham",
       "serie_id": null
     }
@@ -200,8 +200,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 201710000000,
-    "date": "2026-09-01"
+    "value": 172260000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -216,7 +216,7 @@
     "3y": -0.06243000941072652,
     "5y": -0.03977974198693013,
     "10y": -0.026011686542040335,
-    "all": 0.03537347930373169
+    "all": 0.035368427116233114
   },
   "cagr_adjusted": {
     "1y": -0.2582794183588495,

@@ -559,6 +559,11 @@
       "name": "SCHRODER_DANA_LIKUID_September_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/SCHRODER_DANA_LIKUID_September_2026.pdf",
       "date": "2026-09-30"
+    },
+    {
+      "name": "SCHRODER_DANA_LIKUID_Oktober_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/SCHRODER_DANA_LIKUID_Oktober_2026.pdf",
+      "date": "2026-10-30"
     }
   ],
   "prospectus": [
@@ -580,7 +585,7 @@
     },
     {
       "name": "Schroder_Dana_Likuid_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FSchroder_Dana_Likuid_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Schroder_Dana_Likuid_2020.pdf"
     },
     {
       "name": "Schroder_Dana_Likuid_2021.pdf",

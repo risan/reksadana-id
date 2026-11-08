@@ -19,6 +19,7 @@
   },
   "released_date": "2008-05-15",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,16 +61,16 @@
   },
   "asset": [
     {
+      "name": "Saham",
+      "percentage": 95.93
+    },
+    {
       "name": "Deposito",
-      "percentage": 12.55
+      "percentage": 3.92
     },
     {
       "name": "Kas",
-      "percentage": 2.59
-    },
-    {
-      "name": "Saham",
-      "percentage": 84.86
+      "percentage": 0.15
     }
   ],
   "holding": [
@@ -77,19 +78,29 @@
       "symbol": "AKRA",
       "name": "AKR Corporindo Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4475,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "TPIA",
-      "name": "Chandra Asri Pacific Tbk.",
+      "symbol": "AMMN",
+      "name": "Amman Mineral Internasional Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4710,
+      "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ARCI",
+      "name": "Archi Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4850,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -97,19 +108,29 @@
       "symbol": "CPIN",
       "name": "Charoen Pokphand Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5031,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "INKP",
-      "name": "Indah Kiat Pulp & Paper Tbk.",
+      "symbol": "DSNG",
+      "name": "Dharma Satya Nusantara Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4514,
+      "company_id": 4892,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "HRTA",
+      "name": "Hartadinata Abadi Tbk",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4911,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -117,7 +138,7 @@
       "symbol": "ISAT",
       "name": "Indosat Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4866,
       "product_type": "Saham",
@@ -127,7 +148,7 @@
       "symbol": "JPFA",
       "name": "Japfa Comfeed Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4965,
       "product_type": "Saham",
@@ -137,7 +158,7 @@
       "symbol": "HEAL",
       "name": "Medikaloka Hermina Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4550,
       "product_type": "Saham",
@@ -147,30 +168,10 @@
       "symbol": "TKIM",
       "name": "Pabrik Kertas Tjiwi Kimia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4540,
       "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "TD Bank Maybank Indonesia Tbk PT - MM",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "TD Bank Tabungan NEG Tbk PT - MM",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
       "serie_id": null
     }
   ],
@@ -200,8 +201,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 358480000000,
-    "date": "2026-09-01"
+    "value": 280580000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -216,7 +217,7 @@
     "3y": -0.12338964644814832,
     "5y": -0.10653706648636485,
     "10y": -0.05027203426692228,
-    "all": 0.01037082045203963
+    "all": 0.010369276095817614
   },
   "cagr_adjusted": {
     "1y": -0.3155189267536319,

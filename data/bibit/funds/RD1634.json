@@ -19,7 +19,6 @@
   },
   "released_date": "2014-08-08",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,20 +60,30 @@
   },
   "asset": [
     {
-      "name": "Sbsn &/ Sukuk Korporasi &/ Pemerintah, Inst Pasar Uang",
-      "percentage": 15.2
+      "name": "Ekuitas Syariah",
+      "percentage": 81.1
     },
     {
-      "name": "Efek Ekuitas Syariah",
-      "percentage": 84.8
+      "name": "Sukuk, Pasar Uang & Kas Syariah",
+      "percentage": 18.9
     }
   ],
   "holding": [
     {
+      "symbol": "AADI",
+      "name": "Adaro Andalan Indonesia Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 8951,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
       "symbol": "ADRO",
       "name": "Alamtri Resources Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5007,
       "product_type": "Saham",
@@ -84,7 +93,7 @@
       "symbol": "ARCI",
       "name": "Archi Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4850,
       "product_type": "Saham",
@@ -94,39 +103,29 @@
       "symbol": "AALI",
       "name": "Astra Agro Lestari Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5009,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "",
-      "name": "Bank Mega Syariah",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Bank Mega Syariah, PT",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
       "symbol": "ELSA",
       "name": "Elnusa Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4426,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ERAA",
+      "name": "Erajaya Swasembada Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4420,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -134,40 +133,40 @@
       "symbol": "ITMG",
       "name": "Indo Tambangraya Megah Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4283,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "INDF",
-      "name": "Indofood Sukses Makmur Tbk.",
+      "symbol": "PTBA",
+      "name": "Bukit Asam Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4919,
+      "company_id": 5051,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "MAPI",
-      "name": "Mitra Adiperkasa Tbk.",
+      "symbol": "",
+      "name": "PT Bank Nano Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4489,
-      "product_type": "Saham",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "TLKM",
-      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "symbol": "",
+      "name": "PT Bank Syariah Nasional",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4623,
-      "product_type": "Saham",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
       "serie_id": null
     }
   ],
@@ -197,8 +196,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 35000000000,
-    "date": "2026-09-01"
+    "value": 31000000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -213,7 +212,7 @@
     "3y": -0.032836406056844236,
     "5y": -0.018995116900099696,
     "10y": -0.05253140787157162,
-    "all": -0.04648679998667504
+    "all": -0.046476650302701206
   },
   "cagr_adjusted": {
     "1y": -0.3139135353003142,

@@ -34,31 +34,31 @@
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9320
+      "weight": 9280
     },
     {
       "asset": "Pasar Uang",
-      "weight": 680
+      "weight": 720
     }
   ],
-  "portfolioAsof": 20260930,
+  "portfolioAsof": 20261030,
   "return1d": 1,
   "return5d": 7,
-  "return1m": 31,
+  "return1m": 32,
   "return3m": 95,
-  "returnytd": 327,
-  "return1y": 397,
-  "return3y": 1224,
-  "return5y": 1957,
-  "return10y": 3818,
-  "returnsi": 12587,
+  "returnytd": 335,
+  "return1y": 396,
+  "return3y": 1225,
+  "return5y": 1959,
+  "return10y": 3820,
+  "returnsi": 12603,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": 0,
   "drawdown5y": 0,
   "drawdownsi": 0,
-  "cagr1y": 397,
-  "cagr3y": 392,
+  "cagr1y": 396,
+  "cagr3y": 393,
   "cagr5y": 364,
   "cagr10y": 329,
   "cagrsi": 369,
@@ -69,7 +69,7 @@
   "expenseRatio": 145,
   "minFirstBuy": 100,
   "minNextBuy": 100,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "danamas-dollar-9630be689e6f",
   "currency": "USD",
   "lastAum": 171000000,

@@ -19,6 +19,7 @@
   },
   "released_date": "2006-06-09",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,12 +61,12 @@
   },
   "asset": [
     {
-      "name": "Obligas &/ Sukuk Pemerintah &/ Korporasi",
-      "percentage": 94.9
+      "name": "Obligasi <1 Tahun",
+      "percentage": 97.2
     },
     {
-      "name": "Inst Pasar Uang",
-      "percentage": 5.1
+      "name": "Pasar Uang & Kas",
+      "percentage": 2.8
     }
   ],
   "holding": [
@@ -73,7 +74,7 @@
       "symbol": "",
       "name": "Astra Sedaya Finance, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,9 +82,19 @@
     },
     {
       "symbol": "",
-      "name": "Hutama Karya (Persero), PT",
+      "name": "Bank Kb Indonesia Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Indah Kiat Pulp & Paper Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,37 +104,7 @@
       "symbol": "",
       "name": "Indomobil Finance Indonesia, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Lontar Papyrus Pulp & Paper industry, PT",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Oki Pulp & Paper Mills, PT",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Pemerintah Republik Indonesia",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +114,7 @@
       "symbol": "",
       "name": "Pindo Deli Pulp And Paper Mills, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +124,7 @@
       "symbol": "",
       "name": "Prime Agri Resources Tbk, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,7 +134,27 @@
       "symbol": "",
       "name": "Profesional Telekomunikasi Indonesia, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sinar Mas Multiartha Tbk, PT",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Surya Artha Nusantara Finance, PT",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -163,7 +164,7 @@
       "symbol": "",
       "name": "Wahana Inti Selaras, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,8 +197,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 1482000000000,
-    "date": "2026-09-01"
+    "value": 1364000000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -212,7 +213,7 @@
     "3y": 0.0460084399825742,
     "5y": 0.04318629449424494,
     "10y": 0.04714998061844211,
-    "all": 0.032389802297282166
+    "all": 0.032385377894479594
   },
   "cagr_adjusted": {
     "1y": 0.04038766629941426,

@@ -60,7 +60,7 @@
   },
   "asset": [
     {
-      "name": "Kas dan/ Pasar Uang",
+      "name": "Kas dan/atau Pasar Uang",
       "percentage": 100
     }
   ],
@@ -69,7 +69,7 @@
       "symbol": "",
       "name": "BANK DANAMON INDONESIA UNIT USAHA SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -79,7 +79,7 @@
       "symbol": "",
       "name": "BANK PERMATA UNIT USAHA SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -89,7 +89,7 @@
       "symbol": "",
       "name": "BANK RAKYAT INDONESIA",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -99,7 +99,7 @@
       "symbol": "",
       "name": "BANK TABUNGAN NEGARA",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -109,17 +109,7 @@
       "symbol": "",
       "name": "BANK UOB INDONESIA",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "OBL BKL V SARANA MULTI INFRA I 2026 A",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -129,7 +119,7 @@
       "symbol": "FR0090",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5806,
       "product_type": "FR",
@@ -139,7 +129,7 @@
       "symbol": "",
       "name": "PT BANK ALADIN SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -149,7 +139,17 @@
       "symbol": "",
       "name": "PT BANK BTPN SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK SYARIAH INDONESIA TBK",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -159,7 +159,7 @@
       "symbol": "",
       "name": "SKIJR II INTGR JARINGAN EKOSISTEM 26 A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -192,8 +192,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 18080000000,
-    "date": "2026-09-01"
+    "value": 18520000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -208,7 +208,7 @@
     "3y": 0.0381728568753148,
     "5y": 0.03117042336564113,
     "10y": 0.037688776636221055,
-    "all": 0.04481775755447592
+    "all": 0.04480836120760756
   },
   "cagr_adjusted": {
     "1y": 0.03405505009789245,

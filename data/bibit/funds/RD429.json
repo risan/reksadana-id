@@ -19,6 +19,7 @@
   },
   "released_date": "2003-10-14",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Deposito",
-      "percentage": 60.98
+      "percentage": 70.89
     },
     {
       "name": "Pendapatan Tetap",
-      "percentage": 38.53
+      "percentage": 28.62
     },
     {
       "name": "Kas",
@@ -77,7 +78,7 @@
       "symbol": "",
       "name": "Bank Indonesia 0.00% - MM",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -85,29 +86,19 @@
     },
     {
       "symbol": "",
-      "name": "OB NEG Ri Seri FR0059 150527 FXH",
+      "name": "OB NEG RI Seri FR0059 150527 FXH-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "PBS003",
-      "name": "FR Syariah",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 6020,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
       "symbol": "",
-      "name": "Sun Tb Fr 0042 150727 H",
+      "name": "Sun Tb Fr 0042 150727 H-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -117,7 +108,7 @@
       "symbol": "",
       "name": "TD Bank Btpn Syariah Tbk PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -127,17 +118,7 @@
       "symbol": "",
       "name": "TD Bank Jago Tbk PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "TD Bank Maybank Indonesia Tbk PT",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -147,7 +128,7 @@
       "symbol": "",
       "name": "TD Bank Mega",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -157,7 +138,27 @@
       "symbol": "",
       "name": "TD Bank Tabungan NEG Tbk PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD Deutsche Bank Ag (Indonesia)",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "TD PT Bank Maybank Indonesia Tbk",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -167,7 +168,7 @@
       "symbol": "",
       "name": "TD PT Bank Smbc Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -200,8 +201,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 459220000000,
-    "date": "2026-09-01"
+    "value": 482720000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -216,7 +217,7 @@
     "3y": 0.03655779706056439,
     "5y": 0.02932413865847927,
     "10y": 0.030440660600010272,
-    "all": 0.04291764957420696
+    "all": 0.04291244710470865
   },
   "cagr_adjusted": {
     "1y": 0.03452671878493563,

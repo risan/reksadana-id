@@ -19,6 +19,7 @@
   },
   "released_date": "2022-01-12",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,12 +61,12 @@
   },
   "asset": [
     {
-      "name": "Kas dan atau Pasar Uang",
-      "percentage": 4.62
+      "name": "Saham",
+      "percentage": 87.64
     },
     {
-      "name": "Saham",
-      "percentage": 95.38
+      "name": "Kas dan/atau Pasar Uang",
+      "percentage": 12.36
     }
   ],
   "holding": [
@@ -73,7 +74,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -83,7 +84,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -93,7 +94,7 @@
       "symbol": "BBNI",
       "name": "Bank Negara Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4338,
       "product_type": "Saham",
@@ -103,7 +104,7 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
@@ -113,7 +114,7 @@
       "symbol": "BRPT",
       "name": "Barito Pacific Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4586,
       "product_type": "Saham",
@@ -123,7 +124,7 @@
       "symbol": "TPIA",
       "name": "Chandra Asri Pacific Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4710,
       "product_type": "Saham",
@@ -133,7 +134,7 @@
       "symbol": "GOTO",
       "name": "GoTo Gojek Tokopedia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4425,
       "product_type": "Saham",
@@ -143,7 +144,7 @@
       "symbol": "JSMR",
       "name": "Jasa Marga (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4729,
       "product_type": "Saham",
@@ -153,7 +154,7 @@
       "symbol": "PGEO",
       "name": "Pertamina Geothermal Energy Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5837,
       "product_type": "Saham",
@@ -163,7 +164,7 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4623,
       "product_type": "Saham",
@@ -192,8 +193,8 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 120150000000,
-    "date": "2026-09-01"
+    "value": 110190000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -208,7 +209,7 @@
     "3y": -0.16150650768064212,
     "5y": null,
     "10y": null,
-    "all": -0.11884123938785585
+    "all": -0.11877793105351664
   },
   "cagr_adjusted": {
     "1y": -0.41550841258229687,

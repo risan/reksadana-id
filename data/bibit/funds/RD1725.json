@@ -18,6 +18,7 @@
   },
   "released_date": "2016-02-16",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -59,12 +60,12 @@
   },
   "asset": [
     {
-      "name": "Kas",
-      "percentage": 6.41
+      "name": "Saham",
+      "percentage": 96.61
     },
     {
-      "name": "Saham",
-      "percentage": 93.59
+      "name": "Kas",
+      "percentage": 3.39
     }
   ],
   "holding": [
@@ -72,7 +73,7 @@
       "symbol": "",
       "name": "Advanced Micro Devices - EQ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -80,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "Alphabet Class A A - EQ",
+      "name": "Alphabet Class AA - EQ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -92,7 +93,7 @@
       "symbol": "",
       "name": "Amazon Com Inc - EQ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,7 +103,7 @@
       "symbol": "",
       "name": "Apple - EQ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,7 +113,7 @@
       "symbol": "",
       "name": "Broadcom Inc - EQ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -122,7 +123,7 @@
       "symbol": "",
       "name": "Eli Lilly - EQ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -132,7 +133,7 @@
       "symbol": "",
       "name": "Micron Technology - EQ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -142,7 +143,7 @@
       "symbol": "",
       "name": "Microsoft - EQ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -152,7 +153,7 @@
       "symbol": "",
       "name": "Nvidia - EQ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,7 +163,7 @@
       "symbol": "",
       "name": "Visa Class A A - EQ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,8 +198,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 57680000,
-    "date": "2026-09-01"
+    "value": 73270000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -213,7 +214,7 @@
     "3y": 0.11579863857029915,
     "5y": 0.04674395804932763,
     "10y": null,
-    "all": 0.07724873122975273
+    "all": 0.07722374448010272
   },
   "cagr_adjusted": {
     "1y": 0.006224066390041472,

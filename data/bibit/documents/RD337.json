@@ -161,12 +161,12 @@
     },
     {
       "name": "BNI-AM_INDEKS_IDX_30_AGUSTUS_2020.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FBNI-AM_INDEKS_IDX_30_AGUSTUS_2020.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BNI-AM_INDEKS_IDX_30_AGUSTUS_2020.pdf",
       "date": "2020-08-30"
     },
     {
       "name": "BNI-AM_INDEKS_IDX30.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FBNI-AM_INDEKS_IDX30.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BNI-AM_INDEKS_IDX30.pdf",
       "date": "2017-12-26"
     },
     {
@@ -533,6 +533,11 @@
       "name": "BNI-AM_INDEKS_IDX30_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/BNI-AM_INDEKS_IDX30_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "BNI-AM_INDEKS_IDX30_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BNI-AM_INDEKS_IDX30_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -562,7 +567,7 @@
     },
     {
       "name": "BNI-AM_Indeks_IDX30_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FBNI-AM_Indeks_IDX30_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/BNI-AM_Indeks_IDX30_2020.pdf"
     },
     {
       "name": "BNI_AM_INDEKS_IDX30_APRIL_2020.pdf",

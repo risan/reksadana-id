@@ -564,6 +564,11 @@
       "name": "SCHRODER_DANA_MANTAP_PLUS_II_September_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/SCHRODER_DANA_MANTAP_PLUS_II_September_2026.pdf",
       "date": "2026-09-30"
+    },
+    {
+      "name": "SCHRODER_DANA_MANTAP_PLUS_II_Oktober_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/SCHRODER_DANA_MANTAP_PLUS_II_Oktober_2026.pdf",
+      "date": "2026-10-30"
     }
   ],
   "prospectus": [
@@ -585,7 +590,7 @@
     },
     {
       "name": "Schroder_Dana_Mantap_Plus_II_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FSchroder_Dana_Mantap_Plus_II_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Schroder_Dana_Mantap_Plus_II_2020.pdf"
     },
     {
       "name": "Schroder_Dana_Mantap_Plus_II_2021.pdf",

@@ -212,7 +212,7 @@
     },
     {
       "name": "Sucorinvest_Bond_Fund.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FSucorinvest_Bond_Fund.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Sucorinvest_Bond_Fund.pdf",
       "date": "2017-03-30"
     },
     {
@@ -272,7 +272,7 @@
     },
     {
       "name": "SUCORINVEST_BOND_FUND_OKTOBER_2021.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FSUCORINVEST_BOND_FUND_OKTOBER_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/SUCORINVEST_BOND_FUND_OKTOBER_2021.pdf",
       "date": "2021-10-28"
     },
     {
@@ -569,6 +569,11 @@
       "name": "Sucorinvest_Bond_Fund_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/Sucorinvest_Bond_Fund_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "Sucorinvest_Bond_Fund_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Sucorinvest_Bond_Fund_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -598,7 +603,7 @@
     },
     {
       "name": "Sucorinvest_Bond_Fund_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FSucorinvest_Bond_Fund_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Sucorinvest_Bond_Fund_2020.pdf"
     },
     {
       "name": "Sucorinvest Bond Fund 2020 New.pdf",

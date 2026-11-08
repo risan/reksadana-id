@@ -529,6 +529,11 @@
       "name": "SCHRODER_USD_BOND_FUND_CLASS_A_September_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/SCHRODER_USD_BOND_FUND_CLASS_A_September_2026.pdf",
       "date": "2026-09-30"
+    },
+    {
+      "name": "SCHRODER_USD_BOND_FUND_CLASS_A_Oktober_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/SCHRODER_USD_BOND_FUND_CLASS_A_Oktober_2026.pdf",
+      "date": "2026-10-30"
     }
   ],
   "prospectus": [
@@ -546,7 +551,7 @@
     },
     {
       "name": "Schroder_USD_Bond_Fund_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FSchroder_USD_Bond_Fund_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Schroder_USD_Bond_Fund_2020.pdf"
     },
     {
       "name": "Schroder_USD_Bond_Fund_2021.pdf",

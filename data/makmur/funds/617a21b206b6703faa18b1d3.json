@@ -22,13 +22,13 @@
       "instrument": "FR0054"
     },
     {
-      "instrument": "FR0068"
-    },
-    {
       "instrument": "FR0071"
     },
     {
       "instrument": "FR0078"
+    },
+    {
+      "instrument": "ADMF07ACN2"
     }
   ],
   "assetAllocations": [
@@ -41,38 +41,38 @@
       "weight": 700
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": -22,
-  "return5d": -63,
-  "return1m": -78,
-  "return3m": 61,
-  "returnytd": -266,
-  "return1y": -246,
-  "return3y": 1296,
-  "return5y": 1740,
-  "return10y": 6692,
-  "returnsi": 17310,
+  "portfolioAsof": 20261030,
+  "return1d": 22,
+  "return5d": 26,
+  "return1m": -50,
+  "return3m": 59,
+  "returnytd": -241,
+  "return1y": -165,
+  "return3y": 1114,
+  "return5y": 1752,
+  "return10y": 6727,
+  "returnsi": 17380,
   "drawdownytd": -471,
   "drawdown1y": -471,
   "drawdown3y": -485,
   "drawdown5y": -569,
   "drawdownsi": -972,
-  "cagr1y": -246,
-  "cagr3y": 415,
-  "cagr5y": 326,
-  "cagr10y": 526,
-  "cagrsi": 697,
+  "cagr1y": -165,
+  "cagr3y": 358,
+  "cagr5y": 328,
+  "cagr10y": 528,
+  "cagrsi": 698,
   "rating": 0,
   "description": "REKSA DANA SYAILENDRA FIXED INCOME FUND (untuk selanjutnya disebut “SYAILENDRA FIXED INCOME FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. SYAILENDRA FIXED INCOME FUND bertujuan untuk memperoleh pendapatan investasi terutama dari Efek-Efek bersifat Utang yang dipilih secara selektif. SYAILENDRA FIXED INCOME FUND akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) pada Efek bersifat Utang, diantaranya Surat Utang Negara, SUKUK dan termasuk Surat Berharga Negara lainnya serta Obligasi korporasi dan Efek bersifat utang lain yang memiliki peringkat minimum setara A dari perusahaan/lembaga pemeringkat Efek; minimum 0% (nol persen) dan maksimum 15% (lima belas persen) pada Efek Bersifat Ekuitas yang diterbitkan, ditawarkan dan/atau diperdagangkan di Indonesia berdasarkan peraturan perundang-undangan di Indonesia dan yang tercatat di Bursa Efek Indonesia; minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari (satu) tahun, meliputi Sertifikat Bank Indonesia, Surat Berharga Pasar Uang, Surat Pengakuan Hutang, Deposito dan setara kas lainnya.",
   "isSyariah": false,
-  "lastPrice": 267351,
+  "lastPrice": 268036,
   "expenseRatio": 259,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "syailendra-fixed-income-fund-kelas-a-613a5e1b9369",
   "currency": "IDR",
-  "lastAum": 111920000000,
+  "lastAum": 102470000000,
   "factsheet": "https://cache.makmur.id/files/products/617a21b206b6703faa18b1d3/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/617a21b206b6703faa18b1d3/prospectus.pdf",
   "inceptionDate": 20111208,

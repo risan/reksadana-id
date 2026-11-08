@@ -19,6 +19,7 @@
   },
   "released_date": "2010-04-21",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,22 +61,22 @@
   },
   "asset": [
     {
-      "name": "Money Market",
-      "percentage": 6.46
+      "name": "Efek Bersifat Ekuitas",
+      "percentage": 93.54
     },
     {
-      "name": "Equities",
-      "percentage": 93.54
+      "name": "Pasar Uang",
+      "percentage": 6.46
     }
   ],
   "holding": [
     {
-      "symbol": "AMMN",
-      "name": "Amman Mineral Internasional Tbk.",
+      "symbol": "AKRA",
+      "name": "AKR Corporindo Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 6026,
+      "company_id": 4475,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -83,37 +84,37 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "",
-      "name": "BANK CIMB NIAGA Tbk",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
       "symbol": "BDMN",
       "name": "Bank Danamon Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4880,
       "product_type": "Saham",
       "serie_id": null
     },
     {
+      "symbol": "",
+      "name": "BANK MAYBANK INDONESIA Tbk",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
@@ -123,9 +124,19 @@
       "symbol": "BFIN",
       "name": "BFI Finance Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4915,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "PTBA",
+      "name": "Bukit Asam Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 5051,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -133,19 +144,9 @@
       "symbol": "KLBF",
       "name": "Kalbe Farma Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4973,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "SOCI",
-      "name": "Soechi Lines Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4665,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -153,7 +154,7 @@
       "symbol": "AMRT",
       "name": "Sumber Alfaria Trijaya Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4422,
       "product_type": "Saham",
@@ -163,7 +164,7 @@
       "symbol": "TINS",
       "name": "Timah Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4493,
       "product_type": "Saham",
@@ -196,8 +197,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 352392943780,
-    "date": "2026-09-01"
+    "value": 307921350707,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -212,7 +213,7 @@
     "3y": -0.09063784955346743,
     "5y": -0.04657769231473341,
     "10y": -0.02712094151392508,
-    "all": 0.025685663576919815
+    "all": 0.02568135968926022
   },
   "cagr_adjusted": {
     "1y": -0.24221594210816477,

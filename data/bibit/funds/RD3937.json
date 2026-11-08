@@ -60,20 +60,20 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang Syariah",
-      "percentage": 0
+      "name": "Sukuk",
+      "percentage": 92.33
     },
     {
-      "name": "Obligasi Syariah",
-      "percentage": 100
+      "name": "Pasar Uang Syariah",
+      "percentage": 7.67
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "INDONESIA GOVT SUKUK 4.5% 01/12/2030",
+      "name": "PERUSAHAAN PENERBIT SBSN 4.5% 01/12/2030",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "PERUSAHAAN PENERBIT 4.55% 23/07/2030",
+      "name": "PERUSAHAAN PENERBIT SBSN 4.55% 23/07/2030",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,9 +91,9 @@
     },
     {
       "symbol": "",
-      "name": "PERUSAHAAN PENERBIT SBSN 1% 09/06/2031",
+      "name": "PERUSAHAAN PENERBIT SBSN 2.55% 09/06/2031",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -101,9 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "PERUSAHAAN PENERBIT SBSN 4.4%01/03/28",
+      "name": "PERUSAHAAN PENERBIT SBSN 4.4% 01/03/2028",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +113,7 @@
       "symbol": "",
       "name": "PERUSAHAAN PENERBIT SBSN 5.1% 02/07/2029",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -121,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "PERUSAHAAN PENERBIT SBSN 5:4% 15/11/2028",
+      "name": "PERUSAHAAN PENERBIT SBSN 5.4% 15/11/2028",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -154,8 +154,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 13130000,
-    "date": "2026-09-01"
+    "value": 9590000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -170,7 +170,7 @@
     "3y": 0.004690671925660972,
     "5y": -0.0108858286622876,
     "10y": null,
-    "all": -0.01158988203916278
+    "all": -0.01158421431097345
   },
   "cagr_adjusted": {
     "1y": -0.02056292340891097,

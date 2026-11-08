@@ -61,20 +61,20 @@
   },
   "asset": [
     {
-      "name": "Pendapatan Tetap",
-      "percentage": 5.48
+      "name": "Saham",
+      "percentage": 87.65
     },
     {
-      "name": "Kas",
-      "percentage": 0.61
+      "name": "Pendapatan Tetap",
+      "percentage": 6.68
     },
     {
       "name": "Deposito",
-      "percentage": 3.21
+      "percentage": 4.42
     },
     {
-      "name": "Saham",
-      "percentage": 90.7
+      "name": "Kas",
+      "percentage": 1.25
     }
   ],
   "holding": [
@@ -82,9 +82,19 @@
       "symbol": "AMMN",
       "name": "Amman Mineral Internasional Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4396,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -92,7 +102,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -102,7 +112,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -112,7 +122,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -122,19 +132,9 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4327,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "TPIA",
-      "name": "Chandra Asri Pacific Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4710,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -142,7 +142,7 @@
       "symbol": "ISAT",
       "name": "Indosat Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4866,
       "product_type": "Saham",
@@ -152,7 +152,7 @@
       "symbol": "FR0109",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 9551,
       "product_type": "FR",
@@ -160,9 +160,9 @@
     },
     {
       "symbol": "",
-      "name": "TD Bank Tabungan NEG Tbk PT-MM",
+      "name": "TD PT Bank Maybank Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -172,7 +172,7 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4623,
       "product_type": "Saham",
@@ -205,8 +205,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 280170000000,
-    "date": "2026-09-01"
+    "value": 240390000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -221,7 +221,7 @@
     "3y": -0.10239269704423559,
     "5y": -0.060185851445716976,
     "10y": -0.030640756998684626,
-    "all": 0.03819960208910578
+    "all": 0.03819417921206614
   },
   "cagr_adjusted": {
     "1y": -0.2567124592914941,

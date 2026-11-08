@@ -544,6 +544,11 @@
       "name": "BAHANA_PENDAPATAN_TETAP_MAKARA_PRIMA_KELAS_G_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_PENDAPATAN_TETAP_MAKARA_PRIMA_KELAS_G_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "BAHANA_PENDAPATAN_TETAP_MAKARA_PRIMA_KELAS_G_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_PENDAPATAN_TETAP_MAKARA_PRIMA_KELAS_G_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -561,7 +566,7 @@
     },
     {
       "name": "Makara_Prima_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FMakara_Prima_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Makara_Prima_2020.pdf"
     },
     {
       "name": "Pembaharuan_Prospektus_RD_Bahana_Pendapatan_Tetap_Makara_Prima.pdf",

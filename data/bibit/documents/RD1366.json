@@ -574,6 +574,11 @@
       "name": "TRIM_SYARIAH_SAHAM_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/TRIM_SYARIAH_SAHAM_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "TRIM_SYARIAH_SAHAM_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/TRIM_SYARIAH_SAHAM_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -603,7 +608,7 @@
     },
     {
       "name": "TRIM_Syariah_Saham_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FTRIM_Syariah_Saham_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/TRIM_Syariah_Saham_2020.pdf"
     },
     {
       "name": "pembaharuan_prospektus_trim_syariah_saham_mar_2020_1.pdf",

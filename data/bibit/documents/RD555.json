@@ -559,6 +559,11 @@
       "name": "DANAMAS_RUPIAH_PLUS_September_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/DANAMAS_RUPIAH_PLUS_September_2026.pdf",
       "date": "2026-09-30"
+    },
+    {
+      "name": "DANAMAS_RUPIAH_PLUS_Oktober_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/DANAMAS_RUPIAH_PLUS_Oktober_2026.pdf",
+      "date": "2026-10-30"
     }
   ],
   "prospectus": [
@@ -576,7 +581,7 @@
     },
     {
       "name": "Danamas_Rupiah_Plus_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FDanamas_Rupiah_Plus_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Danamas_Rupiah_Plus_2020.pdf"
     },
     {
       "name": "Danamas_Rupiah_Plus_2021.pdf",

@@ -242,7 +242,7 @@
     },
     {
       "name": "Danareksa_Melati_Pendapatan_Utama_MEI_2021.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FDanareksa_Melati_Pendapatan_Utama_MEI_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Danareksa_Melati_Pendapatan_Utama_MEI_2021.pdf",
       "date": "2021-05-30"
     },
     {
@@ -564,6 +564,11 @@
       "name": "BRI_MELATI_PENDAPATAN_UTAMA_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/BRI_MELATI_PENDAPATAN_UTAMA_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "BRI_MELATI_PENDAPATAN_UTAMA_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BRI_MELATI_PENDAPATAN_UTAMA_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -577,7 +582,7 @@
     },
     {
       "name": "Danareksa_Melati_Pendapatan_Utama_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FDanareksa_Melati_Pendapatan_Utama_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Danareksa_Melati_Pendapatan_Utama_2020.pdf"
     },
     {
       "name": "RD_MELATI_PENDAPATAN_UTAMA_2020.pdf",

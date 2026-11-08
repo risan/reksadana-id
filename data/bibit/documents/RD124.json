@@ -533,6 +533,11 @@
       "name": "BAHANA_DANA_LIKUID_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_DANA_LIKUID_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "BAHANA_DANA_LIKUID_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BAHANA_DANA_LIKUID_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -550,7 +555,7 @@
     },
     {
       "name": "Bahana_Dana_Likuid_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FBahana_Dana_Likuid_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Bahana_Dana_Likuid_2020.pdf"
     },
     {
       "name": "Pembaharuan Prospektus RD Bahana Dana Likuid.pdf",

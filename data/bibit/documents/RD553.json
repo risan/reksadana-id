@@ -544,6 +544,11 @@
       "name": "DANAMAS_PASTI_September_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/DANAMAS_PASTI_September_2026.pdf",
       "date": "2026-09-30"
+    },
+    {
+      "name": "DANAMAS_PASTI_Oktober_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/DANAMAS_PASTI_Oktober_2026.pdf",
+      "date": "2026-10-30"
     }
   ],
   "prospectus": [
@@ -565,7 +570,7 @@
     },
     {
       "name": "Danamas_Pasti_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FDanamas_Pasti_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Danamas_Pasti_2020.pdf"
     },
     {
       "name": "RD_DANAMAS_PASTI_Mei_2021.pdf",

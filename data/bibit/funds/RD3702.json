@@ -59,12 +59,12 @@
   },
   "asset": [
     {
-      "name": "Kas dan/atau  Pasar Uang Syariah",
-      "percentage": 7.81
+      "name": "Efek Syariah (dalam dan luar negeri)",
+      "percentage": 91.44
     },
     {
-      "name": "Efek Syariah (dalam dan luar negeri)",
-      "percentage": 92.19
+      "name": "Kas dan/atau Pasar Uang Syariah",
+      "percentage": 8.56
     }
   ],
   "holding": [
@@ -72,7 +72,27 @@
       "symbol": "",
       "name": "ALIBABA GROUP HOLDING LTD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "ASIA VITAL COMPONENTS CO LTD",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BEIGENE LTD",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -82,7 +102,17 @@
       "symbol": "",
       "name": "DELTA ELECTRONICS INC",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "ELITE MATERIAL CO LTD",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -92,7 +122,7 @@
       "symbol": "",
       "name": "INNOVENT BIOLOGICS INC",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,7 +132,7 @@
       "symbol": "",
       "name": "MEDIATEK INCORPORATION",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,7 +142,7 @@
       "symbol": "",
       "name": "TAIWAN SEMICONDUCTOR MANUFAC",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -120,9 +150,9 @@
     },
     {
       "symbol": "",
-      "name": "UNIMICRON TECHNOLOGY CORP",
+      "name": "TECHTRONIC INDUSTRIES CO LTD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -130,39 +160,9 @@
     },
     {
       "symbol": "",
-      "name": "UNITED MICROELECTRONICS CORP",
+      "name": "WUXI BIOLOGICS (CAYMAN) INC-USD0.00002",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "WUXI APPTEC CO LTD - CNY1 H",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "WUXI BIOLOGICS (CAYMAN) INC - USD0.00002",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "ZHONGJI INNOLIGHT CO LTD - 'A'CNY1",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -193,8 +193,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 21260000,
-    "date": "2026-09-01"
+    "value": 18500000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -209,7 +209,7 @@
     "3y": 0.05310415127127577,
     "5y": -0.08576490362995359,
     "10y": null,
-    "all": -0.05590436674194854
+    "all": -0.05588112650910604
   },
   "cagr_adjusted": {
     "1y": -0.07857481451496928,

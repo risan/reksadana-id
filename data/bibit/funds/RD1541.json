@@ -19,6 +19,7 @@
   },
   "released_date": "2004-12-27",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,22 +61,22 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang",
-      "percentage": 8.23
+      "name": "Efek Bersifat Ekuitas",
+      "percentage": 91.77
     },
     {
-      "name": "Equities",
-      "percentage": 91.77
+      "name": "Pasar Uang",
+      "percentage": 8.23
     }
   ],
   "holding": [
     {
-      "symbol": "AKRA",
-      "name": "AKR Corporindo Tbk.",
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4475,
+      "company_id": 4396,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -83,19 +84,39 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "BBRI",
-      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "symbol": "BDMN",
+      "name": "Bank Danamon Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4327,
+      "company_id": 4880,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK INTERNASIONAL INDONESIA MAYBANK (TD)",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "BMRI",
+      "name": "Bank Mandiri (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4331,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -103,7 +124,7 @@
       "symbol": "BFIN",
       "name": "BFI Finance Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4915,
       "product_type": "Saham",
@@ -113,7 +134,7 @@
       "symbol": "PTBA",
       "name": "Bukit Asam Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5051,
       "product_type": "Saham",
@@ -123,19 +144,9 @@
       "symbol": "CMRY",
       "name": "Cisarua Mountain Dairy Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4898,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "ICBP",
-      "name": "Indofood CBP Sukses Makmur Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4891,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -143,7 +154,7 @@
       "symbol": "KLBF",
       "name": "Kalbe Farma Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4973,
       "product_type": "Saham",
@@ -153,19 +164,9 @@
       "symbol": "MIKA",
       "name": "PT Mitra Keluarga Karyasehat Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5056,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "AMRT",
-      "name": "Sumber Alfaria Trijaya Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4422,
       "product_type": "Saham",
       "serie_id": null
     }
@@ -196,8 +197,8 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 267402872175,
-    "date": "2026-09-01"
+    "value": 228869171230,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -212,7 +213,7 @@
     "3y": -0.08705120231282315,
     "5y": -0.06280571524305767,
     "10y": -0.03386427471197995,
-    "all": 0.07661003873058259
+    "all": 0.07660008606599411
   },
   "cagr_adjusted": {
     "1y": -0.25430370266001234,

@@ -19,6 +19,7 @@
   },
   "released_date": "2005-05-25",
   "is_top_product": 1,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -196,8 +197,8 @@
   "index": true,
   "is_instant_redemption": true,
   "aum": {
-    "value": 7763320000000,
-    "date": "2026-09-30"
+    "value": 7178673526841,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -212,7 +213,7 @@
     "3y": 0.043494134951276964,
     "5y": 0.042414703652618124,
     "10y": 0.06225707381294732,
-    "all": 0.07923455480198216
+    "all": 0.07922262822424697
   },
   "cagr_adjusted": {
     "1y": -0.027186463878286937,

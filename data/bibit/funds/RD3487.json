@@ -60,20 +60,40 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang Syariah",
-      "percentage": 1.66
+      "name": "Sukuk",
+      "percentage": 98.15
     },
     {
-      "name": "Obligasi Syariah",
-      "percentage": 98.34
+      "name": "Pasar Uang Syariah",
+      "percentage": 1.85
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Perusahaan Penerbit 5% 15112030",
+      "name": "PBS040 5.00% 15-Nov-2030",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS030",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 6385,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PBS004 6.10% 15-Feb-2037",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,9 +101,29 @@
     },
     {
       "symbol": "",
-      "name": "Perusahaan Penerbit 5.875% 150728",
+      "name": "PBS029 6.375% 15-Mar-2034",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS034",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 6024,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PBSG001 6.625% 15-Sep-2029",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,79 +131,39 @@
     },
     {
       "symbol": "",
-      "name": "Perusahaan Penerbit 6.1% 150237",
+      "name": "PBS033 6.75% 15-Jun-2047",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "",
-      "name": "Perusahaan Penerbit 6.375% 150334",
+      "symbol": "PBS037",
+      "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 6077,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS038",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 6386,
+      "product_type": "FR",
       "serie_id": null
     },
     {
       "symbol": "",
-      "name": "Perusahaan Penerbit 6.5% 150639",
+      "name": "PBS022 8.625% 15-Apr-2034",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Perusahaan Penerbit 6.625% 150929",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Perusahaan Penerbit 6.75% 150647",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Perusahaan Penerbit 6.875% 150336",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Perusahaan Penerbit 6.875% 151249",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Perusahaan Penerbit 8.625% 150434",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,8 +196,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 1090000000000,
-    "date": "2026-09-01"
+    "value": 978260000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -212,7 +212,7 @@
     "3y": 0.028276660406985732,
     "5y": 0.02665936111301659,
     "10y": null,
-    "all": 0.0464910716591278
+    "all": 0.046477449458323994
   },
   "cagr_adjusted": {
     "1y": -0.028540335161793662,

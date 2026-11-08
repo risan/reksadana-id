@@ -61,12 +61,12 @@
   },
   "asset": [
     {
-      "name": "Kas",
-      "percentage": 0.77
+      "name": "Saham",
+      "percentage": 98.99
     },
     {
-      "name": "Saham",
-      "percentage": 99.23
+      "name": "Kas",
+      "percentage": 1.01
     }
   ],
   "holding": [
@@ -74,7 +74,7 @@
       "symbol": "ANTM",
       "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4396,
       "product_type": "Saham",
@@ -84,7 +84,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -94,7 +94,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -104,7 +104,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -114,7 +114,7 @@
       "symbol": "BBNI",
       "name": "Bank Negara Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4338,
       "product_type": "Saham",
@@ -124,7 +124,7 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
@@ -134,7 +134,7 @@
       "symbol": "ICBP",
       "name": "Indofood CBP Sukses Makmur Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4891,
       "product_type": "Saham",
@@ -144,7 +144,7 @@
       "symbol": "INDF",
       "name": "Indofood Sukses Makmur Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4919,
       "product_type": "Saham",
@@ -154,7 +154,7 @@
       "symbol": "KLBF",
       "name": "Kalbe Farma Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4973,
       "product_type": "Saham",
@@ -164,7 +164,7 @@
       "symbol": "PGAS",
       "name": "Perusahaan Gas Negara Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5027,
       "product_type": "Saham",
@@ -193,8 +193,8 @@
   "index": true,
   "is_instant_redemption": true,
   "aum": {
-    "value": 2260000000000,
-    "date": "2026-09-01"
+    "value": 2090000000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -209,7 +209,7 @@
     "3y": -0.09248819612828962,
     "5y": -0.025557461203698173,
     "10y": null,
-    "all": -0.019804105054364696
+    "all": -0.019797344101304293
   },
   "cagr_adjusted": {
     "1y": -0.22727769778927998,

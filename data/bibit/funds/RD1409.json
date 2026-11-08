@@ -19,6 +19,7 @@
   },
   "released_date": "2016-12-01",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -196,8 +197,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 165219295097,
-    "date": "2026-09-01"
+    "value": 160721919242.7,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -212,7 +213,7 @@
     "3y": -0.008277011222642017,
     "5y": -0.006814497622269489,
     "10y": null,
-    "all": 0.007033962946763506
+    "all": 0.007031762623897819
   },
   "cagr_adjusted": {
     "1y": -0.007377649547424592,

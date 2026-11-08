@@ -19,13 +19,13 @@
       "instrument": "Sukuk Wakalah I Metrohealth Care Indonesia Thn 2025 sr B"
     },
     {
-      "instrument": "Deposito BTPN Syariah"
+      "instrument": "Deposito Bank Aladin Syariah Tbk"
     },
     {
       "instrument": "Surat Berharga Syariah Negara seri PBS030"
     },
     {
-      "instrument": "Deposito DPB Riau"
+      "instrument": "Sukuk Mudharabah Bkljt IV Pegadaian Thp II Thn 2026 seri A"
     },
     {
       "instrument": "Sukuk Wakalah Bkljt I Medco Power Indonesia Thp IV Thn 2025 seri B"
@@ -34,30 +34,30 @@
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 1700
+      "weight": 2000
     },
     {
       "asset": "Obligasi",
-      "weight": 8300
+      "weight": 8000
     }
   ],
-  "portfolioAsof": 20260930,
+  "portfolioAsof": 20261030,
   "return1d": 2,
   "return5d": 11,
-  "return1m": 48,
+  "return1m": 49,
   "return3m": 213,
-  "returnytd": 541,
-  "return1y": 659,
-  "return3y": 2351,
+  "returnytd": 553,
+  "return1y": 658,
+  "return3y": 2352,
   "return5y": null,
   "return10y": null,
-  "returnsi": 2502,
+  "returnsi": 2516,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": 0,
   "drawdown5y": null,
   "drawdownsi": 0,
-  "cagr1y": 659,
+  "cagr1y": 658,
   "cagr3y": 729,
   "cagr5y": null,
   "cagr10y": null,
@@ -65,14 +65,14 @@
   "rating": 0,
   "description": "Capital Sharia Fixed Income adalah Reksa Dana Syariah yang mengedepankan investasi pada efek berpendapatan tetap Syariah, beroperasi di bawah kerangka Undang-Undang Pasar Modal Indonesia. Produk ini bertujuan untuk menghasilkan pendapatan investasi menengah, dengan menanamkan setidaknya 80% dari nilai aktiva bersihnya pada efek syariah berpendapatan tetap, baik yang diperdagangkan di dalam maupun luar negeri. Pilihan investasi ini dirancang untuk mematuhi ketentuan Syariah sambil meminimalkan risiko investasi, mencerminkan komitmen pada keamanan dan pertumbuhan yang berkelanjutan. Selain itu, Capital Sharia Fixed Income juga mengalokasikan hingga 20% dari nilai aktiva bersihnya pada efek syariah ekuitas dan/atau instrumen pasar uang Syariah dan deposito Syariah, memungkinkan fleksibilitas dan peluang pertumbuhan. Kesesuaian dengan regulasi internasional dan domestik menjadi prioritas dalam pengelolaan dana ini, memastikan bahwa investasi dilakukan dengan tata kelola yang baik dan sesuai dengan prinsip-prinsip Syariah.",
   "isSyariah": true,
-  "lastPrice": 125018,
+  "lastPrice": 125156,
   "expenseRatio": 121,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261030,
+  "asof": 20261106,
   "url": "capital-sharia-fixed-income-06360d10abf8",
   "currency": "IDR",
-  "lastAum": 616927804765,
+  "lastAum": 689142786609,
   "factsheet": "https://cache.makmur.id/files/products/658cf617ecd93f8c4b606409/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/658cf617ecd93f8c4b606409/prospectus.pdf",
   "inceptionDate": 20230801,

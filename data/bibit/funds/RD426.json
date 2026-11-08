@@ -61,16 +61,12 @@
   },
   "asset": [
     {
-      "name": "Kas",
-      "percentage": 3.5
-    },
-    {
       "name": "Pendapatan Tetap",
-      "percentage": 87.3
+      "percentage": 93.35
     },
     {
-      "name": "Deposito",
-      "percentage": 9.2
+      "name": "Kas",
+      "percentage": 6.65
     }
   ],
   "holding": [
@@ -78,7 +74,7 @@
       "symbol": "",
       "name": "Indois 5.2 5.2% 07Feb2034-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -88,7 +84,7 @@
       "symbol": "",
       "name": "Indonesia Govt Sukuk 4.55% 23Jul2030-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -96,9 +92,9 @@
     },
     {
       "symbol": "",
-      "name": "REP ID 1.85 0312//31-FI",
+      "name": "Perusahaan Pener 5.25% 25Nov34 - FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -108,7 +104,7 @@
       "symbol": "",
       "name": "REP ID 3.55 03/31/32-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -118,7 +114,7 @@
       "symbol": "",
       "name": "REP ID 4.65 09/20/32-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -126,9 +122,9 @@
     },
     {
       "symbol": "",
-      "name": "REP ID 6 3/4 0115//44-FI",
+      "name": "REP ID 6 3/4 01/15/44-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -138,7 +134,7 @@
       "symbol": "",
       "name": "Republic Of Indonesia 5.95% 08/01/2046-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -148,7 +144,7 @@
       "symbol": "",
       "name": "Republic Of Indonesia 8.50% 10/12/35-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -158,7 +154,7 @@
       "symbol": "",
       "name": "Sbsn Indo lii Indois 5.4% 11/15/28-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -166,9 +162,9 @@
     },
     {
       "symbol": "",
-      "name": "TD Citibank Na (Jakarta Branch) - MM",
+      "name": "Sbsn Indo lii Indois 5.6 11/15/33-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -203,8 +199,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 152130000,
-    "date": "2026-09-01"
+    "value": 118470000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -219,7 +215,7 @@
     "3y": 0.0353913772819312,
     "5y": 0.0009526945744275928,
     "10y": 0.018347994269177992,
-    "all": 0.018795855364220904
+    "all": 0.018792658301319376
   },
   "cagr_adjusted": {
     "1y": -0.01448215330602698,

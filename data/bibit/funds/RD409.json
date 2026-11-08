@@ -61,20 +61,20 @@
   },
   "asset": [
     {
-      "name": "Pendapatan Tetap",
-      "percentage": 5.11
+      "name": "Saham",
+      "percentage": 88.49
     },
     {
-      "name": "Kas",
-      "percentage": 0.93
+      "name": "Pendapatan Tetap",
+      "percentage": 5.79
     },
     {
       "name": "Deposito",
-      "percentage": 7.03
+      "percentage": 5.52
     },
     {
-      "name": "Saham",
-      "percentage": 86.94
+      "name": "Kas",
+      "percentage": 0.19
     }
   ],
   "holding": [
@@ -82,9 +82,19 @@
       "symbol": "AMMN",
       "name": "Amman Mineral Internasional Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6026,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4396,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -92,7 +102,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -102,7 +112,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -112,9 +122,19 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4331,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "BBNI",
+      "name": "Bank Negara Indonesia (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4338,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -122,7 +142,7 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
@@ -132,37 +152,17 @@
       "symbol": "FR0090",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5806,
       "product_type": "FR",
       "serie_id": null
     },
     {
-      "symbol": "ISAT",
-      "name": "Indosat Tbk",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4866,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "TD Bank Mega",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
       "symbol": "",
       "name": "TD Bank Tabungan NEG Tbk PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -172,7 +172,7 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4623,
       "product_type": "Saham",
@@ -205,8 +205,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 498730000000,
-    "date": "2026-09-01"
+    "value": 435370000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -221,7 +221,7 @@
     "3y": -0.09982194761678176,
     "5y": -0.04826415364766656,
     "10y": -0.026341778081569123,
-    "all": 0.1145549466083704
+    "all": 0.11454200873517051
   },
   "cagr_adjusted": {
     "1y": -0.23730440870687863,

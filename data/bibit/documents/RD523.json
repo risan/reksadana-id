@@ -242,7 +242,7 @@
     },
     {
       "name": "SUCORINVEST_CITRA_DANA_BERIMBANG_JUNI_2021.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FSUCORINVEST_CITRA_DANA_BERIMBANG_JUNI_2021.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/SUCORINVEST_CITRA_DANA_BERIMBANG_JUNI_2021.pdf",
       "date": "2021-06-29"
     },
     {
@@ -549,6 +549,11 @@
       "name": "Sucorinvest_Citra_Dana_Berimbang_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/Sucorinvest_Citra_Dana_Berimbang_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "Sucorinvest_Citra_Dana_Berimbang_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Sucorinvest_Citra_Dana_Berimbang_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -578,7 +583,7 @@
     },
     {
       "name": "Citra_Dana_Berimbang_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FCitra_Dana_Berimbang_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Citra_Dana_Berimbang_2020.pdf"
     },
     {
       "name": "Prospektus_SCDB_April2020.pdf",

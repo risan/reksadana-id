@@ -212,7 +212,7 @@
     },
     {
       "name": "Sucorinvest_Money_Market_Fund.pdf",
-      "file": "https://assets.bibit.id/factsheets%2FSucorinvest_Money_Market_Fund.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Sucorinvest_Money_Market_Fund.pdf",
       "date": "2017-03-30"
     },
     {
@@ -564,6 +564,11 @@
       "name": "Sucorinvest_Money_Market_Fund_Agustus_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/Sucorinvest_Money_Market_Fund_Agustus_2026.pdf",
       "date": "2026-08-31"
+    },
+    {
+      "name": "Sucorinvest_Money_Market_Fund_September_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/Sucorinvest_Money_Market_Fund_September_2026.pdf",
+      "date": "2026-09-30"
     }
   ],
   "prospectus": [
@@ -593,7 +598,7 @@
     },
     {
       "name": "Sucorinvest_Money_Market_Fund_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FSucorinvest_Money_Market_Fund_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/Sucorinvest_Money_Market_Fund_2020.pdf"
     },
     {
       "name": "Prospektus_SMMF_April_2020.pdf",

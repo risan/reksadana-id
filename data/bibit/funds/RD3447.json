@@ -61,19 +61,19 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 96.64
+      "percentage": 98.22
     },
     {
       "name": "Kas dan/atau Pasar Uang",
-      "percentage": 3.36
+      "percentage": 1.78
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "OBL NEGARA REP INDO SERI FR0079",
+      "name": "OBLIGASI NEGARA REPUBLIK IND SERI FR0079",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "OBL NEGARA REPUBLIK INDONESIA FR0068",
+      "name": "OBLIGASI NEGARA REPUBLIK IND SERI FR0068",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +93,7 @@
       "symbol": "FR0080",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5809,
       "product_type": "FR",
@@ -101,9 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "OBL NEGARA REPUBLIK INDONESIA FR0087",
+      "name": "OBLIGASI NEGARA REPUBLIK IND SERI FR0087",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +113,7 @@
       "symbol": "",
       "name": "OBLIGASI NEGARA REPUBLIK IND SERI FR0098",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +123,7 @@
       "symbol": "FR0100",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6155,
       "product_type": "FR",
@@ -133,7 +133,7 @@
       "symbol": "FR0103",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 8710,
       "product_type": "FR",
@@ -143,7 +143,7 @@
       "symbol": "FR0104",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 8733,
       "product_type": "FR",
@@ -153,7 +153,7 @@
       "symbol": "FR0108",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 9548,
       "product_type": "FR",
@@ -163,7 +163,7 @@
       "symbol": "FR0109",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 9551,
       "product_type": "FR",
@@ -196,8 +196,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 5430000000000,
-    "date": "2026-09-01"
+    "value": 4900000000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -212,7 +212,7 @@
     "3y": 0.030308497730654915,
     "5y": 0.029454201122382173,
     "10y": 0.05007112748871201,
-    "all": 0.05275097201607437
+    "all": 0.05273825030982793
   },
   "cagr_adjusted": {
     "1y": -0.03350492140130845,

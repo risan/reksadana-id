@@ -61,21 +61,21 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 87.45
+      "percentage": 93.23
     },
     {
-      "name": "Kas dan/atau pasar uang",
-      "percentage": 12.55
+      "name": "Kas dan/atau Pasar Uang",
+      "percentage": 6.77
     }
   ],
   "holding": [
     {
-      "symbol": "ADRO",
-      "name": "Alamtri Resources Indonesia Tbk.",
+      "symbol": "ADMR",
+      "name": "Alamtri Minerals Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 5007,
+      "company_id": 4548,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -83,7 +83,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -93,7 +93,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -103,7 +103,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -113,7 +113,7 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
@@ -123,7 +123,7 @@
       "symbol": "BFIN",
       "name": "BFI Finance Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4915,
       "product_type": "Saham",
@@ -133,7 +133,7 @@
       "symbol": "KLBF",
       "name": "Kalbe Farma Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4973,
       "product_type": "Saham",
@@ -143,7 +143,7 @@
       "symbol": "MDKA",
       "name": "Merdeka Copper Gold Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4563,
       "product_type": "Saham",
@@ -153,7 +153,7 @@
       "symbol": "TLKM",
       "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4623,
       "product_type": "Saham",
@@ -163,7 +163,7 @@
       "symbol": "UNTR",
       "name": "United Tractors Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4571,
       "product_type": "Saham",
@@ -196,8 +196,8 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 368380000000,
-    "date": "2026-09-01"
+    "value": 265330000000,
+    "date": "2026-10-01"
   },
   "shareholders": [],
   "expenseratio": {
@@ -212,7 +212,7 @@
     "3y": -0.12708042410904385,
     "5y": -0.08069973204045355,
     "10y": -0.02794664726358609,
-    "all": -0.010899681728192334
+    "all": -0.010897473973550342
   },
   "cagr_adjusted": {
     "1y": -0.3282974924307118,

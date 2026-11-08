@@ -579,6 +579,11 @@
       "name": "BNP_Paribas_Pesona_Syariah_September_2026.pdf",
       "file": "https://bibit.s3.amazonaws.com/factsheets/BNP_Paribas_Pesona_Syariah_September_2026.pdf",
       "date": "2026-09-30"
+    },
+    {
+      "name": "BNP_Paribas_Pesona_Syariah_Oktober_2026.pdf",
+      "file": "https://bibit.s3.amazonaws.com/factsheets/BNP_Paribas_Pesona_Syariah_Oktober_2026.pdf",
+      "date": "2026-10-30"
     }
   ],
   "prospectus": [
@@ -608,7 +613,7 @@
     },
     {
       "name": "BNP_Paribas_Pesona_Syariah_2020.pdf",
-      "file": "https://assets.bibit.id/prospectus%2FBNP_Paribas_Pesona_Syariah_2020.pdf"
+      "file": "https://bibit.s3.amazonaws.com/prospectus/BNP_Paribas_Pesona_Syariah_2020.pdf"
     },
     {
       "name": "BNP_Paribas_Pesona_Syariah_2021.pdf",
