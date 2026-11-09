@@ -138,7 +138,7 @@ BRK1302,TRAM Terproteksi Prima X,,"Trimegah Asset Management, PT",Terproteksi,ID
 BRK1303,TRAM Terproteksi Prima XII,,"Trimegah Asset Management, PT",Terproteksi,IDR,,2013-12-12,,1303,,,
 BRK1306,BNI AM Proteksi Mega Pundi II,,"Danareksa Investment Management Indonesia d/h BNI AM, PT",Terproteksi,IDR,,2012-02-29,,1306,,,
 BRK1307,BNI AM Proteksi Mega Pundi IV,,"Danareksa Investment Management Indonesia d/h BNI AM, PT",Terproteksi,IDR,,2012-05-15,,1307,,,
-BRK1308,Batavia Proteksi Andalan 6,,"Batavia Prosperindo Aset Manajemen, PT",Terproteksi,,,2013-07-30,,1308,,,
+BRK1308,Batavia Proteksi Andalan 6,,"Batavia Prosperindo Aset Manajemen, PT",Terproteksi,IDR,,2013-07-30,,1308,,,
 BRK1311,Danareksa Proteksi Syariah I,,"Danareksa Investment Management Indonesia d/h BRI MI, PT",Terproteksi,IDR,true,2013-02-20,,1311,,,
 BRK1320,Premier Proteksi IV,,"Indo Premier Investment Management, PT",Terproteksi,IDR,,2012-11-29,,1320,,,
 BRK1321,Star Capital Protected Fund II,,"Surya Timur Alam Raya Asset Management, PT",Terproteksi,IDR,,2012-02-29,,1321,,,
@@ -1871,7 +1871,9 @@ KTN16552,BRI G20 SHARIA EQUITY FUND DOLLAR,,PT BRI MANAJEMEN INVESTASI,Reksadana
 KTN16648,BAHANA USD NADHIRA SUKUK KELAS G,,PT. Bahana TCW Investment Management,Obligasi,USD,,,,,16648,,
 KTN16737,MANDIRI INVESTA DANA UTAMA KELAS B,,PT. Mandiri Manajemen Investasi,Obligasi,,,,,,16737,,REKSA DANA MANDIRI INVESTA DANA UTAMA KELAS B
 KTN16917,MANDIRI INVESTA 7,,PT. Mandiri Manajemen Investasi,Terproteksi,,,,,,16917,,REKSA DANA TERPROTEKSI MANDIRI INVESTA 7
+KTN16948,Axa Bond Income Kelas A,,"BNP Paribas Asset Management, PT",Obligasi,IDR,,2025-04-15,,5036,16948,,
 KTN16975,BNI AM TEAKWOOD KELAS I1,,PT. BNI Asset Management,Obligasi,,,,,,16975,,REKSA DANA PENDAPATAN TETAP BNI AM TEAKWOOD KELAS I1
+KTN16982,AXA BUMN Titans Equity,,"BNP Paribas Asset Management, PT",Saham,IDR,,2025-06-23,,5067,16982,,
 KTN17026,MANDIRI INVESTA 15,,PT. Mandiri Manajemen Investasi,Terproteksi,,,,,,17026,,REKSA DANA TERPROTEKSI MANDIRI INVESTA 15
 KTN17046,SYAILENDRA RUSSEL IDEALRATINGS TOP 200 ISLAMIC TECHNOLOGY INDEX SHARIA USD KELAS A,,PT. Syailendra Capital,Reksadana Global,USD,true,,,,17046,,
 KTN17047,SYAILENDRA RUSSEL IDEALRATINGS TOP 200 ISLAMIC TECHNOLOGY INDEX SHARIA USD KELAS B,,PT. Syailendra Capital,Reksadana Global,USD,true,,,,17047,,
@@ -4439,7 +4441,7 @@ RD9317,Trimegah Terproteksi 31,,"Trimegah Asset Management, PT",Terproteksi,IDR,
 RD9318,Bowsprit Industrial Infrastructure,Dire Bowsprit Industrial Infrastructure,"Bowsprit Asset Management, PT",Dana Investasi Real Estate,IDR,false,2019-12-03,RD9318,4028,,,
 RD9319,Foster Balanced Fund,,"Foster Asset Management, PT",Campuran,IDR,false,2025-04-09,RD9319,5034,16944,,REKSA DANA FOSTER BALANCED FUND
 RD9320,Cipta Proteksi XXIX,,"Ciptadana Asset Management, PT",Terproteksi,IDR,false,2025-04-14,RD9320,5035,16945,,REKSA DANA TERPROTEKSI CIPTA PROTEKSI XXIX
-RD9321,Axa Bond Income Kelas A,,"AXA Investment Managers Select Indonesia , PT",Obligasi,IDR,false,2025-04-15,RD9321,5036,16948,,REKSA DANA AXA BOND INCOME KELAS A
+RD9321,Axa Bond Income Kelas A,,"Axa Investment Managers Select Indonesia, PT",Obligasi,IDR,false,2025-04-15,RD9321,,,,REKSA DANA AXA BOND INCOME KELAS A
 RD9322,BRI MI Proteksi 104,,"Danareksa Investment Management Indonesia d/h BRI MI, PT",Terproteksi,IDR,false,2025-04-15,RD9322,5037,16946,,
 RD9323,Syailendra Capital Protected Fund Syariah 6,,"Syailendra Capital, PT",Terproteksi,IDR,true,2025-04-15,RD9323,5038,16947,,
 RD9324,Eastspring ESGQ45 IDX Kehati Kelas A,,"Eastspring Investments Indonesia, PT",Saham,IDR,false,2025-04-16,RD9324,5039,16950,,REKSA DANA INDEKS EASTSPRING ESGQ45 IDX KEHATI KELAS A
@@ -4532,7 +4534,7 @@ RD9502,PNM Cinta Anak Bangsa Kelas Diamond,,"Danareksa Investment Management Ind
 RD9503,Rdspt Pnm Pembiayaan Mikro Bumn Seri Xvi,,"PNM Investment Management, PT",Penyertaan Terbatas,IDR,true,2025-06-17,RD9503,,,,
 RD9505,Syailendra Capital Protected Fund 64,,"Syailendra Capital, PT",Terproteksi,IDR,false,2025-06-18,RD9505,5064,16977,,REKSA DANA TERPROTEKSI SYAILENDRA CAPITAL PROTECTED FUND 64
 RD9506,Trimegah Balanced Absolute Strategy Kelas P,,"Trimegah Asset Management, PT",Campuran,IDR,false,2025-06-19,RD9506,5065,16978,,REKSA DANA TRIMEGAH BALANCED ABSOLUTE STRATEGY KELAS P
-RD9513,Axa Bumn Titans Equity,,"AXA Investment Managers Select Indonesia , PT",Saham,IDR,false,2025-06-23,RD9513,5067,16982,,REKSA DANA AXA BUMN TITANS EQUITY
+RD9513,Axa Bumn Titans Equity,,"Axa Investment Managers Select Indonesia, PT",Saham,IDR,false,2025-06-23,RD9513,,,,REKSA DANA AXA BUMN TITANS EQUITY
 RD9516,Reksa Dana Terproteksi Panin 40,Panin 40,"Panin Asset Management, PT",Terproteksi,IDR,false,2025-06-23,RD9516,5066,16986,,REKSA DANA TERPROTEKSI PANIN 40
 RD9517,Bahana Pendapatan Tetap Makara Prima Kelas D,,"Bahana TCW Investment Management, PT",Obligasi,IDR,false,2025-06-24,RD9517,5068,16983,,REKSA DANA BAHANA PENDAPATAN TETAP MAKARA PRIMA KELAS D
 RD9518,Rdpt Kisi Data Center Infrastructure Equity Usd,,"Kisi Asset Management, PT",Saham,USD,false,2025-06-25,RD9518,,,,

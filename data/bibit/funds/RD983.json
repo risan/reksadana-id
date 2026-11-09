@@ -19,6 +19,7 @@
   },
   "released_date": "2009-01-23",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -208,7 +209,7 @@
     "3y": 0.04518935367864518,
     "5y": 0.03865085043732441,
     "10y": 0.04399963828969056,
-    "all": 0.03807298811937465
+    "all": 0.0380670160445753
   },
   "cagr_adjusted": {
     "1y": 0.03822615271235863,
