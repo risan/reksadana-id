@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Equity",
-      "percentage": 98.94
+      "percentage": 99.23
     },
     {
       "name": "Cash&Money Market",
-      "percentage": 1.06
+      "percentage": 0.77
     }
   ],
   "holding": [
@@ -200,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2017-06-12",
-    "value": 532.063856
+    "value": 538.758773
   },
   "trade": null
 }

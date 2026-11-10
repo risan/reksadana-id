@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,15 +62,15 @@
   "asset": [
     {
       "name": "Pendapatan Tetap",
-      "percentage": 95.3
+      "percentage": 99.35
     },
     {
       "name": "Kas",
-      "percentage": 0
+      "percentage": 0.07
     },
     {
       "name": "Deposito",
-      "percentage": 4.64
+      "percentage": 0.59
     }
   ],
   "investment_manager": {
@@ -152,9 +153,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2014-09-25",
-    "value": 2270.75
+    "value": 2274.14
   },
   "trade": null
 }

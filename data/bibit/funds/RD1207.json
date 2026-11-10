@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Efek Ekuitas",
-      "percentage": 95.46
+      "percentage": 96.56
     },
     {
       "name": "Inst. Pasar Uang & Kas",
-      "percentage": 4.54
+      "percentage": 3.44
     },
     {
       "name": "Efek Obligasi",
@@ -254,9 +255,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2000-01-05",
-    "value": 72262.02
+    "value": 72573.38
   },
   "trade": null
 }

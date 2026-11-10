@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,15 +62,15 @@
   "asset": [
     {
       "name": "Deposito",
-      "percentage": 8.96
+      "percentage": 8.81
     },
     {
       "name": "Obligasi Pemerintah",
-      "percentage": 86.51
+      "percentage": 83.23
     },
     {
       "name": "Kas",
-      "percentage": 4.53
+      "percentage": 7.96
     }
   ],
   "holding": [
@@ -198,9 +199,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2018-01-26",
-    "value": 1492.0059
+    "value": 1493.7027
   },
   "trade": null
 }

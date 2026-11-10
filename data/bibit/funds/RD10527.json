@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,11 +61,11 @@
   "asset": [
     {
       "name": "Pendapatan Tetap",
-      "percentage": 95.71
+      "percentage": 96.59
     },
     {
       "name": "Kas / Pasar Uang",
-      "percentage": 4.29
+      "percentage": 3.41
     }
   ],
   "investment_manager": {
@@ -141,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2026-05-08",
-    "value": 1668.004
+    "value": 1668.2346
   },
   "trade": null
 }

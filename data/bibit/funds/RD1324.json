@@ -65,7 +65,7 @@
     },
     {
       "name": "Saham",
-      "percentage": 99.03
+      "percentage": 98.12
     },
     {
       "name": "Obligasi",
@@ -73,7 +73,7 @@
     },
     {
       "name": "Kas",
-      "percentage": 0.97
+      "percentage": 1.88
     }
   ],
   "holding": [
@@ -208,9 +208,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2007-12-19",
-    "value": 711.5812
+    "value": 716.8056
   },
   "trade": null
 }

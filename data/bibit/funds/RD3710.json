@@ -64,7 +64,7 @@
     },
     {
       "name": "Saham",
-      "percentage": 99.3
+      "percentage": 97.46
     },
     {
       "name": "Obligasi",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Kas",
-      "percentage": 0.7
+      "percentage": 2.54
     }
   ],
   "investment_manager": {
@@ -149,9 +149,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2020-06-22",
-    "value": 365.585
+    "value": 368.4837
   },
   "trade": null
 }

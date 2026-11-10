@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -65,11 +66,11 @@
     },
     {
       "name": "Inst. Pasar Uang & Kas",
-      "percentage": 91.56
+      "percentage": 95.6
     },
     {
       "name": "Efek Obligasi",
-      "percentage": 8.44
+      "percentage": 4.4
     }
   ],
   "holding": [
@@ -184,9 +185,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2018-01-18",
-    "value": 1404.34
+    "value": 1404.91
   },
   "trade": null
 }

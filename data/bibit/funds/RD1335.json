@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 49.06
+      "percentage": 49.95
     },
     {
       "name": "Saham",
-      "percentage": 31.25
+      "percentage": 29.49
     },
     {
       "name": "Obligasi",
-      "percentage": 19.69
+      "percentage": 20.56
     }
   ],
   "holding": [
@@ -203,9 +203,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2018-01-26",
-    "value": 1840.1
+    "value": 1841.9
   },
   "trade": null
 }

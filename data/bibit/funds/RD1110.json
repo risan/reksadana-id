@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,12 +61,16 @@
   },
   "asset": [
     {
+      "name": "Kas",
+      "percentage": 1.77
+    },
+    {
       "name": "Deposito",
-      "percentage": 1.27
+      "percentage": 1.7
     },
     {
       "name": "Obligasi Korporasi",
-      "percentage": 99.17
+      "percentage": 96.53
     }
   ],
   "holding": [
@@ -200,9 +205,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2006-08-09",
-    "value": 3926.5739
+    "value": 3928.6376
   },
   "trade": null
 }

@@ -19,10 +19,11 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18037,
+    "exchange_rate": 18055,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Pasar Uang & Kas",
-      "percentage": 6.8
+      "percentage": 7.2
     },
     {
       "name": "Obligasi",
-      "percentage": 93.2
+      "percentage": 92.8
     }
   ],
   "holding": [
@@ -180,9 +181,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2004-06-02",
-    "value": 2.260272
+    "value": 2.260992
   },
   "trade": null
 }

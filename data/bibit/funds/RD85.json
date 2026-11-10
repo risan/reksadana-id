@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,12 +61,12 @@
   },
   "asset": [
     {
-      "name": "Saham",
-      "percentage": 96.52
+      "name": "Kas",
+      "percentage": 5.79
     },
     {
-      "name": "Kas & Pasar Uang",
-      "percentage": 3.48
+      "name": "Saham",
+      "percentage": 94.21
     }
   ],
   "holding": [
@@ -250,9 +251,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2000-01-05",
-    "value": 3844.46
+    "value": 3860.87
   },
   "trade": null
 }

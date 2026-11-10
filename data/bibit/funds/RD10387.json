@@ -21,7 +21,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18037,
+    "exchange_rate": 18055,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -56,7 +56,16 @@
       "currency": "USD"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Pasar Uang & Kas",
+      "percentage": 10.1
+    },
+    {
+      "name": "Ekuitas SNP 500 ESG Sharia",
+      "percentage": 89.9
+    }
+  ],
   "investment_manager": {
     "name": "Sinarmas Asset Management, PT"
   },
@@ -131,9 +140,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "first_date": "2026-03-05",
-    "value": 1.076203
+    "value": 1.082144
   },
   "trade": null
 }

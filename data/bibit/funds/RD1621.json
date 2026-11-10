@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Pasar Uang & Kas",
-      "percentage": 17.2
+      "percentage": 19.7
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 82.8
+      "percentage": 80.3
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2015-01-05",
-    "value": 784.2919
+    "value": 788.2918
   },
   "trade": null
 }

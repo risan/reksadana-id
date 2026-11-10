@@ -57,7 +57,24 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Saham",
+      "percentage": 19.03
+    },
+    {
+      "name": "Obligasi",
+      "percentage": 0
+    },
+    {
+      "name": "Kas",
+      "percentage": 1.1
+    },
+    {
+      "name": "Deposito",
+      "percentage": 79.87
+    }
+  ],
   "investment_manager": {
     "name": "Indo Premier Investment Management, PT"
   },
@@ -132,9 +149,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2026-09-04",
-    "value": 958.8246
+    "value": 961.3495
   },
   "trade": null
 }

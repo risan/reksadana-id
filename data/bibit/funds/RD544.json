@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 7.05
+      "percentage": 8.77
     },
     {
       "name": "Obligasi",
-      "percentage": 92.95
+      "percentage": 91.23
     }
   ],
   "holding": [
@@ -200,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2018-01-26",
-    "value": 3864.04
+    "value": 3867.18
   },
   "trade": null
 }

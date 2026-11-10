@@ -306,7 +306,7 @@ BRK1935,Mega Asset Terproteksi 2,,"Mega Asset Management, PT",Terproteksi,IDR,,2
 BRK1937,Mega Asset Terproteksi I,,"Mega Asset Management, PT",Terproteksi,IDR,,2015-03-23,,1937,,,
 BRK1938,MNC Dana Terproteksi II,,"MNC Asset Management, PT",Terproteksi,IDR,,2014-10-28,,1938,1245,,
 BRK1941,RHB OSK Capital Protected Fund 32,,"Allianz Global Investors Asset Management Indonesia, PT",Terproteksi,IDR,,2015-04-30,,1941,,,
-BRK1943,BNIAM Proteksi LI,,"Danareksa Investment Management Indonesia d/h BNI AM, PT",Terproteksi,,,2015-06-16,,1943,,,
+BRK1943,BNIAM Proteksi LI,,"Danareksa Investment Management Indonesia d/h BNI AM, PT",Terproteksi,IDR,,2015-06-16,,1943,,,
 BRK1944,Mandiri Seri 25,,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",Terproteksi,IDR,,2015-06-19,,1944,,,
 BRK1946,BNI-AM YUWARAJA Information & Communication Technology,,"Danareksa Investment Management Indonesia d/h BNI AM, PT",Penyertaan Terbatas,,,2015-07-03,,1946,,,
 BRK1947,PNM Pembiayaan Mikro BUMN 2015,,"Danareksa Investment Management Indonesia d/h PNM IM, PT",Penyertaan Terbatas,,,2015-07-08,,1947,,,
@@ -1778,7 +1778,6 @@ BRK5173,Reksa Dana Terproteksi Mandiri Investa 17,,"Danareksa Investment Managem
 BRK5196,PNM Pembiayaan Mikro BUMN Seri XXI,,"Danareksa Investment Management Indonesia d/h PNM IM, PT",Penyertaan Terbatas,,,2026-02-13,,5196,,,
 BRK5202,Reksa Dana Syariah Ashmore Global EM Sukuk Fund USD,,"Ashmore Asset Management Indonesia, PT",Obligasi,USD,true,2026-02-23,,5202,,,REKSA DANA SYARIAH ASHMORE GLOBAL EM SUKUK FUND USD
 BRK5217,Reksa Dana Terproteksi Mandiri Investa 18,,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",Terproteksi,IDR,,2026-04-15,,5217,,,
-BRK5311,BNP Paribas Pasar Uang Sarana Kas Kelas B,,"BNP Paribas Asset Management, PT",Pasar Uang,,,2026-10-22,,5311,,,REKSA DANA BNP PARIBAS PASAR UANG SARANA KAS KELAS B
 KTN8,AAA Bond Fund 2,,PT. AAA Asset Management,Obligasi,,,,,,8,,
 KTN12,RD Indosurya Equity Fund,,PT. Indosurya Asset Management,Saham,,,,,,12,,
 KTN28,Bahana B Optima Protected Fund 33,,PT. Bahana TCW Investment Management,Terproteksi,,,,,,28,,
@@ -4656,8 +4655,8 @@ RD10262,Henan Proteksi Prima Syariah V,,"Henan Putihrai Asset Management, PT",Te
 RD10263,Maybank Global Equity Technology Syariah USD,,"Maybank Asset Management, PT",Saham,USD,true,2026-01-26,RD10263,5182,17084,,
 RD10264,Maybank High Dividend Equity Fund,Maybank High Devidend Equity Fund,"Maybank Asset Management, PT",Saham,IDR,false,2026-01-26,RD10264,5181,17082,,REKSA DANA MAYBANK HIGH DIVIDEND EQUITY FUND
 RD10265,Maybank Money Market USD,,"Maybank Asset Management, PT",Pasar Uang,USD,true,2026-01-26,RD10265,5183,17083,,REKSA DANA MAYBANK MONEY MARKET USD
-RD10266,Eastspring IDR Fixed Income Fund Kelas D,,"Eastspring Investments Indonesia, PT",Obligasi,IDR,false,2026-01-27,RD10266,5184,,,REKSA DANA EASTSPRING IDR FIXED INCOME FUND KELAS D
-RD10267,Manulife Obligasi Negara Indonesia II Kelas I3,,"Manulife Aset Manajemen Indonesia, PT",Obligasi,IDR,false,2026-01-27,RD10267,5185,17086,,REKSA DANA MANULIFE OBLIGASI NEGARA INDONESIA II KELAS I3
+RD10266,Eastspring Idr Fixed Income Fund Kelas D,,"Eastspring Investments Indonesia, PT",Obligasi,IDR,false,2026-01-27,RD10266,5184,,,REKSA DANA EASTSPRING IDR FIXED INCOME FUND KELAS D
+RD10267,Manulife Obligasi Negara Indonesia Ii Kelas I3,,"Manulife Aset Manajemen Indonesia, PT",Obligasi,IDR,false,2026-01-27,RD10267,5185,17086,,REKSA DANA MANULIFE OBLIGASI NEGARA INDONESIA II KELAS I3
 RD10284,Bahana Sukuk Syariah Kelas D,,"Bahana TCW Investment Management, PT",Obligasi,IDR,true,2026-01-30,RD10284,5187,17088,,
 RD10285,Ashmore Global EM Equity Syariah Fund USD,,"Ashmore Asset Management Indonesia, PT",Reksadana Global,USD,true,2026-03-06,RD10285,5214,17109,,
 RD10286,Ashmore Global Em Sukuk Fund Usd,,"Ashmore Asset Management Indonesia, PT",Reksadana Global,USD,true,2026-02-23,RD10286,,17099,,
@@ -4787,7 +4786,7 @@ RD11115,KIM Protected Sharia Fund III,,"Korea Investment Management Indonesia, P
 RD11116,Syailendra Sharia Strategic Balanced Fund Kelas A,,"Syailendra Capital, PT",Campuran,IDR,true,2026-10-16,RD11116,5308,,,
 RD11117,Sucorinvest Proteksi 56,,"Sucorinvest Asset Management, PT",Terproteksi,IDR,false,2026-10-19,RD11117,5309,,,REKSA DANA TERPROTEKSI SUCORINVEST PROTEKSI 56
 RD11118,Henan Proteksi Prima Syariah VI,,"Henan Putihrai Asset Management, PT",Terproteksi,IDR,true,2026-10-20,RD11118,5310,,,
-RD11119,Bnp Paribas Pasar Uang Sarana Kelas B,,"BNP Paribas Asset Management, PT",Pasar Uang,IDR,false,2026-10-22,RD11119,,,,
+RD11119,BNP Paribas Pasar Uang Sarana Kas Kelas B,Bnp Paribas Pasar Uang Sarana Kelas B,"BNP Paribas Asset Management, PT",Pasar Uang,IDR,false,2026-10-22,RD11119,5311,,,REKSA DANA BNP PARIBAS PASAR UANG SARANA KAS KELAS B
 RD11120,Juara Providentia Balanced Fund Kelas S,,"Juara Capital Indonesia, PT",Pasar Uang,IDR,false,2026-10-22,RD11120,5312,,,
 RD11121,Bahana Amanah Proteksi Syariah 8,,"Bahana TCW Investment Management, PT",Terproteksi,IDR,true,2026-10-28,RD11121,5314,,,
 RD11123,Syailendra Pendapatan Total Return Kelas D,,"Syailendra Capital, PT",Obligasi,IDR,false,2026-10-29,RD11123,5313,,,REKSA DANA SYAILENDRA PENDAPATAN TOTAL RETURN KELAS D

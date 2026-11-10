@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -58,7 +59,16 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Obligasi  Pemerintah",
+      "percentage": 97.99
+    },
+    {
+      "name": "Kas",
+      "percentage": 2.01
+    }
+  ],
   "investment_manager": {
     "name": "MNC Asset Management, PT"
   },
@@ -133,9 +143,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2018-12-06",
-    "value": 1437.0747
+    "value": 1446.3013
   },
   "trade": null
 }

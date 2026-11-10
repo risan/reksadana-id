@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -65,11 +66,11 @@
     },
     {
       "name": "Inst. Pasar Uang & Kas",
-      "percentage": 1.01
+      "percentage": -0.02
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 98.99
+      "percentage": 100.02
     }
   ],
   "holding": [
@@ -254,9 +255,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2017-12-29",
-    "value": 643.32
+    "value": 648.77
   },
   "trade": null
 }

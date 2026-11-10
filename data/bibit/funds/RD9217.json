@@ -68,11 +68,11 @@
     },
     {
       "name": "kas",
-      "percentage": 0.8
+      "percentage": 0.97
     },
     {
       "name": "Saham",
-      "percentage": 99.2
+      "percentage": 99.03
     }
   ],
   "investment_manager": {
@@ -149,9 +149,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2025-02-27",
-    "value": 149.5207
+    "value": 150.9223
   },
   "trade": null
 }
