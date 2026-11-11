@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Obligasi Pemerintah",
-      "percentage": 92.1
+      "percentage": 94.52
     },
     {
       "name": "Kas dan Setara Kas",
-      "percentage": 2.87
+      "percentage": 5.48
     },
     {
       "name": "Deposito Berjangka",
-      "percentage": 5.04
+      "percentage": 0
     }
   ],
   "investment_manager": {
@@ -147,9 +147,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2022-09-09",
-    "value": 1193.1205
+    "value": 1194.5503
   },
   "trade": null
 }

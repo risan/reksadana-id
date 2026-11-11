@@ -60,12 +60,8 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang",
-      "percentage": 17.32
-    },
-    {
       "name": "Ekuitas",
-      "percentage": 82.68
+      "percentage": 159.8
     }
   ],
   "investment_manager": {
@@ -143,9 +139,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2020-03-03",
-    "value": 721.68
+    "value": 730.99
   },
   "trade": null
 }

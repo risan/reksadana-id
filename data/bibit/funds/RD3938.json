@@ -61,15 +61,15 @@
   "asset": [
     {
       "name": "Surat Utang Korporasi",
-      "percentage": 86.99
+      "percentage": 89.68
     },
     {
       "name": "Kas/Setara Kas",
-      "percentage": 2.51
+      "percentage": 3.1
     },
     {
       "name": "Deposito",
-      "percentage": 10.5
+      "percentage": 7.22
     }
   ],
   "investment_manager": {
@@ -146,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2021-04-16",
-    "value": 1283.2407
+    "value": 1283.3694
   },
   "trade": null
 }

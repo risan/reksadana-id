@@ -19,7 +19,6 @@
   },
   "released_date": "1997-03-20",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,35 +61,35 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 83.16
+      "percentage": 79.92
     },
     {
       "name": "Obligasi",
-      "percentage": 4.76
+      "percentage": 6.37
     },
     {
       "name": "Lainnya",
-      "percentage": 12.08
+      "percentage": 13.71
     }
   ],
   "holding": [
     {
-      "symbol": "BBCA",
-      "name": "Bank Central Asia Tbk.",
+      "symbol": "BBRI",
+      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4320,
+      "company_id": 4327,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "BBRI",
-      "name": "Bank Rakyat Indonesia (Persero) Tbk.",
+      "symbol": "BBCA",
+      "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4327,
+      "company_id": 4320,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -98,7 +97,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -108,39 +107,9 @@
       "symbol": "AMMN",
       "name": "Amman Mineral Internasional Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6026,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "TLKM",
-      "name": "PT Telkom Indonesia (Persero) Tbk",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4623,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "MDKA",
-      "name": "Merdeka Copper Gold Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4563,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "TINS",
-      "name": "Timah Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4493,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -148,19 +117,19 @@
       "symbol": "",
       "name": "Obligasi Berkelanjutan II Provident Investasi Bersama Tahap II Tahun 2024 Seri B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "EMAS",
-      "name": "Merdeka Gold Resources Tbk.",
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 9567,
+      "company_id": 4623,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -168,9 +137,39 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "TINS",
+      "name": "Timah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4493,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ANTM",
+      "name": "Aneka Tambang Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4396,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "MDKA",
+      "name": "Merdeka Copper Gold Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4563,
       "product_type": "Saham",
       "serie_id": null
     }
@@ -201,7 +200,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 251527218451.62,
+    "value": 251530000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -213,40 +212,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.31779964533432803,
-    "3y": -0.11606229998809336,
-    "5y": -0.05051109181835767,
-    "10y": -0.011639304170427245,
-    "all": 0.07270877038430656
+    "1y": -0.31365931500573896,
+    "3y": -0.11002639552030202,
+    "5y": -0.04908099891210971,
+    "10y": -0.012430201721780332,
+    "all": 0.07315425474672543
   },
   "cagr_adjusted": {
-    "1y": -0.31779964533432803,
-    "3y": -0.11606229998809336,
-    "5y": -0.05051109181835767,
-    "10y": -0.011639304170427245,
-    "all": 0.07271644916975162
+    "1y": -0.31365931500573896,
+    "3y": -0.11002639552030202,
+    "5y": -0.04908099891210971,
+    "10y": -0.012430201721780332,
+    "all": 0.07316198137722107
   },
   "simplereturn": {
-    "1d": 0.002854162893384249,
-    "1m": -0.16083440989685893,
-    "3m": -0.2088711433613739,
-    "ytd": -0.31226095485285743,
-    "1y": -0.31779964533432803,
-    "3y": -0.30933893980555127,
-    "5y": -0.22829826151564458,
-    "10y": -0.11048215574267872,
-    "all": 5.590484852564302
+    "1d": 0.011412806556478694,
+    "1m": -0.15125717534815852,
+    "3m": -0.19471129292178013,
+    "ytd": -0.3044119221692557,
+    "1y": -0.31365931500573896,
+    "3y": -0.29509372181466054,
+    "5y": -0.22246915377058407,
+    "10y": -0.11757460239494866,
+    "all": 5.66570078130002
   },
   "changesvalue": {
-    "1d": 22.849999999999454,
-    "1m": -1538.7799999999997,
-    "3m": -2119.71,
-    "ytd": -3645.3499999999995,
-    "1y": -3740.13,
-    "3y": -3595.96,
-    "5y": -2375.1899999999996,
-    "10y": -997.201,
-    "all": 6810.474
+    "1d": 91.63000000000011,
+    "1m": -1447.1499999999996,
+    "3m": -1963.42,
+    "ytd": -3553.7199999999993,
+    "1y": -3711.01,
+    "3y": -3399.3999999999996,
+    "5y": -2323.41,
+    "10y": -1081.955,
+    "all": 6902.103999999999
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -268,9 +267,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2000-01-05",
-    "value": 8028.7
+    "value": 8120.33
   },
   "trade": null
 }

@@ -19,6 +19,7 @@
   },
   "released_date": "2016-12-22",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,109 +62,109 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 67.93
+      "percentage": 79.08
     },
     {
       "name": "Lainnya",
-      "percentage": 32.07
+      "percentage": 20.92
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berwawasan Sosial Berkelanjutan I Pegadaian Tahap III Tahun 2025 Seri A",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Sukuk Mudharabah Berwawasan Sosial Orange Berkelanjutan I PNM Tahap IV Tahun 2026 Seri A",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Bank Panin Syariah",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Bank Aladin Syariah",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Sukuk Mudharabah II Pindo Deli Pulp And Paper Mills. Tahun 2023 Seri B",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Sukuk Wakalah BI Al-Istitsmar Berkelanjutan I CIMB Niaga Auto Finance Tahap IV Tahun 2026 Seri A",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan IV Pegadaian Tahap II Tahun 2026 Seri A",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Bank Riau Kepri Syariah",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Bank Jabar Syariah",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "Sukuk Mudharabah Berwawasan Sosial Orange Berkelanjutan I PNM Tahap V Tahun 2026 Seri A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berwawasan Sosial Orange Berkelanjutan I PNM Tahap IV Tahun 2026 Seri A ",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah Berwawasan Sosial Berkelanjutan I Pegadaian Tahap III Tahun 2025 Seri A",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Wakalah Bi Al-Istitsmar Berkelanjutan I CIMB Niaga Auto Finance Tahap IV Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Mudharabah II Pindo Deli Pulp And Paper Mills Tahun 2023 Seri B ",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Aladin Syariah (deposito)",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Panin Syariah (deposito)",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Musyarakah Berkelanjutan II Sarana Multigriya Finansial Tahap II Tahun 2026",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Jabar Syariah (deposito)",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Ijarah Berkelanjutan I Tower Bersama Infrastructure Tahap V Tahun 2026 Seri A",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -192,7 +193,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 2087573317300.46,
+    "value": 2087570000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -204,40 +205,40 @@
     "percentage": 0.055
   },
   "cagr": {
-    "1y": 0.04486047314130048,
-    "3y": 0.05003424539134871,
-    "5y": 0.04536112730801123,
+    "1y": 0.044598496117508546,
+    "3y": 0.050043546779324766,
+    "5y": 0.04537124340466003,
     "10y": null,
-    "all": 0.04576012910696159
+    "all": 0.0457626524273822
   },
   "cagr_adjusted": {
-    "1y": 0.04486047314130048,
-    "3y": 0.05003424539134871,
-    "5y": 0.04536112730801123,
+    "1y": 0.044598496117508546,
+    "3y": 0.050043546779324766,
+    "5y": 0.04537124340466003,
     "10y": null,
-    "all": 0.045773094415726634
+    "all": 0.045775614874892234
   },
   "simplereturn": {
-    "1d": 0.00043586880181978316,
-    "1m": 0.0045261564788299236,
-    "3m": 0.01338290843735046,
-    "ytd": 0.03756777446471116,
-    "1y": 0.04486047314130048,
-    "3y": 0.15773827032607857,
-    "5y": 0.2483366815557042,
+    "1d": 0.0001464682835137232,
+    "1m": 0.004673287700713846,
+    "3m": 0.013146747132952497,
+    "ytd": 0.037719745235666124,
+    "1y": 0.044598496117508546,
+    "3y": 0.15776903694611355,
+    "5y": 0.24839708431320462,
     "10y": null,
-    "all": 0.556651
+    "all": 0.5568789999999999
   },
   "changesvalue": {
-    "1d": 0.6782000000000608,
-    "1m": 7.013900000000149,
-    "3m": 20.557400000000143,
-    "ytd": 56.362499999999955,
-    "1y": 66.83390000000009,
-    "3y": 212.08889999999997,
-    "5y": 309.6709000000001,
+    "1d": 0.2279999999998381,
+    "1m": 7.241899999999987,
+    "3m": 20.202299999999923,
+    "ytd": 56.59049999999979,
+    "1y": 66.4699999999998,
+    "3y": 212.1556999999998,
+    "5y": 309.7765999999999,
     "10y": null,
-    "all": 556.6510000000001
+    "all": 556.8789999999999
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -259,9 +260,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2016-12-22",
-    "value": 1556.651
+    "value": 1556.879
   },
   "trade": null
 }

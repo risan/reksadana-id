@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18055,
+    "exchange_rate": 18007,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 89.38
+      "percentage": 89.91
     },
     {
       "name": "Kas/Setara Kas",
-      "percentage": 10.62
+      "percentage": 10.09
     }
   ],
   "investment_manager": {
@@ -142,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-06",
+    "date": "2026-11-09",
     "first_date": "2021-05-25",
-    "value": 1.0034
+    "value": 1.0243
   },
   "trade": null
 }

@@ -59,11 +59,11 @@
   "asset": [
     {
       "name": "Kas/Setara Kas",
-      "percentage": 1.12
+      "percentage": 0.68
     },
     {
       "name": "Saham",
-      "percentage": 98.88
+      "percentage": 99.32
     }
   ],
   "investment_manager": {
@@ -140,9 +140,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2024-08-13",
-    "value": 645.87
+    "value": 646.6
   },
   "trade": null
 }

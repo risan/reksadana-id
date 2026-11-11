@@ -126,8 +126,8 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol,currency,custodian,mi
 218,Maybank Dana Fleksi,maybank-dana-fleksi,Campuran,"Maybank Asset Management, PT",2006-11-26,,IDR,Deutsche Bank AG,100000,,100000,-0.02,-0.02,-0.02,2026-11-07,IDR,,IDR
 219,Maybank Dana Unggulan,maybank-dana-unggulan,Campuran,"Maybank Asset Management, PT",2013-01-08,RD1032,IDR,The Hongkong And Shanghai Banking Corporation,500000000,,,-0.02,-0.02,-0.02,2026-11-07,IDR,,
 221,Guru,guru,Campuran,"Insight Investments Management, PT",2006-11-15,RD682,IDR,PT Bank Mandiri (Persero) Tbk,500000,,,-0.01,-0.005,,2026-11-07,IDR,,
-222,Harvestindo Istimewa,harvestindo-istimewa,Campuran,,2007-03-28,,IDR,PT Bank Maybank Indonesia Tbk,,,,-0.005,,,2026-11-02,,,
-223,Harvestindo Maxima,harvestindo-maxima,Campuran,,2007-03-28,,IDR,PT Bank CIMB Niaga Tbk,,,,-0.015,,,2026-11-02,,,
+222,Harvestindo Istimewa,harvestindo-istimewa,Campuran,,2007-03-28,,IDR,PT Bank Maybank Indonesia Tbk,,,,-0.005,,,2026-11-11,,,
+223,Harvestindo Maxima,harvestindo-maxima,Campuran,,2007-03-28,,IDR,PT Bank CIMB Niaga Tbk,,,,-0.015,,,2026-11-11,,,
 224,HPAM Flexi Indonesia Sehat Kelas A,hpam-flexi-indonesia-sehat-kelas-a,Campuran,"Henan Putihrai Asset Management, PT",2011-07-18,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,50000,,50000,-0.02,-0.05,-0.02,2026-11-07,IDR,,IDR
 225,HPAM Premium-1,hpam-premium-1,Campuran,"Henan Putihrai Asset Management, PT",2007-04-23,RD687,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,50000,,50000,-0.02,,,2026-11-07,IDR,,IDR
 228,Insight Syariah Berimbang ( I-SHARE ),insight-syariah-berimbang-i-share,Campuran,"Insight Investments Management, PT",2013-07-08,RD742,IDR,Bank Permata Tbk,100000,,100000,-0.01,-0.005,-0.005,2026-11-07,IDR,,IDR
@@ -546,9 +546,9 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol,currency,custodian,mi
 1661,Principal Strategic IDR Fixed Income Fund,principal-strategic-idr-fixed-income-fund,Pendapatan Tetap,"Principal Asset Management, PT",2014-06-26,RD490,IDR,Deutsche Bank AG,100000000,,100000000,-0.01,-0.01,-0.01,2026-11-09,IDR,,IDR
 1662,CIMB-Principal Balanced Growth Syariah,cimb-principal-balanced-growth-syariah,Campuran,"Principal Asset Management, PT",2014-06-04,,IDR,Deutsche Bank AG,100000,,100000,-0.01,-0.01,-0.01,2026-11-09,IDR,,IDR
 1664,DIRE Ciptadana Properti Ritel Indonesia,dire-ciptadana-properti-ritel-indonesia,DIRE,"Ciptadana Asset Management, PT",2012-11-28,RD4244,IDR,Standard Chartered Bank,,,,,,,2026-11-09,,,
-1665,DPLK BRI Pasar Uang,dplk-bri-pasar-uang,DPLK,,1970-01-01,,,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-1666,DPLK BRI Fix,dplk-bri-fix,DPLK,,1970-01-01,,,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-1667,DPLK BRI Saham,dplk-bri-saham,DPLK,,1970-01-01,,,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
+1665,DPLK BRI Pasar Uang,dplk-bri-pasar-uang,DPLK,,1970-01-01,,,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+1666,DPLK BRI Fix,dplk-bri-fix,DPLK,,1970-01-01,,,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+1667,DPLK BRI Saham,dplk-bri-saham,DPLK,,1970-01-01,,,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
 1671,Danareksa Proteksi XVIII,danareksa-proteksi-xviii,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2014-06-09,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-09,,,
 1672,Schroder Dynamic Balanced Fund,schroder-dynamic-balanced-fund,Campuran,"Schroder Investment Management Indonesia, PT",2014-06-10,RD1551,IDR,The Hongkong And Shanghai Banking Corporation,10000,,10000,-0.02,-0.01,,2026-11-09,IDR,,IDR
 1673,Panin Dana Ultima,panin-dana-ultima,Saham,"Panin Asset Management, PT",2014-06-13,RD1215,IDR,PT Bank Central Asia Tbk,100000,,100000,-0.04,,-0.02,2026-11-09,IDR,,IDR
@@ -757,400 +757,400 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol,currency,custodian,mi
 1944,Mandiri Seri 25,mandiri-seri-25,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-06-19,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-10,,,
 1945,Batavia Proteksi Cemerlang 18,batavia-proteksi-cemerlang-18,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-05-21,RD237,IDR,Standard Chartered Bank,5000000,,,-0.025,,,2026-11-10,IDR,,
 1946,BNI-AM YUWARAJA Information & Communication Technology,bni-am-yuwaraja-information-communication-technology,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-07-03,,,PT Bank Mega Tbk,,,,,,,2026-11-10,,,
-1947,PNM Pembiayaan Mikro BUMN 2015,pnm-pembiayaan-mikro-bumn-2015,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-07-08,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-1948,Millenium Balance Fund,millenium-balance-fund,Campuran,"Millenium Capital Management, PT",2015-07-23,RD1081,IDR,PT Bank Danamon Indonesia Tbk,,,,-0.025,-0.05,,2026-11-01,,,
-1949,Insight Inspirasi,insight-inspirasi,Campuran,"Insight Investments Management, PT",2015-07-28,RD730,IDR,PT Bank Negara Indonesia (Persero) Tbk,500000,,,-0.01,-0.005,,2026-11-01,IDR,,
-1952,Bahana Prime Income Fund,bahana-prime-income-fund,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2015-08-03,RD159,IDR,Standard Chartered Bank,100000,,,-0.02,-0.01,,2026-11-01,IDR,,
-1954,Batavia Dana Obligasi Gemilang,batavia-dana-obligasi-gemilang,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2015-08-05,RD209,IDR,Citibank N.A,5000000,,1000000,-0.01,-0.01,-0.005,2026-11-01,IDR,,IDR
-1956,Schroder Investa Obligasi,schroder-investa-obligasi,Pendapatan Tetap,"Schroder Investment Management Indonesia, PT",2015-07-27,RD1560,IDR,The Hongkong And Shanghai Banking Corporation,100000000,,100000000,-0.03,-0.03,-0.01,2026-11-01,IDR,,IDR
-1957,Bahana Progressive Income Fund Kelas G,bahana-progressive-income-fund-kelas-g,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2015-07-30,,IDR,Standard Chartered Bank,100000,,,-0.02,-0.01,,2026-11-01,IDR,,
-1958,BRI Melati Pendapatan Utama II,bri-melati-pendapatan-utama-ii,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-05-12,,IDR,PT Bank OCBC NISP Tbk,100000000,,100000000,-0.03,-0.03,,2026-11-01,IDR,,IDR
-1959,Campuran Victoria Jupiter,campuran-victoria-jupiter,Campuran,"Victoria Manajemen Investasi, PT",2015-07-29,RD440,IDR,PT Bank Mega Tbk,100000,,,-0.01,-0.01,-0.01,2026-11-01,IDR,,
-1960,Trimegah Pundi Kas Syariah,trimegah-pundi-kas-syariah,Pasar Uang,"Trimegah Asset Management, PT",2015-06-29,RD1780,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-01,,,
-1961,Danareksa Seruni Pasar Uang VII,danareksa-seruni-pasar-uang-vii,Pasar Uang,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-07-27,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-1962,Batavia Proteksi Cemerlang 9,batavia-proteksi-cemerlang-9,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-06-29,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-1963,BNIAM PROTEKSI LVI,bniam-proteksi-lvi,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-07-06,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-1964,Mandiri Seri 24,mandiri-seri-24,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-07-27,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-1965,Mandiri Seri 28,mandiri-seri-28,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-07-14,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-1966,Mandiri Syariah Seri 23,mandiri-syariah-seri-23,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-07-13,,IDR,Citibank N.A,,,,,,,2026-11-01,,,
-1967,Bahana Optima Protected Fund H 83,bahana-optima-protected-fund-h-83,Terproteksi,"Bahana TCW Investment Management, PT",2015-05-26,,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-1968,Bahana Optima Protected Fund H 84,bahana-optima-protected-fund-h-84,Terproteksi,"Bahana TCW Investment Management, PT",2015-06-01,,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-1969,Bahana Optima Protected Fund H 86,bahana-optima-protected-fund-h-86,Terproteksi,"Bahana TCW Investment Management, PT",2015-03-30,,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-1970,Bahana Optima Protected Fund H 90,bahana-optima-protected-fund-h-90,Terproteksi,"Bahana TCW Investment Management, PT",2015-07-09,,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-1971,Batavia Proteksi Cemerlang 8,batavia-proteksi-cemerlang-8,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-07-15,,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-1973,PNM Dana Investa 5,pnm-dana-investa-5,Terproteksi,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-03-10,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-1974,Sucorinvest Proteksi 14,sucorinvest-proteksi-14,Terproteksi,"Sucorinvest Asset Management, PT",2015-07-30,RD1661,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-1975,Syailendra Capital Protected Fund 10,syailendra-capital-protected-fund-10,Terproteksi,"Syailendra Capital, PT",2015-05-06,RD1673,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-1976,Syailendra Capital Protected Fund 11,syailendra-capital-protected-fund-11,Terproteksi,"Syailendra Capital, PT",2015-07-28,RD1674,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-1977,BNI-AM Proteksi LIII,bni-am-proteksi-liii,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-06-29,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-1979,CIMB-Principal CPF CB XXI,cimb-principal-cpf-cb-xxi,Terproteksi,"Principal Asset Management, PT",2015-03-13,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-1980,PNM Multisektoral I,pnm-multisektoral-i,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-07-08,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-1981,PNM Perumnas,pnm-perumnas,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-01-20,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-1982,Bahana Industrial Fund 1-USD,bahana-industrial-fund-1-usd,Penyertaan Terbatas,"Bahana TCW Investment Management, PT",2015-04-23,,,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-1983,Danareksa BUMN Fund 2014 Properti 1,danareksa-bumn-fund-2014-properti-1,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-01-23,,,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-1984,Tram Pembiayaan Mikro Penyertaan Terbatas,tram-pembiayaan-mikro-penyertaan-terbatas,Penyertaan Terbatas,"Trimegah Asset Management, PT",2015-01-02,,,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-1987,Henan Ultima Money Market,henan-ultima-money-market,Pasar Uang,"Henan Putihrai Asset Management, PT",2015-08-12,RD700,IDR,Standard Chartered Bank,50000,,50000,,,,2026-11-01,IDR,,IDR
-1988,Batavia Proteksi Cemerlang 10,batavia-proteksi-cemerlang-10,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-08-12,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-01,,,
-1990,Insight Fellowship,insight-fellowship,Campuran,"Insight Investments Management, PT",2015-08-14,RD718,IDR,PT Bank Negara Indonesia (Persero) Tbk,500000,,,-0.01,-0.005,,2026-11-01,IDR,,
-1991,Mega Asset Terproteksi 3,mega-asset-terproteksi-3,Terproteksi,"Mega Asset Management, PT",2015-08-20,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-01,,,
-1992,Mandiri Seri 26,mandiri-seri-26,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-08-18,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-1993,Premier Campuran Fleksibel II,premier-campuran-fleksibel-ii,Campuran,"Indo Premier Investment Management, PT",2015-08-24,RD1318,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,-0.02,,2026-11-01,,,
-1994,Mandiri Seri 29,mandiri-seri-29,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-08-24,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-1996,Simas Saham Bertumbuh,simas-saham-bertumbuh,Saham,"Sinarmas Asset Management, PT",2015-08-25,RD1621,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,-0.02,,,2026-11-01,IDR,,IDR
-1997,Batavia Proteksi Cemerlang 12,batavia-proteksi-cemerlang-12,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-08-25,,IDR,PT Bank Danamon Indonesia Tbk,5000000,,1000000,-0.025,-0.025,,2026-11-01,IDR,,IDR
-1998,Batavia Proteksi Gebyar I,batavia-proteksi-gebyar-i,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-08-28,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-01,,,
-1999,BNI-AM Dana Pendapatan Tetap Asana Sentral,bni-am-dana-pendapatan-tetap-asana-sentral,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-09-03,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2000,Premier Proteksi VIII,premier-proteksi-viii,Terproteksi,"Indo Premier Investment Management, PT",2015-09-03,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-01,,,
-2001,EMCO IX,emco-ix,Terproteksi,"Emco Asset Management, PT",2015-09-02,RD639,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-01,,,
-2002,Batavia Proteksi Cemerlang 27,batavia-proteksi-cemerlang-27,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-09-27,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2003,Insight Plan,insight-plan,Campuran,"Insight Investments Management, PT",2015-09-08,RD735,IDR,PT Bank Negara Indonesia (Persero) Tbk,500000,,,-0.01,-0.005,,2026-11-01,IDR,,
-2004,Mega Dana Likuid,mega-dana-likuid,Pasar Uang,"Mega Capital Investama, PT",2015-09-08,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-01,,,
-2005,RDT Maybank CPF 3,rdt-maybank-cpf-3,Terproteksi,"Maybank Asset Management, PT",2015-09-10,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2006,Danakita Stabil Pasar Uang,danakita-stabil-pasar-uang,Pasar Uang,"Danakita Investama, PT",2015-09-10,RD550,IDR,PT Bank Maybank Indonesia Tbk,500000,,500000,,,,2026-11-01,IDR,,IDR
-2007,Tram Pundi Kas 6,tram-pundi-kas-6,Pasar Uang,"Trimegah Asset Management, PT",2015-09-14,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-01,,,
-2010,RDPT Bowsprit Infrastructure Fund I,rdpt-bowsprit-infrastructure-fund-i,Penyertaan Terbatas,"Bowsprit Asset Management, PT",2015-04-29,,,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-01,,,
-2011,Syailendra Market Leader Fund,syailendra-market-leader-fund,Saham,"Syailendra Capital, PT",2015-09-16,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2012,Mandiri Seri 31,mandiri-seri-31,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-09-16,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2013,BNIAM Proteksi LIX,bniam-proteksi-lix,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-09-16,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2014,Batavia Proteksi Cemerlang 16,batavia-proteksi-cemerlang-16,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-09-16,RD236,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-2015,RHB Money Market Fund 3,rhb-money-market-fund-3,Pasar Uang,"Allianz Global Investors Asset Management Indonesia, PT",2015-08-20,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2016,Lautandhana Saham Mahadi,lautandhana-saham-mahadi,Saham,"Lautandhana Investment Management, PT",2015-09-18,RD817,IDR,PT Bank Maybank Indonesia Tbk,100000,,100000,-0.05,-0.01,-0.01,2026-11-01,IDR,,IDR
-2018,Insight Community Development 2,insight-community-development-2,Campuran,"Insight Investments Management, PT",2015-09-23,RD715,IDR,PT Bank Negara Indonesia (Persero) Tbk,500000,,,-0.01,-0.005,,2026-11-01,IDR,,
-2019,Post Indo Money Market Fund,post-indo-money-market-fund,Pasar Uang,"Post Asset Management Indonesia, PT",2015-09-23,RD1293,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-01,,,
-2020,PNM Money Market Fund USD,pnm-money-market-fund-usd,Pasar Uang,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-08-20,,USD,PT Bank DBS Indonesia,100,,100,,,,2026-11-01,USD,,USD
-2021,Bahana Primera Protected Fund 92,bahana-primera-protected-fund-92,Terproteksi,"Bahana TCW Investment Management, PT",2015-09-22,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2022,BNI-AM Proteksi LVIII,bni-am-proteksi-lviii,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-09-14,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-2023,Insight Money,insight-money,Pasar Uang,"Insight Investments Management, PT",2015-08-26,RD732,IDR,PT Bank Mandiri (Persero) Tbk,100000,,100000,,,,2026-11-01,IDR,,IDR
-2024,Insight Money Syariah,insight-money-syariah,Pasar Uang,"Insight Investments Management, PT",2015-09-30,RD733,IDR,PT Bank Mandiri (Persero) Tbk,100000,,100000,,,,2026-11-01,IDR,,IDR
-2029,Batavia Obligasi Platinum,batavia-obligasi-platinum,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2015-09-08,RD222,IDR,The Hongkong And Shanghai Banking Corporation,1000000,,500000,-0.03,-0.03,-0.005,2026-11-01,IDR,,IDR
-2030,Batavia Proteksi Cemerlang 17,batavia-proteksi-cemerlang-17,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-09-18,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-01,,,
-2032,Principal CPF CB XXIII,principal-cpf-cb-xxiii,Terproteksi,"Principal Asset Management, PT",2015-09-28,RD481,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2034,Mandiri Seri 32,mandiri-seri-32,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-10-08,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2035,Mandiri Seri 35,mandiri-seri-35,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-10-08,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2036,Batavia Proteksi Cemerlang 15,batavia-proteksi-cemerlang-15,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-08-25,RD1852,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-01,,,
-2037,RD Premier ETF Indonesia State-Owned Companies,rd-premier-etf-indonesia-state-owned-companies,Indeks & ETF,"Indo Premier Investment Management, PT",2015-09-30,RD1323,IDR,Deutsche Bank AG,,,,,,,2026-11-01,,,
-2038,Batavia Proteksi Cemerlang 19,batavia-proteksi-cemerlang-19,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-10-13,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2039,Bahana Primera Plus Protected Fund 97,bahana-primera-plus-protected-fund-97,Terproteksi,"Bahana TCW Investment Management, PT",2015-10-13,RD167,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2040,Pinnacle Strategic Equity Fund,pinnacle-strategic-equity-fund,Saham,"Pinnacle Persada Investama, PT",2015-10-15,,IDR,PT Bank Central Asia Tbk,100000,,100000,-0.02,-0.03,-0.01,2026-11-01,IDR,,IDR
-2043,Mandiri Seri 34,mandiri-seri-34,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-10-15,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2044,Simas Abdi Proteksi 1,simas-abdi-proteksi-1,Terproteksi,"Sinarmas Asset Management, PT",2015-10-15,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2045,Bahana Primera Protected Fund 96,bahana-primera-protected-fund-96,Terproteksi,"Bahana TCW Investment Management, PT",2015-09-29,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2046,Pacific Equity Optimum Fund,pacific-equity-optimum-fund,Saham,"Pacific Capital Investment, PT",2015-10-20,RD1175,IDR,PT Bank Danamon Indonesia Tbk,,,,,,,2026-11-01,,,
-2047,Sucorinvest Saham Dinamis,sucorinvest-saham-dinamis,Saham,"Sucorinvest Asset Management, PT",2015-10-19,RD1667,IDR,Standard Chartered Bank,1000000,,1000000,-0.04,-0.04,-0.01,2026-11-01,IDR,,IDR
-2048,Batavia Proteksi Cemerlang 23,batavia-proteksi-cemerlang-23,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-10-23,,IDR,The Hongkong And Shanghai Banking Corporation,5000000,,1000000,-0.025,-0.025,,2026-11-01,IDR,,IDR
-2049,BNI-AM MAHITALA,bni-am-mahitala,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-10-20,,,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2050,Pratama Dana Dinamis Saham,pratama-dana-dinamis-saham,Saham,"Pratama Capital Assets Management, PT",2015-10-12,RD1300,IDR,Deutsche Bank AG,,,,,,,2026-11-01,,,
-2051,BNIAM Proteksi LX,bniam-proteksi-lx,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-10-22,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2052,Bahana Primera Protected Fund 94,bahana-primera-protected-fund-94,Terproteksi,"Bahana TCW Investment Management, PT",2015-10-22,RD169,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2053,Trimegah Terproteksi Futura VII,trimegah-terproteksi-futura-vii,Terproteksi,"Trimegah Asset Management, PT",2015-10-28,,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-2054,Mandiri Seri 36,mandiri-seri-36,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-10-28,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2055,MNC Dana Terproteksi V,mnc-dana-terproteksi-v,Terproteksi,"MNC Asset Management, PT",2015-10-29,RD1123,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2056,Mandiri Dolar 2,mandiri-dolar-2,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-11-03,,USD,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2058,Batavia Proteksi Gebyar II,batavia-proteksi-gebyar-ii,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-11-06,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-01,,,
-2059,Mega Asset Terproteksi 4,mega-asset-terproteksi-4,Terproteksi,"Mega Asset Management, PT",2015-10-22,RD1049,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-01,,,
-2061,Maybank Syariah Equity Fund,maybank-syariah-equity-fund,Saham,"Maybank Asset Management, PT",2015-11-12,RD1036,IDR,The Hongkong And Shanghai Banking Corporation,100000,,100000,-0.01,-0.01,-0.01,2026-11-01,IDR,,IDR
-2062,BNI-AM Dana Saham Syariah Musahamah,bni-am-dana-saham-syariah-musahamah,Saham,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-11-13,,IDR,PT Bank DBS Indonesia,10000,,10000,-0.02,-0.02,-0.02,2026-11-01,IDR,,IDR
-2063,Batavia Proteksi Cemerlang 28,batavia-proteksi-cemerlang-28,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-11-11,RD241,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-01,,,
-2064,Mandiri Seri 30,mandiri-seri-30,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-11-11,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2066,Principal Cash Fund 2,principal-cash-fund-2,Pasar Uang,"Principal Asset Management, PT",2015-11-19,,IDR,PT Bank Mega Tbk,,,,,,-0.01,2026-11-01,,,
-2067,Cipta Dana Likuid,cipta-dana-likuid,Pasar Uang,"Ciptadana Asset Management, PT",2015-11-19,RD6039,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2068,Simas Terproteksi 1,simas-terproteksi-1,Terproteksi,"Sinarmas Asset Management, PT",2015-11-18,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2070,OSO Borneo Equity Fund,oso-borneo-equity-fund,Saham,"OSO Manajemen Investasi, PT",2017-10-18,RD1157,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,100000,-0.02,-0.01,-0.02,2026-11-01,IDR,,IDR
-2071,Pratama Dana Gemilang Saham,pratama-dana-gemilang-saham,Saham,"Pratama Capital Assets Management, PT",2015-11-23,RD1301,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-01,,,
-2072,Majoris Obligasi Utama Indonesia,majoris-obligasi-utama-indonesia,Pendapatan Tetap,"Majoris Asset Management, PT",2015-11-30,RD830,IDR,PT Bank Mandiri (Persero) Tbk,10000,,10000,-0.01,-0.01,-0.01,2026-11-01,IDR,,IDR
-2073,Majoris Saham Alokasi Dinamik Indonesia,majoris-saham-alokasi-dinamik-indonesia,Saham,"Majoris Asset Management, PT",2015-11-30,,IDR,PT Bank Mandiri (Persero) Tbk,10000,,10000,-0.02,-0.02,-0.02,2026-11-01,IDR,,IDR
-2074,BNIAM PROTEKSI LXV,bniam-proteksi-lxv,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-11-27,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2075,RDT Maybank CPF IV,rdt-maybank-cpf-iv,Terproteksi,"Maybank Asset Management, PT",2015-11-30,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-01,,,
-2076,Trimegah Bhakti Bangsa,trimegah-bhakti-bangsa,Saham,"Trimegah Asset Management, PT",2015-11-11,RD1770,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,,,,2026-11-01,IDR,,IDR
-2077,Sucorinvest Likuid Fund,sucorinvest-likuid-fund,Pasar Uang,"Sucorinvest Asset Management, PT",2015-12-11,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2079,Danareksa Proteksi XXI,danareksa-proteksi-xxi,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-12-07,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2080,Trimegah Terproteksi Prima XVIII,trimegah-terproteksi-prima-xviii,Terproteksi,"Trimegah Asset Management, PT",2015-12-10,RD1801,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-2081,Batavia Proteksi Cemerlang 25,batavia-proteksi-cemerlang-25,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-12-03,RD240,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-01,,,
-2082,Bahana Regular Income Fund,bahana-regular-income-fund,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2015-12-17,RD192,IDR,PT Bank OCBC NISP Tbk,100000,,,-0.02,-0.01,,2026-11-01,IDR,,
-2085,Schroder Dana Prestasi Prima,schroder-dana-prestasi-prima,Saham,"Schroder Investment Management Indonesia, PT",2015-12-18,RD1549,IDR,The Hongkong And Shanghai Banking Corporation,100000,,100000,-0.02,-0.02,,2026-11-01,IDR,,IDR
-2086,Lautandhana Saham Lestari,lautandhana-saham-lestari,Saham,"Lautandhana Investment Management, PT",2015-11-27,RD816,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,-0.05,-0.01,-0.01,2026-11-01,IDR,,IDR
-2088,Manulife Dana Saham Utama Kelas I,manulife-dana-saham-utama-kelas-i,Saham,"Manulife Aset Manajemen Indonesia, PT",2015-11-11,,IDR,Standard Chartered Bank,25000000000,,,-0.02,-0.02,-0.02,2026-11-01,IDR,,
-2089,Batavia Proteksi Cemerlang 30,batavia-proteksi-cemerlang-30,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-12-01,RD243,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-01,,,
-2090,BNI-AM Proteksi LXIX,bni-am-proteksi-lxix,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-12-01,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2091,CIMB-Principal CPF CS IV Syariah,cimb-principal-cpf-cs-iv-syariah,Terproteksi,"Principal Asset Management, PT",2015-12-07,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2092,Insight Terproteksi 5,insight-terproteksi-5,Terproteksi,"Insight Investments Management, PT",2015-12-16,RD773,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-01,,,
-2093,BNI-AM Proteksi LXIV,bni-am-proteksi-lxiv,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-11-20,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2094,Danareksa Proteksi XXIV,danareksa-proteksi-xxiv,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-12-14,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2095,Ashmore Dana Terproteksi Nusantara II,ashmore-dana-terproteksi-nusantara-ii,Terproteksi,"Ashmore Asset Management Indonesia, PT",2015-11-23,RD45,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-01,,,
-2096,Batavia Proteksi Cemerlang 21,batavia-proteksi-cemerlang-21,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-11-27,RD238,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-01,,,
-2097,Batavia Proteksi Cemerlang 20,batavia-proteksi-cemerlang-20,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-11-23,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2098,Mandiri Seri 33,mandiri-seri-33,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-12-15,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2099,Mandiri Seri 37,mandiri-seri-37,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-12-15,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2100,Batavia Proteksi Cemerlang 22,batavia-proteksi-cemerlang-22,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-11-27,RD239,IDR,PT Bank Danamon Indonesia Tbk,,,,,,,2026-11-01,,,
-2101,Mandiri Seri 41,mandiri-seri-41,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-12-18,,IDR,The Hongkong And Shanghai Banking Corporation,10000000,,,,,,2026-11-01,IDR,,
-2102,Premier Likuid,premier-likuid,Pasar Uang,"Indo Premier Investment Management, PT",2015-11-25,RD1328,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2104,BNP Paribas Gemilang,bnp-paribas-gemilang,Terproteksi,"BNP Paribas Asset Management, PT",2015-12-21,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-01,,,
-2105,Capital Fixed Income Fund,capital-fixed-income-fund,Pendapatan Tetap,"Capital Asset Management, PT",2015-12-28,RD444,IDR,PT Bank Danamon Indonesia Tbk,10000,,10000,-0.015,-0.015,,2026-11-01,IDR,,IDR
-2106,Capital Money Market Fund,capital-money-market-fund,Pasar Uang,"Capital Asset Management, PT",2015-12-28,RD446,IDR,PT Bank Danamon Indonesia Tbk,10,,10000,,,,2026-11-01,IDR,,IDR
-2107,Batavia Dana Kas Gebyar,batavia-dana-kas-gebyar,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",2015-12-23,RD203,IDR,PT Bank Central Asia Tbk,100000,,100000,,,,2026-11-01,IDR,,IDR
-2108,RDT PNM Terproteksi Dana Investa 7,rdt-pnm-terproteksi-dana-investa-7,Terproteksi,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-12-21,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2109,BNIAM Proteksi LXVI,bniam-proteksi-lxvi,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-12-21,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2110,Mandiri Protected Growth Dollar,mandiri-protected-growth-dollar,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-12-21,,USD,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2111,BNIAM Proteksi LXVII,bniam-proteksi-lxvii,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-12-22,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2112,BNIAM Proteksi LXVIII,bniam-proteksi-lxviii,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-12-14,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2113,Pratama Dana Terproteksi III,pratama-dana-terproteksi-iii,Terproteksi,"Pratama Capital Assets Management, PT",2015-12-21,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-01,,,
-2114,Maybank Dana Berimbang,maybank-dana-berimbang,Campuran,"Maybank Asset Management, PT",2015-12-30,RD1018,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,100000,-0.01,-0.01,-0.01,2026-11-01,IDR,,IDR
-2115,RDT Maybank CPF Institusi 2,rdt-maybank-cpf-institusi-2,Terproteksi,"Maybank Asset Management, PT",2015-12-30,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-01,,,
-2116,EMCO X,emco-x,Terproteksi,"Emco Asset Management, PT",2015-12-28,RD648,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-01,,,
-2117,EMCO XI,emco-xi,Terproteksi,"Emco Asset Management, PT",2015-12-28,RD649,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-01,,,
-2118,Mandiri Seri 38,mandiri-seri-38,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-01-07,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2119,Reksa Dana Allianz Money Market Fund 5,reksa-dana-allianz-money-market-fund-5,Pasar Uang,"Allianz Global Investors Asset Management Indonesia, PT",2016-01-07,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2120,RDPT PNM Properti Syariah,rdpt-pnm-properti-syariah,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-12-29,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-2123,Danareksa Melati Pendapatan Utama Syariah,danareksa-melati-pendapatan-utama-syariah,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-10-22,,IDR,Citibank N.A,1000000000,,100000000,-0.01,-0.01,-0.02,2026-11-01,IDR,,IDR
-2125,Mandiri Obligasi Optima,mandiri-obligasi-optima,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-12-29,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2126,BNIAM Proteksi LXI,bniam-proteksi-lxi,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-12-08,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2127,CIMB-Principal CPF XVIII,cimb-principal-cpf-xviii,Terproteksi,"Principal Asset Management, PT",2015-11-30,,USD,Deutsche Bank AG,,,,,,,2026-11-01,,,
-2128,Bahana Optima Protected Fund H 103,bahana-optima-protected-fund-h-103,Terproteksi,"Bahana TCW Investment Management, PT",2015-12-23,,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-2131,Trimegah Terproteksi Prima XVII,trimegah-terproteksi-prima-xvii,Terproteksi,"Trimegah Asset Management, PT",2016-01-15,,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-2132,Bahana C Optima 98,bahana-c-optima-98,Terproteksi,"Bahana TCW Investment Management, PT",2015-12-23,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2133,Danareksa Proteksi XVII USD,danareksa-proteksi-xvii-usd,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-12-21,,USD,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2134,Danareksa Proteksi XXII,danareksa-proteksi-xxii,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-12-28,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2135,HPAM Proteksi Prima,hpam-proteksi-prima,Terproteksi,"Henan Putihrai Asset Management, PT",2015-12-28,RD688,IDR,PT Bank Mega Tbk,100000000,,100000000,,-0.005,,2026-11-01,IDR,,IDR
-2136,Simas Investa Proteksi 1,simas-investa-proteksi-1,Terproteksi,"Sinarmas Asset Management, PT",2015-12-29,RD1612,,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2137,Sucorinvest  Proteksi 16,sucorinvest-proteksi-16,Terproteksi,"Sucorinvest Asset Management, PT",2015-12-22,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2138,PNM Pembiayaan Mikro BUMN 2015 Seri II,pnm-pembiayaan-mikro-bumn-2015-seri-ii,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-11-20,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-2139,Reksadana Penyertaan Terbatas PNM Multisektoral II,reksadana-penyertaan-terbatas-pnm-multisektoral-ii,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-12-21,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-2141,RDT Bahana Primera Plus Protected Fund 100,rdt-bahana-primera-plus-protected-fund-100,Terproteksi,"Bahana TCW Investment Management, PT",2016-01-15,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2142,Reliance Dana Saham,reliance-dana-saham,Saham,"Reliance Manajer Investasi, PT",2016-01-20,,IDR,PT Bank Central Asia Tbk,100000,,100000,-0.025,-0.02,-0.01,2026-11-01,IDR,,IDR
-2144,Mandiri Investa Capital Protected Dollar Fund 3,mandiri-investa-capital-protected-dollar-fund-3,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-01-26,,USD,Citibank N.A,,,,,,,2026-11-01,,,
-2145,Bahana Optima Protected Fund H 104,bahana-optima-protected-fund-h-104,Terproteksi,"Bahana TCW Investment Management, PT",2016-01-20,,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-2146,Danareksa Proteksi 25,danareksa-proteksi-25,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-02-02,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-2147,BNI-AM Proteksi LXIII,bni-am-proteksi-lxiii,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-02-02,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-2148,Trimegah Terproteksi Prima XVI,trimegah-terproteksi-prima-xvi,Terproteksi,"Trimegah Asset Management, PT",2016-01-25,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-01,,,
-2149,INAMI Saham Pembangunan,inami-saham-pembangunan,Saham,"Ina Manajemen Investasi, PT",2016-02-12,,IDR,PT Bank Central Asia Tbk,1000000,,1000000,-0.02,-0.02,,2026-11-01,IDR,,IDR
-2151,PNM Saham Unggulan,pnm-saham-unggulan,Saham,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2016-02-12,,IDR,PT Bank DBS Indonesia,,,,-0.03,-0.015,-0.02,2026-11-01,,,
-2152,Bahana Primera Plus Protected Fund 106,bahana-primera-plus-protected-fund-106,Terproteksi,"Bahana TCW Investment Management, PT",2016-02-02,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2153,Bahana Primera Plus Protected Fund 107,bahana-primera-plus-protected-fund-107,Terproteksi,"Bahana TCW Investment Management, PT",2016-02-02,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2154,Pratama Dana Atraktif Saham,pratama-dana-atraktif-saham,Saham,"Pratama Capital Assets Management, PT",2016-02-17,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-01,,,
-2155,Reksa Dana Syariah BNP Paribas Cakra Syariah USD Kelas RK1,reksa-dana-syariah-bnp-paribas-cakra-syariah-usd-kelas-rk1,Saham,"BNP Paribas Asset Management, PT",2016-02-16,,USD,Citibank N.A,10,,,0.01-0.03,-0.015,-0.01,2026-11-01,USD,,
-2156,Manulife Saham Syariah Asia Pasiﬁk Dollar AS,manulife-saham-syariah-asia-pasik-dollar-as,Saham,"Manulife Aset Manajemen Indonesia, PT",2016-02-15,,USD,Citibank N.A,10,,,0.01-0.03,-0.02,-0.01,2026-11-01,USD,,
-2157,Panin Dana Pendapatan Berkala,panin-dana-pendapatan-berkala,Pendapatan Tetap,"Panin Asset Management, PT",2016-02-19,RD1209,IDR,PT Bank Central Asia Tbk,100000,,100000,-0.04,,-0.04,2026-11-01,IDR,,IDR
-2158,Batavia Proteksi Cemerlang 29,batavia-proteksi-cemerlang-29,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-02-05,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-01,,,
-2159,Danareksa Proteksi 26,danareksa-proteksi-26,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-02-17,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-01,,,
-2160,RDT Maybank CPF Institusi 1,rdt-maybank-cpf-institusi-1,Terproteksi,"Maybank Asset Management, PT",2016-02-15,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-01,,,
-2161,Bahana Optima Protected Fund H 102,bahana-optima-protected-fund-h-102,Terproteksi,"Bahana TCW Investment Management, PT",2016-02-17,,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-2162,Bahana Discovery Fund,bahana-discovery-fund,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2016-02-22,,IDR,Standard Chartered Bank,,,,,,,2026-11-01,,,
-2163,Sucorinvest Proteksi 17,sucorinvest-proteksi-17,Terproteksi,"Sucorinvest Asset Management, PT",2016-02-18,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2164,Reksa Dana Terproteksi Simas Terproteksi 3,reksa-dana-terproteksi-simas-terproteksi-3,Terproteksi,"Sinarmas Asset Management, PT",2016-02-18,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-01,,,
-2165,Insight Green (I-GREEN),insight-green-i-green,Campuran,"Insight Investments Management, PT",2016-02-23,,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,,-0.01,-0.005,,2026-11-01,IDR,,
-2166,Asia Raya Syariah Taktis Berimbang,asia-raya-syariah-taktis-berimbang,Campuran,"Asia Raya Kapital, PT",2016-02-24,RD1719,IDR,PT Bank Maybank Indonesia Tbk,50000,,50000,-0.01,-0.005,,2026-11-01,IDR,,IDR
-2167,BNIAM Proteksi Parasatya,bniam-proteksi-parasatya,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-02-25,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2168,Danareksa Proteksi XXIII,danareksa-proteksi-xxiii,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-02-26,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2169,Batavia Proteksi Cemerlang 31,batavia-proteksi-cemerlang-31,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-02-24,,IDR,The Hongkong And Shanghai Banking Corporation,5000000,,1000000,-0.025,-0.025,,2026-11-01,IDR,,IDR
-2170,Danareksa Proteksi XX,danareksa-proteksi-xx,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-01-20,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2171,Pacific Equity Flexi Fund,pacific-equity-flexi-fund,Saham,"Pacific Capital Investment, PT",2015-12-23,,IDR,PT Bank Danamon Indonesia Tbk,,,,,,,2026-11-01,,,
-2172,Syailendra Teproteksi Dollar 1,syailendra-teproteksi-dollar-1,Terproteksi,"Syailendra Capital, PT",2016-02-05,,USD,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2173,Reksa Dana Terproteksi Mandiri Seri 46,reksa-dana-terproteksi-mandiri-seri-46,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-03-03,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-01,,,
-2174,Schroder Global Sharia Equity Fund,schroder-global-sharia-equity-fund,Saham,"Schroder Investment Management Indonesia, PT",2016-02-22,,USD,Citibank N.A,10,,1000,,-0.01,-0.01,2026-11-01,USD,,USD
-2175,Pratama Dana Lancar,pratama-dana-lancar,Pasar Uang,"Pratama Capital Assets Management, PT",2016-03-16,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-01,,,
-2176,MNC Dana Syariah Barokah,mnc-dana-syariah-barokah,Pasar Uang,"MNC Asset Management, PT",2016-03-22,RD1111,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,100000,,,,2026-11-01,IDR,,IDR
-2177,Reksa Dana Terproteksi Danareksa Proteksi 28,reksa-dana-terproteksi-danareksa-proteksi-28,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-03-28,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-01,,,
-2178,Bahana Primera Plus Protected Fund 105,bahana-primera-plus-protected-fund-105,Terproteksi,"Bahana TCW Investment Management, PT",2016-03-23,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-01,,,
-2179,RDT Maybank CPF 5,rdt-maybank-cpf-5,Terproteksi,"Maybank Asset Management, PT",2016-03-15,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-01,,,
-2180,Danareksa Proteksi 31,danareksa-proteksi-31,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-03-14,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-01,,,
-2181,Maybank CPF Institusi 3,maybank-cpf-institusi-3,Terproteksi,"Maybank Asset Management, PT",2016-03-22,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-01,,,
-2182,Panin Dana Infrastruktur Bertumbuh,panin-dana-infrastruktur-bertumbuh,Saham,"Panin Asset Management, PT",2016-04-01,RD1204,IDR,PT Bank Central Asia Tbk,100000,,100000,-0.04,,-0.02,2026-11-01,IDR,,IDR
-2183,Batavia Proteksi Cemerlang 33,batavia-proteksi-cemerlang-33,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-04-05,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-01,,,
-2184,Trimegah Terproteksi Dana Berkala,trimegah-terproteksi-dana-berkala,Terproteksi,"Trimegah Asset Management, PT",2016-04-05,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-01,,,
-2185,Pratama Mandiri Berimbang,pratama-mandiri-berimbang,Campuran,"Pratama Capital Assets Management, PT",2016-03-29,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-01,,,
-2186,Prospera Value Fund,prospera-value-fund,Campuran,"Prospera Asset Management, PT",2016-03-14,RD1347,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,-0.02,-0.02,-0.01,2026-11-01,IDR,,IDR
-2187,MNC DANA SBN,mnc-dana-sbn,Pendapatan Tetap,"MNC Asset Management, PT",2016-04-08,RD1104,IDR,PT Bank Central Asia Tbk,100,,100,-0.02,,-0.01,2026-11-01,IDR,,IDR
-2188,Batavia Dana Obligasi Unggulan,batavia-dana-obligasi-unggulan,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2016-03-21,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,100000,,100000,-0.03,-0.03,-0.005,2026-11-01,IDR,,IDR
-2189,Insight Infra Development,insight-infra-development,Pendapatan Tetap,"Insight Investments Management, PT",2016-03-30,,IDR,PT Bank Mega Tbk,10000,,,-0.02,0.005-,-0.005,2026-11-01,IDR,,
-2190,I AM Bond Fund,i-am-bond-fund,Pendapatan Tetap,"Indoasia Aset Manajemen, PT",2016-03-02,RD702,IDR,PT Bank DBS Indonesia,10000000,,10000000,-0.01,-0.0025,-0.0025,2026-11-01,IDR,,IDR
-2191,Bahana Likuid Dollar,bahana-likuid-dollar,Pasar Uang,"Bahana TCW Investment Management, PT",2016-03-28,,USD,Standard Chartered Bank,,,,,,,2026-11-01,,,
-2193,Cipta Andalan Ekuitas,cipta-andalan-ekuitas,Saham,"Ciptadana Asset Management, PT",2016-04-11,,IDR,PT Bank Danamon Indonesia Tbk,10000,,,-0.025,-0.025,,2026-11-01,IDR,,
-2194,Aberdeen Standard Syariah Asia Pacific Equity USD Fund,aberdeen-standard-syariah-asia-pacific-equity-usd-fund,Saham,"Aberdeen Standard Investments Indonesia, PT",2016-04-12,RD2037,USD,Citibank N.A,10,,1,0.01-0.025,-0.01,-0.01,2026-11-02,USD,,USD
-2195,MNC Pendapatan Tetap III,mnc-pendapatan-tetap-iii,Pendapatan Tetap,"MNC Asset Management, PT",2016-04-11,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2196,RHB USD Money Market Fund 1,rhb-usd-money-market-fund-1,Pasar Uang,"Allianz Global Investors Asset Management Indonesia, PT",2016-02-18,,USD,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2197,Maybank Money Market Fund 2,maybank-money-market-fund-2,Pasar Uang,"Maybank Asset Management, PT",2016-04-12,RD1440,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2198,Danareksa Proteksi 27,danareksa-proteksi-27,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-04-01,,IDR,The Hongkong And Shanghai Banking Corporation,5000000,,,,-0.01,,2026-11-02,IDR,,
-2199,Insight Terproteksi 6,insight-terproteksi-6,Terproteksi,"Insight Investments Management, PT",2016-03-30,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2200,Sam Dana Obligasi Terproteksi III,sam-dana-obligasi-terproteksi-iii,Terproteksi,"Samuel Aset Manajemen, PT",2016-03-30,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2201,MNC Dana Terproteksi VIII,mnc-dana-terproteksi-viii,Terproteksi,"MNC Asset Management, PT",2016-04-05,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2202,Syailendra Capital Protected  Fund 12,syailendra-capital-protected-fund-12,Terproteksi,"Syailendra Capital, PT",2016-04-12,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2203,Mega Dana Proteksi Optima I,mega-dana-proteksi-optima-i,Terproteksi,"Mega Capital Investama, PT",2016-04-14,,IDR,Bank Permata Tbk,,,,,,,2026-11-02,,,
-2204,Lautandhana Proteksi Dinamis VII,lautandhana-proteksi-dinamis-vii,Terproteksi,"Lautandhana Investment Management, PT",2016-04-11,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2205,Pool Advista Kapital Optimal,pool-advista-kapital-optimal,Saham,"Pool Advista Aset Manajemen, PT",2016-04-18,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2206,Millenium Campuran,millenium-campuran,Campuran,"Millenium Capital Management, PT",2016-04-18,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2207,Millenium MCM Equity Sektoral,millenium-mcm-equity-sektoral,Saham,"Millenium Capital Management, PT",2016-04-18,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2208,OSO Andalas Equity Fund,oso-andalas-equity-fund,Saham,"OSO Manajemen Investasi, PT",2016-04-20,RD1156,IDR,PT Bank Maybank Indonesia Tbk,100000,,100000,-0.02,-0.01,-0.02,2026-11-02,IDR,,IDR
-2209,Majoris Pasar Uang Indonesia,majoris-pasar-uang-indonesia,Pasar Uang,"Majoris Asset Management, PT",2016-04-06,RD831,IDR,PT Bank Mandiri (Persero) Tbk,10000,,10000,,,,2026-11-02,IDR,,IDR
-2210,BNI-AM Proteksi Waradana,bni-am-proteksi-waradana,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-04-18,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-02,,,
-2211,Mandiri Obligasi Optima II,mandiri-obligasi-optima-ii,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-04-26,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2214,Reksa Dana Terproteksi Simas Gemilang 1,reksa-dana-terproteksi-simas-gemilang-1,Terproteksi,"Sinarmas Asset Management, PT",2016-04-27,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2215,Reksa Dana Terproteksi Simas Terproteksi 4,reksa-dana-terproteksi-simas-terproteksi-4,Terproteksi,"Sinarmas Asset Management, PT",2016-04-21,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2216,Mega Asset Terproteksi 5,mega-asset-terproteksi-5,Terproteksi,"Mega Asset Management, PT",2016-04-28,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2217,Lippo Terproteksi III,lippo-terproteksi-iii,Terproteksi,"Lippo Securities Tbk, PT",2016-04-04,,IDR,PT Bank Maybank Indonesia Tbk,1000000,,,,,,2026-11-02,IDR,,
-2218,Schroder IDR Income Plan II,schroder-idr-income-plan-ii,Terproteksi,"Schroder Investment Management Indonesia, PT",2016-04-18,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-02,,,
-2219,Trimegah Terproteksi I,trimegah-terproteksi-i,Terproteksi,"Trimegah Asset Management, PT",2016-04-11,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-02,,,
-2220,Pacific Protected Fund V,pacific-protected-fund-v,Terproteksi,"Pacific Capital Investment, PT",2016-04-18,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2221,RDPT Syariah Syailendra Orchid Property Syariah,rdpt-syariah-syailendra-orchid-property-syariah,Penyertaan Terbatas,"Syailendra Capital, PT",2016-05-02,,,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2222,Simas Saham Ultima,simas-saham-ultima,Saham,"Sinarmas Asset Management, PT",2016-05-02,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2223,Mega Dana Stabil,mega-dana-stabil,Pendapatan Tetap,"Mega Asset Management, PT",2016-04-29,,IDR,PT Bank Mandiri (Persero) Tbk,1000000000,,,-0.05,-0.05,-0.05,2026-11-02,IDR,,
-2224,MNC Dana Saham,mnc-dana-saham,Saham,"MNC Asset Management, PT",2016-05-03,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2226,Trimegah Dana Tetap Nusantara,trimegah-dana-tetap-nusantara,Pendapatan Tetap,"Trimegah Asset Management, PT",2016-04-26,,IDR,PT Bank DBS Indonesia,100000,,100000,,,,2026-11-02,IDR,,IDR
-2227,Batavia Dana Kas Gemilang,batavia-dana-kas-gemilang,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",2016-04-28,RD3849,IDR,The Hongkong And Shanghai Banking Corporation,1000000,,500000,,,,2026-11-02,IDR,,IDR
-2228,BNIAM Dana Pasar Uang Infinite,bniam-dana-pasar-uang-infinite,Pasar Uang,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-04-18,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2229,Premier Pasar Uang II,premier-pasar-uang-ii,Pasar Uang,"Indo Premier Investment Management, PT",2016-04-25,,IDR,PT Bank DBS Indonesia,10000,,100000,,,,2026-11-02,IDR,,IDR
-2234,Pacific Fixed Income,pacific-fixed-income,Pendapatan Tetap,"Pacific Capital Investment, PT",2016-05-10,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,1000000,,1000000,-0.05,-0.05,-0.05,2026-11-02,IDR,,IDR
-2235,Cipta Dana Tunai,cipta-dana-tunai,Pasar Uang,"Ciptadana Asset Management, PT",2016-05-13,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2236,Cipta Dana Obligasi,cipta-dana-obligasi,Pendapatan Tetap,"Ciptadana Asset Management, PT",2016-05-03,RD3665,IDR,PT Bank Maybank Indonesia Tbk,50000,,50000,,-0.005,,2026-11-02,IDR,,IDR
-2237,BNI-AM UGM Progressive Balanced,bni-am-ugm-progressive-balanced,Campuran,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-05-12,,IDR,PT Bank Maybank Indonesia Tbk,10000,,10000,-0.02,-0.02,-0.02,2026-11-02,IDR,,IDR
-2238,Pratama Dana Cemerlang Saham,pratama-dana-cemerlang-saham,Saham,"Pratama Capital Assets Management, PT",2016-05-23,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2239,Trimegah Terproteksi Futura V,trimegah-terproteksi-futura-v,Terproteksi,"Trimegah Asset Management, PT",2016-05-26,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2240,STAR Stable Income Fund Kelas Utama,star-stable-income-fund-kelas-utama,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2016-04-29,,IDR,PT. Bank Sinarmas Tbk,10000,,10000,-0.02,-0.02,-0.02,2026-11-02,IDR,,IDR
-2241,Sucorinvest Dana Obligasi Optima,sucorinvest-dana-obligasi-optima,Pendapatan Tetap,"Sucorinvest Asset Management, PT",2016-05-20,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2242,RD PT Danareksa BUMN Fund 2016 Properti 3,rd-pt-danareksa-bumn-fund-2016-properti-3,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-05-19,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2243,Simas Abdi Proteksi 2,simas-abdi-proteksi-2,Terproteksi,"Sinarmas Asset Management, PT",2016-05-17,RD9484,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2244,Manulife Proteksi Dana Utama,manulife-proteksi-dana-utama,Terproteksi,"Manulife Aset Manajemen Indonesia, PT",2016-04-11,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-02,,,
-2245,Danakita Proteksi Seri III,danakita-proteksi-seri-iii,Terproteksi,"Danakita Investama, PT",2016-05-03,,IDR,Bank Permata Tbk,50000000,,50000000,-0.01,-0.1,,2026-11-02,IDR,,IDR
-2246,Syailendra Equity Momentum Fund,syailendra-equity-momentum-fund,Saham,"Syailendra Capital, PT",2016-05-17,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-02,,,
-2247,Mandiri Seri 47,mandiri-seri-47,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-04-05,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2248,Mandiri Seri 48,mandiri-seri-48,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-04-21,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2249,BNI-AM Proteksi Caraka,bni-am-proteksi-caraka,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-04-29,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2250,BNI-AM Proteksi Nayaka,bni-am-proteksi-nayaka,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-04-27,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2251,Batavia Proteksi Cemerlang Plus,batavia-proteksi-cemerlang-plus,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-04-27,,IDR,Standard Chartered Bank,5000000,,,-0.025,,,2026-11-02,IDR,,
-2252,Batavia Proteksi Cemerlang 39,batavia-proteksi-cemerlang-39,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-04-29,,IDR,The Hongkong And Shanghai Banking Corporation,5000000,,1000000,-0.025,-0.025,,2026-11-02,IDR,,IDR
-2253,Batavia Proteksi Cemerlang 32,batavia-proteksi-cemerlang-32,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-05-02,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-02,,,
-2254,Maybank CPF 6 USD,maybank-cpf-6-usd,Terproteksi,"Maybank Asset Management, PT",2016-04-14,,USD,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-02,,,
-2255,BNI-AM Proteksi Dawala,bni-am-proteksi-dawala,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-05-23,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2256,BNI-AM Proteksi Isvara,bni-am-proteksi-isvara,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-05-24,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2257,HPAM Government Bond,hpam-government-bond,Pendapatan Tetap,"Henan Putihrai Asset Management, PT",2016-05-18,RD685,IDR,PT Bank Mandiri (Persero) Tbk,50000,,50000,-0.01,-0.01,-0.005,2026-11-02,IDR,,IDR
-2258,Majoris Sukuk Negara 2016,majoris-sukuk-negara-2016,Pendapatan Tetap,"Majoris Asset Management, PT",2016-05-31,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-02,,,
-2259,Insight Life (I-LIFE),insight-life-i-life,Campuran,"Insight Investments Management, PT",2016-06-10,,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,,-0.01,0.05-,-0.005,2026-11-02,IDR,,
-2260,Lautandhana Balanced Income Fund,lautandhana-balanced-income-fund,Campuran,"Lautandhana Investment Management, PT",2016-06-13,,IDR,PT Bank CIMB Niaga Tbk,100000000,,10000000,-0.05,-0.01,-0.01,2026-11-02,IDR,,IDR
-2261,Simas Saham Andalan,simas-saham-andalan,Saham,"Sinarmas Asset Management, PT",2016-06-10,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2262,Valbury Capital Protected III,valbury-capital-protected-iii,Terproteksi,"KB Valbury Asset Management, PT",2016-06-09,RD3802,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2263,PNM Dana Surat Berharga Negara II Kelas A,pnm-dana-surat-berharga-negara-ii-kelas-a,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2016-06-14,,IDR,PT Bank DBS Indonesia,,,,0,0,0,2026-11-02,,,
-2264,PNM Dana Surat Berharga Negara,pnm-dana-surat-berharga-negara,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2016-05-09,,IDR,PT Bank DBS Indonesia,,,,-0.03,-0.015,-0.02,2026-11-02,,,
-2265,Majoris USD Balance Indonesia,majoris-usd-balance-indonesia,Campuran,"Majoris Asset Management, PT",2016-05-16,,USD,PT Bank DBS Indonesia,100,,100,-0.01,-0.01,,2026-11-02,USD,,USD
-2267,Schroder IDR Income Plan III,schroder-idr-income-plan-iii,Terproteksi,"Schroder Investment Management Indonesia, PT",2016-06-16,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2268,Pinnacle Dana Prima,pinnacle-dana-prima,Saham,"Pinnacle Persada Investama, PT",2016-06-21,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2270,Danareksa Proteksi 34,danareksa-proteksi-34,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-06-06,,IDR,PT Bank Maybank Indonesia Tbk,5000000,,,,-0.01,,2026-11-02,IDR,,
-2271,Danareksa Proteksi 35,danareksa-proteksi-35,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-06-06,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-02,,,
-2272,Cipta Proteksi Dinamis 1,cipta-proteksi-dinamis-1,Terproteksi,"Ciptadana Asset Management, PT",2016-06-13,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2273,MNC Dana Terproteksi IX,mnc-dana-terproteksi-ix,Terproteksi,"MNC Asset Management, PT",2016-06-02,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2274,Capital Equity Fund,capital-equity-fund,Saham,"Capital Asset Management, PT",2016-06-16,RD443,IDR,PT Bank DBS Indonesia,500000,,100,-0.03,-0.03,-0.03,2026-11-02,IDR,,IDR
-2275,Capital Balanced Fund,capital-balanced-fund,Campuran,"Capital Asset Management, PT",2016-05-23,RD441,IDR,PT Bank DBS Indonesia,500000,,100000,-0.03,-0.03,-0.03,2026-11-02,IDR,,IDR
-2276,Insight Bright (I-BRIGHT),insight-bright-i-bright,Campuran,"Insight Investments Management, PT",2016-06-23,,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,,-0.01,0.005-,-0.005,2026-11-02,IDR,,
-2277,Bahana E Optima Protected Fund 116,bahana-e-optima-protected-fund-116,Terproteksi,"Bahana TCW Investment Management, PT",2016-06-27,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2278,REKSA DANA TERPROTEKSI SIMAS ANDALAN 1,reksa-dana-terproteksi-simas-andalan-1,Terproteksi,"Sinarmas Asset Management, PT",2016-06-27,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2279,BATAVIA PROTEKSI CEMERLANG 58,batavia-proteksi-cemerlang-58,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-06-07,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2280,Mandiri Seri 60,mandiri-seri-60,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-06-20,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2281,Allianz Fixed Income Fund 2 Kelas A,allianz-fixed-income-fund-2-kelas-a,Pendapatan Tetap,"Allianz Global Investors Asset Management Indonesia, PT",2016-07-20,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,100000,,,-0.02,-0.02,-0.02,2026-11-02,IDR,,
-2282,Sequis Pendapatan Stabil,sequis-pendapatan-stabil,Pendapatan Tetap,"Sequis Aset Manajemen, PT",2016-06-13,,IDR,Standard Chartered Bank,10000,,10000,-0.02,-0.02,-0.02,2026-11-02,IDR,,IDR
-2284,BNI AM Quality Long Duration Fund,bni-am-quality-long-duration-fund,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-06-16,,IDR,PT Bank DBS Indonesia,10000,,10000,-0.02,-0.02,-0.02,2026-11-02,IDR,,IDR
-2287,BRI Melati Pendapatan Tetap Multi Plus,bri-melati-pendapatan-tetap-multi-plus,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-05-12,,IDR,Standard Chartered Bank,100000,,100000,-0.01,-0.01,,2026-11-02,IDR,,IDR
-2288,Henan Ultima Obligasi Plus Kelas A,henan-ultima-obligasi-plus-kelas-a,Pendapatan Tetap,"Henan Putihrai Asset Management, PT",2016-06-21,,IDR,Bank Permata Tbk,50000,,50000,-0.01,-0.01,-0.01,2026-11-02,IDR,,IDR
-2290,Syailendra Dana Ekuitas Dinamis,syailendra-dana-ekuitas-dinamis,Saham,"Syailendra Capital, PT",2016-06-17,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2291,Bahana Aktiva Protected Fund 111,bahana-aktiva-protected-fund-111,Terproteksi,"Bahana TCW Investment Management, PT",2016-06-28,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2292,Principal CPF XIX,principal-cpf-xix,Terproteksi,"Principal Asset Management, PT",2016-06-27,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2293,Danareksa Proteksi 32,danareksa-proteksi-32,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-06-08,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2294,HPAM Smart Protected VI,hpam-smart-protected-vi,Terproteksi,"Henan Putihrai Asset Management, PT",2016-06-27,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2295,RD Terproteksi Premier Proteksi IX,rd-terproteksi-premier-proteksi-ix,Terproteksi,"Indo Premier Investment Management, PT",2016-06-20,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2296,Batavia Proteksi Cemerlang 35,batavia-proteksi-cemerlang-35,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-05-24,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-02,,,
-2297,CIMB-Principal CPF CB XXIV,cimb-principal-cpf-cb-xxiv,Terproteksi,"Principal Asset Management, PT",2016-05-30,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-02,,,
-2298,Bahana Altera Protected Fund 114,bahana-altera-protected-fund-114,Terproteksi,"Bahana TCW Investment Management, PT",2016-06-28,,IDR,Standard Chartered Bank,,,,,,,2026-11-02,,,
-2299,Lautandhana Proteksi Dinamis Syariah I,lautandhana-proteksi-dinamis-syariah-i,Terproteksi,"Lautandhana Investment Management, PT",2016-06-24,,IDR,Bank Permata Tbk,500000000,,100000000,-0.02,-0.01,-0.01,2026-11-02,IDR,,IDR
-2300,Bahana Core Protected Fund 113,bahana-core-protected-fund-113,Terproteksi,"Bahana TCW Investment Management, PT",2016-05-23,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2301,Mandiri Protected Growth Dollar 2,mandiri-protected-growth-dollar-2,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-06-13,,USD,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2302,Mandiri Seri 51,mandiri-seri-51,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-06-07,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2303,Mandiri Seri 53,mandiri-seri-53,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-06-30,,IDR,PT Bank DBS Indonesia,10000000,,,,,,2026-11-02,IDR,,
-2306,BNI-AM Proteksi Syariah LXX,bni-am-proteksi-syariah-lxx,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-05-30,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2307,RDPT Sucorinvest Manufaktur,rdpt-sucorinvest-manufaktur,Penyertaan Terbatas,"Sucorinvest Asset Management, PT",2016-06-30,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-02,,,
-2309,Recapital Equity,recapital-equity,Saham,"Recapital Asset Management, PT",2016-07-18,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-02,,,
-2310,Reksa Dana Terproteksi Simas Gemilang 2,reksa-dana-terproteksi-simas-gemilang-2,Terproteksi,"Sinarmas Asset Management, PT",2016-07-27,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2311,Reksa Dana Terproteksi Simas Gemilang 3,reksa-dana-terproteksi-simas-gemilang-3,Terproteksi,"Sinarmas Asset Management, PT",2016-08-11,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2312,RDPT Bowsprit Property Fund I,rdpt-bowsprit-property-fund-i,Penyertaan Terbatas,"Bowsprit Asset Management, PT",2016-04-05,,,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2314,Principal Islamic Asia Pacific Equity Syariah (USD),principal-islamic-asia-pacific-equity-syariah-usd,Saham,"Principal Asset Management, PT",2016-06-01,RD1727,USD,Standard Chartered Bank,10,,100,-0.01,-0.01,-0.01,2026-11-02,USD,,USD
-2315,Syailendra Equity Platinum Fund Kelas A,syailendra-equity-platinum-fund-kelas-a,Saham,"Syailendra Capital, PT",2016-08-19,,IDR,PT Bank OCBC NISP Tbk,100000000,,100000,-0.05,,,2026-11-02,IDR,,IDR
-2316,Victoria Obligasi Negara,victoria-obligasi-negara,Pendapatan Tetap,"Victoria Manajemen Investasi, PT",2016-08-16,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,-0.01,2026-11-02,,,
-2317,Pool Advista Kapital Syariah,pool-advista-kapital-syariah,Saham,"Pool Advista Aset Manajemen, PT",2016-08-18,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2319,OSO Moluccas Equity Fund,oso-moluccas-equity-fund,Saham,"OSO Manajemen Investasi, PT",2016-08-09,RD1162,IDR,PT Bank Mega Tbk,100000,,100000,-0.02,-0.01,-0.02,2026-11-02,IDR,,IDR
-2320,SIMAS Pendapatan Tetap,simas-pendapatan-tetap,Pendapatan Tetap,"Sinarmas Asset Management, PT",2016-08-08,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2322,Prospera Dana Lancar,prospera-dana-lancar,Pasar Uang,"Prospera Asset Management, PT",2016-08-25,RD1340,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,,,,2026-11-02,IDR,,IDR
-2323,Insight Asa Loka (I-ASA),insight-asa-loka-i-asa,Pasar Uang,"Insight Investments Management, PT",2016-08-05,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2324,I AM Protected Fund I,i-am-protected-fund-i,Terproteksi,"Indoasia Aset Manajemen, PT",2016-08-01,RD9435,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2325,Cipta Proteksi Dinamis II,cipta-proteksi-dinamis-ii,Terproteksi,"Ciptadana Asset Management, PT",2016-08-15,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2326,MNC Dana Terproteksi X,mnc-dana-terproteksi-x,Terproteksi,"MNC Asset Management, PT",2016-08-11,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2327,Trimegah Terproteksi 3,trimegah-terproteksi-3,Terproteksi,"Trimegah Asset Management, PT",2016-08-18,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2328,BNI-AM Proteksi Taruna,bni-am-proteksi-taruna,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-08-26,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2331,BRI Terproteksi 36,bri-terproteksi-36,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-07-21,,IDR,Bank Bukopin Tbk,5000000,,5000000,,-0.01,,2026-11-02,IDR,,IDR
-2332,Danareksa Terproteksi 37,danareksa-terproteksi-37,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-08-25,,IDR,Bank Bukopin Tbk,5000000,,,,-0.01,,2026-11-02,IDR,,
-2333,Pinnacle Enhanced Liquid ETF,pinnacle-enhanced-liquid-etf,Indeks & ETF,"Pinnacle Persada Investama, PT",2016-08-12,RD1250,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2334,RDPT Bowsprit Property Fund II,rdpt-bowsprit-property-fund-ii,Penyertaan Terbatas,"Bowsprit Asset Management, PT",2016-08-18,,,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2335,RDPT Bowsprit Property Fund III,rdpt-bowsprit-property-fund-iii,Penyertaan Terbatas,"Bowsprit Asset Management, PT",2016-08-18,,,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2336,RDPT Bowsprit Property Fund IV,rdpt-bowsprit-property-fund-iv,Penyertaan Terbatas,"Bowsprit Asset Management, PT",2016-08-18,,,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2337,Sequis Equity Maxima,sequis-equity-maxima,Saham,"Sequis Aset Manajemen, PT",2016-08-25,,IDR,Bank Permata Tbk,100000,,100000,-0.02,-0.01,,2026-11-02,IDR,,IDR
-2338,Sequis Equity Indonesia Kelas A,sequis-equity-indonesia-kelas-a,Saham,"Sequis Aset Manajemen, PT",2016-08-25,,IDR,The Hongkong And Shanghai Banking Corporation,100000,,100000,-0.02,-0.01,,2026-11-02,IDR,,IDR
-2339,Narada Campuran I,narada-campuran-i,Campuran,"Narada Aset Manajemen, PT",2016-08-30,RD1137,IDR,PT Bank DBS Indonesia,100000,,,-0.03,-0.02,,2026-11-02,IDR,,
-2340,Trimegah Dana Tetap Optima,trimegah-dana-tetap-optima,Pendapatan Tetap,"Trimegah Asset Management, PT",2016-08-18,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2343,BNI AM Dana Pendapatan Tetap Syariah Ardhani,bni-am-dana-pendapatan-tetap-syariah-ardhani,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-08-16,,IDR,PT Bank DBS Indonesia,10000,,10000,-0.02,-0.02,-0.02,2026-11-02,IDR,,IDR
-2344,Insight Government Fund,insight-government-fund,Pendapatan Tetap,"Insight Investments Management, PT",2016-07-28,RD722,IDR,PT Bank Mandiri (Persero) Tbk,100000,,100000,-0.03,-0.03,-0.03,2026-11-02,IDR,,IDR
-2345,Batavia Campuran Utama,batavia-campuran-utama,Campuran,"Batavia Prosperindo Aset Manajemen, PT",2016-06-08,,IDR,PT Bank Mega Tbk,5000000,,1000000,-0.05,-0.05,-0.005,2026-11-02,IDR,,IDR
-2346,Reksa Dana Syariah Mandiri Global Sharia Equity Dollar Kelas A,reksa-dana-syariah-mandiri-global-sharia-equity-dollar-kelas-a,Saham,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-08-04,,USD,Citibank N.A,10,,100,-0.02,-0.02,-0.02,2026-11-02,USD,,USD
-2348,MNC Dana Syariah Ekuitas II,mnc-dana-syariah-ekuitas-ii,Saham,"MNC Asset Management, PT",2016-09-08,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2349,Mega Dana Dinamis,mega-dana-dinamis,Campuran,"Mega Capital Investama, PT",2016-09-09,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2350,Maybank Dana Ekuitas Syariah,maybank-dana-ekuitas-syariah,Saham,"Maybank Asset Management, PT",2016-09-09,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2351,Pratama Dana Saham Unggulan,pratama-dana-saham-unggulan,Saham,"Pratama Capital Assets Management, PT",2016-09-13,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2352,Pacific Equity Growth Fund III,pacific-equity-growth-fund-iii,Saham,"Pacific Capital Investment, PT",2016-09-13,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2353,Corfina Equity Syariah,corfina-equity-syariah,Saham,"Corfina Capital, PT",2016-09-06,,IDR,PT Bank DBS Indonesia,200000,,,-0.025,-0.025,-0.01,2026-11-02,IDR,,
-2354,RHB Balanced Fund,rhb-balanced-fund,Campuran,"Allianz Global Investors Asset Management Indonesia, PT",2016-09-05,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-02,,,
-2355,FWD Asset Long Tenor Bond Fund,fwd-asset-long-tenor-bond-fund,Pendapatan Tetap,"FWD Asset Management, PT",2016-09-08,RD3763,IDR,The Hongkong And Shanghai Banking Corporation,10000,,,-0.02,-0.02,-0.02,2026-11-02,IDR,,
-2356,Quant Investa Stellar Obligasi,quant-investa-stellar-obligasi,Pendapatan Tetap,"Foster Asset Management, PT",2016-09-08,,IDR,Bank Permata Tbk,,,,,,,2026-11-02,,,
-2357,Sequis Bond Optima,sequis-bond-optima,Pendapatan Tetap,"Sequis Aset Manajemen, PT",2016-09-08,,IDR,The Hongkong And Shanghai Banking Corporation,100000,,100000,-0.02,-0.01,,2026-11-02,IDR,,IDR
-2358,Sequis Balance Ultima,sequis-balance-ultima,Campuran,"Sequis Aset Manajemen, PT",2016-09-08,,IDR,The Hongkong And Shanghai Banking Corporation,100000,,100000,-0.02,-0.01,,2026-11-02,IDR,,IDR
-2359,Sequis Liquid Prima,sequis-liquid-prima,Pasar Uang,"Sequis Aset Manajemen, PT",2016-09-08,,IDR,Bank Permata Tbk,100000,,100000,,,,2026-11-02,IDR,,IDR
-2360,Ashmore Dana Pasar Uang Nusantara,ashmore-dana-pasar-uang-nusantara,Pasar Uang,"Ashmore Asset Management Indonesia, PT",2016-09-15,RD42,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,,,,2026-11-02,IDR,,IDR
-2361,PNM Sukuk Negara Syariah,pnm-sukuk-negara-syariah,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2016-08-08,,IDR,PT Bank Danamon Indonesia Tbk,100000,,100000,-0.03,,-0.02,2026-11-02,IDR,,IDR
-2362,Syailendra Steady Income Fund,syailendra-steady-income-fund,Pendapatan Tetap,"Syailendra Capital, PT",2016-09-21,,IDR,PT Bank OCBC NISP Tbk,,,,,,,2026-11-02,,,
-2363,Simas Saham Maksima,simas-saham-maksima,Saham,"Sinarmas Asset Management, PT",2016-09-22,RD1624,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,,,,2026-11-02,IDR,,IDR
-2364,Trimegah Dana Likuid,trimegah-dana-likuid,Pasar Uang,"Trimegah Asset Management, PT",2016-09-29,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2365,Batavia Proteksi Cemerlang 60,batavia-proteksi-cemerlang-60,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-09-08,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2366,Batavia Proteksi Gebyar III,batavia-proteksi-gebyar-iii,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-09-23,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2367,Schroder IDR Income Plan IV,schroder-idr-income-plan-iv,Terproteksi,"Schroder Investment Management Indonesia, PT",2016-09-26,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2368,MNC Dana Terperoteksi XI,mnc-dana-terperoteksi-xi,Terproteksi,"MNC Asset Management, PT",2016-09-22,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2369,RHB Capital Protected Fund 35,rhb-capital-protected-fund-35,Terproteksi,"Allianz Global Investors Asset Management Indonesia, PT",2016-09-09,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2370,Bahana Core Protected Fund 119,bahana-core-protected-fund-119,Terproteksi,"Bahana TCW Investment Management, PT",2016-09-23,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2371,Mandiri Seri 62,mandiri-seri-62,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-09-15,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-02,,,
-2372,BRI Terproteksi 38,bri-terproteksi-38,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-09-29,,IDR,Bank Bukopin Tbk,5000000,,,,-0.01,,2026-11-02,IDR,,
-2373,Sucorinvest Proteksi 19,sucorinvest-proteksi-19,Terproteksi,"Sucorinvest Asset Management, PT",2016-09-29,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2374,Pinnacle Money Market Fund,pinnacle-money-market-fund,Pasar Uang,"Pinnacle Persada Investama, PT",2016-09-20,,IDR,PT Bank Central Asia Tbk,100000,,100000,,,,2026-11-02,IDR,,IDR
-2375,Maybank Sukuk Syariah,maybank-sukuk-syariah,Pendapatan Tetap,"Maybank Asset Management, PT",2016-09-20,RD1909,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-02,,,
-2376,Batavia Pendapatan Tetap Utama Syariah,batavia-pendapatan-tetap-utama-syariah,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2016-09-27,,IDR,PT Bank Mega Tbk,100000,,100000,-0.05,-0.05,-0.005,2026-11-02,IDR,,IDR
-2377,Insight Elite Fund,insight-elite-fund,Pendapatan Tetap,"Insight Investments Management, PT",2016-09-29,,IDR,PT Bank Mega Tbk,50000,,,-0.03,-0.03,-0.03,2026-11-02,IDR,,
-2378,Avrist Sukuk Income Fund,avrist-sukuk-income-fund,Pendapatan Tetap,"Avrist Asset Management, PT",2016-09-28,RD1720,IDR,Bank Permata Tbk,100000000,,100000,,-0.0125,-0.005,2026-11-02,IDR,,IDR
-2379,Pratama Dana Alpha Saham,pratama-dana-alpha-saham,Saham,"Pratama Capital Assets Management, PT",2016-10-11,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2380,Bahana E Optima Protected Fund 123,bahana-e-optima-protected-fund-123,Terproteksi,"Bahana TCW Investment Management, PT",2016-09-23,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2381,Danareksa Proteksi 44,danareksa-proteksi-44,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-10-04,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2382,Pratama Terproteksi IV,pratama-terproteksi-iv,Terproteksi,"Pratama Capital Assets Management, PT",2016-10-06,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2384,Mandiri Obligasi Utama 2,mandiri-obligasi-utama-2,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-10-03,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2385,Minna Padi Pasopati Saham,minna-padi-pasopati-saham,Saham,"Minna Padi Aset Manajemen, PT",2016-10-21,RD1089,IDR,PT Bank Mandiri (Persero) Tbk,250000,,,-0.0075,-0.0075,,2026-11-02,IDR,,
-2386,Syailendra Dana Alam,syailendra-dana-alam,Campuran,"Syailendra Capital, PT",2016-10-20,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2387,HPAM Ultima Balance,hpam-ultima-balance,Campuran,"Henan Putihrai Asset Management, PT",2016-10-17,,IDR,PT Bank Mega Tbk,50000,,50000,-0.03,-0.03,-0.03,2026-11-02,IDR,,IDR
-2388,Danareksa Seruni Pasar Uang 10,danareksa-seruni-pasar-uang-10,Pasar Uang,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-10-14,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-02,,,
-2390,SAM Dana Obligasi,sam-dana-obligasi,Pendapatan Tetap,"Samuel Aset Manajemen, PT",2016-10-25,,IDR,PT Bank Danamon Indonesia Tbk,1000000,,,-0.02,-0.02,-0.02,2026-11-02,IDR,,
-2391,Sucorinvest Abadi Proteksi 1,sucorinvest-abadi-proteksi-1,Terproteksi,"Sucorinvest Asset Management, PT",2016-10-12,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2392,BNI-AM Proteksi VYASA,bni-am-proteksi-vyasa,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-10-14,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2396,Trimegah Terproteksi Dana Berkala 2,trimegah-terproteksi-dana-berkala-2,Terproteksi,"Trimegah Asset Management, PT",2016-10-26,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
-2397,RDPT Syailendra Multifinance Rupiah 1,rdpt-syailendra-multifinance-rupiah-1,Penyertaan Terbatas,"Syailendra Capital, PT",2016-10-26,,IDR,Bank Bukopin Tbk,,,,,,,2026-11-02,,,
-2398,Reksa Dana Terproteksi Simas Gemilang 4,reksa-dana-terproteksi-simas-gemilang-4,Terproteksi,"Sinarmas Asset Management, PT",2016-10-18,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2399,BNI-AM Proteksi Sangkara,bni-am-proteksi-sangkara,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-10-27,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2401,Trimegah Terproteksi Futura IX,trimegah-terproteksi-futura-ix,Terproteksi,"Trimegah Asset Management, PT",2016-10-28,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-02,,,
-2402,Batavia Proteksi Cemerlang 38,batavia-proteksi-cemerlang-38,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-05-31,,IDR,PT Bank Danamon Indonesia Tbk,,,,,,,2026-11-02,,,
-2403,Batavia Proteksi Cemerlang 52,batavia-proteksi-cemerlang-52,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-08-18,,IDR,PT Bank Danamon Indonesia Tbk,,,,,,,2026-11-02,,,
-2404,BNI-AM Proteksi Gantari,bni-am-proteksi-gantari,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-08-24,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-02,,,
-2405,Kresna IDX 30 Tracker,kresna-idx-30-tracker,Indeks & ETF,"Kresna Asset Management, PT",2016-11-01,,IDR,PT Bank CIMB Niaga Tbk,200000000,,200000000,-0.01,-0.01,-0.01,2026-11-02,IDR,,IDR
-2406,Premier IDX 30,premier-idx-30,Indeks & ETF,"Indo Premier Investment Management, PT",2016-11-01,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2407,Simas IDX 30,simas-idx-30,Indeks & ETF,"Sinarmas Asset Management, PT",2016-11-01,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2408,Simas Pendapatan Prima,simas-pendapatan-prima,Pendapatan Tetap,"Sinarmas Asset Management, PT",2016-11-01,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-02,,,
-2409,Phillip Equity Extra,phillip-equity-extra,Saham,"Phillip Asset Management, PT",2016-10-27,RD9462,IDR,PT Bank Maybank Indonesia Tbk,100000,,100000,,,-0.01,2026-11-02,IDR,,IDR
+1947,PNM Pembiayaan Mikro BUMN 2015,pnm-pembiayaan-mikro-bumn-2015,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-07-08,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+1948,Millenium Balance Fund,millenium-balance-fund,Campuran,"Millenium Capital Management, PT",2015-07-23,RD1081,IDR,PT Bank Danamon Indonesia Tbk,,,,-0.025,-0.05,,2026-11-11,,,
+1949,Insight Inspirasi,insight-inspirasi,Campuran,"Insight Investments Management, PT",2015-07-28,RD730,IDR,PT Bank Negara Indonesia (Persero) Tbk,500000,,,-0.01,-0.005,,2026-11-11,IDR,,
+1952,Bahana Prime Income Fund,bahana-prime-income-fund,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2015-08-03,RD159,IDR,Standard Chartered Bank,100000,,,-0.02,-0.01,,2026-11-11,IDR,,
+1954,Batavia Dana Obligasi Gemilang,batavia-dana-obligasi-gemilang,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2015-08-05,RD209,IDR,Citibank N.A,5000000,,1000000,-0.01,-0.01,-0.005,2026-11-11,IDR,,IDR
+1956,Schroder Investa Obligasi,schroder-investa-obligasi,Pendapatan Tetap,"Schroder Investment Management Indonesia, PT",2015-07-27,RD1560,IDR,The Hongkong And Shanghai Banking Corporation,100000000,,100000000,-0.03,-0.03,-0.01,2026-11-11,IDR,,IDR
+1957,Bahana Progressive Income Fund Kelas G,bahana-progressive-income-fund-kelas-g,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2015-07-30,,IDR,Standard Chartered Bank,100000,,,-0.02,-0.01,,2026-11-11,IDR,,
+1958,BRI Melati Pendapatan Utama II,bri-melati-pendapatan-utama-ii,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-05-12,,IDR,PT Bank OCBC NISP Tbk,100000000,,100000000,-0.03,-0.03,,2026-11-11,IDR,,IDR
+1959,Campuran Victoria Jupiter,campuran-victoria-jupiter,Campuran,"Victoria Manajemen Investasi, PT",2015-07-29,RD440,IDR,PT Bank Mega Tbk,100000,,,-0.01,-0.01,-0.01,2026-11-11,IDR,,
+1960,Trimegah Pundi Kas Syariah,trimegah-pundi-kas-syariah,Pasar Uang,"Trimegah Asset Management, PT",2015-06-29,RD1780,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+1961,Danareksa Seruni Pasar Uang VII,danareksa-seruni-pasar-uang-vii,Pasar Uang,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-07-27,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+1962,Batavia Proteksi Cemerlang 9,batavia-proteksi-cemerlang-9,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-06-29,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+1963,BNIAM PROTEKSI LVI,bniam-proteksi-lvi,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-07-06,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+1964,Mandiri Seri 24,mandiri-seri-24,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-07-27,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+1965,Mandiri Seri 28,mandiri-seri-28,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-07-14,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+1966,Mandiri Syariah Seri 23,mandiri-syariah-seri-23,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-07-13,,IDR,Citibank N.A,,,,,,,2026-11-11,,,
+1967,Bahana Optima Protected Fund H 83,bahana-optima-protected-fund-h-83,Terproteksi,"Bahana TCW Investment Management, PT",2015-05-26,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+1968,Bahana Optima Protected Fund H 84,bahana-optima-protected-fund-h-84,Terproteksi,"Bahana TCW Investment Management, PT",2015-06-01,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+1969,Bahana Optima Protected Fund H 86,bahana-optima-protected-fund-h-86,Terproteksi,"Bahana TCW Investment Management, PT",2015-03-30,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+1970,Bahana Optima Protected Fund H 90,bahana-optima-protected-fund-h-90,Terproteksi,"Bahana TCW Investment Management, PT",2015-07-09,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+1971,Batavia Proteksi Cemerlang 8,batavia-proteksi-cemerlang-8,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-07-15,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+1973,PNM Dana Investa 5,pnm-dana-investa-5,Terproteksi,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-03-10,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+1974,Sucorinvest Proteksi 14,sucorinvest-proteksi-14,Terproteksi,"Sucorinvest Asset Management, PT",2015-07-30,RD1661,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+1975,Syailendra Capital Protected Fund 10,syailendra-capital-protected-fund-10,Terproteksi,"Syailendra Capital, PT",2015-05-06,RD1673,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+1976,Syailendra Capital Protected Fund 11,syailendra-capital-protected-fund-11,Terproteksi,"Syailendra Capital, PT",2015-07-28,RD1674,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+1977,BNI-AM Proteksi LIII,bni-am-proteksi-liii,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-06-29,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+1979,CIMB-Principal CPF CB XXI,cimb-principal-cpf-cb-xxi,Terproteksi,"Principal Asset Management, PT",2015-03-13,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+1980,PNM Multisektoral I,pnm-multisektoral-i,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-07-08,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+1981,PNM Perumnas,pnm-perumnas,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-01-20,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+1982,Bahana Industrial Fund 1-USD,bahana-industrial-fund-1-usd,Penyertaan Terbatas,"Bahana TCW Investment Management, PT",2015-04-23,,,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+1983,Danareksa BUMN Fund 2014 Properti 1,danareksa-bumn-fund-2014-properti-1,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-01-23,,,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+1984,Tram Pembiayaan Mikro Penyertaan Terbatas,tram-pembiayaan-mikro-penyertaan-terbatas,Penyertaan Terbatas,"Trimegah Asset Management, PT",2015-01-02,,,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+1987,Henan Ultima Money Market,henan-ultima-money-market,Pasar Uang,"Henan Putihrai Asset Management, PT",2015-08-12,RD700,IDR,Standard Chartered Bank,50000,,50000,,,,2026-11-11,IDR,,IDR
+1988,Batavia Proteksi Cemerlang 10,batavia-proteksi-cemerlang-10,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-08-12,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+1990,Insight Fellowship,insight-fellowship,Campuran,"Insight Investments Management, PT",2015-08-14,RD718,IDR,PT Bank Negara Indonesia (Persero) Tbk,500000,,,-0.01,-0.005,,2026-11-11,IDR,,
+1991,Mega Asset Terproteksi 3,mega-asset-terproteksi-3,Terproteksi,"Mega Asset Management, PT",2015-08-20,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+1992,Mandiri Seri 26,mandiri-seri-26,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-08-18,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+1993,Premier Campuran Fleksibel II,premier-campuran-fleksibel-ii,Campuran,"Indo Premier Investment Management, PT",2015-08-24,RD1318,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,-0.02,,2026-11-11,,,
+1994,Mandiri Seri 29,mandiri-seri-29,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-08-24,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+1996,Simas Saham Bertumbuh,simas-saham-bertumbuh,Saham,"Sinarmas Asset Management, PT",2015-08-25,RD1621,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,-0.02,,,2026-11-11,IDR,,IDR
+1997,Batavia Proteksi Cemerlang 12,batavia-proteksi-cemerlang-12,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-08-25,,IDR,PT Bank Danamon Indonesia Tbk,5000000,,1000000,-0.025,-0.025,,2026-11-11,IDR,,IDR
+1998,Batavia Proteksi Gebyar I,batavia-proteksi-gebyar-i,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-08-28,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+1999,BNI-AM Dana Pendapatan Tetap Asana Sentral,bni-am-dana-pendapatan-tetap-asana-sentral,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-09-03,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2000,Premier Proteksi VIII,premier-proteksi-viii,Terproteksi,"Indo Premier Investment Management, PT",2015-09-03,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2001,EMCO IX,emco-ix,Terproteksi,"Emco Asset Management, PT",2015-09-02,RD639,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2002,Batavia Proteksi Cemerlang 27,batavia-proteksi-cemerlang-27,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-09-27,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2003,Insight Plan,insight-plan,Campuran,"Insight Investments Management, PT",2015-09-08,RD735,IDR,PT Bank Negara Indonesia (Persero) Tbk,500000,,,-0.01,-0.005,,2026-11-11,IDR,,
+2004,Mega Dana Likuid,mega-dana-likuid,Pasar Uang,"Mega Capital Investama, PT",2015-09-08,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2005,RDT Maybank CPF 3,rdt-maybank-cpf-3,Terproteksi,"Maybank Asset Management, PT",2015-09-10,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2006,Danakita Stabil Pasar Uang,danakita-stabil-pasar-uang,Pasar Uang,"Danakita Investama, PT",2015-09-10,RD550,IDR,PT Bank Maybank Indonesia Tbk,500000,,500000,,,,2026-11-11,IDR,,IDR
+2007,Tram Pundi Kas 6,tram-pundi-kas-6,Pasar Uang,"Trimegah Asset Management, PT",2015-09-14,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2010,RDPT Bowsprit Infrastructure Fund I,rdpt-bowsprit-infrastructure-fund-i,Penyertaan Terbatas,"Bowsprit Asset Management, PT",2015-04-29,,,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2011,Syailendra Market Leader Fund,syailendra-market-leader-fund,Saham,"Syailendra Capital, PT",2015-09-16,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2012,Mandiri Seri 31,mandiri-seri-31,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-09-16,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2013,BNIAM Proteksi LIX,bniam-proteksi-lix,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-09-16,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2014,Batavia Proteksi Cemerlang 16,batavia-proteksi-cemerlang-16,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-09-16,RD236,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+2015,RHB Money Market Fund 3,rhb-money-market-fund-3,Pasar Uang,"Allianz Global Investors Asset Management Indonesia, PT",2015-08-20,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2016,Lautandhana Saham Mahadi,lautandhana-saham-mahadi,Saham,"Lautandhana Investment Management, PT",2015-09-18,RD817,IDR,PT Bank Maybank Indonesia Tbk,100000,,100000,-0.05,-0.01,-0.01,2026-11-11,IDR,,IDR
+2018,Insight Community Development 2,insight-community-development-2,Campuran,"Insight Investments Management, PT",2015-09-23,RD715,IDR,PT Bank Negara Indonesia (Persero) Tbk,500000,,,-0.01,-0.005,,2026-11-11,IDR,,
+2019,Post Indo Money Market Fund,post-indo-money-market-fund,Pasar Uang,"Post Asset Management Indonesia, PT",2015-09-23,RD1293,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2020,PNM Money Market Fund USD,pnm-money-market-fund-usd,Pasar Uang,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-08-20,,USD,PT Bank DBS Indonesia,100,,100,,,,2026-11-11,USD,,USD
+2021,Bahana Primera Protected Fund 92,bahana-primera-protected-fund-92,Terproteksi,"Bahana TCW Investment Management, PT",2015-09-22,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2022,BNI-AM Proteksi LVIII,bni-am-proteksi-lviii,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-09-14,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2023,Insight Money,insight-money,Pasar Uang,"Insight Investments Management, PT",2015-08-26,RD732,IDR,PT Bank Mandiri (Persero) Tbk,100000,,100000,,,,2026-11-11,IDR,,IDR
+2024,Insight Money Syariah,insight-money-syariah,Pasar Uang,"Insight Investments Management, PT",2015-09-30,RD733,IDR,PT Bank Mandiri (Persero) Tbk,100000,,100000,,,,2026-11-11,IDR,,IDR
+2029,Batavia Obligasi Platinum,batavia-obligasi-platinum,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2015-09-08,RD222,IDR,The Hongkong And Shanghai Banking Corporation,1000000,,500000,-0.03,-0.03,-0.005,2026-11-11,IDR,,IDR
+2030,Batavia Proteksi Cemerlang 17,batavia-proteksi-cemerlang-17,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-09-18,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2032,Principal CPF CB XXIII,principal-cpf-cb-xxiii,Terproteksi,"Principal Asset Management, PT",2015-09-28,RD481,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2034,Mandiri Seri 32,mandiri-seri-32,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-10-08,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2035,Mandiri Seri 35,mandiri-seri-35,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-10-08,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2036,Batavia Proteksi Cemerlang 15,batavia-proteksi-cemerlang-15,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-08-25,RD1852,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2037,RD Premier ETF Indonesia State-Owned Companies,rd-premier-etf-indonesia-state-owned-companies,Indeks & ETF,"Indo Premier Investment Management, PT",2015-09-30,RD1323,IDR,Deutsche Bank AG,,,,,,,2026-11-11,,,
+2038,Batavia Proteksi Cemerlang 19,batavia-proteksi-cemerlang-19,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-10-13,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2039,Bahana Primera Plus Protected Fund 97,bahana-primera-plus-protected-fund-97,Terproteksi,"Bahana TCW Investment Management, PT",2015-10-13,RD167,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2040,Pinnacle Strategic Equity Fund,pinnacle-strategic-equity-fund,Saham,"Pinnacle Persada Investama, PT",2015-10-15,,IDR,PT Bank Central Asia Tbk,100000,,100000,-0.02,-0.03,-0.01,2026-11-11,IDR,,IDR
+2043,Mandiri Seri 34,mandiri-seri-34,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-10-15,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2044,Simas Abdi Proteksi 1,simas-abdi-proteksi-1,Terproteksi,"Sinarmas Asset Management, PT",2015-10-15,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2045,Bahana Primera Protected Fund 96,bahana-primera-protected-fund-96,Terproteksi,"Bahana TCW Investment Management, PT",2015-09-29,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2046,Pacific Equity Optimum Fund,pacific-equity-optimum-fund,Saham,"Pacific Capital Investment, PT",2015-10-20,RD1175,IDR,PT Bank Danamon Indonesia Tbk,,,,,,,2026-11-11,,,
+2047,Sucorinvest Saham Dinamis,sucorinvest-saham-dinamis,Saham,"Sucorinvest Asset Management, PT",2015-10-19,RD1667,IDR,Standard Chartered Bank,1000000,,1000000,-0.04,-0.04,-0.01,2026-11-11,IDR,,IDR
+2048,Batavia Proteksi Cemerlang 23,batavia-proteksi-cemerlang-23,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-10-23,,IDR,The Hongkong And Shanghai Banking Corporation,5000000,,1000000,-0.025,-0.025,,2026-11-11,IDR,,IDR
+2049,BNI-AM MAHITALA,bni-am-mahitala,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-10-20,,,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2050,Pratama Dana Dinamis Saham,pratama-dana-dinamis-saham,Saham,"Pratama Capital Assets Management, PT",2015-10-12,RD1300,IDR,Deutsche Bank AG,,,,,,,2026-11-11,,,
+2051,BNIAM Proteksi LX,bniam-proteksi-lx,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-10-22,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2052,Bahana Primera Protected Fund 94,bahana-primera-protected-fund-94,Terproteksi,"Bahana TCW Investment Management, PT",2015-10-22,RD169,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2053,Trimegah Terproteksi Futura VII,trimegah-terproteksi-futura-vii,Terproteksi,"Trimegah Asset Management, PT",2015-10-28,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+2054,Mandiri Seri 36,mandiri-seri-36,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-10-28,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2055,MNC Dana Terproteksi V,mnc-dana-terproteksi-v,Terproteksi,"MNC Asset Management, PT",2015-10-29,RD1123,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2056,Mandiri Dolar 2,mandiri-dolar-2,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-11-03,,USD,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2058,Batavia Proteksi Gebyar II,batavia-proteksi-gebyar-ii,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-11-06,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2059,Mega Asset Terproteksi 4,mega-asset-terproteksi-4,Terproteksi,"Mega Asset Management, PT",2015-10-22,RD1049,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2061,Maybank Syariah Equity Fund,maybank-syariah-equity-fund,Saham,"Maybank Asset Management, PT",2015-11-12,RD1036,IDR,The Hongkong And Shanghai Banking Corporation,100000,,100000,-0.01,-0.01,-0.01,2026-11-11,IDR,,IDR
+2062,BNI-AM Dana Saham Syariah Musahamah,bni-am-dana-saham-syariah-musahamah,Saham,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-11-13,,IDR,PT Bank DBS Indonesia,10000,,10000,-0.02,-0.02,-0.02,2026-11-11,IDR,,IDR
+2063,Batavia Proteksi Cemerlang 28,batavia-proteksi-cemerlang-28,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-11-11,RD241,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2064,Mandiri Seri 30,mandiri-seri-30,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-11-11,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2066,Principal Cash Fund 2,principal-cash-fund-2,Pasar Uang,"Principal Asset Management, PT",2015-11-19,,IDR,PT Bank Mega Tbk,,,,,,-0.01,2026-11-11,,,
+2067,Cipta Dana Likuid,cipta-dana-likuid,Pasar Uang,"Ciptadana Asset Management, PT",2015-11-19,RD6039,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2068,Simas Terproteksi 1,simas-terproteksi-1,Terproteksi,"Sinarmas Asset Management, PT",2015-11-18,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2070,OSO Borneo Equity Fund,oso-borneo-equity-fund,Saham,"OSO Manajemen Investasi, PT",2017-10-18,RD1157,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,100000,-0.02,-0.01,-0.02,2026-11-11,IDR,,IDR
+2071,Pratama Dana Gemilang Saham,pratama-dana-gemilang-saham,Saham,"Pratama Capital Assets Management, PT",2015-11-23,RD1301,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2072,Majoris Obligasi Utama Indonesia,majoris-obligasi-utama-indonesia,Pendapatan Tetap,"Majoris Asset Management, PT",2015-11-30,RD830,IDR,PT Bank Mandiri (Persero) Tbk,10000,,10000,-0.01,-0.01,-0.01,2026-11-11,IDR,,IDR
+2073,Majoris Saham Alokasi Dinamik Indonesia,majoris-saham-alokasi-dinamik-indonesia,Saham,"Majoris Asset Management, PT",2015-11-30,,IDR,PT Bank Mandiri (Persero) Tbk,10000,,10000,-0.02,-0.02,-0.02,2026-11-11,IDR,,IDR
+2074,BNIAM PROTEKSI LXV,bniam-proteksi-lxv,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-11-27,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2075,RDT Maybank CPF IV,rdt-maybank-cpf-iv,Terproteksi,"Maybank Asset Management, PT",2015-11-30,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2076,Trimegah Bhakti Bangsa,trimegah-bhakti-bangsa,Saham,"Trimegah Asset Management, PT",2015-11-11,RD1770,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,,,,2026-11-11,IDR,,IDR
+2077,Sucorinvest Likuid Fund,sucorinvest-likuid-fund,Pasar Uang,"Sucorinvest Asset Management, PT",2015-12-11,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2079,Danareksa Proteksi XXI,danareksa-proteksi-xxi,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-12-07,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2080,Trimegah Terproteksi Prima XVIII,trimegah-terproteksi-prima-xviii,Terproteksi,"Trimegah Asset Management, PT",2015-12-10,RD1801,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+2081,Batavia Proteksi Cemerlang 25,batavia-proteksi-cemerlang-25,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-12-03,RD240,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2082,Bahana Regular Income Fund,bahana-regular-income-fund,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2015-12-17,RD192,IDR,PT Bank OCBC NISP Tbk,100000,,,-0.02,-0.01,,2026-11-11,IDR,,
+2085,Schroder Dana Prestasi Prima,schroder-dana-prestasi-prima,Saham,"Schroder Investment Management Indonesia, PT",2015-12-18,RD1549,IDR,The Hongkong And Shanghai Banking Corporation,100000,,100000,-0.02,-0.02,,2026-11-11,IDR,,IDR
+2086,Lautandhana Saham Lestari,lautandhana-saham-lestari,Saham,"Lautandhana Investment Management, PT",2015-11-27,RD816,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,-0.05,-0.01,-0.01,2026-11-11,IDR,,IDR
+2088,Manulife Dana Saham Utama Kelas I,manulife-dana-saham-utama-kelas-i,Saham,"Manulife Aset Manajemen Indonesia, PT",2015-11-11,,IDR,Standard Chartered Bank,25000000000,,,-0.02,-0.02,-0.02,2026-11-11,IDR,,
+2089,Batavia Proteksi Cemerlang 30,batavia-proteksi-cemerlang-30,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-12-01,RD243,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2090,BNI-AM Proteksi LXIX,bni-am-proteksi-lxix,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-12-01,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2091,CIMB-Principal CPF CS IV Syariah,cimb-principal-cpf-cs-iv-syariah,Terproteksi,"Principal Asset Management, PT",2015-12-07,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2092,Insight Terproteksi 5,insight-terproteksi-5,Terproteksi,"Insight Investments Management, PT",2015-12-16,RD773,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2093,BNI-AM Proteksi LXIV,bni-am-proteksi-lxiv,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-11-20,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2094,Danareksa Proteksi XXIV,danareksa-proteksi-xxiv,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-12-14,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2095,Ashmore Dana Terproteksi Nusantara II,ashmore-dana-terproteksi-nusantara-ii,Terproteksi,"Ashmore Asset Management Indonesia, PT",2015-11-23,RD45,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2096,Batavia Proteksi Cemerlang 21,batavia-proteksi-cemerlang-21,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-11-27,RD238,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2097,Batavia Proteksi Cemerlang 20,batavia-proteksi-cemerlang-20,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-11-23,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2098,Mandiri Seri 33,mandiri-seri-33,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-12-15,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2099,Mandiri Seri 37,mandiri-seri-37,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-12-15,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2100,Batavia Proteksi Cemerlang 22,batavia-proteksi-cemerlang-22,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2015-11-27,RD239,IDR,PT Bank Danamon Indonesia Tbk,,,,,,,2026-11-11,,,
+2101,Mandiri Seri 41,mandiri-seri-41,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-12-18,,IDR,The Hongkong And Shanghai Banking Corporation,10000000,,,,,,2026-11-11,IDR,,
+2102,Premier Likuid,premier-likuid,Pasar Uang,"Indo Premier Investment Management, PT",2015-11-25,RD1328,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2104,BNP Paribas Gemilang,bnp-paribas-gemilang,Terproteksi,"BNP Paribas Asset Management, PT",2015-12-21,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2105,Capital Fixed Income Fund,capital-fixed-income-fund,Pendapatan Tetap,"Capital Asset Management, PT",2015-12-28,RD444,IDR,PT Bank Danamon Indonesia Tbk,10000,,10000,-0.015,-0.015,,2026-11-11,IDR,,IDR
+2106,Capital Money Market Fund,capital-money-market-fund,Pasar Uang,"Capital Asset Management, PT",2015-12-28,RD446,IDR,PT Bank Danamon Indonesia Tbk,10,,10000,,,,2026-11-11,IDR,,IDR
+2107,Batavia Dana Kas Gebyar,batavia-dana-kas-gebyar,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",2015-12-23,RD203,IDR,PT Bank Central Asia Tbk,100000,,100000,,,,2026-11-11,IDR,,IDR
+2108,RDT PNM Terproteksi Dana Investa 7,rdt-pnm-terproteksi-dana-investa-7,Terproteksi,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-12-21,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2109,BNIAM Proteksi LXVI,bniam-proteksi-lxvi,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-12-21,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2110,Mandiri Protected Growth Dollar,mandiri-protected-growth-dollar,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-12-21,,USD,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2111,BNIAM Proteksi LXVII,bniam-proteksi-lxvii,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-12-22,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2112,BNIAM Proteksi LXVIII,bniam-proteksi-lxviii,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-12-14,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2113,Pratama Dana Terproteksi III,pratama-dana-terproteksi-iii,Terproteksi,"Pratama Capital Assets Management, PT",2015-12-21,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2114,Maybank Dana Berimbang,maybank-dana-berimbang,Campuran,"Maybank Asset Management, PT",2015-12-30,RD1018,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,100000,-0.01,-0.01,-0.01,2026-11-11,IDR,,IDR
+2115,RDT Maybank CPF Institusi 2,rdt-maybank-cpf-institusi-2,Terproteksi,"Maybank Asset Management, PT",2015-12-30,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2116,EMCO X,emco-x,Terproteksi,"Emco Asset Management, PT",2015-12-28,RD648,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2117,EMCO XI,emco-xi,Terproteksi,"Emco Asset Management, PT",2015-12-28,RD649,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2118,Mandiri Seri 38,mandiri-seri-38,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-01-07,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2119,Reksa Dana Allianz Money Market Fund 5,reksa-dana-allianz-money-market-fund-5,Pasar Uang,"Allianz Global Investors Asset Management Indonesia, PT",2016-01-07,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2120,RDPT PNM Properti Syariah,rdpt-pnm-properti-syariah,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-12-29,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2123,Danareksa Melati Pendapatan Utama Syariah,danareksa-melati-pendapatan-utama-syariah,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-10-22,,IDR,Citibank N.A,1000000000,,100000000,-0.01,-0.01,-0.02,2026-11-11,IDR,,IDR
+2125,Mandiri Obligasi Optima,mandiri-obligasi-optima,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2015-12-29,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2126,BNIAM Proteksi LXI,bniam-proteksi-lxi,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2015-12-08,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2127,CIMB-Principal CPF XVIII,cimb-principal-cpf-xviii,Terproteksi,"Principal Asset Management, PT",2015-11-30,,USD,Deutsche Bank AG,,,,,,,2026-11-11,,,
+2128,Bahana Optima Protected Fund H 103,bahana-optima-protected-fund-h-103,Terproteksi,"Bahana TCW Investment Management, PT",2015-12-23,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+2131,Trimegah Terproteksi Prima XVII,trimegah-terproteksi-prima-xvii,Terproteksi,"Trimegah Asset Management, PT",2016-01-15,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+2132,Bahana C Optima 98,bahana-c-optima-98,Terproteksi,"Bahana TCW Investment Management, PT",2015-12-23,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2133,Danareksa Proteksi XVII USD,danareksa-proteksi-xvii-usd,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-12-21,,USD,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2134,Danareksa Proteksi XXII,danareksa-proteksi-xxii,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2015-12-28,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2135,HPAM Proteksi Prima,hpam-proteksi-prima,Terproteksi,"Henan Putihrai Asset Management, PT",2015-12-28,RD688,IDR,PT Bank Mega Tbk,100000000,,100000000,,-0.005,,2026-11-11,IDR,,IDR
+2136,Simas Investa Proteksi 1,simas-investa-proteksi-1,Terproteksi,"Sinarmas Asset Management, PT",2015-12-29,RD1612,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2137,Sucorinvest  Proteksi 16,sucorinvest-proteksi-16,Terproteksi,"Sucorinvest Asset Management, PT",2015-12-22,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2138,PNM Pembiayaan Mikro BUMN 2015 Seri II,pnm-pembiayaan-mikro-bumn-2015-seri-ii,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-11-20,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2139,Reksadana Penyertaan Terbatas PNM Multisektoral II,reksadana-penyertaan-terbatas-pnm-multisektoral-ii,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2015-12-21,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2141,RDT Bahana Primera Plus Protected Fund 100,rdt-bahana-primera-plus-protected-fund-100,Terproteksi,"Bahana TCW Investment Management, PT",2016-01-15,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2142,Reliance Dana Saham,reliance-dana-saham,Saham,"Reliance Manajer Investasi, PT",2016-01-20,,IDR,PT Bank Central Asia Tbk,100000,,100000,-0.025,-0.02,-0.01,2026-11-11,IDR,,IDR
+2144,Mandiri Investa Capital Protected Dollar Fund 3,mandiri-investa-capital-protected-dollar-fund-3,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-01-26,,USD,Citibank N.A,,,,,,,2026-11-11,,,
+2145,Bahana Optima Protected Fund H 104,bahana-optima-protected-fund-h-104,Terproteksi,"Bahana TCW Investment Management, PT",2016-01-20,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+2146,Danareksa Proteksi 25,danareksa-proteksi-25,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-02-02,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2147,BNI-AM Proteksi LXIII,bni-am-proteksi-lxiii,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-02-02,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2148,Trimegah Terproteksi Prima XVI,trimegah-terproteksi-prima-xvi,Terproteksi,"Trimegah Asset Management, PT",2016-01-25,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2149,INAMI Saham Pembangunan,inami-saham-pembangunan,Saham,"Ina Manajemen Investasi, PT",2016-02-12,,IDR,PT Bank Central Asia Tbk,1000000,,1000000,-0.02,-0.02,,2026-11-11,IDR,,IDR
+2151,PNM Saham Unggulan,pnm-saham-unggulan,Saham,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2016-02-12,,IDR,PT Bank DBS Indonesia,,,,-0.03,-0.015,-0.02,2026-11-11,,,
+2152,Bahana Primera Plus Protected Fund 106,bahana-primera-plus-protected-fund-106,Terproteksi,"Bahana TCW Investment Management, PT",2016-02-02,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2153,Bahana Primera Plus Protected Fund 107,bahana-primera-plus-protected-fund-107,Terproteksi,"Bahana TCW Investment Management, PT",2016-02-02,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2154,Pratama Dana Atraktif Saham,pratama-dana-atraktif-saham,Saham,"Pratama Capital Assets Management, PT",2016-02-17,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2155,Reksa Dana Syariah BNP Paribas Cakra Syariah USD Kelas RK1,reksa-dana-syariah-bnp-paribas-cakra-syariah-usd-kelas-rk1,Saham,"BNP Paribas Asset Management, PT",2016-02-16,,USD,Citibank N.A,10,,,0.01-0.03,-0.015,-0.01,2026-11-11,USD,,
+2156,Manulife Saham Syariah Asia Pasiﬁk Dollar AS,manulife-saham-syariah-asia-pasik-dollar-as,Saham,"Manulife Aset Manajemen Indonesia, PT",2016-02-15,,USD,Citibank N.A,10,,,0.01-0.03,-0.02,-0.01,2026-11-11,USD,,
+2157,Panin Dana Pendapatan Berkala,panin-dana-pendapatan-berkala,Pendapatan Tetap,"Panin Asset Management, PT",2016-02-19,RD1209,IDR,PT Bank Central Asia Tbk,100000,,100000,-0.04,,-0.04,2026-11-11,IDR,,IDR
+2158,Batavia Proteksi Cemerlang 29,batavia-proteksi-cemerlang-29,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-02-05,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2159,Danareksa Proteksi 26,danareksa-proteksi-26,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-02-17,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2160,RDT Maybank CPF Institusi 1,rdt-maybank-cpf-institusi-1,Terproteksi,"Maybank Asset Management, PT",2016-02-15,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2161,Bahana Optima Protected Fund H 102,bahana-optima-protected-fund-h-102,Terproteksi,"Bahana TCW Investment Management, PT",2016-02-17,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+2162,Bahana Discovery Fund,bahana-discovery-fund,Pendapatan Tetap,"Bahana TCW Investment Management, PT",2016-02-22,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+2163,Sucorinvest Proteksi 17,sucorinvest-proteksi-17,Terproteksi,"Sucorinvest Asset Management, PT",2016-02-18,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2164,Reksa Dana Terproteksi Simas Terproteksi 3,reksa-dana-terproteksi-simas-terproteksi-3,Terproteksi,"Sinarmas Asset Management, PT",2016-02-18,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2165,Insight Green (I-GREEN),insight-green-i-green,Campuran,"Insight Investments Management, PT",2016-02-23,,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,,-0.01,-0.005,,2026-11-11,IDR,,
+2166,Asia Raya Syariah Taktis Berimbang,asia-raya-syariah-taktis-berimbang,Campuran,"Asia Raya Kapital, PT",2016-02-24,RD1719,IDR,PT Bank Maybank Indonesia Tbk,50000,,50000,-0.01,-0.005,,2026-11-11,IDR,,IDR
+2167,BNIAM Proteksi Parasatya,bniam-proteksi-parasatya,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-02-25,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2168,Danareksa Proteksi XXIII,danareksa-proteksi-xxiii,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-02-26,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2169,Batavia Proteksi Cemerlang 31,batavia-proteksi-cemerlang-31,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-02-24,,IDR,The Hongkong And Shanghai Banking Corporation,5000000,,1000000,-0.025,-0.025,,2026-11-11,IDR,,IDR
+2170,Danareksa Proteksi XX,danareksa-proteksi-xx,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-01-20,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2171,Pacific Equity Flexi Fund,pacific-equity-flexi-fund,Saham,"Pacific Capital Investment, PT",2015-12-23,,IDR,PT Bank Danamon Indonesia Tbk,,,,,,,2026-11-11,,,
+2172,Syailendra Teproteksi Dollar 1,syailendra-teproteksi-dollar-1,Terproteksi,"Syailendra Capital, PT",2016-02-05,,USD,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2173,Reksa Dana Terproteksi Mandiri Seri 46,reksa-dana-terproteksi-mandiri-seri-46,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-03-03,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2174,Schroder Global Sharia Equity Fund,schroder-global-sharia-equity-fund,Saham,"Schroder Investment Management Indonesia, PT",2016-02-22,,USD,Citibank N.A,10,,1000,,-0.01,-0.01,2026-11-11,USD,,USD
+2175,Pratama Dana Lancar,pratama-dana-lancar,Pasar Uang,"Pratama Capital Assets Management, PT",2016-03-16,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2176,MNC Dana Syariah Barokah,mnc-dana-syariah-barokah,Pasar Uang,"MNC Asset Management, PT",2016-03-22,RD1111,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,100000,,,,2026-11-11,IDR,,IDR
+2177,Reksa Dana Terproteksi Danareksa Proteksi 28,reksa-dana-terproteksi-danareksa-proteksi-28,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-03-28,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2178,Bahana Primera Plus Protected Fund 105,bahana-primera-plus-protected-fund-105,Terproteksi,"Bahana TCW Investment Management, PT",2016-03-23,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2179,RDT Maybank CPF 5,rdt-maybank-cpf-5,Terproteksi,"Maybank Asset Management, PT",2016-03-15,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2180,Danareksa Proteksi 31,danareksa-proteksi-31,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-03-14,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2181,Maybank CPF Institusi 3,maybank-cpf-institusi-3,Terproteksi,"Maybank Asset Management, PT",2016-03-22,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2182,Panin Dana Infrastruktur Bertumbuh,panin-dana-infrastruktur-bertumbuh,Saham,"Panin Asset Management, PT",2016-04-01,RD1204,IDR,PT Bank Central Asia Tbk,100000,,100000,-0.04,,-0.02,2026-11-11,IDR,,IDR
+2183,Batavia Proteksi Cemerlang 33,batavia-proteksi-cemerlang-33,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-04-05,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2184,Trimegah Terproteksi Dana Berkala,trimegah-terproteksi-dana-berkala,Terproteksi,"Trimegah Asset Management, PT",2016-04-05,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2185,Pratama Mandiri Berimbang,pratama-mandiri-berimbang,Campuran,"Pratama Capital Assets Management, PT",2016-03-29,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2186,Prospera Value Fund,prospera-value-fund,Campuran,"Prospera Asset Management, PT",2016-03-14,RD1347,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,-0.02,-0.02,-0.01,2026-11-11,IDR,,IDR
+2187,MNC DANA SBN,mnc-dana-sbn,Pendapatan Tetap,"MNC Asset Management, PT",2016-04-08,RD1104,IDR,PT Bank Central Asia Tbk,100,,100,-0.02,,-0.01,2026-11-11,IDR,,IDR
+2188,Batavia Dana Obligasi Unggulan,batavia-dana-obligasi-unggulan,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2016-03-21,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,100000,,100000,-0.03,-0.03,-0.005,2026-11-11,IDR,,IDR
+2189,Insight Infra Development,insight-infra-development,Pendapatan Tetap,"Insight Investments Management, PT",2016-03-30,,IDR,PT Bank Mega Tbk,10000,,,-0.02,0.005-,-0.005,2026-11-11,IDR,,
+2190,I AM Bond Fund,i-am-bond-fund,Pendapatan Tetap,"Indoasia Aset Manajemen, PT",2016-03-02,RD702,IDR,PT Bank DBS Indonesia,10000000,,10000000,-0.01,-0.0025,-0.0025,2026-11-11,IDR,,IDR
+2191,Bahana Likuid Dollar,bahana-likuid-dollar,Pasar Uang,"Bahana TCW Investment Management, PT",2016-03-28,,USD,Standard Chartered Bank,,,,,,,2026-11-11,,,
+2193,Cipta Andalan Ekuitas,cipta-andalan-ekuitas,Saham,"Ciptadana Asset Management, PT",2016-04-11,,IDR,PT Bank Danamon Indonesia Tbk,10000,,,-0.025,-0.025,,2026-11-11,IDR,,
+2194,Aberdeen Standard Syariah Asia Pacific Equity USD Fund,aberdeen-standard-syariah-asia-pacific-equity-usd-fund,Saham,"Aberdeen Standard Investments Indonesia, PT",2016-04-12,RD2037,USD,Citibank N.A,10,,1,0.01-0.025,-0.01,-0.01,2026-11-11,USD,,USD
+2195,MNC Pendapatan Tetap III,mnc-pendapatan-tetap-iii,Pendapatan Tetap,"MNC Asset Management, PT",2016-04-11,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2196,RHB USD Money Market Fund 1,rhb-usd-money-market-fund-1,Pasar Uang,"Allianz Global Investors Asset Management Indonesia, PT",2016-02-18,,USD,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2197,Maybank Money Market Fund 2,maybank-money-market-fund-2,Pasar Uang,"Maybank Asset Management, PT",2016-04-12,RD1440,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2198,Danareksa Proteksi 27,danareksa-proteksi-27,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-04-01,,IDR,The Hongkong And Shanghai Banking Corporation,5000000,,,,-0.01,,2026-11-11,IDR,,
+2199,Insight Terproteksi 6,insight-terproteksi-6,Terproteksi,"Insight Investments Management, PT",2016-03-30,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2200,Sam Dana Obligasi Terproteksi III,sam-dana-obligasi-terproteksi-iii,Terproteksi,"Samuel Aset Manajemen, PT",2016-03-30,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2201,MNC Dana Terproteksi VIII,mnc-dana-terproteksi-viii,Terproteksi,"MNC Asset Management, PT",2016-04-05,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2202,Syailendra Capital Protected  Fund 12,syailendra-capital-protected-fund-12,Terproteksi,"Syailendra Capital, PT",2016-04-12,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2203,Mega Dana Proteksi Optima I,mega-dana-proteksi-optima-i,Terproteksi,"Mega Capital Investama, PT",2016-04-14,,IDR,Bank Permata Tbk,,,,,,,2026-11-11,,,
+2204,Lautandhana Proteksi Dinamis VII,lautandhana-proteksi-dinamis-vii,Terproteksi,"Lautandhana Investment Management, PT",2016-04-11,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2205,Pool Advista Kapital Optimal,pool-advista-kapital-optimal,Saham,"Pool Advista Aset Manajemen, PT",2016-04-18,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2206,Millenium Campuran,millenium-campuran,Campuran,"Millenium Capital Management, PT",2016-04-18,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2207,Millenium MCM Equity Sektoral,millenium-mcm-equity-sektoral,Saham,"Millenium Capital Management, PT",2016-04-18,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2208,OSO Andalas Equity Fund,oso-andalas-equity-fund,Saham,"OSO Manajemen Investasi, PT",2016-04-20,RD1156,IDR,PT Bank Maybank Indonesia Tbk,100000,,100000,-0.02,-0.01,-0.02,2026-11-11,IDR,,IDR
+2209,Majoris Pasar Uang Indonesia,majoris-pasar-uang-indonesia,Pasar Uang,"Majoris Asset Management, PT",2016-04-06,RD831,IDR,PT Bank Mandiri (Persero) Tbk,10000,,10000,,,,2026-11-11,IDR,,IDR
+2210,BNI-AM Proteksi Waradana,bni-am-proteksi-waradana,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-04-18,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2211,Mandiri Obligasi Optima II,mandiri-obligasi-optima-ii,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-04-26,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2214,Reksa Dana Terproteksi Simas Gemilang 1,reksa-dana-terproteksi-simas-gemilang-1,Terproteksi,"Sinarmas Asset Management, PT",2016-04-27,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2215,Reksa Dana Terproteksi Simas Terproteksi 4,reksa-dana-terproteksi-simas-terproteksi-4,Terproteksi,"Sinarmas Asset Management, PT",2016-04-21,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2216,Mega Asset Terproteksi 5,mega-asset-terproteksi-5,Terproteksi,"Mega Asset Management, PT",2016-04-28,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2217,Lippo Terproteksi III,lippo-terproteksi-iii,Terproteksi,"Lippo Securities Tbk, PT",2016-04-04,,IDR,PT Bank Maybank Indonesia Tbk,1000000,,,,,,2026-11-11,IDR,,
+2218,Schroder IDR Income Plan II,schroder-idr-income-plan-ii,Terproteksi,"Schroder Investment Management Indonesia, PT",2016-04-18,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2219,Trimegah Terproteksi I,trimegah-terproteksi-i,Terproteksi,"Trimegah Asset Management, PT",2016-04-11,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2220,Pacific Protected Fund V,pacific-protected-fund-v,Terproteksi,"Pacific Capital Investment, PT",2016-04-18,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2221,RDPT Syariah Syailendra Orchid Property Syariah,rdpt-syariah-syailendra-orchid-property-syariah,Penyertaan Terbatas,"Syailendra Capital, PT",2016-05-02,,,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2222,Simas Saham Ultima,simas-saham-ultima,Saham,"Sinarmas Asset Management, PT",2016-05-02,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2223,Mega Dana Stabil,mega-dana-stabil,Pendapatan Tetap,"Mega Asset Management, PT",2016-04-29,,IDR,PT Bank Mandiri (Persero) Tbk,1000000000,,,-0.05,-0.05,-0.05,2026-11-11,IDR,,
+2224,MNC Dana Saham,mnc-dana-saham,Saham,"MNC Asset Management, PT",2016-05-03,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2226,Trimegah Dana Tetap Nusantara,trimegah-dana-tetap-nusantara,Pendapatan Tetap,"Trimegah Asset Management, PT",2016-04-26,,IDR,PT Bank DBS Indonesia,100000,,100000,,,,2026-11-11,IDR,,IDR
+2227,Batavia Dana Kas Gemilang,batavia-dana-kas-gemilang,Pasar Uang,"Batavia Prosperindo Aset Manajemen, PT",2016-04-28,RD3849,IDR,The Hongkong And Shanghai Banking Corporation,1000000,,500000,,,,2026-11-11,IDR,,IDR
+2228,BNIAM Dana Pasar Uang Infinite,bniam-dana-pasar-uang-infinite,Pasar Uang,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-04-18,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2229,Premier Pasar Uang II,premier-pasar-uang-ii,Pasar Uang,"Indo Premier Investment Management, PT",2016-04-25,,IDR,PT Bank DBS Indonesia,10000,,100000,,,,2026-11-11,IDR,,IDR
+2234,Pacific Fixed Income,pacific-fixed-income,Pendapatan Tetap,"Pacific Capital Investment, PT",2016-05-10,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,1000000,,1000000,-0.05,-0.05,-0.05,2026-11-11,IDR,,IDR
+2235,Cipta Dana Tunai,cipta-dana-tunai,Pasar Uang,"Ciptadana Asset Management, PT",2016-05-13,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2236,Cipta Dana Obligasi,cipta-dana-obligasi,Pendapatan Tetap,"Ciptadana Asset Management, PT",2016-05-03,RD3665,IDR,PT Bank Maybank Indonesia Tbk,50000,,50000,,-0.005,,2026-11-11,IDR,,IDR
+2237,BNI-AM UGM Progressive Balanced,bni-am-ugm-progressive-balanced,Campuran,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-05-12,,IDR,PT Bank Maybank Indonesia Tbk,10000,,10000,-0.02,-0.02,-0.02,2026-11-11,IDR,,IDR
+2238,Pratama Dana Cemerlang Saham,pratama-dana-cemerlang-saham,Saham,"Pratama Capital Assets Management, PT",2016-05-23,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2239,Trimegah Terproteksi Futura V,trimegah-terproteksi-futura-v,Terproteksi,"Trimegah Asset Management, PT",2016-05-26,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2240,STAR Stable Income Fund Kelas Utama,star-stable-income-fund-kelas-utama,Pendapatan Tetap,"Surya Timur Alam Raya Asset Management, PT",2016-04-29,,,PT. Bank Sinarmas Tbk,10000,,10000,-0.02,-0.02,-0.02,2026-11-11,IDR,,IDR
+2241,Sucorinvest Dana Obligasi Optima,sucorinvest-dana-obligasi-optima,Pendapatan Tetap,"Sucorinvest Asset Management, PT",2016-05-20,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2242,RD PT Danareksa BUMN Fund 2016 Properti 3,rd-pt-danareksa-bumn-fund-2016-properti-3,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-05-19,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2243,Simas Abdi Proteksi 2,simas-abdi-proteksi-2,Terproteksi,"Sinarmas Asset Management, PT",2016-05-17,RD9484,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2244,Manulife Proteksi Dana Utama,manulife-proteksi-dana-utama,Terproteksi,"Manulife Aset Manajemen Indonesia, PT",2016-04-11,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2245,Danakita Proteksi Seri III,danakita-proteksi-seri-iii,Terproteksi,"Danakita Investama, PT",2016-05-03,,IDR,Bank Permata Tbk,50000000,,50000000,-0.01,-0.1,,2026-11-11,IDR,,IDR
+2246,Syailendra Equity Momentum Fund,syailendra-equity-momentum-fund,Saham,"Syailendra Capital, PT",2016-05-17,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2247,Mandiri Seri 47,mandiri-seri-47,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-04-05,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2248,Mandiri Seri 48,mandiri-seri-48,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-04-21,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2249,BNI-AM Proteksi Caraka,bni-am-proteksi-caraka,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-04-29,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2250,BNI-AM Proteksi Nayaka,bni-am-proteksi-nayaka,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-04-27,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2251,Batavia Proteksi Cemerlang Plus,batavia-proteksi-cemerlang-plus,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-04-27,,IDR,Standard Chartered Bank,5000000,,,-0.025,,,2026-11-11,IDR,,
+2252,Batavia Proteksi Cemerlang 39,batavia-proteksi-cemerlang-39,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-04-29,,IDR,The Hongkong And Shanghai Banking Corporation,5000000,,1000000,-0.025,-0.025,,2026-11-11,IDR,,IDR
+2253,Batavia Proteksi Cemerlang 32,batavia-proteksi-cemerlang-32,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-05-02,,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2254,Maybank CPF 6 USD,maybank-cpf-6-usd,Terproteksi,"Maybank Asset Management, PT",2016-04-14,,USD,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2255,BNI-AM Proteksi Dawala,bni-am-proteksi-dawala,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-05-23,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2256,BNI-AM Proteksi Isvara,bni-am-proteksi-isvara,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-05-24,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2257,HPAM Government Bond,hpam-government-bond,Pendapatan Tetap,"Henan Putihrai Asset Management, PT",2016-05-18,RD685,IDR,PT Bank Mandiri (Persero) Tbk,50000,,50000,-0.01,-0.01,-0.005,2026-11-11,IDR,,IDR
+2258,Majoris Sukuk Negara 2016,majoris-sukuk-negara-2016,Pendapatan Tetap,"Majoris Asset Management, PT",2016-05-31,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2259,Insight Life (I-LIFE),insight-life-i-life,Campuran,"Insight Investments Management, PT",2016-06-10,,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,,-0.01,0.05-,-0.005,2026-11-11,IDR,,
+2260,Lautandhana Balanced Income Fund,lautandhana-balanced-income-fund,Campuran,"Lautandhana Investment Management, PT",2016-06-13,,IDR,PT Bank CIMB Niaga Tbk,100000000,,10000000,-0.05,-0.01,-0.01,2026-11-11,IDR,,IDR
+2261,Simas Saham Andalan,simas-saham-andalan,Saham,"Sinarmas Asset Management, PT",2016-06-10,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2262,Valbury Capital Protected III,valbury-capital-protected-iii,Terproteksi,"KB Valbury Asset Management, PT",2016-06-09,RD3802,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2263,PNM Dana Surat Berharga Negara II Kelas A,pnm-dana-surat-berharga-negara-ii-kelas-a,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2016-06-14,,IDR,PT Bank DBS Indonesia,,,,0,0,0,2026-11-11,,,
+2264,PNM Dana Surat Berharga Negara,pnm-dana-surat-berharga-negara,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2016-05-09,,IDR,PT Bank DBS Indonesia,,,,-0.03,-0.015,-0.02,2026-11-11,,,
+2265,Majoris USD Balance Indonesia,majoris-usd-balance-indonesia,Campuran,"Majoris Asset Management, PT",2016-05-16,,USD,PT Bank DBS Indonesia,100,,100,-0.01,-0.01,,2026-11-11,USD,,USD
+2267,Schroder IDR Income Plan III,schroder-idr-income-plan-iii,Terproteksi,"Schroder Investment Management Indonesia, PT",2016-06-16,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2268,Pinnacle Dana Prima,pinnacle-dana-prima,Saham,"Pinnacle Persada Investama, PT",2016-06-21,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2270,Danareksa Proteksi 34,danareksa-proteksi-34,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-06-06,,IDR,PT Bank Maybank Indonesia Tbk,5000000,,,,-0.01,,2026-11-11,IDR,,
+2271,Danareksa Proteksi 35,danareksa-proteksi-35,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-06-06,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2272,Cipta Proteksi Dinamis 1,cipta-proteksi-dinamis-1,Terproteksi,"Ciptadana Asset Management, PT",2016-06-13,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2273,MNC Dana Terproteksi IX,mnc-dana-terproteksi-ix,Terproteksi,"MNC Asset Management, PT",2016-06-02,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2274,Capital Equity Fund,capital-equity-fund,Saham,"Capital Asset Management, PT",2016-06-16,RD443,IDR,PT Bank DBS Indonesia,500000,,100,-0.03,-0.03,-0.03,2026-11-11,IDR,,IDR
+2275,Capital Balanced Fund,capital-balanced-fund,Campuran,"Capital Asset Management, PT",2016-05-23,RD441,IDR,PT Bank DBS Indonesia,500000,,100000,-0.03,-0.03,-0.03,2026-11-11,IDR,,IDR
+2276,Insight Bright (I-BRIGHT),insight-bright-i-bright,Campuran,"Insight Investments Management, PT",2016-06-23,,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,,-0.01,0.005-,-0.005,2026-11-11,IDR,,
+2277,Bahana E Optima Protected Fund 116,bahana-e-optima-protected-fund-116,Terproteksi,"Bahana TCW Investment Management, PT",2016-06-27,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2278,REKSA DANA TERPROTEKSI SIMAS ANDALAN 1,reksa-dana-terproteksi-simas-andalan-1,Terproteksi,"Sinarmas Asset Management, PT",2016-06-27,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2279,BATAVIA PROTEKSI CEMERLANG 58,batavia-proteksi-cemerlang-58,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-06-07,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2280,Mandiri Seri 60,mandiri-seri-60,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-06-20,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2281,Allianz Fixed Income Fund 2 Kelas A,allianz-fixed-income-fund-2-kelas-a,Pendapatan Tetap,"Allianz Global Investors Asset Management Indonesia, PT",2016-07-20,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,100000,,,-0.02,-0.02,-0.02,2026-11-11,IDR,,
+2282,Sequis Pendapatan Stabil,sequis-pendapatan-stabil,Pendapatan Tetap,"Sequis Aset Manajemen, PT",2016-06-13,,IDR,Standard Chartered Bank,10000,,10000,-0.02,-0.02,-0.02,2026-11-11,IDR,,IDR
+2284,BNI AM Quality Long Duration Fund,bni-am-quality-long-duration-fund,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-06-16,,IDR,PT Bank DBS Indonesia,10000,,10000,-0.02,-0.02,-0.02,2026-11-11,IDR,,IDR
+2287,BRI Melati Pendapatan Tetap Multi Plus,bri-melati-pendapatan-tetap-multi-plus,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-05-12,,IDR,Standard Chartered Bank,100000,,100000,-0.01,-0.01,,2026-11-11,IDR,,IDR
+2288,Henan Ultima Obligasi Plus Kelas A,henan-ultima-obligasi-plus-kelas-a,Pendapatan Tetap,"Henan Putihrai Asset Management, PT",2016-06-21,,IDR,Bank Permata Tbk,50000,,50000,-0.01,-0.01,-0.01,2026-11-11,IDR,,IDR
+2290,Syailendra Dana Ekuitas Dinamis,syailendra-dana-ekuitas-dinamis,Saham,"Syailendra Capital, PT",2016-06-17,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2291,Bahana Aktiva Protected Fund 111,bahana-aktiva-protected-fund-111,Terproteksi,"Bahana TCW Investment Management, PT",2016-06-28,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2292,Principal CPF XIX,principal-cpf-xix,Terproteksi,"Principal Asset Management, PT",2016-06-27,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2293,Danareksa Proteksi 32,danareksa-proteksi-32,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-06-08,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2294,HPAM Smart Protected VI,hpam-smart-protected-vi,Terproteksi,"Henan Putihrai Asset Management, PT",2016-06-27,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2295,RD Terproteksi Premier Proteksi IX,rd-terproteksi-premier-proteksi-ix,Terproteksi,"Indo Premier Investment Management, PT",2016-06-20,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2296,Batavia Proteksi Cemerlang 35,batavia-proteksi-cemerlang-35,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-05-24,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2297,CIMB-Principal CPF CB XXIV,cimb-principal-cpf-cb-xxiv,Terproteksi,"Principal Asset Management, PT",2016-05-30,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2298,Bahana Altera Protected Fund 114,bahana-altera-protected-fund-114,Terproteksi,"Bahana TCW Investment Management, PT",2016-06-28,,IDR,Standard Chartered Bank,,,,,,,2026-11-11,,,
+2299,Lautandhana Proteksi Dinamis Syariah I,lautandhana-proteksi-dinamis-syariah-i,Terproteksi,"Lautandhana Investment Management, PT",2016-06-24,,IDR,Bank Permata Tbk,500000000,,100000000,-0.02,-0.01,-0.01,2026-11-11,IDR,,IDR
+2300,Bahana Core Protected Fund 113,bahana-core-protected-fund-113,Terproteksi,"Bahana TCW Investment Management, PT",2016-05-23,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2301,Mandiri Protected Growth Dollar 2,mandiri-protected-growth-dollar-2,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-06-13,,USD,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2302,Mandiri Seri 51,mandiri-seri-51,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-06-07,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2303,Mandiri Seri 53,mandiri-seri-53,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-06-30,,IDR,PT Bank DBS Indonesia,10000000,,,,,,2026-11-11,IDR,,
+2306,BNI-AM Proteksi Syariah LXX,bni-am-proteksi-syariah-lxx,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-05-30,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2307,RDPT Sucorinvest Manufaktur,rdpt-sucorinvest-manufaktur,Penyertaan Terbatas,"Sucorinvest Asset Management, PT",2016-06-30,,,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2309,Recapital Equity,recapital-equity,Saham,"Recapital Asset Management, PT",2016-07-18,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2310,Reksa Dana Terproteksi Simas Gemilang 2,reksa-dana-terproteksi-simas-gemilang-2,Terproteksi,"Sinarmas Asset Management, PT",2016-07-27,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2311,Reksa Dana Terproteksi Simas Gemilang 3,reksa-dana-terproteksi-simas-gemilang-3,Terproteksi,"Sinarmas Asset Management, PT",2016-08-11,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2312,RDPT Bowsprit Property Fund I,rdpt-bowsprit-property-fund-i,Penyertaan Terbatas,"Bowsprit Asset Management, PT",2016-04-05,,,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2314,Principal Islamic Asia Pacific Equity Syariah (USD),principal-islamic-asia-pacific-equity-syariah-usd,Saham,"Principal Asset Management, PT",2016-06-01,RD1727,USD,Standard Chartered Bank,10,,100,-0.01,-0.01,-0.01,2026-11-11,USD,,USD
+2315,Syailendra Equity Platinum Fund Kelas A,syailendra-equity-platinum-fund-kelas-a,Saham,"Syailendra Capital, PT",2016-08-19,,IDR,PT Bank OCBC NISP Tbk,100000000,,100000,-0.05,,,2026-11-11,IDR,,IDR
+2316,Victoria Obligasi Negara,victoria-obligasi-negara,Pendapatan Tetap,"Victoria Manajemen Investasi, PT",2016-08-16,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,-0.01,2026-11-11,,,
+2317,Pool Advista Kapital Syariah,pool-advista-kapital-syariah,Saham,"Pool Advista Aset Manajemen, PT",2016-08-18,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2319,OSO Moluccas Equity Fund,oso-moluccas-equity-fund,Saham,"OSO Manajemen Investasi, PT",2016-08-09,RD1162,IDR,PT Bank Mega Tbk,100000,,100000,-0.02,-0.01,-0.02,2026-11-11,IDR,,IDR
+2320,SIMAS Pendapatan Tetap,simas-pendapatan-tetap,Pendapatan Tetap,"Sinarmas Asset Management, PT",2016-08-08,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2322,Prospera Dana Lancar,prospera-dana-lancar,Pasar Uang,"Prospera Asset Management, PT",2016-08-25,RD1340,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,,,,2026-11-11,IDR,,IDR
+2323,Insight Asa Loka (I-ASA),insight-asa-loka-i-asa,Pasar Uang,"Insight Investments Management, PT",2016-08-05,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2324,I AM Protected Fund I,i-am-protected-fund-i,Terproteksi,"Indoasia Aset Manajemen, PT",2016-08-01,RD9435,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2325,Cipta Proteksi Dinamis II,cipta-proteksi-dinamis-ii,Terproteksi,"Ciptadana Asset Management, PT",2016-08-15,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2326,MNC Dana Terproteksi X,mnc-dana-terproteksi-x,Terproteksi,"MNC Asset Management, PT",2016-08-11,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2327,Trimegah Terproteksi 3,trimegah-terproteksi-3,Terproteksi,"Trimegah Asset Management, PT",2016-08-18,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2328,BNI-AM Proteksi Taruna,bni-am-proteksi-taruna,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-08-26,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2331,BRI Terproteksi 36,bri-terproteksi-36,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-07-21,,IDR,Bank Bukopin Tbk,5000000,,5000000,,-0.01,,2026-11-11,IDR,,IDR
+2332,Danareksa Terproteksi 37,danareksa-terproteksi-37,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-08-25,,IDR,Bank Bukopin Tbk,5000000,,,,-0.01,,2026-11-11,IDR,,
+2333,Pinnacle Enhanced Liquid ETF,pinnacle-enhanced-liquid-etf,Indeks & ETF,"Pinnacle Persada Investama, PT",2016-08-12,RD1250,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2334,RDPT Bowsprit Property Fund II,rdpt-bowsprit-property-fund-ii,Penyertaan Terbatas,"Bowsprit Asset Management, PT",2016-08-18,,,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2335,RDPT Bowsprit Property Fund III,rdpt-bowsprit-property-fund-iii,Penyertaan Terbatas,"Bowsprit Asset Management, PT",2016-08-18,,,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2336,RDPT Bowsprit Property Fund IV,rdpt-bowsprit-property-fund-iv,Penyertaan Terbatas,"Bowsprit Asset Management, PT",2016-08-18,,,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2337,Sequis Equity Maxima,sequis-equity-maxima,Saham,"Sequis Aset Manajemen, PT",2016-08-25,,IDR,Bank Permata Tbk,100000,,100000,-0.02,-0.01,,2026-11-11,IDR,,IDR
+2338,Sequis Equity Indonesia Kelas A,sequis-equity-indonesia-kelas-a,Saham,"Sequis Aset Manajemen, PT",2016-08-25,,IDR,The Hongkong And Shanghai Banking Corporation,100000,,100000,-0.02,-0.01,,2026-11-11,IDR,,IDR
+2339,Narada Campuran I,narada-campuran-i,Campuran,"Narada Aset Manajemen, PT",2016-08-30,RD1137,IDR,PT Bank DBS Indonesia,100000,,,-0.03,-0.02,,2026-11-11,IDR,,
+2340,Trimegah Dana Tetap Optima,trimegah-dana-tetap-optima,Pendapatan Tetap,"Trimegah Asset Management, PT",2016-08-18,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2343,BNI AM Dana Pendapatan Tetap Syariah Ardhani,bni-am-dana-pendapatan-tetap-syariah-ardhani,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-08-16,,IDR,PT Bank DBS Indonesia,10000,,10000,-0.02,-0.02,-0.02,2026-11-11,IDR,,IDR
+2344,Insight Government Fund,insight-government-fund,Pendapatan Tetap,"Insight Investments Management, PT",2016-07-28,RD722,IDR,PT Bank Mandiri (Persero) Tbk,100000,,100000,-0.03,-0.03,-0.03,2026-11-11,IDR,,IDR
+2345,Batavia Campuran Utama,batavia-campuran-utama,Campuran,"Batavia Prosperindo Aset Manajemen, PT",2016-06-08,,IDR,PT Bank Mega Tbk,5000000,,1000000,-0.05,-0.05,-0.005,2026-11-11,IDR,,IDR
+2346,Reksa Dana Syariah Mandiri Global Sharia Equity Dollar Kelas A,reksa-dana-syariah-mandiri-global-sharia-equity-dollar-kelas-a,Saham,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-08-04,,USD,Citibank N.A,10,,100,-0.02,-0.02,-0.02,2026-11-11,USD,,USD
+2348,MNC Dana Syariah Ekuitas II,mnc-dana-syariah-ekuitas-ii,Saham,"MNC Asset Management, PT",2016-09-08,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2349,Mega Dana Dinamis,mega-dana-dinamis,Campuran,"Mega Capital Investama, PT",2016-09-09,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2350,Maybank Dana Ekuitas Syariah,maybank-dana-ekuitas-syariah,Saham,"Maybank Asset Management, PT",2016-09-09,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2351,Pratama Dana Saham Unggulan,pratama-dana-saham-unggulan,Saham,"Pratama Capital Assets Management, PT",2016-09-13,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2352,Pacific Equity Growth Fund III,pacific-equity-growth-fund-iii,Saham,"Pacific Capital Investment, PT",2016-09-13,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2353,Corfina Equity Syariah,corfina-equity-syariah,Saham,"Corfina Capital, PT",2016-09-06,,IDR,PT Bank DBS Indonesia,200000,,,-0.025,-0.025,-0.01,2026-11-11,IDR,,
+2354,RHB Balanced Fund,rhb-balanced-fund,Campuran,"Allianz Global Investors Asset Management Indonesia, PT",2016-09-05,,IDR,PT Bank Mandiri (Persero) Tbk,,,,,,,2026-11-11,,,
+2355,FWD Asset Long Tenor Bond Fund,fwd-asset-long-tenor-bond-fund,Pendapatan Tetap,"FWD Asset Management, PT",2016-09-08,RD3763,IDR,The Hongkong And Shanghai Banking Corporation,10000,,,-0.02,-0.02,-0.02,2026-11-11,IDR,,
+2356,Quant Investa Stellar Obligasi,quant-investa-stellar-obligasi,Pendapatan Tetap,"Foster Asset Management, PT",2016-09-08,,IDR,Bank Permata Tbk,,,,,,,2026-11-11,,,
+2357,Sequis Bond Optima,sequis-bond-optima,Pendapatan Tetap,"Sequis Aset Manajemen, PT",2016-09-08,,IDR,The Hongkong And Shanghai Banking Corporation,100000,,100000,-0.02,-0.01,,2026-11-11,IDR,,IDR
+2358,Sequis Balance Ultima,sequis-balance-ultima,Campuran,"Sequis Aset Manajemen, PT",2016-09-08,,IDR,The Hongkong And Shanghai Banking Corporation,100000,,100000,-0.02,-0.01,,2026-11-11,IDR,,IDR
+2359,Sequis Liquid Prima,sequis-liquid-prima,Pasar Uang,"Sequis Aset Manajemen, PT",2016-09-08,,IDR,Bank Permata Tbk,100000,,100000,,,,2026-11-11,IDR,,IDR
+2360,Ashmore Dana Pasar Uang Nusantara,ashmore-dana-pasar-uang-nusantara,Pasar Uang,"Ashmore Asset Management Indonesia, PT",2016-09-15,RD42,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,,,,2026-11-11,IDR,,IDR
+2361,PNM Sukuk Negara Syariah,pnm-sukuk-negara-syariah,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2016-08-08,,IDR,PT Bank Danamon Indonesia Tbk,100000,,100000,-0.03,,-0.02,2026-11-11,IDR,,IDR
+2362,Syailendra Steady Income Fund,syailendra-steady-income-fund,Pendapatan Tetap,"Syailendra Capital, PT",2016-09-21,,IDR,PT Bank OCBC NISP Tbk,,,,,,,2026-11-11,,,
+2363,Simas Saham Maksima,simas-saham-maksima,Saham,"Sinarmas Asset Management, PT",2016-09-22,RD1624,IDR,PT Bank CIMB Niaga Tbk,100000,,100000,,,,2026-11-11,IDR,,IDR
+2364,Trimegah Dana Likuid,trimegah-dana-likuid,Pasar Uang,"Trimegah Asset Management, PT",2016-09-29,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2365,Batavia Proteksi Cemerlang 60,batavia-proteksi-cemerlang-60,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-09-08,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2366,Batavia Proteksi Gebyar III,batavia-proteksi-gebyar-iii,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-09-23,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2367,Schroder IDR Income Plan IV,schroder-idr-income-plan-iv,Terproteksi,"Schroder Investment Management Indonesia, PT",2016-09-26,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2368,MNC Dana Terperoteksi XI,mnc-dana-terperoteksi-xi,Terproteksi,"MNC Asset Management, PT",2016-09-22,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2369,RHB Capital Protected Fund 35,rhb-capital-protected-fund-35,Terproteksi,"Allianz Global Investors Asset Management Indonesia, PT",2016-09-09,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2370,Bahana Core Protected Fund 119,bahana-core-protected-fund-119,Terproteksi,"Bahana TCW Investment Management, PT",2016-09-23,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2371,Mandiri Seri 62,mandiri-seri-62,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-09-15,,IDR,PT Bank DBS Indonesia,,,,,,,2026-11-11,,,
+2372,BRI Terproteksi 38,bri-terproteksi-38,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-09-29,,IDR,Bank Bukopin Tbk,5000000,,,,-0.01,,2026-11-11,IDR,,
+2373,Sucorinvest Proteksi 19,sucorinvest-proteksi-19,Terproteksi,"Sucorinvest Asset Management, PT",2016-09-29,,IDR,PT Bank Rakyat Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2374,Pinnacle Money Market Fund,pinnacle-money-market-fund,Pasar Uang,"Pinnacle Persada Investama, PT",2016-09-20,,IDR,PT Bank Central Asia Tbk,100000,,100000,,,,2026-11-11,IDR,,IDR
+2375,Maybank Sukuk Syariah,maybank-sukuk-syariah,Pendapatan Tetap,"Maybank Asset Management, PT",2016-09-20,RD1909,IDR,The Hongkong And Shanghai Banking Corporation,,,,,,,2026-11-11,,,
+2376,Batavia Pendapatan Tetap Utama Syariah,batavia-pendapatan-tetap-utama-syariah,Pendapatan Tetap,"Batavia Prosperindo Aset Manajemen, PT",2016-09-27,,IDR,PT Bank Mega Tbk,100000,,100000,-0.05,-0.05,-0.005,2026-11-11,IDR,,IDR
+2377,Insight Elite Fund,insight-elite-fund,Pendapatan Tetap,"Insight Investments Management, PT",2016-09-29,,IDR,PT Bank Mega Tbk,50000,,,-0.03,-0.03,-0.03,2026-11-11,IDR,,
+2378,Avrist Sukuk Income Fund,avrist-sukuk-income-fund,Pendapatan Tetap,"Avrist Asset Management, PT",2016-09-28,RD1720,IDR,Bank Permata Tbk,100000000,,100000,,-0.0125,-0.005,2026-11-11,IDR,,IDR
+2379,Pratama Dana Alpha Saham,pratama-dana-alpha-saham,Saham,"Pratama Capital Assets Management, PT",2016-10-11,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2380,Bahana E Optima Protected Fund 123,bahana-e-optima-protected-fund-123,Terproteksi,"Bahana TCW Investment Management, PT",2016-09-23,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2381,Danareksa Proteksi 44,danareksa-proteksi-44,Terproteksi,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-10-04,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2382,Pratama Terproteksi IV,pratama-terproteksi-iv,Terproteksi,"Pratama Capital Assets Management, PT",2016-10-06,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2384,Mandiri Obligasi Utama 2,mandiri-obligasi-utama-2,Pendapatan Tetap,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-10-03,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2385,Minna Padi Pasopati Saham,minna-padi-pasopati-saham,Saham,"Minna Padi Aset Manajemen, PT",2016-10-21,RD1089,IDR,PT Bank Mandiri (Persero) Tbk,250000,,,-0.0075,-0.0075,,2026-11-11,IDR,,
+2386,Syailendra Dana Alam,syailendra-dana-alam,Campuran,"Syailendra Capital, PT",2016-10-20,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2387,HPAM Ultima Balance,hpam-ultima-balance,Campuran,"Henan Putihrai Asset Management, PT",2016-10-17,,IDR,PT Bank Mega Tbk,50000,,50000,-0.03,-0.03,-0.03,2026-11-11,IDR,,IDR
+2388,Danareksa Seruni Pasar Uang 10,danareksa-seruni-pasar-uang-10,Pasar Uang,"Danareksa Investment Management Indonesia d/h BRI MI, PT",2016-10-14,,IDR,PT Bank Mega Tbk,,,,,,,2026-11-11,,,
+2390,SAM Dana Obligasi,sam-dana-obligasi,Pendapatan Tetap,"Samuel Aset Manajemen, PT",2016-10-25,,IDR,PT Bank Danamon Indonesia Tbk,1000000,,,-0.02,-0.02,-0.02,2026-11-11,IDR,,
+2391,Sucorinvest Abadi Proteksi 1,sucorinvest-abadi-proteksi-1,Terproteksi,"Sucorinvest Asset Management, PT",2016-10-12,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2392,BNI-AM Proteksi VYASA,bni-am-proteksi-vyasa,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-10-14,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2396,Trimegah Terproteksi Dana Berkala 2,trimegah-terproteksi-dana-berkala-2,Terproteksi,"Trimegah Asset Management, PT",2016-10-26,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-11,,,
+2397,RDPT Syailendra Multifinance Rupiah 1,rdpt-syailendra-multifinance-rupiah-1,Penyertaan Terbatas,"Syailendra Capital, PT",2016-10-26,,IDR,Bank Bukopin Tbk,,,,,,,2026-11-11,,,
+2398,Reksa Dana Terproteksi Simas Gemilang 4,reksa-dana-terproteksi-simas-gemilang-4,Terproteksi,"Sinarmas Asset Management, PT",2016-10-18,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2399,BNI-AM Proteksi Sangkara,bni-am-proteksi-sangkara,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-10-27,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2401,Trimegah Terproteksi Futura IX,trimegah-terproteksi-futura-ix,Terproteksi,"Trimegah Asset Management, PT",2016-10-28,,IDR,PT Bank Negara Indonesia (Persero) Tbk,,,,,,,2026-11-11,,,
+2402,Batavia Proteksi Cemerlang 38,batavia-proteksi-cemerlang-38,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-05-31,,IDR,PT Bank Danamon Indonesia Tbk,,,,,,,2026-11-11,,,
+2403,Batavia Proteksi Cemerlang 52,batavia-proteksi-cemerlang-52,Terproteksi,"Batavia Prosperindo Aset Manajemen, PT",2016-08-18,,IDR,PT Bank Danamon Indonesia Tbk,,,,,,,2026-11-11,,,
+2404,BNI-AM Proteksi Gantari,bni-am-proteksi-gantari,Terproteksi,"Danareksa Investment Management Indonesia d/h BNI AM, PT",2016-08-24,,IDR,PT Bank Maybank Indonesia Tbk,,,,,,,2026-11-11,,,
+2405,Kresna IDX 30 Tracker,kresna-idx-30-tracker,Indeks & ETF,"Kresna Asset Management, PT",2016-11-01,,IDR,PT Bank CIMB Niaga Tbk,200000000,,200000000,-0.01,-0.01,-0.01,2026-11-11,IDR,,IDR
+2406,Premier IDX 30,premier-idx-30,Indeks & ETF,"Indo Premier Investment Management, PT",2016-11-01,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2407,Simas IDX 30,simas-idx-30,Indeks & ETF,"Sinarmas Asset Management, PT",2016-11-01,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2408,Simas Pendapatan Prima,simas-pendapatan-prima,Pendapatan Tetap,"Sinarmas Asset Management, PT",2016-11-01,,IDR,PT Bank CIMB Niaga Tbk,,,,,,,2026-11-11,,,
+2409,Phillip Equity Extra,phillip-equity-extra,Saham,"Phillip Asset Management, PT",2016-10-27,RD9462,IDR,PT Bank Maybank Indonesia Tbk,100000,,100000,,,-0.01,2026-11-11,IDR,,IDR
 2410,Pan Arcadia Dana Saham Bertumbuh,pan-arcadia-dana-saham-bertumbuh,Saham,"Pan Arcadia Capital, PT",2016-11-02,RD3163,IDR,PT Bank Negara Indonesia (Persero) Tbk,100000,,100000,-0.02,-0.01,-0.005,2026-11-02,IDR,,IDR
 2411,Maybank Syariah Money Market Fund 2,maybank-syariah-money-market-fund-2,Pasar Uang,"Maybank Asset Management, PT",2016-10-31,,IDR,Standard Chartered Bank,100000,,100000,,,-0.03,2026-11-02,IDR,,IDR
 2412,Mandiri Seri 82,mandiri-seri-82,Terproteksi,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",2016-11-03,,IDR,PT Bank Central Asia Tbk,,,,,,,2026-11-02,,,
@@ -3661,7 +3661,7 @@ bareksa_id,name,slug,type,manager,launch_date,bibit_symbol,currency,custodian,mi
 5145,Manulife Proteksi Dana Utama X,manulife-proteksi-dana-utama-x,Terproteksi,"Manulife Aset Manajemen Indonesia, PT",2025-11-19,RD10065,IDR,PT Bank OCBC NISP Tbk,,,,,,,2026-11-10,,,
 5146,UOBAM Cash Fund USD,uobam-cash-fund-usd,Pasar Uang,"UOB Asset Management Indonesia, PT",2025-11-19,RD10063,USD,PT Bank DBS Indonesia,,,,,,,2026-11-10,,,
 5147,Syailendra Russell Idealratings Top 200 Islamic Technology Index Sharia USD Kelas A,syailendra-russell-idealratings-top-200-islamic-technology-index-sharia-usd-kelas-a,Saham,"Syailendra Capital, PT",2025-11-13,,USD,PT Bank CIMB Niaga Tbk,10000,,100,-0.03,-0.05,-0.02,2026-11-10,USD,,USD
-5148,PNM Pembiayaan Mikro BUMN Seri XX,pnm-pembiayaan-mikro-bumn-seri-xx,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2025-11-25,,,PT KEB Hana Bank Indonesia,,,,,,,2026-11-01,,,
+5148,PNM Pembiayaan Mikro BUMN Seri XX,pnm-pembiayaan-mikro-bumn-seri-xx,Penyertaan Terbatas,"Danareksa Investment Management Indonesia d/h PNM IM, PT",2025-11-25,,,PT KEB Hana Bank Indonesia,,,,,,,2026-11-11,,,
 5149,Prospera Proteksi X,prospera-proteksi-x,Terproteksi,"Prospera Asset Management, PT",2025-11-25,RD10068,IDR,PT KEB Hana Bank Indonesia,,,,,,,2026-11-10,,,
 5150,Allianz Capital Protected Fund 67,allianz-capital-protected-fund-67,Terproteksi,"Allianz Global Investors Asset Management Indonesia, PT",2025-11-26,RD10070,IDR,PT Bank OCBC NISP Tbk,,,,,,,2026-11-10,,,
 5151,Nusadana Balanced Fund,nusadana-balanced-fund,Campuran,"Nusadana Investama Indonesia, PT",2025-11-27,RD10072,IDR,PT KEB Hana Bank Indonesia,,,,,,,2026-11-10,,,

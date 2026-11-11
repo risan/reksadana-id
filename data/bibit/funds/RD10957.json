@@ -18,7 +18,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -59,12 +58,12 @@
   },
   "asset": [
     {
-      "name": "Kas&Setara",
-      "percentage": 4.4
+      "name": "Saham",
+      "percentage": 95.65
     },
     {
-      "name": "Emas",
-      "percentage": 95.6
+      "name": "Kas&Setara",
+      "percentage": 4.35
     }
   ],
   "investment_manager": {
@@ -141,9 +140,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2026-08-07",
-    "value": 961.0552
+    "value": 961.8213
   },
   "trade": null
 }

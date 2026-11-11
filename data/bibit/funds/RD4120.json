@@ -63,11 +63,11 @@
     },
     {
       "name": "Equity",
-      "percentage": 53.4
+      "percentage": 50.8
     },
     {
       "name": "Money Market",
-      "percentage": 44.5
+      "percentage": 47.1
     }
   ],
   "investment_manager": {
@@ -144,9 +144,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2022-01-06",
-    "value": 1137.7388
+    "value": 1142.3073
   },
   "trade": null
 }

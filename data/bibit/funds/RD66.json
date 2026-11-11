@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Deposito",
-      "percentage": 47.02
+      "percentage": 52.61
     },
     {
       "name": "Pendapatan Tetap",
-      "percentage": 52.98
+      "percentage": 47.39
     }
   ],
   "holding": [
@@ -73,7 +73,7 @@
       "symbol": "",
       "name": "Bank Deposito Bank Allo",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +83,7 @@
       "symbol": "",
       "name": "Bank Deposito Bank BJB sy",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +93,17 @@
       "symbol": "",
       "name": "Bank Deposito Bank Mantap",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Deposito Bank Nagari",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +113,7 @@
       "symbol": "",
       "name": "Bank Deposito Bank Riau sy",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +123,7 @@
       "symbol": "",
       "name": "Bank Deposito Bank Sulutgo",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +133,7 @@
       "symbol": "",
       "name": "Bank Deposito Bank Sumselbabel sy",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -131,29 +141,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Deposito Bank Victoria",
+      "name": "Bank Deposito Bank Sumut",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Obligasi Berkelanjutan V Indomobil Finance Dengan Tingkat Bunga Tetap Tahap III Tahun 2024 Seri B",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Obligasi III BUMA Tahun 2025 Seri A",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -163,7 +153,17 @@
       "symbol": "",
       "name": "Obligasi Subordinasi Berkelanjutan II Bank BJB Tahap I Tahun 2020 Seri B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sukuk Wakalah Berkelanjutan I Bank Aladin Syariah Tahap I Tahun 2025",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,7 +196,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 536807251138.14,
+    "value": 536807250000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -208,40 +208,40 @@
     "percentage": 0.0382
   },
   "cagr": {
-    "1y": 0.0477865861985991,
-    "3y": 0.053020430890131864,
-    "5y": 0.04662720559771527,
+    "1y": 0.047611308660915785,
+    "3y": 0.053072684854880814,
+    "5y": 0.0466602544552861,
     "10y": null,
-    "all": 0.050783349641406295
+    "all": 0.05079432346057766
   },
   "cagr_adjusted": {
-    "1y": 0.0477865861985991,
-    "3y": 0.053020430890131864,
-    "5y": 0.04662720559771527,
+    "1y": 0.047611308660915785,
+    "3y": 0.053072684854880814,
+    "5y": 0.0466602544552861,
     "10y": null,
-    "all": 0.05079823437191111
+    "all": 0.05080920722847493
   },
   "simplereturn": {
-    "1d": 0.000515425505489775,
-    "1m": 0.004338638191236699,
-    "3m": 0.013952346788505876,
-    "ytd": 0.04121832528742342,
-    "1y": 0.0477865861985991,
-    "3y": 0.1676438401832112,
-    "5y": 0.25591456522586453,
+    "1d": 0.00023585637588041664,
+    "1m": 0.004575517862597245,
+    "3m": 0.01383419102381822,
+    "ytd": 0.04146390326812588,
+    "1y": 0.047611308660915785,
+    "3y": 0.1678176745534259,
+    "5y": 0.2561128648817179,
     "10y": null,
-    "all": 0.6075811698030373
+    "all": 0.6079603280716808
   },
   "changesvalue": {
-    "1d": 0.8300000000001546,
-    "1m": 6.960000000000036,
-    "3m": 22.170000000000073,
-    "ytd": 63.7800000000002,
-    "1y": 73.48000000000002,
-    "3y": 231.32000000000016,
-    "5y": 328.3000000000002,
+    "1d": 0.37999999999988177,
+    "1m": 7.339999999999918,
+    "3m": 21.99000000000001,
+    "ytd": 64.16000000000008,
+    "1y": 73.24000000000001,
+    "3y": 231.57999999999993,
+    "5y": 328.5799999999999,
     "10y": null,
-    "all": 608.9300000000001
+    "all": 609.31
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -263,9 +263,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2017-04-13",
-    "value": 1611.15
+    "value": 1611.53
   },
   "trade": null
 }

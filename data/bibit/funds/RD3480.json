@@ -61,7 +61,7 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 98.85
+      "percentage": 98.95
     },
     {
       "name": "Lainnya",
@@ -71,9 +71,9 @@
   "holding": [
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap II Tahun 2025 Seri B",
+      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp & Paper Mills Tahap II Tahun 2025 Seri A ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +83,7 @@
       "symbol": "",
       "name": "Sukuk Mudharabah Berkelanjutan II Lontar Papyrus Pulp & Paper Industry Tahap II Tahun 2026 Seri B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,9 +91,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp & Paper Mills Tahap II Tahun 2025 Seri A",
+      "name": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap II Tahun 2025 Seri B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +103,7 @@
       "symbol": "",
       "name": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap I Tahun 2025 Seri B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +113,7 @@
       "symbol": "",
       "name": "Sukuk Mudharabah Berkelanjutan IV Indah Kiat Pulp & Paper Tahap IV Tahun 2025 Seri B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -121,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan I Pindo Dell Pulp And Paper Mills Tahap III Tahun 2025",
+      "name": "Sukuk Mudharabah Berkelanjutan I Pindo Deli Pulp And Paper Mills Tahap III Tahun 2025",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -131,9 +131,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri A",
+      "name": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri A ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -141,9 +141,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan I Tower Bersama Infrastructure Tahap II Tahun 2025 Seri A",
+      "name": "Sukuk Ijarah Berkelanjutan I Tower Bersama Infrastructure Tahap I I Tahun 2025 Seri A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -151,9 +151,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap IV Tahun 2025 Seri B",
+      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp & Paper Mills Tahap I Tahun 2025 Seri A ",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -161,9 +161,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan II Oki Pulp & Paper Mills Tahap I Tahun 2025 Seri A",
+      "name": "Sukuk Mudharabah Berkelanjutan IV Indah Kiat Pulp & Paper Tahap II Tahun 2024 Seri B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,7 +196,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 4172460447423.11,
+    "value": 4619870000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -208,40 +208,40 @@
     "percentage": 0.069
   },
   "cagr": {
-    "1y": 0.03490549882775951,
-    "3y": 0.0691391827956025,
-    "5y": 0.0608649255578535,
+    "1y": 0.03498345827180405,
+    "3y": 0.06981522333081025,
+    "5y": 0.06106172642037522,
     "10y": null,
-    "all": 0.06610341666825525
+    "all": 0.06619175693622581
   },
   "cagr_adjusted": {
-    "1y": 0.03490549882775951,
-    "3y": 0.0691391827956025,
-    "5y": 0.0608649255578535,
+    "1y": 0.03498345827180405,
+    "3y": 0.06981522333081025,
+    "5y": 0.06106172642037522,
     "10y": null,
-    "all": 0.06613038998837872
+    "all": 0.06621875673887168
   },
   "simplereturn": {
-    "1d": 0.00034672702475635475,
-    "1m": -0.0034524377632704217,
-    "3m": 0.014436364510710398,
-    "ytd": 0.027634516005361043,
-    "1y": 0.03490549882775951,
-    "3y": 0.22208872914027777,
-    "5y": 0.34369423776340136,
+    "1d": 0.0007504462177747584,
+    "1m": -0.002704582414357115,
+    "3m": 0.013870131597605306,
+    "ytd": 0.028405700441152204,
+    "1y": 0.03498345827180405,
+    "3y": 0.22440845716518565,
+    "5y": 0.34494104265481407,
     "10y": null,
-    "all": 0.5587176201870632
+    "all": 0.5598873539297116
   },
   "changesvalue": {
-    "1d": 0.539600000000064,
-    "1m": -5.393399999999929,
-    "3m": 22.154800000000023,
-    "ytd": 41.864700000000084,
-    "1y": 52.50829999999996,
-    "3y": 282.9167,
-    "5y": 398.20489999999995,
+    "1d": 1.1683000000000447,
+    "1m": -4.225099999999884,
+    "3m": 21.313699999999926,
+    "ytd": 43.03300000000013,
+    "1y": 52.66110000000003,
+    "3y": 285.5443,
+    "5y": 399.57860000000005,
     "10y": null,
-    "all": 558.0328
+    "all": 559.2011
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -263,9 +263,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2019-12-06",
-    "value": 1556.8071
+    "value": 1557.9754
   },
   "trade": null
 }

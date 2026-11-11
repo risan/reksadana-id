@@ -62,39 +62,29 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 0.46
+      "percentage": 2.17
     },
     {
       "name": "Likuiditas",
-      "percentage": 99.54
+      "percentage": 97.83
     }
   ],
   "holding": [
     {
       "symbol": "",
+      "name": "BANK SYARIAH NASIONAL-TD",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
       "name": "BANK NATIONALNOBU TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "SEABANK TD",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "BPD JAWA TENGAH TD",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -104,7 +94,7 @@
       "symbol": "",
       "name": "BANK MANDIRI TASPEN POS-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,9 +102,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK BENGKULU-TD",
+      "name": "SEABANK TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -122,9 +112,19 @@
     },
     {
       "symbol": "",
-      "name": "BANK SYARIAH NASIONAL-TD",
+      "name": "BPD JAWA TENGAH-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BANK BENGKULU TD",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -134,7 +134,7 @@
       "symbol": "",
       "name": "BPD SULAWESI TENGAH-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -142,9 +142,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK WOORI SAUDARA INDONESIA-TD",
+      "name": "BANK WOORI SAUDARA INDONESIA TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -154,7 +154,7 @@
       "symbol": "",
       "name": "BANK CAPITAL INDONESIA-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,9 +162,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK NUSA TENGGARA TIMUR-TD",
+      "name": "BANK SAHABAT SAMPOERNA-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +197,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 2314438476252.75,
+    "value": 2314400000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -209,40 +209,40 @@
     "percentage": 0.055
   },
   "cagr": {
-    "1y": 0.04863512618644683,
-    "3y": 0.05137736272498228,
-    "5y": 0.04518426635341455,
+    "1y": 0.04840327369012276,
+    "3y": 0.05138720874275382,
+    "5y": 0.04519830161767446,
     "10y": null,
-    "all": 0.050069504449628655
+    "all": 0.05007096980350467
   },
   "cagr_adjusted": {
-    "1y": 0.04863512618644683,
-    "3y": 0.05137736272498228,
-    "5y": 0.04518426635341455,
+    "1y": 0.04840327369012276,
+    "3y": 0.05138720874275382,
+    "5y": 0.04519830161767446,
     "10y": null,
-    "all": 0.05008478227674895
+    "all": 0.050086243539833264
   },
   "simplereturn": {
-    "1d": 0.0004467077637808625,
-    "1m": 0.004536600369079213,
-    "3m": 0.01401636428317321,
-    "ytd": 0.041439143316460036,
-    "1y": 0.04863512618644683,
-    "3y": 0.16218660577935262,
-    "5y": 0.24728103046359728,
+    "1d": 0.0001467098716607662,
+    "1m": 0.004683975804798068,
+    "3m": 0.01371271189728085,
+    "ytd": 0.041591932719518665,
+    "1y": 0.04840327369012276,
+    "3y": 0.1622192572826331,
+    "5y": 0.24736477832316384,
     "10y": null,
-    "all": 0.5677043229567704
+    "all": 0.5679343206567935
   },
   "changesvalue": {
-    "1d": 0.7000000000000455,
-    "1m": 7.079999999999927,
-    "3m": 21.670000000000073,
-    "ytd": 62.38000000000011,
-    "1y": 72.71000000000004,
-    "3y": 218.77999999999997,
-    "5y": 310.80999999999995,
+    "1d": 0.2300000000000182,
+    "1m": 7.309999999999945,
+    "3m": 21.210000000000036,
+    "ytd": 62.61000000000013,
+    "1y": 72.3900000000001,
+    "3y": 218.85000000000014,
+    "5y": 310.94000000000005,
     "10y": null,
-    "all": 567.71
+    "all": 567.94
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -264,12 +264,12 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2017-08-30",
-    "value": 1567.72
+    "value": 1567.95
   },
   "trade": {
-    "total_trades": 4948,
+    "total_trades": 5562,
     "period": "1d"
   }
 }

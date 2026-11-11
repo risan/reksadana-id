@@ -60,12 +60,16 @@
   },
   "asset": [
     {
+      "name": "Time Deposit",
+      "percentage": 2
+    },
+    {
       "name": "Money Market",
-      "percentage": 98
+      "percentage": 97
     },
     {
       "name": "Cash",
-      "percentage": 2
+      "percentage": 0
     }
   ],
   "investment_manager": {
@@ -142,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2022-08-22",
-    "value": 978.4173
+    "value": 978.599
   },
   "trade": null
 }

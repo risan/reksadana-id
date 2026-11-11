@@ -61,19 +61,19 @@
   "asset": [
     {
       "name": "Time deposit",
-      "percentage": 4
+      "percentage": 1
     },
     {
       "name": "Govt. Bond",
-      "percentage": 56
+      "percentage": 55
     },
     {
       "name": "Corp. Bond",
-      "percentage": 38
+      "percentage": 41
     },
     {
       "name": "Cash",
-      "percentage": 2
+      "percentage": 3
     }
   ],
   "investment_manager": {
@@ -150,9 +150,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2023-02-03",
-    "value": 1207.1145
+    "value": 1205.6751
   },
   "trade": null
 }

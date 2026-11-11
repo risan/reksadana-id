@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Sukuk",
-      "percentage": 94.79
+      "percentage": 96.84
     },
     {
       "name": "Likuiditas",
-      "percentage": 5.21
+      "percentage": 3.16
     }
   ],
   "holding": [
@@ -73,7 +73,7 @@
       "symbol": "",
       "name": "SUKUK WAKALAH I RAHARIA ENERGI CEPU TAHUN 2026 SERI B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +83,7 @@
       "symbol": "",
       "name": "SUKUK MUDHARABAH BERKELANJUTAN I DIAN SWASTATIKA SENTOSA TAHAP IV TAHUN 2025 SERI B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,47 +93,27 @@
       "symbol": "",
       "name": "SKK URH BKLIT II BUMI SERPONG DAMAI THP II TH 2025 SR B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "PBS034",
-      "name": "FR Syariah",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 6024,
-      "product_type": "FR",
       "serie_id": null
     },
     {
       "symbol": "",
       "name": "SUKUK MUDHARABAH BERKELANJUTAN V INDAH KIAT PULP & PAPER TAHAP I TAHUN 2026 SERI C",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
       "serie_id": null
     },
     {
-      "symbol": "PBS030",
-      "name": "FR Syariah",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 6385,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
       "symbol": "",
       "name": "SUKUK MUDHARABAH BERKELANJUTANI MERDEKA BATTERY MATERIALS TAHAP IV TAHUN 2026 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,17 +123,7 @@
       "symbol": "",
       "name": "SUKUK MUDHARABAH BERKELANJUTAN IV INDAH KIAT PULP & PAPER TAHAP V TAHUN 2025",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "SUKUK WAKALAH BERKELANJUTAN I MEDCO POWER INDONESIA TAHAP IV TAHUN 2025 SERI C",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -163,10 +133,40 @@
       "symbol": "",
       "name": "SUKUK MUDHARABAH BERKELANJUTAN V INDAH KIAT PULP & PAPER TAHAP II TAHUN 2026 SERI B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK WAKALAH BERKELANJUTANI MEDCO POWER INDONESIA TAHAP IV TAHUN 2025 SERI C",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK JARAH BERKELANJUTAN IJI SPINDO TAHAP I TAHUN 2026 SERI C",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
       "serie_id": null
     }
   ],
@@ -196,7 +196,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 87456343442.17,
+    "value": 204460000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -208,40 +208,40 @@
     "percentage": 0.0726
   },
   "cagr": {
-    "1y": 0.006164272228265766,
-    "3y": 0.03097367656510497,
-    "5y": 0.028648002094590952,
+    "1y": 0.006498659651446914,
+    "3y": 0.03193960718119415,
+    "5y": 0.028817959821684447,
     "10y": null,
-    "all": 0.0398230202120764
+    "all": 0.039908016202086394
   },
   "cagr_adjusted": {
-    "1y": 0.006164272228265766,
-    "3y": 0.03097367656510497,
-    "5y": 0.028648002094590952,
+    "1y": 0.006498659651446914,
+    "3y": 0.03193960718119415,
+    "5y": 0.028817959821684447,
     "10y": null,
-    "all": 0.03983567396176313
+    "all": 0.03992069352368288
   },
   "simplereturn": {
-    "1d": 0.0005657479996767911,
-    "1m": -0.011862075740458722,
-    "3m": 0.009085152140246189,
-    "ytd": -0.0016500626527548024,
-    "1y": 0.006164272228265766,
-    "3y": 0.09582885078915471,
-    "5y": 0.15168559426948036,
+    "1d": 0.0008263949297875328,
+    "1m": -0.011045483569919967,
+    "3m": 0.007537468411439319,
+    "ytd": -0.0008250313263773457,
+    "1y": 0.006498659651446914,
+    "3y": 0.0989118198874297,
+    "5y": 0.15263734140529395,
     "10y": null,
-    "all": 0.4097757533286617
+    "all": 0.41094078486334973
   },
   "changesvalue": {
-    "1d": 0.9100000000000819,
-    "1m": -19.319999999999936,
-    "3m": 14.490000000000009,
-    "ytd": -2.6599999999998545,
-    "1y": 9.860000000000127,
-    "3y": 140.74,
-    "5y": 211.97000000000003,
+    "1d": 1.3299999999999272,
+    "1m": -17.99000000000001,
+    "3m": 12.049999999999955,
+    "ytd": -1.3299999999999272,
+    "1y": 10.400000000000091,
+    "3y": 144.98000000000002,
+    "5y": 213.29999999999995,
     "10y": null,
-    "all": 467.8000000000002
+    "all": 469.1300000000001
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -259,9 +259,9 @@
     "all": -0.08078135949544485
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2018-01-26",
-    "value": 1609.4
+    "value": 1610.73
   },
   "trade": null
 }

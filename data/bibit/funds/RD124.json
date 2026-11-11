@@ -62,19 +62,19 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 21.27
+      "percentage": 23.37
     },
     {
       "name": "Likuiditas",
-      "percentage": 78.73
+      "percentage": 76.63
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "BANK CAPITAL INDONESIA-TD",
+      "name": "BANK BRI-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -84,7 +84,7 @@
       "symbol": "",
       "name": "BANK NATIONALNOBU TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -94,7 +94,7 @@
       "symbol": "",
       "name": "BANK BENGKULU-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,9 +102,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK BRI-TD",
+      "name": "BANK SYARIAH NASIONAL-TO",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,9 +112,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK WOORI SAUDARA INDONESIA-TD",
+      "name": "BPD JAWA TENGAH-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -124,7 +124,7 @@
       "symbol": "",
       "name": "BANK MANDIRI TASPEN POS-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -132,9 +132,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK SYARIAH NASIONAL-TD",
+      "name": "OBLIGASI BERKELANJUTAN VI PEGADAIAN TAHAP IV TAHUN 2025 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -142,9 +142,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK JAGO-TO",
+      "name": "BANK CAPITAL INDONESIA TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -152,9 +152,9 @@
     },
     {
       "symbol": "",
-      "name": "OBLIGASI BERKELANJUTAN IV INDAH KIAT PULP & PAPER TAHAP V TAHUN 2024 SERJ B",
+      "name": "BANK JAGO-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,9 +162,9 @@
     },
     {
       "symbol": "",
-      "name": "OBLIGASI BERKELANJUTAN V MERDEKA COPPER GOLD TAHAP III TAHUN 2026",
+      "name": "OBLIGASI BERKELANJUTAN IV INDAH KIAT PULP & PAPER TAHAP V TAHUN 2024 SERI B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +197,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 4335544449647.2,
+    "value": 4357810000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -209,40 +209,40 @@
     "percentage": 0.0475
   },
   "cagr": {
-    "1y": 0.04055055312580391,
-    "3y": 0.045104863515473825,
-    "5y": 0.038799286344804784,
-    "10y": 0.045523964815152196,
-    "all": 0.03168678263939673
+    "1y": 0.04029400116242576,
+    "3y": 0.04512457460150654,
+    "5y": 0.0388090290063583,
+    "10y": 0.04551862141291396,
+    "all": 0.03168829982664523
   },
   "cagr_adjusted": {
-    "1y": 0.04055055312580391,
-    "3y": 0.045104863515473825,
-    "5y": 0.038799286344804784,
-    "10y": 0.045523964815152196,
-    "all": 0.03169068889617299
+    "1y": 0.04029400116242576,
+    "3y": 0.04512457460150654,
+    "5y": 0.0388090290063583,
+    "10y": 0.04551862141291396,
+    "all": 0.03169220579922949
   },
   "simplereturn": {
-    "1d": 0.00036110369117237084,
-    "1m": 0.004215868349703555,
-    "3m": 0.013364133811709422,
-    "ytd": 0.03456196444558124,
-    "1y": 0.04055055312580391,
-    "3y": 0.14150970021618758,
-    "5y": 0.20964577526288708,
-    "10y": 0.5607736299017527,
-    "all": 1.02231
+    "1d": 0.00011867616735328212,
+    "1m": 0.004335044840154456,
+    "3m": 0.013068130591146199,
+    "ytd": 0.034684742294410986,
+    "1y": 0.04029400116242576,
+    "3y": 0.14157428939110006,
+    "5y": 0.20970250128593126,
+    "10y": 0.5606938646377504,
+    "all": 1.0225499999999998
   },
   "changesvalue": {
-    "1d": 0.7300000000000182,
-    "1m": 8.490000000000009,
-    "3m": 26.669999999999845,
-    "ytd": 67.55999999999995,
-    "1y": 78.80999999999995,
-    "3y": 250.70000000000005,
-    "5y": 350.49,
-    "10y": 726.5999999999999,
-    "all": 1022.31
+    "1d": 0.2400000000000091,
+    "1m": 8.730000000000018,
+    "3m": 26.089999999999918,
+    "ytd": 67.79999999999995,
+    "1y": 78.33999999999992,
+    "3y": 250.82999999999993,
+    "5y": 350.6099999999999,
+    "10y": 726.6199999999999,
+    "all": 1022.55
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -264,9 +264,9 @@
     "quota_limit": 3
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2004-04-19",
-    "value": 2022.31
+    "value": 2022.55
   },
   "trade": null
 }

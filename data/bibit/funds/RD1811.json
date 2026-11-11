@@ -66,15 +66,15 @@
     },
     {
       "name": "Corp. Bond",
-      "percentage": 75
+      "percentage": 86
     },
     {
       "name": "Money Market",
-      "percentage": 14
+      "percentage": 6
     },
     {
       "name": "Cash",
-      "percentage": 5
+      "percentage": 2
     }
   ],
   "holding": [
@@ -209,9 +209,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2018-01-26",
-    "value": 1561.2257
+    "value": 1561.4594
   },
   "trade": null
 }

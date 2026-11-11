@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18055,
+    "exchange_rate": 18007,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -67,9 +67,9 @@
   "holding": [
     {
       "symbol": "",
-      "name": "Bank Jago USD",
+      "name": "Bank Jago - USD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -77,9 +77,29 @@
     },
     {
       "symbol": "",
-      "name": "Bank Tabungan Negara USD",
+      "name": "Bank Rakyat Indonesia - USD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Tabungan Negara (Persero) - USD",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Victoria - USD",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -89,7 +109,7 @@
       "symbol": "",
       "name": "Bank J Trust USD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -97,29 +117,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Rakyat Indonesia USD",
+      "name": "Bank Syariah Indonesia - USD",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Bank Victoria USD",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Bank Syariah Indonesia USD",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -129,7 +129,7 @@
       "symbol": "",
       "name": "Bank Mandiri USD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -139,7 +139,7 @@
       "symbol": "",
       "name": "Bank CTBC Indonesia USD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -147,9 +147,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Danamon Indonesia USD",
+      "name": "Bank Aladin Syariah USD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -159,7 +159,7 @@
       "symbol": "",
       "name": "Bank Maybank Indonesia USD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -190,7 +190,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 5902161.04079,
+    "value": 5899000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -202,23 +202,23 @@
     "percentage": 0.034
   },
   "cagr": {
+    "1y": 0.02417011282109649,
+    "3y": null,
+    "5y": null,
+    "10y": null,
+    "all": 0.02417011282109649
+  },
+  "cagr_adjusted": {
     "1y": 0.024283359288592266,
     "3y": null,
     "5y": null,
     "10y": null,
     "all": 0.024283359288592266
   },
-  "cagr_adjusted": {
-    "1y": 0.02439767190897446,
-    "3y": null,
-    "5y": null,
-    "10y": null,
-    "all": 0.02439767190897446
-  },
   "simplereturn": {
-    "1d": 0.00019721920915105606,
+    "1d": 0,
     "1m": 0.0020746887966804906,
-    "3m": 0.006349836293283007,
+    "3m": 0.006150183513540242,
     "ytd": null,
     "1y": 0.01429999999999998,
     "3y": null,
@@ -227,9 +227,9 @@
     "all": 0.01429999999999998
   },
   "changesvalue": {
-    "1d": 0.00019999999999997797,
+    "1d": 0,
     "1m": 0.0020999999999999908,
-    "3m": 0.006399999999999961,
+    "3m": 0.006199999999999983,
     "ytd": null,
     "1y": 0.01429999999999998,
     "3y": null,
@@ -253,7 +253,7 @@
     "all": -0.00019999999999997797
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2026-04-08",
     "value": 1.0143
   },

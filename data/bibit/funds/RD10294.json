@@ -61,19 +61,19 @@
   "asset": [
     {
       "name": "Surat Utang Negara",
-      "percentage": 27.45
+      "percentage": 26.99
     },
     {
       "name": "Surat Utang Korporasi",
-      "percentage": 67.57
+      "percentage": 67.63
     },
     {
       "name": "Deposito",
-      "percentage": 1.98
+      "percentage": 2.97
     },
     {
       "name": "Kas/Setara Kas",
-      "percentage": 3
+      "percentage": 2.41
     }
   ],
   "investment_manager": {
@@ -150,9 +150,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2026-02-11",
-    "value": 956.9206
+    "value": 957.6204
   },
   "trade": null
 }

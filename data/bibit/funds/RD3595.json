@@ -19,6 +19,7 @@
   },
   "released_date": "2020-03-17",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,19 +61,19 @@
   "asset": [
     {
       "name": "Sukuk",
-      "percentage": 16.08
+      "percentage": 14.91
     },
     {
       "name": "Likuiditas",
-      "percentage": 83.92
+      "percentage": 85.09
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "BANK ALADIN SYARIAH-TD",
+      "name": "BANK SYARIAH INDONESIA-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -82,7 +83,7 @@
       "symbol": "",
       "name": "BANK SYARIAH NASIONAL-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -90,9 +91,19 @@
     },
     {
       "symbol": "",
-      "name": "BPD NUSA TENGGARA BARAT UNIT LISAHA SYARIAH-TD",
+      "name": "BANK ALADIN SYARIAH-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD NUSA TENGGARA BARAT UNIT USAHA SYARIAH-TD",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,7 +113,7 @@
       "symbol": "",
       "name": "BPD RIAU KEPRI SYARIAH-TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -110,9 +121,29 @@
     },
     {
       "symbol": "",
-      "name": "BPD SUMSEL BABEL SYARIAH TO",
+      "name": "BPD SUMATERA UTARA SYARIAH - TD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "SUKUK JARAH BERKELANJUTAN I TOWER BERSAMA INFRASTRUCTURE TAHAP V TAHUN 2026 SERI A",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "BPD SUMSEL BABEL SYARIAH-TD",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -122,7 +153,7 @@
       "symbol": "PBS003",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6020,
       "product_type": "FR",
@@ -130,39 +161,9 @@
     },
     {
       "symbol": "",
-      "name": "BANK ACEH SYARIAH-TD",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "SUKUK MUDHARABAH BERKELANJUTAN I DIAN SWASTATIKA SENTOSA TAHAP II TAHUN 2024 SERI B",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "SUKUK WAKALAH BERKELANJUTANI MEDCO POWER INDONESIA TAHAP I TAHUN 2022 SERI B",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "SUKUK MUDHARABAH BERWAWASAN SOSIAL BERKELANJUTAN I PEGADAIAN TAHAP III TAHUN 2025 A",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -191,7 +192,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 1128227637208.96,
+    "value": 2107340000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -203,40 +204,40 @@
     "percentage": 0.0575
   },
   "cagr": {
-    "1y": 0.04816127391774194,
-    "3y": 0.05082741478035535,
-    "5y": 0.04375954816707295,
+    "1y": 0.04787964956036195,
+    "3y": 0.05083515514931802,
+    "5y": 0.04377234900611393,
     "10y": null,
-    "all": 0.04247563186713976
+    "all": 0.04247915054621609
   },
   "cagr_adjusted": {
-    "1y": 0.04816127391774194,
-    "3y": 0.05082741478035535,
-    "5y": 0.04375954816707295,
+    "1y": 0.04787964956036195,
+    "3y": 0.05083515514931802,
+    "5y": 0.04377234900611393,
     "10y": null,
-    "all": 0.04249348513396001
+    "all": 0.0424969979742289
   },
   "simplereturn": {
-    "1d": 0.00040195364640216447,
-    "1m": 0.004577025009900426,
-    "3m": 0.014356900078436041,
-    "ytd": 0.040964977351283904,
-    "1y": 0.04816127391774194,
-    "3y": 0.16036383149042477,
-    "5y": 0.2388031667621453,
+    "1d": 0.00013645770948156333,
+    "1m": 0.004714107289730984,
+    "3m": 0.014019661345241907,
+    "ytd": 0.04110702504774366,
+    "1y": 0.04787964956036195,
+    "3y": 0.16038947331386555,
+    "5y": 0.23887913305599628,
     "10y": null,
-    "all": 0.3190899999999999
+    "all": 0.31926999999999994
   },
   "changesvalue": {
-    "1d": 0.5299999999999727,
-    "1m": 6.009999999999991,
-    "3m": 18.669999999999845,
-    "ytd": 51.909999999999854,
-    "1y": 60.6099999999999,
-    "3y": 182.29999999999995,
-    "5y": 254.27999999999997,
+    "1d": 0.18000000000006366,
+    "1m": 6.190000000000055,
+    "3m": 18.24000000000001,
+    "ytd": 52.08999999999992,
+    "1y": 60.27999999999997,
+    "3y": 182.3499999999999,
+    "5y": 254.37999999999988,
     "10y": null,
-    "all": 319.0899999999999
+    "all": 319.27
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -258,12 +259,12 @@
     "quota_limit": 3
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2020-03-16",
-    "value": 1319.09
+    "value": 1319.27
   },
   "trade": {
-    "total_trades": 2606,
+    "total_trades": 3251,
     "period": "1d"
   }
 }

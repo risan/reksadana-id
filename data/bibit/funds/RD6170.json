@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,15 +60,15 @@
   "asset": [
     {
       "name": "Deposito",
-      "percentage": 9.46
+      "percentage": 9.94
     },
     {
       "name": "Kas&Setara",
-      "percentage": 8.3
+      "percentage": 2.11
     },
     {
       "name": "Saham",
-      "percentage": 82.24
+      "percentage": 87.95
     }
   ],
   "investment_manager": {
@@ -146,9 +145,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2023-08-28",
-    "value": 1168.88
+    "value": 1169.39
   },
   "trade": null
 }

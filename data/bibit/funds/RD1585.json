@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Money Market",
-      "percentage": 48.9
+      "percentage": 41.9
     },
     {
       "name": "Fixed Income < 1 year",
-      "percentage": 51.1
+      "percentage": 58.1
     }
   ],
   "holding": [
@@ -194,9 +195,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2018-01-26",
-    "value": 1659.0988
+    "value": 1659.3755
   },
   "trade": null
 }
