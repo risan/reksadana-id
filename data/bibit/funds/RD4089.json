@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Reksa Dana",
-      "percentage": 7.92
+      "percentage": 8.18
     },
     {
       "name": "Saham",
-      "percentage": 85.11
+      "percentage": 86.92
     },
     {
       "name": "Pasar Uang",
-      "percentage": 6.97
+      "percentage": 4.9
     }
   ],
   "investment_manager": {
@@ -146,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "first_date": "2021-12-16",
-    "value": 748.75
+    "value": 745.38
   },
   "trade": null
 }

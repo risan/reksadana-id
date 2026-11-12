@@ -70,7 +70,7 @@
       "symbol": "",
       "name": "PT ALLO BANK INDONESIA (PASAR UANG)",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -80,7 +80,37 @@
       "symbol": "",
       "name": "PT BANK ALADIN SYARIAH (PASAR UANG)",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK JAKARTA (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK RAYA INDONESIA TBK (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT BANK SMBC INDONESIA, TBK. (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -90,17 +120,7 @@
       "symbol": "",
       "name": "PT. BANK BCA SYARIAH KCU JATINEGARA (PASAR UANG)",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "PT. BANK JABAR BANTEN SYARIAH (PASAR UANG)",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -110,7 +130,17 @@
       "symbol": "",
       "name": "PT. BANK MEGA SYARIAH (PASAR UANG)",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT. BANK MEGA, TBK (PASAR UANG)",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -120,7 +150,7 @@
       "symbol": "",
       "name": "PT. BANK RAKYAT INDONESIA (PERSERO), TBK (PASAR UANG)",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -128,39 +158,9 @@
     },
     {
       "symbol": "",
-      "name": "PT. BANK SUMUT (BPD SUMUT) (PASAR UANG)",
+      "name": "PT. BANK VICTORIA INTERNATIONAL TBK (PASAR UANG)",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "PT. BANK TABUNGAN NEGARA (PERSERO), TBK (PASAR UANG)",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "PT. BANK TABUNGAN PENSIUNAN NASIONAL SYARIAH (PASAR UANG)",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "PT. BPD DKI (PASAR UANG)",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -205,40 +205,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.03072327407065334,
-    "3y": 0.033772561167040305,
-    "5y": 0.02777214345762946,
-    "10y": 0.026663650728650623,
-    "all": 0.028186590674521117
+    "1y": 0.03077988701054135,
+    "3y": 0.033803919551463,
+    "5y": 0.027782598323347063,
+    "10y": 0.026670188351567425,
+    "all": 0.028187780090081827
   },
   "cagr_adjusted": {
-    "1y": 0.03072327407065334,
-    "3y": 0.033772561167040305,
-    "5y": 0.02777214345762946,
-    "10y": 0.026663650728650623,
-    "all": 0.028192694954078945
+    "1y": 0.03077988701054135,
+    "3y": 0.033803919551463,
+    "5y": 0.027782598323347063,
+    "10y": 0.026670188351567425,
+    "all": 0.02819388332718553
   },
   "simplereturn": {
-    "1d": 0.00009801450614688179,
-    "1m": 0.003293978831445221,
-    "3m": 0.01000459575069823,
-    "ytd": 0.02766087550807539,
-    "1y": 0.03072327407065334,
-    "3y": 0.10477796167112663,
-    "5y": 0.146790832095693,
-    "10y": 0.30101367043415705,
-    "all": 0.4285142851428514
+    "1d": 0.00009100455022759135,
+    "1m": 0.0033852831487348745,
+    "3m": 0.009989395546129431,
+    "ytd": 0.027754397323837443,
+    "1y": 0.03077988701054135,
+    "3y": 0.10487850149262967,
+    "5y": 0.14684916111423307,
+    "10y": 0.301096519189086,
+    "all": 0.42864428644286456
   },
   "changesvalue": {
-    "1d": 0.14000000000010004,
-    "1m": 4.690000000000055,
-    "3m": 14.150000000000091,
-    "ytd": 38.450000000000045,
-    "1y": 42.57999999999993,
-    "3y": 135.48000000000002,
-    "5y": 182.8499999999999,
-    "10y": 330.51,
-    "all": 428.51
+    "1d": 0.13000000000010914,
+    "1m": 4.820000000000164,
+    "3m": 14.13000000000011,
+    "ytd": 38.580000000000155,
+    "1y": 42.66000000000008,
+    "3y": 135.61000000000013,
+    "5y": 182.93000000000006,
+    "10y": 330.6100000000001,
+    "all": 428.6400000000001
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -260,9 +260,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "first_date": "2014-01-15",
-    "value": 1428.5
+    "value": 1428.63
   },
   "trade": null
 }

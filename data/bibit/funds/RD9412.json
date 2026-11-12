@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Lainnya",
-      "percentage": 1.63
+      "percentage": 1.52
     },
     {
       "name": "Saham",
-      "percentage": 98.37
+      "percentage": 98.48
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "first_date": "2025-06-04",
-    "value": 713.7528
+    "value": 717.5793
   },
   "trade": null
 }

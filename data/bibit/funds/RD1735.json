@@ -18,11 +18,10 @@
   },
   "released_date": "2015-12-04",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18007,
+    "exchange_rate": 18089,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,33 +60,23 @@
   "asset": [
     {
       "name": "Efek Syariah Bersifat Ekuitas Luar Negeri",
-      "percentage": 88.02
+      "percentage": 96.44
     },
     {
       "name": "Pasar Uang Syariah",
-      "percentage": 11.04
+      "percentage": 2.79
     },
     {
       "name": "Efek Syariah Bersifat Ekuitas",
-      "percentage": 0.94
+      "percentage": 0.77
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Samsung Electronics Co Ltd",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "SK hynix Inc",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -95,9 +84,9 @@
     },
     {
       "symbol": "",
-      "name": "MediaTek Inc",
+      "name": "Samsung Electronics Co Ltd Common Stock",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -107,7 +96,7 @@
       "symbol": "",
       "name": "BHP Group Ltd",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -115,9 +104,9 @@
     },
     {
       "symbol": "",
-      "name": "Delta Electronics Inc",
+      "name": "MediaTek Inc",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -127,27 +116,7 @@
       "symbol": "",
       "name": "Samsung Electronics Co Ltd Preffered Stock",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Elite Material Co Ltd",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Advantech Co Ltd",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -157,7 +126,7 @@
       "symbol": "",
       "name": "Samsung Biologics Co Ltd",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -165,9 +134,39 @@
     },
     {
       "symbol": "",
-      "name": "NAURA Technology Group Co Ltd",
+      "name": "Delta Electronics Inc",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Telstra Group Ltd",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Elite Material Co Ltd",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Santos Ltd",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -202,7 +201,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 379582509.11212,
+    "value": 379373234.38,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -214,40 +213,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.13068218144619914,
-    "3y": 0.15305477581673532,
-    "5y": 0.03245123633741054,
-    "10y": 0.04912449613375869,
-    "all": 0.042507709907320335
+    "1y": 0.15519542421353694,
+    "3y": 0.16574202720359676,
+    "5y": 0.038767670272819466,
+    "10y": 0.05031197039108193,
+    "all": 0.04528866448164193
   },
   "cagr_adjusted": {
-    "1y": 0.13068218144619914,
-    "3y": 0.15305477581673532,
-    "5y": 0.03245123633741054,
-    "10y": 0.04912449613375869,
-    "all": 0.04251930768073087
+    "1y": 0.15519542421353694,
+    "3y": 0.16574202720359676,
+    "5y": 0.038767670272819466,
+    "10y": 0.05031197039108193,
+    "all": 0.04530103405943042
   },
   "simplereturn": {
-    "1d": 0.00786459223798941,
-    "1m": -0.14275327193407672,
-    "3m": -0.12080536912751672,
-    "ytd": 0.10400149822086258,
-    "1y": 0.13068218144619914,
-    "3y": 0.5330270457697643,
-    "5y": 0.17313432835820897,
-    "10y": 0.6153635367190353,
-    "all": 0.5324956672443675
+    "1d": 0.02782018659881258,
+    "1m": -0.11890450799806107,
+    "3m": -0.10325604341391215,
+    "ytd": 0.13471502590673579,
+    "1y": 0.15519542421353694,
+    "3y": 0.5841903433850446,
+    "5y": 0.20946170736575964,
+    "10y": 0.6337407873449579,
+    "all": 0.5751299826689777
   },
   "changesvalue": {
-    "1d": 0.013800000000000034,
-    "1m": -0.2945000000000002,
-    "3m": -0.24299999999999988,
-    "ytd": 0.16659999999999986,
-    "1y": 0.20439999999999992,
-    "3y": 0.6149,
-    "5y": 0.2609999999999999,
-    "10y": 0.6737,
-    "all": 0.6145
+    "1d": 0.04920000000000013,
+    "1m": -0.24530000000000007,
+    "3m": -0.20930000000000004,
+    "ytd": 0.2158,
+    "1y": 0.2442000000000002,
+    "3y": 0.6703000000000001,
+    "5y": 0.3148000000000002,
+    "10y": 0.7051000000000001,
+    "all": 0.6637000000000002
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -265,9 +264,9 @@
     "all": -0.3994656358365073
   },
   "nav": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "first_date": "2016-08-12",
-    "value": 1.7685
+    "value": 1.8177
   },
   "trade": null
 }

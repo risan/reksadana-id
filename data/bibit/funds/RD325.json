@@ -60,12 +60,12 @@
   },
   "asset": [
     {
-      "name": "Deposits",
-      "percentage": 45.45
+      "name": "Obligasi",
+      "percentage": 41.93
     },
     {
-      "name": "Bonds",
-      "percentage": 53.2
+      "name": "Deposito",
+      "percentage": 46.74
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "first_date": "2015-03-19",
-    "value": 2437.7
+    "value": 2438.14
   },
   "trade": null
 }

@@ -19,6 +19,7 @@
   },
   "released_date": "2016-04-06",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,12 +61,12 @@
   },
   "asset": [
     {
-      "name": "Deposito dan Kas",
-      "percentage": 52.04
+      "name": "Obligasi (<1 tahun)",
+      "percentage": 49.08
     },
     {
-      "name": "Obligasi (<1thn)",
-      "percentage": 47.96
+      "name": "Deposito dan Kas",
+      "percentage": 50.92
     }
   ],
   "holding": [
@@ -73,7 +74,17 @@
       "symbol": "",
       "name": "Bank BJB Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Bank Hibank",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +94,7 @@
       "symbol": "",
       "name": "Bank NTB Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +104,7 @@
       "symbol": "",
       "name": "Bank Riau Kepri",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +114,7 @@
       "symbol": "",
       "name": "Bank Sumsel Babel Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +124,7 @@
       "symbol": "",
       "name": "Bank Sumut Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +134,7 @@
       "symbol": "",
       "name": "PT Adaro Indonesia tahun 2026 seri A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -131,9 +142,9 @@
     },
     {
       "symbol": "",
-      "name": "PT Astra Sedaya Finance tahun 2026 seri A",
+      "name": "PT Federal International Finance",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +154,7 @@
       "symbol": "",
       "name": "PT Kereta Api Indonesia (Persero)",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,17 +164,7 @@
       "symbol": "",
       "name": "PT Pegadaian (Persero) tahun 2026 seri A",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "PT Sarana Multigriya Finansial tahun 2026",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,7 +197,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 293541367750.6,
+    "value": 293540000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -208,40 +209,40 @@
     "percentage": 0.0775
   },
   "cagr": {
-    "1y": 0.049221445685823983,
-    "3y": 0.050504964518417905,
-    "5y": 0.04667529825714323,
-    "10y": 0.04793366290926926,
-    "all": 0.048586745030987366
+    "1y": 0.04923288644329071,
+    "3y": 0.050558723407253314,
+    "5y": 0.04669484184864858,
+    "10y": 0.047956835578445434,
+    "all": 0.04858907222931719
   },
   "cagr_adjusted": {
-    "1y": 0.049221445685823983,
-    "3y": 0.050504964518417905,
-    "5y": 0.04667529825714323,
-    "10y": 0.04793366290926926,
-    "all": 0.048599603320210294
+    "1y": 0.04923288644329071,
+    "3y": 0.050558723407253314,
+    "5y": 0.04669484184864858,
+    "10y": 0.047956835578445434,
+    "all": 0.0486019278258456
   },
   "simplereturn": {
-    "1d": 0.00015421978908403133,
-    "1m": 0.004833928055065773,
-    "3m": 0.013987445665863074,
-    "ytd": 0.04194049481074047,
-    "1y": 0.049221445685823983,
-    "3y": 0.15929597348929714,
-    "5y": 0.25620313895196856,
-    "10y": 0.5971213482060937,
-    "all": 0.6537227627723723
+    "1d": 0.00015353084975355813,
+    "1m": 0.004988201061901343,
+    "3m": 0.013989806356577317,
+    "ytd": 0.04210046482030161,
+    "1y": 0.04923288644329071,
+    "3y": 0.15947396118522272,
+    "5y": 0.2563204228788889,
+    "10y": 0.5974745504066137,
+    "all": 0.6539766602333976
   },
   "changesvalue": {
-    "1d": 0.25499999999988177,
-    "1m": 7.955600000000004,
-    "3m": 22.8125,
-    "ytd": 66.56680000000006,
-    "1y": 77.58079999999995,
-    "3y": 227.23620000000005,
-    "5y": 337.2808,
-    "10y": 618.2892999999999,
-    "all": 653.7293
+    "1d": 0.2538999999999305,
+    "1m": 8.209499999999935,
+    "3m": 22.819799999999987,
+    "ytd": 66.82069999999999,
+    "1y": 77.60989999999993,
+    "3y": 227.49009999999998,
+    "5y": 337.4554999999998,
+    "10y": 618.6131999999998,
+    "all": 653.9831999999999
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -259,9 +260,9 @@
     "all": -0.01091955644592435
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "first_date": "2016-04-07",
-    "value": 1653.7393
+    "value": 1653.9932
   },
   "trade": null
 }

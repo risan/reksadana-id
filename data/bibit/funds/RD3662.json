@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Obligasi Pemerintah",
-      "percentage": 95.07
+      "percentage": 98.69
     },
     {
       "name": "Pasar Uang",
-      "percentage": 4.93
+      "percentage": 1.31
     }
   ],
   "holding": [
@@ -73,7 +73,7 @@
       "symbol": "",
       "name": "INDOGB 5 7/8 03/15/31",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +83,7 @@
       "symbol": "",
       "name": "INDOGB 6 1/2 02/15/31",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +93,7 @@
       "symbol": "",
       "name": "INDOGB 6 3/8 04/15/32",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,17 +103,7 @@
       "symbol": "",
       "name": "INDOGB 6 3/4 07/15/35",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "INDOGB 6 1/2 07/15/30",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +113,7 @@
       "symbol": "",
       "name": "INDOGB 7 1/8 08/15/40",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +123,17 @@
       "symbol": "",
       "name": "INDOGB 7 09/15/30",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "INDOGB 6 1/2 07/15/30",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +143,7 @@
       "symbol": "",
       "name": "INDOGB 9 03/15/29",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,7 +153,7 @@
       "symbol": "",
       "name": "INDOGB 6 1/2 04/15/36",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -161,9 +161,9 @@
     },
     {
       "symbol": "",
-      "name": "INDOGB 8 1/4 05/15/29",
+      "name": "INDOGB 6 5/8 02/15/34",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -192,7 +192,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 2048296262644.64,
+    "value": 10033811875182.2,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -204,44 +204,44 @@
     "percentage": 0.0756
   },
   "cagr": {
-    "1y": -0.1022825574921844,
-    "3y": -0.030386005984094244,
-    "5y": -0.02247813922780295,
+    "1y": -0.09683809786306752,
+    "3y": -0.030247262422176235,
+    "5y": -0.022300950570935507,
     "10y": null,
-    "all": 0.007144815197515975
+    "all": 0.007207290448310477
   },
   "cagr_adjusted": {
-    "1y": -0.03632919239089205,
-    "3y": 0.032512845504083954,
-    "5y": 0.02929051556225759,
+    "1y": -0.030484740050599757,
+    "3y": 0.03266058935967542,
+    "5y": 0.029477087966720106,
     "10y": null,
-    "all": 0.047301216974830806
+    "all": 0.047349218994166
   },
   "simplereturn": {
-    "1d": 0.0065812716892446055,
-    "1m": -0.02011512002740068,
-    "3m": -0.008819466050325686,
-    "ytd": -0.04143772248086752,
-    "1y": -0.03632919239089205,
-    "3y": 0.1007441607258508,
-    "5y": 0.15528691602618228,
+    "1d": 0.00042933605564177135,
+    "1m": -0.019694420118050004,
+    "3m": -0.008107738707578194,
+    "ytd": -0.041026177133550834,
+    "1y": -0.030484740050599757,
+    "3y": 0.10121674988208729,
+    "5y": 0.15633435020178243,
     "10y": null,
-    "all": 0.35666497835870614
+    "all": 0.357247443549342
   },
   "changesvalue": {
-    "1d": 6.88940682973498,
-    "1m": -21.630593170265,
-    "3m": -9.476163492432988,
-    "ytd": -48.105052028039154,
-    "1y": -42.41614857598597,
-    "3y": 115.83462856097594,
-    "5y": 182.35497835870615,
+    "1d": 0.4499999999998181,
+    "1m": -21.178197729743943,
+    "3m": -8.708927532745065,
+    "ytd": -47.62728903433913,
+    "1y": -35.393088046146886,
+    "3y": 116.37800684692502,
+    "5y": 183.49744354934205,
     "10y": null,
-    "all": 356.6649783587061
+    "all": 357.24744354934205
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
-    "1y": -0.10378998758083169,
+    "1y": -0.10067812051464975,
     "3y": -0.12227590719210846,
     "5y": -0.13969645147498944,
     "10y": -0.13969645147498944,
@@ -255,9 +255,9 @@
     "all": -0.05576947414760047
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "first_date": "2020-04-06",
-    "value": 1048.13
+    "value": 1048.58
   },
   "trade": null
 }

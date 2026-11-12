@@ -1,6 +1,6 @@
 {
   "id": 11149,
-  "custodian_bank_id": null,
+  "custodian_bank_id": 5,
   "symbol": "RD11149",
   "name": "Grow Amanah Sukuk Syariah",
   "type": "Obligasi",
@@ -17,7 +17,7 @@
     "color": null,
     "icon_url": null
   },
-  "released_date": null,
+  "released_date": "2026-11-23",
   "is_top_product": 0,
   "is_featured_product": 0,
   "is_cash_sweepable": 0,
@@ -62,11 +62,11 @@
   "holding": [],
   "exitload": [],
   "investment_manager": {
-    "name": "",
+    "name": "PT Grow Investments Indonesia",
     "ojkCode": "AYR02"
   },
   "custodian_bank": {
-    "name": "",
+    "name": "BUT DEUTSCHE BANK AG",
     "ojkCode": "DBJK1"
   },
   "sharia": false,

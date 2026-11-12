@@ -19,6 +19,7 @@
   },
   "released_date": "2017-11-08",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,19 +62,29 @@
   "asset": [
     {
       "name": "Sukuk",
-      "percentage": 97.39
+      "percentage": 97.81
     },
     {
       "name": "Deposito Syariah dan Kas",
-      "percentage": 2.61
+      "percentage": 2.19
     }
   ],
   "holding": [
     {
+      "symbol": "PBS003",
+      "name": "FR Syariah",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 6020,
+      "product_type": "FR",
+      "serie_id": null
+    },
+    {
       "symbol": "",
       "name": "SBSN RI Seri PBS004",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +94,7 @@
       "symbol": "",
       "name": "SBSN RI Seri PBS012",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +104,7 @@
       "symbol": "",
       "name": "SBSN RI Seri PBS021",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +114,7 @@
       "symbol": "",
       "name": "SBSN RI Seri PBS022",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +124,7 @@
       "symbol": "",
       "name": "SBSN RI Seri PBS023",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +134,7 @@
       "symbol": "",
       "name": "SBSN RI Seri PBS025",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +144,7 @@
       "symbol": "",
       "name": "SBSN RI Seri PBS029",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,19 +154,9 @@
       "symbol": "PBS030",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6385,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
-      "symbol": "PBS034",
-      "name": "FR Syariah",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 6024,
       "product_type": "FR",
       "serie_id": null
     },
@@ -163,7 +164,7 @@
       "symbol": "PBS037",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6077,
       "product_type": "FR",
@@ -196,7 +197,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 247742773280.96,
+    "value": 247740000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -208,40 +209,40 @@
     "percentage": 0.0704
   },
   "cagr": {
-    "1y": -0.020023579687253212,
-    "3y": 0.03475691800412517,
-    "5y": 0.030067988516193633,
+    "1y": -0.019673696889558223,
+    "3y": 0.034784322899314324,
+    "5y": 0.03015692811438253,
     "10y": null,
-    "all": 0.04555495501894713
+    "all": 0.04555001397623393
   },
   "cagr_adjusted": {
-    "1y": -0.020023579687253212,
-    "3y": 0.03475691800412517,
-    "5y": 0.030067988516193633,
+    "1y": -0.019673696889558223,
+    "3y": 0.034784322899314324,
+    "5y": 0.03015692811438253,
     "10y": null,
-    "all": 0.04556912092239318
+    "all": 0.04556417400336166
   },
   "simplereturn": {
-    "1d": 0.0008180469011322966,
-    "1m": -0.006501632340987329,
-    "3m": -0.0008292742990445578,
-    "ytd": -0.023366031124461784,
-    "1y": -0.020023579687253212,
-    "3y": 0.1079368719234437,
-    "5y": 0.15965673318373974,
+    "1d": 0.00007945524360430944,
+    "1m": -0.006422693686164438,
+    "3m": 0.00023820272229957418,
+    "ytd": -0.023288432434552586,
+    "1y": -0.019673696889558223,
+    "3y": 0.1080249033175007,
+    "5y": 0.1601574633170575,
     "10y": null,
-    "all": 0.49394222124887643
+    "all": 0.4940609227919963
   },
   "changesvalue": {
-    "1d": 1.2210999999999785,
-    "1m": -9.776499999999942,
-    "3m": -1.2399000000000342,
-    "ytd": -35.74219999999991,
-    "1y": -30.52489999999989,
-    "3y": 145.54020000000014,
-    "5y": 205.6771000000001,
+    "1d": 0.11869999999998981,
+    "1m": -9.657799999999952,
+    "3m": 0.35580000000004475,
+    "ytd": -35.62349999999992,
+    "1y": -29.983199999999897,
+    "3y": 145.65890000000013,
+    "5y": 206.24950000000013,
     "10y": null,
-    "all": 493.9358000000001
+    "all": 494.0545000000001
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -259,9 +260,9 @@
     "all": -0.0571214738164173
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "first_date": "2017-11-09",
-    "value": 1493.9228
+    "value": 1494.0415
   },
   "trade": null
 }

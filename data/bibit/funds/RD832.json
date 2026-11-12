@@ -19,6 +19,7 @@
   },
   "released_date": "2018-01-09",
   "is_top_product": 1,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Sukuk (<1 tahun)",
-      "percentage": 67.23
+      "percentage": 66.82
     },
     {
       "name": "Deposito Syariah dan Kas",
-      "percentage": 32.77
+      "percentage": 33.18
     }
   ],
   "holding": [
@@ -73,7 +74,7 @@
       "symbol": "",
       "name": "Bank BJB Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -83,7 +84,7 @@
       "symbol": "",
       "name": "Bank Riau Kepri",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -93,7 +94,7 @@
       "symbol": "",
       "name": "Bank Sumsel Babel Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -103,7 +104,7 @@
       "symbol": "",
       "name": "Bank Sumut Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -113,7 +114,7 @@
       "symbol": "",
       "name": "PT Dian Swastatika Sentosa 2024 seri B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -123,7 +124,7 @@
       "symbol": "",
       "name": "PT Indah Kiat Pulp & Paper 2022 seri C",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -133,7 +134,7 @@
       "symbol": "",
       "name": "PT Pegadaian (Persero) 2026 seri A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -143,7 +144,7 @@
       "symbol": "",
       "name": "PT Permodalan Nasional Madani 2026 seri A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -153,7 +154,7 @@
       "symbol": "",
       "name": "PT Sarana Multigriya Finansial II 2026",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -163,7 +164,7 @@
       "symbol": "",
       "name": "PT Sarana Multi Infrastruktur 2025",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -196,7 +197,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 2873501589114.31,
+    "value": 2873500000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -208,40 +209,40 @@
     "percentage": 0.0717
   },
   "cagr": {
-    "1y": 0.04581339517564631,
-    "3y": 0.05002978383010381,
-    "5y": 0.04671533556894869,
+    "1y": 0.04583862534710503,
+    "3y": 0.05008436935133109,
+    "5y": 0.046706841967224744,
     "10y": null,
-    "all": 0.04731406077267519
+    "all": 0.04731753007343609
   },
   "cagr_adjusted": {
-    "1y": 0.04581339517564631,
-    "3y": 0.05002978383010381,
-    "5y": 0.04671533556894869,
+    "1y": 0.04583862534710503,
+    "3y": 0.05008436935133109,
+    "5y": 0.046706841967224744,
     "10y": null,
-    "all": 0.047329068978174016
+    "all": 0.04733253475288168
   },
   "simplereturn": {
-    "1d": 0.00015618606133105395,
-    "1m": 0.004806523170065802,
-    "3m": 0.0133683618712932,
-    "ytd": 0.039119443611992155,
-    "1y": 0.04581339517564631,
-    "3y": 0.1577235128123855,
-    "5y": 0.2564434180755606,
+    "1d": 0.0001559623157301182,
+    "1m": 0.004963235122279919,
+    "3m": 0.013391290190720273,
+    "ytd": 0.039281507086738054,
+    "1y": 0.04583862534710503,
+    "3y": 0.1579040740524189,
+    "5y": 0.2563924416714296,
     "10y": null,
-    "all": 0.5048807976159522
+    "all": 0.5051155023100462
   },
   "changesvalue": {
-    "1d": 0.23499999999989996,
-    "1m": 7.198499999999967,
-    "3m": 19.85199999999986,
-    "ytd": 56.65269999999987,
-    "1y": 65.92219999999998,
-    "3y": 205.01469999999995,
-    "5y": 307.144,
+    "1d": 0.23469999999997526,
+    "1m": 7.4331999999999425,
+    "3m": 19.88869999999997,
+    "ytd": 56.88739999999984,
+    "1y": 65.96720000000005,
+    "3y": 205.24939999999992,
+    "5y": 307.14329999999995,
     "10y": null,
-    "all": 504.87069999999994
+    "all": 505.1053999999999
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -263,12 +264,12 @@
     "quota_limit": 3
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "first_date": "2018-01-10",
-    "value": 1504.8507
+    "value": 1505.0854
   },
   "trade": {
-    "total_trades": 12552,
+    "total_trades": 10080,
     "period": "1d"
   }
 }

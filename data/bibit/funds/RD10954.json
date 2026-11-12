@@ -59,11 +59,11 @@
   "asset": [
     {
       "name": "Lainnya",
-      "percentage": 1.93
+      "percentage": 1.91
     },
     {
       "name": "Emas",
-      "percentage": 98.07
+      "percentage": 98.09
     }
   ],
   "investment_manager": {
@@ -140,9 +140,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "first_date": "2026-08-06",
-    "value": 234.5842
+    "value": 233.2791
   },
   "trade": null
 }

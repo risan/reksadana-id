@@ -60,7 +60,7 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 98.85
+      "percentage": 100
     }
   ],
   "investment_manager": {
@@ -138,9 +138,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "first_date": "2023-06-13",
-    "value": 868.35
+    "value": 869.08
   },
   "trade": null
 }

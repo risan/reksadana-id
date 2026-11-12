@@ -745,7 +745,7 @@ BRK2617,Insight Generate Balanced Fund,,"Insight Investments Management, PT",Cam
 BRK2621,Batavia Proteksi Cemerlang 68,,"Batavia Prosperindo Aset Manajemen, PT",Terproteksi,IDR,,2017-05-08,,2621,,,Reksa Dana Terproteksi Batavia Proteksi Cemerlang 68
 BRK2622,Mandiri Seri 87,,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",Terproteksi,IDR,,2017-05-24,,2622,,,
 BRK2624,Reksa Dana Terproteksi Victoria 2,,"Victoria Manajemen Investasi, PT",Terproteksi,IDR,,2017-05-24,,2624,,,
-BRK2625,Insight Terproteksi 10,,"Insight Investments Management, PT",Terproteksi,,,2017-05-29,,2625,,,
+BRK2625,Insight Terproteksi 10,,"Insight Investments Management, PT",Terproteksi,IDR,,2017-05-29,,2625,,,
 BRK2626,Jasa Capital Saham Progresif,,"Jasa Capital Asset Management, PT",Saham,IDR,,2017-05-10,,2626,14765,,REKSA DANA JASA CAPITAL SAHAM PROGRESIF
 BRK2627,Jasa Capital Campuran Dinamis,,"Jasa Capital Asset Management, PT",Campuran,IDR,,2017-05-10,,2627,,,REKSA DANA JASA CAPITAL CAMPURAN DINAMIS
 BRK2628,CIMB-Principal CPF CB XXVII,,"Principal Asset Management, PT",Terproteksi,IDR,,2017-05-31,,2628,,,
@@ -897,7 +897,7 @@ BRK2811,Reksa Dana Terproteksi Panin 1,,"Panin Asset Management, PT",Terproteksi
 BRK2813,Mandiri Seri 109,,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",Terproteksi,IDR,,2017-10-05,,2813,,,
 BRK2814,RHB Capital Protected Fund 40,,"Allianz Global Investors Asset Management Indonesia, PT",Terproteksi,IDR,,2017-10-09,,2814,,,REKSA DANA TERPROTEKSI RHB CAPITAL PROTECTED FUND 40
 BRK2816,Cipta Proteksi XI,,"Ciptadana Asset Management, PT",Terproteksi,IDR,,2017-08-08,,2816,,,
-BRK2817,Danareksa Proteksi 45,,"Danareksa Investment Management Indonesia d/h BRI MI, PT",Terproteksi,IDR,,2017-05-24,,2817,,,
+BRK2817,Danareksa Proteksi 45,,"Danareksa Investment Management Indonesia d/h BRI MI, PT",Terproteksi,,,2017-05-24,,2817,,,
 BRK2818,Premier Proteksi XI,,"Indo Premier Investment Management, PT",Terproteksi,IDR,,2017-08-25,,2818,,,
 BRK2819,Batavia Proteksi Cemerlang 66,,"Batavia Prosperindo Aset Manajemen, PT",Terproteksi,IDR,,2017-02-03,,2819,,,
 BRK2820,Mandiri Seri 75,,"Danareksa Investment Management Indonesia d/h Mandiri MI, PT",Terproteksi,IDR,,2017-05-31,,2820,,,
@@ -4792,16 +4792,16 @@ RD11121,Bahana Amanah Proteksi Syariah 8,,"Bahana TCW Investment Management, PT"
 RD11123,Syailendra Pendapatan Total Return Kelas D,,"Syailendra Capital, PT",Obligasi,IDR,false,2026-10-29,RD11123,5313,,,REKSA DANA SYAILENDRA PENDAPATAN TOTAL RETURN KELAS D
 RD11144,Setiabudi Dana Proteksi 11,,"Setiabudi Investment Management, PT",Terproteksi,IDR,false,2026-11-04,RD11144,,,,REKSA DANA TERPROTEKSI SETIABUDI DANA PROTEKSI 11
 RD11148,Sam Aset Strategis,,"Samuel Aset Manajemen, PT",Penyertaan Terbatas,IDR,false,2026-11-09,RD11148,,,,
-RD11149,Grow Amanah Sukuk Syariah,,,Obligasi,IDR,false,2026-11-24,RD11149,,,,
-RD11150,Grow Amanah Sukuk Syariah Kelas AM,,,Obligasi,IDR,false,2026-11-24,RD11150,,,,
-RD11151,Grow Amanah Sukuk Syariah Kelas AO,,,Obligasi,IDR,false,2026-11-24,RD11151,,,,
-RD11152,Grow Amanah Sukuk Syariah Kelas AQ,,,Obligasi,IDR,false,2026-11-24,RD11152,,,,
-RD11153,Grow Amanah Sukuk Syariah Kelas DM,,,Obligasi,IDR,false,2026-11-24,RD11153,,,,
-RD11154,Grow Amanah Sukuk Syariah Kelas DO,,,Obligasi,IDR,false,2026-11-24,RD11154,,,,
-RD11155,Grow Amanah Sukuk Syariah Kelas DQ,,,Obligasi,IDR,false,2026-11-24,RD11155,,,,
-RD11156,Grow Amanah Sukuk Syariah Kelas OM,,,Obligasi,IDR,false,2026-11-24,RD11156,,,,
-RD11157,Grow Amanah Sukuk Syariah Kelas OO,,,Obligasi,IDR,false,2026-11-24,RD11157,,,,
-RD11158,Grow Amanah Sukuk Syariah Kelas OQ,,,Obligasi,IDR,false,2026-11-24,RD11158,,,,
+RD11149,Grow Amanah Sukuk Syariah,,PT Grow Investments Indonesia,Obligasi,IDR,false,2026-11-24,RD11149,,,,
+RD11150,Grow Amanah Sukuk Syariah Kelas AM,,PT Grow Investments Indonesia,Obligasi,IDR,false,2026-11-24,RD11150,,,,
+RD11151,Grow Amanah Sukuk Syariah Kelas AO,,PT Grow Investments Indonesia,Obligasi,IDR,false,2026-11-24,RD11151,,,,
+RD11152,Grow Amanah Sukuk Syariah Kelas AQ,,PT Grow Investments Indonesia,Obligasi,IDR,false,2026-11-24,RD11152,,,,
+RD11153,Grow Amanah Sukuk Syariah Kelas DM,,PT Grow Investments Indonesia,Obligasi,IDR,false,2026-11-24,RD11153,,,,
+RD11154,Grow Amanah Sukuk Syariah Kelas DO,,PT Grow Investments Indonesia,Obligasi,IDR,false,2026-11-24,RD11154,,,,
+RD11155,Grow Amanah Sukuk Syariah Kelas DQ,,PT Grow Investments Indonesia,Obligasi,IDR,false,2026-11-24,RD11155,,,,
+RD11156,Grow Amanah Sukuk Syariah Kelas OM,,PT Grow Investments Indonesia,Obligasi,IDR,false,2026-11-24,RD11156,,,,
+RD11157,Grow Amanah Sukuk Syariah Kelas OO,,PT Grow Investments Indonesia,Obligasi,IDR,false,2026-11-24,RD11157,,,,
+RD11158,Grow Amanah Sukuk Syariah Kelas OQ,,PT Grow Investments Indonesia,Obligasi,IDR,false,2026-11-24,RD11158,,,,
 RD11159,Grow Optima Amanah Likuid Syariah Kelas 1,,,Pasar Uang,IDR,false,2026-11-24,RD11159,,,,
 RD11160,Grow Optima Amanah Likuid Syariah Kelas 2,,,Pasar Uang,IDR,false,2026-11-24,RD11160,,,,
 RD11161,Panin 48,,"Panin Asset Management, PT",Terproteksi,IDR,false,2026-11-10,RD11161,,,,REKSA DANA TERPROTEKSI PANIN 48
@@ -4815,3 +4815,4 @@ RD11168,Grow Balanced Amanah Global USD Sharia Kelas 2,,,Campuran,USD,false,2026
 RD11169,Grow Balanced Amanah Global USD Sharia Kelas 6,,,Campuran,USD,false,2026-11-24,RD11169,,,,
 RD11170,Grow Balanced Amanah Global USD Sharia Kelas 1,,,Campuran,USD,false,2026-11-24,RD11170,,,,
 RD11171,Grow Balanced Amanah Global USD Sharia Kelas 5,,,Campuran,USD,false,2026-11-24,RD11171,,,,
+RD11177,Manulife Capital Protected Fund 6,,"Manulife Aset Manajemen Indonesia, PT",Terproteksi,IDR,false,2026-11-11,RD11177,,,,

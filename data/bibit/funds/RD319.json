@@ -21,7 +21,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18007,
+    "exchange_rate": 18087,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 2.12
+      "percentage": 1.49
     },
     {
       "name": "Pasar Uang",
-      "percentage": 25.82
+      "percentage": 33.86
     },
     {
       "name": "Obligasi Pemerintah",
-      "percentage": 72.06
+      "percentage": 64.65
     }
   ],
   "holding": [
@@ -203,9 +203,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "first_date": "2010-12-14",
-    "value": 1.2397
+    "value": 1.2389
   },
   "trade": null
 }

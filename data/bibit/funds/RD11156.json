@@ -1,6 +1,6 @@
 {
   "id": 11156,
-  "custodian_bank_id": null,
+  "custodian_bank_id": 5,
   "symbol": "RD11156",
   "name": "Grow Amanah Sukuk Syariah Kelas OM",
   "type": "Obligasi",
@@ -62,11 +62,11 @@
   "holding": [],
   "exitload": [],
   "investment_manager": {
-    "name": "",
+    "name": "PT Grow Investments Indonesia",
     "ojkCode": "AYR02"
   },
   "custodian_bank": {
-    "name": "",
+    "name": "BUT DEUTSCHE BANK AG",
     "ojkCode": "DBJK1"
   },
   "sharia": false,
