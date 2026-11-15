@@ -28,51 +28,51 @@
       "instrument": "Obligasi Berkelanjutan I Merdeka Battery Materials Tahap IV Tahun 2026 Seri B"
     },
     {
-      "instrument": "Obligasi Berwawasan Lingkungan Berkelanjutan I Oki Pulp & Paper Mills Tahap I Tahun 2023 Seri B"
+      "instrument": "Obligasi Berkelanjutan II Oki Pulp & Paper Mills Tahap IV Tahun 2026 Seri A"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9593
+      "weight": 9496
     },
     {
       "asset": "Pasar Uang",
-      "weight": 407
+      "weight": 504
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": 8,
-  "return5d": 9,
-  "return1m": -17,
-  "return3m": 139,
-  "returnytd": 174,
-  "return1y": 227,
-  "return3y": 1686,
-  "return5y": 3220,
+  "portfolioAsof": 20261030,
+  "return1d": -2,
+  "return5d": 7,
+  "return1m": -29,
+  "return3m": 106,
+  "returnytd": 181,
+  "return1y": 222,
+  "return3y": 1694,
+  "return5y": 3217,
   "return10y": null,
-  "returnsi": 5765,
+  "returnsi": 5776,
   "drawdownytd": -189,
   "drawdown1y": -189,
   "drawdown3y": -189,
   "drawdown5y": -189,
   "drawdownsi": -353,
-  "cagr1y": 227,
-  "cagr3y": 533,
+  "cagr1y": 222,
+  "cagr3y": 535,
   "cagr5y": 574,
   "cagr10y": null,
   "cagrsi": 628,
   "rating": 0,
   "description": "REKSA DANA TRIMEGAH FIXED INCOME PLAN (selanjutnya disebut “TRIMEGAH FIXED INCOME PLAN”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. TRIMEGAH FIXED INCOME PLAN bertujuan untuk memberikan alternatif investasi dengan memberikan tingkat pengembalian yang kompetitif kepada Pemegang Unit Penyertaan melalui investasi pada Efek Bersifat Utang serta dapat berinvestasi pada Efek bersifat ekuitas dan/atau instrumen pasar uang dalam negeri dan/atau deposito. TRIMEGAH FIXED INCOME PLAN akan melakukan investasi dengan komposisi portofolio investasi minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih pada Efek Bersifat Utang yang diperdagangkan baik di dalam maupun di luar negeri; dan minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih pada Efek bersifat ekuitas dan/atau instrumen pasar uang dalam negeri yang memiliki jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau deposito; sesuai peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 117797,
+  "lastPrice": 117884,
   "expenseRatio": 242,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261106,
+  "asof": 20261113,
   "url": "trimegah-fixed-income-plan-667eadad7fcf",
   "currency": "IDR",
-  "lastAum": 6955490000000,
+  "lastAum": 6481640000000,
   "factsheet": "https://cache.makmur.id/files/products/60d1c49a4cc7bb3913edb063/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/60d1c49a4cc7bb3913edb063/prospectus.pdf",
   "inceptionDate": 20190523,

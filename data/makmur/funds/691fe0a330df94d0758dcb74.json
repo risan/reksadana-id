@@ -19,10 +19,10 @@
       "instrument": "BANK BUKOPIN SYARIAH Tbk, PT"
     },
     {
-      "instrument": "BRIS"
+      "instrument": "BANK JABAR SYARIAH, PT"
     },
     {
-      "instrument": "BUKIT MAKMUR MANDIRI UTAMA, PT"
+      "instrument": "BRIS"
     },
     {
       "instrument": "INTEGRASI JARINGAN EKOSISTEM, PT"
@@ -34,45 +34,45 @@
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 8763
+      "weight": 8571
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1237
+      "weight": 1429
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": 2,
-  "return5d": -2,
-  "return1m": 20,
-  "return3m": 177,
-  "returnytd": 487,
-  "return1y": 673,
-  "return3y": 3178,
-  "return5y": 4929,
-  "return10y": 12446,
-  "returnsi": 13110,
+  "portfolioAsof": 20261030,
+  "return1d": 0,
+  "return5d": 10,
+  "return1m": 17,
+  "return3m": 165,
+  "returnytd": 497,
+  "return1y": 645,
+  "return3y": 3176,
+  "return5y": 4930,
+  "return10y": 12468,
+  "returnsi": 13132,
   "drawdownytd": -115,
   "drawdown1y": -115,
   "drawdown3y": -115,
   "drawdown5y": -144,
   "drawdownsi": -1584,
-  "cagr1y": 673,
-  "cagr3y": 964,
-  "cagr5y": 834,
-  "cagr10y": 842,
+  "cagr1y": 645,
+  "cagr3y": 963,
+  "cagr5y": 835,
+  "cagr10y": 843,
   "cagrsi": 863,
   "rating": 0,
   "description": "REKSA DANA SYARIAH PENDAPATAN TETAP INSIGHT ELITE FUND adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Pasar Modal. REKSA DANA SYARIAH PENDAPATAN TETAP INSIGHT ELITE FUND bertujuan untuk mendapatkan pengembalian investasi yang optimal dan meningkat dalam jangka panjang serta memberikan kesempatan kepada Pemegang Unit Penyertaan untuk berpartisipasi dalam Kegiatan Sosial Kemanusiaan dan/atau Sosial Keagamaan.",
   "isSyariah": true,
-  "lastPrice": 231097,
+  "lastPrice": 231318,
   "expenseRatio": 65,
   "minFirstBuy": 50000000,
   "minNextBuy": 50000000,
-  "asof": 20261106,
+  "asof": 20261113,
   "url": "insight-elite-fund-f520ee40bd4b",
   "currency": "IDR",
-  "lastAum": 192956906683,
+  "lastAum": 188505933898,
   "factsheet": "https://cache.makmur.id/files/products/691fe0a330df94d0758dcb74/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/691fe0a330df94d0758dcb74/prospectus.pdf",
   "inceptionDate": 20160929,

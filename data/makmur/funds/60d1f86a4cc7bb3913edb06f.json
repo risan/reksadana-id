@@ -16,63 +16,63 @@
   },
   "topHoldings": [
     {
-      "instrument": "AMMAN MINERAL INTERNASIONAL TBK"
-    },
-    {
-      "instrument": "ASTRA INTERNATIONAL TBK"
-    },
-    {
       "instrument": "BANK CENTRAL ASIA TBK"
+    },
+    {
+      "instrument": "Bank Rakyat Indonesia (Persero) Tbk"
     },
     {
       "instrument": "BANK MANDIRI (PERSERO) TBK"
     },
     {
-      "instrument": "BANK NEGARA INDONESIA (PERSERO) TBK"
+      "instrument": "ASTRA INTERNATIONAL TBK"
+    },
+    {
+      "instrument": "Telekomunikasi Indonesia Tbk"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 9338
+      "weight": 8947
     },
     {
       "asset": "Pasar Uang",
-      "weight": 662
+      "weight": 1053
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": 41,
-  "return5d": -1,
-  "return1m": -1606,
-  "return3m": -1878,
-  "returnytd": -3172,
-  "return1y": -2804,
-  "return3y": -2698,
-  "return5y": -2217,
+  "portfolioAsof": 20261030,
+  "return1d": 134,
+  "return5d": 611,
+  "return1m": -844,
+  "return3m": -1302,
+  "returnytd": -2755,
+  "return1y": -2471,
+  "return3y": -2061,
+  "return5y": -1775,
   "return10y": null,
-  "returnsi": -738,
+  "returnsi": -171,
   "drawdownytd": -3894,
   "drawdown1y": -3894,
   "drawdown3y": -3894,
   "drawdown5y": -3894,
   "drawdownsi": -3894,
-  "cagr1y": -2804,
-  "cagr3y": -995,
-  "cagr5y": -489,
+  "cagr1y": -2471,
+  "cagr3y": -740,
+  "cagr5y": -383,
   "cagr10y": null,
-  "cagrsi": -116,
+  "cagrsi": -26,
   "rating": 0,
   "description": "Reksa Dana BAHANA PRIMAVERA 99 (\"BAHANA PRIMAVERA 99\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No.8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. BAHANA PRIMAVERA 99 bertujuan memperoleh tingkat pengembalian yang optimal dalam jangka panjang melalui investasi pada Efek Bersifat Ekuitas dengan berpegang pada proses investasi yang sistematis, disiplin dan memperhatikan faktor risiko. BAHANA PRIMAVERA 99 terdiri dari 3 (tiga) Kelas Unit Penyertaan yaitu Kelas S ( Sponsor), Kelas G (General), dan Kelas A (Agen Penjual Efek Reksa Dana). BAHANA PRIMAVERA 99 mempunyai komposisi investasi sebagai berikut: 1. minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) pada Efek Bersifat Ekuitas yaitu saham yang dicatatkan Bursa Efek sesuai dengan peraturan perundang-undangan yang berlaku; 2. minimum 0% (nol persen) dan maksimum 20% (dua puluh persen) pada setara Kas dan atau instrumen Pasar Uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun yaitu antara lain Surat Utang Negara yang mempunyai jatuh tempo kurang dari 1 (satu) tahun, Sertifikat Bank Indonesia (SBI), Surat Berharga Pasar Uang, Deposito, Sertifikat Deposito dan surat Pengakuan Hutang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 92622,
+  "lastPrice": 98285,
   "expenseRatio": 303,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261106,
+  "asof": 20261113,
   "url": "bahana-primavera-99-kelas-g-fc7e1970785e",
   "currency": "IDR",
-  "lastAum": 1445340000000,
+  "lastAum": 1212460000000,
   "factsheet": "https://cache.makmur.id/files/products/60d1f86a4cc7bb3913edb06f/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/60d1f86a4cc7bb3913edb06f/prospectus.pdf",
   "inceptionDate": 20200413,

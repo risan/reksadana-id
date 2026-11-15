@@ -19,60 +19,60 @@
       "instrument": "Sukuk Mudharabah Berkelanjutan II Oki Pulp & Paper Mills Tahap II Tahun 2025 Seri A"
     },
     {
-      "instrument": "Sukuk Wakalah Berkelanjutan I Petrindo Jaya Kreasi Tahap II Tahun 2025 Seri A"
-    },
-    {
       "instrument": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap IV Tahun 2025 Seri B"
     },
     {
-      "instrument": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap IV Tahun 2025 Seri A"
+      "instrument": "Sukuk Wakalah Berkelanjutan I Petrindo Jaya Kreasi Tahap II Tahun 2025 Seri A"
     },
     {
       "instrument": "Sukuk Mudharabah Berkelanjutan I Merdeka Battery Materials Tahap I Tahun 2025 Seri B"
+    },
+    {
+      "instrument": "Sukuk Mudharabah Berkelanjutan I Dian Swastatika Sentosa Tahap IV Tahun 2025 Seri A"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9584
+      "weight": 9810
     },
     {
       "asset": "Pasar Uang",
-      "weight": 416
+      "weight": 190
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": 6,
-  "return5d": -2,
-  "return1m": -46,
-  "return3m": 150,
-  "returnytd": 402,
-  "return1y": 523,
-  "return3y": 2174,
+  "portfolioAsof": 20261030,
+  "return1d": -5,
+  "return5d": -4,
+  "return1m": -62,
+  "return3m": 91,
+  "returnytd": 397,
+  "return1y": 489,
+  "return3y": 2219,
   "return5y": null,
   "return10y": null,
-  "returnsi": 2295,
+  "returnsi": 2289,
   "drawdownytd": -123,
   "drawdown1y": -123,
   "drawdown3y": -123,
   "drawdown5y": null,
   "drawdownsi": -123,
-  "cagr1y": 523,
-  "cagr3y": 678,
+  "cagr1y": 489,
+  "cagr3y": 691,
   "cagr5y": null,
   "cagr10y": null,
-  "cagrsi": 615,
+  "cagrsi": 610,
   "rating": 0,
   "description": "Reksa Dana Syariah Trimegah Fixed Income Plan Syariah (TRIMEGAH FIXED INCOME PLAN SYARIAH) adalah sebuah instrumen investasi yang beroperasi sesuai dengan Undang-Undang Pasar Modal Nomor 8 tahun 1995. Produk ini dirancang untuk memberikan pertumbuhan nilai investasi yang optimal untuk jangka waktu menengah dan panjang, selaras dengan Prinsip Syariah di pasar modal. Portofolio investasinya terdiri dari minimum 80% hingga maksimum 100% Efek Syariah berpendapatan tetap, baik dalam negeri maupun internasional, serta 0% hingga 20% dalam Efek Syariah ekuitas atau instrumen pasar uang Syariah dengan jatuh tempo tidak lebih dari 1 tahun. Semua aset ini harus sesuai dengan Daftar Efek Syariah yang ditetapkan oleh OJK atau Pihak Penerbit Daftar Efek Syariah, dan juga sesuai dengan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": true,
-  "lastPrice": 107897,
+  "lastPrice": 107849,
   "expenseRatio": 180,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261106,
+  "asof": 20261113,
   "url": "trimegah-fixed-income-plan-syariah-kelas-a-a7ec9e482637",
   "currency": "IDR",
-  "lastAum": 470880000000,
+  "lastAum": 445910000000,
   "factsheet": "https://cache.makmur.id/files/products/64d46eef7ee3acc13eccf7d8/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/64d46eef7ee3acc13eccf7d8/prospectus.pdf",
   "inceptionDate": 20230525,

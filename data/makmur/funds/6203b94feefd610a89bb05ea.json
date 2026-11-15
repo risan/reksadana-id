@@ -16,6 +16,9 @@
   },
   "topHoldings": [
     {
+      "instrument": "ADARO ANDALAN INDONESIA TBK"
+    },
+    {
       "instrument": "AMMAN MINERAL INTERNASIONAL TBK"
     },
     {
@@ -25,54 +28,51 @@
       "instrument": "BANK CENTRAL ASIA TBK"
     },
     {
-      "instrument": "BANK NEGARA INDONESIA Tbk"
-    },
-    {
       "instrument": "BANK RAKYAT INDONESIA (PERSERO) TBK"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 1636
+      "weight": 1971
     },
     {
       "asset": "Saham",
-      "weight": 8364
+      "weight": 8029
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": 13,
-  "return5d": 0,
-  "return1m": -1341,
-  "return3m": -1608,
-  "returnytd": -2396,
-  "return1y": -2531,
-  "return3y": -3151,
-  "return5y": -2763,
-  "return10y": -2219,
-  "returnsi": 416240,
+  "portfolioAsof": 20261030,
+  "return1d": 121,
+  "return5d": 422,
+  "return1m": -806,
+  "return3m": -1200,
+  "returnytd": -2075,
+  "return1y": -2203,
+  "return3y": -2725,
+  "return5y": -2492,
+  "return10y": -1605,
+  "returnsi": 434241,
   "drawdownytd": -3142,
   "drawdown1y": -3142,
   "drawdown3y": -3896,
   "drawdown5y": -3899,
   "drawdownsi": -5986,
-  "cagr1y": -2531,
-  "cagr3y": -1185,
-  "cagr5y": -626,
-  "cagr10y": -248,
-  "cagrsi": 1336,
+  "cagr1y": -2203,
+  "cagr3y": -1006,
+  "cagr5y": -557,
+  "cagr10y": -173,
+  "cagrsi": 1351,
   "rating": 0,
   "description": "Reksa Dana BATAVIA DANA SAHAM adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Reksa Dana BATAVIA DANA SAHAM (selanjutnya disebut “BATAVIA DANA SAHAM“) bertujuan mendapatkan kenaikan modal dalam jangka panjang dengan berinvestasi pada saham perusahaan berkapitalisasi pasar besar yang terdaftar di Bursa Efek Indonesia. Batavia Dana Saham akan menginvestasikan dananya dengan komposisi investasi sebagai berikut : BATAVIA DANA SAHAM akan menginvestasikan dananya dengan komposisi investasi sebesar minimum 80% (delapan puluh persen) dan maksimum 100% (seratus persen) dari Nilai Aktiva Bersih BATAVIA DANA SAHAM pada efek ekuitas dan minimum 0% (nol persen) serta maksimum 20% (dua puluh persen) dari Nilai Aktiva Bersih BATAVIA DANA SAHAM pada instrumen pasar uang dan setara kas yang sesuai dengan peraturan dan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 4262400,
+  "lastPrice": 4442414,
   "expenseRatio": 483,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261106,
+  "asof": 20261113,
   "url": "batavia-dana-saham-66bb3ddad78a",
   "currency": "IDR",
-  "lastAum": 1117894366518,
+  "lastAum": 966714447793,
   "factsheet": "https://cache.makmur.id/files/products/6203b94feefd610a89bb05ea/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6203b94feefd610a89bb05ea/prospectus.pdf",
   "inceptionDate": 19961216,

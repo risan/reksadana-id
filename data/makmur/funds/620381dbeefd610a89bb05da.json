@@ -22,57 +22,57 @@
       "instrument": "OBLIGASI BERKELANJUTAN VI PEGADAIAN TAHAP IV TAHUN 2025 SERI A"
     },
     {
-      "instrument": "PT. BANK JABAR BANTEN, TBK"
+      "instrument": "PT BANK JAKARTA"
     },
     {
-      "instrument": "PT. BANK KB BUKOPIN, TBK"
+      "instrument": "PT BANK NAGARI"
     },
     {
-      "instrument": "PT. BANK NAGARI"
+      "instrument": "PT BANK SEABANK INDONESIA"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 5671
+      "weight": 5504
     },
     {
       "asset": "Obligasi",
-      "weight": 4329
+      "weight": 4496
     }
   ],
-  "portfolioAsof": 20260930,
+  "portfolioAsof": 20261030,
   "return1d": 1,
   "return5d": 10,
   "return1m": 43,
-  "return3m": 121,
-  "returnytd": 315,
-  "return1y": 378,
-  "return3y": 1359,
-  "return5y": 2039,
-  "return10y": 5250,
-  "returnsi": 9361,
+  "return3m": 123,
+  "returnytd": 325,
+  "return1y": 379,
+  "return3y": 1362,
+  "return5y": 2045,
+  "return10y": 5248,
+  "returnsi": 9380,
   "drawdownytd": 0,
   "drawdown1y": 0,
   "drawdown3y": 0,
   "drawdown5y": 0,
   "drawdownsi": -3,
-  "cagr1y": 378,
-  "cagr3y": 434,
-  "cagr5y": 378,
+  "cagr1y": 379,
+  "cagr3y": 435,
+  "cagr5y": 379,
   "cagr10y": 431,
   "cagrsi": 341,
   "rating": 0,
   "description": "Reksa Dana BATAVIA DANA KAS MAXIMA adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Reksa Dana BATAVIA DANA KAS MAXIMA (selanjutnya disebut “BATAVIA DANA KAS MAXIMA“) bertujuan untuk mendapatkan tingkat pertumbuhan dana yang optimum dengan tetap mempertahankan nilai modal dalam jangka pendek dan menengah melalui penempatan dana pada instrumen pasar uang dan/atau efek bersifat hutang yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun. BATAVIA DANA KAS MAXIMA akan menginvestasikan dananya dengan komposisi investasi sebesar 100% (seratus persen) pada instrumen pasar uang dan/atau setara kas dan/atau efek bersifat hutang dengan jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun meliputi obligasi dan surat hutang lainnya yang mempunyai jatuh tempo tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun, yang diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 193611,
+  "lastPrice": 193797,
   "expenseRatio": 119,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261106,
+  "asof": 20261113,
   "url": "batavia-dana-kas-maxima-ba1a494c4c9c",
   "currency": "IDR",
-  "lastAum": 13437438074227,
+  "lastAum": 14125242700194,
   "factsheet": "https://cache.makmur.id/files/products/620381dbeefd610a89bb05da/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/620381dbeefd610a89bb05da/prospectus.pdf",
   "inceptionDate": 20070220,

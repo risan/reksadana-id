@@ -1,0 +1,86 @@
+{
+  "_id": "6aeaef67a0417e1f158cc60f",
+  "name": "Panin Dana Likuid",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Panin Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6ae80e3823f47d9d3d70d556/logo.png"
+  },
+  "custodian": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "DEPOSITO BANK SYARIAH INDONESIA"
+    },
+    {
+      "instrument": "SEKURITAS RUPIAH BANK INDONESIA IDSR050327364S"
+    },
+    {
+      "instrument": "SEKURITAS RUPIAH BANK INDONESIA IDSR310327364S"
+    },
+    {
+      "instrument": "SEKURITAS RUPIAH BANK INDONESIA IDSR160427364S"
+    },
+    {
+      "instrument": "SEKURITAS RUPIAH BANK INDONESIA IDSR260327364S"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Pasar Uang",
+      "weight": 7180
+    },
+    {
+      "asset": "Obligasi",
+      "weight": 2820
+    }
+  ],
+  "portfolioAsof": 20261030,
+  "return1d": 1,
+  "return5d": 10,
+  "return1m": 38,
+  "return3m": 136,
+  "returnytd": 363,
+  "return1y": 420,
+  "return3y": 1463,
+  "return5y": 2153,
+  "return10y": 5422,
+  "returnsi": 9357,
+  "drawdownytd": -4,
+  "drawdown1y": -4,
+  "drawdown3y": -26,
+  "drawdown5y": -26,
+  "drawdownsi": -26,
+  "cagr1y": 420,
+  "cagr3y": 466,
+  "cagr5y": 398,
+  "cagr10y": 443,
+  "cagrsi": 472,
+  "rating": 0,
+  "description": "REKSA DANA PANIN DANA LIKUID adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang- Undang Nomor 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. REKSA DANA PANIN DANA LIKUID (selanjutnya disebut ”PANIN DANA LIKUID”) bertujuan untuk memberikan tingkat pertumbuhan investasi yang relatif stabil dan menurunkan tingkat risiko melalui investasi pada instrumen pasar uang dalam negeri dan/atau efek bersifat utang yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau sisa jatuh temponya tidak lebih dari 1 (satu) tahun; Sesuai dengan peraturan perundang – undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 193569,
+  "expenseRatio": 57,
+  "minFirstBuy": 10000,
+  "minNextBuy": 10000,
+  "asof": 20261113,
+  "url": "panin-dana-likuid-8698c179c741",
+  "currency": "IDR",
+  "lastAum": 1020000000000,
+  "factsheet": "https://cache.makmur.id/files/products/6aeaef67a0417e1f158cc60f/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6aeaef67a0417e1f158cc60f/prospectus.pdf",
+  "inceptionDate": 20120723,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

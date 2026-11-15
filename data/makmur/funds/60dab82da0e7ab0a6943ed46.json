@@ -19,60 +19,60 @@
       "instrument": "ASDF07ACN4-OBL"
     },
     {
-      "instrument": "BANK CENTRAL ASIA SYARIA-TD"
+      "instrument": "BANK CIMB NIAGA TBK PT"
     },
     {
-      "instrument": "BANK CIMB NIAGA TBK PT-TD"
+      "instrument": "BANK MANDIRI"
     },
     {
-      "instrument": "BANK MANDIRI-TD"
+      "instrument": "BANK SYARIAH ID"
     },
     {
-      "instrument": "BANK SYARIAH ID-TD"
+      "instrument": "BANK SYARIAH NASIONAL"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 4394
+      "weight": 4563
     },
     {
       "asset": "Pasar Uang",
-      "weight": 5606
+      "weight": 5437
     }
   ],
-  "portfolioAsof": 20260930,
+  "portfolioAsof": 20261030,
   "return1d": 1,
-  "return5d": 10,
-  "return1m": 36,
-  "return3m": 122,
-  "returnytd": 285,
-  "return1y": 334,
-  "return3y": 1291,
-  "return5y": 1764,
-  "return10y": 4823,
-  "returnsi": 9089,
+  "return5d": 15,
+  "return1m": 40,
+  "return3m": 126,
+  "returnytd": 300,
+  "return1y": 341,
+  "return3y": 1301,
+  "return5y": 1777,
+  "return10y": 4824,
+  "returnsi": 9117,
   "drawdownytd": -10,
   "drawdown1y": -10,
   "drawdown3y": -10,
   "drawdown5y": -12,
   "drawdownsi": -203,
-  "cagr1y": 334,
-  "cagr3y": 413,
-  "cagr5y": 330,
-  "cagr10y": 401,
+  "cagr1y": 341,
+  "cagr3y": 416,
+  "cagr5y": 333,
+  "cagr10y": 402,
   "cagrsi": 428,
   "rating": 0,
   "description": "REKSA DANA ALLIANZ RUPIAH LIQUID FUND (selanjutnya disebut “ALLIANZ RUPIAH LIQUID FUND”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta Peraturan Pelaksanaannya. ALLIANZ RUPIAH LIQUID FUND bertujuan untuk memberikan tingkat likuiditas yang tinggi dalam pemenuhan kebutuhan dana tunai dalam waktu yang singkat sekaligus memberikan tingkat pendapatan investasi yang menarik. ALLIANZ RUPIAH LIQUID FUND akan melakukan investasi dengan komposisi portofolio investasi sebesar 100% (seratus persen) pada instrumen pasar uang dalam negeri yang mempunyai jatuh tempo kurang dari 1 (satu) tahun baik dalam Rupiah maupun dalam mata uang asing dan/atau Efek bersifat utang yang telah dijual dalam Penawaran Umum dan/atau diperdagangkan di Bursa Efek baik di dalam maupun di luar negeri yang diterbitkan dengan jangka waktu tidak lebih dari 1 (satu) tahun dan/atau mempunyai sisa jatuh tempo tidak lebih dari 1 (satu) tahun; sesuai peraturan perundang-undangan yang berlaku di Indonesia. Dalam hal berinvestasi pada Efek luar negeri, ALLIANZ RUPIAH LIQUID FUND akan mengacu kepada peraturan perundang-undangan yang berlaku di Indonesia dan hukum Negara yang mendasari penerbitan Efek luar negeri tersebut.",
   "isSyariah": false,
-  "lastPrice": 190887,
+  "lastPrice": 191168,
   "expenseRatio": 128,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261106,
+  "asof": 20261113,
   "url": "allianz-rupiah-liquid-fund-kelas-a-5902d672685f",
   "currency": "IDR",
-  "lastAum": 135240000000,
+  "lastAum": 136800000000,
   "factsheet": "https://cache.makmur.id/files/products/60dab82da0e7ab0a6943ed46/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/60dab82da0e7ab0a6943ed46/prospectus.pdf",
   "inceptionDate": 20110609,

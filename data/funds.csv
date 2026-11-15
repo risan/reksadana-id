@@ -1878,7 +1878,7 @@ KTN17046,SYAILENDRA RUSSEL IDEALRATINGS TOP 200 ISLAMIC TECHNOLOGY INDEX SHARIA 
 KTN17047,SYAILENDRA RUSSEL IDEALRATINGS TOP 200 ISLAMIC TECHNOLOGY INDEX SHARIA USD KELAS B,,PT. Syailendra Capital,Reksadana Global,USD,true,,,,17047,,
 KTN17085,EASTSPRING IDR FIXED INCOME KELAS D,,PT. Eastspring Investments Indonesia,Obligasi,,,,,,17085,,
 KTN17187,SIMAS GEMILANG 24,,PT. Sinarmas Asset Management,Terproteksi,,,,,,17187,,
-MKR68c7bd9b334caac934c5c829,Avrist Ada Sukuk Berkah Syariah Kelas A,,PT Avrist Asset Management,Obligasi,IDR,true,2017-08-07,,,,68c7bd9b334caac934c5c829,
+MKR68c7bd9b334caac934c5c829,Avrist Ada Sukuk Berkah Syariah Dividen,,PT Avrist Asset Management,Obligasi,IDR,true,2017-08-07,,,,68c7bd9b334caac934c5c829,
 MKR691c7e9230df94d0758cd0e5,Mandiri Investa Pasar Uang 2,,PT Danareksa Investment Management Indonesia,Pasar Uang,IDR,false,2018-03-15,,,,691c7e9230df94d0758cd0e5,
 MKR6911f38b43942404647042e7,Mandiri Investa Dana Utama Kelas A,,PT Danareksa Investment Management Indonesia,Obligasi,IDR,false,2007-09-17,,,,6911f38b43942404647042e7,
 MNC36,Mnc36,,"MNC Asset Management, PT",Saham,IDR,false,2018-01-26,MNC36,,,,
@@ -2414,7 +2414,7 @@ RD1198,Panin Beta One,Saham Panin Beta One,"Panin Asset Management, PT",Saham,ID
 RD1201,Panin Dana Bersama,,"Panin Asset Management, PT",Campuran,IDR,false,2009-02-26,RD1201,281,428,,REKSA DANA PANIN DANA BERSAMA
 RD1202,Panin Dana Bersama Plus,,"Panin Asset Management, PT",Campuran,IDR,false,2011-12-09,RD1202,282,608,,REKSA DANA PANIN DANA BERSAMA PLUS
 RD1204,Panin Dana Infrastruktur Bertumbuh,,"Panin Asset Management, PT",Saham,IDR,false,2016-04-01,RD1204,2182,14362,,REKSA DANA PANIN DANA INFRASTRUKTUR BERTUMBUH
-RD1205,Panin Dana Likuid,,"Panin Asset Management, PT",Pasar Uang,IDR,false,2012-07-23,RD1205,1078,783,,REKSA DANA PANIN DANA LIKUID
+RD1205,Panin Dana Likuid,,"Panin Asset Management, PT",Pasar Uang,IDR,false,2012-07-23,RD1205,1078,783,6aeaef67a0417e1f158cc60f,REKSA DANA PANIN DANA LIKUID
 RD1206,Panin Dana Likuid Syariah,,"Panin Asset Management, PT",Pasar Uang,IDR,true,2018-01-18,RD1206,3044,15152,,
 RD1207,Panin Dana Maksima,,"Panin Asset Management, PT",Saham,IDR,false,1997-04-01,RD1207,108,430,,Panin Dana Maksima
 RD1209,Panin Dana Pendapatan Berkala,,"Panin Asset Management, PT",Obligasi,IDR,false,2016-02-19,RD1209,2157,14337,,REKSA DANA PANIN DANA PENDAPATAN BERKALA
@@ -4591,7 +4591,7 @@ RD9586,Mandiri Pasar Uang Syariah Maslahat Kelas C,,"Danareksa Investment Manage
 RD9587,Rdt Mandiri Investa 15,,"Danareksa Investment Management Indonesia, PT",Terproteksi,IDR,false,2025-10-08,RD9587,,,,
 RD9588,Star Usd Sukuk Menuju Haji,,"Surya Timur Alam Raya, PT",Obligasi,USD,true,2025-10-08,RD9588,,,,
 RD9589,Eastspring Investments IDR High Grade Kelas C,,"Eastspring Investments Indonesia, PT",Obligasi,IDR,false,2025-10-09,RD9589,5120,17027,,REKSA DANA EASTSPRING INVESTMENTS IDR HIGH GRADE KELAS C
-RD9590,Reksa Dana Panin Dana Likuid US Dollar,,"Panin Asset Management, PT",Pasar Uang,USD,false,2025-10-10,RD9590,5122,17028,,REKSA DANA PANIN DANA LIKUID US DOLLAR
+RD9590,Reksa Dana Panin Dana Likuid US Dollar,,"Panin Asset Management, PT",Pasar Uang,USD,false,2025-10-10,RD9590,5122,17028,6aeaf6afa0417e1f158cc83d,REKSA DANA PANIN DANA LIKUID US DOLLAR
 RD9591,Trimegah Pundi Kas 15,,"Trimegah Asset Management, PT",Pasar Uang,IDR,false,2025-10-13,RD9591,5123,,,REKSA DANA TRIMEGAH PUNDI KAS 15
 RD9592,Manulife Proteksi Dana Utama VIII,,"Manulife Aset Manajemen Indonesia, PT",Terproteksi,IDR,false,2025-10-14,RD9592,5124,17029,,REKSA DANA TERPROTEKSI MANULIFE PROTEKSI DANA UTAMA VIII
 RD9593,Allianz USD Fixed Income Fund Kelas B2,,"Allianz Global Investors Asset Management Indonesia, PT",Obligasi,USD,false,2025-10-16,RD9593,5126,17030,,REKSA DANA ALLIANZ USD FIXED INCOME FUND KELAS B2

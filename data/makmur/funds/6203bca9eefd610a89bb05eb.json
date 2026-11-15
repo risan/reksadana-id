@@ -19,6 +19,9 @@
       "instrument": "AMMAN MINERAL INTERNASIONAL TBK"
     },
     {
+      "instrument": "ASTRA INTERNATIONAL TBK"
+    },
+    {
       "instrument": "ASTRA OTOPARTS Tbk"
     },
     {
@@ -26,53 +29,50 @@
     },
     {
       "instrument": "BANK NEGARA INDONESIA TBK"
-    },
-    {
-      "instrument": "BANK RAKYAT INDONESIA (PERSERO) TBK"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Pasar Uang",
-      "weight": 1144
+      "weight": 1199
     },
     {
       "asset": "Saham",
-      "weight": 8856
+      "weight": 8801
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": 24,
-  "return5d": 54,
-  "return1m": -1195,
-  "return3m": -1447,
-  "returnytd": -2118,
-  "return1y": -2444,
-  "return3y": -2494,
-  "return5y": -2037,
-  "return10y": -1126,
-  "returnsi": 13737,
+  "portfolioAsof": 20261030,
+  "return1d": 150,
+  "return5d": 445,
+  "return1m": -648,
+  "return3m": -1020,
+  "returnytd": -1767,
+  "return1y": -2018,
+  "return3y": -2034,
+  "return5y": -1742,
+  "return10y": -440,
+  "returnsi": 14793,
   "drawdownytd": -2885,
   "drawdown1y": -2885,
   "drawdown3y": -3336,
   "drawdown5y": -3336,
   "drawdownsi": -6983,
-  "cagr1y": -2444,
-  "cagr3y": -912,
-  "cagr5y": -445,
-  "cagr10y": -119,
-  "cagrsi": 440,
+  "cagr1y": -2018,
+  "cagr3y": -730,
+  "cagr5y": -376,
+  "cagr10y": -45,
+  "cagrsi": 462,
   "rating": 0,
   "description": "Reksa Dana BATAVIA DANA SAHAM OPTIMAL adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal beserta peraturan pelaksanaannya. Reksa Dana BATAVIA DANA SAHAM OPTIMAL (selanjutnya disebut “BATAVIA DANA SAHAM OPTIMAL”) bertujuan mendapatkan kenaikan modal dalam jangka panjang dengan berinvestasi pada saham perusahaan berkapitalisasi pasar besar, menengah dan/atau kecil yang terdaftar di Bursa Efek Indonesia. BATAVIA DANA SAHAM OPTIMAL akan menginvestasikan dananya dengan komposisi investasi sebesar minimal 80% (delapan puluh persen) dan maksimum 95 % (sembilan puluh lima persen) pada efek ekuitas, minimal 0% (nol persen) dan maksimum 20% ( duapuluh persen) pada instrumen pasar uang yang mempunyai jatuh tempo kurang dari 1 (satu) tahun yang diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": false,
-  "lastPrice": 237365,
+  "lastPrice": 247925,
   "expenseRatio": 615,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261106,
+  "asof": 20261113,
   "url": "batavia-dana-saham-optimal-fa35aa7289a1",
   "currency": "IDR",
-  "lastAum": 178037522948,
+  "lastAum": 144883450810,
   "factsheet": "https://cache.makmur.id/files/products/6203bca9eefd610a89bb05eb/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/6203bca9eefd610a89bb05eb/prospectus.pdf",
   "inceptionDate": 20061019,

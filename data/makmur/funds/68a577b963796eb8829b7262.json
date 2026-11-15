@@ -16,16 +16,16 @@
   },
   "topHoldings": [
     {
-      "instrument": "OBL BKLJT IV BUMI SERPONG DAMAI THP II TH 2025 SR C"
+      "instrument": "OBLIGASI BERKELANJUTAN III SINAR MAS MULTIARTHA TAHAP IV TAHUN 2025"
     },
     {
-      "instrument": "OBL PERPETUAL BERKELANJUTAN I INDONESIA INFRASTRUCTURE FINANCE TAHAP I TAHUN 2026"
+      "instrument": "OBLIGASI BERKELANJUTAN V SMART TAHAP II TAHUN 2026 SERI 8"
+    },
+    {
+      "instrument": "OBLIGASI BERKELANJUTAN IV BUMI SERPONG DAMAI TAHAP II TAHUN 2025 SERI C"
     },
     {
       "instrument": "OBLIGASI BERKELANJUTAN I DIAN SWASTATIKA SENTOSA TAHAP IV TAHUN 2025"
-    },
-    {
-      "instrument": "OBLIGASI BERKELANJUTAN I MERDEKA BATTERY MATERIALS TAHAP II TAHUN 2025 SERI B"
     },
     {
       "instrument": "OBLIGASI BERKELANJUTAN III PROVIDENT INVESTASI BERSAMA TAHAP II TAHUN 2026 SERI C"
@@ -34,45 +34,45 @@
   "assetAllocations": [
     {
       "asset": "Obligasi",
-      "weight": 9784
+      "weight": 9817
     },
     {
       "asset": "Pasar Uang",
-      "weight": 216
+      "weight": 183
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": 15,
-  "return5d": 14,
-  "return1m": -93,
+  "portfolioAsof": 20261030,
+  "return1d": -5,
+  "return5d": 9,
+  "return1m": -85,
   "return3m": -75,
-  "returnytd": -452,
-  "return1y": -400,
-  "return3y": 1087,
-  "return5y": 1646,
-  "return10y": 4893,
-  "returnsi": 24536,
+  "returnytd": -443,
+  "return1y": -397,
+  "return3y": 1090,
+  "return5y": 1626,
+  "return10y": 5409,
+  "returnsi": 24569,
   "drawdownytd": -547,
   "drawdown1y": -547,
   "drawdown3y": -547,
   "drawdown5y": -547,
   "drawdownsi": -4619,
-  "cagr1y": -400,
-  "cagr3y": 350,
-  "cagr5y": 309,
-  "cagr10y": 406,
+  "cagr1y": -397,
+  "cagr3y": 351,
+  "cagr5y": 306,
+  "cagr10y": 442,
   "cagrsi": 579,
   "rating": 0,
   "description": "BAHANA PENDAPATAN TETAP MAKARA PRIMA  (“BAHANA PENDAPATAN TETAP MAKARA PRIMA ”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif  berdasarkan Undang-Undang No. 8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya.  BAHANA PENDAPATAN TETAP MAKARA PRIMA merupakan reksa dana berbentuk Kontrak Investasi Kolektif yang memiliki multi share class (memiliki beberapa Kelas  Unit Penyertaan). BAHANA PENDAPATAN TETAP MAKARA PRIMA terdiri dari 3 (tiga) Kelas Unit Penyertaan yaitu BAHANA PENDAPATAN TETAP MAKARA PRIMA  Kelas G (General), Bahana Pendapatan Tetap Makara Prima Kelas I (Institusi), dan Bahana Pendapatan Tetap Makara Prima Kelas D (Dividend).  Bahana Pendapatan Tetap Makara Prima bertujuan untuk menghasilkan tingkat pengembalian yang stabil dan optimal melalui investasi pada Efek Bersifat Utang,  yang diterbitkan oleh Pemerintah Republik Indonesia dan korporasi yang berdomisili di Indonesia, dan investasi pada Efek bersifat ekuitas yang dicatatkan di Bursa  Efek di Indonesia serta Efek Bersifat Utang yang dicatatkan di Bursa Efek luar negeri sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia dengan  tujuan untuk menambah tingkat pengembalian dan peragaman (diversifikasi) portofolio.",
   "isSyariah": false,
-  "lastPrice": 345362,
+  "lastPrice": 345688,
   "expenseRatio": 233,
   "minFirstBuy": 10000,
   "minNextBuy": 10000,
-  "asof": 20261106,
+  "asof": 20261113,
   "url": "bahana-makara-prima-kelas-g-d86cb0670b5e",
   "currency": "IDR",
-  "lastAum": 3834660000000,
+  "lastAum": 3555420000000,
   "factsheet": "https://cache.makmur.id/files/products/68a577b963796eb8829b7262/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/68a577b963796eb8829b7262/prospectus.pdf",
   "inceptionDate": 20041104,

@@ -1,0 +1,86 @@
+{
+  "_id": "6aeaf6afa0417e1f158cc83d",
+  "name": "Panin Dana Likuid US Dollar",
+  "category": "moneymarket",
+  "manager": {
+    "name": "PT Panin Asset Management",
+    "logo": "https://cache.makmur.id/images/managers/6ae80e3823f47d9d3d70d556/logo.png"
+  },
+  "custodian": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "holding": {
+    "name": "BCA",
+    "logo": "https://cache.makmur.id/images/custodians/60d1a8e34cc7bb3913edb057/logo.png"
+  },
+  "topHoldings": [
+    {
+      "instrument": "REP OF INDONESIA - INDON 27"
+    },
+    {
+      "instrument": "DEPOSITO BANK JAGO"
+    },
+    {
+      "instrument": "DEPOSITO BANK KEB HANA INDONESIA"
+    },
+    {
+      "instrument": "DEPOSITO BANK MASPION INDONESIA"
+    },
+    {
+      "instrument": "DEPOSITO BANK MEGA"
+    }
+  ],
+  "assetAllocations": [
+    {
+      "asset": "Obligasi",
+      "weight": 1084
+    },
+    {
+      "asset": "Pasar Uang",
+      "weight": 8916
+    }
+  ],
+  "portfolioAsof": 20261030,
+  "return1d": 1,
+  "return5d": 4,
+  "return1m": 17,
+  "return3m": 42,
+  "returnytd": 159,
+  "return1y": 182,
+  "return3y": null,
+  "return5y": null,
+  "return10y": null,
+  "returnsi": 196,
+  "drawdownytd": -5,
+  "drawdown1y": -5,
+  "drawdown3y": null,
+  "drawdown5y": null,
+  "drawdownsi": -5,
+  "cagr1y": 182,
+  "cagr3y": null,
+  "cagr5y": null,
+  "cagr10y": null,
+  "cagrsi": 178,
+  "rating": 0,
+  "description": "REKSA DANA PANIN DANA LIKUID US DOLLAR (selanjutnya disebut ”PANIN DANA LIKUID US DOLLAR”) adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang Nomor 8 Tahun 1995 tentang Pasar Modal sebagaimana diubah dengan Undang-Undang Nomor 4 Tahun 2023 tentang Pengembangan dan Penguatan Sektor Keuangan (“Undang-Undang Pasar Modal”) beserta peraturan pelaksanaannya. PANIN DANA LIKUID US DOLLAR bertujuan untuk memberikan pengembalian yang stabil serta likuiditas tinggi, melalui investasi sesuai dengan Kebijakan Investasi, berdenominasi Dolar Amerika Serikat, sesuai dengan peraturan perundang-undangan yang berlaku di Indonesia.",
+  "isSyariah": false,
+  "lastPrice": 102,
+  "expenseRatio": 22,
+  "minFirstBuy": 1100,
+  "minNextBuy": 1100,
+  "asof": 20261113,
+  "url": "panin-dana-likuid-us-dollar-01863bf13b13",
+  "currency": "USD",
+  "lastAum": 11090000,
+  "factsheet": "https://cache.makmur.id/files/products/6aeaf6afa0417e1f158cc83d/factsheet.pdf",
+  "prospectus": "https://cache.makmur.id/files/products/6aeaf6afa0417e1f158cc83d/prospectus.pdf",
+  "inceptionDate": 20251010,
+  "riskLevel": 5,
+  "traits": [],
+  "exitWindows": null,
+  "maturityDates": null,
+  "status": 31,
+  "fixed1y": null,
+  "routeCategory": "pasar-uang"
+}

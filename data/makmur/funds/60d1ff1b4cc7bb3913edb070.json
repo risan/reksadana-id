@@ -16,63 +16,63 @@
   },
   "topHoldings": [
     {
-      "instrument": "ADARO ANDALAN INDONESIA TBK"
-    },
-    {
-      "instrument": "BUMI RESOURCES MINERALS TBK, PT"
+      "instrument": "ELNUSA TBK, PT"
     },
     {
       "instrument": "XL AXIATA"
     },
     {
+      "instrument": "ADARO ANDALAN INDONESIA TBK"
+    },
+    {
       "instrument": "ESSA Industries Indonesia Tbk, PT"
     },
     {
-      "instrument": "BANK MEGA SYARIAH - TD"
+      "instrument": "Timah Tbk"
     }
   ],
   "assetAllocations": [
     {
       "asset": "Saham",
-      "weight": 8004
+      "weight": 8086
     },
     {
       "asset": "Pasar Uang",
-      "weight": 1996
+      "weight": 1914
     }
   ],
-  "portfolioAsof": 20260930,
-  "return1d": -125,
-  "return5d": -340,
-  "return1m": -2501,
-  "return3m": -2802,
-  "returnytd": -4227,
-  "return1y": -3517,
-  "return3y": 278,
-  "return5y": 315,
-  "return10y": -1472,
-  "returnsi": -1183,
+  "portfolioAsof": 20261030,
+  "return1d": 240,
+  "return5d": 658,
+  "return1m": -1603,
+  "return3m": -2295,
+  "returnytd": -3848,
+  "return1y": -3433,
+  "return3y": 1096,
+  "return5y": 1017,
+  "return10y": -614,
+  "returnsi": -603,
   "drawdownytd": -4782,
   "drawdown1y": -4782,
   "drawdown3y": -4782,
   "drawdown5y": -4782,
   "drawdownsi": -4817,
-  "cagr1y": -3517,
-  "cagr3y": 92,
-  "cagr5y": 62,
-  "cagr10y": -158,
-  "cagrsi": -106,
+  "cagr1y": -3433,
+  "cagr3y": 353,
+  "cagr5y": 196,
+  "cagr10y": -63,
+  "cagrsi": -53,
   "rating": 0,
   "description": "Reksa Dana BAHANA ICon SYARIAH (\"BAHANA ICon SYARIAH\") adalah Reksa Dana berbentuk Kontrak Investasi Kolektif berdasarkan Undang-Undang No.8 tahun 1995 tentang Pasar Modal dan peraturan pelaksanaannya. BAHANA ICon SYARIAH merupakan reksa dana berbentuk Kontrak Investasi Kolektif yang memiliki multi share class (memiliki beberapa Kelas Unit Penyertaan). BAHANA ICon SYARIAH terdiri dari 2 (kelas) Kelas Unit Penyertaan yaitu BAHANA ICon SYARIAH Kelas G (General) dan BAHANA ICon SYARIAH Kelas I (Institusi). BAHANA ICon SYARIAH bertujuan untuk memperoleh tingkat pengembalian yang optimal dalam jangka panjang melalui mayoritas investasi pada Efek Syariah bersifat Ekuitas yang tercantum dalam Daftar Efek Syariah dengan berpegang pada proses investasi yang sistematis, disiplin dan memperhatikan faktor risiko. BAHANA ICon SYARIAH mempunyai komposisi investasi sebagai berikut:  minimum 80 % (delapan puluh persen) dan maksimum 100 % (seratus persen) pada Efek Syariah Bersifat Ekuitas yaitu saham yang terdapat dalam Daftar Efek Syariah dan dicatatkan di Bursa Efek sesuai dengan peraturan perundang-undangan yang berlaku;  minimum 0 % (nol persen) dan maksimum 20 % (dua puluh persen) pada setara kas dan atau Instrumen Syariah Pasar Uang antara lain Surat Berharga Syariah Negara dan/atau Sukuk, Sertifikat Deposito Syariah, Deposito Syariah dan/atau Efek Syariah Pendapatan Tetap Berbasis Syariah yang mempunyai jatuh tempo kurang dari 1 (satu) tahun dan diterbitkan berdasarkan peraturan perundang-undangan yang berlaku di Indonesia.",
   "isSyariah": true,
-  "lastPrice": 88168,
+  "lastPrice": 93966,
   "expenseRatio": 373,
   "minFirstBuy": 100000,
   "minNextBuy": 100000,
-  "asof": 20261106,
+  "asof": 20261113,
   "url": "bahana-icon-syariah-kelas-g-40716ceb0044",
   "currency": "IDR",
-  "lastAum": 88590000000,
+  "lastAum": 67830000000,
   "factsheet": "https://cache.makmur.id/files/products/60d1ff1b4cc7bb3913edb070/factsheet.pdf",
   "prospectus": "https://cache.makmur.id/files/products/60d1ff1b4cc7bb3913edb070/prospectus.pdf",
   "inceptionDate": 20150206,
