@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Kas dan/atau Pasar Uang",
-      "percentage": 3.36
+      "percentage": 1.78
     },
     {
       "name": "Obligasi",
-      "percentage": 96.64
+      "percentage": 98.22
     }
   ],
   "investment_manager": {
@@ -148,9 +148,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2019-11-19",
-    "value": 1468.36
+    "value": 1465.47
   },
   "trade": null
 }

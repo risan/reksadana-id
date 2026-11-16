@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +60,11 @@
   "asset": [
     {
       "name": "Pasar Uang Syariah",
-      "percentage": 12.78
+      "percentage": 13.09
     },
     {
       "name": "Obligasi Syariah (Jatuh tempo ≤ 1 tahun)",
-      "percentage": 87.22
+      "percentage": 86.91
     }
   ],
   "investment_manager": {
@@ -143,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2021-01-21",
-    "value": 1218.62
+    "value": 1218.99
   },
   "trade": null
 }

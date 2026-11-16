@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Efek Ekuitas Syariah",
-      "percentage": 96.76
+      "percentage": 93.32
     },
     {
       "name": "SBSN &/ Sukuk Korporasi &/ Inst. Psr. Uang Syariah Dlm Negeri &/ Deposito Syariah",
-      "percentage": 3.24
+      "percentage": 6.68
     }
   ],
   "holding": [
@@ -73,29 +73,19 @@
       "symbol": "ANTM",
       "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4396,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "BRIS",
-      "name": "Bank Syariah Indonesia Tbk.",
+      "symbol": "KBLI",
+      "name": "KMI Wire & Cable Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
-      "company_id": 4342,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "BUMI",
-      "name": "Bumi Resources Tbk",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4498,
+      "company_id": 4687,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -103,9 +93,19 @@
       "symbol": "INKP",
       "name": "Indah Kiat Pulp & Paper Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4514,
+      "product_type": "Saham",
+      "serie_id": null
+    },
+    {
+      "symbol": "ICBP",
+      "name": "Indofood CBP Sukses Makmur Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4891,
       "product_type": "Saham",
       "serie_id": null
     },
@@ -113,7 +113,7 @@
       "symbol": "KLBF",
       "name": "Kalbe Farma Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4973,
       "product_type": "Saham",
@@ -123,7 +123,7 @@
       "symbol": "MYOH",
       "name": "Samindo Resources Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4277,
       "product_type": "Saham",
@@ -133,7 +133,7 @@
       "symbol": "JSMR",
       "name": "Jasa Marga (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4729,
       "product_type": "Saham",
@@ -143,7 +143,7 @@
       "symbol": "SMGR",
       "name": "Semen Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4424,
       "product_type": "Saham",
@@ -153,7 +153,7 @@
       "symbol": "PTBA",
       "name": "Bukit Asam Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5051,
       "product_type": "Saham",
@@ -163,7 +163,7 @@
       "symbol": "TINS",
       "name": "Timah Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4493,
       "product_type": "Saham",
@@ -196,7 +196,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 887640198604,
+    "value": 887640000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -208,40 +208,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.14779601960982192,
-    "3y": -0.025738131107755358,
-    "5y": -0.04880563841368646,
-    "10y": 0.03803469594988029,
-    "all": 0.03705582783514161
+    "1y": -0.1441388462439177,
+    "3y": -0.022022395658017446,
+    "5y": -0.043637730411961284,
+    "10y": 0.04060093126514319,
+    "all": 0.03899229405885607
   },
   "cagr_adjusted": {
-    "1y": -0.14779601960982192,
-    "3y": -0.025738131107755358,
-    "5y": -0.04880563841368646,
-    "10y": 0.03803469594988029,
-    "all": 0.0370637752262295
+    "1y": -0.1441388462439177,
+    "3y": -0.022022395658017446,
+    "5y": -0.043637730411961284,
+    "10y": 0.04060093126514319,
+    "all": 0.03901739507857971
   },
   "simplereturn": {
-    "1d": 0.00016830819099866723,
-    "1m": -0.09527810357271749,
-    "3m": -0.08440520891587444,
-    "ytd": -0.2772852985955334,
-    "1y": -0.14779601960982192,
-    "3y": -0.07524408940530947,
-    "5y": -0.22134274177893387,
-    "10y": 0.45250855497818265,
-    "all": 0.6054653885408954
+    "1d": 0.011109676546716463,
+    "1m": -0.060320543953375494,
+    "3m": -0.06046012077170504,
+    "ytd": -0.25921821932740563,
+    "1y": -0.1441388462439177,
+    "3y": -0.06462290979410767,
+    "5y": -0.19995913641626373,
+    "10y": 0.4888196845974182,
+    "all": 0.6456002721687446
   },
   "changesvalue": {
-    "1d": 0.2699999999999818,
-    "1m": -168.97000000000003,
-    "3m": -147.91000000000008,
-    "ytd": -615.5899999999999,
-    "1y": -278.26,
-    "3y": -130.54999999999995,
-    "5y": -456.0899999999999,
-    "10y": 499.85000000000014,
-    "all": 605.09
+    "1d": 18.069999999999936,
+    "1m": -105.57000000000016,
+    "3m": -105.83000000000015,
+    "ytd": -575.48,
+    "1y": -276.97,
+    "3y": -113.62000000000012,
+    "5y": -411.03999999999996,
+    "10y": 539.96,
+    "all": 645.1999999999999
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -263,9 +263,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2013-11-11",
-    "value": 1604.47
+    "value": 1644.58
   },
   "trade": null
 }

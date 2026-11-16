@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,11 +61,11 @@
   "asset": [
     {
       "name": "EBU <1 Tahun (tmsk. Bunga Berjalan)",
-      "percentage": 43.94
+      "percentage": 45.63
     },
     {
       "name": "Kas dan/ atau Pasar Uang",
-      "percentage": 56.06
+      "percentage": 54.37
     }
   ],
   "holding": [
@@ -201,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2011-06-09",
-    "value": 1911.39
+    "value": 1911.68
   },
   "trade": null
 }

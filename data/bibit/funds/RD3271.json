@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 98.86
+      "percentage": 98.29
     },
     {
       "name": "Deposito dan Kas",
-      "percentage": 1.14
+      "percentage": 1.71
     }
   ],
   "holding": [
@@ -199,9 +199,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2019-07-25",
-    "value": 130.3515
+    "value": 136.6225
   },
   "trade": null
 }

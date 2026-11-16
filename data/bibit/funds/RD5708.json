@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +60,11 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 95.14
+      "percentage": 87.92
     },
     {
       "name": "Pasar Uang",
-      "percentage": 4.86
+      "percentage": 12.08
     }
   ],
   "investment_manager": {
@@ -143,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2022-12-02",
-    "value": 621.58
+    "value": 644.88
   },
   "trade": null
 }

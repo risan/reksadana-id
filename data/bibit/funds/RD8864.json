@@ -59,15 +59,15 @@
   "asset": [
     {
       "name": "Instrumen Pasar Uang dalam negeri dan/atau Deposito",
-      "percentage": 1.55
+      "percentage": 0.26
     },
     {
       "name": "Efek Ekuitas yang terdaftar pada Indeks LQ45",
-      "percentage": 79.04
+      "percentage": 77.18
     },
     {
       "name": "Efek Bersifat Hutang",
-      "percentage": 19.41
+      "percentage": 22.56
     }
   ],
   "investment_manager": {
@@ -144,9 +144,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2024-10-22",
-    "value": 590.9695
+    "value": 612.1432
   },
   "trade": null
 }

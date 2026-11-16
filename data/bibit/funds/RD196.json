@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Likuiditas",
-      "percentage": 17.32
+      "percentage": 22.97
     },
     {
       "name": "Saham",
-      "percentage": 82.68
+      "percentage": 77.03
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2013-06-05",
-    "value": 815.14
+    "value": 844.7
   },
   "trade": null
 }

@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Kas dan Setara Kas",
-      "percentage": 6.71
+      "percentage": 8.72
     },
     {
       "name": "Obligasi",
-      "percentage": 93.29
+      "percentage": 91.28
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2018-01-26",
-    "value": 1416.18
+    "value": 1414.74
   },
   "trade": null
 }

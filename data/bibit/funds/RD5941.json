@@ -19,11 +19,10 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18089,
+    "exchange_rate": 18135,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -61,7 +60,7 @@
   "asset": [
     {
       "name": "Saham Syariah",
-      "percentage": 86.57
+      "percentage": 88.45
     },
     {
       "name": "Obligasi Syariah",
@@ -69,7 +68,7 @@
     },
     {
       "name": "Pasar Uang Syariah",
-      "percentage": 13.43
+      "percentage": 11.55
     }
   ],
   "investment_manager": {
@@ -147,9 +146,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-12",
     "first_date": "2023-04-12",
-    "value": 0.799125
+    "value": 0.799333
   },
   "trade": null
 }

@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +60,11 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 94.6
+      "percentage": 94.82
     },
     {
       "name": "Deposito",
-      "percentage": 4.3
+      "percentage": 3.86
     }
   ],
   "investment_manager": {
@@ -142,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2022-12-21",
-    "value": 990.7412
+    "value": 990.1322
   },
   "trade": null
 }

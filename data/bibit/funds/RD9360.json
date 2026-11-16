@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Inst. Psr. Uang dlm Negeri &/ deposito",
-      "percentage": 20.65
+      "percentage": 8.77
     },
     {
       "name": "EBU pada Sucorinvest PHEI AAA Corp Bond Indeks",
-      "percentage": 79.35
+      "percentage": 91.23
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2025-05-19",
-    "value": 1097.3204
+    "value": 1097.2484
   },
   "trade": null
 }

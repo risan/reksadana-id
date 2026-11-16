@@ -18,11 +18,10 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18089,
+    "exchange_rate": 18135,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -59,12 +58,12 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang Syariah",
-      "percentage": 10.1
+      "name": "Efek Syariah Bersifat Ekuitas Luar  Negeri",
+      "percentage": 99.51
     },
     {
-      "name": "Efek Syariah Bersifat Ekuitas Luar  Negeri",
-      "percentage": 89.9
+      "name": "Pasar Uang Syariah",
+      "percentage": 0.49
     }
   ],
   "investment_manager": {
@@ -142,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-10",
+    "date": "2026-11-12",
     "first_date": "2023-11-14",
-    "value": 1.3582
+    "value": 1.3616
   },
   "trade": null
 }

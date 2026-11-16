@@ -18,7 +18,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,15 +60,15 @@
   "asset": [
     {
       "name": "Cash & Equivalent",
-      "percentage": 1.79
+      "percentage": 0.34
     },
     {
       "name": "Bonds",
-      "percentage": 57.09
+      "percentage": 63.86
     },
     {
       "name": "Equities",
-      "percentage": 39.8
+      "percentage": 35.87
     }
   ],
   "investment_manager": {
@@ -152,9 +151,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2001-08-15",
-    "value": 737.096
+    "value": 749.2529
   },
   "trade": null
 }

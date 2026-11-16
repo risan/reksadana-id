@@ -58,12 +58,8 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang",
-      "percentage": 1.05
-    },
-    {
-      "name": "Aset Emas",
-      "percentage": 98.95
+      "name": "EGR",
+      "percentage": 99.03
     }
   ],
   "investment_manager": {
@@ -140,9 +136,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2026-08-07",
-    "value": 901.1885
+    "value": 885.9637
   },
   "trade": null
 }

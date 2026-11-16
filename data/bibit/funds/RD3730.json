@@ -60,11 +60,11 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 90.83
+      "percentage": 78.93
     },
     {
       "name": "Likuiditas",
-      "percentage": 9.17
+      "percentage": 21.07
     }
   ],
   "investment_manager": {
@@ -142,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2020-07-01",
-    "value": 2912.23
+    "value": 2904.74
   },
   "trade": null
 }

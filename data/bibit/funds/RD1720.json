@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,11 +61,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 9.09
+      "percentage": 8.92
     },
     {
       "name": "Pendapatan Tetap",
-      "percentage": 90.91
+      "percentage": 91.08
     }
   ],
   "holding": [
@@ -201,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2018-01-26",
-    "value": 997.45
+    "value": 995.54
   },
   "trade": null
 }

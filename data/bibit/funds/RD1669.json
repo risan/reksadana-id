@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Deposito Syariah dan Setara Kas",
-      "percentage": 37.53
+      "percentage": 31.07
     },
     {
       "name": "Sukuk (dgn. sisa jt. tempo dan/atau jk. waktu < 1 tahun)",
-      "percentage": 62.47
+      "percentage": 68.93
     }
   ],
   "holding": [
@@ -73,7 +73,7 @@
       "symbol": "PBS003",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6020,
       "product_type": "FR",
@@ -81,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Ijarah Berkelanjutan II Moratelindo Tahap II Tahun 2024 Seri A",
+      "name": "SUKUK IJARAH BERKELANJUTAN I BALI TOWERINDO SENTRA TAHAP III TAHUN 2025 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,9 +91,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berkelanjutan III Sarana Multi Infrastruktur Tahap II Tahun 2025 Seri A",
+      "name": "SUKUK IJARAH BERKELANJUTAN I TOWER BERSAMA INFRASTRUCTURE TAHAP V TAHUN 2026 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -101,9 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "Sukuk Mudharabah Berwawasan Sosial Berkelanjutan Pegadaian Tahap III Tahun 2025 Seri A",
+      "name": "SUKUK IJARAH BERKELANJUTAN II MORATELINDO TAHAP II TAHUN 2024 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -111,9 +111,9 @@
     },
     {
       "symbol": "",
-      "name": "TD Cimb Niaga Syariah",
+      "name": "SUKUK MUDHARABAH BERKELANJUTAN II INDAH KIAT PULP & PAPER TAHAP I TAHUN 2022 SERI C",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -121,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "TD PT Bank Aladin Syariah",
+      "name": "SUKUK MUDHARABAH BERWAWASAN SOSIAL BERKELANJUTAN I PEGADAIAN TAHAP III TAHUN 2025 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -131,9 +131,9 @@
     },
     {
       "symbol": "",
-      "name": "TD PT Bank Jabar Banten Syariah",
+      "name": "TD CIMB NIAGA SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -141,9 +141,9 @@
     },
     {
       "symbol": "",
-      "name": "TD PT Bank Panin Dubai Syariah Tbk",
+      "name": "TD PT BANK ALADIN SYARIAH",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -151,9 +151,9 @@
     },
     {
       "symbol": "",
-      "name": "TD PT BPD Sumatera Selatan Dan Bangka Belitung",
+      "name": "TD PT BANK PANIN DUBAI SYARIAH Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -161,9 +161,9 @@
     },
     {
       "symbol": "",
-      "name": "TD PT. Bank Syariah Indonesia",
+      "name": "TD PT. BANK SYARIAH INDONESIA",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -192,7 +192,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 6841412698462,
+    "value": 6840000000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -204,40 +204,40 @@
     "percentage": 0.0663
   },
   "cagr": {
-    "1y": 0.0408284473173528,
-    "3y": 0.04779825168320384,
-    "5y": 0.04391948305742299,
+    "1y": 0.040832389737358143,
+    "3y": 0.04777470264590922,
+    "5y": 0.043943256212072734,
     "10y": null,
-    "all": 0.0518053996763721
+    "all": 0.051765541699966944
   },
   "cagr_adjusted": {
-    "1y": 0.0408284473173528,
-    "3y": 0.04779825168320384,
-    "5y": 0.04391948305742299,
+    "1y": 0.040832389737358143,
+    "3y": 0.04777470264590922,
+    "5y": 0.043943256212072734,
     "10y": null,
-    "all": 0.05182333524760252
+    "all": 0.05181927064178016
   },
   "simplereturn": {
-    "1d": 0.00016590571246544172,
-    "1m": 0.003629268552554521,
-    "3m": 0.011014885524347484,
-    "ytd": 0.034704581965975256,
-    "1y": 0.0408284473173528,
-    "3y": 0.15035797701009046,
-    "5y": 0.23975256442949155,
+    "1d": 0.00016586498590154264,
+    "1m": 0.0036016483699379265,
+    "3m": 0.01101215226547203,
+    "ytd": 0.034958601655933785,
+    "1y": 0.040832389737358143,
+    "3y": 0.15028041661897684,
+    "5y": 0.23989373514389345,
     "10y": null,
-    "all": 0.5068406865881752
+    "all": 0.5072106155618121
   },
   "changesvalue": {
     "1d": 0.25,
-    "1m": 5.4500000000000455,
+    "1m": 5.410000000000082,
     "3m": 16.420000000000073,
-    "ytd": 50.55000000000018,
-    "1y": 59.12000000000012,
-    "3y": 196.99,
-    "5y": 291.46000000000004,
+    "ytd": 50.92000000000007,
+    "1y": 59.1400000000001,
+    "3y": 196.95000000000005,
+    "5y": 291.6700000000001,
     "10y": null,
-    "all": 506.9380000000001
+    "all": 507.308
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -259,9 +259,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2018-10-02",
-    "value": 1507.13
+    "value": 1507.5
   },
   "trade": null
 }

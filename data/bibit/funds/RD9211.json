@@ -56,7 +56,20 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Efek Utang",
+      "percentage": 75.24
+    },
+    {
+      "name": "Efek Ekuitas",
+      "percentage": 2.48
+    },
+    {
+      "name": "Deposito",
+      "percentage": 11.25
+    }
+  ],
   "investment_manager": {
     "name": "Danareksa Investment Management Indonesia, PT"
   },
@@ -131,9 +144,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2025-02-20",
-    "value": 998.2712
+    "value": 997.9334
   },
   "trade": null
 }

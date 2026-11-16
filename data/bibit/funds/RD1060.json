@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,16 +60,16 @@
   },
   "asset": [
     {
+      "name": "Money Markets",
+      "percentage": 9.13
+    },
+    {
       "name": "Bonds",
-      "percentage": 27.65
+      "percentage": 27.47
     },
     {
       "name": "Cash & Equivalent",
-      "percentage": 63.26
-    },
-    {
-      "name": "Money Markets",
-      "percentage": 9.08
+      "percentage": 63.4
     }
   ],
   "holding": [
@@ -165,9 +164,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2007-06-05",
-    "value": 2255.07
+    "value": 2251.13
   },
   "trade": null
 }

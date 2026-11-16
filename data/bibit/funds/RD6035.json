@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,7 +60,7 @@
   "asset": [
     {
       "name": "Equity",
-      "percentage": 99.51
+      "percentage": 99.24
     }
   ],
   "investment_manager": {
@@ -138,9 +137,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2023-06-09",
-    "value": 681.9548
+    "value": 710.6847
   },
   "trade": null
 }

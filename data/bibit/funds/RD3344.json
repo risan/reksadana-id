@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,11 +61,11 @@
   "asset": [
     {
       "name": "Sukuk",
-      "percentage": 50.85
+      "percentage": 85.19
     },
     {
       "name": "Deposito Syariah",
-      "percentage": 48.5
+      "percentage": 12.42
     }
   ],
   "investment_manager": {
@@ -149,9 +148,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2019-09-06",
-    "value": 1359.7701
+    "value": 1360.19
   },
   "trade": null
 }

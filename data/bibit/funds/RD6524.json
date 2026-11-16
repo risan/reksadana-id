@@ -62,15 +62,11 @@
   "asset": [
     {
       "name": "Pendapatan Tetap",
-      "percentage": 89.83
-    },
-    {
-      "name": "Deposito",
-      "percentage": 5.83
+      "percentage": 94.75
     },
     {
       "name": "Kas",
-      "percentage": 4.34
+      "percentage": 5.25
     }
   ],
   "holding": [
@@ -78,7 +74,7 @@
       "symbol": "",
       "name": "Pbs023 8.125% 15May2030-FI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -163,16 +159,6 @@
       "company_id": null,
       "product_type": null,
       "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "TD Bank Btpn Syariah Tbk PT-MM",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
     }
   ],
   "bank": [
@@ -197,7 +183,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 5125626570.03,
+    "value": 16380000000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -209,40 +195,40 @@
     "percentage": 0.0683
   },
   "cagr": {
-    "1y": -0.023295788664223993,
+    "1y": -0.025776363833556304,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.029768769076012003
+    "all": 0.029031121050647535
   },
   "cagr_adjusted": {
-    "1y": -0.023295788664223993,
+    "1y": -0.025776363833556304,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.029800500159872012
+    "all": 0.02912373057709261
   },
   "simplereturn": {
-    "1d": -0.00037962611457309503,
-    "1m": -0.01923199215094895,
-    "3m": -0.010920551158018266,
-    "ytd": -0.02835902835902837,
-    "1y": -0.023295788664223993,
+    "1d": -0.0002689643019448962,
+    "1m": -0.02114057391936064,
+    "3m": -0.01288473337667917,
+    "ytd": -0.02987102987102974,
+    "1y": -0.025776363833556304,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.0795999999999999
+    "all": 0.07791999999999999
   },
   "changesvalue": {
-    "1d": -0.41000000000008185,
-    "1m": -21.170000000000073,
-    "3m": -11.920000000000073,
-    "ytd": -31.50999999999999,
-    "1y": -25.75,
+    "1d": -0.2899999999999636,
+    "1m": -23.279999999999973,
+    "3m": -14.069999999999936,
+    "ytd": -33.18999999999983,
+    "1y": -28.519999999999982,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 79.59999999999991
+    "all": 77.92000000000007
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -260,9 +246,9 @@
     "all": -0.033076639679387454
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2024-04-03",
-    "value": 1079.6
+    "value": 1077.92
   },
   "trade": null
 }

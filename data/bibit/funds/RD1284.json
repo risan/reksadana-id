@@ -18,7 +18,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +60,11 @@
   "asset": [
     {
       "name": "Sukuk",
-      "percentage": 55.99
+      "percentage": 59.01
     },
     {
       "name": "Equity",
-      "percentage": 36.61
+      "percentage": 33.24
     }
   ],
   "holding": [
@@ -200,9 +199,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2000-05-26",
-    "value": 2846.38
+    "value": 2887.79
   },
   "trade": null
 }

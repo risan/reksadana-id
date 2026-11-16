@@ -59,12 +59,12 @@
   },
   "asset": [
     {
-      "name": "Likuiditas",
-      "percentage": 1.93
+      "name": "Sukuk",
+      "percentage": 96.41
     },
     {
-      "name": "Obligasi",
-      "percentage": 98.07
+      "name": "Likuiditas",
+      "percentage": 3.59
     }
   ],
   "investment_manager": {
@@ -141,9 +141,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2026-01-30",
-    "value": 958.59
+    "value": 957.04
   },
   "trade": null
 }

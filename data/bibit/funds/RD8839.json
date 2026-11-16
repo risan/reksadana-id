@@ -19,10 +19,11 @@
   },
   "released_date": "2024-10-10",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18089,
+    "exchange_rate": 18154,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,11 +61,11 @@
   "asset": [
     {
       "name": "Obligasi dengan jatuh tempo < 1 tahun",
-      "percentage": 0.01
+      "percentage": 11.34
     },
     {
       "name": "Deposito dan Setara Kas",
-      "percentage": 99.99
+      "percentage": 88.66
     }
   ],
   "holding": [
@@ -72,7 +73,7 @@
       "symbol": "",
       "name": "INDOIS415 032927",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -80,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "Indon27",
+      "name": "INDON27",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -90,9 +91,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan | Merdeka Battery Materials Tahap IV Tahun 2026 Seri A",
+      "name": "OBLIGASI BERKELANJUTAN I MERDEKA BATTERY MATERIALS TAHAP IV TAHUN 2026 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -100,9 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan | Oki Pulp Paper Mills Tahap IV Tahun 2024 Seri B",
+      "name": "OBLIGASI BERKELANJUTAN I OKI PULP & PAPER MILLS TAHAP IV TAHUN 2024 SERI B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -110,9 +111,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan II Lontar Papyrus Pulp Paper Industry Tahap III Tahun 2024 Seri B",
+      "name": "OBLIGASI BERKELANJUTAN III CHANDRA ASRI PETROCHEMICAL TAHAP V TAHUN 2022 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -120,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Berkelanjutan III Chandra Asri Petrochemical Tahap V Tahun 2022 Seri A",
+      "name": "OBLIGASI BERKELANJUTAN VI FEDERAL INTERNATIONAL FINANCE TAHAP III TAHUN 2024 SERI B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -130,9 +131,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi Subordinasi Berkelanjutan II Bank Uob Indonesia Tahap II Tahun 2019",
+      "name": "OBLIGASI III WAHANA INTI SELARAS TAHUN 2024 SERI B",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -140,9 +141,9 @@
     },
     {
       "symbol": "",
-      "name": "Obligasi USD Berkelanjutan II Indah Kiat Pulp Paper Tahap IV Tahun 2025 Seri A",
+      "name": "OBLIGASI SUBORDINASI BERKELANJUTAN II BANK UOB INDONESIA TAHAP II TAHUN 2019",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -150,9 +151,9 @@
     },
     {
       "symbol": "",
-      "name": "Republic Of Indonesia Roi 27",
+      "name": "Republic Of Indonesia ROI 27",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -160,9 +161,9 @@
     },
     {
       "symbol": "",
-      "name": "Sni0627",
+      "name": "SN10627",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -193,7 +194,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 21844019.02466,
+    "value": 21830000,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -205,40 +206,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": 0.036663174935720466,
+    "1y": 0.036941826144910817,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.04144629985634851
+    "all": 0.04145331484195003
   },
   "cagr_adjusted": {
-    "1y": 0.0367549038278423,
+    "1y": 0.037033511043411904,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.04153782618979296
+    "all": 0.04154432264827701
   },
   "simplereturn": {
-    "1d": 0.000183722212015347,
-    "1m": 0.0030400736987563626,
-    "3m": 0.01020597513453314,
-    "ytd": 0.03194010046441109,
-    "1y": 0.0367549038278423,
+    "1d": 0.0001836378661279614,
+    "1m": 0.002946321701500665,
+    "3m": 0.010482374768088887,
+    "ytd": 0.032413989195337,
+    "1y": 0.037033511043411904,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.08879999999999999
+    "all": 0.08929999999999993
   },
   "changesvalue": {
     "1d": 0.00019999999999997797,
-    "1m": 0.0033000000000000806,
-    "3m": 0.010999999999999899,
-    "ytd": 0.03370000000000006,
-    "1y": 0.03859999999999997,
+    "1m": 0.0031999999999998696,
+    "3m": 0.011299999999999866,
+    "ytd": 0.03420000000000001,
+    "1y": 0.038899999999999935,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.08879999999999999
+    "all": 0.08929999999999993
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -256,9 +257,9 @@
     "all": -0.0018327384971544847
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2024-10-10",
-    "value": 1.0888
+    "value": 1.0893
   },
   "trade": null
 }

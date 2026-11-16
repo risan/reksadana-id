@@ -59,15 +59,15 @@
   "asset": [
     {
       "name": "Inst. Psr. Uang dlm Negeri",
-      "percentage": 2.81
+      "percentage": 4.29
     },
     {
       "name": "Efek Hutang",
-      "percentage": 86.22
+      "percentage": 83.42
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 10.97
+      "percentage": 12.29
     }
   ],
   "investment_manager": {
@@ -144,9 +144,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2025-03-19",
-    "value": 1069.1757
+    "value": 1071.9118
   },
   "trade": null
 }

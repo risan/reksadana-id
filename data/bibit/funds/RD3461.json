@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Pasar Uang Syariah",
-      "percentage": 1.66
+      "percentage": 1.85
     },
     {
       "name": "Obligasi Syariah",
-      "percentage": 98.34
+      "percentage": 98.15
     }
   ],
   "investment_manager": {
@@ -147,9 +147,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2019-11-27",
-    "value": 1461
+    "value": 1459.97
   },
   "trade": null
 }

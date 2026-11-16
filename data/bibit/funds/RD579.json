@@ -60,12 +60,12 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang + Kas",
-      "percentage": 3.7
+      "name": "Deposito",
+      "percentage": 0.99
     },
     {
       "name": "Efek Utang",
-      "percentage": 96.3
+      "percentage": 97.52
     }
   ],
   "investment_manager": {
@@ -148,9 +148,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2018-01-26",
-    "value": 1438.6959
+    "value": 1437.848
   },
   "trade": null
 }

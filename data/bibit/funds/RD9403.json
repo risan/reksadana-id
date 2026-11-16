@@ -59,15 +59,15 @@
   "asset": [
     {
       "name": "SRBI",
-      "percentage": 16.25
+      "percentage": 16.2
     },
     {
       "name": "Obligasi",
-      "percentage": 78.76
+      "percentage": 78.51
     },
     {
       "name": "Likuiditas",
-      "percentage": 4.99
+      "percentage": 5.29
     }
   ],
   "investment_manager": {
@@ -144,9 +144,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2025-05-27",
-    "value": 1111.82
+    "value": 1110.55
   },
   "trade": null
 }

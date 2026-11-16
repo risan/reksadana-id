@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Instrumen Pasar Uang",
-      "percentage": 11.16
+      "percentage": 7.25
     },
     {
       "name": "Saham",
-      "percentage": 88.84
+      "percentage": 92.75
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2013-02-12",
-    "value": 969.69
+    "value": 1002
   },
   "trade": null
 }

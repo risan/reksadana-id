@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,7 +61,7 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 90.51
+      "percentage": 79.44
     }
   ],
   "holding": [
@@ -191,9 +190,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2016-02-15",
-    "value": 377.68
+    "value": 391.13
   },
   "trade": null
 }

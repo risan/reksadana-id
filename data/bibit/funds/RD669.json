@@ -61,11 +61,11 @@
   "asset": [
     {
       "name": "Likuiditas",
-      "percentage": 0.79
+      "percentage": 1.14
     },
     {
       "name": "Obligasi",
-      "percentage": 99.21
+      "percentage": 98.86
     }
   ],
   "holding": [
@@ -200,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2004-08-19",
-    "value": 4377.31
+    "value": 4364.92
   },
   "trade": null
 }

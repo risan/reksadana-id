@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,11 +61,11 @@
   "asset": [
     {
       "name": "Cash Equivalent",
-      "percentage": 5.06
+      "percentage": 5.07
     },
     {
       "name": "Obligasi",
-      "percentage": 94.94
+      "percentage": 94.93
     }
   ],
   "holding": [
@@ -201,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2012-01-13",
-    "value": 411.6507
+    "value": 411.6287
   },
   "trade": null
 }

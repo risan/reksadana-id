@@ -18,7 +18,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,11 +59,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 0.08
+      "percentage": 0.09
     },
     {
       "name": "Efek Hutang",
-      "percentage": 99.92
+      "percentage": 99.91
     }
   ],
   "investment_manager": {
@@ -141,9 +140,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2025-05-07",
-    "value": 1035.2553
+    "value": 1034.4072
   },
   "trade": null
 }

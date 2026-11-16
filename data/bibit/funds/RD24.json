@@ -18,7 +18,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,15 +60,15 @@
   "asset": [
     {
       "name": "Pasar Uang & Lain-Lain",
-      "percentage": 17
+      "percentage": 10
     },
     {
       "name": "Obligasi",
-      "percentage": 49
+      "percentage": 45
     },
     {
       "name": "Saham",
-      "percentage": 34
+      "percentage": 45
     }
   ],
   "investment_manager": {
@@ -152,9 +151,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2004-06-11",
-    "value": 903.1189
+    "value": 925.8691
   },
   "trade": null
 }

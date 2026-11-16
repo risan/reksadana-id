@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,7 +61,7 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 91.87
+      "percentage": 91.24
     }
   ],
   "holding": [
@@ -177,9 +176,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2018-01-26",
-    "value": 3577.92
+    "value": 3571.14
   },
   "trade": null
 }

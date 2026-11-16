@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,15 +61,15 @@
   "asset": [
     {
       "name": "Money Markets",
-      "percentage": 40.03
+      "percentage": 26.57
     },
     {
       "name": "Cash & Equivalent",
-      "percentage": 2.95
+      "percentage": 2.38
     },
     {
       "name": "Obligasi",
-      "percentage": 57.01
+      "percentage": 56.61
     }
   ],
   "investment_manager": {
@@ -153,9 +152,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2018-01-26",
-    "value": 3078.5099
+    "value": 3077.3863
   },
   "trade": null
 }

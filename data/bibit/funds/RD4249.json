@@ -60,7 +60,7 @@
   "asset": [
     {
       "name": "SBSN / Sukuk / Obligasi Syariah",
-      "percentage": 93.35
+      "percentage": 93.41
     },
     {
       "name": "Obligasi Korporasi",
@@ -68,7 +68,7 @@
     },
     {
       "name": "Instrumen Pasar Uang Syariah",
-      "percentage": 4.25
+      "percentage": 4.19
     }
   ],
   "investment_manager": {
@@ -145,9 +145,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2022-07-15",
-    "value": 1221.75
+    "value": 1222.1
   },
   "trade": null
 }

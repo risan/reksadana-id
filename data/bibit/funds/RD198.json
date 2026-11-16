@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Obligasi &/ Sukuk",
-      "percentage": 23.99
+      "percentage": 30.98
     },
     {
       "name": "Inst. Psr. Uang Dalam Negeri (Jatuh Tempo < dari 1thn) &/ Deposito",
-      "percentage": 3.53
+      "percentage": 0.43
     },
     {
       "name": "Efek Ekuitas",
-      "percentage": 72.48
+      "percentage": 68.59
     }
   ],
   "holding": [
@@ -203,9 +203,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-11",
+    "date": "2026-11-13",
     "first_date": "2017-02-24",
-    "value": 3577.61
+    "value": 3676.22
   },
   "trade": null
 }
