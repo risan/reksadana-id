@@ -62,7 +62,7 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 98.71
+      "percentage": 85.52
     }
   ],
   "holding": [
@@ -70,7 +70,7 @@
       "symbol": "ANTM",
       "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4396,
       "product_type": "Saham",
@@ -80,7 +80,7 @@
       "symbol": "ASII",
       "name": "Astra International Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4547,
       "product_type": "Saham",
@@ -90,7 +90,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -100,7 +100,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -110,7 +110,7 @@
       "symbol": "BBNI",
       "name": "Bank Negara Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4338,
       "product_type": "Saham",
@@ -120,7 +120,7 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
@@ -130,7 +130,7 @@
       "symbol": "ICBP",
       "name": "Indofood CBP Sukses Makmur Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4891,
       "product_type": "Saham",
@@ -140,7 +140,7 @@
       "symbol": "INDF",
       "name": "Indofood Sukses Makmur Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4919,
       "product_type": "Saham",
@@ -150,7 +150,7 @@
       "symbol": "KLBF",
       "name": "Kalbe Farma Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4973,
       "product_type": "Saham",
@@ -160,7 +160,7 @@
       "symbol": "PGAS",
       "name": "Perusahaan Gas Negara Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5027,
       "product_type": "Saham",
@@ -189,7 +189,7 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 91273712016.01,
+    "value": 110191934824,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -201,40 +201,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.1854499254267249,
-    "3y": -0.0762164830216937,
+    "1y": -0.17733468613525072,
+    "3y": -0.07842592935134385,
     "5y": null,
     "10y": null,
-    "all": -0.08631772739253762
+    "all": -0.08304588529543189
   },
   "cagr_adjusted": {
-    "1y": -0.1854499254267249,
-    "3y": -0.0762164830216937,
+    "1y": -0.17733468613525072,
+    "3y": -0.07842592935134385,
     "5y": null,
     "10y": null,
-    "all": -0.08652135971789399
+    "all": -0.08311115222299348
   },
   "simplereturn": {
-    "1d": 0.00861844895279007,
-    "1m": -0.007872002583631632,
-    "3m": -0.03853476605289252,
-    "ytd": -0.18959528677262638,
-    "1y": -0.1854499254267249,
-    "3y": -0.21166533012563493,
+    "1d": 0.011759280608715894,
+    "1m": 0.1501433901754603,
+    "3m": -0.03261532077135554,
+    "ytd": -0.18006551034315987,
+    "1y": -0.17733468613525072,
+    "3y": -0.2173082774612568,
     "5y": null,
     "10y": null,
-    "all": -0.26009814645699325
+    "all": -0.2513974329382721
   },
   "changesvalue": {
-    "1d": 6.2999999999999545,
-    "1m": -5.850000000000023,
-    "3m": -29.550000000000068,
-    "ytd": -172.49,
-    "1y": -167.86,
-    "3y": -197.96000000000004,
+    "1d": 8.670000000000073,
+    "1m": 97.38,
+    "3m": -25.149999999999977,
+    "ytd": -163.81999999999994,
+    "1y": -160.79999999999995,
+    "3y": -207.11,
     "5y": null,
     "10y": null,
-    "all": -259.18000000000006
+    "all": -250.51
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -252,9 +252,9 @@
     "all": -0.39766221830783655
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2023-07-17",
-    "value": 737.29
+    "value": 745.96
   },
   "trade": null
 }

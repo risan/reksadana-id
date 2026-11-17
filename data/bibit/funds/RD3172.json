@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,7 +62,7 @@
   "asset": [
     {
       "name": "Sukuk",
-      "percentage": 93.46
+      "percentage": 93.09
     },
     {
       "name": "saham/Instrumen Pasar Uang",
@@ -69,7 +70,7 @@
     },
     {
       "name": "Setara Kas",
-      "percentage": 6.54
+      "percentage": 6.91
     }
   ],
   "investment_manager": {
@@ -152,9 +153,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2019-04-30",
-    "value": 1320.1549
+    "value": 1321.5225
   },
   "trade": null
 }

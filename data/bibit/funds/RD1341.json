@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 95.9
+      "percentage": 95
     },
     {
       "name": "Kas & Pasar Uang",
-      "percentage": 4.1
+      "percentage": 5
     }
   ],
   "holding": [
@@ -200,9 +201,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2005-06-16",
-    "value": 5428.9376
+    "value": 5429.8889
   },
   "trade": null
 }

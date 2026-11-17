@@ -61,50 +61,20 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang",
-      "percentage": 3.36
+      "name": "Obligasi",
+      "percentage": 95.17
     },
     {
-      "name": "Efek Utang",
-      "percentage": 96.64
+      "name": "Deposito",
+      "percentage": 3.47
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "BSDE04BCN2",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "",
       "name": "FR0052",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "FR0111",
-      "name": "Obligasi FR",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 10996,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "INKPOGACN3",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,9 +82,9 @@
     },
     {
       "symbol": "",
-      "name": "OPPM02ACN4",
+      "name": "PT Bumi Serpong Damai",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -122,9 +92,9 @@
     },
     {
       "symbol": "",
-      "name": "PIDLO2BCNI",
+      "name": "PT Chandra Asri Pacific Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -132,9 +102,9 @@
     },
     {
       "symbol": "",
-      "name": "SMIOIDONI",
+      "name": "PT Indah Kiat Pulp & Paper Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -142,9 +112,9 @@
     },
     {
       "symbol": "",
-      "name": "TBIG06ACN6",
+      "name": "PT Merdeka Copper Gold Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -152,9 +122,9 @@
     },
     {
       "symbol": "",
-      "name": "TPIA04CCNI",
+      "name": "PT Oki Pulp & Paper Mills",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,9 +132,39 @@
     },
     {
       "symbol": "",
-      "name": "WISLOICCN3",
+      "name": "PT Pindo Deli Pulp And Paper Mills",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Sarana Multi Infrastruktur (Persero)",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Summarecon Agung Tbk",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "PT Wahana Inti Selaras",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +197,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 204014236873.11,
+    "value": 204014236873,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -205,44 +205,44 @@
     "percentage": 0.0166
   },
   "avg_yield": {
-    "date": "2026-09-30",
-    "percentage": 0.0704
+    "date": "2026-10-30",
+    "percentage": 0.0794
   },
   "cagr": {
-    "1y": -0.04403458162288765,
-    "3y": 0.02951154304826553,
-    "5y": 0.02361140186978017,
-    "10y": 0.050691831026006495,
-    "all": 0.048188625620161796
+    "1y": -0.044914573909834776,
+    "3y": 0.02622484297249361,
+    "5y": 0.023193392178256556,
+    "10y": 0.05117171278415755,
+    "all": 0.04819705275705344
   },
   "cagr_adjusted": {
-    "1y": 0.0029407375313765804,
-    "3y": 0.04610573643592142,
-    "5y": 0.033479181862926755,
-    "10y": 0.055744103909902476,
-    "all": 0.05178018468192591
+    "1y": 0.0020175031796667575,
+    "3y": 0.04276605964800595,
+    "5y": 0.03305714249015557,
+    "10y": 0.0562262931891766,
+    "all": 0.05176737680400767
   },
   "simplereturn": {
-    "1d": -0.0004976200223230087,
-    "1m": -0.005566568671010241,
-    "3m": 0.012017797729024116,
-    "ytd": -0.0027155962630042163,
-    "1y": 0.0029407375313765804,
-    "3y": 0.14479243486360405,
-    "5y": 0.17898604243464522,
-    "10y": 0.7202305125245145,
-    "all": 1.041517965348718
+    "1d": 0.00024271567752109924,
+    "1m": 0.0003179878967944916,
+    "3m": 0.009154510978966801,
+    "ytd": -0.0024735397032700224,
+    "1y": 0.0020175031796667575,
+    "3y": 0.13386320289745623,
+    "5y": 0.176580709484347,
+    "10y": 0.7281034771420039,
+    "all": 1.042013473764849
   },
   "changesvalue": {
-    "1d": -0.9687999999998738,
-    "1m": -11.023218763728892,
-    "3m": 23.38478123627101,
-    "ytd": -5.559034651281991,
-    "1y": 5.985965348718082,
-    "3y": 258.2095653487181,
-    "5y": 309.930065348718,
-    "10y": 854.747965348718,
-    "all": 1041.517965348718
+    "1d": 0.4722999999999047,
+    "1m": 0.6261443709909145,
+    "3m": 17.868144370990876,
+    "ytd": -5.063526235150903,
+    "1y": 4.111473764849052,
+    "3y": 241.07887376484905,
+    "5y": 306.4644737648491,
+    "10y": 860.363473764849,
+    "all": 1042.013473764849
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -260,9 +260,9 @@
     "all": -0.14757660542078888
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2012-09-27",
-    "value": 1945.8982
+    "value": 1946.3705
   },
   "trade": null
 }

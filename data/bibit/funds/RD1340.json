@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +62,11 @@
   "asset": [
     {
       "name": "Obligasi < 1 tahun",
-      "percentage": 88.9
+      "percentage": 89.6
     },
     {
       "name": "Kas / Setara Kas",
-      "percentage": 11.1
+      "percentage": 10.4
     }
   ],
   "holding": [
@@ -194,9 +195,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2016-08-26",
-    "value": 1719.2714
+    "value": 1720.1986
   },
   "trade": null
 }

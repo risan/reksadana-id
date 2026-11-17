@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,15 +62,15 @@
   "asset": [
     {
       "name": "Kas / pasar uang",
-      "percentage": 11
+      "percentage": 10.6
     },
     {
       "name": "Saham Non BUMN",
-      "percentage": 21.9
+      "percentage": 20.9
     },
     {
       "name": "Saham BUMN",
-      "percentage": 67.1
+      "percentage": 68.5
     }
   ],
   "holding": [
@@ -264,9 +265,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2015-05-11",
-    "value": 1114.4584
+    "value": 1105.0856
   },
   "trade": null
 }

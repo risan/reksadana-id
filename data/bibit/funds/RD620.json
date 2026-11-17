@@ -61,20 +61,20 @@
   },
   "asset": [
     {
-      "name": "Pasar Uang",
-      "percentage": 59.7
+      "name": "Obligasi",
+      "percentage": 49.61
     },
     {
-      "name": "Efek Utang",
-      "percentage": 40.3
+      "name": "Deposito",
+      "percentage": 50.91
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "PBS021",
+      "name": "Bank DKI Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -82,9 +82,9 @@
     },
     {
       "symbol": "",
-      "name": "PDRIIDJA",
+      "name": "PT Adira Dinamika Multi Finance Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -92,9 +92,9 @@
     },
     {
       "symbol": "",
-      "name": "SKSMFP02CN2",
+      "name": "PT Bussan Auto Finance",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,9 +102,9 @@
     },
     {
       "symbol": "",
-      "name": "SMADMFOBACN3",
+      "name": "PT CIMB Niaga Auto Finance",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,9 +112,9 @@
     },
     {
       "symbol": "",
-      "name": "SMPNMPOIASECN2",
+      "name": "PT Sarana Multi Infrastruktur (Persero) SKSMFPO2CN2",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -122,9 +122,9 @@
     },
     {
       "symbol": "",
-      "name": "SMSMII03ACN2",
+      "name": "PT Sarana Multi Infrastruktur (Persero) SMSMIIO3ACN2",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -132,9 +132,9 @@
     },
     {
       "symbol": "",
-      "name": "SWAGIDJI",
+      "name": "PT Tower Bersama Infrastructure",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -142,9 +142,9 @@
     },
     {
       "symbol": "",
-      "name": "SYDKIDJI",
+      "name": "PT. BPD Jawa Tengah UUS",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -152,9 +152,9 @@
     },
     {
       "symbol": "",
-      "name": "SYJBIDJT",
+      "name": "PT. BPD Riau",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,9 +162,9 @@
     },
     {
       "symbol": "",
-      "name": "SYJGIDJI",
+      "name": "PT. Bank Syariah Nasional",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +197,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 1109876788110.44,
+    "value": 1109876788110,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -205,44 +205,44 @@
     "percentage": 0.0061
   },
   "avg_yield": {
-    "date": "2026-09-30",
-    "percentage": 0.0569
+    "date": "2026-10-30",
+    "percentage": 0.065
   },
   "cagr": {
-    "1y": 0.038821037220140964,
-    "3y": 0.04975703899050332,
-    "5y": 0.042945255301330976,
+    "1y": 0.03924350448196434,
+    "3y": 0.04966522597112433,
+    "5y": 0.0429972665969196,
     "10y": null,
-    "all": 0.045518010860335245
+    "all": 0.045568066409772845
   },
   "cagr_adjusted": {
-    "1y": 0.038821037220140964,
-    "3y": 0.04975703899050332,
-    "5y": 0.042945255301330976,
+    "1y": 0.03924350448196434,
+    "3y": 0.04966522597112433,
+    "5y": 0.0429972665969196,
     "10y": null,
-    "all": 0.0455640441048788
+    "all": 0.04558341265894095
   },
   "simplereturn": {
-    "1d": 0.00015147117675495814,
-    "1m": 0.004307227037584127,
-    "3m": 0.013764751636231365,
-    "ytd": 0.03346194812947334,
-    "1y": 0.038821037220140964,
-    "3y": 0.15682159239141202,
-    "5y": 0.23397841640603345,
+    "1d": 0.0005204349803300534,
+    "1m": 0.004465823712281658,
+    "3m": 0.013893992783499343,
+    "ytd": 0.03399979787811991,
+    "1y": 0.03924350448196434,
+    "3y": 0.15651808789397315,
+    "5y": 0.23428613734107784,
     "10y": null,
-    "all": 0.44809103569716346
+    "all": 0.4488446729268427
   },
   "changesvalue": {
-    "1d": 0.219300000000203,
-    "1m": 6.2102000000002135,
-    "3m": 19.661000000000058,
-    "ytd": 46.884700000000066,
-    "1y": 54.11290000000008,
-    "3y": 196.2971,
-    "5y": 274.5634,
+    "1d": 0.7536000000000058,
+    "1m": 6.441200000000208,
+    "3m": 19.853400000000192,
+    "ytd": 47.63830000000007,
+    "1y": 54.708000000000084,
+    "3y": 196.0706,
+    "5y": 274.999,
     "10y": null,
-    "all": 448.0689000000001
+    "all": 448.8225000000001
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -264,9 +264,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2018-07-25",
-    "value": 1448.0195
+    "value": 1448.7731
   },
   "trade": null
 }

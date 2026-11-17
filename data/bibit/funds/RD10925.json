@@ -18,6 +18,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -59,15 +60,15 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 2.2
+      "percentage": 1.1
     },
     {
       "name": "Obligasi",
-      "percentage": 79.5
+      "percentage": 78.3
     },
     {
       "name": "Kas/Pasar Uang",
-      "percentage": 18.3
+      "percentage": 20.6
     }
   ],
   "investment_manager": {
@@ -144,9 +145,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2026-07-27",
-    "value": 1021.6372
+    "value": 1022.5783
   },
   "trade": null
 }

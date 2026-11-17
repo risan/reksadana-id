@@ -19,7 +19,6 @@
   },
   "released_date": "2024-04-02",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,7 +61,7 @@
   "asset": [
     {
       "name": "Saham",
-      "percentage": 96.14
+      "percentage": 98.21
     }
   ],
   "holding": [
@@ -70,7 +69,7 @@
       "symbol": "BJBR",
       "name": "Bank Pembangunan Daerah Jawa Barat dan Banten Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4693,
       "product_type": "Saham",
@@ -80,7 +79,7 @@
       "symbol": "BNGA",
       "name": "Bank CIMB Niaga Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4744,
       "product_type": "Saham",
@@ -90,7 +89,7 @@
       "symbol": "BBCA",
       "name": "Bank Central Asia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4320,
       "product_type": "Saham",
@@ -100,7 +99,7 @@
       "symbol": "BDMN",
       "name": "Bank Danamon Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4880,
       "product_type": "Saham",
@@ -110,7 +109,7 @@
       "symbol": "BMRI",
       "name": "Bank Mandiri (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4331,
       "product_type": "Saham",
@@ -120,7 +119,7 @@
       "symbol": "BBNI",
       "name": "Bank Negara Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4338,
       "product_type": "Saham",
@@ -130,7 +129,7 @@
       "symbol": "PNBN",
       "name": "Bank Pan Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4533,
       "product_type": "Saham",
@@ -140,7 +139,7 @@
       "symbol": "BBRI",
       "name": "Bank Rakyat Indonesia (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4327,
       "product_type": "Saham",
@@ -150,7 +149,7 @@
       "symbol": "BRIS",
       "name": "Bank Syariah Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4342,
       "product_type": "Saham",
@@ -160,7 +159,7 @@
       "symbol": "BBTN",
       "name": "Bank Tabungan Negara (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4346,
       "product_type": "Saham",
@@ -189,7 +188,7 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 172266455490.49,
+    "value": 200957334463,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -201,40 +200,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.20184100207081168,
+    "1y": -0.196830137536392,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.1603436283449271
+    "all": -0.15620117475921413
   },
   "cagr_adjusted": {
-    "1y": -0.20184100207081168,
+    "1y": -0.196830137536392,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.16080446672656512
+    "all": -0.15635075626034156
   },
   "simplereturn": {
-    "1d": 0.006496504944031312,
-    "1m": -0.036241385619320554,
-    "3m": -0.07529477164340681,
-    "ytd": -0.19730024889521003,
-    "1y": -0.20184100207081168,
+    "1d": 0.012529464808340274,
+    "1m": 0.13085499231408004,
+    "3m": -0.0659087260467901,
+    "ytd": -0.18724285061207913,
+    "1y": -0.196830137536392,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -0.36788999999999994
+    "all": -0.35997
   },
   "changesvalue": {
-    "1d": 4.080000000000041,
-    "1m": -23.769999999999982,
-    "3m": -51.47000000000003,
-    "ytd": -155.37,
-    "1y": -159.85000000000002,
+    "1d": 7.919999999999959,
+    "1m": 74.05999999999995,
+    "3m": -45.16000000000008,
+    "ytd": -147.45000000000005,
+    "1y": -156.85000000000002,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": -367.89
+    "all": -359.97
   },
   "riskprofile": "High",
   "maxdrawdown": {
@@ -252,9 +251,9 @@
     "all": -0.480829510703364
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2024-04-02",
-    "value": 632.11
+    "value": 640.03
   },
   "trade": null
 }

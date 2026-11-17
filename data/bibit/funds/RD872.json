@@ -60,15 +60,15 @@
   "asset": [
     {
       "name": "Saham syariah",
-      "percentage": 43.17
+      "percentage": 37.08
     },
     {
       "name": "Deposito Syariah",
-      "percentage": 6.21
+      "percentage": 9.73
     },
     {
       "name": "Sukuk",
-      "percentage": 45.19
+      "percentage": 52.84
     }
   ],
   "holding": [
@@ -76,7 +76,7 @@
       "symbol": "AADI",
       "name": "Adaro Andalan Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 8951,
       "product_type": "Saham",
@@ -86,7 +86,7 @@
       "symbol": "ADRO",
       "name": "Alamtri Resources Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 5007,
       "product_type": "Saham",
@@ -96,57 +96,17 @@
       "symbol": "ANTM",
       "name": "Aneka Tambang Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4396,
       "product_type": "Saham",
       "serie_id": null
     },
     {
-      "symbol": "ARCI",
-      "name": "Archi Indonesia Tbk",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4850,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
       "symbol": "",
-      "name": "Bank DKI (Unit Usaha Syariah)",
+      "name": "Bank Pembangunan Daerah Riau Kepri Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "INKP",
-      "name": "Indah Kiat Pulp & Paper Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4514,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "MDKA",
-      "name": "Merdeka Copper Gold Tbk.",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 4563,
-      "product_type": "Saham",
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Pemerintah Ri",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -154,19 +114,59 @@
     },
     {
       "symbol": "",
-      "name": "Sarana Multi Infrastruktur (Persero)",
+      "name": "Bank Syariah Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Oki pulp & Paper mills",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Pemerintah RI",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Sarana Multi Infrastruktur (Persero) Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "TLKM",
+      "name": "PT Telkom Indonesia (Persero) Tbk",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": 1,
+      "company_id": 4623,
+      "product_type": "Saham",
       "serie_id": null
     },
     {
       "symbol": "TINS",
       "name": "Timah Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 4493,
       "product_type": "Saham",
@@ -199,7 +199,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 466369671812.97,
+    "value": 466369671811,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -211,40 +211,40 @@
     "percentage": null
   },
   "cagr": {
-    "1y": -0.13587448589133833,
-    "3y": 0.027860117567453102,
-    "5y": 0.023100431089084994,
+    "1y": -0.1399908982057093,
+    "3y": 0.02468967268508515,
+    "5y": 0.021020735592125916,
     "10y": null,
-    "all": 0.026831883709107718
+    "all": 0.025937759547722816
   },
   "cagr_adjusted": {
-    "1y": -0.13587448589133833,
-    "3y": 0.027860117567453102,
-    "5y": 0.023100431089084994,
+    "1y": -0.1399908982057093,
+    "3y": 0.02468967268508515,
+    "5y": 0.021020735592125916,
     "10y": null,
-    "all": 0.026857270280259415
+    "all": 0.02594592850811428
   },
   "simplereturn": {
-    "1d": 0.005634972722424969,
-    "1m": -0.05960788826397789,
-    "3m": -0.05737066728185014,
-    "ytd": -0.15874874539979933,
-    "1y": -0.13587448589133833,
-    "3y": 0.08593053579239363,
-    "5y": 0.1209631558041111,
+    "1d": -0.007576568721925581,
+    "1m": -0.00885510021182978,
+    "3m": -0.07733912272676635,
+    "ytd": -0.16512254334268384,
+    "1y": -0.1399908982057093,
+    "3y": 0.07591280819627277,
+    "5y": 0.10961625616746429,
     "10y": null,
-    "all": 0.2627583786968153
+    "all": 0.2531910030614315
   },
   "changesvalue": {
-    "1d": 21.980000000000018,
-    "1m": -248.64000000000033,
-    "3m": -238.73999999999978,
-    "ytd": -740.2200000000003,
-    "1y": -616.79,
-    "3y": 310.4000000000001,
-    "5y": 423.28999999999996,
+    "1d": -29.7199999999998,
+    "1m": -34.779999999999745,
+    "3m": -326.30999999999995,
+    "ytd": -769.94,
+    "1y": -633.6799999999998,
+    "3y": 274.6700000000001,
+    "5y": 384.57000000000016,
     "10y": null,
-    "all": 816.23
+    "all": 786.5100000000002
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -266,9 +266,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2018-01-26",
-    "value": 3922.62
+    "value": 3892.9
   },
   "trade": null
 }

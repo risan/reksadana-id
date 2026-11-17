@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,11 +61,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 2.45
+      "percentage": 3.75
     },
     {
       "name": "Efek Saham",
-      "percentage": 97.55
+      "percentage": 96.25
     }
   ],
   "investment_manager": {
@@ -141,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2021-05-04",
-    "value": 1064.0978
+    "value": 1044.2715
   },
   "trade": null
 }

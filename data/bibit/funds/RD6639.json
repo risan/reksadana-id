@@ -61,24 +61,24 @@
   },
   "asset": [
     {
-      "name": "Saham",
-      "percentage": 0
-    },
-    {
       "name": "Obligasi",
-      "percentage": 90.9
+      "percentage": 92.62
     },
     {
       "name": "Deposito",
-      "percentage": 8.06
+      "percentage": 6.56
+    },
+    {
+      "name": "Saham",
+      "percentage": 0
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "Bank Mandiri (Persero) Tbk.",
+      "name": "Bank DKI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -86,9 +86,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Syariah Indonesia",
+      "name": "Bank Tabungan Negara (Persero) Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -96,9 +96,9 @@
     },
     {
       "symbol": "",
-      "name": "Bank Tabungan Negara (Persero) Tbk",
+      "name": "Bumi Serpong Damai",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -106,9 +106,9 @@
     },
     {
       "symbol": "",
-      "name": "Energi Mega Persada Tbk",
+      "name": "Energi Mega Persada Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -118,37 +118,7 @@
       "symbol": "",
       "name": "FR0047",
       "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": null,
-      "company_id": null,
-      "product_type": null,
-      "serie_id": null
-    },
-    {
-      "symbol": "FR0102",
-      "name": "Obligasi FR",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 6374,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
-      "symbol": "FR0107",
-      "name": "Obligasi FR",
-      "annualDividend": 0,
-      "date": "2026-09-30",
-      "clickable": 1,
-      "company_id": 9239,
-      "product_type": "FR",
-      "serie_id": null
-    },
-    {
-      "symbol": "",
-      "name": "Indah Kiat Pulp & Paper Tbk",
-      "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -156,9 +126,29 @@
     },
     {
       "symbol": "",
-      "name": "Mayora Indah Tbk",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Mayora Indah Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "OKI Pulp & Paper Mills",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -168,7 +158,17 @@
       "symbol": "",
       "name": "Pindo Deli Pulp And Paper Mills",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
+      "symbol": "",
+      "name": "Tower Bersama Infrastructure Tbk.",
+      "annualDividend": 0,
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +197,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 745784592.59,
+    "value": 1001666881865,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -205,44 +205,44 @@
     "percentage": 0.0342
   },
   "avg_yield": {
-    "date": "2026-08-31",
-    "percentage": null
+    "date": "2026-10-30",
+    "percentage": 0.049
   },
   "cagr": {
-    "1y": -0.012049658276252817,
-    "3y": 0.030308565573333945,
-    "5y": 0.01095230366825195,
-    "10y": 0.022306074630796813,
-    "all": 0.018499899948074106
+    "1y": -0.012433662441070248,
+    "3y": 0.029552844939156886,
+    "5y": 0.011314088839459169,
+    "10y": 0.022655795263098355,
+    "all": 0.018516282981546617
   },
   "cagr_adjusted": {
-    "1y": -0.012049658276252817,
-    "3y": 0.030308565573333945,
-    "5y": 0.01095230366825195,
-    "10y": 0.032811116557353914,
-    "all": 0.028714120365686657
+    "1y": -0.012433662441070248,
+    "3y": 0.029552844939156886,
+    "5y": 0.011314088839459169,
+    "10y": 0.03316443085890586,
+    "all": 0.028712392839590706
   },
   "simplereturn": {
-    "1d": -0.0003038613469135143,
-    "1m": -0.0104284457846463,
-    "3m": -0.0012949336202424666,
-    "ytd": -0.014529460832638286,
-    "1y": -0.012049658276252817,
-    "3y": 0.09370936588691259,
-    "5y": 0.05597425761078445,
-    "10y": 0.3810488408089665,
-    "all": 0.33704800924228007
+    "1d": 0.0002154608553794901,
+    "1m": -0.004549074868275937,
+    "3m": -0.003900652152255768,
+    "ytd": -0.014317130507317866,
+    "1y": -0.012433662441070248,
+    "3y": 0.09130445733668058,
+    "5y": 0.057865095383814014,
+    "10y": 0.38578054952308394,
+    "all": 0.3373360907500349
   },
   "changesvalue": {
-    "1d": -0.7899999999999636,
-    "1m": -27.389999999999873,
-    "3m": -3.369999999999891,
-    "ytd": -38.320000000000164,
-    "1y": -31.700000000000273,
-    "3y": 222.69000000000005,
-    "5y": 137.76999999999998,
-    "10y": 794.3115506199229,
-    "all": 725.711550619923
+    "1d": 0.5599999999999454,
+    "1m": -11.88000000000011,
+    "3m": -10.180000000000291,
+    "ytd": -37.76000000000022,
+    "1y": -32.73000000000002,
+    "3y": 217.5,
+    "5y": 142.19999999999982,
+    "10y": 801.6018304375302,
+    "all": 726.3318304375302
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -260,9 +260,9 @@
     "all": -0.05400128618553446
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2016-08-12",
-    "value": 2599.08
+    "value": 2599.64
   },
   "trade": null
 }

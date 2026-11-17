@@ -19,7 +19,6 @@
   },
   "released_date": "2021-12-21",
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,20 +59,30 @@
   },
   "asset": [
     {
-      "name": "Deposito",
-      "percentage": 1.51
-    },
-    {
       "name": "Obligasi",
       "percentage": 96.94
+    },
+    {
+      "name": "Deposito",
+      "percentage": 1.51
     }
   ],
   "holding": [
     {
+      "symbol": "",
+      "name": "BANK MEGA SYARIAH",
+      "annualDividend": 0,
+      "date": "2026-10-30",
+      "clickable": null,
+      "company_id": null,
+      "product_type": null,
+      "serie_id": null
+    },
+    {
       "symbol": "FR0101",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6261,
       "product_type": "FR",
@@ -83,7 +92,7 @@
       "symbol": "FR0104",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 8733,
       "product_type": "FR",
@@ -93,7 +102,7 @@
       "symbol": "FR0109",
       "name": "Obligasi FR",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 9551,
       "product_type": "FR",
@@ -122,7 +131,7 @@
   "index": true,
   "is_instant_redemption": false,
   "aum": {
-    "value": 164058770709.54,
+    "value": 192655669122,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -130,44 +139,44 @@
     "percentage": 0.0059
   },
   "avg_yield": {
-    "date": "2026-08-31",
-    "percentage": null
+    "date": "2026-09-30",
+    "percentage": 0.0727
   },
   "cagr": {
-    "1y": -0.06362607090959349,
-    "3y": 0.0064387043901641405,
+    "1y": -0.06236733674616057,
+    "3y": 0.003978834465377279,
     "5y": null,
     "10y": null,
-    "all": 0.011731640181690928
+    "all": 0.011950196547181324
   },
   "cagr_adjusted": {
-    "1y": -0.02458060960007935,
-    "3y": 0.04340470090751669,
+    "1y": -0.0232693880119641,
+    "3y": 0.04085448117535839,
     "5y": null,
     "10y": null,
-    "all": 0.042849269557206915
+    "all": 0.042997191950175706
   },
   "simplereturn": {
-    "1d": -0.001331127464962889,
-    "1m": -0.008673657187621031,
-    "3m": 0.002998661059474106,
-    "ytd": -0.024293337985307528,
-    "1y": -0.02458060960007935,
-    "3y": 0.13594777997536478,
+    "1d": 0.0009425519355636958,
+    "1m": -0.00002853446963935191,
+    "3m": -0.0020933599309620465,
+    "ytd": -0.02337368378248328,
+    "1y": -0.0232693880119641,
+    "3y": 0.12763889917249904,
     "5y": null,
     "10y": null,
-    "all": 0.19283505982417593
+    "all": 0.19395936881862186
   },
   "changesvalue": {
-    "1d": -1.400000000000091,
-    "1m": -9.190000000000055,
-    "3m": 3.1721036151541284,
-    "ytd": -26.964633430171943,
-    "1y": -27.57231559450497,
-    "3y": 140.0683571864181,
+    "1d": 0.9900000000000091,
+    "1m": -0.029999999999972715,
+    "3m": -2.2278373729270697,
+    "ytd": -25.943854051205108,
+    "1y": -26.09103400229492,
+    "3y": 132.6014995723258,
     "5y": null,
     "10y": null,
-    "all": 192.83505982417591
+    "all": 193.9593688186219
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -185,9 +194,9 @@
     "all": -0.04816883362597313
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2022-09-01",
-    "value": 1050.34
+    "value": 1051.33
   },
   "trade": null
 }

@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -63,16 +64,16 @@
       "percentage": 0
     },
     {
-      "name": "Pendapatan Tetap",
-      "percentage": 94
-    },
-    {
       "name": "Pasar Uang",
-      "percentage": 4
+      "percentage": 0
     },
     {
       "name": "Kas dan Liabilitas",
-      "percentage": 2
+      "percentage": 100
+    },
+    {
+      "name": "Pendapatan Tetap",
+      "percentage": 0
     }
   ],
   "investment_manager": {
@@ -149,9 +150,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2023-03-10",
-    "value": 1159.2241
+    "value": 1159.1867
   },
   "trade": null
 }

@@ -18,6 +18,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -56,7 +57,20 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Instrumen Pasar Uang",
+      "percentage": 54.46
+    },
+    {
+      "name": "Efek bersifat Utang",
+      "percentage": 2.89
+    },
+    {
+      "name": "Efek bersifat Ekuitas",
+      "percentage": 42.65
+    }
+  ],
   "investment_manager": {
     "name": "Indo Arthabuana Investama, PT"
   },
@@ -131,9 +145,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2025-07-08",
-    "value": 628.4241
+    "value": 619.1847
   },
   "trade": null
 }

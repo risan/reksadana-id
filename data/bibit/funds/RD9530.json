@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18154,
+    "exchange_rate": 18268,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -60,20 +60,20 @@
   },
   "asset": [
     {
-      "name": "Deposito",
-      "percentage": 61.68
+      "name": "Obligasi",
+      "percentage": 30.16
     },
     {
-      "name": "Efek Utang",
-      "percentage": 30.16
+      "name": "Deposito",
+      "percentage": 61.68
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "BMRIIDJA",
+      "name": "ALLO USD",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -81,9 +81,9 @@
     },
     {
       "symbol": "",
-      "name": "BRINIDJA",
+      "name": "OBLIGASI USD BERKELANJUTAN II INDAH KIAT PULP & PAPER TAHAP IV TAHUN 2025 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -91,9 +91,9 @@
     },
     {
       "symbol": "",
-      "name": "BSSPIDSP",
+      "name": "PT Bank CTBC Indonesia",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -101,9 +101,9 @@
     },
     {
       "symbol": "",
-      "name": "JAGBIDJA",
+      "name": "PT Bank DBS Indonesia",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -111,9 +111,9 @@
     },
     {
       "symbol": "",
-      "name": "MEGAIDJA",
+      "name": "PT Bank Rakyat Indonesia Tbk",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -121,9 +121,9 @@
     },
     {
       "symbol": "",
-      "name": "PDJBIDJA",
+      "name": "PT Perusahaan Listrik Negara 4,125% 17/27",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -131,9 +131,9 @@
     },
     {
       "symbol": "",
-      "name": "US71567RAH93",
+      "name": "PT. BANK MEGA TBK",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -141,9 +141,9 @@
     },
     {
       "symbol": "",
-      "name": "US71568QAC15",
+      "name": "Perusahaan Penerbit SBSN Indonesia III 27",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -151,9 +151,9 @@
     },
     {
       "symbol": "",
-      "name": "USY207218018",
+      "name": "Rep Of Indonesia Seri Reg 2027",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -161,9 +161,9 @@
     },
     {
       "symbol": "",
-      "name": "VICTIDJ1",
+      "name": "Republic of Indonesia 4.15 29/03/2027",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -194,7 +194,7 @@
   "index": false,
   "is_instant_redemption": false,
   "aum": {
-    "value": 127512243.58977,
+    "value": 127441942,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -202,44 +202,44 @@
     "percentage": null
   },
   "avg_yield": {
-    "date": "2026-08-31",
-    "percentage": null
+    "date": "2026-10-30",
+    "percentage": 0.0444
   },
   "cagr": {
-    "1y": 0.03014070994563478,
+    "1y": 0.03021396707591495,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.03209657422698853
+    "all": 0.032153927143668826
   },
   "cagr_adjusted": {
-    "1y": 0.03014070994563478,
+    "1y": 0.03021396707591495,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.0322958169496228
+    "all": 0.032153927143668826
   },
   "simplereturn": {
-    "1d": 0.000047909470264784204,
-    "1m": 0.0020046140685887615,
-    "3m": 0.006111756455181361,
-    "ytd": 0.025760854822825863,
-    "1y": 0.03014070994563478,
+    "1d": 0.00016192625169475505,
+    "1m": 0.0019610082826924113,
+    "3m": 0.006184465963267272,
+    "ytd": 0.02592695243318266,
+    "1y": 0.03021396707591495,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.043684999999999974
+    "all": 0.04385400000000006
   },
   "changesvalue": {
-    "1d": 0.00004999999999988347,
-    "1m": 0.0020879999999998677,
-    "3m": 0.006340000000000012,
-    "ytd": 0.026210999999999984,
-    "1y": 0.030537000000000036,
+    "1d": 0.00016900000000008575,
+    "1m": 0.002043000000000017,
+    "3m": 0.006415999999999977,
+    "ytd": 0.02638000000000007,
+    "1y": 0.03061400000000014,
     "3y": null,
     "5y": null,
     "10y": null,
-    "all": 0.043684999999999974
+    "all": 0.04385400000000006
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -257,9 +257,9 @@
     "all": -0.00002875935038382238
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2025-07-10",
-    "value": 1.043685
+    "value": 1.043854
   },
   "trade": null
 }

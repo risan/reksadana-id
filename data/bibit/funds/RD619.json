@@ -61,20 +61,20 @@
   },
   "asset": [
     {
-      "name": "Deposito",
-      "percentage": 39.97
+      "name": "Obligasi",
+      "percentage": 59.17
     },
     {
-      "name": "Efek Utang",
-      "percentage": 59.17
+      "name": "Deposito",
+      "percentage": 39.97
     }
   ],
   "holding": [
     {
       "symbol": "",
-      "name": "ADMF07ACN3",
+      "name": "BPD JAMBI, PT",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -82,9 +82,9 @@
     },
     {
       "symbol": "",
-      "name": "BBRIOJASOCN2",
+      "name": "BPD RIAU",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -92,9 +92,9 @@
     },
     {
       "symbol": "",
-      "name": "JAGBIDJA",
+      "name": "OBLIGASI BERKELANJUTAN I WAHANA INTI SELARAS TAHAP III TAHUN 2026 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -102,9 +102,9 @@
     },
     {
       "symbol": "",
-      "name": "MDKA05CN3",
+      "name": "OBLIGASI BERKELANJUTAN V MERDEKA COPPER GOLD TAHAP III TAHUN 2026",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -112,9 +112,9 @@
     },
     {
       "symbol": "",
-      "name": "PDJBIDJA",
+      "name": "OBLIGASI BERKELANJUTAN V MERDEKA COPPER GOLD TAHAP IV TAHUN 2026 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -122,9 +122,9 @@
     },
     {
       "symbol": "",
-      "name": "PORIIDJA",
+      "name": "OBLIGASI BERKELANJUTAN VII ADIRA FINANCE TAHAP III TAHUN 2026 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -132,9 +132,9 @@
     },
     {
       "symbol": "",
-      "name": "SSPIIDJA",
+      "name": "OBLIGASI BERWAWASAN SOSIAL BERKELANJUTAN I BANK BRI TAHAP II TAHUN 2026 SERI A",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -142,9 +142,9 @@
     },
     {
       "symbol": "",
-      "name": "SYDKIDJI",
+      "name": "PT. BANK JABAR BANTEN",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -152,9 +152,9 @@
     },
     {
       "symbol": "",
-      "name": "SYSSIDJI",
+      "name": "PT. BANK NAGARI",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -162,9 +162,9 @@
     },
     {
       "symbol": "",
-      "name": "WISLOTACNS",
+      "name": "PT. BANK SEABANK INDONESIA",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -197,7 +197,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 2218944390523.63,
+    "value": 2218944390523,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -205,44 +205,44 @@
     "percentage": 0.0048
   },
   "avg_yield": {
-    "date": "2026-09-30",
-    "percentage": 0.0606
+    "date": "2026-10-30",
+    "percentage": 0.0709
   },
   "cagr": {
-    "1y": 0.042004822437863965,
-    "3y": 0.04966935240884096,
-    "5y": 0.0429082872655866,
-    "10y": 0.04434975115248574,
-    "all": 0.0396322789786312
+    "1y": 0.04240534793130868,
+    "3y": 0.04967205152581666,
+    "5y": 0.04297602271237877,
+    "10y": 0.044322320350261846,
+    "all": 0.03965728175381189
   },
   "cagr_adjusted": {
-    "1y": 0.042004822437863965,
-    "3y": 0.04966935240884096,
-    "5y": 0.0429082872655866,
-    "10y": 0.04434975115248574,
-    "all": 0.039652109429523685
+    "1y": 0.04240534793130868,
+    "3y": 0.04967205152581666,
+    "5y": 0.04297602271237877,
+    "10y": 0.044322320350261846,
+    "all": 0.039663892866763195
   },
   "simplereturn": {
-    "1d": 0.00017803314983511065,
-    "1m": 0.004247664763514791,
-    "3m": 0.013105825448108899,
-    "ytd": 0.03637942552419937,
-    "1y": 0.042004822437863965,
-    "3y": 0.1565317274387552,
-    "5y": 0.2337597351081815,
-    "10y": 0.5433331187537216,
-    "all": 0.9179618
+    "1d": 0.0005096556146217956,
+    "1m": 0.0045425184892187165,
+    "3m": 0.01348104463783173,
+    "ytd": 0.036907622117296146,
+    "1y": 0.04240534793130868,
+    "3y": 0.1565406491695034,
+    "5y": 0.23416044207366093,
+    "10y": 0.5429277960923051,
+    "all": 0.9189392999999999
   },
   "changesvalue": {
-    "1d": 0.34140000000002146,
-    "1m": 8.11239999999998,
-    "3m": 24.811300000000074,
-    "ytd": 67.32510000000002,
-    "1y": 77.31600000000003,
-    "3y": 259.58809999999994,
-    "5y": 363.39509999999996,
-    "10y": 675.2218,
-    "all": 917.9618
+    "1d": 0.9774999999999636,
+    "1m": 8.677400000000034,
+    "3m": 25.52520000000004,
+    "ytd": 68.30259999999998,
+    "1y": 78.0630000000001,
+    "3y": 259.7331999999999,
+    "5y": 364.08529999999996,
+    "10y": 675.2393,
+    "all": 918.9393
   },
   "riskprofile": "Low",
   "maxdrawdown": {
@@ -264,9 +264,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2010-02-17",
-    "value": 1917.9618
+    "value": 1918.9393
   },
   "trade": null
 }

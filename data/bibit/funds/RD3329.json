@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,7 +62,7 @@
   "asset": [
     {
       "name": "Setara Kas",
-      "percentage": 0.21
+      "percentage": 5.74
     },
     {
       "name": "Obligasi < 1 Tahun",
@@ -69,7 +70,7 @@
     },
     {
       "name": "Deposito",
-      "percentage": 99.79
+      "percentage": 94.26
     }
   ],
   "investment_manager": {
@@ -152,9 +153,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2019-08-28",
-    "value": 1370.1073
+    "value": 1370.6363
   },
   "trade": null
 }

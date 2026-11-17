@@ -65,11 +65,11 @@
     },
     {
       "name": "Sukuk",
-      "percentage": 91.87
+      "percentage": 96.01
     },
     {
       "name": "Deposito Syariah",
-      "percentage": 6.34
+      "percentage": 2.65
     }
   ],
   "holding": [
@@ -77,7 +77,7 @@
       "symbol": "",
       "name": "Bumi Serpong Damai",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -85,9 +85,9 @@
     },
     {
       "symbol": "",
-      "name": "Indah Kiat Pulp & Paper Tbk",
+      "name": "Indah Kiat Pulp & Paper Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -97,7 +97,7 @@
       "symbol": "",
       "name": "Lontar Papyrus Pulp & Paper Industry",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -105,9 +105,9 @@
     },
     {
       "symbol": "",
-      "name": "OK Pulp & Paper Mills",
+      "name": "OKI Pulp & Paper Mills",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -117,7 +117,7 @@
       "symbol": "",
       "name": "PBS029",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -127,7 +127,7 @@
       "symbol": "PBS030",
       "name": "FR Syariah",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": 1,
       "company_id": 6385,
       "product_type": "FR",
@@ -137,7 +137,7 @@
       "symbol": "",
       "name": "PBSG001",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -145,9 +145,9 @@
     },
     {
       "symbol": "",
-      "name": "Samudera Indonesia Tbk",
+      "name": "Samudera Indonesia Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -155,9 +155,9 @@
     },
     {
       "symbol": "",
-      "name": "Smart Thk",
+      "name": "Smart Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -167,7 +167,7 @@
       "symbol": "",
       "name": "Tower Bersama Infrastructure Tbk.",
       "annualDividend": 0,
-      "date": "2026-09-30",
+      "date": "2026-10-30",
       "clickable": null,
       "company_id": null,
       "product_type": null,
@@ -200,7 +200,7 @@
   "index": false,
   "is_instant_redemption": true,
   "aum": {
-    "value": 196869183047.05,
+    "value": 592768486447,
     "date": "2026-10-01"
   },
   "shareholders": [],
@@ -208,44 +208,44 @@
     "percentage": 0.0174
   },
   "avg_yield": {
-    "date": "2026-08-31",
-    "percentage": null
+    "date": "2026-10-30",
+    "percentage": 0.057
   },
   "cagr": {
-    "1y": -0.008893006805138604,
-    "3y": 0.03955161070656921,
-    "5y": 0.03369998975274635,
-    "10y": 0.04073790717290371,
-    "all": 0.09078724976483077
+    "1y": -0.008901662954996836,
+    "3y": 0.03877801667804848,
+    "5y": 0.03336769165765041,
+    "10y": 0.04125116553942343,
+    "all": 0.09078534309323616
   },
   "cagr_adjusted": {
-    "1y": -0.008893006805138604,
-    "3y": 0.03955161070656921,
-    "5y": 0.03369998975274635,
-    "10y": 0.04073790717290371,
-    "all": 0.09083110740140987
+    "1y": -0.008901662954996836,
+    "3y": 0.03877801667804848,
+    "5y": 0.03336769165765041,
+    "10y": 0.04125116553942343,
+    "all": 0.09079995502922777
   },
   "simplereturn": {
-    "1d": -0.00020485550218385384,
-    "1m": -0.006989879722354542,
-    "3m": 0.0027544730759354596,
-    "ytd": -0.012338209873940631,
-    "1y": -0.008893006805138604,
-    "3y": 0.12340969361575627,
-    "5y": 0.18024606145490663,
-    "10y": 0.4907806021961101,
-    "all": 3.6853168531685316
+    "1d": 0.00020703182527359587,
+    "1m": -0.0007548328493021117,
+    "3m": 0.00016647244880974021,
+    "ytd": -0.012133732450777979,
+    "1y": -0.008901662954996836,
+    "3y": 0.12090356561111926,
+    "5y": 0.1783502432768831,
+    "10y": 0.49814898881720704,
+    "all": 3.686286862868628
   },
   "changesvalue": {
-    "1d": -0.9599999999991269,
-    "1m": -32.97999999999956,
-    "3m": 12.8700000000008,
-    "ytd": -58.529999999999745,
-    "1y": -42.039999999999964,
-    "3y": 514.6900000000005,
-    "5y": 715.5300000000007,
-    "10y": 1542.4400000000005,
-    "all": 3685.2800000000007
+    "1d": 0.9699999999993452,
+    "1m": -3.5399999999999636,
+    "3m": 0.7799999999997453,
+    "ytd": -57.5600000000004,
+    "1y": -42.090000000000146,
+    "3y": 505.46999999999935,
+    "5y": 709.29,
+    "10y": 1558.2199999999998,
+    "all": 3686.25
   },
   "riskprofile": "Moderate",
   "maxdrawdown": {
@@ -267,9 +267,9 @@
     "quota_limit": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2009-02-11",
-    "value": 4685.27
+    "value": 4686.24
   },
   "trade": null
 }

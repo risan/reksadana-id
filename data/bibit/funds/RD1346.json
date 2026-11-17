@@ -19,6 +19,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,15 +62,15 @@
   "asset": [
     {
       "name": "Saham non-SMC",
-      "percentage": 28.2
+      "percentage": 16.6
     },
     {
       "name": "Saham SMC",
-      "percentage": 55.1
+      "percentage": 70.3
     },
     {
       "name": "Kas / pasar uang",
-      "percentage": 16.7
+      "percentage": 13.1
     }
   ],
   "holding": [
@@ -248,9 +249,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "first_date": "2017-04-21",
-    "value": 1570.2414
+    "value": 1551.3749
   },
   "trade": null
 }
