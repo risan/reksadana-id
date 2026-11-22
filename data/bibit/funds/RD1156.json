@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -62,11 +61,11 @@
   "asset": [
     {
       "name": "equity",
-      "percentage": 79.26
+      "percentage": 94.32
     },
     {
       "name": "Lainnya",
-      "percentage": 21.74
+      "percentage": 5.68
     }
   ],
   "holding": [
@@ -201,9 +200,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-16",
+    "date": "2026-11-20",
     "first_date": "2018-01-26",
-    "value": 92.423
+    "value": 88.1472
   },
   "trade": null
 }

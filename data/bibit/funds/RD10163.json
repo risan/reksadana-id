@@ -18,7 +18,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -57,7 +56,16 @@
       "currency": "IDR"
     }
   },
-  "asset": [],
+  "asset": [
+    {
+      "name": "Obligasi Pemerintah",
+      "percentage": 96.85
+    },
+    {
+      "name": "Instrumen Pasar Uang Dalam Negeri",
+      "percentage": 3.15
+    }
+  ],
   "investment_manager": {
     "name": "Sucorinvest Asset Management, PT"
   },
@@ -132,9 +140,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-16",
+    "date": "2026-11-20",
     "first_date": "2025-12-17",
-    "value": 1011.9324
+    "value": 1012.4592
   },
   "trade": null
 }

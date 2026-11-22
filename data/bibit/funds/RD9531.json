@@ -18,7 +18,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -60,11 +59,11 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 95.42
+      "percentage": 4.97
     },
     {
       "name": "Instrumen Pasar Uang Dalam Negeri",
-      "percentage": 4.58
+      "percentage": 95.03
     }
   ],
   "investment_manager": {
@@ -141,9 +140,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-16",
+    "date": "2026-11-20",
     "first_date": "2025-07-10",
-    "value": 1058.194
+    "value": 1056.8842
   },
   "trade": null
 }

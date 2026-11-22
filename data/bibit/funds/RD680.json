@@ -18,7 +18,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +60,11 @@
   "asset": [
     {
       "name": "Efek Bersifat Utang dan/atau Instrumen Pasar Uang",
-      "percentage": 78.11
+      "percentage": 78.63
     },
     {
       "name": "Efek Bersifat Ekuitas",
-      "percentage": 8.74
+      "percentage": 8.79
     }
   ],
   "investment_manager": {
@@ -148,9 +147,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-16",
+    "date": "2026-11-20",
     "first_date": "2018-01-26",
-    "value": 5677.78
+    "value": 5667.36
   },
   "trade": null
 }

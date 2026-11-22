@@ -18,7 +18,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,15 +60,15 @@
   "asset": [
     {
       "name": "Obligasi",
-      "percentage": 77.81
+      "percentage": 70.23
     },
     {
       "name": "Deposito",
-      "percentage": 3.22
+      "percentage": 8.05
     },
     {
       "name": "Saham",
-      "percentage": 16.88
+      "percentage": 12.97
     }
   ],
   "holding": [
@@ -204,9 +203,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-16",
+    "date": "2026-11-20",
     "first_date": "2016-05-13",
-    "value": 1466.0622
+    "value": 1457.3398
   },
   "trade": null
 }

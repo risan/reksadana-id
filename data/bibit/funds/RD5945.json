@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +60,11 @@
   "asset": [
     {
       "name": "Efek Syariah Bersifat Ekuitas",
-      "percentage": 99.66
+      "percentage": 99.55
     },
     {
       "name": "Efek Syariah Berpendapatan Tetap &/ Inst. Psr. Uang Syariah Dalam Negeri &/ Deposito Syariah",
-      "percentage": 0.34
+      "percentage": 0.45
     }
   ],
   "investment_manager": {
@@ -143,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-16",
+    "date": "2026-11-20",
     "first_date": "2023-04-18",
-    "value": 994.1374
+    "value": 962.4587
   },
   "trade": null
 }

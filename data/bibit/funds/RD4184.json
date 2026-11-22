@@ -19,7 +19,6 @@
   },
   "released_date": null,
   "is_top_product": 0,
-  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -61,11 +60,11 @@
   "asset": [
     {
       "name": "Pasar Uang",
-      "percentage": 4.93
+      "percentage": 1.31
     },
     {
       "name": "Obligasi Pemerintah",
-      "percentage": 95.07
+      "percentage": 98.69
     }
   ],
   "investment_manager": {
@@ -143,9 +142,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-16",
+    "date": "2026-11-20",
     "first_date": "2022-02-22",
-    "value": 1134.83
+    "value": 1130.68
   },
   "trade": null
 }
