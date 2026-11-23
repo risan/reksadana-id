@@ -18,6 +18,7 @@
   },
   "released_date": "2022-02-16",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -209,7 +210,7 @@
     "3y": 0.11859751184467138,
     "5y": null,
     "10y": null,
-    "all": 0.05741300894223045
+    "all": 0.05737910341469932
   },
   "cagr_adjusted": {
     "1y": 0.027237660395182273,
