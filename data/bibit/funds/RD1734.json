@@ -22,7 +22,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18220,
+    "exchange_rate": 18378,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -195,9 +195,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-20",
+    "date": "2026-11-24",
     "first_date": "2018-01-26",
-    "value": 1.595108
+    "value": 1.653764
   },
   "trade": null
 }
