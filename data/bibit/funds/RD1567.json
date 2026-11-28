@@ -18,6 +18,7 @@
   },
   "released_date": null,
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
@@ -203,9 +204,9 @@
     "all": null
   },
   "nav": {
-    "date": "2026-11-26",
+    "date": "2026-11-27",
     "first_date": "2004-11-12",
-    "value": 10130.5237
+    "value": 10207.5549
   },
   "trade": null
 }

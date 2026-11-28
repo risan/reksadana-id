@@ -23,7 +23,7 @@
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18368,
+    "exchange_rate": 18289,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -215,7 +215,7 @@
     "3y": 0.028536682101478084,
     "5y": 0.004465997050629111,
     "10y": 0.01765479887085175,
-    "all": 0.02841706812138889
+    "all": 0.02841294964145069
   },
   "cagr_adjusted": {
     "1y": -0.009780658602928316,

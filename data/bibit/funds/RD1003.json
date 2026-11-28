@@ -19,10 +19,11 @@
   },
   "released_date": "2013-11-15",
   "is_top_product": 0,
+  "is_featured_product": 0,
   "is_cash_sweepable": 0,
   "is_oversubscribed": false,
   "currency_exchange": {
-    "exchange_rate": 18368,
+    "exchange_rate": 18289,
     "currency": "USD"
   },
   "is_has_dividend": false,
@@ -214,7 +215,7 @@
     "3y": 0.026855512602072862,
     "5y": 0.0017233913069030216,
     "10y": 0.010125260362952249,
-    "all": 0.01720590542858802
+    "all": 0.017202258296559636
   },
   "cagr_adjusted": {
     "1y": -0.010562535008402096,
